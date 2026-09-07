@@ -212,20 +212,37 @@ function renderWizardStep1() {
   `;
 }
 
+function sourceBadgeHtml(source) {
+  const map = {
+    "gwi-real": { cls: "real", label: "● Dato real GWI" },
+    "gwi-auto-draft": { cls: "draft", label: "◔ Borrador automático GWI — pendiente de revisión" },
+    plantilla: { cls: "plantilla", label: "◐ Plantilla ilustrativa" },
+  };
+  const m = map[source] || map.plantilla;
+  return `<span class="source-badge ${m.cls}" style="margin-top:6px;width:fit-content;">${m.label}</span>`;
+}
+
 function renderWizardStep2() {
   const w = state.wizard;
   const cat = findCategory(w.categoryId);
-  const kase = cat.cases[0]; // v1: un caso curado por categoría
-  if (!w.caseId) w.caseId = kase.id;
+  if (!w.caseId) w.caseId = cat.cases[0].id;
   return `
     <div class="section-title">Paso 2 · Caso y variables clave</div>
-    <div class="option-card selected" style="margin-bottom:18px;cursor:default;">
-      <div class="label">${kase.name}</div>
-      <div class="desc">${kase.insightNote}</div>
-      <span class="source-badge ${kase.source === "gwi-real" ? "real" : "plantilla"}" style="margin-top:6px;width:fit-content;">
-        ${kase.source === "gwi-real" ? "● Dato real GWI" : "◐ Plantilla ilustrativa"}
-      </span>
-    </div>
+    ${cat.cases.length > 1 ? `
+      <div style="font-weight:700;font-size:12.5px;margin-bottom:8px;">Elige el caso</div>
+      <div class="option-grid" style="margin-bottom:18px;">
+        ${cat.cases.map((k) => `
+          <div class="option-card ${w.caseId === k.id ? "selected" : ""}" data-case="${k.id}">
+            <div class="label">${k.name}</div>
+            <div class="desc">${k.insightNote}</div>
+            ${sourceBadgeHtml(k.source)}
+          </div>`).join("")}
+      </div>` : `
+      <div class="option-card selected" style="margin-bottom:18px;cursor:default;">
+        <div class="label">${cat.cases[0].name}</div>
+        <div class="desc">${cat.cases[0].insightNote}</div>
+        ${sourceBadgeHtml(cat.cases[0].source)}
+      </div>`}
     <div style="font-weight:700;font-size:12.5px;margin-bottom:8px;">¿Qué variables quieres priorizar para recomendar las audiencias?</div>
     <div class="trait-list" style="margin-bottom:18px;">
       ${cat.traits.map((t) => `
@@ -566,6 +583,15 @@ function bindEvents() {
     el.addEventListener("click", () => {
       state.wizard.categoryId = el.dataset.category;
       state.wizard.caseId = null;
+      state.wizard.selectedTraitIds = [];
+      state.result = null;
+      state.approved = new Set();
+      render();
+    })
+  );
+  document.querySelectorAll("[data-case]").forEach((el) =>
+    el.addEventListener("click", () => {
+      state.wizard.caseId = el.dataset.case;
       state.wizard.selectedTraitIds = [];
       state.result = null;
       state.approved = new Set();

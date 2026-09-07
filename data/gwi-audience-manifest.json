@@ -1,0 +1,4 @@
+{
+  "_readme": "Manifest usado por la rutina diaria de GWI (ver README.md > 'Automatización diaria de GWI'). Cada entrada registra un audience_id de GWI (de search_audiences) ya procesado, para que la rutina solo genere un borrador para audiencias nuevas. No editar a mano salvo para remover una entrada y forzar su reprocesamiento.",
+  "processed": []
+}

@@ -213,6 +213,7 @@ a{ color:inherit; }
 }
 .source-badge.real{ background:#DCF6E4; color:#166A3F; }
 .source-badge.plantilla{ background:#FEF1D6; color:#8A5B00; }
+.source-badge.draft{ background:#E9E4FB; color:#5B3DBB; }
 
 /* ---------------------------- Mapa de demanda --------------------------- */
 .funnel{ display:flex; flex-direction:column; gap:10px; margin: 18px 0 6px; }

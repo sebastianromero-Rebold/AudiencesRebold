@@ -67,6 +67,29 @@ segura (la API key nunca debe vivir en el HTML/JS del navegador):
    histórico) no necesita cambios: todos consumen el mismo objeto `result`
    devuelto por `computeResult()`.
 
+## Automatización diaria de GWI (rutina en la nube)
+
+Hay una rutina programada (Claude Code cloud routine, `0 13 * * *` UTC = 8:00
+a.m. hora Colombia) que revisa diariamente si hay audiencias **nuevas**
+(propias o compartidas) en la plataforma de GWI y arma un borrador de perfil
+para cada una.
+
+- **Detección de "nuevo":** compara contra
+  [`data/gwi-audience-manifest.json`](data/gwi-audience-manifest.json), que
+  registra los `audience_id` de GWI ya procesados. No lo edites a mano salvo
+  para borrar una entrada y forzar que la rutina la vuelva a procesar.
+- **Nunca escribe directo a `main`:** abre un Pull Request con el borrador
+  para que alguien del equipo lo revise antes de que entre a la app en vivo.
+  Los datos generados por IA sin supervisión no deben alimentar decisiones
+  reales de medios sin pasar por una revisión humana.
+- **Fuente `"gwi-auto-draft"`:** los casos que trae la rutina usan este valor
+  en `source` (distinto de `"gwi-real"` y `"plantilla"`) para que el badge en
+  el wizard deje claro que es un borrador pendiente de revisión editorial,
+  sobre todo el *customer journey*, que requiere criterio humano y no debe
+  tratarse como dato final solo por venir de GWI.
+- Administra la rutina (pausar, editar el prompt, ver el historial de
+  ejecuciones) en [claude.ai/code/routines](https://claude.ai/code/routines).
+
 ## Conectar Google Slides real (opcional, a futuro)
 
 Si más adelante se quiere generar la presentación directamente en Google

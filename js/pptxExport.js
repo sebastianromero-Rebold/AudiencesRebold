@@ -64,10 +64,11 @@ function buildAudiencesPptx({ market, case: kase, steps, universe, personas }) {
   s.addText(kase.footnotes.map((f) => `* ${f}`).join("\n"), { x: 0.6, y: fy + 0.2, w: 10, h: 0.6, fontFace: "Montserrat", fontSize: 8.5, color: PX.muted, isTextBox: true, margin: 0 });
   s.addText("by Rebold", { x: 12.2, y: 7.1, w: 1, h: 0.3, fontFace: "Montserrat", fontSize: 8, color: PX.muted, align: "right", isTextBox: true, margin: 0 });
 
-  // ---- 2 slides por persona -----------------------------------------------
+  // ---- 2-3 slides por persona (perfil + journey + insights de IA si hay) --
   personas.forEach((p) => {
     addPersonaProfileSlide(pres, p);
     addPersonaJourneySlide(pres, p);
+    if (p.aiInsight) addPersonaInsightSlide(pres, p);
   });
 
   pres.writeFile({ fileName: `Audiencias-${slugify(kase.name)}.pptx` });
@@ -175,6 +176,27 @@ function addPersonaJourneySlide(pres, p) {
       });
     }
   });
+}
+
+function addPersonaInsightSlide(pres, p) {
+  const s = pres.addSlide();
+  bgSlide(s);
+  s.addText(p.name.toUpperCase(), { x: 0.5, y: 0.35, w: 8, h: 0.4, fontFace: "Montserrat", bold: true, fontSize: 16, color: PX.white, isTextBox: true, margin: 0 });
+  s.addText("INSIGHTS DE IA — CRUCE DE TENDENCIAS", { x: 0.5, y: 0.72, w: 10, h: 0.35, fontFace: "Montserrat", bold: true, fontSize: 14, color: PX.accent, isTextBox: true, margin: 0 });
+  s.addText(p.aiInsight.summary, { x: 0.5, y: 1.25, w: 12.3, h: 0.9, fontFace: "Montserrat", fontSize: 11, color: PX.muted, isTextBox: true, margin: 0 });
+
+  let iy = 2.35;
+  p.aiInsight.ideas.forEach((idea, i) => {
+    s.addShape("roundRect", { x: 0.5, y: iy, w: 12.3, h: 1.15, rectRadius: 0.08, fill: { color: PX.bgAlt }, line: { color: PX.line, width: 0.5 } });
+    s.addShape("ellipse", { x: 0.7, y: iy + 0.18, w: 0.32, h: 0.32, fill: { color: PX.accent }, line: { type: "none" } });
+    s.addText(String(i + 1), { x: 0.7, y: iy + 0.18, w: 0.32, h: 0.32, align: "center", valign: "middle", fontFace: "Montserrat", bold: true, fontSize: 11, color: PX.white, isTextBox: true, margin: 0 });
+    s.addText(idea.label, { x: 1.2, y: iy + 0.12, w: 11.4, h: 0.3, fontFace: "Montserrat", bold: true, fontSize: 11, color: PX.white, isTextBox: true, margin: 0 });
+    s.addText(idea.detail, { x: 1.2, y: iy + 0.44, w: 11.4, h: 0.6, fontFace: "Montserrat", fontSize: 9, color: PX.muted, isTextBox: true, margin: 0 });
+    iy += 1.35;
+  });
+
+  s.addText("Insight redactado por el equipo Rebold cruzando datos de la audiencia con tendencias de categoría — no es una llamada en vivo a un modelo de IA.", { x: 0.5, y: 7.05, w: 10, h: 0.3, fontFace: "Montserrat", italic: true, fontSize: 7.5, color: PX.muted, isTextBox: true, margin: 0 });
+  s.addText("by Rebold", { x: 12.2, y: 7.1, w: 1, h: 0.3, fontFace: "Montserrat", fontSize: 8, color: PX.muted, align: "right", isTextBox: true, margin: 0 });
 }
 
 function slugify(str) {

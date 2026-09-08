@@ -13,12 +13,21 @@ para GitHub Pages.
 1. Abre `index.html` (o publícalo con GitHub Pages: Settings → Pages → Deploy
    from branch → `main` / `/`).
 2. **Nueva audiencia**: responde el wizard (mercado → categoría/caso →
-   variables clave) y el aplicativo calcula el **mapa de demanda** (embudo
-   secuencial de filtros sobre el universo digital del mercado elegido) y
-   recomienda 2 audiencias finales, **excluyentes entre sí**.
+   variables clave, más género/NSE/edad y, si la categoría es Entretenimiento
+   en vivo, los **géneros musicales** a agrupar — variable real de GWI) y el
+   aplicativo calcula el **mapa de demanda** (embudo secuencial de filtros
+   sobre el universo digital del mercado elegido) y recomienda 2 audiencias
+   finales, **excluyentes entre sí**. Hay 7 mercados (Colombia, México,
+   España, Italia, Chile, Estados Unidos, Argentina) y 12 categorías, una por
+   cada vertical de GWI Syndicated (Entretenimiento, Deportes, Retail & Moda,
+   Fintech, Alcohol, Automotriz, Tecnología de Consumo, Gaming, Lujo,
+   Ocasiones y Momentos, Viajes, Trabajo).
 3. Aprueba las audiencias que quieras conservar y revisa su **perfil completo**
-   (demografía, motivadores, barreras, comportamiento digital, medios) y su
-   **customer journey** (6 momentos del día, de la mañana a la noche).
+   (demografía, motivadores, barreras, comportamiento digital, medios), su
+   **customer journey** (6 momentos del día, de la mañana a la noche) y un
+   panel de **insights de IA** con ideas clave que puedes abrir una por una.
+   Ese insight es texto redactado por el equipo, no una llamada en vivo a un
+   modelo de IA — ver "Panel de insights de IA" más abajo.
 4. **Guardar en histórico**: queda disponible en la pestaña *Histórico* para
    consultarlo o compararlo después con otra audiencia.
 5. **Descargar .pptx**: genera un PowerPoint con el mismo diseño (negro +
@@ -66,6 +75,18 @@ segura (la API key nunca debe vivir en el HTML/JS del navegador):
 3. El resto del aplicativo (wizard, mapa de demanda, perfiles, export a pptx,
    histórico) no necesita cambios: todos consumen el mismo objeto `result`
    devuelto por `computeResult()`.
+
+## Panel de insights de IA
+
+Cada persona trae un campo `aiInsight` en `js/data.js` con un `summary` (cruce
+de la audiencia con una tendencia de categoría) y una lista de `ideas` (label
++ detalle), que en el perfil se muestran como tarjetas que el usuario puede
+abrir una por una — es la interactividad que pidió el equipo, resuelta sin
+backend: es texto redactado por el equipo/IA en el momento de construir el
+dataset, **no una llamada en vivo a un modelo de IA** desde el navegador de
+cada usuario (mismo límite que GWI y Slides, ver arriba). Si más adelante se
+conecta un backend real, este es el campo más fácil de convertir en una
+llamada en vivo a un LLM.
 
 ## Automatización diaria de GWI (rutina en la nube)
 

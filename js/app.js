@@ -18,12 +18,16 @@ const state = {
     caseId: null,
     selectedTraitIds: [],
     ageBands: [],
+    genderFilter: "todos", // "todos" | "hombres" | "mujeres"
+    nseLevels: [],
+    genreIds: [], // solo aplica cuando categoryId === "entretenimiento"
   },
   result: null, // ver computeResult()
   approved: new Set(),
   history: loadHistory(),
   compareIds: [],
   openHistoryId: null,
+  openIdeas: {}, // { [personaId]: openIdeaIndex } — para el panel de insights de IA
 };
 
 function loadHistory() {
@@ -75,7 +79,7 @@ function showToast(msg) {
 // ------------------------------------------------------------------------
 // Cálculo del embudo (mapa de demanda) y del tamaño de cada persona
 // ------------------------------------------------------------------------
-function computeResult(marketId, categoryId, caseId) {
+function computeResult(marketId, categoryId, caseId, genreIds) {
   const market = findMarket(marketId);
   const kase = findCase(categoryId, caseId);
   if (!market || !kase) return null;
@@ -86,6 +90,23 @@ function computeResult(marketId, categoryId, caseId) {
     running = running * (s.pct / 100);
     steps.push({ label: s.label, pct: Math.round((running / market.digitalPop) * 1000) / 10, resultAbs: running, ofPrevious: s.pct });
   });
+
+  // Géneros musicales (solo Entretenimiento en vivo): agrupa los géneros
+  // elegidos como "afinidad con AL MENOS UNO de los géneros seleccionados"
+  // (fórmula de unión asumiendo independencia), usando el % real de GWI de
+  // cada género como probabilidad individual, y añade un paso más al embudo.
+  if (categoryId === "entretenimiento" && genreIds && genreIds.length > 0) {
+    const genres = genreIds.map((id) => MUSIC_GENRES.find((g) => g.id === id)).filter(Boolean);
+    const combinedPct = (1 - genres.reduce((acc, g) => acc * (1 - g.refPct / 100), 1)) * 100;
+    running = running * (combinedPct / 100);
+    steps.push({
+      label: `Afinidad con géneros musicales seleccionados (${genres.map((g) => g.label).join(", ")})`,
+      pct: Math.round((running / market.digitalPop) * 1000) / 10,
+      resultAbs: running,
+      ofPrevious: Math.round(combinedPct * 10) / 10,
+    });
+  }
+
   const finalTotal = running;
 
   const personas = kase.personas.map((p) => ({
@@ -251,9 +272,30 @@ function renderWizardStep2() {
           <span class="label">${t.label}</span>
         </div>`).join("")}
     </div>
-    <div style="font-weight:700;font-size:12.5px;margin-bottom:8px;">Rango de edad objetivo (opcional)</div>
-    <div class="age-chip-row" style="margin-bottom:6px;">
-      ${AGE_BANDS.map((a) => `<div class="age-chip ${w.ageBands.includes(a) ? "checked" : ""}" data-age="${a}">${a}</div>`).join("")}
+    ${w.categoryId === "entretenimiento" ? `
+      <div style="font-weight:700;font-size:12.5px;margin-bottom:8px;">Géneros musicales a agrupar (variable real de GWI)</div>
+      <p style="font-size:11.5px;color:var(--muted);margin-bottom:8px;">Selecciona uno o más géneros — se agrupan como "afinidad con al menos uno de ellos" y se ven reflejados como un paso propio en el mapa de demanda.</p>
+      <div class="age-chip-row" style="margin-bottom:18px;">
+        ${MUSIC_GENRES.map((g) => `<div class="age-chip ${w.genreIds.includes(g.id) ? "checked" : ""}" data-genre="${g.id}">${g.label} <small style="opacity:.7;">(${g.refPct}%)</small></div>`).join("")}
+      </div>` : ""}
+    <div style="font-weight:700;font-size:12.5px;margin-bottom:8px;">Más datos demográficos a priorizar (opcional)</div>
+    <div style="margin-bottom:10px;">
+      <div style="font-size:11.5px;color:var(--muted);margin-bottom:6px;">Género</div>
+      <div class="age-chip-row">
+        ${[["todos", "Todos"], ["hombres", "Hombres"], ["mujeres", "Mujeres"]].map(([id, label]) => `<div class="age-chip ${w.genderFilter === id ? "checked" : ""}" data-gender="${id}">${label}</div>`).join("")}
+      </div>
+    </div>
+    <div style="margin-bottom:10px;">
+      <div style="font-size:11.5px;color:var(--muted);margin-bottom:6px;">Nivel socioeconómico (NSE)</div>
+      <div class="age-chip-row">
+        ${NSE_LEVELS.map((n) => `<div class="age-chip ${w.nseLevels.includes(n) ? "checked" : ""}" data-nse="${n}">${n}</div>`).join("")}
+      </div>
+    </div>
+    <div style="margin-bottom:6px;">
+      <div style="font-size:11.5px;color:var(--muted);margin-bottom:6px;">Rango de edad</div>
+      <div class="age-chip-row">
+        ${AGE_BANDS.map((a) => `<div class="age-chip ${w.ageBands.includes(a) ? "checked" : ""}" data-age="${a}">${a}</div>`).join("")}
+      </div>
     </div>
     <div class="wizard-footer">
       <button class="btn ghost" data-action="wizard-back">← Atrás</button>
@@ -264,7 +306,7 @@ function renderWizardStep2() {
 
 function renderWizardStep3() {
   const w = state.wizard;
-  if (!state.result) state.result = computeResult(w.marketId, w.categoryId, w.caseId);
+  if (!state.result) state.result = computeResult(w.marketId, w.categoryId, w.caseId, w.genreIds);
   const r = state.result;
   if (state.approved.size === 0) r.personas.forEach((p) => state.approved.add(p.id));
 
@@ -449,6 +491,27 @@ function renderPersonaDeckSlides(p) {
       </div>
       <div class="deck-by">by Rebold</div>
     </div>
+
+    ${p.aiInsight ? `
+    <div class="deck">
+      <div class="deck-slide-tag">INSIGHTS DE IA</div>
+      <h2 class="deck-title" style="font-size:22px;">Cruce de tendencias con IA</h2>
+      <div class="deck-sub" style="max-width:100%;">${p.aiInsight.summary}</div>
+      <div class="deck-donut-label" style="margin-top:10px;">Ideas clave — haz clic para ver el detalle</div>
+      <div class="ai-idea-list" data-persona-id="${p.id}">
+        ${p.aiInsight.ideas.map((idea, i) => `
+          <div class="ai-idea ${state.openIdeas[p.id] === i ? "open" : ""}" data-idea-toggle="${p.id}:${i}">
+            <div class="ai-idea-head">
+              <span class="ai-idea-num">${i + 1}</span>
+              <span class="ai-idea-label">${idea.label}</span>
+              <span class="ai-idea-caret">${state.openIdeas[p.id] === i ? "−" : "+"}</span>
+            </div>
+            ${state.openIdeas[p.id] === i ? `<div class="ai-idea-detail">${idea.detail}</div>` : ""}
+          </div>`).join("")}
+      </div>
+      <p style="font-size:10px;color:var(--deck-muted);margin-top:14px;">Insight redactado por el equipo Rebold cruzando los datos de esta audiencia con tendencias de categoría — no es una llamada en vivo a un modelo de IA (aplicativo sin backend, ver README).</p>
+      <div class="deck-by">by Rebold</div>
+    </div>` : ""}
   `;
 }
 
@@ -584,6 +647,7 @@ function bindEvents() {
       state.wizard.categoryId = el.dataset.category;
       state.wizard.caseId = null;
       state.wizard.selectedTraitIds = [];
+      state.wizard.genreIds = [];
       state.result = null;
       state.approved = new Set();
       render();
@@ -616,12 +680,44 @@ function bindEvents() {
       render();
     })
   );
+  document.querySelectorAll("[data-genre]").forEach((el) =>
+    el.addEventListener("click", () => {
+      const g = el.dataset.genre;
+      const idx = state.wizard.genreIds.indexOf(g);
+      if (idx >= 0) state.wizard.genreIds.splice(idx, 1);
+      else state.wizard.genreIds.push(g);
+      render();
+    })
+  );
+  document.querySelectorAll("[data-gender]").forEach((el) =>
+    el.addEventListener("click", () => {
+      state.wizard.genderFilter = el.dataset.gender;
+      render();
+    })
+  );
+  document.querySelectorAll("[data-nse]").forEach((el) =>
+    el.addEventListener("click", () => {
+      const n = el.dataset.nse;
+      const idx = state.wizard.nseLevels.indexOf(n);
+      if (idx >= 0) state.wizard.nseLevels.splice(idx, 1);
+      else state.wizard.nseLevels.push(n);
+      render();
+    })
+  );
   document.querySelectorAll("[data-persona-toggle]").forEach((el) =>
     el.addEventListener("click", (e) => {
       e.preventDefault();
       const id = el.dataset.personaToggle;
       if (state.approved.has(id)) state.approved.delete(id);
       else state.approved.add(id);
+      render();
+    })
+  );
+  document.querySelectorAll("[data-idea-toggle]").forEach((el) =>
+    el.addEventListener("click", () => {
+      const [personaId, idx] = el.dataset.ideaToggle.split(":");
+      const i = Number(idx);
+      state.openIdeas[personaId] = state.openIdeas[personaId] === i ? -1 : i;
       render();
     })
   );

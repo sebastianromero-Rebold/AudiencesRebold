@@ -30,6 +30,13 @@ para GitHub Pages.
    modelo de IA — ver "Panel de insights de IA" más abajo.
 4. **Guardar en histórico**: queda disponible en la pestaña *Histórico* para
    consultarlo o compararlo después con otra audiencia.
+4.5. **Audiencias de GWI** (pestaña propia en el sidebar): en vez de construir
+   una audiencia desde cero con el wizard, busca y selecciona directamente
+   entre las **audiencias reales ya creadas en la plataforma de GWI** (236
+   sincronizadas hasta ahora). Si esa audiencia ya tiene un análisis completo
+   construido, se abre directo el mapa de demanda y el perfil; si no, queda
+   marcada "Pendiente de análisis" y puedes copiar una solicitud lista para
+   pedirle a Claude que la analice — ver "Catálogo de audiencias GWI" abajo.
 5. **Descargar .pptx**: genera un PowerPoint con el mismo diseño (negro +
    acento cereza `#CD2B53`, tipografía Montserrat) listo para subir a Google
    Drive — Google Slides lo abre y convierte automáticamente sin perder
@@ -75,6 +82,41 @@ segura (la API key nunca debe vivir en el HTML/JS del navegador):
 3. El resto del aplicativo (wizard, mapa de demanda, perfiles, export a pptx,
    histórico) no necesita cambios: todos consumen el mismo objeto `result`
    devuelto por `computeResult()`.
+
+## Catálogo de audiencias GWI
+
+[`js/gwiCatalog.js`](js/gwiCatalog.js) trae un listado (`GWI_AUDIENCE_CATALOG`)
+de audiencias **reales** ya creadas en la plataforma de GWI, sincronizado a
+mano vía la herramienta MCP `search_audiences` el 2026-09-11 (236 audiencias,
+64 clientes distintos: Páramo, Monex, ASUS, HDI, Jägermeister, Corferias,
+Banrep, CHUBB, Santander, etc.).
+
+**Importante sobre qué tan "completo" es este catálogo**: `search_audiences`
+es búsqueda semántica, no un endpoint de "listar todo" — no hay garantía
+matemática de que esto sea el 100% exhaustivo de lo que existe en la cuenta de
+GWI, aunque cubre una porción amplia y representativa. Para ampliarlo, corre
+más consultas con `search_audiences` (usando `exclude_audience_ids` para
+paginar) y agrega los resultados nuevos a `GWI_AUDIENCE_CATALOG`.
+
+**Seleccionar una audiencia del catálogo no la analiza en vivo** — el sitio
+sigue sin backend, así que no puede llamar a GWI desde el navegador de cada
+usuario (misma limitación de siempre). Por eso cada entrada del catálogo
+tiene dos estados posibles:
+
+- **Analizada**: su `audience_id` aparece en `CATALOG_ANALYSIS_LINKS` (mismo
+  archivo), apuntando a un `categoryId`/`caseId` ya construido en
+  `js/data.js`. Seleccionarla abre el mapa de demanda y el perfil al
+  instante — "evitando construirla desde cero", como se pidió.
+- **Pendiente de análisis**: todavía no tiene ese enlace. El botón "Copiar
+  solicitud de análisis" arma un prompt con el `audience_id` real y las
+  instrucciones (usar `chat_gwi` con `docked_audiences`, una pregunta por
+  llamada, y `explore_insight_gwi` para las cifras) para pegarlo en una
+  conversación con Claude. Al terminar el análisis, se registra el enlace en
+  `CATALOG_ANALYSIS_LINKS` y esa audiencia pasa a "Analizada" para todo el
+  equipo en el próximo deploy.
+- Cuando la **automatización diaria de GWI** (ver abajo) quede conectada, es
+  el mecanismo natural para ir llenando `CATALOG_ANALYSIS_LINKS`
+  automáticamente en vez de hacerlo a mano.
 
 ## Panel de insights de IA
 

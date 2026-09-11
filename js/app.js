@@ -28,6 +28,9 @@ const state = {
   compareIds: [],
   openHistoryId: null,
   openIdeas: {}, // { [personaId]: openIdeaIndex } — para el panel de insights de IA
+  catalogQuery: "",
+  catalogTypeFilter: "todas", // "todas" | "authored" | "shared" | "curated"
+  catalogSelectedId: null,
 };
 
 function loadHistory() {
@@ -146,6 +149,7 @@ function renderSidebar() {
       </div>
       <div class="nav">
         ${item("wizard", "Nueva audiencia", icon("plus"))}
+        ${item("catalog", "Audiencias de GWI", icon("search"))}
         ${item("history", "Histórico", icon("clock"))}
       </div>
       <div class="sidebar-footer">
@@ -163,6 +167,7 @@ function icon(name) {
     clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round"/></svg>`,
     download: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     check: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg>`,
   };
   return icons[name] || "";
 }
@@ -170,6 +175,7 @@ function icon(name) {
 function renderMain() {
   switch (state.view) {
     case "wizard": return renderWizard();
+    case "catalog": return renderCatalog();
     case "profiles": return renderProfiles();
     case "history": return renderHistory();
     case "compare": return renderCompare();
@@ -625,6 +631,102 @@ function renderCompare() {
 }
 
 // ------------------------------------------------------------------------
+// CATÁLOGO DE AUDIENCIAS REALES DE GWI
+// ------------------------------------------------------------------------
+const CATALOG_TYPE_LABEL = { authored: "Mis audiencias", shared: "Compartidas", curated: "GWI" };
+
+function catalogMatches(a, q) {
+  if (!q) return true;
+  const hay = `${a.title} ${a.client} ${a.description}`.toLowerCase();
+  return q.toLowerCase().split(/\s+/).filter(Boolean).every((term) => hay.includes(term));
+}
+
+function renderCatalog() {
+  const q = state.catalogQuery.trim();
+  const typeFilter = state.catalogTypeFilter;
+  const filtered = GWI_AUDIENCE_CATALOG.filter(
+    (a) => catalogMatches(a, q) && (typeFilter === "todas" || a.type === typeFilter)
+  );
+  const showLimit = 60;
+  const shown = filtered.slice(0, showLimit);
+  const selected = state.catalogSelectedId ? GWI_AUDIENCE_CATALOG.find((a) => a.id === state.catalogSelectedId) : null;
+
+  const typeCounts = { todas: GWI_AUDIENCE_CATALOG.length };
+  ["authored", "shared", "curated"].forEach((t) => (typeCounts[t] = GWI_AUDIENCE_CATALOG.filter((a) => a.type === t).length));
+
+  return `
+    <div class="topbar">
+      <div>
+        <div class="eyebrow">Audiencias de GWI</div>
+        <h1 class="title-xl">Selecciona una audiencia ya creada</h1>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:12.5px;margin-bottom:16px;max-width:720px;">
+      Catálogo sincronizado desde la plataforma de GWI (<code>search_audiences</code>) —
+      ${GWI_AUDIENCE_CATALOG.length} audiencias reales creadas por el equipo. Si una ya tiene
+      análisis completo, se abre directo; si no, puedes pedir que se analice, en vez de
+      construirla desde cero.
+    </p>
+    <div class="card">
+      <input type="text" id="catalog-search" placeholder="Buscar por cliente, marca o palabra clave (ej. Jagermeister, fútbol, fintech)..."
+        value="${escapeHtml(state.catalogQuery)}"
+        style="width:100%;padding:12px 16px;border-radius:999px;border:1.5px solid var(--border);font-size:13px;margin-bottom:14px;font-family:inherit;" />
+      <div class="age-chip-row" style="margin-bottom:16px;">
+        ${["todas", "authored", "shared", "curated"].map((t) => `
+          <div class="age-chip ${typeFilter === t ? "checked" : ""}" data-catalog-type="${t}">
+            ${t === "todas" ? "Todas" : CATALOG_TYPE_LABEL[t]} (${typeCounts[t]})
+          </div>`).join("")}
+      </div>
+      <div style="max-height:420px;overflow-y:auto;">
+        ${shown.length === 0 ? `<div class="empty-state"><div class="big">🔍</div>Sin resultados para esa búsqueda.</div>` : shown.map((a) => {
+          const linked = CATALOG_ANALYSIS_LINKS[a.id];
+          const parts = a.title.split(">").map((s) => s.trim());
+          return `
+          <div class="hist-row" style="grid-template-columns:1fr 120px 90px;cursor:pointer;" data-catalog-select="${a.id}">
+            <div>
+              <div class="name">${escapeHtml(parts[parts.length - 1])}</div>
+              <div class="meta">${escapeHtml(parts.slice(0, -1).join(" › ") || a.client)}</div>
+            </div>
+            <div class="pill">${CATALOG_TYPE_LABEL[a.type]}</div>
+            <div class="pill" style="background:${linked ? "var(--accent-soft)" : "var(--surface-alt)"};">${linked ? "✓ Analizada" : "Pendiente"}</div>
+          </div>`;
+        }).join("")}
+      </div>
+      ${filtered.length > showLimit ? `<p style="font-size:11px;color:var(--muted);margin-top:10px;">Mostrando ${showLimit} de ${filtered.length} resultados — afina la búsqueda para ver más.</p>` : ""}
+    </div>
+
+    ${selected ? renderCatalogDetail(selected) : ""}
+  `;
+}
+
+function renderCatalogDetail(a) {
+  const linked = CATALOG_ANALYSIS_LINKS[a.id];
+  const parts = a.title.split(">").map((s) => s.trim());
+  return `
+    <div class="card" style="margin-top:16px;">
+      <div class="section-title">Detalle de la audiencia</div>
+      <h3 style="margin-bottom:4px;">${escapeHtml(parts[parts.length - 1])}</h3>
+      <p style="color:var(--muted);font-size:12px;margin-bottom:10px;">${escapeHtml(parts.slice(0, -1).join(" › ") || a.client)} · ${CATALOG_TYPE_LABEL[a.type]} · dataset(s): ${a.datasets.join(", ")}</p>
+      ${a.description ? `<p style="font-size:13px;margin-bottom:14px;">${escapeHtml(a.description)}</p>` : `<p style="font-size:12.5px;color:var(--muted);margin-bottom:14px;">Esta audiencia no tiene descripción registrada en GWI — el nombre es la única referencia disponible.</p>`}
+      <p style="font-size:10.5px;color:var(--muted);margin-bottom:14px;">audience_id: <code>${a.id}</code></p>
+
+      ${linked ? `
+        <button class="btn primary" data-action="open-linked-catalog" data-id="${a.id}">Ver mapa de demanda y perfil →</button>
+      ` : `
+        <div class="pill" style="margin-bottom:12px;">Pendiente de análisis</div>
+        <p style="font-size:12.5px;color:var(--muted);margin-bottom:14px;max-width:640px;">
+          Esta audiencia real de GWI todavía no tiene un perfil completo construido en el
+          aplicativo (demografía, motivadores, journey, etc.). Cuando la rutina diaria de GWI
+          quede conectada, las nuevas audiencias se analizan automáticamente. Mientras tanto,
+          copia esta solicitud y pégasela a Claude para que la analice y la integre.
+        </p>
+        <button class="btn" data-action="copy-catalog-request" data-id="${a.id}">📋 Copiar solicitud de análisis</button>
+      `}
+    </div>
+  `;
+}
+
+// ------------------------------------------------------------------------
 // Acciones / eventos
 // ------------------------------------------------------------------------
 function bindEvents() {
@@ -796,6 +898,55 @@ function bindEvents() {
     state.view = "history";
     render();
   });
+
+  const catalogSearch = document.getElementById("catalog-search");
+  if (catalogSearch) {
+    catalogSearch.addEventListener("input", (e) => {
+      state.catalogQuery = e.target.value;
+      render();
+      const el = document.getElementById("catalog-search");
+      if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+    });
+  }
+  document.querySelectorAll("[data-catalog-type]").forEach((el) =>
+    el.addEventListener("click", () => {
+      state.catalogTypeFilter = el.dataset.catalogType;
+      render();
+    })
+  );
+  document.querySelectorAll("[data-catalog-select]").forEach((el) =>
+    el.addEventListener("click", () => {
+      state.catalogSelectedId = el.dataset.catalogSelect;
+      render();
+    })
+  );
+  document.querySelectorAll("[data-action='open-linked-catalog']").forEach((el) =>
+    el.addEventListener("click", () => {
+      const link = CATALOG_ANALYSIS_LINKS[el.dataset.id];
+      if (!link) return;
+      state.wizard.categoryId = link.categoryId;
+      state.wizard.caseId = link.caseId;
+      state.wizard.marketId = link.marketId || state.wizard.marketId;
+      state.wizard.genreIds = [];
+      state.result = computeResult(state.wizard.marketId, link.categoryId, link.caseId, []);
+      state.approved = link.personaId
+        ? new Set([link.personaId])
+        : new Set(state.result.personas.map((p) => p.id));
+      state.view = "profiles";
+      render();
+    })
+  );
+  document.querySelectorAll("[data-action='copy-catalog-request']").forEach((el) =>
+    el.addEventListener("click", () => {
+      const a = GWI_AUDIENCE_CATALOG.find((x) => x.id === el.dataset.id);
+      if (!a) return;
+      const text = `Analiza esta audiencia real de GWI y agrégala a Audiences Rebold como un caso con persona(s) completas (demografía, motivaciones, barreras, intereses digitales, medios y customer journey de 6 bloques), siguiendo el mismo esquema que ya usa js/data.js:\n\naudience_id: ${a.id}\nNombre: ${a.title}\nTipo: ${CATALOG_TYPE_LABEL[a.type]}\nDataset(s): ${a.datasets.join(", ")}\n${a.description ? "Descripción GWI: " + a.description : ""}\n\nUsa chat_gwi con docked_audiences: ["${a.id}"] (una pregunta por llamada) y explore_insight_gwi para las cifras. Al terminar, registra el enlace en js/gwiCatalog.js (CATALOG_ANALYSIS_LINKS) para que seleccionar esta audiencia en el catálogo abra el análisis directo.`;
+      navigator.clipboard.writeText(text).then(
+        () => showToast("Solicitud copiada — pégala en una conversación con Claude"),
+        () => showToast("No se pudo copiar automáticamente; copia el texto manualmente")
+      );
+    })
+  );
 }
 
 function saveCurrentToHistory() {

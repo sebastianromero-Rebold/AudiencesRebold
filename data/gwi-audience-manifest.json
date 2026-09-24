@@ -3,6 +3,9 @@
   "processed": [
     { "audience_id": "5190162e-beac-4432-9cba-eed11194afdd", "title": "Paramo (co) EventosEnVivoGeneral", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "eventos-en-vivo-general-colombia" },
     { "audience_id": "5826d1eb-a730-4df3-84c3-0e75aedd35c5", "title": "Paramo (co) LABUCL", "processedAt": "2026-09-24", "categoryId": "deportes", "caseId": "seguidores-champions-league-colombia" },
-    { "audience_id": "49dbc0ab-e5d3-47fc-88db-948265845b54", "title": "Paramo(co)FintechColombia", "processedAt": "2026-09-24", "categoryId": "fintech", "caseId": "fintech-general-colombia" }
+    { "audience_id": "49dbc0ab-e5d3-47fc-88db-948265845b54", "title": "Paramo(co)FintechColombia", "processedAt": "2026-09-24", "categoryId": "fintech", "caseId": "fintech-general-colombia" },
+    { "audience_id": "aeeab035-01c5-4627-9e40-35bb34fa4bb2", "title": "Páramo LAB (co) Coca100_GenX", "processedAt": "2026-09-24", "categoryId": "momentos", "caseId": "coca100-celebracion-multigeneracional-colombia" },
+    { "audience_id": "bb62e8d2-f93a-43a1-858c-b91e8ac98b08", "title": "Páramo LAB (co) Coca100_Millennials", "processedAt": "2026-09-24", "categoryId": "momentos", "caseId": "coca100-celebracion-multigeneracional-colombia" },
+    { "audience_id": "b2e5e216-56f7-453b-86d7-2d159f1628a6", "title": "Páramo LAB (co) Coca100_Genz", "processedAt": "2026-09-24", "categoryId": "momentos", "caseId": "coca100-celebracion-multigeneracional-colombia" }
   ]
 }

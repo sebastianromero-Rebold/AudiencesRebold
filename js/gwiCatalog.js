@@ -244,6 +244,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "5190162e-beac-4432-9cba-eed11194afdd", title: "Paramo (co) EventosEnVivoGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
   { id: "5826d1eb-a730-4df3-84c3-0e75aedd35c5", title: "Paramo (co) LABUCL", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in watching sports or are sports fans, as well as being interested in the UEFA Champions League or watching it live on a TV channel or streaming service or following it and watching highlights or actively following news about it." },
   { id: "49dbc0ab-e5d3-47fc-88db-948265845b54", title: "Paramo(co)FintechColombia", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
+  // Añadidas por la automatización diaria de GWI el 2026-09-24 (batch 2 — campaña Coca100, prioridad del equipo).
+  { id: "aeeab035-01c5-4627-9e40-35bb34fa4bb2", title: "Páramo LAB (co) Coca100_GenX", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "bb62e8d2-f93a-43a1-858c-b91e8ac98b08", title: "Páramo LAB (co) Coca100_Millennials", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "b2e5e216-56f7-453b-86d7-2d159f1628a6", title: "Páramo LAB (co) Coca100_Genz", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -257,4 +261,7 @@ const CATALOG_ANALYSIS_LINKS = {
   "5190162e-beac-4432-9cba-eed11194afdd": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co" },
   "5826d1eb-a730-4df3-84c3-0e75aedd35c5": { categoryId: "deportes", caseId: "seguidores-champions-league-colombia", personaId: "hincha-champions-colombia" },
   "49dbc0ab-e5d3-47fc-88db-948265845b54": { categoryId: "fintech", caseId: "fintech-general-colombia", personaId: "usuario-fintech-colombia" },
+  "aeeab035-01c5-4627-9e40-35bb34fa4bb2": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "guardiana-nostalgia-coca100-genx" },
+  "bb62e8d2-f93a-43a1-858c-b91e8ac98b08": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "puente-familiar-coca100-millennials" },
+  "b2e5e216-56f7-453b-86d7-2d159f1628a6": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "descubridora-digital-coca100-genz" },
 };

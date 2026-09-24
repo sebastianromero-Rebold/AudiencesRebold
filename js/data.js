@@ -2197,6 +2197,256 @@ const CASE_TRABAJO = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — generados por la rutina diaria de GWI (ver README
+// "Automatización diaria de GWI"). Cada uno viene de UNA audiencia real de
+// GWI (audience_id documentado abajo) consultada vía chat_gwi/explore_insight_gwi
+// el 2026-09-24. A diferencia de los casos anteriores, cada uno trae una sola
+// persona (sharePct 100) porque solo hay UNA audiencia real de origen -- no se
+// fabrica una segunda persona/segmento sin respaldo de datos. `quote` queda
+// como placeholder a propósito: no se inventan testimonios. Pendientes de
+// revisión editorial -- ver badge "Borrador automático GWI".
+// ---------------------------------------------------------------------------
+
+const CASE_EVENTOS_VIVO_GWI_AUTO_20260924 = {
+  id: "eventos-en-vivo-general-colombia",
+  name: "Audiencia general de eventos en vivo (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) EventosEnVivoGeneral', audience_id 5190162e-beac-4432-9cba-eed11194afdd) definida solo por interés en eventos en vivo/festivales de música en Colombia.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo como festivales de música (Colombia)", pct: 33 },
+  ],
+  footnotes: [
+    "33% real de GWI Core Colombia (Q4 2025–Q3 2026) — es también el único criterio que define esta audiencia en GWI, así que el embudo no se fracciona más para evitar encadenar cifras de bases distintas sin respaldo real.",
+    "Demografía (género y edad) tomada 1:1 de la audiencia real de GWI vía chat_gwi/explore_insight_gwi.",
+    "Motivaciones, barreras, medios y geografía: GWI no devolvió crosstabs exclusivos de esta audiencia para estas variables — se usan cifras reales de GWI Core Colombia (población general conectada) como mejor proxy disponible; deben leerse como contexto de categoría, no como diferenciador exclusivo de esta audiencia.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-eventos-vivo-co",
+      name: "Camila Rojas",
+      archetype: "La Cazadora de Planes en Vivo",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive pendiente de la cartelera de conciertos y festivales en Colombia. Es parte del tercio de colombianos conectados que declara interés activo en eventos en vivo, aunque la conversión de ese interés a compra real de boletos sigue siendo la principal fricción de la categoría.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha estructural entre interés y compra que muestra GWI en Colombia: 33% de los internautas colombianos declara interés en eventos en vivo, pero solo ~15% compró boletos de concierto en los últimos 3-6 meses — la oportunidad de medios no está en generar más interés, sino en remover fricción en el tramo final del funnel (disponibilidad, precio, facilidad de pago).",
+        [
+          { label: "El cuello de botella es la conversión, no el interés", detail: "Con un interés declarado de 33% y compra real de solo ~15%, más de la mitad del interés se pierde entre el deseo y el boleto — vale más invertir en checkout/retargeting que en awareness adicional." },
+          { label: "Colombia usa redes y chat de forma casi universal", detail: "98%+ de los colombianos conectados usa redes sociales y apps de chat cada mes — cualquier activación de venta de boletos debe apoyarse en estos canales antes que en display genérico." },
+          { label: "Geografía concentrada en el eje Bogotá-Antioquia-Valle", detail: "Más de la mitad de los internautas colombianos vive en Bogotá D.C., Antioquia o Valle del Cauca (dato de población general, GWI no desagregó esta variable solo para la audiencia) — la logística de gira/venta debería priorizar estas tres plazas." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45.6, female: 54.4 },
+        ageBands: [
+          { label: "16-24", pct: 23.8 },
+          { label: "25-34", pct: 28.0 },
+          { label: "35-44", pct: 22.5 },
+          { label: "45-54", pct: 15.9 },
+          { label: "55-64", pct: 9.8 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 28.2 },
+          { city: "Antioquia", pct: 14.1 },
+          { city: "Valle del Cauca", pct: 9.8 },
+          { city: "Cundinamarca", pct: 8.3 },
+        ],
+      },
+      motivations: [
+        { label: "Interés declarado en eventos en vivo / festivales de música (Colombia — define la audiencia)", pct: 33 },
+        { label: "Compró boletos de concierto en los últimos 3-6 meses (Colombia, GWI Core)", pct: 15 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses (Colombia, GWI Core)", pct: 13 },
+      ],
+      barriers: [
+        { label: "Brecha entre interés declarado (33%) y compra real de boletos (15%) — Colombia, GWI Core", pct: 18 },
+        { label: "Solo una minoría tiene plan concreto de compra en los próximos 3-6 meses (Colombia, GWI Core)", pct: 13 },
+        { label: "Baja intención de compra de boletos de viaje asociados al plan (Colombia, GWI Core)", pct: 17 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Redes sociales (uso mensual, Colombia)", pct: 98.5 },
+        { label: "Chat / mensajería tipo WhatsApp (uso mensual, Colombia)", pct: 97.9 },
+        { label: "Buscadores (Google, etc. — uso mensual, Colombia)", pct: 89.3 },
+        { label: "TikTok para contenido de entretenimiento (Colombia)", pct: 84.3 },
+        { label: "Instagram para compartir fotos/videos (Colombia)", pct: 61 },
+        { label: "Facebook para compartir fotos/videos (Colombia)", pct: 59.8 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y noticias", "Instagram, Facebook, Google", "Contenido de anuncio/lineup de próximos eventos.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Búsqueda y redes", "Google, WhatsApp", "Recordatorio de venta de boletos / preventa.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y mensajería", "Instagram, WhatsApp", "Contenido para compartir con grupo de amigos.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y video online", "TikTok, YouTube, Instagram", "Retargeting a quienes vieron el lineup.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes", "Instagram, TikTok", "CTA directo a compra de boletos.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y chat", "WhatsApp, Instagram", "Últimas entradas / urgencia de compra.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_CHAMPIONS_GWI_AUTO_20260924 = {
+  id: "seguidores-champions-league-colombia",
+  name: "Seguidores de la UEFA Champions League (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) LABUCL', audience_id 5826d1eb-a730-4df3-84c3-0e75aedd35c5): colombianos aficionados al deporte e interesados en la UEFA Champions League.",
+  funnelSteps: [
+    { label: "Interesados en fútbol / siguen la UEFA Champions League (Colombia)", pct: 27 },
+  ],
+  footnotes: [
+    "27% = tamaño real de la audiencia en GWI (~8.5M) sobre la población digital total de Colombia (31.06M) — cifra derivada de universos reales devueltos por explore_insight_gwi, no estimada a ojo.",
+    "Demografía, medios e intereses digitales tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi (GWI la identificó explícitamente como 'Champions League Viewers').",
+    "GWI no devolvió desagregación geográfica (ciudad/región) para esta audiencia específica.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "hincha-champions-colombia",
+      name: "Andrés Salcedo",
+      archetype: "El Hincha Multipantalla de la Champions",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Ve la Champions League principalmente por TV abierta o paga en casa, pero su seguimiento del torneo vive también en redes sociales: sigue equipos y jugadores, comenta y publica sobre deporte muy por encima del promedio. Es abrumadoramente masculino y transversal en edad, con fuerza particular entre los 25 y 54 años.",
+      aiInsight: aiInsight(
+        "Cruza con la fragmentación del 'segundo partido': aunque el consumo del juego en sí sigue anclado a la TV (92% lo ve en un televisor), el verdadero terreno de disputa por su atención es la conversación social alrededor del partido — publica sobre deporte con un índice de 232 frente al promedio y sigue cuentas de equipos/jugadores con índice 199 — lo que abre una ventana de activación de marca en el pre y post-partido en redes, no solo en la pauta de TV.",
+        [
+          { label: "La TV domina el partido, pero no el resto del día", detail: "92% ve el partido en un televisor, pero fuera del horario del juego esta audiencia vive en redes de deporte — separar presupuesto entre 'momento del partido' (TV/streaming) y 'conversación alrededor' (social) maximiza el alcance real." },
+          { label: "Es una audiencia que amplifica, no solo consume", detail: "Publica sobre deporte con un índice de 232 frente al promedio — activarla con contenido para compartir (predicciones, retos, momentos icónicos) multiplica el alcance orgánico más que en otras categorías." },
+          { label: "El streaming pago todavía no es el canal dominante", detail: "Solo 45% paga hoy un servicio de streaming de TV/cine — una estrategia 100% digital-only deja fuera a más de la mitad de esta audiencia; la señal abierta y la TV paga tradicional siguen siendo relevantes." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 77.5, female: 22.5 },
+        ageBands: [
+          { label: "16-24", pct: 19.9 },
+          { label: "25-34", pct: 26.5 },
+          { label: "35-44", pct: 24.3 },
+          { label: "45-54", pct: 16.9 },
+          { label: "55-64", pct: 12.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en ver deporte en general", pct: 74 },
+        { label: "Muy interesados específicamente en la UEFA Champions League", pct: 83 },
+        { label: "Usan redes sociales para seguir/ver deporte", pct: 53 },
+      ],
+      barriers: [
+        { label: "Solo 45% paga hoy un servicio de streaming de TV/cine — la mayoría depende de TV abierta/paga tradicional", pct: 55 },
+        { label: "Baja preferencia por streaming dedicado de eventos frente al hábito de TV tradicional", pct: 28 },
+      ],
+      digitalInterests: [
+        { label: "Usar redes sociales para ver/seguir deportes", index: 208 },
+        { label: "Seguir a deportistas y equipos en redes", index: 199 },
+        { label: "Publicar opiniones sobre deportes online", index: 232 },
+        { label: "Interés en eventos por streaming", index: 136 },
+      ],
+      media: [
+        { label: "TV set para ver TV en vivo", pct: 92.2 },
+        { label: "Sigue a equipos/jugadores en redes sociales", pct: 60.4 },
+        { label: "Usa redes sociales para ver/seguir deporte", pct: 52.8 },
+        { label: "Teléfono/tablet para ver TV en vivo", pct: 39.1 },
+        { label: "Laptop/desktop para ver TV en vivo", pct: 26.5 },
+        { label: "Streaming device / smart stick", pct: 8.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y noticias deportivas", "Instagram, X, Google", "Resumen/preview del partido del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, X", "Contenido de previa y alineaciones.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y mensajería", "WhatsApp, Instagram", "Comentario/debate sobre el partido de la noche.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y video online", "YouTube, Instagram", "Recordatorio de horario del partido + dónde verlo.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / bar", "TV y redes", "TV abierta/paga, Instagram", "Activación en el pre-partido (TV + segunda pantalla).", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bar", "TV y redes sociales", "TV, X, Instagram", "Conversación en vivo y reacciones post-partido.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FINTECH_GWI_AUTO_20260924 = {
+  id: "fintech-general-colombia",
+  name: "Interesados en Fintech (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo(co)FintechColombia', audience_id 49dbc0ab-e5d3-47fc-88db-948265845b54): colombianos interesados en fintech / servicios financieros digitales.",
+  funnelSteps: [
+    { label: "Interesados en fintech / servicios financieros digitales (Colombia)", pct: 11 },
+  ],
+  footnotes: [
+    "11% = tamaño real de la audiencia en GWI (~3.3M) sobre la población digital total de Colombia (31.06M) — cifra derivada de universos reales devueltos por explore_insight_gwi.",
+    "Demografía (género, edad, nivel educativo) tomada 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Motivaciones, barreras y medios: GWI no devolvió crosstabs exclusivos de esta audiencia para estas variables — se usan cifras reales de GWI Core Colombia sobre usuarios de Billetera Móvil / compradores de apps móviles (proxy temático más cercano) y sobre población general conectada; deben leerse como contexto de categoría, no como diferenciador exclusivo de esta audiencia.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "usuario-fintech-colombia",
+      name: "Daniel Marín",
+      archetype: "El Optimizador Financiero Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano conectado que ya usa o está dispuesto a probar apps financieras y billeteras digitales. Valora la seguridad financiera por encima de la conveniencia, pero mantiene una preocupación activa por el uso de sus datos personales — la confianza, no la fricción de uso, parece ser la barrera principal para escalar su adopción.",
+      aiInsight: aiInsight(
+        "Cruza con la paradoja de la confianza digital en fintech LatAm: esta audiencia ya usa canales digitales para casi todo (98% redes sociales, 70% WhatsApp a diario) pero solo 31% ha usado un producto de banca/inversión/seguros digital en el último mes — la brecha no parece ser de habilidad digital sino de confianza, reforzada por una preocupación por el manejo de datos personales por encima del promedio — cualquier estrategia de adquisición debería liderar con prueba social y transparencia de datos, no solo con conveniencia.",
+        [
+          { label: "La barrera parece ser confianza, no fricción de uso", detail: "Con 98% ya activo en redes sociales a diario pero solo 31% usando productos financieros digitales, el mensaje debe liderar con seguridad y transparencia sobre el manejo de datos (42% dice preocuparse por esto), no solo con velocidad o conveniencia." },
+          { label: "La seguridad financiera pesa más que la promoción", detail: "70% considera importante ser financieramente seguro — comunicar ahorro/control financiero puede convertir mejor que mensajes centrados solo en cashback o promociones." },
+          { label: "WhatsApp como canal de soporte y confianza", detail: "70% usa WhatsApp más de una vez al día — es el canal natural para atención al cliente y validación social (testimonios, soporte humano) que reduzca la percepción de riesgo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 53.8, female: 46.2 },
+        ageBands: [
+          { label: "16-24", pct: 22.0 },
+          { label: "25-34", pct: 30.0 },
+          { label: "35-44", pct: 24.2 },
+          { label: "45-54", pct: 14.9 },
+          { label: "55-64", pct: 7.0 },
+          { label: "65+", pct: 2.0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Consideran importante ser financieramente seguros (usuarios de Billetera Móvil, Colombia)", pct: 70.6 },
+        { label: "Gestionan sus finanzas o ahorros desde internet (compradores de apps móviles, Colombia)", pct: 47 },
+        { label: "Prefieren poder diferir pagos sin intereses adicionales (compradores de apps móviles, Colombia)", pct: 23 },
+      ],
+      barriers: [
+        { label: "Preocupación por el uso de sus datos personales por parte de empresas (usuarios de Billetera Móvil, Colombia)", pct: 41.6 },
+        { label: "Preocupación por el rastreo del gobierno en línea (compradores de apps móviles, Colombia)", pct: 25 },
+        { label: "Solo 31% de los colombianos conectados usó banca/inversión/seguros digitales en el último mes — adopción real aún minoritaria (Colombia, GWI Core)", pct: 31.3 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Redes sociales (uso mensual, Colombia)", pct: 98.4 },
+        { label: "WhatsApp más de una vez al día (Colombia)", pct: 69.8 },
+        { label: "Facebook más de una vez al día (Colombia)", pct: 38 },
+        { label: "TikTok más de una vez al día (Colombia)", pct: 36 },
+        { label: "Instagram más de una vez al día (Colombia)", pct: 34 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y notificaciones", "App del banco/billetera, WhatsApp", "Notificación de saldo/movimiento matutino.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes y búsqueda", "Google, Instagram", "Contenido educativo sobre finanzas personales.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Apps de pago", "Billetera digital, WhatsApp", "Uso de pago digital en almuerzo/compras del día.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook", "Testimonios o comparativas de producto financiero.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Apps y redes", "App del banco, WhatsApp", "Revisión de gastos / ahorro del día.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y chat", "WhatsApp, Instagram", "Soporte por WhatsApp o contenido de educación financiera.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -2211,7 +2461,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924],
   },
   {
     id: "deportes",
@@ -2224,7 +2474,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924],
   },
   {
     id: "retail",
@@ -2250,7 +2500,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924],
   },
   {
     id: "alcohol",

@@ -3,6 +3,11 @@
   "processed": [
     { "audience_id": "5190162e-beac-4432-9cba-eed11194afdd", "title": "Paramo (co) EventosEnVivoGeneral", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "eventos-en-vivo-general-colombia" },
     { "audience_id": "5826d1eb-a730-4df3-84c3-0e75aedd35c5", "title": "Paramo (co) LABUCL", "processedAt": "2026-09-24", "categoryId": "deportes", "caseId": "seguidores-champions-league-colombia" },
-    { "audience_id": "49dbc0ab-e5d3-47fc-88db-948265845b54", "title": "Paramo(co)FintechColombia", "processedAt": "2026-09-24", "categoryId": "fintech", "caseId": "fintech-general-colombia" }
+    { "audience_id": "49dbc0ab-e5d3-47fc-88db-948265845b54", "title": "Paramo(co)FintechColombia", "processedAt": "2026-09-24", "categoryId": "fintech", "caseId": "fintech-general-colombia" },
+    { "audience_id": "7491a77f-8dbb-4da4-9511-8bd828b22005", "title": "Páramo (co) LauraPausini2027Med_Nuevos", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "laura-pausini-2027-colombia", "note": "GWI no devolvió datos compatibles para esta audiencia (chat_gwi/explore_insight_gwi) — persona usa proxy de población general, ver footnotes del caso." },
+    { "audience_id": "1e719101-f272-4418-8b84-8d73c503b30c", "title": "Páramo (co) LauraPausini2027Med_Base", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "laura-pausini-2027-colombia" },
+    { "audience_id": "9b5745d1-a0ed-4396-88ce-b36a15559f0c", "title": "Páramo (co) Placebo_ Fans del rock en vivo2", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "placebo-rock-en-vivo-colombia" },
+    { "audience_id": "16c03d23-3c86-4000-bf94-8cb14d01143d", "title": "Páramo (co) Placebo_ Fans del rock en vivo", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "placebo-rock-en-vivo-colombia" },
+    { "audience_id": "e772d20d-de65-4729-8db1-7952ed8e20c9", "title": "Páramo (co) Placebo_Rockers Creativos", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "placebo-rock-en-vivo-colombia" }
   ]
 }

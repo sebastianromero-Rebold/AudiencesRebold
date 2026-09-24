@@ -244,6 +244,12 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "5190162e-beac-4432-9cba-eed11194afdd", title: "Paramo (co) EventosEnVivoGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
   { id: "5826d1eb-a730-4df3-84c3-0e75aedd35c5", title: "Paramo (co) LABUCL", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in watching sports or are sports fans, as well as being interested in the UEFA Champions League or watching it live on a TV channel or streaming service or following it and watching highlights or actively following news about it." },
   { id: "49dbc0ab-e5d3-47fc-88db-948265845b54", title: "Paramo(co)FintechColombia", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
+  // Añadidas por el batch-3 de la automatización de GWI el 2026-09-24 (campañas LauraPausini2027 y Placebo — ver data/gwi-audience-manifest.json).
+  { id: "7491a77f-8dbb-4da4-9511-8bd828b22005", title: "Páramo (co) LauraPausini2027Med_Nuevos", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "1e719101-f272-4418-8b84-8d73c503b30c", title: "Páramo (co) LauraPausini2027Med_Base", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "9b5745d1-a0ed-4396-88ce-b36a15559f0c", title: "Páramo (co) Placebo_ Fans del rock en vivo2", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "16c03d23-3c86-4000-bf94-8cb14d01143d", title: "Páramo (co) Placebo_ Fans del rock en vivo", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "e772d20d-de65-4729-8db1-7952ed8e20c9", title: "Páramo (co) Placebo_Rockers Creativos", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who live in the Capital District or Cundinamarca, are interested in music, like listening to rock music, are interested in live events such as music festivals, and are creative or open-minded." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -257,4 +263,9 @@ const CATALOG_ANALYSIS_LINKS = {
   "5190162e-beac-4432-9cba-eed11194afdd": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co" },
   "5826d1eb-a730-4df3-84c3-0e75aedd35c5": { categoryId: "deportes", caseId: "seguidores-champions-league-colombia", personaId: "hincha-champions-colombia" },
   "49dbc0ab-e5d3-47fc-88db-948265845b54": { categoryId: "fintech", caseId: "fintech-general-colombia", personaId: "usuario-fintech-colombia" },
+  "7491a77f-8dbb-4da4-9511-8bd828b22005": { categoryId: "entretenimiento", caseId: "laura-pausini-2027-colombia", personaId: "laura-pausini-nuevos-proxy" },
+  "1e719101-f272-4418-8b84-8d73c503b30c": { categoryId: "entretenimiento", caseId: "laura-pausini-2027-colombia", personaId: "laura-pausini-base-antioquia" },
+  "9b5745d1-a0ed-4396-88ce-b36a15559f0c": { categoryId: "entretenimiento", caseId: "placebo-rock-en-vivo-colombia", personaId: "placebo-fans-rock-no-creativos" },
+  "16c03d23-3c86-4000-bf94-8cb14d01143d": { categoryId: "entretenimiento", caseId: "placebo-rock-en-vivo-colombia", personaId: "placebo-fans-rock-compradores" },
+  "e772d20d-de65-4729-8db1-7952ed8e20c9": { categoryId: "entretenimiento", caseId: "placebo-rock-en-vivo-colombia", personaId: "placebo-rockers-creativos" },
 };

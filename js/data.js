@@ -2446,6 +2446,330 @@ const CASE_FINTECH_GWI_AUTO_20260924 = {
   ],
 };
 
+const CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924 = {
+  id: "laura-pausini-2027-colombia",
+  name: "Laura Pausini en concierto (Colombia, 2027)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "Dos audiencias reales de GWI construidas por el equipo para la campaña 'LauraPausini2027' (Páramo): 'Páramo (co) LauraPausini2027Med_Base' (audience_id 1e719101-f272-4418-8b84-8d73c503b30c) y 'Páramo (co) LauraPausini2027Med_Nuevos' (audience_id 7491a77f-8dbb-4da4-9511-8bd828b22005).",
+  funnelSteps: [
+    { label: "Interesados en música pop/singer-songwriter + eventos en vivo, Antioquia (audiencia 'Base' real de GWI)", pct: 1 },
+  ],
+  footnotes: [
+    "1% = universo real de la audiencia 'Base' en GWI (312,835 personas) sobre el total de internautas de Colombia (31.96M, GWI Core Q4 2025–Q3 2026) — cifra derivada de universos reales devueltos por explore_insight_gwi.",
+    "⚠️ La audiencia 'Nuevos' (audience_id 7491a77f-8dbb-4da4-9511-8bd828b22005) no devolvió NINGÚN dato compatible en chat_gwi/explore_insight_gwi pese a más de 6 intentos con preguntas distintas (tamaño, demografía, motivaciones, medios) — a diferencia de las otras 4 audiencias de este mismo batch (incluida su audiencia hermana 'Base'), que respondieron con normalidad. Es probable que esté mal configurada o vacía en la plataforma de GWI; requiere revisión directa del equipo en GWI antes de usarse en un plan de medios real.",
+    "Por lo anterior, la persona 'Nuevos' de este caso usa como proxy cifras reales de GWI Core Colombia para población general interesada en música Pop/Top40 o singer-songwriter + eventos en vivo (no son exclusivas de la audiencia 'Nuevos' — ver nota en la persona).",
+    "El split 50/50 de sharePct entre 'Base' y 'Nuevos' es una asunción de presentación (no hay dato real de tamaño de audiencia para 'Nuevos' con el que calcular un split real) — no debe usarse para asignar presupuesto de medios sin validar tamaños reales directamente en GWI.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "laura-pausini-base-antioquia",
+      name: "Marcela Restrepo",
+      archetype: "La Melómana Fiel de Antioquia",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Antioquia y combina su gusto por la música pop y de cantautor con una vida cultural activa — teatro, museos, galerías. Cree genuinamente que la música puede ser un agente de cambio social, no solo entretenimiento. Es el núcleo ya identificado por Páramo para la campaña de Laura Pausini 2027: la base de fans fieles, no un prospecto por convencer.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón de 'fandom cultural amplio' que muestra GWI para esta audiencia: no consume música de forma aislada, sino como parte de un consumo cultural más amplio (teatro 49%, museos/galerías 61%, libros 67%) — la oportunidad de medios no es solo vender el concierto como evento musical, sino como una experiencia cultural que conecta con su identidad ya establecida como persona con curiosidad artística.",
+        [
+          { label: "El teatro y los museos son la puerta de entrada, no solo la música", detail: "Con 61% interesada en museos/galerías y 49% en teatro (frente a un promedio bastante menor en Colombia), vale la pena pautar en circuitos culturales — programación de teatros, boletería de museos — no solo en canales puramente musicales." },
+          { label: "WhatsApp es el canal de mayor frecuencia, no Instagram", detail: "77% usa WhatsApp más de una vez al día frente a 57% de Instagram — el mensaje de urgencia/últimas entradas debería apoyarse en difusión boca a boca vía WhatsApp (grupos, reenvíos) más que solo en pauta paga de redes." },
+          { label: "Decisión de compra reflexiva, no impulsiva", detail: "70% investiga productos en línea antes de comprar y 51% busca opinión de expertos en compras costosas — el contenido debe dar razones para justificar el gasto (reseñas, comparativas con otros planes) y no depender solo de un CTA de urgencia." },
+        ]
+      ),
+      sharePct: 50,
+      demographics: {
+        genderSplit: { male: 34.4, female: 65.6 },
+        ageBands: [
+          { label: "Gen Y (Millennials, ~25-44 años)", pct: 63 },
+          { label: "Gen X (~45-59 años)", pct: 37 },
+        ],
+        topCities: [{ city: "Antioquia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Creen que la música puede ser un agente poderoso de cambio en la sociedad", pct: 85.4 },
+        { label: "Suelen tener música sonando mientras hacen sus actividades diarias", pct: 86.3 },
+        { label: "Son apasionados de un amplio rango de artistas/bandas musicales", pct: 80.3 },
+        { label: "Prefieren escuchar una amplia variedad de canciones de los artistas que les apasionan", pct: 77.2 },
+      ],
+      barriers: [
+        { label: "Investigan productos en línea antes de comprarlos — ciclo de decisión más largo, no compra impulsiva", pct: 70.0 },
+        { label: "Buscan las mejores ofertas / son sensibles al precio", pct: 56.3 },
+        { label: "Buscan opinión de expertos antes de comprar artículos costosos — posible fricción en la decisión de compra de boletos premium", pct: 51.1 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en teatro", index: 169.8 },
+        { label: "Interesados en museos/galerías", index: 159.5 },
+        { label: "Interesados en libros/literatura", index: 142.1 },
+        { label: "Interesados en idiomas extranjeros", index: 137.7 },
+      ],
+      media: [
+        { label: "WhatsApp más de una vez al día", pct: 77.0 },
+        { label: "Cualquier servicio de video el último mes", pct: 93.8 },
+        { label: "Netflix el último mes", pct: 80.5 },
+        { label: "YouTube (ver/descargar contenido) el último mes", pct: 71.7 },
+        { label: "Spotify el último mes", pct: 67.9 },
+        { label: "Instagram más de una vez al día", pct: 56.7 },
+        { label: "Facebook más de una vez al día", pct: 52.7 },
+        { label: "Amazon Prime Video el último mes", pct: 44.6 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "WhatsApp y redes", "WhatsApp, Instagram", "Contenido cultural/musical compartido en grupos de WhatsApp.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Streaming y búsqueda", "Spotify, Google", "Playlist o clip de Laura Pausini como contenido de descubrimiento.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y chat", "Instagram, WhatsApp", "Recomendación directa entre amigos/familia (boca a boca).", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video y redes", "YouTube, Facebook", "Reseña o comparativa del concierto vs. otros planes culturales.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming", "Netflix, Spotify", "Retargeting con testimonios / validación social.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "WhatsApp y redes", "WhatsApp, Instagram", "CTA de compra con urgencia (últimas entradas) vía WhatsApp/redes.", []),
+      ],
+    },
+    {
+      id: "laura-pausini-nuevos-proxy",
+      name: "Valentina Gómez",
+      archetype: "La Prospecto Pop Sin Explorar",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Representa al público colombiano que le gusta el pop/balada y los eventos en vivo pero que aún no está en la base de fans fieles de Páramo — el perfil que la campaña 'Nuevos' busca captar. GWI no devolvió datos propios de esta audiencia específica (ver footnote del caso), así que este perfil usa como proxy la población general de Colombia con este mismo gusto musical, no datos exclusivos de la audiencia 'Nuevos'.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón de 'descubridor abierto pero no comprometido' que muestra el proxy de GWI: esta población tiene apertura genuina a probar cosas nuevas (34% dice que le gusta ser de los primeros en probar algo nuevo) y curiosidad por otras culturas (71%), pero también es leal a lo que ya conoce (59%) — el reto de 'Nuevos' no es despertar interés en música pop/balada, sino romper la lealtad a lo ya establecido y convertir curiosidad en una primera compra.",
+        [
+          { label: "Abiertos a lo nuevo, pero no en automático", detail: "34% se identifica como early adopter y 71% tiene interés genuino en otras culturas — un ángulo de comunicación que presente a Laura Pausini como 'descubrimiento' (no solo nostalgia) puede conectar mejor con este grupo que con la base ya fiel." },
+          { label: "La lealtad a lo conocido es la barrera principal", detail: "59% se declara leal a las marcas/artistas que ya sigue — el mensaje debe reducir el riesgo percibido de 'probar' un concierto nuevo (garantías, testimonios de otros asistentes, contenido que muestre la experiencia en vivo)." },
+          { label: "Decisión de compra comparativa, igual que la base", detail: "65% investiga antes de comprar y 45% busca opinión de expertos en compras costosas — igual que la persona 'Base', esta audiencia necesita contenido de respaldo (reseñas, clips del show) antes del CTA de compra, no solo un anuncio de venta directa." },
+        ]
+      ),
+      sharePct: 50,
+      demographics: {
+        genderSplit: { male: 42.1, female: 57.9 },
+        ageBands: [
+          { label: "16-24", pct: 23.8 },
+          { label: "25-34", pct: 29.8 },
+          { label: "35-44", pct: 23.5 },
+          { label: "45-54", pct: 15.5 },
+          { label: "55-64", pct: 7.5 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [],
+      },
+      motivations: [
+        { label: "Interesados en otras culturas/países (proxy Colombia)", pct: 71.3 },
+        { label: "Les gusta ser de los primeros en probar cosas nuevas (proxy Colombia)", pct: 33.7 },
+        { label: "Buscan opinión de expertos antes de comprar artículos costosos (proxy Colombia)", pct: 44.6 },
+        { label: "Consideran importante estar al día con tendencias (proxy Colombia)", pct: 25.6 },
+      ],
+      barriers: [
+        { label: "Investigan productos en línea antes de comprarlos — ciclo de decisión largo (proxy Colombia)", pct: 64.8 },
+        { label: "Son leales a las marcas/artistas que ya conocen — barrera para un descubrimiento nuevo (proxy Colombia)", pct: 59.2 },
+        { label: "Buscan las mejores ofertas / son sensibles al precio (proxy Colombia)", pct: 58.1 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Netflix el último mes (proxy Colombia)", pct: 77 },
+        { label: "Instagram más de una vez al día (proxy Colombia)", pct: 48 },
+        { label: "Facebook más de una vez al día (proxy Colombia)", pct: 44 },
+        { label: "TikTok más de una vez al día (proxy Colombia)", pct: 39 },
+        { label: "Amazon Prime Video el último mes (proxy Colombia)", pct: 37 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Facebook", "Contenido de descubrimiento (clip/playlist) sin asumir fandom previo.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "TikTok y búsqueda", "TikTok, Google", "Formato corto que presente el show como experiencia, no solo el artista.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes", "Instagram, Facebook", "Testimonios de asistentes a shows previos (reduce riesgo percibido).", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming y redes", "Netflix, TikTok", "Retargeting a quienes interactuaron con el contenido de descubrimiento.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes", "Instagram, Facebook", "Comparativa de precio/experiencia frente a otros planes.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y streaming", "Instagram, Netflix", "CTA de compra con oferta de entrada / primera compra.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_PLACEBO_GWI_AUTO_20260924 = {
+  id: "placebo-rock-en-vivo-colombia",
+  name: "Placebo en concierto — rock en vivo (Bogotá D.C. / Cundinamarca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "Tres audiencias reales de GWI construidas por el equipo para la campaña 'Placebo' (Páramo): 'Fans del rock en vivo2' (audience_id 9b5745d1-a0ed-4396-88ce-b36a15559f0c), 'Fans del rock en vivo' (audience_id 16c03d23-3c86-4000-bf94-8cb14d01143d) y 'Rockers Creativos' (audience_id e772d20d-de65-4729-8db1-7952ed8e20c9).",
+  funnelSteps: [
+    { label: "Interesados en rock + eventos en vivo, creativos o de mente abierta, Bogotá D.C./Cundinamarca (audiencia 'Rockers Creativos', la más amplia de las 3 exploradas)", pct: 6 },
+  ],
+  footnotes: [
+    "6% = universo real de la audiencia 'Rockers Creativos' en GWI (1,994,601 personas) sobre el total de internautas de Colombia (31.96M, GWI Core Q4 2025–Q3 2026).",
+    "Se exploraron los datos reales de las 3 audiencias antes de decidir cuántas personas usar (instrucción del equipo: consolidar solo si los datos muestran que son iguales). El resultado real de GWI muestra que las 3 son segmentos genuinamente distintos —no duplicados—, así que se mantienen 3 personas separadas en vez de las 2 originalmente sugeridas por el parecido de nombres: 'Fans del rock en vivo2' está definida como NO creativa/mente abierta (57.6% mujeres); 'Fans del rock en vivo' está definida como SÍ creativa/mente abierta y además con intención de compra de boletos en los próximos 3-6 meses (54% hombres, 218% más propensa que el promedio a haber comprado boletos recientemente); 'Rockers Creativos' está definida como creativa/mente abierta pero sin filtro de intención de compra (50/50 género, la más orientada a arte/cultura). Difieren en género, en el rasgo definitorio y sobre todo en intención de compra real.",
+    "sharePct de las 3 personas se calculó a partir de los universos reales devueltos por GWI para cada audiencia (420,635 / 498,926 / 1,994,601 personas), no es una asunción arbitraria.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "placebo-fans-rock-no-creativos",
+      name: "Andrés Ospina",
+      archetype: "El Oyente Fiel del Underground",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Escucha rock por convicción propia, no por buscar validación creativa o de estatus: prefiere artistas menos conocidos, invierte en buen equipo de audio y ve la música como algo personal más que social. GWI lo define explícitamente como el segmento que NO se identifica como creativo ni de mente abierta — el reverso exacto de 'Rockers Creativos'.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón de 'fan silencioso' que muestra GWI: a diferencia de los otros dos segmentos de Placebo, este no busca activamente nuevos eventos ni tiene intención de compra declarada — su conexión con el rock es más introspectiva (equipo de audio de alta gama, artistas menos populares) que social o de estatus, así que el mensaje de venta debe apelar a la calidad de la experiencia sonora en vivo, no a la pertenencia a una escena o comunidad.",
+        [
+          { label: "No es un comprador proactivo — hay que ir a buscarlo", detail: "A diferencia de 'Fans del rock en vivo' (218% más propenso a compra reciente), este segmento no muestra intención de compra declarada — la pauta debe generar la decisión activamente (oferta concreta), no solo esperar a que busque el evento." },
+          { label: "Valora la calidad sobre la masividad", detail: "34% prefiere escuchar artistas menos conocidos y 34% prioriza equipo de audio de alta gama — un mensaje centrado en la calidad de sonido en vivo de Placebo puede conectar mejor que un mensaje de 'evento masivo'." },
+          { label: "Sensible al precio, abierto a promociones", detail: "59% busca las mejores ofertas y 35% usa cupones o códigos de descuento — vale la pena probar early-bird o descuentos por volumen con este segmento en particular, más que con los otros dos." },
+        ]
+      ),
+      sharePct: 14,
+      demographics: {
+        genderSplit: { male: 43.4, female: 56.6 },
+        ageBands: [
+          { label: "Gen Y (Millennials, ~25-44 años)", pct: 46.4 },
+          { label: "Gen X (~45-59 años)", pct: 29.3 },
+        ],
+        topCities: [{ city: "Bogotá D.C. / Cundinamarca", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prefieren gastar dinero en experiencias", pct: 72.0 },
+        { label: "Prefieren escuchar una amplia variedad de canciones de sus artistas favoritos", pct: 69.5 },
+        { label: "Creen que la música puede ser un agente poderoso de cambio en la sociedad", pct: 68.9 },
+        { label: "Escuchan principalmente artistas/bandas menos conocidos o populares", pct: 34.6 },
+      ],
+      barriers: [
+        { label: "Buscan las mejores ofertas / son sensibles al precio", pct: 58.9 },
+        { label: "Son leales a las marcas que ya conocen — posible resistencia a probar algo nuevo", pct: 49.4 },
+        { label: "Usan códigos de descuento o cupones", pct: 34.9 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Spotify el último mes", pct: 62.2 },
+        { label: "YouTube Music el último mes", pct: 44.1 },
+        { label: "Facebook más de una vez al día", pct: 39.8 },
+        { label: "Instagram más de una vez al día", pct: 39.2 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Streaming de música", "Spotify, YouTube Music", "Descubrimiento pasivo (no busca activamente el evento).", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes", "Facebook, Instagram", "Promoción con descuento / early-bird como gancho.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes", "Facebook", "Contenido enfocado en calidad de sonido / experiencia en vivo.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming", "Spotify", "Playlist o setlist de Placebo como contenido de reenganche.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes", "Instagram, Facebook", "Retargeting con oferta concreta (código de descuento).", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Spotify, Facebook", "CTA directo de compra con incentivo de precio.", []),
+      ],
+    },
+    {
+      id: "placebo-fans-rock-compradores",
+      name: "Felipe Cárdenas",
+      archetype: "El Cazador Activo de Conciertos",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Ya compró boletos de concierto en los últimos meses y planea seguir haciéndolo: está en modo de decisión activa, no de descubrimiento. GWI lo define como creativo/mente abierta y con intención de compra de boletos en los próximos 3-6 meses — es, de las tres audiencias de Placebo, la más cercana a una conversión inmediata.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón de 'comprador serial de experiencias en vivo' que muestra GWI: este segmento es 218% más propenso que el promedio de Colombia a haber comprado boletos de concierto recientemente y 100% ya planea comprar en los próximos 3-6 meses — no hay que convencerlo de ir a conciertos, hay que ganar su decisión específica de ir a Placebo frente a otros planes con los que compite su mismo presupuesto de ocio (viajes, otros eventos).",
+        [
+          { label: "No compite por atención, compite por presupuesto de ocio", detail: "42% compró un viaje doméstico y 41% compró tiquetes de avión en los últimos 3-6 meses — el concierto de Placebo compite directamente con esos gastos, así que el mensaje debe justificar la prioridad (line-up, exclusividad) más que solo generar interés." },
+          { label: "Está buscando activamente el próximo show", detail: "31% dice estar siempre atento a nuevos eventos en vivo (91% más que el promedio) — search y notificaciones push de venta de boletos van a rendir mejor con este segmento que con los otros dos." },
+          { label: "Streaming premium indica disposición a pagar por calidad", detail: "56% tiene cuenta paga de Spotify — es un segmento cómodo pagando por una mejor experiencia, lo que sugiere que ofrecer boletos VIP o experiencias premium puede convertir bien aquí." },
+        ]
+      ),
+      sharePct: 17,
+      demographics: {
+        genderSplit: { male: 54.0, female: 46.0 },
+        ageBands: [
+          { label: "25-34", pct: 32.7 },
+          { label: "35-44", pct: 28.1 },
+        ],
+        topCities: [{ city: "Bogotá D.C. / Cundinamarca", pct: 100 }],
+      },
+      motivations: [
+        { label: "Son apasionados de un amplio rango de artistas/bandas", pct: 79.4 },
+        { label: "Disfrutan el proceso de buscar nuevos artistas/bandas o canciones", pct: 54.0 },
+        { label: "Compraron boletos de concierto en los últimos 3-6 meses", pct: 49.3 },
+        { label: "Siempre están atentos a nuevos eventos de música en vivo", pct: 31.2 },
+      ],
+      barriers: [
+        { label: "Se consideran sensibles al precio", pct: 33.0 },
+        { label: "También compraron un viaje doméstico en los últimos 3-6 meses — el gasto en el concierto compite con otros planes de ocio", pct: 42.2 },
+        { label: "También compraron tiquetes de viaje (vuelos) en los últimos 3-6 meses — mismo presupuesto de entretenimiento en disputa", pct: 40.9 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Spotify el último mes", pct: 73.5 },
+        { label: "Netflix el último mes", pct: 79.0 },
+        { label: "Instagram más de una vez al día", pct: 52.8 },
+        { label: "Facebook más de una vez al día", pct: 44.7 },
+        { label: "TikTok más de una vez al día", pct: 41.5 },
+        { label: "Cuenta paga/premium de Spotify", pct: 56.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Streaming", "Spotify", "Anuncio de preventa / lineup en su feed musical.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes", "Instagram, TikTok", "Contenido de anuncio de fecha/venue con CTA de compra.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes", "Instagram, Facebook", "Comparativa con otros eventos/planes de la temporada.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Búsqueda y streaming", "Google, Spotify", "Search ads para 'boletos Placebo Colombia' y similares.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming", "Netflix, Spotify", "Retargeting con urgencia (boletos limitados / VIP).", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes", "Instagram, Facebook", "CTA directo de compra / upsell a experiencia VIP.", []),
+      ],
+    },
+    {
+      id: "placebo-rockers-creativos",
+      name: "Natalia Vega",
+      archetype: "La Rockera Creativa",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive el rock como parte de una identidad creativa más amplia: arte urbano, museos, una autopercepción fuerte como persona 'creativa' y de 'mente abierta'. Es la audiencia más grande de las tres exploradas para Placebo, pero también la que muestra mayor brecha entre interés declarado (100%) y compra real de boletos (28%).",
+      aiInsight: aiInsight(
+        "Cruza con la brecha estructural entre identidad e intención de compra que muestra GWI: 85% se identifica como 'creativa' y 100% declara interés en eventos en vivo, pero solo 28% compró boletos de concierto en los últimos 3-6 meses y apenas 25% planea hacerlo — a diferencia de 'Fans del rock en vivo' (audiencia hermana con alta intención de compra), aquí el reto de medios no es awareness sino cerrar la brecha entre identidad/interés y la decisión final de compra.",
+        [
+          { label: "La brecha interés-compra es la oportunidad principal", detail: "100% interesada en eventos en vivo pero solo 28% compró boletos recientemente — es la audiencia más grande de las tres (69% del total combinado), así que cerrar incluso una fracción de esa brecha tiene el mayor impacto potencial en ventas." },
+          { label: "El arte y la cultura son el terreno común, no solo el rock", detail: "45% interesada en arte urbano/moderno (87% más que el promedio) y 61% en museos/galerías — posicionar a Placebo dentro de una narrativa de escena cultural/artística puede conectar mejor que un mensaje puramente musical." },
+          { label: "Streaming pesado, pero no necesariamente pagado", detail: "65% son usuarios heavy de streaming de música, pero solo 51% paga cuenta premium de Spotify — a diferencia del segmento 'comprador activo', aquí conviene un mensaje de valor/accesibilidad más que de exclusividad premium." },
+        ]
+      ),
+      sharePct: 69,
+      demographics: {
+        genderSplit: { male: 50.0, female: 50.0 },
+        ageBands: [
+          { label: "16-24", pct: 18.6 },
+          { label: "25-34", pct: 31.0 },
+          { label: "35-44", pct: 26.4 },
+          { label: "45-54", pct: 17.9 },
+        ],
+        topCities: [{ city: "Bogotá D.C. / Cundinamarca", pct: 100 }],
+      },
+      motivations: [
+        { label: "Se identifican con la palabra 'Creativo'", pct: 85.2 },
+        { label: "Consideran importante tener una actitud positiva", pct: 83.0 },
+        { label: "Prefieren gastar dinero en experiencias", pct: 71.0 },
+        { label: "Se identifican con 'Mente abierta'", pct: 58.7 },
+      ],
+      barriers: [
+        { label: "Solo compró boletos de concierto en los últimos 3-6 meses pese al 100% de interés declarado — brecha interés-compra", pct: 28.0 },
+        { label: "Solo planea comprar boletos en los próximos 3-6 meses", pct: 25.0 },
+        { label: "Se consideran sensibles al precio", pct: 36.0 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en arte urbano/moderno", index: 186.8 },
+        { label: "Interesados en museos/galerías", index: 159.9 },
+        { label: "Interesados en libros/literatura", index: 134.7 },
+      ],
+      media: [
+        { label: "Spotify el último mes", pct: 70.6 },
+        { label: "Netflix el último mes", pct: 76.0 },
+        { label: "Usuarios heavy de streaming de música", pct: 65.2 },
+        { label: "Instagram más de una vez al día", pct: 45.1 },
+        { label: "Facebook más de una vez al día", pct: 41.2 },
+        { label: "TikTok más de una vez al día", pct: 35.9 },
+        { label: "Cuenta paga/premium de Spotify", pct: 51.0 },
+        { label: "X (Twitter) más de una vez al día", pct: 13.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Streaming de música", "Spotify", "Contenido que conecte a Placebo con una narrativa artística/cultural.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes", "Instagram", "Arte visual / estética del line-up como gancho creativo.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes", "Instagram, Facebook", "Contenido co-creado con artistas visuales o espacios culturales locales.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video corto", "TikTok", "Clips de shows anteriores para cerrar la brecha interés-compra.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming", "Netflix, Spotify", "Retargeting con oferta clara (fecha límite, precio accesible).", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes", "Instagram, X", "CTA de compra con mensaje de accesibilidad, no solo exclusividad.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -2461,7 +2785,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924],
   },
   {
     id: "deportes",

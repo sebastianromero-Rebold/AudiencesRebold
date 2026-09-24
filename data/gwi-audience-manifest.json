@@ -3,6 +3,14 @@
   "processed": [
     { "audience_id": "5190162e-beac-4432-9cba-eed11194afdd", "title": "Paramo (co) EventosEnVivoGeneral", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "eventos-en-vivo-general-colombia" },
     { "audience_id": "5826d1eb-a730-4df3-84c3-0e75aedd35c5", "title": "Paramo (co) LABUCL", "processedAt": "2026-09-24", "categoryId": "deportes", "caseId": "seguidores-champions-league-colombia" },
-    { "audience_id": "49dbc0ab-e5d3-47fc-88db-948265845b54", "title": "Paramo(co)FintechColombia", "processedAt": "2026-09-24", "categoryId": "fintech", "caseId": "fintech-general-colombia" }
+    { "audience_id": "49dbc0ab-e5d3-47fc-88db-948265845b54", "title": "Paramo(co)FintechColombia", "processedAt": "2026-09-24", "categoryId": "fintech", "caseId": "fintech-general-colombia" },
+    { "audience_id": "1ca0d26c-01cb-4112-ba3b-4dbbbce52a80", "title": "Jäger (BR) VidaSocial_UrbanEliteRJ", "processedAt": "2026-09-24", "categoryId": "alcohol", "caseId": "jager-vidasocial-noche-rio-de-janeiro", "personaId": "urban-elite-rj" },
+    { "audience_id": "4cbb39ea-1f96-4331-9835-53ad110e97d3", "title": "Jäger (BR) VidaSocial_TribeKeepersRJ", "processedAt": "2026-09-24", "categoryId": "alcohol", "caseId": "jager-vidasocial-noche-rio-de-janeiro", "personaId": null },
+    { "audience_id": "fed570fb-2d7f-46b4-b5f5-57f802dcc74b", "title": "Jäger (BR) VidaSocial_SceneHunterRJ", "processedAt": "2026-09-24", "categoryId": "alcohol", "caseId": "jager-vidasocial-noche-rio-de-janeiro", "personaId": "scene-hunter-rj" },
+    { "audience_id": "ebc1531e-1d95-4099-88fc-5de933a3413c", "title": "Jäger (BR) VidaSocial_NightArchitecsRJ", "processedAt": "2026-09-24", "categoryId": "alcohol", "caseId": "jager-vidasocial-noche-rio-de-janeiro", "personaId": null },
+    { "audience_id": "ea7f1cf9-7691-406b-afbd-981832750071", "title": "Jäger (BR) VidaSocial_CamalonesRJ", "processedAt": "2026-09-24", "categoryId": "alcohol", "caseId": "jager-vidasocial-noche-rio-de-janeiro", "personaId": "camaleon-ambicioso-rj" },
+    { "audience_id": "26b41bb0-ca38-4b9b-8447-d5398bd6b692", "title": "Páramo (co) Baum27_PotencialRavers", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "baum27-escena-electronica-colombia", "personaId": "raver-en-potencia-co" },
+    { "audience_id": "06846574-6359-4f49-9d3e-b23fe8faae71", "title": "Páramo (co) Baum27_Amplificadores de la escena", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "baum27-escena-electronica-colombia", "personaId": "amplificadora-escena-co" },
+    { "audience_id": "171f136e-ae27-4152-9595-765835fcd961", "title": "Páramo (co) Baum27_Curadores", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "baum27-escena-electronica-colombia", "personaId": "curador-escena-co" }
   ]
 }

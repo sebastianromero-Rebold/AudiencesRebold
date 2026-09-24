@@ -26,6 +26,9 @@ const MARKETS = [
   { id: "CHL", name: "Chile", flag: "🇨🇱", digitalPop: 15600000 },
   { id: "USA", name: "Estados Unidos", flag: "🇺🇸", digitalPop: 250000000 },
   { id: "ARG", name: "Argentina", flag: "🇦🇷", digitalPop: 35000000 },
+  // Agregado 2026-09-24 para el caso Jäger VidaSocial (Rio de Janeiro) — digitalPop es
+  // una estimación poblacional de usuarios de internet en Brasil, no una cifra de GWI.
+  { id: "BRA", name: "Brasil", flag: "🇧🇷", digitalPop: 180000000 },
 ];
 
 const AGE_BANDS = ["16-24", "25-34", "35-44", "45-54", "55-64", "65+"];
@@ -1044,6 +1047,226 @@ const CASE_ALCOHOL = {
         ]),
         daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes", "Instagram", "Se alista para la salida social."),
         daypart("Noche", "8 a 11 pm", "Bar / casa de amigos", "Presencial", "—", "Disfruta el plan con moderación, prioriza sentirse bien al otro día."),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Jäger (BR) VidaSocial (Rio de Janeiro) — audiencias reales
+// prioritarias del equipo, procesadas 2026-09-24. De las 5 audiencias del
+// batch (UrbanEliteRJ, TribeKeepersRJ, SceneHunterRJ, NightArchitecsRJ,
+// CamalonesRJ) se eligieron las 3 más diferenciadas entre sí según los datos
+// reales de GWI: UrbanEliteRJ (confiada/social/familiar, cautelosa con lo
+// nuevo), SceneHunterRJ (investigadora, escéptica, sobrecargada de trabajo) y
+// CamalonesRJ (joven, ambiciosa, early-adopter). TribeKeepersRJ y
+// NightArchitecsRJ quedan registradas en el catálogo/manifest pero sin
+// persona propia por solaparse demográfica y actitudinalmente con
+// SceneHunterRJ (las 3 comparten base Gen X + personalidad "neutral/cautelosa"
+// casi idéntica en los atributos que GWI devolvió).
+// ---------------------------------------------------------------------------
+const CASE_JAGER_VIDASOCIAL_GWI_AUTO_20260924 = {
+  id: "jager-vidasocial-noche-rio-de-janeiro",
+  name: "Jäger VidaSocial — arquetipos de vida nocturna (Río de Janeiro)",
+  market: "BRA",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "3 audiencias reales de GWI de la campaña Jäger (BR) VidaSocial (Rio de Janeiro): UrbanEliteRJ, SceneHunterRJ y CamalonesRJ — elegidas por ser las más diferenciadas entre sí de las 5 audiencias del batch.",
+  funnelSteps: [
+    {
+      label:
+        "Audiencia combinada de los 3 arquetipos Jäger VidaSocial sobre población digital de Brasil (universos reales de GWI: ~646K + ~1.53M + ~1.04M ≈ 3.22M sobre ~180M)",
+      pct: 1.8,
+    },
+  ],
+  footnotes: [
+    "1.8% = universo combinado real de las 3 audiencias (suma de universos verificados vía explore_insight_gwi sobre la pregunta de género, la de mayor tasa de respuesta) sobre la población digital estimada de Brasil (180M, estimación poblacional — ver MARKETS). No es una cifra de GWI per se, sino un cálculo directo sobre universos reales de GWI.",
+    "Brasil se agregó a MARKETS en este mismo cambio; su digitalPop (180M) es una estimación poblacional de referencia, no un dato de GWI.",
+    "Demografía (género, edad), actitudes, medios y comportamiento digital de cada persona son datos reales de GWI Core Brasil, verificados 1:1 vía chat_gwi + explore_insight_gwi.",
+    "GWI no devolvió desagregación geográfica por debajo del nivel 'Rio de Janeiro' para ninguna de las 3 audiencias — no hay dato de barrio/ciudad específico disponible.",
+    "SceneHunterRJ: la edad se verificó completa para 35-44 (26%), 45-54 (24.9%) y 55-64 (21.9%); el 27.2% restante (16-24 + 25-34) no tuvo muestra suficiente para desagregarse en GWI — se repartió como estimado (13%/14%) y se marca aquí explícitamente como no verificado 1:1 con GWI, a diferencia del resto de la demografía de esta persona.",
+    "Bloques del customer journey sin dato específico de GWI para ese horario quedan señalados como tal en el campo de activación, en vez de inventar una cifra — ver metodología en README.",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "urban-elite-rj",
+      name: "Bianca Ferreira",
+      archetype: "La Anfitriona Confiada",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Adulta de 25 a 44 años en Rio de Janeiro, seguras de sí mismas y sociables, pero definidas por GWI como poco propensas a probar cosas nuevas primero y sin sentirse especialmente adineradas o ambiciosas. Su vida social gira en torno a un círculo ya establecido — familia y amigos de siempre — más que a la novedad.",
+      aiInsight: aiInsight(
+        "Cruza con una audiencia de retención, no de conquista: GWI la define explícitamente como cautelosa frente a lo nuevo (criterio de la propia audiencia), así que el objetivo de medios no es 'hacerla descubrir' sino reforzar el ritual social que ya tiene con su círculo cercano.",
+        [
+          { label: "La lealtad ya ganada es el activo, no la novedad", detail: "Por definición de la propia audiencia GWI, evita ser la primera en probar cosas nuevas — el mensaje de 'descubre algo distinto' rinde menos que reforzar el hábito/ritual ya instalado." },
+          { label: "El círculo familiar decide, no solo el individuo", detail: "83% valora mucho pasar tiempo en familia — el plan nocturno debe convivir con esa identidad, no competir con ella; funciona mejor como premio bien merecido que como escape." },
+          { label: "Instagram y WhatsApp cumplen roles distintos", detail: "58% usa Instagram más de una vez al día (inspiración/estatus) y 77% usa WhatsApp más de una vez al día (coordinación real del plan) — separar creatividad de conversión entre ambos canales." },
+        ]
+      ),
+      sharePct: 20,
+      demographics: {
+        genderSplit: { male: 47, female: 53 },
+        ageBands: [
+          { label: "16-24", pct: 14 },
+          { label: "25-34", pct: 36 },
+          { label: "35-44", pct: 50 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Rio de Janeiro — sin desagregación por barrio/ciudad disponible en GWI para esta audiencia", pct: 100 },
+        ],
+      },
+      motivations: [
+        { label: "Se sienten confiadas y seguras de sí mismas", pct: 77 },
+        { label: "Priorizan pasar tiempo en familia", pct: 83 },
+        { label: "Cuidan mucho su apariencia/imagen personal", pct: 65 },
+        { label: "Se consideran sociables y extrovertidas", pct: 59 },
+      ],
+      barriers: [
+        { label: "Baja apertura a versiones sin alcohol o bajas en alcohol — prefieren la bebida tradicional", pct: 49 },
+      ],
+      digitalInterests: [
+        { label: "Instagram como red social favorita", index: 106 },
+        { label: "Interés en salir a comer / restaurantes", index: 137 },
+        { label: "Uso de redes sociales para encontrar contenido de tendencia", index: 105 },
+      ],
+      media: [
+        { label: "Instagram (más de una vez al día)", pct: 58 },
+        { label: "WhatsApp (más de una vez al día)", pct: 77 },
+        { label: "Navega redes sociales a diario o casi a diario", pct: 68 },
+        { label: "TV internacional en la franja 5-7pm", pct: 51 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, WhatsApp", "Sin dato específico de GWI para este bloque horario — contenido genérico de marca/awareness."),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / casa", "WhatsApp", "WhatsApp, Instagram", "Sin dato específico de GWI para este bloque — coordinación de planes vía WhatsApp (77% lo usa más de una vez al día en general)."),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Redes sociales", "Instagram", "Sin dato específico de GWI para este bloque horario — alto interés general en salir a comer (79%, índice 137)."),
+        daypart("La tarde", "3 a 6 pm", "Casa / trabajo", "TV internacional", "TV, Instagram", "49% ve TV internacional en la franja de 2 a 5pm los fines de semana — ventana de refuerzo con contenido en TV + redes."),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "TV, WhatsApp", "51% ve TV internacional entre 5 y 7pm (índice 112) — la franja con mejor dato verificado por GWI para esta audiencia."),
+        daypart("Noche", "8 a 11 pm", "Casa / bares", "Redes sociales", "Instagram, WhatsApp", "Sin dato específico de GWI para este bloque — 68% navega redes sociales a diario o casi a diario en general."),
+      ],
+    },
+    {
+      id: "scene-hunter-rj",
+      name: "Rodrigo Andrade",
+      archetype: "El Cazador de Escena",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "El más maduro de los tres arquetipos (Gen X, con sobre-representación en 55-64 años). Investiga antes de decidir, confía en reseñas y controla activamente la música/el ambiente de sus salidas — no improvisa, cura su propia experiencia social. Se declara con frecuencia sobrecargado de trabajo y algo propenso a la ansiedad.",
+      aiInsight: aiInsight(
+        "Cruza con un patrón de 'permiso informado' antes de salir: investiga (72%) y confía en reseñas (52%) antes de comprometerse con un plan — no es impulsivo, necesita evidencia social de que el plan vale la pena, sobre todo estando sobrecargado de trabajo (30%).",
+        [
+          { label: "Decide con la cabeza antes de soltarse con el cuerpo", detail: "72% investiga productos/lugares en línea antes de decidir y 52% confía en reseñas — una recomendación curada pesa más que un anuncio llamativo." },
+          { label: "Sale a desestresarse, no a improvisar", detail: "30% se siente sobrecargado de trabajo y esta audiencia es más propensa a la ansiedad que el promedio — la propuesta de valor es 'un plan ya resuelto, sin sorpresas', no 'aventura espontánea'." },
+          { label: "Es maduro pero no desconectado", detail: "95% accede a internet por celular durante todo el día pese al perfil más adulto (sobre-representación Gen X y 55-64 años) — no asumir bajo consumo digital solo por edad." },
+        ]
+      ),
+      sharePct: 47,
+      demographics: {
+        genderSplit: { male: 45, female: 56 },
+        ageBands: [
+          { label: "16-24", pct: 13 },
+          { label: "25-34", pct: 14 },
+          { label: "35-44", pct: 26 },
+          { label: "45-54", pct: 25 },
+          { label: "55-64", pct: 22 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Rio de Janeiro — sin desagregación por barrio/ciudad disponible en GWI para esta audiencia", pct: 100 },
+        ],
+      },
+      motivations: [
+        { label: "Investigan productos o lugares en línea antes de decidir", pct: 72 },
+        { label: "Confían en reseñas online para elegir dónde ir", pct: 52 },
+        { label: "Buscan las mejores promociones/descuentos", pct: 52 },
+        { label: "Les interesa estar al tanto de lo que pasa en el mundo", pct: 55 },
+      ],
+      barriers: [
+        { label: "Bajo interés en spirits sin alcohol/bajos en alcohol como sustituto", pct: 64 },
+        { label: "Se sienten sobrecargados de trabajo — menos tiempo/energía disponible para salir", pct: 30 },
+      ],
+      digitalInterests: [
+        { label: "Confían en reseñas online", index: 125 },
+        { label: "Investigan productos en línea antes de comprar", index: 105 },
+        { label: "Uso de sitios/apps de noticias", index: 112 },
+      ],
+      media: [
+        { label: "Uso de sitios/apps de noticias (último mes)", pct: 57 },
+        { label: "Lectura de prensa online diaria", pct: 41 },
+        { label: "TV abierta a diario o casi a diario", pct: 36 },
+        { label: "TV en horario 10pm-12am", pct: 43 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Internet / organización del día", "Apps de organización, noticias", "24% usa internet para organizar su día a día en la mañana — buen momento para contenido informativo (ej. agenda de eventos de la semana)."),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Celular / noticias", "Apps de noticias", "Sin dato específico de GWI para este bloque — 95% accede a internet desde el celular durante todo el día."),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo", "Prensa online", "Sitios y apps de noticias", "Sin dato específico de GWI para este bloque horario — 57% usó sitios/apps de noticias en el último mes."),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Celular", "Apps, redes", "Sin dato específico de GWI para este bloque horario."),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Celular", "Juegos, apps", "Sin dato específico de GWI para este bloque — 74% usa el celular para jugar durante tiempos muertos."),
+        daypart("Noche", "8 a 11 pm", "Casa / bar curado por reseñas", "TV / celular", "TV, reseñas online", "43% prefiere ver TV en el horario de 10pm a 12am — el consumo se extiende hasta tarde, coherente con salidas nocturnas más tardías y decididas con antelación."),
+      ],
+    },
+    {
+      id: "camaleon-ambicioso-rj",
+      name: "Yasmin Costa",
+      archetype: "El Camaleón Ambicioso",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "El arquetipo más joven (16-34, alto ingreso, mayoría Gen Z). Ambiciosa, enfocada en su carrera, abierta de mente y con un índice muy alto de querer ser la primera en probar cosas nuevas — early adopter y líder de opinión dentro de su círculo, con alta actividad de publicación en redes.",
+      aiInsight: aiInsight(
+        "Cruza con el perfil clásico de early adopter/líder de opinión: quiere ser la primera en probar (índice 255) y se ve a sí misma como ambiciosa (índice 249) — es la audiencia ideal para sembrar tendencia antes de un push masivo, no para un mensaje genérico de marca.",
+        [
+          { label: "Prueba todo primero, pero se aburre rápido sin novedad constante", detail: "64% quiere ser la primera en probar cosas nuevas (índice 255) — la marca necesita un flujo constante de lanzamientos/ediciones limitadas, no una campaña estática." },
+          { label: "Publica su vida social como parte de su marca personal", detail: "Publica opiniones sobre tecnología, gaming y vida nocturna muy por encima del promedio, y paga con frecuencia por suscripciones/compras dentro de apps — el contenido de marca debe ser material co-creable, no solo consumible." },
+          { label: "El precio no es la barrera, la relevancia sí", detail: "Sensibilidad al precio ligeramente por debajo del promedio (48%) — comunicar exclusividad/edición limitada rinde más que un descuento." },
+        ]
+      ),
+      sharePct: 33,
+      demographics: {
+        genderSplit: { male: 47, female: 53 },
+        ageBands: [
+          { label: "16-24", pct: 40 },
+          { label: "25-34", pct: 60 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Rio de Janeiro — sin desagregación por barrio/ciudad disponible en GWI para esta audiencia", pct: 100 },
+        ],
+      },
+      motivations: [
+        { label: "Se sienten seguras y confiadas de sí mismas", pct: 75 },
+        { label: "Se consideran ambiciosas", pct: 73 },
+        { label: "Les gusta ser las primeras en probar cosas nuevas", pct: 64 },
+        { label: "Se consideran de mente abierta", pct: 73 },
+      ],
+      barriers: [
+        { label: "El precio no es una barrera fuerte (sensibilidad al precio 3% por debajo del promedio) — la barrera real es la necesidad constante de novedad", pct: 48 },
+      ],
+      digitalInterests: [
+        { label: "Interés en explorar otras culturas/países", index: 133 },
+        { label: "Cuidan mucho su apariencia personal", index: 151 },
+        { label: "Les gusta ser las primeras en probar cosas nuevas", index: 255 },
+      ],
+      media: [
+        { label: "Pagaron suscripción de streaming de música (último mes)", pct: 61 },
+        { label: "Suelen tener música sonando durante sus actividades diarias", pct: 82 },
+        { label: "Usan internet para organizar su día a día", pct: 45 },
+        { label: "TV internacional en horario 10pm-medianoche", pct: 49 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Internet / organización del día", "Apps, redes", "45% usa internet para organizar su día a día — más que el promedio (índice 142)."),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / universidad", "Música / streaming", "Spotify y similares", "Sin dato específico de GWI para este bloque — 82% suele tener música sonando mientras hace sus actividades diarias."),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / universidad", "TV internacional", "TV", "46% ve TV internacional en la franja de 2 a 5pm entre quienes la ven con frecuencia."),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "TV, redes", "55% ve TV internacional en la franja de 5 a 7pm entre quienes la ven con frecuencia — la franja más fuerte verificada."),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes sociales", "Instagram, apps", "Sin dato específico de GWI para este bloque horario."),
+        daypart("Noche", "8 a 11 pm", "Casa / salidas", "TV / redes", "TV, streaming", "49% prefiere ver TV en el horario de 10pm a medianoche — la noche se extiende hasta tarde para este perfil."),
       ],
     },
   ],
@@ -2289,6 +2512,220 @@ const CASE_EVENTOS_VIVO_GWI_AUTO_20260924 = {
   ],
 };
 
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Páramo (co) Baum27 — escena electrónica/rave en Colombia,
+// procesado 2026-09-24. 3 audiencias reales de GWI, cada una ya un arquetipo
+// propio (no requirió elegir un subconjunto como en el caso Jäger): el
+// prospecto que ama el género pero aún no asiste (PotencialRavers), la
+// asistente que ya publica y amplifica la escena (Amplificadores) y quien
+// marca tendencia y decide qué vale la pena para su círculo (Curadores).
+// ---------------------------------------------------------------------------
+const CASE_BAUM27_GWI_AUTO_20260924 = {
+  id: "baum27-escena-electronica-colombia",
+  name: "Baum27 — arquetipos de la escena electrónica/rave (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "3 audiencias reales de GWI de la campaña Páramo (co) Baum27: PotencialRavers, Amplificadores de la escena y Curadores.",
+  funnelSteps: [
+    {
+      label:
+        "Audiencia combinada de los 3 arquetipos Baum27 sobre población digital de Colombia (universos reales de GWI: ~3.64M + ~572K + ~3.03M ≈ 7.25M sobre 31.06M)",
+      pct: 23,
+    },
+  ],
+  footnotes: [
+    "23% = universo combinado real de las 3 audiencias (suma de universos verificados vía explore_insight_gwi sobre la pregunta de género) sobre la población digital de Colombia (31.06M, ya usada en MARKETS). Cálculo directo sobre universos reales de GWI, no una cifra de GWI en sí misma.",
+    "Demografía, actitudes, medios y comportamiento digital de cada persona son datos reales de GWI Core Colombia, verificados 1:1 vía chat_gwi + explore_insight_gwi.",
+    "PotencialRavers está definida por GWI explícitamente como NO interesada actualmente en eventos en vivo pese a que el 100% disfruta música EDM/Dance — es una audiencia de conversión/adquisición, no de retención; Amplificadores y Curadores sí están definidas por un interés activo en eventos en vivo (100%).",
+    "Amplificadores de la escena: por tamaño de muestra, GWI solo devolvió una banda de edad con dato robusto (25-34: 29.7%); el resto de bandas no tuvo suficiente muestra para desagregarse — se deja en 0 en vez de inventar un valor, y se complementa con su desglose generacional real (Gen Z 40.3%, Millennial/Gen Y 38.7%) en la descripción de la persona.",
+    "Bloques del customer journey sin dato específico de GWI para ese horario quedan señalados como tal en el campo de activación, en vez de inventar una cifra.",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "raver-en-potencia-co",
+      name: "Camilo Tovar",
+      archetype: "El Raver en Potencia",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Le encanta la música EDM/Dance (House, Techno) pero GWI lo define explícitamente como alguien que hoy NO se declara interesado en eventos en vivo como festivales — ya es fan del género, todavía no se ve a sí mismo como alguien que va a raves. Es creativo, abierto de mente y valora aprender cosas nuevas.",
+      aiInsight: aiInsight(
+        "Cruza con una oportunidad de conversión, no de descubrimiento musical: ya ama el género (100% por definición de la audiencia) pero no se identifica con la experiencia en vivo — el freno no es el gusto musical, es no verse a sí mismo como parte de esa escena todavía.",
+        [
+          { label: "Ya ama la música, falta el primer empujón para ir", detail: "100% disfruta EDM/Dance pero la propia audiencia se define por NO estar interesada en eventos en vivo — el gancho es una 'primera vez sin fricción' (line-up accesible, ir en grupo, entrada de bajo compromiso)." },
+          { label: "Es un perfil creativo y abierto, no un raver de nicho", detail: "68% se ve creativo y 47% de mente abierta — el mensaje puede apoyarse en arte/moda/comunidad de forma más amplia, no solo en la escena electrónica hardcore." },
+          { label: "Aprende antes de comprometerse", detail: "76% valora aprender nuevas habilidades y 61% usa internet con fines educativos — contenido tipo 'guía para tu primer festival' baja la barrera de entrada mejor que un anuncio de venta directa." },
+        ]
+      ),
+      sharePct: 50,
+      demographics: {
+        genderSplit: { male: 59, female: 41 },
+        ageBands: [
+          { label: "16-24", pct: 24 },
+          { label: "25-34", pct: 31 },
+          { label: "35-44", pct: 22 },
+          { label: "45-54", pct: 16 },
+          { label: "55-64", pct: 7 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 },
+        ],
+      },
+      motivations: [
+        { label: "Se sienten creativos", pct: 68 },
+        { label: "Valoran aprender nuevas habilidades", pct: 76 },
+        { label: "Se consideran de mente abierta", pct: 47 },
+        { label: "Se consideran aventureros", pct: 39 },
+      ],
+      barriers: [
+        { label: "No se declaran interesados en eventos en vivo/festivales pese a que disfrutan el género (criterio que define a esta audiencia en GWI)", pct: 100 },
+        { label: "Baja importancia de la tradición/herencia como motivador — la nostalgia no es el gancho para este perfil", pct: 26 },
+      ],
+      digitalInterests: [
+        { label: "Disfrutan música EDM/Dance (House, Techno)", index: 281 },
+        { label: "Uso de internet con fines educativos", index: 106 },
+        { label: "Uso del celular para jugar videojuegos", index: 104 },
+      ],
+      media: [
+        { label: "YouTube para ver/descargar TV, películas o videos (último mes)", pct: 61 },
+        { label: "Facebook (más de una vez al día)", pct: 40 },
+        { label: "Instagram (más de una vez al día)", pct: 35 },
+        { label: "TikTok (más de una vez al día)", pct: 34 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Celular", "Redes, apps", "Sin dato específico de GWI para este bloque — 90% accede a internet por celular durante todo el día."),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad / trabajo", "Internet educativo", "Plataformas de estudio", "61% usa internet para fines educativos o de estudio."),
+        daypart("Medio día", "12 m a 3 pm", "Universidad / trabajo", "Navegación general", "Redes, YouTube", "48% usa internet para llenar tiempo libre y navegar en general."),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes", "YouTube, Instagram", "Sin dato específico de GWI para este bloque horario."),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Celular / juegos", "Apps de juegos", "60% usa el celular para jugar videojuegos — momento de desconexión antes de la noche."),
+        daypart("Noche", "8 a 11 pm", "Casa", "Música / streaming", "Apps de música", "69% suele tener música sonando mientras hace sus actividades — alta afinidad sonora incluso sin asistir hoy a eventos en vivo."),
+      ],
+    },
+    {
+      id: "amplificadora-escena-co",
+      name: "Laura Gómez",
+      archetype: "La Amplificadora de la Escena",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "A diferencia de El Raver en Potencia, esta audiencia SÍ está definida por un interés activo en eventos en vivo (100%) y en música (86%). Mayoría Gen Z (40.3%) y Millennial (38.7%). Es social, extrovertida, creativa y toma riesgos — y publica sobre su vida social en redes muy por encima del promedio, funcionando como caja de resonancia de la escena.",
+      aiInsight: aiInsight(
+        "Cruza con un perfil que ya es medio, no solo audiencia: usa Instagram y TikTok para publicar contenido propio muy por encima del promedio — el valor de marca no está en convencerla de ir, está en darle material que valga la pena amplificar.",
+        [
+          { label: "Ya es medio, no solo audiencia", detail: "67% de quienes usan Instagram publican fotos/videos (índice 106) y 51% hace lo mismo en TikTok (índice 129) — tratarla como creadora, no como espectadora, diseñando momentos pensados para grabarse." },
+          { label: "Busca el descuento sin dejar de sentirse exclusiva", detail: "40% usa cupones/códigos de descuento pese a valorar destacar y ser social — combos grupales o preventa temprana funcionan mejor que un descuento genérico." },
+          { label: "Es joven pero cuidadosa con su huella digital", detail: "31% le preocupa cómo el gobierno rastrea su actividad online — evitar pedir datos personales de más en el registro o compra de boletos." },
+        ]
+      ),
+      sharePct: 8,
+      demographics: {
+        genderSplit: { male: 47, female: 53 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 30 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 },
+        ],
+      },
+      motivations: [
+        { label: "Se consideran sociables y extrovertidas", pct: 54 },
+        { label: "Se consideran creativas", pct: 75 },
+        { label: "Se consideran aventureras", pct: 51 },
+        { label: "Sienten que toman riesgos", pct: 45 },
+      ],
+      barriers: [
+        { label: "Les preocupa cómo el gobierno rastrea su actividad online", pct: 31 },
+      ],
+      digitalInterests: [
+        { label: "Son parte de la Generación Z", index: 123 },
+        { label: "Se consideran sociables y extrovertidas", index: 147 },
+        { label: "Se consideran de mente abierta", index: 128 },
+      ],
+      media: [
+        { label: "TikTok (más de una vez al día)", pct: 48 },
+        { label: "Instagram (más de una vez al día)", pct: 45 },
+        { label: "Facebook (más de una vez al día)", pct: 41 },
+        { label: "Publican fotos/video en Instagram (sobre usuarios de Instagram)", pct: 67 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque."),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad / trabajo", "Redes sociales", "Instagram, Facebook", "47% usa redes sociales principalmente para leer noticias."),
+        daypart("Medio día", "12 m a 3 pm", "Universidad / trabajo", "Redes sociales", "Instagram, TikTok", "46% usa redes sociales para encontrar contenido nuevo."),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "TikTok", "Sin dato específico de GWI para este bloque horario."),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TikTok", "TikTok", "48% usa TikTok más de una vez al día (índice 141) — franja fuerte de consumo de video corto."),
+        daypart("Noche", "8 a 11 pm", "Casa / salidas", "Instagram", "Instagram", "45% usa Instagram más de una vez al día (índice 128) y publica contenido de sus salidas (67% comparte fotos/videos en Instagram)."),
+      ],
+    },
+    {
+      id: "curador-escena-co",
+      name: "Daniel Rueda",
+      archetype: "El Curador de la Escena",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "También definido por un interés activo en la escena (interesado en explorar y estar al tanto de tendencias), pero su rol es distinto al de la Amplificadora: no solo comparte, decide qué vale la pena para su círculo. Sigue tendencias tecnológicas de cerca, quiere ser el primero en probar cosas nuevas y publica opiniones en categorías muy diversas — música, arte, tecnología, incluso finanzas.",
+      aiInsight: aiInsight(
+        "Cruza con el rol de tastemaker cultural: no sigue tendencias, las valida o las descarta para su círculo — publica opiniones en categorías muy diversas (música, arte, tecnología, finanzas) muy por encima del promedio, lo que lo hace más influyente que un asistente promedio pese a no ser necesariamente el más numeroso.",
+        [
+          { label: "No sigue tendencias, las valida para su círculo", detail: "40% quiere ser el primero en probar cosas nuevas (índice 167) y 45% sigue de cerca las tendencias tecnológicas (índice 154) — dar acceso anticipado/curaduría exclusiva antes que al público general." },
+          { label: "Comenta sobre música, arte, tecnología y hasta finanzas", detail: "Publica opiniones online en categorías muy diversas muy por encima del promedio — el contenido de marca puede cruzar categorías (moda + tecnología + arte), no limitarse solo a música." },
+          { label: "Paga por calidad, no necesariamente por precio bajo", detail: "40% pagó una suscripción de streaming de música en el último mes (índice 160) — el argumento de curaduría/calidad vende mejor que un descuento." },
+        ]
+      ),
+      sharePct: 42,
+      demographics: {
+        genderSplit: { male: 57, female: 43 },
+        ageBands: [
+          { label: "16-24", pct: 28 },
+          { label: "25-34", pct: 31 },
+          { label: "35-44", pct: 22 },
+          { label: "45-54", pct: 14 },
+          { label: "55-64", pct: 6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 },
+        ],
+      },
+      motivations: [
+        { label: "Se consideran creativos", pct: 76 },
+        { label: "Les gusta ser los primeros en probar cosas nuevas", pct: 40 },
+        { label: "Siguen de cerca las tendencias tecnológicas", pct: 45 },
+        { label: "Se consideran de mente abierta", pct: 58 },
+      ],
+      barriers: [
+        { label: "Solo una minoría cree que el contenido generado por IA puede ser de alta calidad sin intervención humana — escepticismo relativo hacia contenido no curado", pct: 30 },
+      ],
+      digitalInterests: [
+        { label: "Interés en explorar otras culturas/países", index: 137 },
+        { label: "Les gusta explorar el mundo", index: 149 },
+        { label: "Publican su opinión sobre música online", index: 178 },
+      ],
+      media: [
+        { label: "Instagram (más de una vez al día)", pct: 51 },
+        { label: "Facebook (más de una vez al día)", pct: 48 },
+        { label: "TikTok (más de una vez al día)", pct: 40 },
+        { label: "Pagaron suscripción de streaming de música (último mes)", pct: 40 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Redes / noticias", "Instagram, apps de noticias", "Sin dato específico de GWI para este bloque."),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Noticias / tendencias", "Apps de noticias, tech media", "67.5% dice que le gusta estar al tanto de lo que pasa en el mundo — consumo de noticias/tendencias concentrado en esta franja."),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo", "Tendencias tecnológicas", "Blogs y medios tech", "45% sigue de cerca las tendencias tecnológicas."),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario."),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Instagram", "Instagram", "51% usa Instagram más de una vez al día (índice 146) y 78% de quienes lo usan publican fotos/video."),
+        daypart("Noche", "8 a 11 pm", "Casa / eventos curados", "Streaming de música", "Apps de música", "40% pagó una suscripción de streaming de música en el último mes (índice 160) — consumo musical curado en la noche."),
+      ],
+    },
+  ],
+};
+
 const CASE_CHAMPIONS_GWI_AUTO_20260924 = {
   id: "seguidores-champions-league-colombia",
   name: "Seguidores de la UEFA Champions League (Colombia)",
@@ -2461,7 +2898,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924],
   },
   {
     id: "deportes",
@@ -2513,7 +2950,7 @@ const CATEGORIES = [
       { id: "salidaSocialFrecuente", label: "Sale a bares/eventos sociales con frecuencia" },
       { id: "buscaModeracion", label: "Busca opciones bajas en alcohol / moderación" },
     ],
-    cases: [CASE_ALCOHOL],
+    cases: [CASE_ALCOHOL, CASE_JAGER_VIDASOCIAL_GWI_AUTO_20260924],
   },
   {
     id: "automotriz",

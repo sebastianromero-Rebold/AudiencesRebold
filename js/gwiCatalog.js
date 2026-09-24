@@ -240,6 +240,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "dfa2d1d5-0364-4f4a-b9be-8e58a66c4c48", title: "UWG > Ford > Multicultural - Hispanic Ford Consideration", client: "UWG", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who have Ford as their top choice for their next vehicle and identify as Hispanic or Latino." },
   { id: "cb795fda-52d1-4cb8-811a-cf60c1d7c54b", title: "ZG June 22: Interested in performers", client: "", type: "curated", datasets: ["ds-pgi-goz"], description: "This audience consists of individuals who are interested in performers." },
   { id: "0eeccf19-10f3-4819-8193-934bc293ede3", title: "ZG Oct 22: Currently Working", client: "", type: "curated", datasets: ["ds-kiw-lmi"], description: "This audience is currently working." },
+  // Añadidas por la automatización diaria de GWI el 2026-09-24 (ver data/gwi-audience-manifest.json).
+  { id: "5190162e-beac-4432-9cba-eed11194afdd", title: "Paramo (co) EventosEnVivoGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
+  { id: "5826d1eb-a730-4df3-84c3-0e75aedd35c5", title: "Paramo (co) LABUCL", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in watching sports or are sports fans, as well as being interested in the UEFA Champions League or watching it live on a TV channel or streaming service or following it and watching highlights or actively following news about it." },
+  { id: "49dbc0ab-e5d3-47fc-88db-948265845b54", title: "Paramo(co)FintechColombia", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -250,4 +254,7 @@ const GWI_AUDIENCE_CATALOG = [
 // -- se va llenando a mano o vía la automatización diaria cuando se conecte.
 const CATALOG_ANALYSIS_LINKS = {
   // "audience-id-real": { categoryId: "entretenimiento", caseId: "...", personaId: "..." },
+  "5190162e-beac-4432-9cba-eed11194afdd": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co" },
+  "5826d1eb-a730-4df3-84c3-0e75aedd35c5": { categoryId: "deportes", caseId: "seguidores-champions-league-colombia", personaId: "hincha-champions-colombia" },
+  "49dbc0ab-e5d3-47fc-88db-948265845b54": { categoryId: "fintech", caseId: "fintech-general-colombia", personaId: "usuario-fintech-colombia" },
 };

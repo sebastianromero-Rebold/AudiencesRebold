@@ -2755,6 +2755,266 @@ const CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO — DEPORTES (borrador automático GWI, 2026-09-25): fútbol general EE.UU.
+// ---------------------------------------------------------------------------
+const CASE_FUTBOL_USA_GWI_AUTO_20260925 = {
+  id: "aficionados-futbol-general-usa",
+  name: "Aficionados generales al fútbol (Estados Unidos)",
+  market: "USA",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-25)",
+  insightNote:
+    "Audiencia real de GWI ('Infinite>Twin Peaks>Soccer Fans', audience_id f01404ed-cc6b-41ac-98af-edcdf65bc9e3): personas en Estados Unidos que siguen el fútbol o están muy interesadas en distintas ligas de fútbol.",
+  funnelSteps: [
+    { label: "Siguen el fútbol o están muy interesados en distintas ligas de fútbol (Estados Unidos)", pct: 42 },
+  ],
+  footnotes: [
+    "42% = tamaño real de la audiencia en GWI (~105.6M, según los universos reales de la pregunta de género) sobre la población digital total de Estados Unidos (250M) — cifra derivada de universos reales devueltos por explore_insight_gwi, no estimada a ojo.",
+    "Esta audiencia es fanática del deporte en general (ve fútbol americano 65.8%, básquetbol 55.4% y béisbol 52.6% en vivo, todos por encima del fútbol/soccer con 47.1%), pero es frente al fútbol donde más se distingue del estadounidense promedio: índice 216, el más alto de los cuatro deportes consultados — de ahí que GWI la haya nombrado 'Soccer Fans'.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI no devolvió desagregación geográfica (ciudad/estado) para esta audiencia específica.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "aficionado-futbol-general-usa",
+      name: "Ryan Coleman",
+      archetype: "El Fanático Multideporte con Debilidad por el Fútbol",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Consume deporte en general —fútbol americano, básquetbol y béisbol primero en volumen— pero es frente al fútbol (soccer) donde se distingue más del estadounidense promedio: es más del doble de propenso que el promedio a verlo en vivo. Representa a más del 40% de la población digital de Estados Unidos.",
+      aiInsight: aiInsight(
+        "Cruza con la fragmentación del consumo deportivo en EE.UU.: el fútbol no es su deporte de mayor volumen de consumo (pierde en % bruto frente a fútbol americano, básquetbol y béisbol), pero es el que más lo diferencia del resto de la población (índice 216, el más alto de los cuatro deportes medidos) — la oportunidad de medios no es competir por volumen de atención deportiva general, sino capturar ese nicho de sobre-indexación específica en fútbol dentro de una audiencia que ya consume deporte de forma amplia.",
+        [
+          { label: "El costo y la fragmentación de plataformas son el freno #1, no el desinterés", detail: "40% cita el alto costo y 40% cita tener demasiadas suscripciones como barrera para ver deporte en vivo — la oportunidad de medios está en simplificar el acceso (bundles, pruebas gratuitas), no en generar más interés." },
+          { label: "El precio de boletas del Mundial se percibe caro pero no prohibitivo", detail: "39% lo considera 'muy caro' y 27% 'algo caro', pero solo 13% no tiene opinión — hay margen para comunicar valor (experiencia, exclusividad) en vez de competir solo en precio." },
+          { label: "El streaming ya casi empata a la TV en vivo", detail: "97% vio TV a la carta/streaming en el último mes frente a 95% que vio TV en vivo — la ventana de crecimiento de inversión en medios está claramente en plataformas de streaming, no en TV lineal." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 59, female: 40.3 },
+        ageBands: [
+          { label: "16-24", pct: 18.4 },
+          { label: "25-34", pct: 22.4 },
+          { label: "35-44", pct: 20.5 },
+          { label: "45-54", pct: 14.8 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Estados Unidos — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Ven fútbol (soccer) en vivo", pct: 47.1 },
+        { label: "Ven fútbol americano en vivo", pct: 65.8 },
+        { label: "Ven básquetbol en vivo", pct: 55.4 },
+        { label: "Escuchan música en plataformas de video como YouTube", pct: 61.7 },
+      ],
+      barriers: [
+        { label: "Alto costo para ver deporte en vivo", pct: 40.1 },
+        { label: "Demasiadas suscripciones requeridas para ver deporte en vivo", pct: 40.1 },
+        { label: "Falta de acceso a ligas y partidos específicos", pct: 27.9 },
+        { label: "Consideran 'muy caras' las boletas del Mundial", pct: 38.6 },
+      ],
+      digitalInterests: [
+        { label: "Uso de redes sociales (mensual)", index: 104 },
+        { label: "Uso de chat o mensajería (mensual)", index: 109 },
+        { label: "Escuchan música vía YouTube/plataformas de video", index: 124 },
+        { label: "Escuchan música vía streaming pago", index: 131 },
+      ],
+      media: [
+        { label: "TV a la carta / streaming (mensual)", pct: 96.6 },
+        { label: "TV en vivo (mensual)", pct: 94.9 },
+        { label: "Redes sociales (mensual)", pct: 96.7 },
+        { label: "Chat / mensajería (mensual)", pct: 90.4 },
+        { label: "Streaming de música vía YouTube", pct: 61.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y chat", "Instagram, X, WhatsApp/iMessage", "Resumen de resultados y titulares deportivos del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Búsqueda y redes", "Google, YouTube", "Contenido de previa y análisis pre-partido.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Chat y redes", "WhatsApp/iMessage, Instagram", "Debate sobre resultados y alineaciones.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video online y streaming", "YouTube, servicios de streaming", "Recordatorio de dónde ver el partido (streaming vs. TV).", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / bar", "TV y redes", "TV en vivo/streaming, X, Instagram", "Activación pre-partido (TV + segunda pantalla).", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bar", "TV, streaming y redes sociales", "TV/streaming, redes sociales", "Conversación en vivo y reacciones post-partido.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — FINTECH (borrador automático GWI, 2026-09-25): colombianos sin uso
+// de pagos en línea (contracara del segmento fintech ya procesado)
+// ---------------------------------------------------------------------------
+const CASE_DESBANCARIZADOS_GWI_AUTO_20260925 = {
+  id: "desbancarizados-colombia",
+  name: "Colombianos sin uso de pagos en línea (desbancarizados digitales)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-25)",
+  insightNote:
+    "Audiencia real de GWI ('PuntoDePago>Desbancarizados', audience_id d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b): colombianos que no han usado ningún servicio de pago en línea en el último mes.",
+  funnelSteps: [
+    { label: "No han usado ningún servicio de pago en línea en el último mes (Colombia)", pct: 8 },
+  ],
+  footnotes: [
+    "8% = tamaño real de la audiencia en GWI (~2.46M) sobre la población digital total de Colombia (31.06M) — cifra derivada de universos reales devueltos por explore_insight_gwi, no estimada a ojo.",
+    "Es la contracara exacta del segmento fintech ya procesado ('usuario-fintech-colombia'): mientras aquella audiencia usa activamente apps financieras, esta representa a quienes hoy quedan fuera del ecosistema de pagos digitales — útil para dimensionar el techo de conversión de cualquier producto fintech en Colombia.",
+    "Demografía, preferencia de pago, intereses y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI no devolvió desagregación geográfica (ciudad/región) para esta audiencia específica.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "desbancarizado-colombia",
+      name: "Karen Gutiérrez",
+      archetype: "La Colombiana Fuera del Ecosistema Digital de Pagos",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Representa al ~8% de la población digital colombiana que, pese a estar conectada a internet, no ha usado ningún servicio de pago en línea en el último mes. Es mayoritariamente femenina y más joven que el promedio, y sigue prefiriendo pagar en efectivo por más de dos a uno frente a pagos sin efectivo.",
+      aiInsight: aiInsight(
+        "Cruza con el techo de conversión real de cualquier producto fintech en Colombia: esta audiencia no es 'anti-tecnología' (consume streaming, prensa y contenido de video con normalidad), simplemente el pago digital todavía no forma parte de su rutina — el problema no es de acceso a internet sino de conversión al primer pago, lo que sugiere que la barrera es de confianza/hábito, no de infraestructura.",
+        [
+          { label: "Prefiere efectivo 2 a 1 frente a pagos sin efectivo", detail: "67.8% de esta audiencia prefiere pagar en efectivo frente a solo 32.2% que prefiere pagos sin efectivo — cualquier estrategia de conversión debe atacar directamente esa preferencia declarada, no asumir que es solo falta de acceso." },
+          { label: "Los ganchos típicos de fintech pesan menos aquí que en el resto del país", detail: "Solo 23.3% valora un checkout rápido y sencillo (40% menos que el promedio) y solo 8.5% valora poder diferir pagos sin interés (43% menos que el promedio) — la conveniencia y el crédito no son el gancho; antes hay que ganar confianza." },
+          { label: "Es una audiencia de medios 'ocasionales', no de extremos", detail: "Es usuaria ocasional de streaming (34%, índice 186) y de prensa física (33%, índice 162) muy por encima del promedio — no vive pegada a un solo medio, así que una campaña de un solo canal pierde a la mayoría de sus momentos de atención reales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 44.5, female: 55.5 },
+        ageBands: [
+          { label: "16-24", pct: 28.9 },
+          { label: "25-34", pct: 28.0 },
+          { label: "35-44", pct: 20.3 },
+          { label: "45-54", pct: 12.6 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interés en música", pct: 59.9 },
+        { label: "Interés en cine y películas", pct: 56.3 },
+        { label: "Interés en tecnología", pct: 49.4 },
+        { label: "Interés en salir a comer", pct: 47.1 },
+      ],
+      barriers: [
+        { label: "Prefieren pagar en efectivo antes que sin efectivo", pct: 67.8 },
+        { label: "Baja valoración del checkout rápido y sencillo como gancho de compra (40% menos que el promedio)", pct: 23.3 },
+        { label: "Baja valoración de poder diferir pagos sin interés (43% menos que el promedio)", pct: 8.5 },
+      ],
+      digitalInterests: [
+        { label: "Interés en tecnología", index: 77 },
+        { label: "Usuarios ocasionales de streaming (Netflix/Hulu)", index: 186 },
+        { label: "Usuarios ocasionales de prensa física (periódicos/revistas)", index: 162 },
+        { label: "Usuarios ocasionales de contenido how-to/vlogs", index: 162 },
+      ],
+      media: [
+        { label: "Interés en televisión", pct: 38.5 },
+        { label: "Usuarios ocasionales de TV abierta", pct: 37.6 },
+        { label: "Usuarios ocasionales de streaming (Netflix/Hulu)", pct: 33.9 },
+        { label: "Usuarios ocasionales de prensa física", pct: 32.9 },
+        { label: "Prefieren envío gratis al comprar online", pct: 45.6 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "TV abierta y radio", "TV abierta, radio", "Mensaje de confianza y simplicidad, sin tecnicismos financieros.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Casa / trabajo informal", "Redes sociales y prensa física", "Facebook/Instagram, periódicos", "Contenido educativo sobre seguridad de pagos digitales.", []),
+        daypart("Medio día", "12 m a 3 pm", "Comercio local / restaurante", "Interacción presencial", "Punto de venta físico, efectivo", "Incentivo puntual por probar un pago sin efectivo por primera vez.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa / trabajo", "Streaming ocasional y video", "Servicios de streaming, YouTube", "Testimonio de alguien similar usando pagos digitales con éxito.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV abierta", "TV abierta", "Refuerzo de marca conocida/confiable antes de pedir el primer registro.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales y streaming", "Redes sociales, streaming", "CTA simple: registro guiado paso a paso, sin letra menuda.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — ENTRETENIMIENTO (borrador automático GWI, 2026-09-25): eventos
+// urbanos (Hip-Hop/Rap y Reggae/Ska) en Colombia
+// ---------------------------------------------------------------------------
+const CASE_EVENTOS_URBANOS_GWI_AUTO_20260925 = {
+  id: "eventos-urbanos-hiphop-reggae-colombia",
+  name: "Audiencia de eventos urbanos: Hip-Hop/Rap y Reggae/Ska (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-25)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>AudienciaEventosUrban', audience_id 2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3): colombianos interesados en eventos en vivo como festivales de música y que disfrutan Hip-Hop/Rap o Reggae/Ska.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo y afines a Hip-Hop/Rap o Reggae/Ska (Colombia)", pct: 17 },
+  ],
+  footnotes: [
+    "17% = tamaño real de la audiencia en GWI (~5.19M) sobre la población digital total de Colombia (31.06M) — cifra derivada de universos reales devueltos por explore_insight_gwi, no estimada a ojo.",
+    "Es un segmento más específico (afinidad urbana Hip-Hop/Reggae) dentro del universo más amplio ya procesado como 'entusiasta-eventos-vivo-co' (33% general) — útil para segmentar comunicación por género musical, como ya contempla el wizard del aplicativo.",
+    "Demografía, comportamiento de compra de boletos y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI no devolvió desagregación geográfica (ciudad/región) para esta audiencia específica.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "audiencia-urbana-hiphop-reggae-colombia",
+      name: "Santiago Moreno",
+      archetype: "El Conector de la Escena Urbana",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Es joven (6 de cada 10 tiene menos de 35 años), consume eventos en vivo como parte de un paquete más amplio de ocio (viajes, experiencias) y convierte interés en compra de boletos con más frecuencia que el colombiano promedio, aunque todavía compra mayoritariamente de forma presencial, no online.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón de 'consumo de ocio empaquetado': esta audiencia no separa el concierto de otras decisiones de tiempo libre — compra vacaciones domésticas (31%) y tiquetes de viaje (23%) casi con la misma frecuencia que boletos de concierto (25%) — lo que sugiere que compite por el mismo presupuesto y atención que la categoría de viajes, no solo contra otros eventos en vivo.",
+        [
+          { label: "La compra sigue siendo mayoritariamente presencial, no online", detail: "25% compró boletos de concierto en los últimos 3-6 meses pero solo 10% lo hizo en línea — es justo el tramo del funnel donde un canal de venta online más simple puede ganar terreno." },
+          { label: "Es una audiencia 'second screen' casi total mientras ve TV", detail: "81% usa redes sociales mientras ve TV — cualquier activación en TV/streaming debería ir acompañada de una segunda pantalla social simultánea (hashtag, encuesta en vivo) para capturar esa atención dividida." },
+          { label: "Usa apps de boletos/eventos por encima del promedio, aunque en volumen bajo", detail: "Solo 17% usó apps de tickets/eventos en el último mes, pero es 90% más probable que el colombiano promedio en hacerlo (índice 190) — es un canal de nicho pero altamente cualificado para pautar directamente." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 52.1, female: 47.9 },
+        ageBands: [
+          { label: "16-24", pct: 29.4 },
+          { label: "25-34", pct: 31.1 },
+          { label: "35-44", pct: 23.1 },
+          { label: "45-54", pct: 11.4 },
+          { label: "55-64", pct: 4.9 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Compraron boletos de concierto en los últimos 3-6 meses", pct: 24.7 },
+        { label: "Planean comprar boletos de concierto en los próximos 3-6 meses", pct: 21.9 },
+        { label: "Compraron unas vacaciones nacionales en los últimos 3-6 meses", pct: 31.2 },
+        { label: "Compraron tiquetes de viaje en los últimos 3-6 meses", pct: 23.2 },
+      ],
+      barriers: [
+        { label: "Brecha entre compra total de boletos de concierto (24.7%) y compra online (10.1%)", pct: 10.1 },
+        { label: "Compra de tiquetes de viaje online sigue siendo baja frente a la compra total", pct: 8.7 },
+        { label: "Baja base de uso de apps de tickets/eventos (aunque muy sobre-indexada)", pct: 17.3 },
+      ],
+      digitalInterests: [
+        { label: "Uso de apps de tickets/eventos", index: 190 },
+        { label: "Compra de boletos de concierto online", index: 196 },
+        { label: "Juegan videojuegos online mientras ven TV (segunda pantalla)", index: 129 },
+      ],
+      media: [
+        { label: "Usan redes sociales mientras ven TV (segunda pantalla)", pct: 80.7 },
+        { label: "Chatean con amigos mientras ven TV", pct: 69.6 },
+        { label: "Usuarios pesados de streaming de música", pct: 60.2 },
+        { label: "Usuarios pesados de redes sociales", pct: 54.6 },
+        { label: "Usuarios pesados de streaming (Netflix/Hulu)", pct: 38.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y chat", "Instagram, WhatsApp", "Anuncio de lineup o nueva fecha de evento.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Redes sociales", "Instagram, TikTok", "Contenido de artistas/eventos urbanos para compartir.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Chat y redes", "WhatsApp, Instagram", "Coordinación de plan grupal para el evento.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / trabajo", "Streaming de música y video", "Plataformas de streaming de música, YouTube", "Playlist o preview del artista/evento.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y segunda pantalla (redes)", "TV/streaming + Instagram simultáneo", "CTA de compra con oferta por tiempo limitado.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales y streaming", "Instagram, apps de tickets", "Últimos boletos disponibles / recordatorio de compra.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -2769,7 +3029,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925],
   },
   {
     id: "deportes",
@@ -2782,7 +3042,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_USA_GWI_AUTO_20260925],
   },
   {
     id: "retail",
@@ -2808,7 +3068,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_DESBANCARIZADOS_GWI_AUTO_20260925],
   },
   {
     id: "alcohol",

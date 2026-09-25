@@ -3190,6 +3190,239 @@ const CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924 = {
     },
   ],
 };
+const CASE_COCA100_GWI_AUTO_20260924 = {
+  id: "coca100-celebracion-multigeneracional-colombia",
+  name: "Coca100 — Celebración multigeneracional de marca (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "Campaña 'Coca100' (Páramo LAB), identificada por el equipo como prioritaria y reciente: 3 audiencias reales de GWI ('Páramo LAB (co) Coca100_GenX', 'Coca100_Millennials' y 'Coca100_Genz') que segmentan por generación lo que parece ser una celebración/aniversario de marca — GWI no expone el nombre de marca ni el motivo exacto de la celebración más allá del nombre de campaña.",
+  funnelSteps: [
+    {
+      label:
+        "Colombianos en edad Gen X, Millennial o Gen Z activos en digital (3 audiencias reales de GWI para la campaña Coca100, sin filtro temático adicional detectado)",
+      pct: 98.5,
+    },
+  ],
+  footnotes: [
+    "98.5% = universo combinado real de las 3 audiencias en GWI (GenX ~9.37M + Millennials ~10.85M + GenZ ~10.39M ≈ 30.6M) sobre la población digital total de Colombia (31.06M) — cifra derivada de universos reales devueltos por explore_insight_gwi, no estimada a ojo.",
+    "Las 3 audiencias reales de GWI parecen estar definidas únicamente por rango de edad/generación (los rangos etarios declarados suman 100% dentro de cada una vía chat_gwi) — no se detectó un filtro temático adicional (interés, intención de compra) en las respuestas de GWI, así que el paso del embudo refleja el tamaño combinado de las tres generaciones, no una afinidad filtrada.",
+    "sharePct de cada persona calculado proporcional al universo real que reporta GWI para su audiencia (GenX 30.6%, Millennials 35.5%, GenZ 33.9% del total combinado) — no se encontró un dato de peso relativo distinto entre las tres, así que se usa el universo real como mejor proxy disponible.",
+    "Demografía (género, edad, ciudades/regiones), motivaciones, barreras, intereses digitales y medios: datos reales de GWI Core Colombia específicos de cada audiencia generacional (a diferencia del batch anterior, aquí sí fue posible obtener cifras propias de cada audiencia para casi todas las variables, no solo proxies de población general).",
+    "Para Gen Z, GWI solo devolvió desagregación geográfica para 2 regiones (Distrito Capital y Meta) — dato parcial, no se completa con cifras de otras fuentes.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para ninguna de las 3 audiencias — el customer journey de 6 bloques queda con lugar/medios genéricos inferidos del perfil (trabajo, medios preferidos) y sin cifras propias, pendiente de criterio del equipo creativo.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, especialmente la cita de cada persona y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "guardiana-nostalgia-coca100-genx",
+      name: "Marta Elena Cifuentes",
+      archetype: "La Guardiana de la Nostalgia de Marca",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana de 45 a 64 años que vivió gran parte de los 100 años de historia de la marca como parte de su propia vida. Es la generación más leal, más receptiva a un discurso de marca tradicional y más conectada a Facebook como su red principal — para ella, celebrar un aniversario de marca es también celebrar su propia memoria.",
+      aiInsight: aiInsight(
+        "Cruza con el gradiente de nostalgia real que muestra GWI entre las tres generaciones de esta campaña: 23.9% de Gen X en Colombia dice que abrazar herencia y tradiciones es importante para ellos (índice 124), frente a 18.7% en Millennials y 15.1% en Gen Z — la misma caída se repite casi exacta en 'quiero que las marcas sean tradicionales' (31.7% GenX vs. 23.9% Millennials vs. 17.1% GenZ). Gen X es, con datos reales, la única generación donde un discurso de aniversario apoyado en tradición pura tiene más probabilidad de resonar que de sentirse anticuado.",
+        [
+          { label: "La nostalgia es un activo real, no solo una narrativa", detail: "Gen X es 24% más propensa que el promedio a valorar herencia y tradición (índice 123.8) y 28% más propensa a querer marcas tradicionales (índice 128.4) — la comunicación de aniversario puede apoyarse en memoria de marca real sin necesidad de sobre-dramatizarla." },
+          { label: "Facebook sigue siendo el canal, no una alternativa", detail: "44% usa Facebook más de una vez al día, muy por encima de Instagram (23% uso diario) o TikTok (18% uso diario) — cualquier activación de aniversario dirigida a Gen X debe priorizar Facebook, no asumir que las redes 'nuevas' son el canal principal para esta generación." },
+          { label: "La confianza en el manejo de datos es la barrera silenciosa", detail: "46% se preocupa por el uso de sus datos personales por parte de empresas (índice 121) — mecánicas de campaña que pidan datos personales (registro, formularios de aniversario) deben comunicar transparencia explícita para no generar fricción en esta generación." },
+        ]
+      ),
+      sharePct: 30.6,
+      demographics: {
+        genderSplit: { male: 47.6, female: 52.4 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 14 },
+          { label: "45-54", pct: 54 },
+          { label: "55-64", pct: 32 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 33 },
+          { city: "Antioquia", pct: 14 },
+          { city: "Valle del Cauca", pct: 9.6 },
+          { city: "Atlántico", pct: 7.7 },
+          { city: "Cundinamarca", pct: 7.2 },
+          { city: "Santander", pct: 5 },
+        ],
+      },
+      motivations: [
+        { label: "Son leales a las marcas que les gustan", pct: 54 },
+        { label: "Quieren que las marcas sean tradicionales", pct: 31.7 },
+        { label: "Se sienten motivados a promocionar su marca favorita por recompensas", pct: 47 },
+        { label: "Consideran importante abrazar su herencia y tradiciones", pct: 23.9 },
+      ],
+      barriers: [
+        { label: "Preocupación por el uso de sus datos personales por parte de empresas", pct: 46 },
+        { label: "Solo 20% compra marcas que ve anunciadas — bajo impacto directo de la publicidad tradicional", pct: 20 },
+        { label: "26% cree que la economía del país empeorará en los próximos 6 meses — outlook cauteloso de gasto", pct: 26 },
+        { label: "28% espera que sus finanzas personales se mantengan igual — sin margen adicional para gasto discrecional", pct: 28 },
+      ],
+      digitalInterests: [
+        { label: "Quieren que las marcas sean confiables", index: 110 },
+        { label: "Quieren que las marcas sean auténticas", index: 111 },
+        { label: "Quieren que las marcas sean tradicionales", index: 128 },
+        { label: "Investigan productos online antes de comprarlos", index: 112 },
+      ],
+      media: [
+        { label: "Facebook (más de una vez al día)", pct: 44 },
+        { label: "YouTube (uso diario)", pct: 29 },
+        { label: "Instagram (uso diario)", pct: 23 },
+        { label: "TikTok (uso diario)", pct: 18 },
+        { label: "Suscripción a streaming de video/TV (último mes)", pct: 38 },
+        { label: "Se entera de nuevas marcas por anuncios de TV", pct: 32 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "TV y radio matutina", "TV abierta, radio", "Repaso de titulares y rutina familiar de la mañana.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / negocio propio", "Facebook, WhatsApp", "Facebook, WhatsApp", "Revisión de mensajes y contenido de marcas conocidas.", []),
+        daypart("Medio día", "12 m a 3 pm", "Restaurantes / casa", "Facebook", "Facebook", "Contenido de aniversario/marca compartido por conocidos.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV, radio", "TV abierta, radio", "Anuncios de TV y radio como fuente principal de novedades de marca.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Facebook, YouTube", "Facebook, YouTube", "Tiempo en familia con TV o streaming de fondo.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV, Facebook", "TV abierta, Facebook", "Programación de TV abierta y revisión final de redes.", []),
+      ],
+    },
+    {
+      id: "puente-familiar-coca100-millennials",
+      name: "Juliana Prieto",
+      archetype: "La Millennial que Comparte la Historia en Familia",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana de 25 a 44 años, generación puente entre la nostalgia de Gen X y el escepticismo de Gen Z. Trabaja tiempo completo muy por encima del promedio, valora la familia por encima de la marca, y es leal por hábito más que por identidad — su relación con un aniversario de 100 años probablemente se construye compartiéndolo con otros, no viviéndolo en primera persona.",
+      aiInsight: aiInsight(
+        "Cruza con su posición real de 'generación puente' en los datos de GWI: su valoración de herencia y tradición (18.7%, índice 98) está casi exactamente entre Gen X (23.9%, índice 124) y Gen Z (15.1%, índice 79) — ni completamente nostálgica ni completamente indiferente. Es además la generación con mayor tasa de empleo de tiempo completo (47%, índice 126), lo que reduce su disponibilidad de atención durante la jornada laboral frente a las otras dos.",
+        [
+          { label: "Es la generación puente, no un extremo", detail: "Su valoración de herencia/tradición (18.7%) cae exactamente entre Gen X (23.9%) y Gen Z (15.1%) — el mensaje de aniversario debería funcionar como bisagra entre ambos polos, ni completamente nostálgico ni completamente de descubrimiento." },
+          { label: "La lealtad es real pero no identitaria", detail: "52% dice ser leal a sus marcas favoritas, pero solo 5.2% se autodefine explícitamente como 'leal a una marca' — la lealtad de esta generación funciona mejor reforzada por hábito y recompensas que apelando a un discurso de identidad de marca." },
+          { label: "El trabajo de tiempo completo compite por su atención", detail: "47% trabaja tiempo completo (26% más que el promedio, índice 126) — el momento de mayor disponibilidad de atención real no es la jornada laboral sino las franjas de traslado y descanso en casa." },
+        ]
+      ),
+      sharePct: 35.5,
+      demographics: {
+        genderSplit: { male: 49.5, female: 50.5 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 46 },
+          { label: "35-44", pct: 54 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 30 },
+          { city: "Antioquia", pct: 15 },
+          { city: "Valle del Cauca", pct: 10 },
+          { city: "Cundinamarca", pct: 8.5 },
+          { city: "Atlántico", pct: 8.1 },
+          { city: "Santander", pct: 4.5 },
+        ],
+      },
+      motivations: [
+        { label: "Son leales a las marcas que les gustan", pct: 52 },
+        { label: "Se sienten motivados a promocionar su marca favorita por recompensas", pct: 45 },
+        { label: "Consideran importante pasar tiempo en familia", pct: 74 },
+        { label: "Prefieren compras online cuando hay puntos de lealtad disponibles", pct: 26 },
+      ],
+      barriers: [
+        { label: "Preocupación por el uso de sus datos personales por parte de empresas", pct: 38 },
+        { label: "Solo 18.7% considera importante abrazar herencia y tradiciones — conexión emocional con lo 'tradicional' más débil que en Gen X", pct: 18.7 },
+        { label: "Solo 5.2% se identifica explícitamente como 'leal a una marca', pese al 52% que dice ser leal a sus favoritas — lealtad más situacional que identitaria", pct: 5.2 },
+      ],
+      digitalInterests: [
+        { label: "Quieren que las marcas sean confiables", index: 99 },
+        { label: "Quieren que las marcas sean tradicionales", index: 100 },
+        { label: "Usan redes sociales para ver actualizaciones de sus marcas favoritas", index: 103 },
+        { label: "Trabajan tiempo completo", index: 126 },
+      ],
+      media: [
+        { label: "Facebook (más de una vez al día)", pct: 43 },
+        { label: "Instagram (uso diario)", pct: 23 },
+        { label: "TikTok (uso diario)", pct: 18 },
+        { label: "YouTube (suscriptores que ven más de una vez al día)", pct: 61 },
+        { label: "Apps de chat/mensajería (uso en el último mes)", pct: 98 },
+        { label: "Suscripción a streaming de video/TV (último mes)", pct: 41 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "WhatsApp, Instagram", "WhatsApp, Instagram", "Revisión de redes y coordinación familiar antes del trabajo.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Facebook, YouTube", "Facebook, YouTube", "Contenido de marcas y noticias durante pausas breves.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Instagram, TikTok", "Instagram, TikTok", "Consumo de contenido breve durante el almuerzo.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Facebook", "Facebook", "Revisión de redes en el trayecto de regreso a casa.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "YouTube, streaming", "YouTube, streaming", "Tiempo en familia con streaming o TV de fondo.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Instagram, TikTok, chat", "Instagram, TikTok, WhatsApp", "Ocio digital y mensajería antes de dormir.", []),
+      ],
+    },
+    {
+      id: "descubridora-digital-coca100-genz",
+      name: "Sara Valentina Ortiz",
+      archetype: "La Gen Z que Descubre los 100 Años en Redes",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana de 16 a 34 años (mayoritariamente 16-24), estudiante en una proporción muy superior al promedio y la generación más nativa de TikTok de las tres. No vivió los 100 años de historia de la marca, así que la conoce y la valida a través de contenido, no de memoria propia — es la generación con menor apego declarado a la tradición y menor identificación como 'leal a una marca'.",
+      aiInsight: aiInsight(
+        "Cruza con el punto más bajo del gradiente de nostalgia real medido por GWI: solo 15.1% de Gen Z en Colombia dice que abrazar herencia y tradiciones es importante para ellos (índice 79, el único por debajo del promedio de las tres generaciones), y solo 17.1% quiere que las marcas sean tradicionales (índice 72) — frente a 31.7% en Gen X. Para esta generación, 'cumplir 100 años' no es una apelación emocional heredada, es un dato que hay que descubrir y validar mediante contenido, preferentemente en TikTok, donde 47.7% de ellos ya está más de una vez al día (índice 133).",
+        [
+          { label: "No hereda la nostalgia, la descubre", detail: "Solo 15.1% de Gen Z en Colombia valora abrazar herencia y tradiciones (21% menos que el promedio, índice 79) — la historia de 100 años debe presentarse como contenido de descubrimiento (curiosidades, datos, detrás de cámaras), no como apelación emocional a un recuerdo que esta generación no tiene." },
+          { label: "El canal es TikTok antes que cualquier otro", detail: "47.7% usa TikTok más de una vez al día (33% más que el promedio, índice 133), muy por encima de Instagram (38.3%) y Facebook (30.5%, índice 77 — el único canal donde Gen Z está por debajo del promedio) — una campaña pensada 'para todas las generaciones' pierde a este segmento si no tiene una versión nativa de TikTok." },
+          { label: "Es la generación más escéptica del discurso de marca tradicional", detail: "Solo 17.1% quiere que las marcas sean tradicionales (28% menos que el promedio, índice 72) y solo 4.5% se identifica como leal a una marca — construir credibilidad con Gen Z requiere evidencia y honestidad más que la apelación directa a 'somos una marca de siempre'." },
+        ]
+      ),
+      sharePct: 33.9,
+      demographics: {
+        genderSplit: { male: 49.7, female: 50.3 },
+        ageBands: [
+          { label: "16-24", pct: 68 },
+          { label: "25-34", pct: 32 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C. (Distrito Capital)", pct: 22 },
+          { city: "Meta", pct: 2.1 },
+        ],
+      },
+      motivations: [
+        { label: "Se sienten motivados a promocionar su marca favorita porque la aman", pct: 30 },
+        { label: "Consideran importante pasar tiempo en familia", pct: 67 },
+        { label: "Son leales a las marcas que les gustan", pct: 49 },
+        { label: "Priorizan experiencias culturales al elegir destino de vacaciones", pct: 19 },
+      ],
+      barriers: [
+        { label: "Solo 15.1% considera importante abrazar herencia y tradiciones — la más baja de las 3 generaciones (Gen X 23.9%, Millennials 18.7%)", pct: 15.1 },
+        { label: "Solo 17.1% quiere que las marcas sean tradicionales — frente a 31.7% en Gen X", pct: 17.1 },
+        { label: "Preocupación por el uso de sus datos personales, aunque menor que el promedio", pct: 32 },
+        { label: "Solo 4.5% se identifica explícitamente como leal a una marca", pct: 4.5 },
+      ],
+      digitalInterests: [
+        { label: "Usan TikTok más de una vez al día", index: 133 },
+        { label: "Usan Instagram más de una vez al día", index: 112 },
+        { label: "Son estudiantes actualmente", index: 257 },
+        { label: "Quieren que las marcas sean tradicionales (por debajo del promedio)", index: 72 },
+      ],
+      media: [
+        { label: "TikTok (más de una vez al día)", pct: 47.7 },
+        { label: "Instagram (más de una vez al día)", pct: 38.3 },
+        { label: "Facebook (más de una vez al día)", pct: 30.5 },
+        { label: "YouTube (para ver/descargar TV, películas o video, último mes)", pct: 63 },
+        { label: "Suscripción a streaming de video/TV (último mes)", pct: 35 },
+        { label: "Suscripción a streaming de música (último mes)", pct: 27 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TikTok, Instagram", "TikTok, Instagram", "Scroll matutino antes de clases o trabajo.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad / trabajo", "Instagram, TikTok", "Instagram, TikTok", "Contenido breve entre clases o pausas cortas.", []),
+        daypart("Medio día", "12 m a 3 pm", "Universidad / casa", "TikTok", "TikTok", "Consumo de video corto durante el almuerzo.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Instagram, YouTube", "Instagram, YouTube", "Contenido de entretenimiento después de clases.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TikTok, YouTube", "TikTok, YouTube", "Ocio digital y streaming de video.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Instagram, TikTok, chat", "Instagram, TikTok, WhatsApp", "Mensajería y redes antes de dormir.", []),
+      ],
+    },
+  ],
+};
+
 
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
@@ -3323,7 +3556,7 @@ const CATEGORIES = [
       { id: "investigaOnlineOcasion", label: "Investiga opciones online antes de decidir" },
       { id: "decideUltimoMomento", label: "Decide y compra a último momento" },
     ],
-    cases: [CASE_MOMENTOS],
+    cases: [CASE_MOMENTOS, CASE_COCA100_GWI_AUTO_20260924],
   },
   {
     id: "viajes",
@@ -3380,6 +3613,9 @@ const PERSONA_RELATED_TRAITS = {
   "heredero-discreto": ["altoPoderAdquisitivo", "buscaLujoSilencioso"],
   "planeadora-anticipada": ["planeaFechaTrimestre", "compraConAnticipacion"],
   "decisor-ultimo-momento": ["investigaOnlineOcasion", "decideUltimoMomento"],
+  "guardiana-nostalgia-coca100-genx": ["planeaFechaTrimestre"],
+  "puente-familiar-coca100-millennials": ["compraConAnticipacion", "investigaOnlineOcasion"],
+  "descubridora-digital-coca100-genz": ["investigaOnlineOcasion"],
   "viajero-digital-independiente": ["viajaAnual", "investigaDestinosOnline"],
   "familia-planificadora": ["reservaDirecto", "viajaConFamilia"],
   "profesional-remoto-optimizador": ["modalidadHibridaRemota", "optimizaFlujoPersonal"],

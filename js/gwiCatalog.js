@@ -251,6 +251,17 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "aeeab035-01c5-4627-9e40-35bb34fa4bb2", title: "Páramo LAB (co) Coca100_GenX", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "bb62e8d2-f93a-43a1-858c-b91e8ac98b08", title: "Páramo LAB (co) Coca100_Millennials", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "b2e5e216-56f7-453b-86d7-2d159f1628a6", title: "Páramo LAB (co) Coca100_Genz", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
+  // Añadidas por la automatización diaria de GWI el 2026-09-24 -- batch prioritario del
+  // equipo: campañas Jäger (BR) VidaSocial (Rio de Janeiro) y Páramo (co) Baum27 (ver
+  // data/gwi-audience-manifest.json).
+  { id: "1ca0d26c-01cb-4112-ba3b-4dbbbce52a80", title: "Jäger (BR) VidaSocial_UrbanEliteRJ", client: "Jagermeister", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Rio de Janeiro, Brazil, drink alcohol regularly, semi-regularly, or occasionally, are interested in dance, eating out, fine art, museums/galleries, urban/modern art, or live events, do not feel affluent or ambitious, and do not like being the first to try new things." },
+  { id: "4cbb39ea-1f96-4331-9835-53ad110e97d3", title: "Jäger (BR) VidaSocial_TribeKeepersRJ", client: "Jagermeister", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Rio de Janeiro, Brazil, and take vacations, skewing Gen X." },
+  { id: "fed570fb-2d7f-46b4-b5f5-57f802dcc74b", title: "Jäger (BR) VidaSocial_SceneHunterRJ", client: "Jagermeister", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Rio de Janeiro, Brazil, drink alcohol regularly, semi-regularly, or occasionally, are interested in dance, eating out, fine art, museums/galleries, urban/modern art, or live events, and either regularly look for new live music events, enjoy controlling the music at social events, are open-minded, or trust online reviews." },
+  { id: "ebc1531e-1d95-4099-88fc-5de933a3413c", title: "Jäger (BR) VidaSocial_NightArchitecsRJ", client: "Jagermeister", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Rio de Janeiro, Brazil, drink alcohol regularly, semi-regularly, or occasionally, are interested in dance, eating out, fine art, museums/galleries, urban/modern art, or live music events, do not feel affluent or ambitious, and do not like being the first to try new things — skewing heavily neutral/detached in personality traits." },
+  { id: "ea7f1cf9-7691-406b-afbd-981832750071", title: "Jäger (BR) VidaSocial_CamalonesRJ", client: "Jagermeister", type: "authored", datasets: ["ds-core"], description: "This audience consists of high-income individuals aged 16-34 who currently reside in Rio de Janeiro, Brazil, drink alcohol regularly, semi-regularly, or occasionally, and are interested in dance, eating out, fine art, museums/galleries, urban/modern art, or live events." },
+  { id: "26b41bb0-ca38-4b9b-8447-d5398bd6b692", title: "Páramo (co) Baum27_PotencialRavers", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who are adventurous, creative, fashion-conscious, open-minded, or social/outgoing, who like listening to EDM/Dance music such as House and Techno, but who are not currently interested in live events like music festivals." },
+  { id: "06846574-6359-4f49-9d3e-b23fe8faae71", title: "Páramo (co) Baum27_Amplificadores de la escena", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who are interested in live events like music festivals and in music, skewing Gen Z/Millennial." },
+  { id: "171f136e-ae27-4152-9595-765835fcd961", title: "Páramo (co) Baum27_Curadores", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who like listening to EDM/Dance music such as House and Techno, are creative, open-minded, like to be the first to try new things, and follow technology trends closely." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -272,4 +283,15 @@ const CATALOG_ANALYSIS_LINKS = {
   "aeeab035-01c5-4627-9e40-35bb34fa4bb2": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "guardiana-nostalgia-coca100-genx" },
   "bb62e8d2-f93a-43a1-858c-b91e8ac98b08": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "puente-familiar-coca100-millennials" },
   "b2e5e216-56f7-453b-86d7-2d159f1628a6": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "descubridora-digital-coca100-genz" },
+  "1ca0d26c-01cb-4112-ba3b-4dbbbce52a80": { categoryId: "alcohol", caseId: "jager-vidasocial-noche-rio-de-janeiro", personaId: "urban-elite-rj" },
+  "fed570fb-2d7f-46b4-b5f5-57f802dcc74b": { categoryId: "alcohol", caseId: "jager-vidasocial-noche-rio-de-janeiro", personaId: "scene-hunter-rj" },
+  "ea7f1cf9-7691-406b-afbd-981832750071": { categoryId: "alcohol", caseId: "jager-vidasocial-noche-rio-de-janeiro", personaId: "camaleon-ambicioso-rj" },
+  // TribeKeepersRJ y NightArchitecsRJ: procesadas y registradas en el mismo caso, pero sin
+  // persona propia (se solapan demográfica/actitudinalmente con SceneHunterRJ) -- ver
+  // footnotes de jager-vidasocial-noche-rio-de-janeiro en data.js.
+  "4cbb39ea-1f96-4331-9835-53ad110e97d3": { categoryId: "alcohol", caseId: "jager-vidasocial-noche-rio-de-janeiro", personaId: null },
+  "ebc1531e-1d95-4099-88fc-5de933a3413c": { categoryId: "alcohol", caseId: "jager-vidasocial-noche-rio-de-janeiro", personaId: null },
+  "26b41bb0-ca38-4b9b-8447-d5398bd6b692": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "raver-en-potencia-co" },
+  "06846574-6359-4f49-9d3e-b23fe8faae71": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "amplificadora-escena-co" },
+  "171f136e-ae27-4152-9595-765835fcd961": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "curador-escena-co" },
 };

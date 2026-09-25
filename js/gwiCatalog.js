@@ -247,6 +247,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "73e30957-2da0-45b6-9dbf-1d463ec5a351", title: "Páramo LAB (co) TecnoMobile_Colombia_AmantesDeLaTecnología", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in technology." },
   { id: "b3af3d46-ba91-4870-81a3-8bf59376b7cd", title: "Páramo LAB (co) TecnoMobile_Colombia_SmartphoneGamaMedia", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and own an ASUS, HTC, Lenovo, Motorola, Nokia, OnePlus, Oppo, or Xiaomi mobile." },
   { id: "ee0e32c0-fb98-4984-adbb-8b3b713b7745", title: "Colombia con vehiculo", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have at least one car in their household." },
+  // Añadidas por la automatización diaria de GWI el 2026-09-24 (batch 2 — campaña Coca100, prioridad del equipo).
+  { id: "aeeab035-01c5-4627-9e40-35bb34fa4bb2", title: "Páramo LAB (co) Coca100_GenX", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "bb62e8d2-f93a-43a1-858c-b91e8ac98b08", title: "Páramo LAB (co) Coca100_Millennials", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "b2e5e216-56f7-453b-86d7-2d159f1628a6", title: "Páramo LAB (co) Coca100_Genz", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "" },
   // Añadidas por el batch-3 de la automatización de GWI el 2026-09-24 (campañas LauraPausini2027 y Placebo — ver data/gwi-audience-manifest.json).
   { id: "7491a77f-8dbb-4da4-9511-8bd828b22005", title: "Páramo (co) LauraPausini2027Med_Nuevos", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "1e719101-f272-4418-8b84-8d73c503b30c", title: "Páramo (co) LauraPausini2027Med_Base", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
@@ -271,6 +275,9 @@ const CATALOG_ANALYSIS_LINKS = {
   // "Colombia con vehiculo" se dividió en 2 personas (conductor-frecuente-colombia / conductor-ocasional-colombia)
   // según la frecuencia real de manejo dentro de esta misma audiencia -- el enlace apunta a la persona mayoritaria.
   "ee0e32c0-fb98-4984-adbb-8b3b713b7745": { categoryId: "automotriz", caseId: "colombia-con-vehiculo", personaId: "conductor-frecuente-colombia" },
+  "aeeab035-01c5-4627-9e40-35bb34fa4bb2": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "guardiana-nostalgia-coca100-genx" },
+  "bb62e8d2-f93a-43a1-858c-b91e8ac98b08": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "puente-familiar-coca100-millennials" },
+  "b2e5e216-56f7-453b-86d7-2d159f1628a6": { categoryId: "momentos", caseId: "coca100-celebracion-multigeneracional-colombia", personaId: "descubridora-digital-coca100-genz" },
   "7491a77f-8dbb-4da4-9511-8bd828b22005": { categoryId: "entretenimiento", caseId: "laura-pausini-2027-colombia", personaId: "laura-pausini-nuevos-proxy" },
   "1e719101-f272-4418-8b84-8d73c503b30c": { categoryId: "entretenimiento", caseId: "laura-pausini-2027-colombia", personaId: "laura-pausini-base-antioquia" },
   "9b5745d1-a0ed-4396-88ce-b36a15559f0c": { categoryId: "entretenimiento", caseId: "placebo-rock-en-vivo-colombia", personaId: "placebo-fans-rock-no-creativos" },

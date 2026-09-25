@@ -6,6 +6,9 @@
     { "audience_id": "49dbc0ab-e5d3-47fc-88db-948265845b54", "title": "Paramo(co)FintechColombia", "processedAt": "2026-09-24", "categoryId": "fintech", "caseId": "fintech-general-colombia" },
     { "audience_id": "73e30957-2da0-45b6-9dbf-1d463ec5a351", "title": "Páramo LAB (co) TecnoMobile_Colombia_AmantesDeLaTecnología", "processedAt": "2026-09-24", "categoryId": "consumer-tech", "caseId": "tecnomobile-colombia" },
     { "audience_id": "b3af3d46-ba91-4870-81a3-8bf59376b7cd", "title": "Páramo LAB (co) TecnoMobile_Colombia_SmartphoneGamaMedia", "processedAt": "2026-09-24", "categoryId": "consumer-tech", "caseId": "tecnomobile-colombia" },
-    { "audience_id": "ee0e32c0-fb98-4984-adbb-8b3b713b7745", "title": "Colombia con vehiculo", "processedAt": "2026-09-24", "categoryId": "automotriz", "caseId": "colombia-con-vehiculo" }
+    { "audience_id": "ee0e32c0-fb98-4984-adbb-8b3b713b7745", "title": "Colombia con vehiculo", "processedAt": "2026-09-24", "categoryId": "automotriz", "caseId": "colombia-con-vehiculo" },
+    { "audience_id": "f01404ed-cc6b-41ac-98af-edcdf65bc9e3", "title": "Infinite>Twin Peaks>Soccer Fans", "processedAt": "2026-09-25", "categoryId": "deportes", "caseId": "aficionados-futbol-general-usa" },
+    { "audience_id": "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b", "title": "PuntoDePago>Desbancarizados", "processedAt": "2026-09-25", "categoryId": "fintech", "caseId": "desbancarizados-colombia" },
+    { "audience_id": "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3", "title": "Paramo>AudienciaEventosUrban", "processedAt": "2026-09-25", "categoryId": "entretenimiento", "caseId": "eventos-urbanos-hiphop-reggae-colombia" }
   ]
 }

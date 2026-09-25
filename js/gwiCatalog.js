@@ -143,6 +143,8 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "b0a4df35-7a1f-4f88-8956-9d26794c66e5", title: "Paramo>AudienciaEventosEDM", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "c1775e50-f4ed-4309-be85-700dec92c9e6", title: "Paramo>AudienciaEventosLatin", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3", title: "Paramo>AudienciaEventosUrban", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "f01404ed-cc6b-41ac-98af-edcdf65bc9e3", title: "Infinite>Twin Peaks>Soccer Fans", client: "Infinite", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who follow soccer or are very interested in various soccer leagues, and currently reside in the USA." },
+  { id: "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b", title: "PuntoDePago>Desbancarizados", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have not used any online payment service in the last month." },
   { id: "06058aef-4879-40f1-ba9e-b9351aea8f59", title: "Paramo>AudienciasAerolíneasNSE3>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "4a2425d6-2700-46fd-aab5-be8882c67f20", title: "Paramo>AudienciasAerolíneasNSE3Event>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "43660923-2638-4b27-a203-467338d036ff", title: "Paramo>AudienciasAerolíneasNSE3EventBogyAlrede>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
@@ -265,4 +267,7 @@ const CATALOG_ANALYSIS_LINKS = {
   // "Colombia con vehiculo" se dividió en 2 personas (conductor-frecuente-colombia / conductor-ocasional-colombia)
   // según la frecuencia real de manejo dentro de esta misma audiencia -- el enlace apunta a la persona mayoritaria.
   "ee0e32c0-fb98-4984-adbb-8b3b713b7745": { categoryId: "automotriz", caseId: "colombia-con-vehiculo", personaId: "conductor-frecuente-colombia" },
+  "f01404ed-cc6b-41ac-98af-edcdf65bc9e3": { categoryId: "deportes", caseId: "aficionados-futbol-general-usa", personaId: "aficionado-futbol-general-usa" },
+  "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b": { categoryId: "fintech", caseId: "desbancarizados-colombia", personaId: "desbancarizado-colombia" },
+  "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3": { categoryId: "entretenimiento", caseId: "eventos-urbanos-hiphop-reggae-colombia", personaId: "audiencia-urbana-hiphop-reggae-colombia" },
 };

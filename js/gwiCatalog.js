@@ -244,6 +244,9 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "5190162e-beac-4432-9cba-eed11194afdd", title: "Paramo (co) EventosEnVivoGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
   { id: "5826d1eb-a730-4df3-84c3-0e75aedd35c5", title: "Paramo (co) LABUCL", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in watching sports or are sports fans, as well as being interested in the UEFA Champions League or watching it live on a TV channel or streaming service or following it and watching highlights or actively following news about it." },
   { id: "49dbc0ab-e5d3-47fc-88db-948265845b54", title: "Paramo(co)FintechColombia", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "73e30957-2da0-45b6-9dbf-1d463ec5a351", title: "Páramo LAB (co) TecnoMobile_Colombia_AmantesDeLaTecnología", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in technology." },
+  { id: "b3af3d46-ba91-4870-81a3-8bf59376b7cd", title: "Páramo LAB (co) TecnoMobile_Colombia_SmartphoneGamaMedia", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and own an ASUS, HTC, Lenovo, Motorola, Nokia, OnePlus, Oppo, or Xiaomi mobile." },
+  { id: "ee0e32c0-fb98-4984-adbb-8b3b713b7745", title: "Colombia con vehiculo", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have at least one car in their household." },
   // Añadidas por la automatización diaria de GWI el 2026-09-24 -- batch prioritario del
   // equipo: campañas Jäger (BR) VidaSocial (Rio de Janeiro) y Páramo (co) Baum27 (ver
   // data/gwi-audience-manifest.json).
@@ -268,6 +271,11 @@ const CATALOG_ANALYSIS_LINKS = {
   "5190162e-beac-4432-9cba-eed11194afdd": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co" },
   "5826d1eb-a730-4df3-84c3-0e75aedd35c5": { categoryId: "deportes", caseId: "seguidores-champions-league-colombia", personaId: "hincha-champions-colombia" },
   "49dbc0ab-e5d3-47fc-88db-948265845b54": { categoryId: "fintech", caseId: "fintech-general-colombia", personaId: "usuario-fintech-colombia" },
+  "73e30957-2da0-45b6-9dbf-1d463ec5a351": { categoryId: "consumer-tech", caseId: "tecnomobile-colombia", personaId: "amante-tecnologia-colombia" },
+  "b3af3d46-ba91-4870-81a3-8bf59376b7cd": { categoryId: "consumer-tech", caseId: "tecnomobile-colombia", personaId: "smartphone-gama-media-colombia" },
+  // "Colombia con vehiculo" se dividió en 2 personas (conductor-frecuente-colombia / conductor-ocasional-colombia)
+  // según la frecuencia real de manejo dentro de esta misma audiencia -- el enlace apunta a la persona mayoritaria.
+  "ee0e32c0-fb98-4984-adbb-8b3b713b7745": { categoryId: "automotriz", caseId: "colombia-con-vehiculo", personaId: "conductor-frecuente-colombia" },
   "1ca0d26c-01cb-4112-ba3b-4dbbbce52a80": { categoryId: "alcohol", caseId: "jager-vidasocial-noche-rio-de-janeiro", personaId: "urban-elite-rj" },
   "fed570fb-2d7f-46b4-b5f5-57f802dcc74b": { categoryId: "alcohol", caseId: "jager-vidasocial-noche-rio-de-janeiro", personaId: "scene-hunter-rj" },
   "ea7f1cf9-7691-406b-afbd-981832750071": { categoryId: "alcohol", caseId: "jager-vidasocial-noche-rio-de-janeiro", personaId: "camaleon-ambicioso-rj" },

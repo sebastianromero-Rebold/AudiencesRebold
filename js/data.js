@@ -2883,6 +2883,314 @@ const CASE_FINTECH_GWI_AUTO_20260924 = {
   ],
 };
 
+const CASE_TECNOMOBILE_GWI_AUTO_20260924 = {
+  id: "tecnomobile-colombia",
+  name: "TecnoMobile — Amantes de la tecnología y compradores de smartphone gama media (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "Campaña TecnoMobile: combina dos audiencias reales de GWI priorizadas por el equipo ('Páramo LAB (co) TecnoMobile_Colombia_AmantesDeLaTecnología', audience_id 73e30957-2da0-45b6-9dbf-1d463ec5a351, y 'Páramo LAB (co) TecnoMobile_Colombia_SmartphoneGamaMedia', audience_id b3af3d46-ba91-4870-81a3-8bf59376b7cd) en un solo caso con dos personas.",
+  funnelSteps: [
+    { label: "Unión de las dos audiencias reales de TecnoMobile (Amantes de la Tecnología + Compradores de Smartphone Gama Media, Colombia)", pct: 100 },
+  ],
+  footnotes: [
+    "Las dos audiencias reales de GWI suman un universo combinado de 33,959,291 personas (20,092,721 'Amantes de la Tecnología' + 13,866,570 'Smartphone Gama Media'), superior a la población digital total de Colombia usada por la app (31.06M) porque son dos audiencias construidas con criterios propios de GWI y no hay garantía de que sean mutuamente excluyentes entre sí (una misma persona podría calificar en ambas). Por eso el funnelStep queda fijo en 100% (no se modela como embudo secuencial) y el tamaño final del caso queda topado a la población digital total de Colombia — el reparto entre las dos personas (59.2% / 40.8%) sí refleja la proporción real de tamaño de universo entre las dos audiencias según GWI.",
+    "Demografía, geografía, marca preferida para la próxima compra de celular, actitudes hacia la tecnología y uso de redes sociales fueron verificados 1:1 vía chat_gwi/explore_insight_gwi sobre cada audience_id real.",
+    "GWI no devolvió un customer journey por franja horaria para estas audiencias — los bloques del journey reutilizan los canales/medios reales identificados arriba, pero la secuencia horaria y el texto de activación son un borrador editorial, no un dato de GWI.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, especialmente la cita de cada persona y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "amante-tecnologia-colombia",
+      name: "Sebastián Duarte",
+      archetype: "La Entusiasta Tecnológica",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano conectado con interés declarado en tecnología: se siente cómodo probando novedades, sigue de cerca las noticias del sector y consume redes sociales de forma casi universal. Es una audiencia amplia (equivalente a ~65% de la población digital de Colombia según GWI) — no es un nicho pequeño, sino el segmento general interesado en tecnología.",
+      aiInsight: aiInsight(
+        "Cruza con la paradoja del entusiasta pasivo: 38.8% se declara confiado con la tecnología y 34.0% sigue activamente noticias/tendencias del sector, pero solo 15.6% llegó a publicar una opinión sobre tecnología online en el último mes (38.6% no publicó ninguna opinión sobre nada) — el interés y la confianza no se traducen automáticamente en evangelización pública de marca; activar a ese núcleo que sí publica puede generar más alcance orgánico que dirigirse al total de la audiencia por igual.",
+        [
+          { label: "La confianza no es lo mismo que la prescripción pública", detail: "Solo 15.6% publicó opinión sobre tecnología en el último mes pese a que 38.8% se siente confiado usando tecnología — identificar y activar a ese núcleo que sí publica (reviews, unboxing, contenido para compartir) rinde más que un mensaje genérico a toda la audiencia." },
+          { label: "Sigue tendencias, pero la adopción inmediata es minoritaria", detail: "34.0% sigue de cerca las noticias tech, pero solo 13.4% compra apenas sale el producto — la comunicación debe sostenerse más allá del lanzamiento, porque la mayoría de este segmento decide con calma pese a estar informada." },
+          { label: "La preocupación por los datos convive con la falta de control percibido", detail: "39.3% dice preocuparle cómo las empresas usan sus datos, pero solo 25.9% siente que tiene control sobre ellos — comunicar transparencia y control explícito sobre datos personales puede ser un diferenciador real dentro de esta audiencia." },
+        ]
+      ),
+      sharePct: 59.2,
+      demographics: {
+        genderSplit: { male: 57.7, female: 42.3 },
+        ageBands: [
+          { label: "16-24", pct: 22.5 },
+          { label: "25-34", pct: 27.6 },
+          { label: "35-44", pct: 23.8 },
+          { label: "45-54", pct: 15.9 },
+          { label: "55-64", pct: 10.2 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Distrito Capital (Bogotá)", pct: 27.8 },
+          { city: "Antioquia", pct: 14.0 },
+          { city: "Valle del Cauca", pct: 10.0 },
+          { city: "Cundinamarca", pct: 8.2 },
+        ],
+      },
+      motivations: [
+        { label: "Se sienten confiados usando nueva tecnología", pct: 38.8 },
+        { label: "Siguen las últimas tendencias y noticias de tecnología", pct: 34.0 },
+        { label: "Publicaron su opinión sobre tecnología online en el último mes", pct: 15.6 },
+        { label: "Compran productos tecnológicos nuevos tan pronto están disponibles", pct: 13.4 },
+      ],
+      barriers: [
+        { label: "Les preocupa cómo las empresas usan sus datos personales online", pct: 39.3 },
+        { label: "Solo una minoría siente que tiene control sobre sus datos personales online", pct: 25.9 },
+        { label: "No publicó ninguna opinión online en el último mes (mayoría pasiva pese al interés en tecnología)", pct: 38.6 },
+      ],
+      digitalInterests: [
+        { label: "Publicar su opinión sobre tecnología online", index: 132 },
+        { label: "Seguir las últimas tendencias y noticias de tecnología", index: 125 },
+        { label: "Comprar productos tech tan pronto están disponibles", index: 122 },
+        { label: "Sentirse confiados usando nueva tecnología", index: 119 },
+      ],
+      media: [
+        { label: "Redes sociales (uso mensual)", pct: 99.0 },
+        { label: "Chat / mensajería (uso mensual)", pct: 98.4 },
+        { label: "Buscadores (Google, etc. — uso mensual)", pct: 91.2 },
+        { label: "Facebook más de una vez al día", pct: 40.4 },
+        { label: "TikTok más de una vez al día", pct: 38.1 },
+        { label: "Instagram más de una vez al día", pct: 35.4 },
+        { label: "X (Twitter) más de una vez al día", pct: 9.5 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y noticias tech", "Instagram, Facebook, Google", "Contenido de noticias y lanzamientos de tecnología.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Búsqueda y video", "Google, YouTube", "Comparativas y reviews de producto.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y mensajería", "WhatsApp, Instagram", "Contenido para compartir sobre novedades tech.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y video online", "TikTok, YouTube, Instagram", "Retargeting a quienes vieron reviews o comparativas.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes", "Facebook, Instagram", "Contenido de lanzamiento / unboxing.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y chat", "WhatsApp, Instagram, TikTok", "CTA directo a comparar precios o comprar.", []),
+      ],
+    },
+    {
+      id: "smartphone-gama-media-colombia",
+      name: "Jonathan Peña",
+      archetype: "El Comprador Práctico de Gama Media",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Dueño de un smartphone de marca no-premium (ASUS, HTC, Lenovo, Motorola, Nokia, OnePlus, Oppo o Xiaomi) en Colombia. Es sensible al precio, pero su siguiente compra no está cerrada: la mayoría todavía elegiría Samsung, Xiaomi o Motorola antes que dar el salto a un iPhone.",
+      aiInsight: aiInsight(
+        "Cruza con la lealtad de marca todavía abierta en gama media: aunque esta audiencia ya posee un celular de marca no-premium, su primera opción para la próxima compra es Samsung (49.5%), seguida de Xiaomi (39.4%) y Motorola (26.5%) — apenas 24.3% elegiría iPhone (22% menos probable que el dueño de smartphone promedio) — la disputa real de esta categoría no es retener contra Apple, es ganar la migración entre marcas Android.",
+        [
+          { label: "La pelea es entre marcas Android, no contra Apple", detail: "Solo 24.3% elegiría iPhone en su próxima compra (22% menos probable que el dueño de smartphone promedio) — el presupuesto de medios rinde más compitiendo por la preferencia entre Samsung, Xiaomi y Motorola que tratando de convertir a esta audiencia a iOS." },
+          { label: "Xiaomi y Motorola sobre-indexan fuerte en esta audiencia", detail: "Xiaomi (índice 150) y Motorola (índice ~150) son mucho más elegidas aquí que en el dueño de smartphone promedio — son las marcas con mayor 'permiso' real para conquistar a este segmento en su próxima renovación." },
+          { label: "Uno de cada tres ya piensa en su próxima compra en 6-12 meses", detail: "34.5% planea comprar o actualizar su celular en los próximos 6 a 12 meses — es la ventana de consideración más grande del ciclo de compra y el momento clave para activar comparativas y reviews antes de que decidan marca." },
+        ]
+      ),
+      sharePct: 40.8,
+      demographics: {
+        genderSplit: { male: 51.1, female: 48.9 },
+        ageBands: [
+          { label: "16-24", pct: 20.5 },
+          { label: "25-34", pct: 27.4 },
+          { label: "35-44", pct: 23.8 },
+          { label: "45-54", pct: 16.9 },
+          { label: "55-64", pct: 11.5 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Zona urbana (Colombia, sin desagregación por ciudad disponible en GWI)", pct: 85.3 },
+          { city: "Zona rural", pct: 8.5 },
+          { city: "Zona suburbana", pct: 6.2 },
+        ],
+      },
+      motivations: [
+        { label: "Su primera opción para la próxima compra de celular es Samsung", pct: 49.5 },
+        { label: "Su primera opción para la próxima compra de celular es Xiaomi", pct: 39.4 },
+        { label: "Su primera opción para la próxima compra de celular es Motorola", pct: 26.5 },
+        { label: "Planean comprar o actualizar su celular en los próximos 6-12 meses", pct: 34.5 },
+      ],
+      barriers: [
+        { label: "Son sensibles al precio al comprar un celular", pct: 31.9 },
+        { label: "Les preocupa cómo las empresas usan sus datos personales online", pct: 40.6 },
+        { label: "Les preocupa pasar demasiado tiempo en su celular", pct: 27.4 },
+        { label: "Solo elegiría iPhone en su próxima actualización — la gama alta/Apple no es su prioridad", pct: 24.3 },
+      ],
+      digitalInterests: [
+        { label: "Elegir Xiaomi en la próxima compra de celular", index: 150 },
+        { label: "Elegir Motorola en la próxima compra de celular", index: 150 },
+        { label: "Usar Facebook más de una vez al día", index: 108 },
+        { label: "Preferir el anonimato online", index: 106 },
+      ],
+      media: [
+        { label: "Vieron contenido de video (cualquier servicio) en el último mes", pct: 91.6 },
+        { label: "Netflix (uso mensual)", pct: 63.6 },
+        { label: "YouTube para ver/descargar contenido", pct: 58.8 },
+        { label: "Facebook más de una vez al día", pct: 41.6 },
+        { label: "TikTok más de una vez al día", pct: 37.5 },
+        { label: "Instagram más de una vez al día", pct: 33.0 },
+        { label: "Disney+ (uso mensual)", pct: 31.4 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y notificaciones", "Facebook, Instagram", "Ofertas y promociones de celulares gama media.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Redes y video", "TikTok, YouTube", "Comparativas de precio Samsung vs. Xiaomi vs. Motorola.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Streaming y video", "YouTube, Netflix", "Reviews en video de modelos gama media.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Facebook, Instagram, TikTok", "Retargeting con financiamiento / planes de pago.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming", "Netflix, Disney+, YouTube", "Contenido patrocinado dentro de streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y chat", "WhatsApp, Facebook, Instagram", "CTA directo a comprar / financiar el celular.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924 = {
+  id: "colombia-con-vehiculo",
+  name: "Colombia con vehículo — Conductores frecuentes vs. ocasionales",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-24)",
+  insightNote:
+    "Audiencia real de GWI ('Colombia con vehiculo', audience_id ee0e32c0-fb98-4984-adbb-8b3b713b7745): colombianos con al menos un carro en el hogar, segmentada en dos personas según la frecuencia real de manejo que reporta GWI dentro de esa misma audiencia.",
+  funnelSteps: [
+    { label: "Colombianos con al menos un carro en el hogar (audiencia real GWI)", pct: 37.3 },
+  ],
+  footnotes: [
+    "37.3% = universo real de la audiencia en GWI (11,584,904 personas) sobre la población digital total de Colombia (31.06M) — cifra derivada de universos reales devueltos por explore_insight_gwi.",
+    "El reparto entre las dos personas (45.0% / 55.0%) usa la frecuencia real de manejo que reporta GWI dentro de esta misma audiencia: 45.0% maneja el carro regularmente (índice 200.8, el doble de probable que el promedio) y el 55.0% restante agrupa a quienes son semi-regulares (22.4%), ocasionales (16.8%) o no manejan el carro del hogar (15.8%).",
+    "Demografía, tipo de vehículo, frecuencia de manejo, intención de compra y comportamiento digital tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI no permite desagregar demografía ni medios por sub-segmento de frecuencia de manejo dentro de esta audiencia — ambas personas comparten la misma base demográfica y de medios generales de la audiencia total; lo que las diferencia son las variables reales de relación con el vehículo (frecuencia de uso, intención de compra, interés en tipo de vehículo o en alternativas de movilidad).",
+    "Borrador generado automáticamente — pendiente de revisión editorial, especialmente la cita de cada persona y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "conductor-frecuente-colombia",
+      name: "Mauricio Salazar",
+      archetype: "El Conductor Frecuente",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Maneja el carro del hogar con regularidad — el doble de probable que el colombiano promedio, según GWI. Para él el carro es infraestructura diaria, no un símbolo: depende de apps de navegación casi a diario y ya está evaluando su próxima compra (incluido el salto a híbrido).",
+      aiInsight: aiInsight(
+        "Cruza con la dependencia real del vehículo: quien maneja regularmente en Colombia es el doble de probable que el promedio (índice 200.8) y usa apps de mapas/ubicación como Google Maps o Waze de forma casi universal (71.4%) — para este conductor el carro no es un símbolo, es infraestructura diaria, lo que abre una ventana de comunicación en momentos de fricción real (tráfico, parqueo, mantenimiento) más que en momentos puramente aspiracionales.",
+        [
+          { label: "Las apps de navegación son el canal de contacto diario más confiable", detail: "71.4% usó mapas o apps de ubicación en el último mes (10.5% más probable que el promedio) — integrar comunicación contextual en ese momento (llegada a destino, alertas de tráfico) tiene más alcance real que la pauta social genérica." },
+          { label: "El interés en híbridos ya superó al parque actual", detail: "Solo 5.7% de los hogares con carro tiene hoy un híbrido, pero 33.0% lo considera en su próxima compra — hay una brecha de intención-adopción real que un mensaje educativo sobre híbridos (no eléctricos puros, que solo interesan a 11.8%) puede capturar primero." },
+          { label: "El seguro automotor es una categoría de compra activa, no solo el vehículo nuevo", detail: "10.5% está pensando en comprar seguro de carro en los próximos 3-6 meses (44.6% más probable que el promedio) — para este conductor frecuente, la comunicación de valor no debería limitarse al vehículo nuevo, sino extenderse a todo el ecosistema de propiedad (seguro, mantenimiento)." },
+        ]
+      ),
+      sharePct: 45.0,
+      demographics: {
+        genderSplit: { male: 50.9, female: 49.1 },
+        ageBands: [
+          { label: "16-24", pct: 19.2 },
+          { label: "25-34", pct: 23.7 },
+          { label: "35-44", pct: 23.6 },
+          { label: "45-54", pct: 19.2 },
+          { label: "55-64", pct: 14.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Zona urbana (Colombia, sin desagregación por ciudad disponible en GWI)", pct: 89.3 },
+          { city: "Zona rural", pct: 5.8 },
+          { city: "Zona suburbana", pct: 4.8 },
+        ],
+      },
+      motivations: [
+        { label: "Maneja el carro del hogar con regularidad", pct: 45.0 },
+        { label: "Usó mapas o apps de ubicación como Google Maps o Waze en el último mes", pct: 71.4 },
+        { label: "Planea comprar carro en los próximos 3-6 meses", pct: 20.3 },
+        { label: "Está pensando en un vehículo híbrido para su próxima compra", pct: 33.0 },
+      ],
+      barriers: [
+        { label: "Solo 5.7% de los hogares con carro tiene hoy uno híbrido, pese al 33% de interés en su próxima compra", pct: 5.7 },
+        { label: "Solo 2.4% de los hogares con carro tiene uno eléctrico — la adopción 100% eléctrica sigue siendo marginal", pct: 2.4 },
+        { label: "Está pensando en comprar seguro de carro/automotor en los próximos 3-6 meses (gasto adicional a planear)", pct: 10.5 },
+      ],
+      digitalInterests: [
+        { label: "Uso de mapas/ubicación (Google Maps, Waze)", index: 111 },
+        { label: "Interés en comprar seguro automotor en 3-6 meses", index: 145 },
+        { label: "Interés en vehículo híbrido para próxima compra", index: 113 },
+      ],
+      media: [
+        { label: "Redes sociales (uso mensual)", pct: 99.0 },
+        { label: "Chat / mensajería (uso mensual)", pct: 98.2 },
+        { label: "Email (uso mensual)", pct: 94.2 },
+        { label: "Mapas / ubicación (Google Maps, Waze)", pct: 71.4 },
+        { label: "Instagram más de una vez al día", pct: 38.6 },
+        { label: "Facebook más de una vez al día", pct: 37.2 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Carro / transporte", "Apps de navegación", "Google Maps, Waze", "Alertas de tráfico con mensaje contextual de marca.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes y email", "Instagram, email", "Contenido sobre nuevos modelos e híbridos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y chat", "WhatsApp, Facebook", "Comparativo de costos de mantenimiento/combustible.", []),
+        daypart("La tarde", "3 a 6 pm", "Carro / transporte", "Apps de navegación", "Google Maps, Waze", "Recordatorio de mantenimiento o vencimiento de seguro.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes", "Instagram, Facebook", "Contenido educativo sobre híbridos vs. eléctricos.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y chat", "WhatsApp, Instagram", "CTA a cotizar seguro o agendar prueba de manejo.", []),
+      ],
+    },
+    {
+      id: "conductor-ocasional-colombia",
+      name: "Laura Fernanda Beltrán",
+      archetype: "La Conductora Ocasional",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en un hogar con carro, pero no depende de él a diario: es semi-regular, ocasional o de plano no maneja. En ese mismo hogar hay interés real en motocicleta, bicicleta o scooter eléctrico como alternativas de movilidad — el carro compite con otros modos de transporte, no solo con otras marcas de carro.",
+      aiInsight: aiInsight(
+        "Cruza con la movilidad híbrida (de medios de transporte, no de motor): más de la mitad de los hogares colombianos con carro (55%) no depende de él a diario —son semi-regulares, ocasionales o de plano no manejan— y en ese mismo universo hay interés real en motocicleta (15.2%), bicicleta (13.2%) e incluso scooter eléctrico (6.8%) como alternativas de movilidad — el carro compite dentro de su propio hogar con otros modos de transporte, no solo con otras marcas de carro.",
+        [
+          { label: "El carro no es su modo de transporte por defecto", detail: "55% de los hogares con carro no maneja con regularidad — para esta persona el vehículo puede ser compartido, de otro miembro del hogar, o de uso ocasional, así que el mensaje de 'tu carro ideal' pesa menos que el de 'la opción de movilidad que se ajusta a tu semana'." },
+          { label: "Compite activamente con otros modos de transporte dentro del mismo hogar", detail: "13.2%-15.2% de este mismo universo está pensando en comprar motocicleta o bicicleta en los próximos meses — la categoría automotriz no debería ignorar que su comprador potencial también evalúa alternativas más económicas de movilidad." },
+          { label: "Es una audiencia hiperconectada en redes pese a manejar poco", detail: "38.9% usa 5+ servicios de redes sociales (20.6% más probable que el promedio) — el canal de activación más eficiente para esta persona no es la experiencia en el punto de venta, sino la conversación social donde ya pasa la mayor parte de su tiempo." },
+        ]
+      ),
+      sharePct: 55.0,
+      demographics: {
+        genderSplit: { male: 50.9, female: 49.1 },
+        ageBands: [
+          { label: "16-24", pct: 19.2 },
+          { label: "25-34", pct: 23.7 },
+          { label: "35-44", pct: 23.6 },
+          { label: "45-54", pct: 19.2 },
+          { label: "55-64", pct: 14.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Zona urbana (Colombia, sin desagregación por ciudad disponible en GWI)", pct: 89.3 },
+          { city: "Zona rural", pct: 5.8 },
+          { city: "Zona suburbana", pct: 4.8 },
+        ],
+      },
+      motivations: [
+        { label: "Es conductora semi-regular del carro del hogar", pct: 22.4 },
+        { label: "Maneja el carro del hogar solo ocasionalmente", pct: 16.8 },
+        { label: "No maneja el carro del hogar", pct: 15.8 },
+        { label: "Usa 5 o más servicios de redes sociales", pct: 38.9 },
+      ],
+      barriers: [
+        { label: "Está pensando en comprar motocicleta en los próximos 3-6 meses (alternativa de movilidad dentro del hogar)", pct: 15.2 },
+        { label: "Está pensando en comprar bicicleta en los próximos 3-6 meses", pct: 13.2 },
+        { label: "Está pensando en comprar un scooter eléctrico en los próximos 3-6 meses", pct: 6.8 },
+      ],
+      digitalInterests: [
+        { label: "Uso de 5+ servicios de redes sociales", index: 121 },
+        { label: "Uso de X (Twitter) más de una vez al día", index: 136 },
+      ],
+      media: [
+        { label: "Redes sociales (uso mensual)", pct: 99.0 },
+        { label: "Chat / mensajería (uso mensual)", pct: 98.2 },
+        { label: "Videos móviles vistos en la última semana", pct: 70.4 },
+        { label: "Instagram más de una vez al día", pct: 38.6 },
+        { label: "TikTok más de una vez al día", pct: 35.2 },
+        { label: "5+ servicios de redes sociales usados", pct: 38.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte público o compartido", "Redes sociales", "Instagram, TikTok", "Contenido de movilidad urbana (carro, moto, bici).", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / universidad", "Redes y video", "TikTok, Instagram", "Comparativo de costos: carro vs. moto vs. bici.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Redes y chat", "WhatsApp, Instagram", "Contenido sobre flexibilidad de uso compartido del carro.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / trabajo", "Video móvil", "TikTok, YouTube", "Reviews de motos/bicicletas y de carros compactos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes sociales", "Instagram, X", "Contenido aspiracional de movilidad flexible.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y chat", "WhatsApp, Instagram, TikTok", "CTA a cotizar financiamiento de carro, moto o bici.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -2963,7 +3271,7 @@ const CATEGORIES = [
       { id: "investigaOnlineAntes", label: "Investiga activamente online antes de comprar" },
       { id: "prioridadFamiliar", label: "Prioriza espacio y seguridad familiar" },
     ],
-    cases: [CASE_AUTOMOTRIZ],
+    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924],
   },
   {
     id: "consumer-tech",
@@ -2976,7 +3284,7 @@ const CATEGORIES = [
       { id: "pagaPremiumMarca", label: "Dispuesto a pagar premium por marca" },
       { id: "compraPorNecesidad", label: "Compra por necesidad/durabilidad, no por hype" },
     ],
-    cases: [CASE_CONSUMER_TECH],
+    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924],
   },
   {
     id: "gaming",

@@ -262,6 +262,9 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "26b41bb0-ca38-4b9b-8447-d5398bd6b692", title: "Páramo (co) Baum27_PotencialRavers", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who are adventurous, creative, fashion-conscious, open-minded, or social/outgoing, who like listening to EDM/Dance music such as House and Techno, but who are not currently interested in live events like music festivals." },
   { id: "06846574-6359-4f49-9d3e-b23fe8faae71", title: "Páramo (co) Baum27_Amplificadores de la escena", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who are interested in live events like music festivals and in music, skewing Gen Z/Millennial." },
   { id: "171f136e-ae27-4152-9595-765835fcd961", title: "Páramo (co) Baum27_Curadores", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who like listening to EDM/Dance music such as House and Techno, are creative, open-minded, like to be the first to try new things, and follow technology trends closely." },
+  // Agregadas 2026-09-26 por la rutina diaria de GWI (ver README > 'Automatización diaria de GWI').
+  { id: "3f6c99d9-2bf8-403f-aa8c-acac644e09c9", title: "Ejemplo>Soccer", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, live in either the Capital District or Cundinamarca, are between 16 and 44 years old, are interested in playing sport, and play soccer." },
+  { id: "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b", title: "PuntoDePago>Desbancarizados", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have not used any online payment service in the last month." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -294,4 +297,8 @@ const CATALOG_ANALYSIS_LINKS = {
   "26b41bb0-ca38-4b9b-8447-d5398bd6b692": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "raver-en-potencia-co" },
   "06846574-6359-4f49-9d3e-b23fe8faae71": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "amplificadora-escena-co" },
   "171f136e-ae27-4152-9595-765835fcd961": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "curador-escena-co" },
+  // Agregadas 2026-09-26 por la rutina diaria de GWI.
+  "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3": { categoryId: "entretenimiento", caseId: "escena-urbana-eventos-vivo-colombia", personaId: "urbano-cultural-colombia" },
+  "3f6c99d9-2bf8-403f-aa8c-acac644e09c9": { categoryId: "deportes", caseId: "jugadores-futbol-amateur-bogota", personaId: "jugador-amateur-futbol-bogota" },
+  "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b": { categoryId: "fintech", caseId: "colombia-no-bancarizados-pago-digital", personaId: "colombiana-no-bancarizada" },
 };

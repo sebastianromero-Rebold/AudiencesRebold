@@ -17,6 +17,9 @@
     { "audience_id": "ea7f1cf9-7691-406b-afbd-981832750071", "title": "Jäger (BR) VidaSocial_CamalonesRJ", "processedAt": "2026-09-24", "categoryId": "alcohol", "caseId": "jager-vidasocial-noche-rio-de-janeiro", "personaId": "camaleon-ambicioso-rj" },
     { "audience_id": "26b41bb0-ca38-4b9b-8447-d5398bd6b692", "title": "Páramo (co) Baum27_PotencialRavers", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "baum27-escena-electronica-colombia", "personaId": "raver-en-potencia-co" },
     { "audience_id": "06846574-6359-4f49-9d3e-b23fe8faae71", "title": "Páramo (co) Baum27_Amplificadores de la escena", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "baum27-escena-electronica-colombia", "personaId": "amplificadora-escena-co" },
-    { "audience_id": "171f136e-ae27-4152-9595-765835fcd961", "title": "Páramo (co) Baum27_Curadores", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "baum27-escena-electronica-colombia", "personaId": "curador-escena-co" }
+    { "audience_id": "171f136e-ae27-4152-9595-765835fcd961", "title": "Páramo (co) Baum27_Curadores", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "baum27-escena-electronica-colombia", "personaId": "curador-escena-co" },
+    { "audience_id": "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3", "title": "Paramo>AudienciaEventosUrban", "processedAt": "2026-09-26", "categoryId": "entretenimiento", "caseId": "escena-urbana-eventos-vivo-colombia", "personaId": "urbano-cultural-colombia" },
+    { "audience_id": "3f6c99d9-2bf8-403f-aa8c-acac644e09c9", "title": "Ejemplo>Soccer", "processedAt": "2026-09-26", "categoryId": "deportes", "caseId": "jugadores-futbol-amateur-bogota", "personaId": "jugador-amateur-futbol-bogota" },
+    { "audience_id": "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b", "title": "PuntoDePago>Desbancarizados", "processedAt": "2026-09-26", "categoryId": "fintech", "caseId": "colombia-no-bancarizados-pago-digital", "personaId": "colombiana-no-bancarizada" }
   ]
 }

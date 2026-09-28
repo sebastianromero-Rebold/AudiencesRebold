@@ -92,7 +92,7 @@ function addPageBg(b, pageId, hex) {
 
 function addTextBox(b, pageId, { x, y, w, h, text, size = 10, color = GX.white, bold = false, italic = false, align = "START", font = "Montserrat" }) {
   if (!text) return null;
-  const id = b.nextId("tb");
+  const id = b.nextId("tbox_");
   b.requests.push({ createShape: { objectId: id, shapeType: "TEXT_BOX", elementProperties: { pageObjectId: pageId, size: szProp(w, h), transform: trProp(x, y) } } });
   b.requests.push({ insertText: { objectId: id, text: String(text) } });
   b.requests.push({
@@ -112,7 +112,7 @@ function addTextBox(b, pageId, { x, y, w, h, text, size = 10, color = GX.white, 
 // Caja de texto con pares "Clave: valor" en líneas separadas, clave en
 // blanco/negrita y valor en gris (reemplaza los runs de texto de pptxgenjs).
 function addKeyValueBox(b, pageId, { x, y, w, h, pairs, size = 6.8 }) {
-  const id = b.nextId("tb");
+  const id = b.nextId("tbox_");
   b.requests.push({ createShape: { objectId: id, shapeType: "TEXT_BOX", elementProperties: { pageObjectId: pageId, size: szProp(w, h), transform: trProp(x, y) } } });
   let text = "";
   const runs = [];
@@ -141,7 +141,7 @@ function addKeyValueBox(b, pageId, { x, y, w, h, pairs, size = 6.8 }) {
 }
 
 function addShapeBox(b, pageId, { x, y, w, h, shapeType, fill, outline }) {
-  const id = b.nextId("sh");
+  const id = b.nextId("shape_");
   b.requests.push({ createShape: { objectId: id, shapeType, elementProperties: { pageObjectId: pageId, size: szProp(w, h), transform: trProp(x, y) } } });
   const shapeProperties = {};
   const fields = [];

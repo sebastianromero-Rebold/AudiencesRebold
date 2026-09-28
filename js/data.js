@@ -3423,6 +3423,282 @@ const CASE_COCA100_GWI_AUTO_20260924 = {
   ],
 };
 
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fútbol amateur en Bogotá/Cundinamarca, procesado
+// 2026-09-28. Audiencia real de GWI ("Ejemplo>Soccer") de personas que
+// practican deporte y juegan fútbol en la región de Bogotá.
+// ---------------------------------------------------------------------------
+const CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928 = {
+  id: "futbol-amateur-bogota-cundinamarca",
+  name: "Jugadores de fútbol amateur (Bogotá y Cundinamarca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-28)",
+  insightNote:
+    "Audiencia real de GWI ('Ejemplo>Soccer', audience_id 3f6c99d9-2bf8-403f-aa8c-acac644e09c9): personas de 16 a 44 años que viven en Bogotá D.C. o Cundinamarca, están interesadas en practicar deporte y juegan fútbol.",
+  funnelSteps: [
+    {
+      label:
+        "Viven en Bogotá D.C. o Cundinamarca, interesados en practicar deporte y juegan fútbol, 16-44 años (universo real GWI: ~1.73M sobre 31.06M de Colombia)",
+      pct: 5.6,
+    },
+  ],
+  footnotes: [
+    "5.6% = universo real de GWI para esta audiencia (1,731,797, suma de los universos de la pregunta de género vía explore_insight_gwi) sobre la población digital de Colombia (31.06M, ya usada en MARKETS).",
+    "Demografía (género, edad, ciudades) tomada 1:1 de la audiencia real de GWI 'Ejemplo>Soccer', verificada vía chat_gwi + explore_insight_gwi.",
+    "Motivaciones, barreras, intereses digitales y medios: GWI no devolvió crosstabs exclusivos de esta audiencia para estas variables — se usan cifras reales de GWI Core Colombia de la categoría 'Sports Fans' (fanáticos del deporte en general) como mejor proxy disponible, verificadas vía explore_insight_gwi; deben leerse como contexto de categoría, no como diferenciador exclusivo de esta audiencia.",
+    "Bloques del customer journey sin dato específico de GWI para ese horario quedan señalados como tal, en vez de inventar una cifra.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "futbolista-amateur-bogota-co",
+      name: "Andrés Felipe Cárdenas",
+      archetype: "El Futbolista Amateur",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá D.C. o Cundinamarca, juega fútbol y está interesado en practicar deporte en general. Es mayoritariamente hombre (82.2%) y se reparte de forma bastante pareja entre los 16 y los 44 años. Su consumo digital gira en torno al contenido deportivo pero también al gaming y esports, más que al deporte que practica cada semana.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha entre practicar deporte y consumirlo digitalmente: 54% de los fanáticos del deporte en Colombia también se interesa en gaming y 25% en esports — el fútbol amateur de Bogotá/Cundinamarca no vive solo en la cancha, también vive en la pantalla, y ahí hay una oportunidad de medios que va más allá del contenido deportivo tradicional.",
+        [
+          { label: "Publicar es una señal de engagement más fuerte que ver", detail: "Solo 22.8% publicó sobre deportes en redes en el último mes, pero son casi el doble de propensos que el promedio a hacerlo (índice 196.6) — ese grupo que sí publica vale más como embajador de marca que uno que solo consume." },
+          { label: "El celular es la cancha digital real", detail: "64.3% vio video móvil en la última semana y 28% vio highlights deportivos en el celular (índice 199.4, casi el doble que el promedio) — cualquier activación debe diseñarse mobile-first, no como adaptación de un spot de TV." },
+          { label: "Bogotá D.C. concentra la mayoría de la audiencia", detail: "77.1% vive en Bogotá D.C. y el resto en Cundinamarca — la logística de activaciones presenciales (torneos, canchas patrocinadas) debería priorizar la capital antes de expandirse a municipios cercanos." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 82.2, female: 17.8 },
+        ageBands: [
+          { label: "16-24", pct: 30.3 },
+          { label: "25-34", pct: 39.5 },
+          { label: "35-44", pct: 30.2 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 77.1 },
+          { city: "Cundinamarca", pct: 22.9 },
+        ],
+      },
+      motivations: [
+        { label: "Interés en el Mundial de Fútbol (FIFA World Cup Men's) — proxy categoría 'Sports Fans', GWI Core Colombia", pct: 74 },
+        { label: "Interés en la UEFA Champions League — proxy categoría 'Sports Fans'", pct: 70.3 },
+        { label: "Interés en la Copa América — proxy categoría 'Sports Fans'", pct: 65.6 },
+        { label: "Interés en la Copa Libertadores — proxy categoría 'Sports Fans'", pct: 64.5 },
+      ],
+      barriers: [
+        { label: "81% de los colombianos conectados prefiere ahorrar y esperar antes de comprar un producto (proxy GWI Core Colombia, no exclusivo de esta audiencia)", pct: 81 },
+        { label: "Solo 19% prioriza comprar un producto antes que gastar en otra cosa — boletos y merchandising compiten con otras prioridades de gasto (proxy GWI Core Colombia)", pct: 19 },
+      ],
+      digitalInterests: [
+        { label: "Interés en gaming (proxy categoría 'Sports Fans')", index: 130.6 },
+        { label: "Interés en esports (proxy categoría 'Sports Fans')", index: 179.3 },
+        { label: "Publicó sobre deportes en redes en el último mes (proxy categoría 'Sports Fans')", index: 196.6 },
+      ],
+      media: [
+        { label: "Usa redes sociales para ver/seguir deportes (proxy categoría 'Sports Fans')", pct: 49 },
+        { label: "Vio video móvil en la última semana (proxy categoría 'Sports Fans')", pct: 64.3 },
+        { label: "Vio highlights/clips deportivos en el celular (proxy categoría 'Sports Fans')", pct: 28 },
+        { label: "Usa TV para acceder a internet (proxy categoría 'Sports Fans')", pct: 46.7 },
+        { label: "Usuario heavy de radio (proxy categoría 'Sports Fans')", pct: 28.7 },
+        { label: "Usa redes para ver qué es tendencia (proxy categoría 'Sports Fans')", pct: 22.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y notificaciones", "Instagram, TikTok, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / universidad", "TV y radio", "TV abierta, radio", "47% usa TV para acceder a internet y 28.7% es usuario heavy de radio — consumo de medios tradicionales todavía relevante durante el día.", [
+          { label: "Usuario heavy de radio", pct: 28.7, index: 124.2 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y video", "YouTube, Instagram", "46% ve video, TV o películas por internet durante el día.", [
+          { label: "Publicó sobre deportes en redes", pct: 22.8, index: 196.6 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video corto y esports", "YouTube, apps de gaming", "25% se interesa en esports y 54% en gaming en general.", [
+          { label: "Vio highlights/clips deportivos en el celular", pct: 28, index: 199.4 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV abierta", "TV set", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bares", "Redes y streaming", "Redes sociales, TV/streaming", "49% usa redes sociales para ver o seguir deportes — el bloque de mayor consumo social relacionado con la categoría.", [
+          { label: "Usa redes sociales para ver/seguir deportes", pct: 49, index: 192.8 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Inclusión financiera en Colombia, procesado 2026-09-28.
+// 2 audiencias reales de GWI que representan los dos extremos del acceso a
+// pagos digitales: PuntoDePago>Desbancarizados (sin pagos en línea en el
+// último mes) y Falabella (co) TCGeneral_26 (tienen tarjeta de crédito).
+// ---------------------------------------------------------------------------
+const CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928 = {
+  id: "inclusion-financiera-colombia",
+  name: "Inclusión financiera en Colombia: bancarizados vs. desbancarizados",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-28)",
+  insightNote:
+    "2 audiencias reales de GWI en los extremos opuestos de la inclusión financiera digital: 'PuntoDePago>Desbancarizados' (audience_id d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b, colombianos que no han usado ningún servicio de pago en línea en el último mes) y 'Falabella (co) TCGeneral_26' (audience_id fbf83ccd-0068-47c4-838b-3a104e79a5f0, colombianos de 18+ años con tarjeta de crédito).",
+  funnelSteps: [
+    {
+      label:
+        "Universo combinado de las 2 audiencias reales de GWI (con tarjeta de crédito + sin pagos en línea) sobre población digital de Colombia (universos reales de GWI: ~14.95M + ~2.46M ≈ 17.41M sobre 31.06M)",
+      pct: 56,
+    },
+  ],
+  footnotes: [
+    "56% = suma de los universos reales de las 2 audiencias (verificados vía explore_insight_gwi sobre la pregunta de género de cada una) sobre la población digital de Colombia (31.06M, ya usada en MARKETS). Son 2 audiencias definidas de forma independiente en GWI (no un embudo secuencial), así que puede existir algo de solapamiento real entre ambas que este cálculo no descuenta.",
+    "sharePct de cada persona = participación real de cada audiencia dentro del universo combinado (14.1% desbancarizados / 85.9% bancarizados con tarjeta), calculada directamente de los universos verificados.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios de cada persona son datos reales de GWI Core Colombia, verificados 1:1 vía chat_gwi + explore_insight_gwi.",
+    "Ninguna de las 2 audiencias tuvo desagregación geográfica disponible en GWI — se deja señalado como tal en vez de inventar una distribución por ciudad.",
+    "Bandas de edad 55-64 y 65+ de 'Bancarizado con tarjeta' quedan en 0: GWI no devolvió esas bandas con muestra suficiente para esta audiencia — se deja en 0 en vez de inventar un valor.",
+    "Las citas de ambas personas son placeholders pendientes de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "desbancarizado-digital-colombia",
+      name: "Yolanda Martínez",
+      archetype: "La Desbancarizada Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "No ha usado ningún servicio de pago en línea en el último mes. Es ligeramente más mujer que hombre (55.5%/44.5%) y sesgada hacia perfiles jóvenes (28.9% entre 16-24 y 28% entre 25-34). Sigue prefiriendo el efectivo (68%), pero ya usa smartphone para conectarse a internet (77%) — el canal de adopción digital ya está en su bolsillo, aunque el pago digital todavía no.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha entre aspiración y adopción de pagos digitales en Colombia: 32% de quienes no han usado ningún pago en línea en el último mes ya preferiría pagar sin efectivo — no es rechazo a lo digital, es una barrera de acceso o confianza sin resolver, y el 77% que ya tiene smartphone es el canal de conversión más barato de activar.",
+        [
+          { label: "El smartphone ya está, falta el puente", detail: "77% accede a internet por smartphone pese a no haber usado pagos digitales — la barrera no es el dispositivo, es la oferta, el onboarding o la confianza." },
+          { label: "No todos prefieren efectivo por convicción", detail: "68% prefiere pagar en efectivo hoy, pero 32% ya preferiría lo contrario — ese 32% es el segmento de conversión más accesible para una fintech o billetera digital." },
+          { label: "Los medios tradicionales siguen siendo relevantes aquí", detail: "Son 47% más propensos que el promedio a ser usuarios ocasionales de radio y usan feature phones (teléfonos básicos) con un índice de 137.8 — una estrategia 'solo digital' pierde a buena parte de este segmento." },
+        ]
+      ),
+      sharePct: 14,
+      demographics: {
+        genderSplit: { male: 44.5, female: 55.5 },
+        ageBands: [
+          { label: "16-24", pct: 28.9 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 20.3 },
+          { label: "45-54", pct: 12.6 },
+          { label: "55-64", pct: 10 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 },
+        ],
+      },
+      motivations: [
+        { label: "Prefiere pagar sin efectivo, pese a no haber usado ningún pago en línea en el último mes", pct: 32 },
+        { label: "Usa smartphone para acceder a internet", pct: 77 },
+        { label: "Usa internet para gestionar sus finanzas o ahorros", pct: 20 },
+      ],
+      barriers: [
+        { label: "Solo 23% valora un checkout rápido y sencillo al comprar en línea (40% menos probable que el promedio)", pct: 23 },
+        { label: "68% prefiere pagar en efectivo frente a 32% que prefiere pagar sin efectivo", pct: 68 },
+        { label: "Solo 14% tiene cuenta en Banco Davivienda — baja penetración de banca formal en este segmento", pct: 14 },
+      ],
+      digitalInterests: [
+        { label: "Usa feature phone (teléfono básico) para acceder a internet", index: 137.8 },
+        { label: "Interés en música", index: 87.5 },
+        { label: "Interés en tecnología", index: 77.3 },
+      ],
+      media: [
+        { label: "Usó redes sociales en el último mes", pct: 92.1 },
+        { label: "Usa TV set para ver TV en vivo", pct: 76.7 },
+        { label: "Usuario ocasional de streaming (Netflix, Hulu)", pct: 33.9 },
+        { label: "Usuario ocasional de prensa física (periódicos/revistas impresas)", pct: 32.9 },
+        { label: "Usuario ocasional de radio", pct: 28 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Redes sociales", "Instagram, Facebook, WhatsApp", "Sin dato específico de GWI para este bloque horario — 92% usó redes sociales en el último mes.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Casa / trabajo informal", "TV y radio", "TV abierta, radio", "77% ve TV en vivo por TV set — alto consumo de medios tradicionales durante el día.", [
+          { label: "Usuario ocasional de radio", pct: 28, index: 146.6 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Casa / trabajo", "Redes y video", "YouTube, redes sociales", "46% usa internet para ver videos, TV o películas.", [
+          { label: "Interés en música", pct: 59.9, index: 87.5 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Casa", "Redes para buscar marcas", "Redes sociales", "45% usa redes sociales cuando busca activamente información de marcas o productos.", [
+          { label: "Usa redes sociales para buscar info de marcas", pct: 45.3, index: 75.8 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV abierta", "TV set", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y streaming ocasional", "TV set, apps de streaming", "34% es usuario ocasional de streaming pese al bajo uso de pagos digitales — probablemente vía cuentas compartidas o prepago.", [
+          { label: "Usuario ocasional de streaming (Netflix, Hulu)", pct: 33.9, index: 185.6 },
+        ]),
+      ],
+    },
+    {
+      id: "bancarizado-tarjetahabiente-colombia",
+      name: "Jorge Iván Salazar",
+      archetype: "El Bancarizado Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano de 18+ años con tarjeta de crédito. Ligeramente más hombre que mujer (53.3%/46.7%), distribuido en edades adultas (25-44 concentra más de la mitad). Valora la seguridad financiera (72%) y ya prefiere pagar sin efectivo (55%), pero su higiene de seguridad digital no está a la altura de ese valor declarado: solo 4.7% usa medidas anti-fraude con regularidad.",
+      aiInsight: aiInsight(
+        "Cruza con la paradoja de seguridad financiera sin higiene digital: 72% valora ser financieramente seguro, pero solo 4.7% usa medidas anti-fraude con regularidad pese a tener tarjeta de crédito — la seguridad se declara como valor, no se practica como hábito digital, una oportunidad real para mensajes de marca centrados en protección y no solo en beneficios o cashback.",
+        [
+          { label: "Seguridad declarada, protección no practicada", detail: "72% dice que ser financieramente seguro es importante, pero apenas 4.7% usa medidas anti-fraude con regularidad — la brecha entre el valor declarado y el hábito real de protección es enorme." },
+          { label: "Ya piensan en invertir, no solo en gastar", detail: "39% se interesa en inversiones (18% más propenso que el promedio) — la comunicación puede ir más allá del descuento hacia educación financiera o productos de inversión." },
+          { label: "La TV sigue siendo el medio dominante pese a ser digital-first en pagos", detail: "87% ve TV en vivo por TV set y 82% ve streaming también por TV set — una estrategia 'solo digital' pierde a la mayoría de este segmento en el bloque de mayor consumo (noche)." },
+        ]
+      ),
+      sharePct: 86,
+      demographics: {
+        genderSplit: { male: 53.3, female: 46.7 },
+        ageBands: [
+          { label: "16-24", pct: 17.5 },
+          { label: "25-34", pct: 27.8 },
+          { label: "35-44", pct: 24.4 },
+          { label: "45-54", pct: 17.8 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 },
+        ],
+      },
+      motivations: [
+        { label: "Prefiere pagar sin efectivo al comprar en línea", pct: 55 },
+        { label: "Considera importante ser financieramente seguro", pct: 72 },
+        { label: "Prioriza un checkout rápido y sencillo al comprar en línea", pct: 42 },
+        { label: "Prefiere comprar cuando hay cupones y descuentos disponibles", pct: 41 },
+      ],
+      barriers: [
+        { label: "46% reporta un nivel bajo de ahorros", pct: 46 },
+        { label: "Solo 4.7% usa medidas anti-fraude online con regularidad, pese a tener tarjeta de crédito", pct: 4.7 },
+      ],
+      digitalInterests: [
+        { label: "Interés en tecnología", index: 104.7 },
+        { label: "Interés en inversiones", index: 118 },
+        { label: "Interés en economía/finanzas", index: 113.9 },
+      ],
+      media: [
+        { label: "Usa TV set para ver TV en vivo", pct: 87.4 },
+        { label: "Usa TV set para ver streaming/on-demand", pct: 82.1 },
+        { label: "Usa TV para acceder a internet", pct: 50 },
+        { label: "Usuario heavy de radio", pct: 26.1 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Noticias y finanzas", "Apps bancarias, noticias", "Sin dato específico de GWI para este bloque horario — 51% se interesa en economía/finanzas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes y video", "LinkedIn, YouTube", "69% se interesa en tecnología.", [
+          { label: "Interés en tecnología", pct: 68.6, index: 104.7 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Compras en línea", "E-commerce", "41% prefiere comprar cuando hay cupones y descuentos disponibles.", [
+          { label: "Prefiere comprar con cupones/descuentos", pct: 40.6, index: 104 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Inversión y ahorro", "Apps de inversión", "39% se interesa en inversiones.", [
+          { label: "Interés en inversiones", pct: 39.2, index: 118 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV en vivo", "TV set", "87% ve TV en vivo por TV set — el canal más usado en este bloque.", [
+          { label: "Ve TV en vivo por TV set", pct: 87.4, index: 103.8 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming", "TV set, apps de streaming", "82% ve streaming/on-demand por TV set.", [
+          { label: "Ve streaming on-demand por TV set", pct: 82.1, index: 109.8 },
+        ]),
+      ],
+    },
+  ],
+};
+
 
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
@@ -3452,7 +3728,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928],
   },
   {
     id: "retail",
@@ -3478,7 +3754,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928],
   },
   {
     id: "alcohol",

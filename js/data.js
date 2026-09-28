@@ -4196,6 +4196,184 @@ const CASE_EVENTOS_URBANOS_GWI_AUTO_20260925 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — procesados 2026-09-27 por la rutina diaria de GWI.
+// Cada uno viene de UNA audiencia real de GWI (audience_id documentado abajo)
+// consultada vía chat_gwi/explore_insight_gwi el 2026-09-27. Misma convención
+// que los casos anteriores: una sola persona (sharePct 100) por audiencia
+// real, `quote` como placeholder, y sin cifras inventadas para bloques del
+// customer journey sin señal específica de GWI.
+// ---------------------------------------------------------------------------
+
+const CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927 = {
+  id: "carlos-vives-fans-bogota-colombia",
+  name: "Fans de Carlos Vives en Bogotá (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-27)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) CarlosVives_Bogotanos', audience_id f3d79096-700e-4a23-8950-2d70da628c41): bogotanos sin hijos de 6 a 18 años, apasionados por un rango amplio de artistas de música latina/rock, interesados en eventos en vivo y que compraron o planean comprar boletos de concierto.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'CarlosVives_Bogotanos' en GWI (615,796) sobre la población digital de Colombia (31.06M)", pct: 2 },
+  ],
+  footnotes: [
+    "2% ≈ universo real de la audiencia en GWI (615,796, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M, ya usada en MARKETS).",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI solo devolvió con muestra suficiente 3 bandas de edad (25-34: 23.2%, 45-54: 27.5%, 55-64: 25.5%, que suman 76.2%); las bandas 16-24, 35-44 y 65+ no tuvieron muestra suficiente para desagregarse y se dejan en 0 en vez de inventar un valor.",
+    "Top ciudades: la audiencia está definida por GWI como residente del Distrito Capital (Bogotá), así que la ciudad es 100% Bogotá D.C. por definición de la propia audiencia, no un dato adicional descubierto.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-carlos-vives-bogota",
+      name: "Manuela Cárdenas",
+      archetype: "La Melómana Bogotana",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá, no tiene hijos entre 6 y 18 años, y su identidad gira alrededor de la música: escucha un rango amplio de artistas con pasión, sigue músicos en redes y es de las primeras en enterarse de un nuevo concierto. El interés en ir a eventos en vivo es casi unánime en su perfil (89%), pero la compra real de boletos todavía se queda muy por debajo de ese interés.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha estructural entre pasión declarada y compra real que también aparece en otras audiencias de eventos en vivo en Colombia: 89% se declara interesada en eventos como festivales de música, pero solo 26% compró boletos de concierto en los últimos 3-6 meses — la oportunidad de medios está en cerrar ese tramo final del funnel, no en generar más interés, que ya es casi universal.",
+        [
+          { label: "El cuello de botella es la conversión, no el descubrimiento", detail: "Con 89% de interés declarado y solo 26% de compra reciente, más de dos tercios del interés se pierde antes del checkout — un checkout rápido y sencillo (58% lo prioriza al comprar online) puede convertir más que más awareness." },
+          { label: "Sigue artistas, no solo eventos", detail: "48% sigue bandas o músicos en redes sociales y 75% se declara passionate por un rango amplio de artistas — el contenido de anuncio de un concierto rinde más si viene directamente de las cuentas del artista, no solo de la promotora." },
+          { label: "Es una consumidora heavy de streaming, no solo de redes", detail: "Índice 138 en heavy user de streaming de música e índice 137 en streaming de video tipo Netflix — vale la pena activar pauta también dentro de esos entornos (audio ads, video pre-roll), no únicamente en redes sociales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 40.1, female: 59.9 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 23.2 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 27.5 },
+          { label: "55-64", pct: 25.5 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá D.C. (criterio de definición de la audiencia)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 89.1 },
+        { label: "Prefiere escuchar un rango amplio de canciones de los artistas que le apasionan", pct: 84.9 },
+        { label: "Passionate por un rango amplio de artistas/bandas", pct: 75.2 },
+        { label: "Sigue bandas o músicos en redes sociales", pct: 48.2 },
+        { label: "Le encanta apoyar artistas locales o ir a conciertos locales", pct: 42.1 },
+      ],
+      barriers: [
+        { label: "Solo compró boletos de concierto en los últimos 3-6 meses pese al 89% de interés declarado", pct: 26.0 },
+        { label: "Solo planea comprar boletos de concierto en los próximos 3-6 meses", pct: 27.1 },
+        { label: "Prioriza un checkout online rápido y sencillo al comprar — señal de fricción en el proceso de compra", pct: 57.8 },
+      ],
+      digitalInterests: [
+        { label: "Heavy user de streaming de música", index: 138 },
+        { label: "Heavy user de servicios de streaming tipo Netflix", index: 137 },
+        { label: "Usa el internet para gaming", index: 120 },
+      ],
+      media: [
+        { label: "Facebook / Facebook Messenger para compartir fotos o videos", pct: 63.5 },
+        { label: "Instagram para compartir fotos o videos", pct: 61.4 },
+        { label: "Netflix (usado en el último mes)", pct: 75.6 },
+        { label: "YouTube (usado en el último mes)", pct: 65.5 },
+        { label: "Disney+ (usado en el último mes)", pct: 45.8 },
+        { label: "TikTok para compartir fotos o videos", pct: 39.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y streaming de música", "Instagram, streaming de música", "Contenido de anuncio de line-up o preventa.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, Facebook", "Clips de artistas y anuncios de conciertos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming de video y música", "Netflix, YouTube, streaming de música", "Contenido de marca dentro de streaming de video/audio.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook, TikTok", "Recordatorio de preventa / checkout simplificado.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "CTA directo a compra con checkout de un clic.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Disney+, Instagram", "Últimas entradas / urgencia de compra.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927 = {
+  id: "champions-league-fans-bogota-colombia",
+  name: "Aficionados a la UEFA Champions League en Bogotá (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-27)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) LABUCL_Bogotá', audience_id d5321796-83f0-4059-a2b1-238cb28f0a1b): bogotanos aficionados al deporte e interesados en la UEFA Champions League — recorte geográfico a Bogotá de la audiencia nacional ya procesada 'Paramo (co) LABUCL'.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'LABUCL_Bogotá' en GWI (2,476,852) sobre la población digital de Colombia (31.06M)", pct: 8 },
+  ],
+  footnotes: [
+    "8% ≈ universo real de la audiencia en GWI (2,476,852, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Esta audiencia es un recorte geográfico (Bogotá) de la audiencia nacional ya procesada 'Paramo (co) LABUCL' (ver caso seguidores-champions-league-colombia). Se trata como un caso separado en vez de una segunda persona del mismo caso porque no son mutuamente excluyentes (una está contenida en la otra) — el objetivo de este borrador es documentar el perfil específico de Bogotá con datos propios de GWI.",
+    "Demografía, motivaciones e intereses digitales tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi (muestra grande, ~2107 respuestas).",
+    "Top ciudades: 100% Bogotá D.C. por definición de la propia audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "hincha-champions-bogota",
+      name: "Felipe Duarte",
+      archetype: "El Fanático Capitalino de la Champions",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá y es abrumadoramente masculino (76%). Sigue la Champions League con una intensidad más alta que el promedio nacional: 62% se declara 'muy interesado' específicamente en el torneo, con un índice más de 2.5 veces el promedio de Colombia. A pesar de esa pasión, la mayoría no ve los partidos por streaming pago — es un perfil de conversación y consumo social alrededor del deporte, más que de suscripción.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha entre interés declarado y consumo pagado que se repite en otras audiencias deportivas de Colombia: 62% está 'muy interesado' en la Champions League (más del doble del promedio) pero solo 22% paga hoy un servicio de streaming deportivo y solo 36% ve la Champions League en vivo por streaming — el partido en sí sigue dependiendo de TV abierta/paga, mientras la marca puede ganar la conversación alrededor del partido en redes, donde esta audiencia sí es muy activa.",
+        [
+          { label: "Pasión alta, streaming pago bajo", detail: "Solo 22% paga un servicio de streaming deportivo pese a que 62% está 'muy interesado' en la Champions League — un plan de medios 100% streaming-only deja fuera a la mayoría; la señal abierta y la TV paga tradicional siguen siendo clave." },
+          { label: "El horario prime (7-10pm) es el ancla real", detail: "70.5% ve TV internacional en el horario prime (7pm-10pm) entre semana — cualquier activación en vivo del partido debe anclarse ahí, no en la tarde." },
+          { label: "Amplifica la conversación deportiva más que el promedio", detail: "Publica sobre deportes con un índice de 197 frente al promedio de Colombia — contenido para compartir (predicciones, retos, momentos icónicos) tiene más probabilidad de circular con esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 76.2, female: 23.8 },
+        ageBands: [
+          { label: "16-24", pct: 16.8 },
+          { label: "25-34", pct: 26.5 },
+          { label: "35-44", pct: 24.8 },
+          { label: "45-54", pct: 19.3 },
+          { label: "55-64", pct: 12.6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá D.C. (criterio de definición de la audiencia)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en ver deporte en general", pct: 96.4 },
+        { label: "Sigue el fútbol", pct: 100 },
+        { label: "Muy interesado específicamente en la UEFA Champions League", pct: 61.5 },
+        { label: "Se identifica como sports fan", pct: 74.6 },
+      ],
+      barriers: [
+        { label: "Solo paga hoy un servicio de streaming deportivo", pct: 22.0 },
+        { label: "Solo ve la UEFA Champions League en vivo por streaming (vs. 62% 'muy interesado')", pct: 36.1 },
+      ],
+      digitalInterests: [
+        { label: "Publica sobre deportes online", index: 197 },
+        { label: "Paga suscripción de streaming de música", index: 159 },
+        { label: "Interesado en tecnología", index: 121 },
+      ],
+      media: [
+        { label: "WhatsApp (más de una vez al día)", pct: 73.3 },
+        { label: "Ve TV internacional en horario prime (7pm-10pm, entre semana)", pct: 70.5 },
+        { label: "YouTube (usado en el último mes)", pct: 64.2 },
+        { label: "Netflix (usado en el último mes)", pct: 70.3 },
+        { label: "Instagram (uso diario)", pct: 25.2 },
+        { label: "TikTok (uso diario)", pct: 21.5 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y mensajería", "WhatsApp, Instagram", "Resumen/preview del partido del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Contenido de previa y alineaciones.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Mensajería y redes", "WhatsApp, Instagram", "Debate sobre el partido de la noche.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional (mid-afternoon)", "TV, YouTube", "Recordatorio de horario del partido + dónde verlo.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / bar", "TV internacional (late-afternoon)", "TV abierta/paga, WhatsApp", "Activación en el pre-partido (TV + segunda pantalla).", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bar", "TV en horario prime + redes", "TV, WhatsApp, Instagram", "Conversación en vivo y reacciones post-partido.", []),
+      ],
+    },
+  ],
+};
+
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -4210,7 +4388,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927],
   },
   {
     id: "deportes",
@@ -4223,7 +4401,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927],
   },
   {
     id: "retail",

@@ -273,6 +273,9 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "3f6c99d9-2bf8-403f-aa8c-acac644e09c9", title: "Ejemplo>Soccer", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, live in either the Capital District or Cundinamarca, are between 16 and 44 years old, are interested in playing sport, and play soccer." },
   { id: "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b", title: "PuntoDePago>Desbancarizados", client: "PuntoDePago", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have not used any online payment service in the last month." },
   { id: "fbf83ccd-0068-47c4-838b-3a104e79a5f0", title: "Falabella (co) TCGeneral_26", client: "Falabella", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, are between 18 and over 100 years old, and have a credit card." },
+  // Añadidas por la automatización diaria de GWI el 2026-09-27 (ver data/gwi-audience-manifest.json).
+  { id: "f3d79096-700e-4a23-8950-2d70da628c41", title: "Páramo (co) CarlosVives_Bogotanos", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, prefer listening to a wide range of songs from the music artists/bands they are passionate about or are always on the lookout for new live music events or love to support local artists or go to local gigs, have purchased concert tickets online in the last 3-6 months or are planning to purchase concert tickets in the next 3-6 months or are interested in live events like music festivals, like listening to Latin music or like listening to rock music, live in the Capital District or live in Cundinamarca, and do not have children aged between 6 and 18 years old." },
+  { id: "d5321796-83f0-4059-a2b1-238cb28f0a1b", title: "Paramo (co) LABUCL_Bogotá", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, live in the Capital District, and are interested in watching sports or are sports fans, as well as being interested in the UEFA Champions League, watching it live on a TV channel or streaming service, or following it and watching highlights or news about it." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -317,4 +320,7 @@ const CATALOG_ANALYSIS_LINKS = {
   // Añadidas por la automatización diaria de GWI el 2026-09-25.
   "f01404ed-cc6b-41ac-98af-edcdf65bc9e3": { categoryId: "deportes", caseId: "aficionados-futbol-general-usa", personaId: "aficionado-futbol-general-usa" },
   "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3": { categoryId: "entretenimiento", caseId: "eventos-urbanos-hiphop-reggae-colombia", personaId: "audiencia-urbana-hiphop-reggae-colombia" },
+  // Añadidas por la automatización diaria de GWI el 2026-09-27.
+  "f3d79096-700e-4a23-8950-2d70da628c41": { categoryId: "entretenimiento", caseId: "carlos-vives-fans-bogota-colombia", personaId: "fan-carlos-vives-bogota" },
+  "d5321796-83f0-4059-a2b1-238cb28f0a1b": { categoryId: "deportes", caseId: "champions-league-fans-bogota-colombia", personaId: "hincha-champions-bogota" },
 };

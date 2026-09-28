@@ -29,7 +29,7 @@ const state = {
   openHistoryId: null,
   openIdeas: {}, // { [personaId]: openIdeaIndex } — para el panel de insights de IA
   catalogQuery: "",
-  catalogTypeFilter: "todas", // "todas" | "authored" | "shared" | "curated"
+  catalogTypeFilter: "todas", // "todas" | "authored" | "shared" | "curated" | "analizadas"
   catalogSelectedId: null,
 };
 
@@ -644,14 +644,26 @@ function catalogMatches(a, q) {
 function renderCatalog() {
   const q = state.catalogQuery.trim();
   const typeFilter = state.catalogTypeFilter;
-  const filtered = GWI_AUDIENCE_CATALOG.filter(
-    (a) => catalogMatches(a, q) && (typeFilter === "todas" || a.type === typeFilter)
-  );
+  const matchesTypeFilter = (a) => {
+    if (typeFilter === "todas") return true;
+    if (typeFilter === "analizadas") return Boolean(CATALOG_ANALYSIS_LINKS[a.id]);
+    return a.type === typeFilter;
+  };
+  let filtered = GWI_AUDIENCE_CATALOG.filter((a) => catalogMatches(a, q) && matchesTypeFilter(a));
+  if (typeFilter === "analizadas") {
+    // GWI_AUDIENCE_CATALOG se va llenando por orden de llegada (lotes más nuevos al final) —
+    // invertir muestra primero las analizadas más recientes, sin depender de un fetch aparte
+    // al manifest de fechas.
+    filtered = filtered.slice().reverse();
+  }
   const showLimit = 60;
   const shown = filtered.slice(0, showLimit);
   const selected = state.catalogSelectedId ? GWI_AUDIENCE_CATALOG.find((a) => a.id === state.catalogSelectedId) : null;
 
-  const typeCounts = { todas: GWI_AUDIENCE_CATALOG.length };
+  const typeCounts = {
+    todas: GWI_AUDIENCE_CATALOG.length,
+    analizadas: GWI_AUDIENCE_CATALOG.filter((a) => CATALOG_ANALYSIS_LINKS[a.id]).length,
+  };
   ["authored", "shared", "curated"].forEach((t) => (typeCounts[t] = GWI_AUDIENCE_CATALOG.filter((a) => a.type === t).length));
 
   return `
@@ -672,11 +684,18 @@ function renderCatalog() {
         value="${escapeHtml(state.catalogQuery)}"
         style="width:100%;padding:12px 16px;border-radius:999px;border:1.5px solid var(--border);font-size:13px;margin-bottom:14px;font-family:inherit;" />
       <div class="age-chip-row" style="margin-bottom:16px;">
-        ${["todas", "authored", "shared", "curated"].map((t) => `
+        ${["todas", "authored", "shared", "curated", "analizadas"].map((t) => `
           <div class="age-chip ${typeFilter === t ? "checked" : ""}" data-catalog-type="${t}">
-            ${t === "todas" ? "Todas" : CATALOG_TYPE_LABEL[t]} (${typeCounts[t]})
+            ${t === "todas" ? "Todas" : t === "analizadas" ? "✓ Analizadas" : CATALOG_TYPE_LABEL[t]} (${typeCounts[t]})
           </div>`).join("")}
       </div>
+      ${typeFilter === "analizadas" ? `
+        <p style="font-size:11.5px;color:var(--muted);margin:-8px 0 14px;">
+          Audiencias con perfil ya construido en el aplicativo (demografía, motivadores, journey) —
+          ordenadas con las más recientes primero, para revisar rápido lo que agregó la última
+          actualización de la rutina diaria de GWI.
+        </p>
+      ` : ""}
       <div style="max-height:420px;overflow-y:auto;">
         ${shown.length === 0 ? `<div class="empty-state"><div class="big">🔍</div>Sin resultados para esa búsqueda.</div>` : shown.map((a) => {
           const linked = CATALOG_ANALYSIS_LINKS[a.id];

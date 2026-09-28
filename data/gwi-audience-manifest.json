@@ -27,6 +27,6 @@
     { "audience_id": "16c03d23-3c86-4000-bf94-8cb14d01143d", "title": "Páramo (co) Placebo_ Fans del rock en vivo", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "placebo-rock-en-vivo-colombia" },
     { "audience_id": "e772d20d-de65-4729-8db1-7952ed8e20c9", "title": "Páramo (co) Placebo_Rockers Creativos", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "placebo-rock-en-vivo-colombia" },
     { "audience_id": "f01404ed-cc6b-41ac-98af-edcdf65bc9e3", "title": "Infinite>Twin Peaks>Soccer Fans", "processedAt": "2026-09-25", "categoryId": "deportes", "caseId": "aficionados-futbol-general-usa" },
-    { "audience_id": "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3", "title": "Paramo>AudienciaEventosUrban", "processedAt": "2026-09-25", "categoryId": "entretenimiento", "caseId": "eventos-urbanos-hiphop-reggae-colombia" }
+    { "audience_id": "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3", "title": "Paramo>AudienciaEventosUrban", "processedAt": "2026-09-25", "categoryId": "entretenimiento", "caseId": "eventos-urbanos-hiphop-reggae-colombia", "note": "También re-procesada el 2026-09-26 (borrador posterior) como 'escena-urbana-eventos-vivo-colombia' -- descartada por duplicar esta misma audiencia." }
   ]
 }

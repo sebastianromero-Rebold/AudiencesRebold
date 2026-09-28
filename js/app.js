@@ -31,6 +31,8 @@ const state = {
   catalogQuery: "",
   catalogTypeFilter: "todas", // "todas" | "authored" | "shared" | "curated" | "analizadas"
   catalogSelectedId: null,
+  gslidesStatus: null, // texto de progreso mientras se sube a Google Slides, o null si está inactivo
+  gslidesError: null,
 };
 
 function loadHistory() {
@@ -166,6 +168,7 @@ function icon(name) {
     plus: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>`,
     clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round"/></svg>`,
     download: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    cloud: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 18h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.7-1.7A4.5 4.5 0 0 0 7 18z" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12v6m0 0l-2.5-2.5M12 18l2.5-2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     check: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg>`,
   };
@@ -382,9 +385,13 @@ function renderProfiles() {
       <div class="topbar-actions">
         <button class="btn" data-action="back-to-wizard">← Editar mapa de demanda</button>
         <button class="btn accent" data-action="save-history">${icon("check")} Guardar en histórico</button>
-        <button class="btn primary" data-action="export-pptx">${icon("download")} Descargar .pptx</button>
+        <button class="btn" data-action="export-pptx">${icon("download")} Descargar .pptx</button>
+        <button class="btn primary" data-action="export-gslides" ${state.gslidesStatus ? "disabled" : ""}>
+          ${icon("cloud")} ${state.gslidesStatus ? state.gslidesStatus : "Enviar a Google Slides"}
+        </button>
       </div>
     </div>
+    ${state.gslidesError ? `<p style="color:#e05a5a;font-size:12px;margin:-8px 0 16px;">${escapeHtml(state.gslidesError)}</p>` : ""}
 
     <div class="deck">
       <div class="deck-slide-tag">MAPA DE DEMANDA</div>
@@ -874,6 +881,28 @@ function bindEvents() {
     const r = state.result;
     const approvedPersonas = r.personas.filter((p) => state.approved.has(p.id));
     buildAudiencesPptx({ market: r.market, case: r.case, steps: r.steps, universe: r.universe, personas: approvedPersonas });
+  });
+
+  const exportGSlidesBtn = document.querySelector("[data-action='export-gslides']");
+  if (exportGSlidesBtn) exportGSlidesBtn.addEventListener("click", async () => {
+    const r = state.result;
+    const approvedPersonas = r.personas.filter((p) => state.approved.has(p.id));
+    state.gslidesError = null;
+    state.gslidesStatus = "Iniciando…";
+    render();
+    try {
+      const { url } = await exportAudiencesToGoogleSlides(
+        { market: r.market, case: r.case, steps: r.steps, universe: r.universe, personas: approvedPersonas },
+        { onStatus: (msg) => { state.gslidesStatus = msg; render(); } }
+      );
+      state.gslidesStatus = null;
+      render();
+      window.open(url, "_blank", "noopener");
+    } catch (e) {
+      state.gslidesStatus = null;
+      state.gslidesError = e && e.message ? e.message : "No se pudo enviar la presentación a Google Slides.";
+      render();
+    }
   });
 
   const exportJsonBtn = document.querySelector("[data-action='export-json']");

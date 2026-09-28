@@ -38,20 +38,23 @@ para GitHub Pages.
    marcada "Pendiente de análisis" y puedes copiar una solicitud lista para
    pedirle a Claude que la analice — ver "Catálogo de audiencias GWI" abajo.
 5. **Descargar .pptx**: genera un PowerPoint con el mismo diseño (negro +
-   acento cereza `#CD2B53`, tipografía Montserrat) listo para subir a Google
-   Drive — Google Slides lo abre y convierte automáticamente sin perder
-   formato.
+   acento cereza `#CD2B53`, tipografía Montserrat), por si prefieres un
+   archivo local en vez de subirlo a Drive.
+6. **Enviar a Google Slides**: crea la presentación directamente como Google
+   Slides (misma estructura y diseño que el `.pptx`) y la guarda en una
+   carpeta **"Audiences Rebold"** de tu Drive — ver sección "Google Slides en
+   vivo" más abajo.
 
 ## Arquitectura y decisiones (leer antes de extender)
 
 Este proyecto se construyó como **sitio estático sin backend**, así que se
-tomaron 3 decisiones de diseño que vale la pena conocer antes de tocar el
+tomaron decisiones de diseño que vale la pena conocer antes de tocar el
 código:
 
 | Decisión | Qué se hizo | Por qué |
 |---|---|---|
 | **Datos de audiencias** | Dataset curado en [`js/data.js`](js/data.js), no una llamada en vivo a la API de GWI | GWI requiere autenticación; un sitio estático en GitHub Pages no puede guardar una API key de forma segura |
-| **Salida a presentación** | Genera un `.pptx` en el navegador (librería `pptxgenjs`, sin backend) | Crear Google Slides reales requiere OAuth de Google (Client ID en Google Cloud Console), fuera de alcance de un sitio estático |
+| **Salida a presentación** | Botón principal: crea Google Slides real en Drive vía OAuth (Google Identity Services, sin backend — ver abajo). Botón secundario: `.pptx` local con `pptxgenjs` | Se agregó OAuth de Google (Client ID en Google Cloud Console) para poder crear/organizar el archivo directo en Drive; el `.pptx` se dejó como respaldo sin dependencias externas |
 | **Histórico de audiencias** | `localStorage` del navegador + exportar/importar a JSON | Sin backend no hay base de datos compartida; el JSON exportado se puede subir al repo o compartir manualmente con el equipo |
 
 ### Marcado de fuente de los datos
@@ -153,18 +156,49 @@ para cada una.
 - Administra la rutina (pausar, editar el prompt, ver el historial de
   ejecuciones) en [claude.ai/code/routines](https://claude.ai/code/routines).
 
-## Conectar Google Slides real (opcional, a futuro)
+## Google Slides en vivo (botón "Enviar a Google Slides")
 
-Si más adelante se quiere generar la presentación directamente en Google
-Slides (en vez de descargar un `.pptx`):
+[`js/googleSlidesExport.js`](js/googleSlidesExport.js) crea la presentación
+directo en Google Slides (misma estructura y diseño que el `.pptx`: portada,
+mapa de demanda, y 2-3 slides por persona) y la guarda en una carpeta
+**"Audiences Rebold"** del Drive del usuario que hace clic — todo desde el
+navegador, sin backend propio:
 
-1. Crear un proyecto en Google Cloud Console y habilitar la Slides API y la
-   Drive API.
-2. Crear un OAuth Client ID de tipo "Web application" con el dominio de
-   GitHub Pages autorizado.
-3. En `js/pptxExport.js`, añadir un flujo con Google Identity Services
-   (`google.accounts.oauth2`) para obtener un token y llamar a
-   `slides.presentations.create` + `batchUpdate` en lugar de `pptxgenjs`.
+- **Login/OAuth**: Google Identity Services (`google.accounts.oauth2`,
+  cargado en `index.html`), pide un access token con los scopes
+  `drive.file` (solo ve/gestiona archivos que esta app crea — no requiere el
+  proceso de verificación de Google que sí exige el scope completo `drive`)
+  y `presentations`.
+- **Construcción de las diapositivas**: en vez de `pptxgenjs`, arma un array
+  de `requests` para `presentations.batchUpdate` (crear formas de texto,
+  rectángulos como barras, colores de fondo, etc.) y los envía en lotes de
+  300 (límite prudente por llamada) vía `fetch` directo a las APIs REST de
+  Slides y Drive — no se usa la librería `gapi.client` para mantener todo
+  más liviano.
+- **Carpeta de Drive**: busca una carpeta llamada "Audiences Rebold" **entre
+  los archivos que la app puede ver** (por el scope `drive.file`, esto es
+  solo lo que ella misma creó antes) y la reutiliza; si no la encuentra, la
+  crea. **Importante**: si ya existías una carpeta con ese nombre creada a
+  mano (no por esta app), no será visible para la app y se creará una
+  segunda carpeta con el mismo nombre — es una limitación conocida de usar
+  el scope de menor privilegio.
+
+### Configurar tu propio Client ID (si cambias de cuenta de Google o de dominio)
+
+1. En [Google Cloud Console](https://console.cloud.google.com/apis/credentials),
+   crea/selecciona un proyecto y habilita **Google Slides API** y
+   **Google Drive API** (APIs y servicios → Biblioteca).
+2. En "Credenciales", crea un **ID de cliente de OAuth 2.0** de tipo
+   **"Aplicación web"**.
+3. Agrega como **"Orígenes autorizados de JavaScript"** cada dominio desde el
+   que se use el botón (ej. `https://sebastianromero-rebold.github.io` y
+   `http://localhost:8799` para pruebas locales).
+4. Copia el Client ID (`...apps.googleusercontent.com`) y pégalo en
+   `GOOGLE_CLIENT_ID` al inicio de `js/googleSlidesExport.js`.
+5. La pantalla de consentimiento OAuth debe estar publicada o, si sigue en
+   modo "Prueba" (Testing), la cuenta de Google que use el botón debe estar
+   agregada como "Usuario de prueba" en esa pantalla — si no, Google rechaza
+   el login con un error de acceso.
 
 ## Agregar una nueva categoría o audiencia
 

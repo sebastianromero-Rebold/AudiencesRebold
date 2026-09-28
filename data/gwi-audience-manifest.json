@@ -20,6 +20,11 @@
     { "audience_id": "171f136e-ae27-4152-9595-765835fcd961", "title": "Páramo (co) Baum27_Curadores", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "baum27-escena-electronica-colombia", "personaId": "curador-escena-co" },
     { "audience_id": "3f6c99d9-2bf8-403f-aa8c-acac644e09c9", "title": "Ejemplo>Soccer", "processedAt": "2026-09-28", "categoryId": "deportes", "caseId": "futbol-amateur-bogota-cundinamarca", "personaId": "futbolista-amateur-bogota-co" },
     { "audience_id": "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b", "title": "PuntoDePago>Desbancarizados", "processedAt": "2026-09-28", "categoryId": "fintech", "caseId": "inclusion-financiera-colombia", "personaId": "desbancarizado-digital-colombia" },
-    { "audience_id": "fbf83ccd-0068-47c4-838b-3a104e79a5f0", "title": "Falabella (co) TCGeneral_26", "processedAt": "2026-09-28", "categoryId": "fintech", "caseId": "inclusion-financiera-colombia", "personaId": "bancarizado-tarjetahabiente-colombia" }
+    { "audience_id": "fbf83ccd-0068-47c4-838b-3a104e79a5f0", "title": "Falabella (co) TCGeneral_26", "processedAt": "2026-09-28", "categoryId": "fintech", "caseId": "inclusion-financiera-colombia", "personaId": "bancarizado-tarjetahabiente-colombia" },
+    { "audience_id": "7491a77f-8dbb-4da4-9511-8bd828b22005", "title": "Páramo (co) LauraPausini2027Med_Nuevos", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "laura-pausini-2027-colombia", "note": "GWI no devolvió datos compatibles para esta audiencia (chat_gwi/explore_insight_gwi) — persona usa proxy de población general, ver footnotes del caso." },
+    { "audience_id": "1e719101-f272-4418-8b84-8d73c503b30c", "title": "Páramo (co) LauraPausini2027Med_Base", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "laura-pausini-2027-colombia" },
+    { "audience_id": "9b5745d1-a0ed-4396-88ce-b36a15559f0c", "title": "Páramo (co) Placebo_ Fans del rock en vivo2", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "placebo-rock-en-vivo-colombia" },
+    { "audience_id": "16c03d23-3c86-4000-bf94-8cb14d01143d", "title": "Páramo (co) Placebo_ Fans del rock en vivo", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "placebo-rock-en-vivo-colombia" },
+    { "audience_id": "e772d20d-de65-4729-8db1-7952ed8e20c9", "title": "Páramo (co) Placebo_Rockers Creativos", "processedAt": "2026-09-24", "categoryId": "entretenimiento", "caseId": "placebo-rock-en-vivo-colombia" }
   ]
 }

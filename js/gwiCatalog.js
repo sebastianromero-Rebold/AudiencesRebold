@@ -262,6 +262,12 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "26b41bb0-ca38-4b9b-8447-d5398bd6b692", title: "Páramo (co) Baum27_PotencialRavers", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who are adventurous, creative, fashion-conscious, open-minded, or social/outgoing, who like listening to EDM/Dance music such as House and Techno, but who are not currently interested in live events like music festivals." },
   { id: "06846574-6359-4f49-9d3e-b23fe8faae71", title: "Páramo (co) Baum27_Amplificadores de la escena", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who are interested in live events like music festivals and in music, skewing Gen Z/Millennial." },
   { id: "171f136e-ae27-4152-9595-765835fcd961", title: "Páramo (co) Baum27_Curadores", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals in Colombia who like listening to EDM/Dance music such as House and Techno, are creative, open-minded, like to be the first to try new things, and follow technology trends closely." },
+  // Añadidas por el batch-3 de la automatización de GWI el 2026-09-24 (campañas LauraPausini2027 y Placebo — ver data/gwi-audience-manifest.json).
+  { id: "7491a77f-8dbb-4da4-9511-8bd828b22005", title: "Páramo (co) LauraPausini2027Med_Nuevos", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "1e719101-f272-4418-8b84-8d73c503b30c", title: "Páramo (co) LauraPausini2027Med_Base", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "9b5745d1-a0ed-4396-88ce-b36a15559f0c", title: "Páramo (co) Placebo_ Fans del rock en vivo2", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "16c03d23-3c86-4000-bf94-8cb14d01143d", title: "Páramo (co) Placebo_ Fans del rock en vivo", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "e772d20d-de65-4729-8db1-7952ed8e20c9", title: "Páramo (co) Placebo_Rockers Creativos", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who live in the Capital District or Cundinamarca, are interested in music, like listening to rock music, are interested in live events such as music festivals, and are creative or open-minded." },
   // Añadidas por la automatización diaria de GWI el 2026-09-28.
   { id: "3f6c99d9-2bf8-403f-aa8c-acac644e09c9", title: "Ejemplo>Soccer", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, live in either the Capital District or Cundinamarca, are between 16 and 44 years old, are interested in playing sport, and play soccer." },
   { id: "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b", title: "PuntoDePago>Desbancarizados", client: "PuntoDePago", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have not used any online payment service in the last month." },
@@ -298,6 +304,11 @@ const CATALOG_ANALYSIS_LINKS = {
   "26b41bb0-ca38-4b9b-8447-d5398bd6b692": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "raver-en-potencia-co" },
   "06846574-6359-4f49-9d3e-b23fe8faae71": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "amplificadora-escena-co" },
   "171f136e-ae27-4152-9595-765835fcd961": { categoryId: "entretenimiento", caseId: "baum27-escena-electronica-colombia", personaId: "curador-escena-co" },
+  "7491a77f-8dbb-4da4-9511-8bd828b22005": { categoryId: "entretenimiento", caseId: "laura-pausini-2027-colombia", personaId: "laura-pausini-nuevos-proxy" },
+  "1e719101-f272-4418-8b84-8d73c503b30c": { categoryId: "entretenimiento", caseId: "laura-pausini-2027-colombia", personaId: "laura-pausini-base-antioquia" },
+  "9b5745d1-a0ed-4396-88ce-b36a15559f0c": { categoryId: "entretenimiento", caseId: "placebo-rock-en-vivo-colombia", personaId: "placebo-fans-rock-no-creativos" },
+  "16c03d23-3c86-4000-bf94-8cb14d01143d": { categoryId: "entretenimiento", caseId: "placebo-rock-en-vivo-colombia", personaId: "placebo-fans-rock-compradores" },
+  "e772d20d-de65-4729-8db1-7952ed8e20c9": { categoryId: "entretenimiento", caseId: "placebo-rock-en-vivo-colombia", personaId: "placebo-rockers-creativos" },
   // Añadidas por la automatización diaria de GWI el 2026-09-28.
   "3f6c99d9-2bf8-403f-aa8c-acac644e09c9": { categoryId: "deportes", caseId: "futbol-amateur-bogota-cundinamarca", personaId: "futbolista-amateur-bogota-co" },
   "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b": { categoryId: "fintech", caseId: "inclusion-financiera-colombia", personaId: "desbancarizado-digital-colombia" },

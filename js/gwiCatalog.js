@@ -143,6 +143,7 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "b0a4df35-7a1f-4f88-8956-9d26794c66e5", title: "Paramo>AudienciaEventosEDM", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "c1775e50-f4ed-4309-be85-700dec92c9e6", title: "Paramo>AudienciaEventosLatin", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3", title: "Paramo>AudienciaEventosUrban", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "f01404ed-cc6b-41ac-98af-edcdf65bc9e3", title: "Infinite>Twin Peaks>Soccer Fans", client: "Infinite", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who follow soccer or are very interested in various soccer leagues, and currently reside in the USA." },
   { id: "06058aef-4879-40f1-ba9e-b9351aea8f59", title: "Paramo>AudienciasAerolíneasNSE3>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "4a2425d6-2700-46fd-aab5-be8882c67f20", title: "Paramo>AudienciasAerolíneasNSE3Event>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "43660923-2638-4b27-a203-467338d036ff", title: "Paramo>AudienciasAerolíneasNSE3EventBogyAlrede>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
@@ -313,4 +314,7 @@ const CATALOG_ANALYSIS_LINKS = {
   "3f6c99d9-2bf8-403f-aa8c-acac644e09c9": { categoryId: "deportes", caseId: "futbol-amateur-bogota-cundinamarca", personaId: "futbolista-amateur-bogota-co" },
   "d61cd628-8f7d-4e3e-91c9-0e87b2da3d0b": { categoryId: "fintech", caseId: "inclusion-financiera-colombia", personaId: "desbancarizado-digital-colombia" },
   "fbf83ccd-0068-47c4-838b-3a104e79a5f0": { categoryId: "fintech", caseId: "inclusion-financiera-colombia", personaId: "bancarizado-tarjetahabiente-colombia" },
+  // Añadidas por la automatización diaria de GWI el 2026-09-25.
+  "f01404ed-cc6b-41ac-98af-edcdf65bc9e3": { categoryId: "deportes", caseId: "aficionados-futbol-general-usa", personaId: "aficionado-futbol-general-usa" },
+  "2945ac21-4e1f-4eb7-b3be-4a40a3eab2c3": { categoryId: "entretenimiento", caseId: "eventos-urbanos-hiphop-reggae-colombia", personaId: "audiencia-urbana-hiphop-reggae-colombia" },
 };

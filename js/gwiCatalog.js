@@ -276,6 +276,9 @@ const GWI_AUDIENCE_CATALOG = [
   // Añadidas por la automatización diaria de GWI el 2026-09-27 (ver data/gwi-audience-manifest.json).
   { id: "f3d79096-700e-4a23-8950-2d70da628c41", title: "Páramo (co) CarlosVives_Bogotanos", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, prefer listening to a wide range of songs from the music artists/bands they are passionate about or are always on the lookout for new live music events or love to support local artists or go to local gigs, have purchased concert tickets online in the last 3-6 months or are planning to purchase concert tickets in the next 3-6 months or are interested in live events like music festivals, like listening to Latin music or like listening to rock music, live in the Capital District or live in Cundinamarca, and do not have children aged between 6 and 18 years old." },
   { id: "d5321796-83f0-4059-a2b1-238cb28f0a1b", title: "Paramo (co) LABUCL_Bogotá", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, live in the Capital District, and are interested in watching sports or are sports fans, as well as being interested in the UEFA Champions League, watching it live on a TV channel or streaming service, or following it and watching highlights or news about it." },
+  // Añadidas por la automatización diaria de GWI el 2026-09-30 (ver data/gwi-audience-manifest.json).
+  { id: "9376bd87-2273-4f23-b06b-9ece33f03631", title: "Páramo (co) Running", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and participate in running/jogging." },
+  { id: "4cd791dc-3b94-45da-ae02-8e7cc9467119", title: "Jagermeister>Mexico>SubCul>Moda", client: "Jagermeister", type: "shared", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -323,4 +326,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // Añadidas por la automatización diaria de GWI el 2026-09-27.
   "f3d79096-700e-4a23-8950-2d70da628c41": { categoryId: "entretenimiento", caseId: "carlos-vives-fans-bogota-colombia", personaId: "fan-carlos-vives-bogota" },
   "d5321796-83f0-4059-a2b1-238cb28f0a1b": { categoryId: "deportes", caseId: "champions-league-fans-bogota-colombia", personaId: "hincha-champions-bogota" },
+  // Añadidas por la automatización diaria de GWI el 2026-09-30.
+  "9376bd87-2273-4f23-b06b-9ece33f03631": { categoryId: "deportes", caseId: "runners-colombia", personaId: "corredor-urbano-colombia" },
+  "4cd791dc-3b94-45da-ae02-8e7cc9467119": { categoryId: "retail", caseId: "subcultura-moda-mexico", personaId: "subcultura-moda-cdmx" },
+  "62bec62c-a136-4768-a48f-df8f7979ec3b": { categoryId: "fintech", caseId: "comerciantes-pagos-digitales-colombia", personaId: "emprendedor-pagos-digitales-colombia" },
 };

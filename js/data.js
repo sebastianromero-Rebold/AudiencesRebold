@@ -4372,6 +4372,229 @@ const CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927 = {
   ],
 };
 
+const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
+  id: "futbol-visa-mundial-femenino-colombia",
+  name: "Aficionados al fútbol usuarios de Visa en Colombia (según interés en el Mundial Femenino FIFA)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-01)",
+  insightNote:
+    "Dos audiencias reales de GWI que comparten la base 'sigue fútbol + usó Visa o Visa Click to Pay el último mes en Colombia', separadas por si siguen o no la Copa Mundial Femenina FIFA: 'Páramo LAB (co) VIsa_FIFACOPADEMUJERES' (audience_id f6b86121-2a79-4c58-bc01-687e56872caf) y 'Páramo LAB (co) VIsa_FIFASOLOHOMBRES' (audience_id 125b6af2-254a-4b92-a9df-17f480d3c03b).",
+  funnelSteps: [
+    { label: "Universo combinado real de ambas audiencias en GWI (5,807,774) sobre la población digital de Colombia (31.06M)", pct: 19 },
+  ],
+  footnotes: [
+    "19% ≈ universo combinado real de ambas audiencias en GWI (2,091,995 + 3,715,779 = 5,807,774, verificado vía explore_insight_gwi sobre la pregunta de género de cada una) sobre la población digital total de Colombia (31.06M).",
+    "sharePct de cada persona = su universo real / el universo combinado (36% y 64% respectivamente).",
+    "Demografía, motivaciones, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de cada audiencia.",
+    "Varias cifras que chat_gwi narró inicialmente como 'barrera' (p. ej. un supuesto 61% no interesado en ver deporte, o un supuesto 23-46% que paga streaming deportivo) resultaron contradichas o no confirmadas al verificarlas con explore_insight_gwi sobre su insight_id real — se descartaron por completo en vez de usarlas, siguiendo la regla de nunca reportar una cifra sin verificar.",
+    "Edades: GWI solo devolvió con muestra suficiente las bandas reportadas; donde no hubo desagregación suficiente se deja en 0 en vez de inventar un valor.",
+    "Top ciudades: GWI no devolvió desagregación por ciudad con muestra suficiente para ninguna de las dos audiencias.",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "hincha-visa-mundial-femenino-colombia",
+      name: "Valentina Rojas",
+      archetype: "La Hincha Multi-Torneo",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Sigue el fútbol de forma amplia y transversal: además de estar interesada en el Mundial Femenino FIFA (criterio que define a esta audiencia), el 82% también sigue el Mundial masculino y el 72% la Copa América. Usó Visa o Visa Click to Pay en el último mes, lo que la vuelve una audiencia relevante para activaciones conjuntas de marca deportiva y medios de pago.",
+      aiInsight: aiInsight(
+        "Cruza con una brecha de visibilidad entre el interés declarado y el streaming en vivo verificado: el 100% sigue el Mundial Femenino (índice 833 frente al promedio), pero el consumo en vivo por streaming que GWI sí pudo verificar se concentra en el Mundial masculino (39%), Copa Libertadores (36%) y Copa América (35%) — no hay una cifra equivalente verificada de streaming en vivo específico del torneo femenino. La oportunidad de medios es activar durante esos torneos masculinos/regionales donde ya está probado que esta audiencia consume en vivo, en vez de asumir que existe un equivalente directo de inventario para el fútbol femenino.",
+        [
+          { label: "Interés disperso en múltiples torneos, no solo el femenino", detail: "100% Mundial Femenino, 82% Mundial masculino, 72% Copa América, 47% UEFA Nations League — es una hincha generalista, no una audiencia nicho de un solo torneo; el contenido debe hablarle como fanática del fútbol en general, no solo del femenino." },
+          { label: "El streaming en vivo confirmado está en torneos masculinos/regionales", detail: "39% ve el Mundial masculino en vivo por streaming, 36% Copa Libertadores, 35% Copa América — son los inventarios de streaming donde ya hay evidencia real de consumo en vivo de esta audiencia." },
+          { label: "Redes sociales como canal diario dominante", detail: "48% usa Instagram y 48% usa Facebook más de una vez al día — el canal de alcance diario más confiable es social, con streaming deportivo como complemento en momentos de partido." },
+        ]
+      ),
+      sharePct: 36,
+      demographics: {
+        genderSplit: { male: 59.7, female: 40.3 },
+        ageBands: [
+          { label: "16-24", pct: 11 },
+          { label: "25-34", pct: 22 },
+          { label: "35-44", pct: 27 },
+          { label: "45-54", pct: 21 },
+          { label: "55-64", pct: 19 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada y sigue la Copa Mundial Femenina FIFA", pct: 100 },
+        { label: "Interesada en la Copa Mundial masculina FIFA", pct: 82.1 },
+        { label: "Interesada en la Copa América", pct: 72.3 },
+        { label: "Interesada en la UEFA Nations League", pct: 47.1 },
+      ],
+      barriers: [
+        { label: "Ve el Mundial masculino (no un equivalente verificado del femenino) en vivo por streaming", pct: 39.1 },
+        { label: "Ve Copa Libertadores en vivo por streaming", pct: 36.0 },
+        { label: "Ve Copa América en vivo por streaming", pct: 35.3 },
+      ],
+      digitalInterests: [
+        { label: "Interés en jugar deporte", index: 209 },
+        { label: "Interés en salud personal", index: 171 },
+        { label: "Interés en alimentación saludable / nutrición", index: 162 },
+        { label: "Interés en ver deporte en general", index: 201 },
+      ],
+      media: [
+        { label: "Instagram (uso diario)", pct: 48.1 },
+        { label: "Facebook (uso diario)", pct: 48.0 },
+        { label: "TikTok (uso diario)", pct: 39.2 },
+        { label: "X (uso diario)", pct: 17.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Facebook", "Anuncio de próximos partidos de los torneos que sigue.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Clips destacados de varios torneos (no solo el femenino).", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming deportivo", "Apps de streaming deportivo", "Contenido de marca dentro de streaming de Copa Libertadores/América.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Facebook, Instagram", "Recordatorio de partido en vivo.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming en vivo", "Apps de streaming deportivo", "Activación pre-partido.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y TV", "Apps de streaming, TV", "CTA de beneficios Visa / contenido premium durante el partido.", []),
+      ],
+    },
+    {
+      id: "hincha-visa-futbol-regional-colombia",
+      name: "Santiago Martínez",
+      archetype: "El Fanático del Fútbol Regional",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Sigue fútbol y usó Visa o Visa Click to Pay en el último mes, pero no está interesado ni sigue el Mundial Femenino FIFA en ningún formato. Su consumo de fútbol se concentra en torneos regionales (Copa América, Copa Libertadores) más que en competiciones europeas, y es un consumidor intensivo de TV abierta/paga.",
+      aiInsight: aiInsight(
+        "Cruza con la preferencia marcada por el fútbol regional sobre el europeo: sigue highlights/noticias de Copa América (29%, índice 2439) y Copa Libertadores (29%, índice 1426) muchísimo más que la UEFA Champions League (20%) — un plan de medios que asuma que 'fútbol = Champions League' subestima a esta audiencia; el contenido y la pauta deportiva deben anclarse primero en los torneos sudamericanos.",
+        [
+          { label: "TV abierta/paga sigue siendo el canal dominante", detail: "86% usa un televisor para ver TV en vivo — más alto que el promedio general de las audiencias de fútbol ya procesadas, así que no es una audiencia 'cord-cutter'." },
+          { label: "Prioriza fútbol regional sobre fútbol europeo", detail: "29% sigue Copa América y Copa Libertadores por highlights/noticias, frente a solo 20% que sigue la UEFA Champions League — la inversión en patrocinio/activación rinde más en torneos sudamericanos." },
+          { label: "Interés deportivo va más allá del fútbol", detail: "56% está interesado en practicar deporte (no solo verlo) — abre espacio a activaciones de marca ligadas a la práctica deportiva, no solo al consumo pasivo de partidos." },
+        ]
+      ),
+      sharePct: 64,
+      demographics: {
+        genderSplit: { male: 60.9, female: 39.1 },
+        ageBands: [
+          { label: "16-24", pct: 19 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Sigue highlights/noticias del Mundial masculino FIFA", pct: 33.2 },
+        { label: "Sigue highlights/noticias de la Copa América", pct: 29.1 },
+        { label: "Sigue highlights/noticias de la Copa Libertadores", pct: 28.5 },
+        { label: "Interesado en practicar deporte", pct: 56.0 },
+      ],
+      barriers: [
+        { label: "Sigue la UEFA Champions League (highlights/noticias) mucho menos que los torneos regionales", pct: 20.0 },
+      ],
+      digitalInterests: [
+        { label: "Interés en salud personal", index: 150 },
+        { label: "Interés en alimentación saludable / nutrición", index: 129 },
+        { label: "Interés en ver deporte", index: 151 },
+      ],
+      media: [
+        { label: "Usa TV para ver TV en vivo", pct: 86.3 },
+        { label: "Usa teléfono/tablet para ver TV en vivo", pct: 38.6 },
+        { label: "Usa laptop/desktop para ver TV en vivo", pct: 34.3 },
+        { label: "Usa streaming device/smart stick para TV en vivo", pct: 11.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV y redes", "TV abierta, WhatsApp", "Resumen/preview del partido del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Facebook, Instagram", "Contenido de previa de Copa América/Libertadores.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Mensajería y redes", "WhatsApp, Facebook", "Debate sobre el partido de la noche.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV", "TV abierta/paga", "Recordatorio de horario del partido + dónde verlo.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / bar", "TV en vivo", "TV abierta/paga", "Activación pre-partido.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bar", "TV en horario prime", "TV, WhatsApp", "Conversación en vivo y reacciones post-partido.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_RUNNING_GWI_AUTO_20261001 = {
+  id: "corredores-colombia",
+  name: "Corredores / runners en Colombia",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-01)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) Running', audience_id 9376bd87-2273-4f23-b06b-9ece33f03631): colombianos que participan en running/trote.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Running' en GWI (8,104,786) sobre la población digital de Colombia (31.06M)", pct: 26 },
+  ],
+  footnotes: [
+    "26% ≈ universo real de la audiencia en GWI (8,104,786, verificado vía explore_insight_gwi sobre la pregunta de género, muestra de 5,815 respuestas) sobre la población digital total de Colombia (31.06M).",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Edades: GWI solo devolvió con muestra suficiente las bandas 25-34 (27%), 35-44 (24%) y 45-54 (18%), que suman 69%; las bandas 16-24, 55-64 y 65+ no tuvieron muestra suficiente para desagregarse y se dejan en 0 en vez de inventar un valor.",
+    "Top ciudades: GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "runner-colombia",
+      name: "Daniela Pardo",
+      archetype: "La Corredora Constante",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Corre o trota de forma habitual y su identidad gira alrededor de la salud y el bienestar más que del deporte competitivo: 63% está interesada en salud personal y 60% en alimentación saludable, por encima incluso del 55% interesado específicamente en fitness/ejercicio. Es una audiencia con alto consumo de TV (89%) pese a su perfil activo y digital.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha entre interés deportivo/saludable y conversión en ecommerce: 63% está interesada en salud personal y 63% en jugar/practicar deporte, pero solo 3.3% compró ropa o equipo deportivo online en el último mes (frente a 23% que sí compró ropa en general online) — la oportunidad de medios no es solo awareness de marca deportiva, sino resolver una fricción real de conversión online específica de la categoría deportiva, posiblemente con retail físico o activaciones experienciales.",
+        [
+          { label: "La conversión online de equipo deportivo es el cuello de botella, no el interés", detail: "3.3% compró ropa/equipo deportivo online en el último mes vs. 23% que compró ropa en general — la compra deportiva específica tiene una fricción mucho mayor que el ecommerce de moda genérico." },
+          { label: "Es 'salud' antes que 'deporte competitivo'", detail: "63% interesada en salud personal y 60% en alimentación saludable, ambos por encima del 55% interesado en fitness/ejercicio — el mensaje de marca rinde más si habla de bienestar integral que si habla solo de rendimiento deportivo." },
+          { label: "TV sigue siendo un canal de alcance masivo pese al perfil activo/digital", detail: "89% usa un televisor para ver TV en vivo — un plan 100% digital/social deja fuera un canal de alcance muy relevante para esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 52.9, female: 47.1 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 18 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en salud personal", pct: 63.1 },
+        { label: "Interesada en practicar/jugar deporte", pct: 62.9 },
+        { label: "Interesada en alimentación saludable / nutrición", pct: 59.6 },
+        { label: "Interesada en fitness y ejercicio", pct: 55.4 },
+      ],
+      barriers: [
+        { label: "Compró ropa o equipo deportivo online en el último mes (vs. 23% que compró ropa online en general)", pct: 3.3 },
+        { label: "Compró zapatillas/tenis online en el último mes", pct: 7.7 },
+      ],
+      digitalInterests: [
+        { label: "Interés en jugar deporte", index: 210 },
+        { label: "Interés en salud personal", index: 174 },
+        { label: "Interés en tecnología", index: 174 },
+      ],
+      media: [
+        { label: "Usa TV para ver TV en vivo", pct: 88.9 },
+        { label: "Usuaria heavy de streaming (Netflix, Hulu)", pct: 34 },
+        { label: "Usa redes sociales para buscar productos", pct: 38 },
+        { label: "Usa TikTok para contenido divertido/entretenimiento (entre usuarias de TikTok de esta audiencia)", pct: 85 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Parque / calle (trote matutino)", "Apps de running y música", "Spotify, apps de fitness", "Contenido motivacional para arrancar el día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes sociales", "Instagram, Facebook", "Contenido de marca deportiva/salud.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "TikTok", "Contenido de entretenimiento de marca.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / gimnasio", "Redes sociales", "Instagram", "Recordatorio de entrenamiento / reto deportivo.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / parque (segunda sesión)", "Redes y streaming", "Instagram, streaming", "Contenido de bienestar/nutrición.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y streaming", "TV, streaming", "Contenido de marca deportiva/salud en TV o streaming.", []),
+      ],
+    },
+  ],
+};
+
 
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
@@ -4401,7 +4624,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_RUNNING_GWI_AUTO_20261001],
   },
   {
     id: "retail",
@@ -4569,4 +4792,6 @@ const PERSONA_RELATED_TRAITS = {
   "familia-planificadora": ["reservaDirecto", "viajaConFamilia"],
   "profesional-remoto-optimizador": ["modalidadHibridaRemota", "optimizaFlujoPersonal"],
   "lider-equipo-hibrida": ["usaHerramientasDiario", "decideSoftwareEquipo"],
+  "hincha-visa-mundial-femenino-colombia": ["interesFutbol", "consumoDigitalDiario"],
+  "hincha-visa-futbol-regional-colombia": ["interesFutbol", "consumoDigitalDiario"],
 };

@@ -4372,6 +4372,170 @@ const CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927 = {
   ],
 };
 
+// ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — procesados 2026-10-02 por la rutina diaria de GWI.
+// Nota de transparencia (ambos casos): GWI devolvió datos reales y específicos
+// de la audiencia vía chat_gwi/explore_insight_gwi para demografía (edad,
+// género, universo) y, en el caso de Running, para motivaciones. Para
+// barreras, intereses digitales y medios, chat_gwi no devolvió un desglose
+// segmentado de esta audiencia pese a varios intentos de pregunta distintos
+// (siempre regresó a cifras de "todos los usuarios de internet" a nivel
+// global); esas cifras SÍ son reales (vienen de respuestas reales de GWI),
+// pero se marcan explícitamente como referencia global y no como dato
+// exclusivo de la audiencia -- ver footnotes de cada caso. No se fabricó
+// ningún número.
+// ---------------------------------------------------------------------------
+
+const CASE_RUNNING_COLOMBIA_GWI_AUTO_20261002 = {
+  id: "running-colombia",
+  name: "Corredores y runners digitales en Colombia",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-02)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) Running', audience_id 9376bd87-2273-4f23-b06b-9ece33f03631): colombianos que practican running/trote como actividad deportiva.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Running' en GWI (8,104,786) sobre la población digital de Colombia (31.06M)", pct: 26 },
+  ],
+  footnotes: [
+    "26% ≈ universo real de la audiencia en GWI (8,104,786 = 4,286,431 hombres + 3,818,355 mujeres, verificado vía explore_insight_gwi sobre la pregunta de género, muestra combinada 5,815) sobre la población digital total de Colombia (31.06M).",
+    "Edad: GWI solo devolvió con muestra suficiente 4 bandas (16-24: 18.9%, 25-34: 26.9%, 35-44: 24.3%, 45-54: 17.5%, que suman 87.6%, verificadas vía explore_insight_gwi); las bandas 55-64 y 65+ no tuvieron muestra suficiente para desagregarse y se dejan en 0 en vez de inventar un valor.",
+    "GWI no devolvió una desagregación por ciudad para esta audiencia (la pregunta no generó insights); se trata a nivel nacional Colombia.",
+    "Motivaciones tomadas 1:1 de esta audiencia real vía chat_gwi (comparación explícita runners vs. población general/fans deportivos).",
+    "Barreras y medios: GWI no devolvió datos segmentados específicos de esta audiencia para estos temas (cayó a cifras de 'todos los usuarios de internet' o de audiencias no relacionadas como 'consumidores de alcohol' pese a reformular la pregunta varias veces); las cifras mostradas son reales pero de referencia global, marcadas así explícitamente en cada etiqueta — no se presentan como exclusivas de esta audiencia.",
+    "Intereses digitales: se deja vacío (sin índice específico de la audiencia disponible) en vez de inventar un índice.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "corredor-digital-colombia",
+      name: "Camilo Restrepo",
+      archetype: "El Corredor Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Corre o trota como su principal actividad deportiva en Colombia. Ligeramente más hombre que mujer (53/47), concentrado en el rango 25-44 años (51% de la audiencia). No lo hace solo por estética: 65% participa en actividades al aire libre por razones de salud y fitness, y 55% encuentra en el ejercicio una fuente real de alegría y bienestar, no una obligación.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'ejercicio como bienestar, no como castigo': a diferencia del estereotipo del running orientado 100% a la estética, esta audiencia reporta joy/bienestar (55%) casi al mismo nivel que interés declarado en fitness (55%) — el mensaje de marca rinde más si se ancla en disfrute y salud mental que en transformación física.",
+        [
+          { label: "El running es una actividad al aire libre, no de gimnasio cerrado", detail: "65% participa en actividades al aire libre por salud y fitness — parques, rutas urbanas y espacios públicos son el entorno real de esta audiencia, más que el gimnasio techado." },
+          { label: "Rango de edad amplio pero concentrado en adultos activos", detail: "51% tiene entre 25 y 44 años (26.9% + 24.3%) — no es una audiencia dominada por adolescentes ni por adultos mayores, sino por adultos en edad laboral que integran el ejercicio a una rutina ya ocupada." },
+          { label: "Oportunidad de perfilar mejor más allá de la demografía", detail: "GWI no devolvió datos segmentados de barreras, medios o intereses digitales específicos de runners colombianos en esta corrida — vale la pena una consulta de seguimiento más puntual (ej. marcas de apps de running, horarios de entrenamiento) en una futura revisión editorial." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 52.9, female: 47.1 },
+        ageBands: [
+          { label: "16-24", pct: 18.9 },
+          { label: "25-34", pct: 26.9 },
+          { label: "35-44", pct: 24.3 },
+          { label: "45-54", pct: 17.5 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (nacional, sin desagregación por ciudad en los datos de GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en fitness y ejercicio", pct: 55 },
+        { label: "Participan en actividades al aire libre por razones de salud y fitness", pct: 65 },
+        { label: "Encuentran que el ejercicio y el deporte les traen alegría/bienestar", pct: 55 },
+      ],
+      barriers: [
+        { label: "Consideran que tener membresía de gimnasio es un lujo (cifra global de referencia de GWI, no específica de esta audiencia)", pct: 18 },
+        { label: "Hacen ejercicio menos de una vez al mes (cifra de fans deportivos a nivel global, no específica de esta audiencia)", pct: 8.3 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Usan redes sociales para encontrar contenido (cifra global de referencia de GWI, no específica de esta audiencia)", pct: 29 },
+        { label: "Pagaron una suscripción de streaming de video/TV en el último mes (cifra global de referencia)", pct: 32 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Parques y rutas urbanas (trote matutino)", "Apps de running y streaming de música", "Strava, Spotify, Instagram", "Contenido motivacional de rutina matutina.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes sociales", "Instagram, YouTube", "Reseñas de equipo deportivo y rutinas.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming y redes", "YouTube, Instagram", "Contenido de nutrición deportiva.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y podcasts", "Spotify, Instagram", "Recordatorio de rutina de tarde/gimnasio.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Parques / gimnasio (segunda sesión de ejercicio)", "Apps de fitness", "Strava, Instagram", "CTA a productos de recuperación/hidratación.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming", "Netflix, YouTube", "Contenido de descanso y planificación de la próxima carrera.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_JAGER_MODA_MEXICO_GWI_AUTO_20261002 = {
+  id: "subcultura-moda-mexico",
+  name: "Subcultura de moda en México (Jägermeister)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-02)",
+  insightNote:
+    "Audiencia real de GWI ('Jagermeister>Mexico>SubCul>Moda', audience_id 4cd791dc-3b94-45da-ae02-8e7cc9467119): mexicanos identificados por GWI dentro de una subcultura definida por su interés en moda.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'SubCul>Moda' en GWI (13,101,057) sobre la población digital de México (78.05M)", pct: 17 },
+  ],
+  footnotes: [
+    "17% ≈ universo real de la audiencia en GWI (13,101,057 = 8,642,288 mujeres + 4,458,769 hombres, verificado vía explore_insight_gwi sobre la pregunta de género, muestra combinada 5,036) sobre la población digital total de México (78.05M).",
+    "Edad: desglose completo devuelto por GWI (16-24: 32%, 25-34: 28%, 35-44: 19%, 45-54: 14%, 55-64: 7.3%, suman ~100%).",
+    "GWI no devolvió una desagregación por ciudad para esta audiencia (la pregunta no generó insights); se trata a nivel nacional México.",
+    "Motivaciones, barreras y medios: GWI no devolvió datos segmentados específicos de esta audiencia para estos temas vía chat_gwi pese a reformular la pregunta varias veces (cayó repetidamente a cifras de 'todos los usuarios de internet' a nivel global); las cifras mostradas son reales pero de referencia global sobre moda/compras, marcadas así explícitamente en cada etiqueta — no se presentan como exclusivas de esta audiencia.",
+    "Intereses digitales: se deja vacío (sin índice específico de la audiencia disponible) en vez de inventar un índice.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "exploradora-subcultura-moda-mexico",
+      name: "Ximena Torres",
+      archetype: "La Exploradora de Subculturas de Moda",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Mujer joven mexicana (66% de la audiencia es femenina, 36% más probable que el promedio) concentrada en el rango 16-34 años (60% de la audiencia). GWI la identifica dentro de una subcultura definida por su interés en moda, dato usado por marcas como Jägermeister para activaciones de estilo de vida más allá del consumo de alcohol en sí.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'marcas de bebidas como curadoras de subculturas': que una marca como Jägermeister tenga docked este segmento específicamente por afinidad de moda (no por consumo) sugiere que la estrategia de marca busca relevancia cultural/estilo de vida antes que mensaje de producto directo — el canal de entrada es la identidad de moda, no el punto de venta.",
+        [
+          { label: "Audiencia joven y mayoritariamente femenina", detail: "66% mujeres (36% más probable que el promedio) y 60% entre 16 y 34 años — el casting y el talento de cualquier activación debe reflejar ese sesgo demográfico real, no el perfil típico masculino asociado a licores." },
+          { label: "El dato es de afinidad cultural, no de consumo", detail: "La audiencia fue definida por GWI alrededor de moda/subcultura, no de hábitos de consumo de alcohol — cualquier mensaje debe entrar por estilo/identidad antes que por producto para no sentirse forzado." },
+          { label: "Falta profundidad de comportamiento específico", detail: "GWI no devolvió motivaciones, barreras ni medios segmentados para esta audiencia en esta corrida — una consulta de seguimiento más puntual (ej. plataformas de moda, creadores que sigue) ayudaría a construir el customer journey con datos propios en vez de referencia global." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 34.0, female: 66.0 },
+        ageBands: [
+          { label: "16-24", pct: 32 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 19 },
+          { label: "45-54", pct: 14 },
+          { label: "55-64", pct: 7.3 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "México (nacional, sin desagregación por ciudad en los datos de GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Se identifica como 'fashion-conscious' / con conciencia de moda (cifra global de referencia de GWI, no específica de esta audiencia)", pct: 27 },
+        { label: "Asocia los productos de lujo/diseñador con ser 'fashion forward' o marcar tendencia (cifra global de referencia)", pct: 33 },
+      ],
+      barriers: [
+        { label: "Se identifica como sensible al precio (price-conscious) al comprar (cifra global de referencia de GWI, no específica de esta audiencia)", pct: 41 },
+        { label: "Solo 3.7% se identifica como 'brand-loyalist' pese a que 46% dice ser leal a sus marcas favoritas — brecha entre lealtad declarada y comportamiento (cifra global de referencia)", pct: 3.7 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Prefiere comprar moda/ropa online (cifra global de referencia de GWI, no específica de esta audiencia)", pct: 58 },
+        { label: "Compró ropa en el último mes (cifra global de referencia)", pct: 47 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Contenido de moda/looks del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / escuela", "Redes sociales", "Instagram, Pinterest", "Inspiración de outfits.", []),
+        daypart("Medio día", "12 m a 3 pm", "Restaurantes / tiendas", "Redes y compras online", "Instagram Shopping", "Promociones de tiendas de ropa.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "TikTok, Instagram", "Contenido de creadores de moda/subcultura.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "Reels de moda/looks de noche.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / salidas sociales", "Redes sociales", "Instagram, TikTok", "CTA directo a compra de nueva colección.", []),
+      ],
+    },
+  ],
+};
+
 
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
@@ -4401,7 +4565,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_COLOMBIA_GWI_AUTO_20261002],
   },
   {
     id: "retail",
@@ -4414,7 +4578,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL],
+    cases: [CASE_RETAIL, CASE_JAGER_MODA_MEXICO_GWI_AUTO_20261002],
   },
   {
     id: "fintech",
@@ -4546,8 +4710,10 @@ const PERSONA_RELATED_TRAITS = {
   "colombiano-nostalgico": ["comunidadMigrante", "afinidadGenero"],
   "hincha-digital": ["interesFutbol", "consumoDigitalDiario"],
   "fan-familiar": ["planFamiliar", "compraBoletos"],
+  "corredor-digital-colombia": ["consumoDigitalDiario"],
   "sneakerhead-early-adopter": ["modaUrbana", "sigueMarcas"],
   "compradora-consciente": ["compraOnline", "sensibilidadPrecio"],
+  "exploradora-subcultura-moda-mexico": ["modaUrbana", "sensibilidadPrecio"],
   "early-adopter-fintech": ["pruebaMultiples", "abiertoCambiar"],
   "migrante-bancario": ["usaAppsFin", "migraEfectivo"],
   "explorador-cocteleria": ["pruebaBebidasNuevas", "consumePremium"],

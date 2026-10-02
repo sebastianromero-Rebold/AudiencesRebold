@@ -121,6 +121,16 @@ tiene dos estados posibles:
   el mecanismo natural para ir llenando `CATALOG_ANALYSIS_LINKS`
   automáticamente en vez de hacerlo a mano.
 
+## Fecha de carga, filtro por mes y caché
+
+- Cada audiencia analizada lleva `analyzedAt: "YYYY-MM-DD"` en `CATALOG_ANALYSIS_LINKS`
+  ([`js/gwiCatalog.js`](js/gwiCatalog.js)) -- la fecha en que se cargó a la app. El catálogo la
+  muestra por fila y en el detalle, y el selector **"Mes de carga en la app"** filtra por mes.
+  La rutina diaria de GWI debe escribir este campo en cada audiencia nueva.
+- `index.html` carga `data.js`, `gwiCatalog.js`, `app.js`, etc. con un parámetro `?v=<timestamp>`
+  único por visita, para que el navegador (también el celular) nunca use una versión vieja en
+  caché tras publicar cambios.
+
 ## Panel de insights de IA
 
 Cada persona trae un campo `aiInsight` en `js/data.js` con un `summary` (cruce

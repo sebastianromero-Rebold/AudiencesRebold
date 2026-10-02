@@ -31,6 +31,7 @@ const state = {
   catalogQuery: "",
   catalogTypeFilter: "todas", // "todas" | "authored" | "shared" | "curated" | "analizadas"
   catalogSelectedId: null,
+  catalogMonth: "todos", // "todos" | "YYYY-MM" (mes en que se cargó el análisis en la app)
   gslidesStatus: null, // texto de progreso mientras se sube a Google Slides, o null si está inactivo
   gslidesError: null,
 };
@@ -648,20 +649,60 @@ function catalogMatches(a, q) {
   return q.toLowerCase().split(/\s+/).filter(Boolean).every((term) => hay.includes(term));
 }
 
+const MONTH_NAMES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+// analyzedAt viene como "YYYY-MM-DD" en CATALOG_ANALYSIS_LINKS (lo escribe la rutina diaria de GWI).
+function analyzedAtOf(id) {
+  const l = CATALOG_ANALYSIS_LINKS[id];
+  return (l && l.analyzedAt) || "";
+}
+
+function formatDateShort(iso) {
+  if (!iso) return "—";
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${d} ${MONTH_NAMES[m - 1].slice(0, 3)} ${y}`;
+}
+
+function formatDateLong(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${d} de ${MONTH_NAMES[m - 1]} de ${y}`;
+}
+
+function monthLabel(ym) {
+  const [y, m] = ym.split("-").map(Number);
+  const name = MONTH_NAMES[m - 1];
+  return `${name.charAt(0).toUpperCase()}${name.slice(1)} ${y}`;
+}
+
 function renderCatalog() {
   const q = state.catalogQuery.trim();
   const typeFilter = state.catalogTypeFilter;
+  const monthFilter = state.catalogMonth;
+
+  const monthCounts = {};
+  GWI_AUDIENCE_CATALOG.forEach((a) => {
+    const d = analyzedAtOf(a.id);
+    if (d) monthCounts[d.slice(0, 7)] = (monthCounts[d.slice(0, 7)] || 0) + 1;
+  });
+  const months = Object.keys(monthCounts).sort().reverse();
+
   const matchesTypeFilter = (a) => {
     if (typeFilter === "todas") return true;
     if (typeFilter === "analizadas") return Boolean(CATALOG_ANALYSIS_LINKS[a.id]);
     return a.type === typeFilter;
   };
-  let filtered = GWI_AUDIENCE_CATALOG.filter((a) => catalogMatches(a, q) && matchesTypeFilter(a));
-  if (typeFilter === "analizadas") {
-    // GWI_AUDIENCE_CATALOG se va llenando por orden de llegada (lotes más nuevos al final) —
-    // invertir muestra primero las analizadas más recientes, sin depender de un fetch aparte
-    // al manifest de fechas.
-    filtered = filtered.slice().reverse();
+  const matchesMonth = (a) => monthFilter === "todos" || analyzedAtOf(a.id).slice(0, 7) === monthFilter;
+  let filtered = GWI_AUDIENCE_CATALOG.filter((a) => catalogMatches(a, q) && matchesTypeFilter(a) && matchesMonth(a));
+  if (typeFilter === "analizadas" || monthFilter !== "todos") {
+    // Más recientes primero: por fecha de carga; a igual fecha, el orden de llegada al catálogo
+    // (los lotes nuevos se agregan al final de GWI_AUDIENCE_CATALOG).
+    const order = new Map(GWI_AUDIENCE_CATALOG.map((a, i) => [a.id, i]));
+    filtered = filtered.slice().sort((a, b) => {
+      const da = analyzedAtOf(a.id);
+      const db = analyzedAtOf(b.id);
+      if (da !== db) return da < db ? 1 : -1;
+      return order.get(b.id) - order.get(a.id);
+    });
   }
   const showLimit = 60;
   const shown = filtered.slice(0, showLimit);
@@ -696,11 +737,17 @@ function renderCatalog() {
             ${t === "todas" ? "Todas" : t === "analizadas" ? "✓ Analizadas" : CATALOG_TYPE_LABEL[t]} (${typeCounts[t]})
           </div>`).join("")}
       </div>
-      ${typeFilter === "analizadas" ? `
-        <p style="font-size:11.5px;color:var(--muted);margin:-8px 0 14px;">
+      <div style="display:flex;align-items:center;gap:8px;margin:-4px 0 14px;flex-wrap:wrap;">
+        <label for="catalog-month" style="font-size:12px;color:var(--muted);">Mes de carga en la app:</label>
+        <select id="catalog-month" style="padding:7px 12px;border-radius:999px;border:1.5px solid var(--border);font-size:12.5px;font-family:inherit;background:var(--surface,#fff);">
+          <option value="todos" ${monthFilter === "todos" ? "selected" : ""}>Todos los meses</option>
+          ${months.map((ym) => `<option value="${ym}" ${monthFilter === ym ? "selected" : ""}>${monthLabel(ym)} (${monthCounts[ym]})</option>`).join("")}
+        </select>
+      </div>
+      ${typeFilter === "analizadas" || monthFilter !== "todos" ? `
+        <p style="font-size:11.5px;color:var(--muted);margin:-6px 0 14px;">
           Audiencias con perfil ya construido en el aplicativo (demografía, motivadores, journey) —
-          ordenadas con las más recientes primero, para revisar rápido lo que agregó la última
-          actualización de la rutina diaria de GWI.
+          ordenadas con las más recientes primero, según la fecha en que se cargaron a la app.
         </p>
       ` : ""}
       <div style="max-height:420px;overflow-y:auto;">
@@ -708,13 +755,14 @@ function renderCatalog() {
           const linked = CATALOG_ANALYSIS_LINKS[a.id];
           const parts = a.title.split(">").map((s) => s.trim());
           return `
-          <div class="hist-row" style="grid-template-columns:1fr 120px 90px;cursor:pointer;" data-catalog-select="${a.id}">
+          <div class="hist-row" style="grid-template-columns:1fr 110px 90px 84px;cursor:pointer;" data-catalog-select="${a.id}">
             <div>
               <div class="name">${escapeHtml(parts[parts.length - 1])}</div>
               <div class="meta">${escapeHtml(parts.slice(0, -1).join(" › ") || a.client)}</div>
             </div>
             <div class="pill">${CATALOG_TYPE_LABEL[a.type]}</div>
             <div class="pill" style="background:${linked ? "var(--accent-soft)" : "var(--surface-alt)"};">${linked ? "✓ Analizada" : "Pendiente"}</div>
+            <div style="font-size:11px;color:var(--muted);text-align:right;" title="Fecha de carga en la app">${formatDateShort(analyzedAtOf(a.id))}</div>
           </div>`;
         }).join("")}
       </div>
@@ -733,6 +781,7 @@ function renderCatalogDetail(a) {
       <div class="section-title">Detalle de la audiencia</div>
       <h3 style="margin-bottom:4px;">${escapeHtml(parts[parts.length - 1])}</h3>
       <p style="color:var(--muted);font-size:12px;margin-bottom:10px;">${escapeHtml(parts.slice(0, -1).join(" › ") || a.client)} · ${CATALOG_TYPE_LABEL[a.type]} · dataset(s): ${a.datasets.join(", ")}</p>
+      ${analyzedAtOf(a.id) ? `<p style="font-size:12px;color:var(--muted);margin-bottom:10px;">Cargada en la app el ${formatDateLong(analyzedAtOf(a.id))}</p>` : ""}
       ${a.description ? `<p style="font-size:13px;margin-bottom:14px;">${escapeHtml(a.description)}</p>` : `<p style="font-size:12.5px;color:var(--muted);margin-bottom:14px;">Esta audiencia no tiene descripción registrada en GWI — el nombre es la única referencia disponible.</p>`}
       <p style="font-size:10.5px;color:var(--muted);margin-bottom:14px;">audience_id: <code>${a.id}</code></p>
 
@@ -956,6 +1005,11 @@ function bindEvents() {
       if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
     });
   }
+  const catalogMonth = document.getElementById("catalog-month");
+  if (catalogMonth) catalogMonth.addEventListener("change", (e) => {
+    state.catalogMonth = e.target.value;
+    render();
+  });
   document.querySelectorAll("[data-catalog-type]").forEach((el) =>
     el.addEventListener("click", () => {
       state.catalogTypeFilter = el.dataset.catalogType;

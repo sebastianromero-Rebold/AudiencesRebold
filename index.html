@@ -15,10 +15,21 @@
 
   <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script src="js/data.js"></script>
-  <script src="js/gwiCatalog.js"></script>
-  <script src="js/pptxExport.js"></script>
-  <script src="js/googleSlidesExport.js"></script>
-  <script src="js/app.js"></script>
+  <script>
+    // Anti-caché: cada carga pide los archivos propios con un parámetro único, así el navegador
+    // (incluido el celular) siempre ve la versión más reciente publicada, sin refrescar a mano.
+    // async=false conserva el orden de ejecución (data -> catálogo -> exports -> app).
+    (function () {
+      var v = Date.now();
+      var css = document.querySelector('link[href="css/app.css"]');
+      if (css) css.href = "css/app.css?v=" + v;
+      ["js/data.js", "js/gwiCatalog.js", "js/pptxExport.js", "js/googleSlidesExport.js", "js/app.js"].forEach(function (src) {
+        var el = document.createElement("script");
+        el.src = src + "?v=" + v;
+        el.async = false;
+        document.body.appendChild(el);
+      });
+    })();
+  </script>
 </body>
 </html>

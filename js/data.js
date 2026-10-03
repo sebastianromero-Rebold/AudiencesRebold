@@ -4951,6 +4951,255 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
   ],
 };
 
+const CASE_BUNBURY_ROCK_BOGOTA_GWI_AUTO_20261003 = {
+  id: "bunbury-rock-bogota-colombia",
+  name: "Fans del rock en vivo en Bogotá (gira Bunbury 2026)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-03)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) Bunbury26_Bogotá', audience_id 3638088a-85b7-4960-a7a8-294fceb83549): personas en Bogotá/Cundinamarca que escuchan música para evocar buenos recuerdos o apoyar a sus artistas favoritos, han comprado o planean comprar boletos de concierto, y les gusta el rock.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (2,050,938) sobre la población digital de Colombia (31.06M)", pct: 6.6 },
+  ],
+  footnotes: [
+    "6.6% = universo real de la audiencia en GWI (1,067,219 mujeres + 983,719 hombres = 2,050,938), verificado vía explore_insight_gwi sobre la pregunta de género, sobre la población digital total de Colombia (31.06M).",
+    "Género y edad verificados 1:1 vía explore_insight_gwi. Los rangos 16-24, 55-64 y 65+ no fueron devueltos por GWI con muestra suficiente (los 3 rangos reportados suman 76.9%); se dejan en 0 por ausencia de dato, no como cifra real reportada.",
+    "GWI no devolvió una pregunta de barreras/frenos dedicada para esta audiencia — se usa como barrera la brecha real entre el 88.5% que declara interés en eventos en vivo y el 30.0% que efectivamente compró boletos de concierto en los últimos 3-6 meses (ambas cifras verificadas vía explore_insight_gwi).",
+    "Top ciudades: la audiencia está definida por GWI exclusivamente dentro del Distrito Capital de Bogotá/Cundinamarca — no hay desagregación adicional disponible.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-rock-bunbury-bogota",
+      name: "Daniela Ortiz",
+      archetype: "La Melómana del Rock en Vivo",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Bogotana ligeramente más mujer (52%) que hombre (48%), concentrada entre los 25 y 54 años, que escucha música para evocar buenos recuerdos y apoyar a sus artistas favoritos. Su interés en vivir eventos en vivo es altísimo (88.5%), pero la conversión real a compra de boletos es mucho menor (30%) — la oportunidad de marca está en cerrar esa brecha, no en generar más interés.",
+      aiInsight: aiInsight(
+        "Cruza con una brecha de conversión entre el interés declarado y la compra real: 88.5% de esta audiencia está interesada en eventos en vivo como festivales de música (índice 229 frente al promedio), pero solo el 30.0% compró boletos de concierto en los últimos 3-6 meses — la demanda latente supera por mucho la conversión actual, lo que sugiere que el freno no es de interés sino de fricción de acceso (precio, disponibilidad, proceso de compra). Su interés cultural también va más allá de la música: 57.2% está interesada en museos/galerías y 55.2% en teatro, ambos muy por encima del promedio, abriendo espacio a patrocinios culturales cruzados.",
+        [
+          { label: "Brecha entre interés y compra real", detail: "88.5% interesados en eventos en vivo (índice 229) vs. solo 30.0% que compró boletos de concierto en los últimos 3-6 meses (índice 196) — las campañas deberían enfocarse en reducir fricción de compra (facilidad, financiamiento, recordatorios) más que en generar más interés, que ya es alto." },
+          { label: "Consumidora cultural amplia, no solo de rock", detail: "57.2% interesada en museos/galerías (índice 146) y 55.2% en teatro (índice 190), ambos muy por encima del promedio — patrocinios y co-branding con espacios culturales, no solo venues de concierto, pueden ampliar el alcance de marca." },
+          { label: "Canal de descubrimiento: Spotify + Instagram", detail: "69.4% usó Spotify el último mes y 72.7% usa Instagram para publicar/compartir fotos o videos — la estrategia de medios debe anclarse en estas dos plataformas combinadas antes que en TV o medios tradicionales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48.0, female: 52.0 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 28.8 },
+          { label: "35-44", pct: 25.6 },
+          { label: "45-54", pct: 22.5 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá D.C. / Cundinamarca — único ámbito geográfico definido para esta audiencia en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 88.5 },
+        { label: "Siempre tiene música sonando en su día a día", pct: 84.9 },
+        { label: "Prefiere escuchar amplia variedad de canciones de los artistas que le apasionan", pct: 77.0 },
+        { label: "Es apasionada por una amplia variedad de artistas/bandas", pct: 75.8 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto en los últimos 3-6 meses (frente al 88.5% que declara interés en eventos en vivo) — brecha entre interés y compra real", pct: 30.0 },
+        { label: "Neutral sobre estar siempre en búsqueda activa de nuevos eventos en vivo", pct: 51.9 },
+      ],
+      digitalInterests: [
+        { label: "Interés en museos/galerías", index: 146 },
+        { label: "Interés en teatro", index: 190 },
+        { label: "Interés en libros/literatura", index: 120 },
+      ],
+      media: [
+        { label: "Usa Instagram para publicar/compartir fotos o videos", pct: 72.7 },
+        { label: "Usó Spotify el último mes", pct: 69.4 },
+        { label: "Ve YouTube más de una vez al día", pct: 65.8 },
+        { label: "Usa Facebook para publicar/compartir fotos o videos", pct: 62.3 },
+        { label: "Usa Facebook más de una vez al día", pct: 44.8 },
+        { label: "Usa Instagram más de una vez al día", pct: 42.7 },
+        { label: "Usa TikTok más de una vez al día", pct: 34.6 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Streaming de audio y redes", "Spotify, Instagram", "Playlist matutina y revisión de novedades de artistas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / universidad", "Redes sociales", "Instagram, YouTube", "Contenido cultural: teatro, museos, música.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y mensajería", "Instagram, WhatsApp", "Comparte planes culturales con amigos.", []),
+        daypart("La tarde", "3 a 6 pm", "Oficina / transporte", "Streaming de audio", "Spotify, YouTube Music", "Playlist de la tarde y descubrimiento musical.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video y redes", "Netflix, Instagram", "Revisión de agenda de conciertos o eventos próximos.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / venue", "Streaming y redes", "Spotify, Instagram, Netflix", "Concierto en vivo o contenido cultural en streaming.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FORMULA1_GWI_AUTO_20261003 = {
+  id: "aficionados-formula1-colombia",
+  name: "Aficionados a la Fórmula 1 en Colombia",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-03)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) LABF1_', audience_id 5217f851-da09-4802-b0d3-a4a57ad9b4c9): colombianos interesados en ver deportes o que son aficionados al deporte, con interés en la Fórmula 1, incluyendo verla en vivo o seguir sus noticias/resúmenes.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (4,522,005) sobre la población digital de Colombia (31.06M)", pct: 14.6 },
+  ],
+  footnotes: [
+    "14.6% = universo real de la audiencia en GWI (3,460,612 hombres + 1,061,393 mujeres = 4,522,005), verificado vía explore_insight_gwi sobre la pregunta de género, sobre la población digital total de Colombia (31.06M).",
+    "Género y edad verificados 1:1 vía explore_insight_gwi. Los rangos reportados (16-24, 25-34, 35-44, 45-54) suman 85.0%; 55-64 y 65+ no fueron devueltos por GWI con muestra suficiente y se dejan en 0.",
+    "GWI no devolvió una pregunta de barreras/frenos dedicada para esta audiencia (la pregunta sobre disposición a pagar por streaming deportivo no arrojó datos) — se usa como único freno verificado el fuerte sesgo de género (76.5% hombres vs. 23.5% mujeres, índice 48.5 para mujeres), que limita el alcance de la categoría entre audiencias femeninas.",
+    "Top ciudades: GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "aficionado-formula1-colombia",
+      name: "Camilo Restrepo",
+      archetype: "El Entusiasta del Motorsport",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano mayoritariamente hombre (76.5%), con presencia relativamente pareja entre los 16 y 54 años. Su interés por la Fórmula 1 no es aislado: forma parte de un perfil de fanático del deporte en general (96.2% interesado en ver deporte) y de la tecnología (82.9%), más que de un nicho exclusivo de motorsport.",
+      aiInsight: aiInsight(
+        "Cruza con el hecho de que el interés en Fórmula 1 va de la mano de un interés generalizado por el deporte y la tecnología: 96.2% está interesado en ver deporte en general (índice 318) y 82.9% en tecnología (índice 202) — no es un nicho aislado de motorsport sino parte de un consumidor 'deporte + tech' amplio. El fuerte sesgo masculino (76.5% hombres, solo 23.5% mujeres) sugiere una oportunidad de activación diferenciada si una marca busca ampliar su alcance femenino en la categoría.",
+        [
+          { label: "No es un nicho aislado: es un fan del deporte en general", detail: "96.2% interesado en ver deporte en general (índice 318) y 70.8% en practicar deporte (índice 236) — el contenido de marca debe conectar la Fórmula 1 con el ecosistema deportivo amplio, no solo con las carreras." },
+          { label: "Perfil tech-forward", detail: "82.9% interesado en tecnología (índice 202) y 55.5% en computadores/programación (índice 222) — activaciones de marca con enfoque en innovación/ingeniería del automovilismo resuenan más que el glamour tradicional del deporte." },
+          { label: "Audiencia fuertemente masculina: oportunidad de alcance", detail: "Solo 23.5% de esta audiencia son mujeres (índice 48.5) — una estrategia de contenido dirigida explícitamente a mujeres aficionadas al motorsport podría capturar una audiencia desatendida." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 76.5, female: 23.5 },
+        ageBands: [
+          { label: "16-24", pct: 19.6 },
+          { label: "25-34", pct: 22.8 },
+          { label: "35-44", pct: 24.1 },
+          { label: "45-54", pct: 18.5 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en ver deporte en general", pct: 96.2 },
+        { label: "Muy interesado en la Fórmula 1", pct: 55.1 },
+        { label: "Interesado en practicar deporte", pct: 70.8 },
+        { label: "Interesado en autos/motorización", pct: 60.8 },
+      ],
+      barriers: [
+        { label: "Son mujeres (frente al 76.5% que son hombres) — sesgo de género fuerte que limita el alcance de la categoría entre audiencias femeninas", pct: 23.5 },
+      ],
+      digitalInterests: [
+        { label: "Interés en tecnología", index: 202 },
+        { label: "Interés en ciencia", index: 179 },
+        { label: "Interés en computadores/programación", index: 222 },
+      ],
+      media: [
+        { label: "Heavy user de streaming de música", pct: 53.0 },
+        { label: "Heavy user de redes sociales (posts/historias/ads)", pct: 52.5 },
+        { label: "Heavy user de videos cortos tipo reels/TikTok", pct: 44.6 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 35.2 },
+        { label: "Heavy user de TV abierta", pct: 31.7 },
+        { label: "Publicó sobre deportes en línea en el último mes", pct: 27.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Redes y noticias deportivas", "Instagram, YouTube", "Resumen de clasificación o noticias de la categoría.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, X", "Debate sobre resultados y tecnología de los autos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina", "Streaming de música", "Spotify", "Música de fondo mientras trabaja.", []),
+        daypart("La tarde", "3 a 6 pm", "Oficina / transporte", "Redes y video corto", "TikTok, Instagram Reels", "Clips de highlights y contenido de tecnología automotriz.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Documentales o contenido de motorsport.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y streaming en vivo", "TV abierta, apps de streaming deportivo", "Transmisión en vivo de carrera o evento deportivo.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FRANQUICIAS_PAGO_GWI_AUTO_20261003 = {
+  id: "usuarios-franquicias-pago-colombia",
+  name: "Usuarios activos de tarjetas y franquicias de pago (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-03)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) UsanFranquicias', audience_id 188180cb-6e38-4461-ba94-492bcc5ae292): colombianos con tarjeta de crédito o cuenta bancaria que usaron American Express, Mastercard o Visa en el último mes.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (10,853,652) sobre la población digital de Colombia (31.06M)", pct: 34.9 },
+  ],
+  footnotes: [
+    "34.9% = universo real de la audiencia en GWI (5,884,280 hombres + 4,969,372 mujeres = 10,853,652), verificado vía explore_insight_gwi sobre la pregunta de género, sobre la población digital total de Colombia (31.06M).",
+    "Género y edad verificados 1:1 vía explore_insight_gwi. Los rangos reportados (16-24, 25-34, 35-44, 45-54) suman 86.7%; 55-64 y 65+ no fueron devueltos por GWI con muestra suficiente y se dejan en 0.",
+    "Las cifras de barreras (presupuesto limitado, flexibilidad de pago limitada) provienen de una submuestra de tomadores de decisión B2B dentro de esta audiencia (cruce con el dataset GWI Work) — no representan a la audiencia general de consumidores, se marcan explícitamente como tal.",
+    "Top ciudades: GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "usuario-franquicias-pago-colombia",
+      name: "Mariana Gómez",
+      archetype: "La Usuaria Bancarizada Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana bancarizada y activa financieramente (54.2% hombres, 45.8% mujeres), con mayor concentración entre los 25 y 44 años. Usa simultáneamente tarjetas tradicionales (Visa, Mastercard) y billeteras digitales locales como Nequi — el 75.2% de esta audiencia también usó Nequi en el último mes, mostrando que el comportamiento real es multi-método, no de sustitución.",
+      aiInsight: aiInsight(
+        "Cruza con el hallazgo de que el uso de franquicias de pago tradicionales (Visa/Mastercard) coexiste con una adopción masiva de billeteras digitales locales: 75.2% de esta audiencia también usó Nequi el último mes — la relación entre tarjeta tradicional y billetera digital no es de competencia sino de complementariedad; el mensaje de marca debería integrarlas en vez de posicionarlas como alternativas opuestas.",
+        [
+          { label: "Tarjetas tradicionales y billeteras digitales se usan juntas, no en competencia", detail: "75.2% de quienes usan Visa/Mastercard/Amex también usó Nequi el último mes — el comportamiento real es multi-método; los programas de fidelización deberían premiar el uso combinado en vez de competir por exclusividad." },
+          { label: "Alta disposición a pagar por contenido digital premium", detail: "59.3% pagó una suscripción de streaming de video y 37.7% de streaming de música el último mes — un consumidor financiero activo también es un consumidor digital premium, abriendo espacio a alianzas de cashback o suscripciones incluidas." },
+          { label: "WhatsApp como canal de servicio financiero", detail: "73.6% usa WhatsApp más de una vez al día (índice 220) — sigue siendo el canal de mayor alcance diario para notificaciones transaccionales, soporte y promociones, por encima de apps bancarias nativas." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 54.2, female: 45.8 },
+        ageBands: [
+          { label: "16-24", pct: 17.2 },
+          { label: "25-34", pct: 26.7 },
+          { label: "35-44", pct: 24.3 },
+          { label: "45-54", pct: 18.5 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Usó Nequi en el último mes", pct: 75.2 },
+        { label: "Usó Mastercard en el último mes", pct: 66.8 },
+        { label: "Usó Visa en el último mes", pct: 57.4 },
+        { label: "Prefiere un proceso de pago en línea rápido y sencillo", pct: 47.0 },
+      ],
+      barriers: [
+        { label: "Identifica el presupuesto limitado como uno de los mayores retos al hacer compras B2B para su empresa (submuestra de tomadores de decisión, dataset GWI Work)", pct: 31.9 },
+        { label: "Identifica la flexibilidad de pago limitada como uno de los mayores retos al hacer compras B2B (submuestra de tomadores de decisión, dataset GWI Work)", pct: 22.8 },
+      ],
+      digitalInterests: [
+        { label: "Interés en tecnología", index: 165 },
+        { label: "Interés en ciencia", index: 142 },
+        { label: "Interés en naturaleza/vida silvestre", index: 128 },
+      ],
+      media: [
+        { label: "Usa WhatsApp más de una vez al día", pct: 73.6 },
+        { label: "Pagó una suscripción de streaming de video el último mes", pct: 59.3 },
+        { label: "Pagó una suscripción de streaming de música el último mes", pct: 37.7 },
+        { label: "Usa Instagram más de una vez al día", pct: 42.0 },
+        { label: "Usa Facebook más de una vez al día", pct: 39.6 },
+        { label: "Usa TikTok más de una vez al día", pct: 33.5 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Apps y mensajería", "App del banco, WhatsApp", "Revisión de movimientos y notificaciones transaccionales.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Apps de pago y redes", "App de pagos, Instagram", "Pagos o transferencias del día.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Mensajería", "WhatsApp", "Pago de almuerzo o compras con tarjeta o billetera digital.", []),
+        daypart("La tarde", "3 a 6 pm", "Oficina / transporte", "Redes sociales", "Instagram, Facebook", "Explora ofertas o promociones de marcas.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Servicio de streaming de video", "Consume contenido de entretenimiento pagado.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de música y mensajería", "Streaming de música, WhatsApp", "Música de fondo y comunicación con familia o amigos.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -4966,7 +5215,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_ROCK_BOGOTA_GWI_AUTO_20261003],
   },
   {
     id: "deportes",
@@ -4979,7 +5228,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_GWI_AUTO_20261003],
   },
   {
     id: "retail",
@@ -5005,7 +5254,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_FRANQUICIAS_PAGO_GWI_AUTO_20261003],
   },
   {
     id: "alcohol",

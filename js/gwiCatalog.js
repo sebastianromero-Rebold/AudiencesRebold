@@ -285,6 +285,10 @@ const GWI_AUDIENCE_CATALOG = [
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   { id: "f6b86121-2a79-4c58-bc01-687e56872caf", title: "Páramo LAB (co) VIsa_FIFACOPADEMUJERES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used Visa last month or Visa Click to Pay in the last month, and are interested in or follow news about or watch highlights of or watch live the FIFA Football World Cup (Women's) on a streaming service or TV channel." },
   { id: "125b6af2-254a-4b92-a9df-17f480d3c03b", title: "Páramo LAB (co) VIsa_FIFASOLOHOMBRES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used either Visa or Visa Click to Pay in the last month, and are not interested in or do not follow news about or watch the FIFA Football World Cup (Women's) in any format." },
+  // Añadidas por la automatización diaria de GWI el 2026-10-03.
+  { id: "3638088a-85b7-4960-a7a8-294fceb83549", title: "Páramo (co) Bunbury26_Bogotá", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, listen to music to remind them of good memories and lift their mood or support their favorite artists, have purchased concert tickets online or are planning to purchase concert tickets in the next 3-6 months or are interested in live events like music festivals, like listening to rock music, and live in the Capital District." },
+  { id: "5217f851-da09-4802-b0d3-a4a57ad9b4c9", title: "Paramo (co) LABF1_", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have an interest in watching sports or are sports fans, as well as being interested in Formula 1 or watching Formula 1 live on a TV channel or streaming service or following highlights and news about Formula 1." },
+  { id: "188180cb-6e38-4461-ba94-492bcc5ae292", title: "Paramo (co) UsanFranquicias", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have either a credit card or a bank account, and have used either American Express, Mastercard, Visa in the last month, or have used Diners Club in Bulgaria and Croatia in the last month." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -342,4 +346,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   "f6b86121-2a79-4c58-bc01-687e56872caf": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-mundial-femenino-colombia", analyzedAt: "2026-10-01" },
   "125b6af2-254a-4b92-a9df-17f480d3c03b": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-futbol-regional-colombia", analyzedAt: "2026-10-01" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-03.
+  "3638088a-85b7-4960-a7a8-294fceb83549": { categoryId: "entretenimiento", caseId: "bunbury-rock-bogota-colombia", personaId: "fan-rock-bunbury-bogota", analyzedAt: "2026-10-03" },
+  "5217f851-da09-4802-b0d3-a4a57ad9b4c9": { categoryId: "deportes", caseId: "aficionados-formula1-colombia", personaId: "aficionado-formula1-colombia", analyzedAt: "2026-10-03" },
+  "188180cb-6e38-4461-ba94-492bcc5ae292": { categoryId: "fintech", caseId: "usuarios-franquicias-pago-colombia", personaId: "usuario-franquicias-pago-colombia", analyzedAt: "2026-10-03" },
 };

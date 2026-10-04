@@ -4952,6 +4952,267 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO GWI-AUTO — ParamoCo>Rosalía>TopPop, procesado 2026-10-04. Audiencia real
+// de GWI (audience_id c00d7c48-d31b-4459-b70c-2c7b47f3a5ea) de colombianos
+// interesados en eventos en vivo con afinidad por Pop/Top40 (perfil asociado a
+// campañas de Rosalía). Caso de una sola persona (sharePct 100).
+// ---------------------------------------------------------------------------
+const CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004 = {
+  id: "rosalia-toppop-fans-colombia",
+  name: "Fans de Rosalía / Pop Top40 en Colombia",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-04)",
+  insightNote:
+    "Audiencia real de GWI ('ParamoCo>Rosalía>TopPop', audience_id c00d7c48-d31b-4459-b70c-2c7b47f3a5ea): colombianos interesados en eventos en vivo como festivales de música, con afinidad por Pop/Top40.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo + afinidad con Pop/Top40 (Colombia)", pct: 9.6 },
+  ],
+  footnotes: [
+    "9.6% = universo real de GWI (2,974,275 personas, verificado vía explore_insight_gwi sobre la base total de la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género y edad) y gustos musicales (Pop/Top40, Latina, EDM, rock, 90s) verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de esta audiencia.",
+    "GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia.",
+    "Varias cifras que chat_gwi narró inicialmente como 'barreras' (p. ej. dificultad para descubrir música nueva, o no buscar siempre nuevos eventos en vivo) resultaron con índice igual o mejor al promedio al verificarlas con explore_insight_gwi (es decir, describen una fortaleza de esta audiencia, no un freno) — se descartaron por completo en vez de forzarlas como barreras.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-rosalia-toppop-colombia",
+      name: "Valentina Castro",
+      archetype: "La Fan Pop Multi-Género",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive pendiente de la cartelera de festivales y conciertos pop en Colombia. El Pop/Top40 es su género de entrada, pero su gusto musical es amplio: también escucha rock, música de los 90 y EDM, y es heavy user de streaming de música.",
+      aiInsight: aiInsight(
+        "Cruza con una audiencia 'pop' que en realidad es genre-fluid: aunque el 100% afirma gustar de Pop/Top40 (criterio que define la audiencia), el 60.7% también escucha rock, 62.6% música de los 90 y 47% EDM/Dance — un plan de medios anclado solo en line-ups 100% pop deja fuera a una audiencia que ya cruza géneros de forma natural. Sumado a que es heavy user de streaming de música (58.1%) y de redes sociales, la oportunidad está en activaciones cross-género en streaming de audio más que en inventario exclusivo de un solo festival.",
+        [
+          { label: "Pop como puerta de entrada, no como límite", detail: "60.7% también escucha rock, 62.6% música de los 90 y 47% EDM/Dance — vale la pena evaluar line-ups o playlists cruzadas en vez de inventario 100% pop." },
+          { label: "Heavy user de streaming de música", detail: "58.1% es heavy user de streaming de música — las activaciones de marca rinden mejor dentro de plataformas de audio (playlists patrocinadas, pre-roll) que en medios genéricos." },
+          { label: "Instagram y Facebook empatados como canal diario", detail: "23.2% usa Instagram a diario y 23.1% Facebook, con TikTok cerca (19.8%) — ningún canal domina de forma aplastante, así que la pauta digital debe repartirse entre los tres en vez de concentrarse en uno solo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 39.8, female: 60.2 },
+        ageBands: [
+          { label: "16-24", pct: 26.0 },
+          { label: "25-34", pct: 30.2 },
+          { label: "35-44", pct: 22.1 },
+          { label: "45-54", pct: 14.4 },
+          { label: "55-64", pct: 7.2 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Le gusta escuchar Pop/Top40 (define la audiencia)", pct: 100 },
+        { label: "Le gusta escuchar música Latina", pct: 74.3 },
+        { label: "Es heavy user de streaming de música", pct: 58.1 },
+        { label: "Le gusta escuchar EDM/Dance (House, Techno)", pct: 47.0 },
+      ],
+      barriers: [],
+      digitalInterests: [
+        { label: "Interés en tecnología", index: 172.5 },
+        { label: "Interés en cine/películas", index: 183.5 },
+        { label: "Interés en gaming", index: 165.5 },
+        { label: "Interés en fotografía", index: 180.5 },
+      ],
+      media: [
+        { label: "Instagram (uso diario)", pct: 23.2 },
+        { label: "Facebook (uso diario)", pct: 23.1 },
+        { label: "TikTok (uso diario)", pct: 19.8 },
+        { label: "WhatsApp (uso diario)", pct: 12.1 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Streaming de música y redes", "Spotify/streaming, Instagram", "Playlist matutina + anuncio de próximos lanzamientos.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, Facebook", "Clips de nuevos lanzamientos pop/cruzados con otros géneros.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming de música", "Apps de streaming de audio", "Playlist patrocinada / pre-roll de audio.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y video corto", "TikTok, Instagram", "Contenido de preventa de boletos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes sociales", "Instagram, Facebook", "Recordatorio de evento / CTA de compra.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Apps de streaming, Instagram", "Contenido de cierre de día / última llamada de boletos.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Paramo (co) LABF1_, procesado 2026-10-04. Audiencia real de
+// GWI (audience_id 5217f851-da09-4802-b0d3-a4a57ad9b4c9) de colombianos fans
+// de deportes interesados en Fórmula 1. Caso de una sola persona (sharePct 100).
+// ---------------------------------------------------------------------------
+const CASE_FORMULA1_GWI_AUTO_20261004 = {
+  id: "formula1-fans-colombia",
+  name: "Aficionados a la Fórmula 1 en Colombia",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-04)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) LABF1_', audience_id 5217f851-da09-4802-b0d3-a4a57ad9b4c9): colombianos fans de deportes interesados en la Fórmula 1.",
+  funnelSteps: [
+    { label: "Fans de deportes interesados en Fórmula 1 (Colombia)", pct: 14.6 },
+  ],
+  footnotes: [
+    "14.6% = universo real de GWI (4,522,006 personas, verificado vía explore_insight_gwi sobre la base total de la pregunta de deportes seguidos) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, edad) y afición multideportiva (fútbol, ciclismo, interés muy alto en F1) verificadas 1:1 vía chat_gwi + explore_insight_gwi.",
+    "Edades: GWI solo devolvió con muestra suficiente 16-24, 25-34, 35-44 y 45-54 (suman 85%); 55-64 y 65+ se dejan en 0 en vez de inventar un valor.",
+    "GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia.",
+    "La narrativa inicial de chat_gwi sugirió erróneamente que '48% no pagó por streaming de TV/películas' el último mes; al verificar con explore_insight_gwi, la cifra real es 51.6% que SÍ pagó esa suscripción y 19.4% que no pagó por ninguna de las opciones listadas (streaming de video, música o descargas) — se usa la cifra verificada (19.4%) como barrera real en vez de la cifra narrada incorrectamente.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fanatico-formula1-colombia",
+      name: "Santiago Herrera",
+      archetype: "El Multideportivo Tech-Driven",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Sigue la Fórmula 1 de cerca (55.1% está 'muy interesado'), pero su consumo deportivo es amplio: 97.7% también sigue fútbol y 81.5% ciclismo. Fuertemente masculino (76.5%) y con alta afinidad por tecnología, autos y ciencia.",
+      aiInsight: aiInsight(
+        "Cruza con una audiencia que usa la F1 como ancla pero consume deporte de forma generalista: 97.7% también sigue fútbol y 81.5% ciclismo, por lo que un plan de medios exclusivo a calendario de F1 desaprovecha gran parte de su consumo deportivo real. Su perfil de intereses (tecnología índice 201.5, autos/motoring índice 222.1, computación índice 222.2) lo acerca más a un target de marcas de tecnología/automotive que al estereotipo de aficionado deportivo genérico. Un 19.4% no pagó por ninguna suscripción de streaming de video/música/descargas el último mes — ese segmento necesita alcance vía redes sociales y WhatsApp, no solo inventario de streaming pago.",
+        [
+          { label: "F1 es ancla, no límite del consumo deportivo", detail: "97.7% también sigue fútbol y 81.5% ciclismo — activaciones cruzadas con esos deportes amplían el alcance sin perder relevancia con el núcleo de F1." },
+          { label: "Afinidad tech/motoring real y verificada", detail: "Índice 222.1 en interés por autos/motoring y 222.2 en computación/código — abre espacio a patrocinio de marcas de tecnología y automotive, no solo bebidas energéticas tradicionales del paddock." },
+          { label: "Un quinto no paga por ningún contenido digital", detail: "19.4% no pagó por streaming de video, música o descargas en el último mes — el plan de medios necesita un componente gratuito/social (WhatsApp 74.5% uso diario, redes) para no dejar fuera a ese segmento." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 76.5, female: 23.5 },
+        ageBands: [
+          { label: "16-24", pct: 19.6 },
+          { label: "25-34", pct: 22.8 },
+          { label: "35-44", pct: 24.1 },
+          { label: "45-54", pct: 18.5 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Sigue motor sports / Fórmula 1 (define la audiencia)", pct: 100 },
+        { label: "Sigue fútbol", pct: 97.7 },
+        { label: "Sigue ciclismo", pct: 81.5 },
+        { label: "Está muy interesado en la Fórmula 1", pct: 55.1 },
+      ],
+      barriers: [
+        { label: "No pagó por ninguna suscripción de streaming de video, música o descargas en el último mes", pct: 19.4 },
+      ],
+      digitalInterests: [
+        { label: "Interés en tecnología", index: 201.5 },
+        { label: "Interés en autos/motoring", index: 222.1 },
+        { label: "Interés en ciencia", index: 178.5 },
+        { label: "Interés en computación/código", index: 222.2 },
+      ],
+      media: [
+        { label: "WhatsApp (más de una vez al día)", pct: 74.5 },
+        { label: "Facebook (uso diario)", pct: 22.5 },
+        { label: "Instagram (uso diario)", pct: 21.7 },
+        { label: "TikTok (uso diario)", pct: 18.6 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Mensajería y redes", "WhatsApp, Facebook", "Resumen de resultados/clasificación si hubo sesión en la madrugada.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, Facebook", "Noticias/análisis de la categoría.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Mensajería", "WhatsApp", "Debate en grupos sobre la carrera del fin de semana.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y video corto", "TikTok, Instagram", "Highlights y contenido técnico (autos, estrategia).", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming deportivo", "Apps de streaming deportivo", "Recordatorio de próxima sesión/carrera.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y mensajería", "Apps de streaming, WhatsApp", "Reacciones en vivo compartidas en grupos.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — DOITE>DOITE>B2C>Chile>HighPropensity>Moda, procesado
+// 2026-10-04. Audiencia real de GWI (audience_id
+// 7f087d12-0163-410e-945b-3e5cdf820fb2) de chilenos de alta propensión de
+// compra de moda. Caso de una sola persona (sharePct 100).
+// ---------------------------------------------------------------------------
+const CASE_MODA_CHILE_GWI_AUTO_20261004 = {
+  id: "alta-propension-moda-chile",
+  name: "Audiencia de alta propensión de moda en Chile",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-04)",
+  insightNote:
+    "Audiencia real de GWI ('DOITE>DOITE>B2C>Chile>HighPropensity>Moda', audience_id 7f087d12-0163-410e-945b-3e5cdf820fb2): chilenos identificados como de alta propensión de compra de moda ('fashion-conscious').",
+  funnelSteps: [
+    { label: "Alta propensión de compra de moda / 'fashion-conscious' (Chile)", pct: 1.8 },
+  ],
+  footnotes: [
+    "1.8% = universo real de GWI (275,223 personas, verificado vía explore_insight_gwi sobre la base total de la pregunta 'fashion-conscious') sobre la población digital total de Chile (15.6M). Es una audiencia de nicho (muestra 170 personas), consistente con tratarse de un segmento de ALTA propensión, no de la población general interesada en moda.",
+    "Género verificado 1:1 vía explore_insight_gwi (84.9% femenino); el valor masculino (15.1%) es el complemento aritmético, ya que GWI solo devolvió el insight femenino para esta pregunta binaria.",
+    "Edades: GWI solo confirmó que el 100% de la audiencia está en el rango 16-64, sin desagregación adicional con muestra suficiente — se deja cada banda en 0 en vez de inventar un valor.",
+    "GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia.",
+    "Motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fashionista-alta-propension-chile",
+      name: "Javiera Soto",
+      archetype: "La Fashionista Omnicanal",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Se identifica 100% como 'fashion-conscious' y compró ropa en el último mes (78.2%). Fuertemente femenina (84.9%), leal a sus marcas favoritas pero también deal-seeker: busca las mejores ofertas y, pese a su afinidad digital, un tercio todavía prefiere la tienda física.",
+      aiInsight: aiInsight(
+        "Cruza con una tensión entre afinidad digital y comportamiento de compra: 81.8% investiga productos online antes de comprar y 81.6% usa redes sociales activamente para buscar información de marcas, pero un 35.4% todavía prefiere comprar en tienda física y un 73.5% busca activamente las mejores ofertas. Para una audiencia etiquetada como 'alta propensión' de moda, esto sugiere que el plan de medios no puede ser 100% digital ni 100% precio-pleno: necesita un componente omnicanal (social + punto de venta) y mensajes de valor/promoción conviviendo con el storytelling de marca.",
+        [
+          { label: "Social commerce como canal de descubrimiento dominante", detail: "81.6% usa redes sociales activamente cuando busca información de marcas/productos — el contenido de descubrimiento debe vivir primero en Instagram/TikTok, no en búsqueda tradicional (65.2%)." },
+          { label: "Deal-seeker pese a ser fashion-forward", detail: "73.5% busca las mejores ofertas al comprar — las campañas de marca premium rinden mejor si conviven con mensajes de valor/promoción explícitos." },
+          { label: "Un tercio todavía prioriza la tienda física", detail: "35.4% prefiere comprar en tienda en vez de online (vs. 64.6% que prefiere online) — vale la pena invertir en experiencia física (eventos, activaciones en punto de venta) y no asumir una audiencia 100% digital." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 15.1, female: 84.9 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Se identifica como 'fashion-conscious' (define la audiencia)", pct: 100 },
+        { label: "Está interesada en la moda", pct: 96.4 },
+        { label: "Compró ropa en el último mes", pct: 78.2 },
+        { label: "Es leal a las marcas que le gustan", pct: 74.0 },
+      ],
+      barriers: [
+        { label: "Busca las mejores ofertas al comprar (sensibilidad a precio/promociones)", pct: 73.5 },
+        { label: "Prefiere comprar en tienda física en vez de online", pct: 35.4 },
+      ],
+      digitalInterests: [
+        { label: "Interés en fotografía", index: 231.8 },
+        { label: "Interés en actividades al aire libre (camping/hiking)", index: 217.5 },
+        { label: "Interés en naturaleza/vida silvestre", index: 208.8 },
+        { label: "Interés en tecnología", index: 188.3 },
+      ],
+      media: [
+        { label: "Instagram (más de una vez al día)", pct: 77.4 },
+        { label: "WhatsApp (más de una vez al día)", pct: 69.9 },
+        { label: "TikTok (más de una vez al día)", pct: 49.2 },
+        { label: "Facebook (más de una vez al día)", pct: 40.8 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, WhatsApp", "Descubrimiento de nuevos lanzamientos/colecciones.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes e investigación", "Instagram, buscadores", "Comparación de precios/ofertas.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido de reseñas/opiniones de producto.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y mensajería", "WhatsApp, Instagram", "Recomendación compartida con amigas/familia.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / tienda física", "Social y punto de venta", "Instagram, tienda física", "Decisión de compra (online u offline).", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Instagram, TikTok", "Posteo/reseña de la compra del día.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -4966,7 +5227,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004],
   },
   {
     id: "deportes",
@@ -4979,7 +5240,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_GWI_AUTO_20261004],
   },
   {
     id: "retail",
@@ -4992,7 +5253,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004],
   },
   {
     id: "fintech",
@@ -5149,4 +5410,7 @@ const PERSONA_RELATED_TRAITS = {
   "lider-equipo-hibrida": ["usaHerramientasDiario", "decideSoftwareEquipo"],
   "hincha-visa-mundial-femenino-colombia": ["interesFutbol", "consumoDigitalDiario"],
   "hincha-visa-futbol-regional-colombia": ["interesFutbol", "consumoDigitalDiario"],
+  "fan-rosalia-toppop-colombia": ["afinidadGenero"],
+  "fanatico-formula1-colombia": ["interesFutbol", "consumoDigitalDiario"],
+  "fashionista-alta-propension-chile": ["sigueMarcas", "sensibilidadPrecio"],
 };

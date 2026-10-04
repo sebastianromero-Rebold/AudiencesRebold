@@ -285,6 +285,10 @@ const GWI_AUDIENCE_CATALOG = [
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   { id: "f6b86121-2a79-4c58-bc01-687e56872caf", title: "Páramo LAB (co) VIsa_FIFACOPADEMUJERES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used Visa last month or Visa Click to Pay in the last month, and are interested in or follow news about or watch highlights of or watch live the FIFA Football World Cup (Women's) on a streaming service or TV channel." },
   { id: "125b6af2-254a-4b92-a9df-17f480d3c03b", title: "Páramo LAB (co) VIsa_FIFASOLOHOMBRES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used either Visa or Visa Click to Pay in the last month, and are not interested in or do not follow news about or watch the FIFA Football World Cup (Women's) in any format." },
+  // Añadidas por la automatización diaria de GWI el 2026-10-04.
+  { id: "c00d7c48-d31b-4459-b70c-2c7b47f3a5ea", title: "ParamoCo>Rosalía>TopPop", client: "Paramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and enjoy listening to Pop/Top40 music." },
+  { id: "5217f851-da09-4802-b0d3-a4a57ad9b4c9", title: "Paramo (co) LABF1_", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have an interest in watching sports or are sports fans, as well as being interested in Formula 1 or watching Formula 1 live on a TV channel or streaming service or following highlights and news about Formula 1." },
+  { id: "7f087d12-0163-410e-945b-3e5cdf820fb2", title: "DOITE>DOITE>B2C>Chile>HighPropensity>Moda", client: "DOITE", type: "shared", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -342,4 +346,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   "f6b86121-2a79-4c58-bc01-687e56872caf": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-mundial-femenino-colombia", analyzedAt: "2026-10-01" },
   "125b6af2-254a-4b92-a9df-17f480d3c03b": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-futbol-regional-colombia", analyzedAt: "2026-10-01" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-04.
+  "c00d7c48-d31b-4459-b70c-2c7b47f3a5ea": { categoryId: "entretenimiento", caseId: "rosalia-toppop-fans-colombia", personaId: "fan-rosalia-toppop-colombia", analyzedAt: "2026-10-04" },
+  "5217f851-da09-4802-b0d3-a4a57ad9b4c9": { categoryId: "deportes", caseId: "formula1-fans-colombia", personaId: "fanatico-formula1-colombia", analyzedAt: "2026-10-04" },
+  "7f087d12-0163-410e-945b-3e5cdf820fb2": { categoryId: "retail", caseId: "alta-propension-moda-chile", personaId: "fashionista-alta-propension-chile", analyzedAt: "2026-10-04" },
 };

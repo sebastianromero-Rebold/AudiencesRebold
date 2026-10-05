@@ -4,6 +4,9 @@
 // completo), pero cubre una porción amplia y representativa de las audiencias reales
 // ya creadas por el equipo en GWI. Ver README 'Catálogo de audiencias GWI'.
 const GWI_AUDIENCE_CATALOG = [
+  { id: "d6c60aba-912d-449e-87c9-d77134b36858", title: "Paramo (co) Rauw2025Reggaeton", client: "", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who purchased concert tickets in the last 3-6 months or purchased concert tickets online in the last 3-6 months or are planning to purchase concert tickets in the next 3-6 months, live in the Capital District or Cundinamarca, are interested in music or dance, listen to music on their commute or long journeys or to exercise or to connect to their culture or to set a tone at events or to express their individuality or to support their favorite artists, are interested in live events like music festivals, and like listening to Latin music." },
+  { id: "5217f851-da09-4802-b0d3-a4a57ad9b4c9", title: "Paramo (co) LABF1_", client: "", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have an interest in watching sports or are sports fans, as well as being interested in Formula 1 or watching Formula 1 live on a TV channel or streaming service or following highlights and news about Formula 1." },
+  { id: "188180cb-6e38-4461-ba94-492bcc5ae292", title: "Paramo (co) UsanFranquicias", client: "", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have a credit card or a bank account, and have used either American Express, Mastercard, Visa in the last month, or have used Diners Club in Bulgaria and Croatia in the last month." },
   { id: "45a659e0-2bd3-4bda-a33b-f9f5554fc69b", title: "Paramo>Fabulosos>Audiencia", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "81db3507-2d73-490e-b23d-a489e4de3c6a", title: "Paramo>FranzFerdinand>Audiencia", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "71099cde-c3dc-4662-9dbc-f826f15d3238", title: "AmatiBox>AmatiBox>HP_B2B", client: "AmatiBox", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Mexico, are decision-makers based on auto-generated data from the Areas of Responsibility question or are responsible for purchasing, work for companies with between 10 and over 5000 employees, are interested in health foods/drinks or nutrition, and want brands to be eco-friendly." },
@@ -342,4 +345,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   "f6b86121-2a79-4c58-bc01-687e56872caf": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-mundial-femenino-colombia", analyzedAt: "2026-10-01" },
   "125b6af2-254a-4b92-a9df-17f480d3c03b": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-futbol-regional-colombia", analyzedAt: "2026-10-01" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-05.
+  "d6c60aba-912d-449e-87c9-d77134b36858": { categoryId: "entretenimiento", caseId: "rauw-reggaeton-bogota-cundinamarca", personaId: "fan-reggaeton-alta-intencion-compra-bogota", analyzedAt: "2026-10-05" },
+  "5217f851-da09-4802-b0d3-a4a57ad9b4c9": { categoryId: "deportes", caseId: "aficionados-formula1-colombia", personaId: "fan-intenso-formula1-colombia", analyzedAt: "2026-10-05" },
+  "188180cb-6e38-4461-ba94-492bcc5ae292": { categoryId: "fintech", caseId: "usuarios-franquicias-tarjetas-colombia", personaId: "usuario-credito-corto-plazo-colombia", analyzedAt: "2026-10-05" },
 };

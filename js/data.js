@@ -4952,6 +4952,178 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — procesados 2026-10-06 por la rutina diaria de GWI.
+// ---------------------------------------------------------------------------
+const CASE_PARTNERS_ESTRATEGICOS_GWI_AUTO_20261006 = {
+  id: "profesionales-pagos-estrategicos-colombia",
+  name: "Profesionales en dirección ejecutiva usuarios de métodos de pago en Colombia",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-06)",
+  insightNote:
+    "Audiencia real de GWI ('PuntoDePago>Partners Estrategicos', audience_id cbf0743c-cec1-4195-ae74-d5f88d79eb44): colombianos en cargos de dirección ejecutiva, que usaron al menos un método de pago en el último mes y no son dueños ni fundadores de su empresa.",
+  funnelSteps: [
+    { label: "Directivos/ejecutivos colombianos activos en pagos digitales (no dueños de empresa)", pct: 0.6 },
+  ],
+  footnotes: [
+    "0.6% = tamaño real de la audiencia en GWI (186,678 personas) sobre la población digital total de Colombia (31.06M) — universo verificado vía explore_insight_gwi sobre la pregunta de género.",
+    "Género tomado 1:1 de esta audiencia real vía explore_insight_gwi (55.3% hombres / 44.7% mujeres, universo 186,678).",
+    "GWI solo devolvió el rango agregado 'el 100% tiene entre 16 y 64 años' para esta audiencia — no hubo desagregación por banda de edad con muestra suficiente; se deja en 0 en vez de inventar una distribución.",
+    "Top ciudades: GWI no devolvió desagregación geográfica con muestra suficiente para esta audiencia.",
+    "Motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "ejecutivo-pagos-estrategicos-colombia",
+      name: "Andrés Felipe Rincón",
+      archetype: "El Directivo Resolutivo",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano en cargo de dirección ejecutiva (gerencia o alta dirección), sin ser dueño ni fundador de la empresa donde trabaja, que usó al menos un método de pago en el último mes. Ya tiene cuenta bancaria (88.8%) y cuenta con ahorros o efectivo disponible (75%), pero la gestión financiera activa en digital todavía no es mayoritaria: solo 56.5% usa internet para gestionar sus finanzas, aunque esto lo hace 52% más probable que el profesional colombiano promedio.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha entre bancarización y gestión digital activa ya observada en otras audiencias profesionales de Colombia: este ejecutivo resolvió el acceso bancario (88.8%) y tiene colchón financiero (75% con ahorros/efectivo), pero la adopción de herramientas de gestión financiera en línea, aunque por encima del promedio (índice 151.6), sigue sin ser mayoritaria (56.5%) — la oportunidad de producto está en convertir el hábito de 'tener cuenta' en el hábito de 'gestionar activamente', no en sumar más cuentas nuevas.",
+        [
+          { label: "El acceso bancario ya está resuelto", detail: "88.8% ya tiene cuenta bancaria — el mensaje de producto debe enfocarse en herramientas de gestión activa (alertas, automatización, dashboards), no en apertura de cuenta." },
+          { label: "Gestión financiera digital por encima del promedio, pero no mayoritaria", detail: "56.5% usa internet para gestionar sus finanzas/ahorros (índice 151.6 frente al profesional colombiano promedio) — hay margen real de crecimiento dentro de la misma audiencia, no solo fuera de ella." },
+          { label: "WhatsApp como canal de soporte dominante", detail: "76.9% usa WhatsApp más de una vez al día — el canal más confiable para onboarding, soporte y notificaciones de producto financiero en este segmento." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 55.3, female: 44.7 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación geográfica disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Tienen efectivo o ahorros disponibles", pct: 75.0 },
+        { label: "Se motivan a recomendar una marca por productos de alta calidad", pct: 57.0 },
+        { label: "Usan internet para mantenerse al día con noticias y eventos", pct: 57.0 },
+      ],
+      barriers: [
+        { label: "88.8% ya tiene cuenta bancaria — la brecha está en la gestión activa, no en el acceso", pct: 88.8 },
+        { label: "Solo 56.5% usa internet para gestionar sus finanzas o ahorros, pese a ser 52% más probable que el profesional promedio (índice 151.6)", pct: 56.5 },
+      ],
+      digitalInterests: [
+        { label: "Interés en tecnología (8% menos probable que el profesional promedio)", index: 92 },
+        { label: "Usan internet para investigar cómo hacer cosas", index: 117.0 },
+        { label: "Usan internet para encontrar nuevas ideas o inspiración", index: 120.7 },
+      ],
+      media: [
+        { label: "WhatsApp más de una vez al día", pct: 76.9 },
+        { label: "Instagram — sigue y busca información de marcas/productos", pct: 62.7 },
+        { label: "Facebook / Messenger — para enviar mensajes a amigos y familia", pct: 70.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte al trabajo", "WhatsApp y apps bancarias", "WhatsApp, app del banco", "Revisión de mensajes y saldo antes de empezar el día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Correo y redes profesionales", "Gmail, LinkedIn", "Contenido B2B o de producto financiero para profesionales.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, WhatsApp", "Reseñas y recomendaciones ancladas en calidad de producto.", []),
+        daypart("La tarde", "3 a 6 pm", "Oficina", "Apps de gestión financiera", "App del banco, hojas de cálculo", "Revisión de finanzas personales o del área que gestiona.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Transporte / casa", "WhatsApp y redes", "WhatsApp, Facebook", "Comunicación familiar y contenido informativo.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Instagram, WhatsApp", "Contenido de marca enfocado en calidad y confiabilidad del producto.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_CREDIMINUTO_GWI_AUTO_20261006 = {
+  id: "sin-acceso-bancario-crediminuto-colombia",
+  name: "Colombianos de ingreso bajo/medio sin cuenta bancaria ni tarjeta de crédito",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-06)",
+  insightNote:
+    "Audiencia real de GWI ('Licitación>CrediMinuto>Audiences', audience_id c188a362-9e38-43d4-bfc9-329527a6a772): colombianos entre 18 y 50 años, de ingreso bajo o medio, sin cuenta bancaria ni tarjeta de crédito.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (8,154,808: 4,554,285 mujeres + 3,600,523 hombres) sobre la población digital de Colombia (31.06M)", pct: 26 },
+  ],
+  footnotes: [
+    "26% ≈ universo real de la audiencia en GWI (4,554,285 mujeres + 3,600,523 hombres = 8,154,808) sobre la población digital total de Colombia (31.06M), verificado vía explore_insight_gwi sobre la pregunta de género.",
+    "Género y top ciudades verificados 1:1 vía explore_insight_gwi (55.8% mujeres / 44.2% hombres; Distrito Capital 22.4%, Antioquia 13.1%, Cundinamarca 9.2%, Valle del Cauca 9.0%).",
+    "Nota importante: la pregunta sobre tenencia de cuenta bancaria arrojó resultados contradictorios dentro de esta misma audiencia (72% reportó tener cuenta bancaria vs. 26% que reportó no tenerla, pese a que la audiencia está definida por construcción como sin cuenta bancaria ni tarjeta de crédito) — se descartaron ambas cifras del perfil por no ser confiables, siguiendo la regla de nunca reportar una cifra sin verificar de forma consistente.",
+    "El rango de edad (18-50) es un filtro propio de la construcción de esta audiencia en GWI, no una desagregación adicional encontrada; no se reportan bandas de edad por no haber desagregación con muestra suficiente dentro de ese rango.",
+    "Motivaciones, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi.",
+    "Conceptualmente relacionada con el caso 'inclusion-financiera-colombia' (persona 'desbancarizado-digital-colombia'), pero construida sobre una definición de audiencia distinta en GWI (rango de edad/ingreso explícito vs. ausencia de pago online el último mes) — se deja como caso independiente para que el equipo decida si deben unificarse en la próxima revisión editorial.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "colombiano-ingresos-bajos-sin-banco-crediminuto",
+      name: "Yuliana Pérez",
+      archetype: "La Gestora de Efectivo",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana (55.8% del total) entre 18 y 50 años, de ingreso bajo o medio, sin cuenta bancaria ni tarjeta de crédito. Valora la seguridad financiera (61.1%) casi tanto como el colombiano promedio, pero el acceso bancario tradicional no la ha alcanzado; en cambio, es una consumidora activa de contenido digital y gaming, con un uso diario intensivo de redes de video corto.",
+      aiInsight: aiInsight(
+        "Cruza con la oportunidad de productos financieros de entrada sin fricción: el 61.1% valora la seguridad financiera pero el acceso bancario tradicional no la ha alcanzado — y su alto interés en gaming (46.1%, índice 107.3) junto al uso diario de TikTok (36.8%) sugiere que el canal de entrada más natural no es la sucursal bancaria sino el entretenimiento digital donde ya pasa su tiempo.",
+        [
+          { label: "Gaming como interés inesperado en una audiencia excluida del sistema bancario", detail: "46.1% está interesada en gaming (índice 107.3) — una cifra alta para una audiencia definida por exclusión financiera; abre espacio a alianzas con wallets o pagos integrados a gaming/microtransacciones como puerta de entrada a productos financieros." },
+          { label: "TikTok y YouTube como medios dominantes", detail: "36.8% usa TikTok más de una vez al día y 60% ha usado YouTube para ver contenido en el último mes — son los canales de mayor alcance diario, por encima de la TV abierta (30% uso ocasional)." },
+          { label: "La calidad del producto pesa más que las recompensas", detail: "53% se motiva a recomendar una marca por productos de alta calidad, frente a 42% por recompensas — el mensaje debe anclarse en confiabilidad del producto financiero, no solo en incentivos de adquisición." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 44.2, female: 55.8 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá (Distrito Capital)", pct: 22.4 },
+          { city: "Antioquia", pct: 13.1 },
+          { city: "Cundinamarca", pct: 9.2 },
+          { city: "Valle del Cauca", pct: 9.0 },
+        ],
+      },
+      motivations: [
+        { label: "Se motivan a recomendar una marca por productos de alta calidad", pct: 53.0 },
+        { label: "Se motivan por recompensas", pct: 42.0 },
+        { label: "Consideran importante la seguridad financiera", pct: 61.1 },
+        { label: "Se motivan por haber recibido buena atención al cliente", pct: 38.0 },
+      ],
+      barriers: [
+        { label: "Solo 12% valora poder diferir pagos sin intereses al comprar online", pct: 12.0 },
+        { label: "Solo 29% usa internet para gestionar sus finanzas o ahorros (17% menos probable que el promedio)", pct: 29.0 },
+      ],
+      digitalInterests: [
+        { label: "Interés en gaming", index: 107.3 },
+        { label: "Interés en música", index: 103.6 },
+        { label: "Interés en cine/películas", index: 98.6 },
+      ],
+      media: [
+        { label: "TikTok más de una vez al día", pct: 36.8 },
+        { label: "Facebook más de una vez al día", pct: 38.5 },
+        { label: "Instagram más de una vez al día", pct: 31.7 },
+        { label: "Ha usado YouTube para ver contenido en el último mes", pct: 60.0 },
+        { label: "Usuario ocasional de TV abierta", pct: 30.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Facebook, TikTok", "Contenido breve de entretenimiento antes de empezar el día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / negocio", "TikTok y YouTube", "TikTok, YouTube", "Clips cortos y contenido de entretenimiento.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Redes sociales", "Facebook, Instagram", "Contenido de marca enfocado en calidad del producto.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TikTok y gaming", "TikTok, apps de gaming", "Entretenimiento y gaming casual.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV abierta y YouTube", "TV, YouTube", "Contenido familiar / entretenimiento.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Gaming y redes", "Apps de gaming, TikTok, Facebook", "Activaciones de marca dentro de gaming o contenido de video corto.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -5005,7 +5177,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_PARTNERS_ESTRATEGICOS_GWI_AUTO_20261006, CASE_CREDIMINUTO_GWI_AUTO_20261006],
   },
   {
     id: "alcohol",
@@ -5149,4 +5321,6 @@ const PERSONA_RELATED_TRAITS = {
   "lider-equipo-hibrida": ["usaHerramientasDiario", "decideSoftwareEquipo"],
   "hincha-visa-mundial-femenino-colombia": ["interesFutbol", "consumoDigitalDiario"],
   "hincha-visa-futbol-regional-colombia": ["interesFutbol", "consumoDigitalDiario"],
+  "ejecutivo-pagos-estrategicos-colombia": ["usaAppsFin"],
+  "colombiano-ingresos-bajos-sin-banco-crediminuto": ["migraEfectivo"],
 };

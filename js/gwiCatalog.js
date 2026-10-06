@@ -285,6 +285,10 @@ const GWI_AUDIENCE_CATALOG = [
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   { id: "f6b86121-2a79-4c58-bc01-687e56872caf", title: "Páramo LAB (co) VIsa_FIFACOPADEMUJERES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used Visa last month or Visa Click to Pay in the last month, and are interested in or follow news about or watch highlights of or watch live the FIFA Football World Cup (Women's) on a streaming service or TV channel." },
   { id: "125b6af2-254a-4b92-a9df-17f480d3c03b", title: "Páramo LAB (co) VIsa_FIFASOLOHOMBRES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used either Visa or Visa Click to Pay in the last month, and are not interested in or do not follow news about or watch the FIFA Football World Cup (Women's) in any format." },
+  // Añadidas por la automatización diaria de GWI el 2026-10-06.
+  { id: "cbf0743c-cec1-4195-ae74-d5f88d79eb44", title: "PuntoDePago>Partners Estrategicos", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, are in executive management, have used at least one of several payment methods in the last month, and are not company owners or founders." },
+  { id: "c188a362-9e38-43d4-bfc9-329527a6a772", title: "Licitación>CrediMinuto>Audiences", client: "Licitación", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia and is between 18 and 50 years old, with a low or medium household income, and does not have a bank account or a credit card." },
+  { id: "f07745dc-9226-44a1-b5eb-76834d861b02", title: "Paramo LAB (CO) EntretenimientoCOL", client: "Paramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -342,4 +346,10 @@ const CATALOG_ANALYSIS_LINKS = {
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   "f6b86121-2a79-4c58-bc01-687e56872caf": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-mundial-femenino-colombia", analyzedAt: "2026-10-01" },
   "125b6af2-254a-4b92-a9df-17f480d3c03b": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-futbol-regional-colombia", analyzedAt: "2026-10-01" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-06.
+  "cbf0743c-cec1-4195-ae74-d5f88d79eb44": { categoryId: "fintech", caseId: "profesionales-pagos-estrategicos-colombia", personaId: "ejecutivo-pagos-estrategicos-colombia", analyzedAt: "2026-10-06" },
+  "c188a362-9e38-43d4-bfc9-329527a6a772": { categoryId: "fintech", caseId: "sin-acceso-bancario-crediminuto-colombia", personaId: "colombiano-ingresos-bajos-sin-banco-crediminuto", analyzedAt: "2026-10-06" },
+  // "Paramo LAB (CO) EntretenimientoCOL" resultó tener una definición y cifras idénticas a "Paramo (co) EventosEnVivoGeneral"
+  // (ya procesada el 2026-09-24) -- se enlaza al mismo caso/persona existente en vez de crear un duplicado. Ver nota en el manifest.
+  "f07745dc-9226-44a1-b5eb-76834d861b02": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-10-06" },
 };

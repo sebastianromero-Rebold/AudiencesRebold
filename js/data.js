@@ -4952,6 +4952,310 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fanáticos de la Fórmula 1 en Colombia, procesado 2026-10-07.
+// ---------------------------------------------------------------------------
+const CASE_FORMULA1_GWI_AUTO_20261007 = {
+  id: "formula1-fans-colombia",
+  name: "Fanáticos de la Fórmula 1 (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-07)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) LABF1_', audience_id 5217f851-da09-4802-b0d3-a4a57ad9b4c9): colombianos interesados en ver deporte o ser fanáticos del deporte, además de estar interesados en la Fórmula 1 o seguirla en vivo/por highlights y noticias.",
+  funnelSteps: [
+    {
+      label:
+        "Interesados en deporte y en la Fórmula 1 (universo real GWI: ~4.52M sobre 31.06M de Colombia)",
+      pct: 14.6,
+    },
+  ],
+  footnotes: [
+    "14.6% = universo real de GWI para esta audiencia (3,460,612 hombres + 1,061,393 mujeres = 4,522,005, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital de Colombia (31.06M).",
+    "Género, edad y tipo de zona (urbana/suburbana/rural) tomados 1:1 de esta audiencia real vía chat_gwi. GWI no devolvió desagregación por ciudad específica para esta audiencia — se reporta el dato de zona disponible en su lugar.",
+    "Motivaciones (recompensas de marca) verificadas 1:1 vía explore_insight_gwi sobre el insight real de esta audiencia.",
+    "Barreras: GWI devolvió datos sobre su proceso de decisión de compra (búsqueda de opinión experta, importancia de la confianza del proveedor), no barreras de acceso — se reportan tal cual, como contexto de decisión de compra.",
+    "Intereses digitales y medios verificados 1:1 vía chat_gwi sobre esta audiencia real.",
+    "Bloques del customer journey sin dato específico de GWI para ese horario quedan señalados como tal, en vez de inventar una cifra.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fanatico-formula1-colombia",
+      name: "Camilo Esguerra",
+      archetype: "El Fanático de la Fórmula 1",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano interesado en el deporte en general y, en particular, en la Fórmula 1 (la sigue en vivo, por highlights o por noticias). Mayoritariamente hombre (76.5%), vive en zona urbana (90%) y se concentra en la adultez (35-44 años es la banda más grande). Es un consumidor intensivo de pantallas: tanto streaming como TV y mobile video.",
+      aiInsight: aiInsight(
+        "Cruza con una brecha entre validación experta y confianza de marca: 40% busca activamente opinión de expertos antes de comprar algo costoso, pero solo 22% considera 'muy importante' la confianza del proveedor al comprar tecnología — el contenido tipo review/comparativa técnica puede rendir más que un mensaje de marca genérico para este público, que decide con la cabeza más que con la lealtad.",
+        [
+          { label: "Validación experta pesa más que la marca", detail: "40% busca opiniones de expertos antes de comprar artículos costosos (39% más probable que el promedio) — un formato de contenido tipo 'review' o comparativa técnica conecta mejor que un spot de marca puro." },
+          { label: "Pantalla grande + streaming, combo dominante", detail: "85% usa un TV set para ver contenido on-demand o streaming y 35.2% es heavy user de servicios tipo Netflix/Hulu (99% más probable que el promedio) — el inventario de streaming en TV conectada es un canal de alto alcance para patrocinios de carreras." },
+          { label: "Mobile como complemento de momentos cortos", detail: "74% vio video móvil en la última semana y 44.6% es heavy user de videos cortos (reels/TikTok) — los highlights y bloopers de carrera en formato corto funcionan como gancho hacia el consumo largo en TV/streaming." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 76.5, female: 23.5 },
+        ageBands: [
+          { label: "16-24", pct: 20 },
+          { label: "25-34", pct: 23 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Zona urbana (Colombia)", pct: 90 },
+          { city: "Zona rural", pct: 5.7 },
+          { city: "Zona suburbana", pct: 4.3 },
+        ],
+      },
+      motivations: [
+        { label: "Promocionaría su marca favorita por productos de alta calidad", pct: 65.7 },
+        { label: "Promocionaría su marca favorita por recompensas", pct: 49.8 },
+        { label: "Promocionaría su marca favorita tras recibir buen servicio al cliente", pct: 45.2 },
+        { label: "Promocionaría su marca favorita si tiene información privilegiada de productos", pct: 34.1 },
+      ],
+      barriers: [
+        { label: "Busca opiniones de expertos antes de comprar artículos costosos", pct: 40 },
+        { label: "Solo considera 'muy importante' la confianza del proveedor al comprar tecnología", pct: 22 },
+      ],
+      digitalInterests: [
+        { label: "Interés en tecnología", index: 202 },
+        { label: "Interés en inversiones", index: 177 },
+        { label: "Uso de internet para investigación de negocios", index: 165 },
+        { label: "Publicó sobre deportes en redes en el último mes", index: 248 },
+      ],
+      media: [
+        { label: "Usa un TV set para ver contenido on-demand/streaming", pct: 85 },
+        { label: "Vio video móvil en la última semana", pct: 74 },
+        { label: "Usó YouTube para ver/descargar contenido", pct: 66 },
+        { label: "Usa TV para acceder a internet", pct: 53 },
+        { label: "Heavy user de streaming tipo Netflix/Hulu", pct: 35.2 },
+        { label: "Interesado en televisión", pct: 68 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y noticias", "Instagram, portales de noticias deportivas", "Resumen de la última sesión de prácticas/clasificación.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Video móvil", "YouTube, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y video corto", "TikTok, Instagram Reels", "Highlights y clips cortos de la última carrera.", [
+          { label: "Heavy user de videos cortos (reels/TikTok)", pct: 44.6, index: 146.9 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Investigación online", "Google, YouTube", "Comparativas y reviews de productos relacionados al motorsport.", [
+          { label: "Busca opiniones de expertos antes de comprar", pct: 40, index: 139 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV set, apps de streaming", "Recordatorio de horario de carrera o programa post-carrera.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming en TV", "Netflix, documentales de motorsport", "CTA de contenido patrocinado dentro de documentales/series de automovilismo.", [
+          { label: "Heavy user de streaming tipo Netflix/Hulu", pct: 35.2, index: 198.7 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Mujeres fashion-conscious en Estados Unidos (Melissa /
+// Grendene Global Brands), procesado 2026-10-07.
+// ---------------------------------------------------------------------------
+const CASE_MELISSA_USA_GWI_AUTO_20261007 = {
+  id: "melissa-fashion-usa",
+  name: "Mujeres fashion-conscious en Estados Unidos (Melissa / Grendene)",
+  market: "USA",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-07)",
+  insightNote:
+    "Audiencia real de GWI ('GrendeneGlobalBrands>Melissa>1>Broad', audience_id b4eb6f95-e67c-4f5a-90c1-550f57f84ed1): mujeres residentes en Estados Unidos interesadas en moda o que se consideran fashion-conscious.",
+  funnelSteps: [
+    {
+      label:
+        "Mujeres interesadas en moda / fashion-conscious en EE.UU. (universo real GWI: ~52.17M sobre 250M de EE.UU.)",
+      pct: 20.9,
+    },
+  ],
+  footnotes: [
+    "20.9% = universo real de GWI para esta audiencia (52,174,224, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital estimada de Estados Unidos (250M, ya usada en MARKETS).",
+    "Edad tomada 1:1 de esta audiencia real vía chat_gwi; GWI no devolvió una banda de 65+ específica para esta audiencia (las 5 bandas reportadas suman 85%) — se deja en 0 por ausencia de dato, no como cifra real reportada.",
+    "GWI no devolvió desagregación por ciudad/estado con muestra suficiente para esta audiencia.",
+    "Motivaciones de compra de ropa/calzado y barreras (aranceles/impuestos a compras de lujo desde el exterior) verificadas 1:1 vía explore_insight_gwi sobre insights reales de esta audiencia.",
+    "Intereses digitales y medios verificados 1:1 vía chat_gwi sobre esta audiencia real.",
+    "Bloques del customer journey sin dato específico de GWI para ese horario quedan señalados como tal, en vez de inventar una cifra.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fashionista-melissa-usa",
+      name: "Ashley Turner",
+      archetype: "La Fashion-Conscious",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Mujer residente en Estados Unidos que se considera fashion-conscious o está interesada en moda. Se distribuye de forma relativamente pareja entre los 16 y los 64 años, con algo más de peso en el segmento más joven (16-34 años). Prioriza comodidad y calidad sobre el diseño puro al comprar calzado/ropa, y ya siente el impacto de los aranceles en sus compras de lujo desde el exterior.",
+      aiInsight: aiInsight(
+        "Cruza con la sensibilidad arancelaria del consumo de lujo importado: 19.2% ha retrasado una compra planeada de artículos de lujo/diseño desde el exterior por aranceles e impuestos (460% más probable que el promedio) — para una marca como Melissa, fabricada fuera de EE.UU., comunicar con claridad el origen del inventario (stock local vs. importado) y la ausencia de sobrecostos puede ser un diferenciador competitivo real frente a marcas que no atienden esa fricción.",
+        [
+          { label: "Comodidad gana sobre el diseño puro", detail: "76% prioriza ajuste y comodidad al comprar calzado para actividades al aire libre, frente a solo 28% que prioriza el diseño — el mensaje de producto debe liderar con confort antes que con el diseño colorido característico de la marca." },
+          { label: "Los aranceles ya son una fricción real de compra", detail: "19.2% retrasó una compra de lujo/diseño desde el exterior por aranceles e impuestos en el último año (460% más probable que el promedio) — vale la pena comunicar transparencia de precio sin sobrecostos ocultos de importación." },
+          { label: "Streaming y TV como canal de alto alcance", detail: "64% está interesada en televisión y 41% de las usuarias de smartphone tiene apps de streaming dominando su tiempo de pantalla — invertir en placements dentro de streaming puede complementar una pauta social ya saturada." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 0, female: 100 },
+        ageBands: [
+          { label: "16-24", pct: 20 },
+          { label: "25-34", pct: 20 },
+          { label: "35-44", pct: 18 },
+          { label: "45-54", pct: 14 },
+          { label: "55-64", pct: 13 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Estados Unidos (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "El ajuste y la comodidad son el factor más importante al comprar calzado/ropa", pct: 76 },
+        { label: "La calidad es el factor más importante al comprar calzado/ropa", pct: 70.1 },
+        { label: "Compra piezas de lujo/diseño para darse un gusto especial", pct: 57 },
+        { label: "Valora la calidad y manufactura al comprar piezas de lujo/diseño", pct: 44 },
+      ],
+      barriers: [
+        { label: "Retrasó una compra planeada de lujo/diseño desde el exterior por aranceles e impuestos", pct: 19.2 },
+        { label: "Le preocupa ser sobrecargada o estafada al dejar que un asistente de IA compre por ella", pct: 46 },
+        { label: "Exige guías de talla y ajuste claras al comprar piezas de lujo/diseño online", pct: 27 },
+      ],
+      digitalInterests: [
+        { label: "Paga suscripción de streaming de música", index: 169 },
+        { label: "Paga suscripción de streaming de películas/TV", index: 143 },
+        { label: "Compra con cupones y descuentos disponibles", index: 141 },
+        { label: "Usa el móvil como principal forma de acceder a internet", index: 95 },
+      ],
+      media: [
+        { label: "Usa el móvil para ver video online", pct: 67 },
+        { label: "Interesada en televisión", pct: 64 },
+        { label: "Usa TV para acceder a internet", pct: 46 },
+        { label: "Usa redes sociales para ver qué es tendencia", pct: 38 },
+        { label: "Apps de streaming dominan su tiempo de pantalla en el móvil", pct: 41 },
+        { label: "Siempre ve películas a través de streaming", pct: 36 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Mobile video", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes sociales", "Instagram, TikTok", "Contenido sobre tendencias y lo que se habla en el momento.", [
+          { label: "Usa redes sociales para ver qué es tendencia", pct: 38, index: 142 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Compras online", "Sitios de ecommerce", "Promociones con cupón/descuento disponible.", [
+          { label: "Compra con cupones y descuentos disponibles", pct: 55, index: 141 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Mobile video", "YouTube, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "Smart TV, apps de streaming", "Contenido patrocinado dentro de series/películas en streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming", "Apps de streaming de video", "CTA de compra con envío/garantía de autenticidad clara.", [
+          { label: "Apps de streaming dominan su tiempo de pantalla en el móvil", pct: 41, index: 114 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Ejecutivos (no dueños de negocio) activos en pagos
+// digitales en Colombia, procesado 2026-10-07.
+// ---------------------------------------------------------------------------
+const CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007 = {
+  id: "ejecutivos-pagos-digitales-colombia",
+  name: "Ejecutivos no propietarios activos en pagos digitales (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-07)",
+  insightNote:
+    "Audiencia real de GWI ('PuntoDePago>Partners Estrategicos', audience_id cbf0743c-cec1-4195-ae74-d5f88d79eb44): colombianos en gerencia ejecutiva que han usado al menos un método de pago en el último mes y NO son dueños/fundadores de empresa — distinta del caso 'comerciantes-pagos-digitales-colombia' (dueños/fundadores).",
+  funnelSteps: [
+    {
+      label:
+        "Ejecutivos (no dueños de negocio) activos en pagos digitales (Colombia) (universo real GWI: ~333K sobre 31.06M de Colombia)",
+      pct: 1.1,
+    },
+  ],
+  footnotes: [
+    "1.1% = universo real de GWI para esta audiencia (188,802 hombres + 144,677 mujeres = 333,479, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital de Colombia (31.06M).",
+    "Muestra pequeña (173 encuestados) — tratar las cifras con el margen de error propio de un tamaño de muestra reducido.",
+    "Edad: GWI solo devolvió con muestra suficiente la banda 25-34 (32%); el resto queda en 0 por ausencia de dato, no como cifra real reportada.",
+    "Motivaciones, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre esta audiencia real.",
+    "GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia.",
+    "Bloques del customer journey sin dato específico de GWI para ese horario quedan señalados como tal, en vez de inventar una cifra.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "ejecutivo-pagos-digitales-colombia",
+      name: "Daniela Rincón",
+      archetype: "La Ejecutiva Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana o colombiano en un cargo de gerencia ejecutiva (no dueño ni fundador de su empresa) que ya usa métodos de pago digitales activamente. A diferencia del comerciante/dueño de negocio, su relación con el dinero digital es como empleado de alto nivel, no como gestor de caja de un negocio propio — el mensaje relevante es de beneficio personal (cashback, status, comodidad), no de herramientas de gestión empresarial.",
+      aiInsight: aiInsight(
+        "Cruza con un consumo de streaming casi universal pese a ser un segmento 'ejecutivo': 98% vio contenido on-demand o streaming en el último mes y 72.8% usó Netflix específicamente — un canal de alto alcance confiable para este público de alto poder adquisitivo es la pauta dentro de plataformas de streaming/CTV premium, más que la pauta social genérica donde compite con audiencias mucho más amplias y menos cualificadas.",
+        [
+          { label: "No gestionan presupuesto de negocio — el mensaje es personal, no empresarial", detail: "A diferencia del dueño/fundador de negocio del caso 'comerciantes-pagos-digitales-colombia', este público no es responsable de las finanzas de una empresa — el beneficio relevante es personal (cashback, puntos, status), no herramientas de gestión de caja." },
+          { label: "El efectivo todavía compite", detail: "Solo 48% prefiere pagar sin efectivo (22% menos probable que el promedio) — pese a su perfil digital, no se debe asumir adopción total de 'cashless'; ofrecer opciones híbridas sigue siendo relevante." },
+          { label: "Streaming casi universal como canal de alto alcance", detail: "98% vio contenido on-demand/streaming en el último mes y 41% es heavy user de servicios tipo Netflix/Hulu — el inventario de streaming premium es un canal de alto alcance y calidad para este segmento ejecutivo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 56.6, female: 43.4 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 32 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Promocionaría su marca favorita por productos de alta calidad", pct: 58 },
+        { label: "Promocionaría su marca favorita tras recibir buen servicio al cliente", pct: 44.4 },
+        { label: "Promocionaría su marca favorita por recompensas", pct: 41 },
+        { label: "Promocionaría su marca favorita si tiene información privilegiada de productos", pct: 32.4 },
+      ],
+      barriers: [
+        { label: "Le preocupa cómo las empresas usan sus datos personales online", pct: 36 },
+        { label: "Solo una minoría prefiere pagar completamente sin efectivo", pct: 48 },
+      ],
+      digitalInterests: [
+        { label: "Interés en inversiones", index: 163 },
+        { label: "Uso de internet para investigación de negocios", index: 162 },
+        { label: "Interés en tecnología", index: 148 },
+        { label: "Uso de internet con fines educativos", index: 141 },
+      ],
+      media: [
+        { label: "Vio contenido on-demand/streaming en el último mes", pct: 98 },
+        { label: "Usó Netflix para ver/descargar contenido", pct: 72.8 },
+        { label: "Heavy user de streaming tipo Netflix/Hulu", pct: 41 },
+        { label: "Interesado en televisión", pct: 56 },
+        { label: "Usa TV para acceder a internet", pct: 47 },
+        { label: "Usó YouTube para ver/descargar contenido", pct: 54.6 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y noticias", "LinkedIn, portales de noticias", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Investigación online", "Google, sitios de negocios", "Contenido de marca con enfoque en calidad/producto más que en precio.", [
+          { label: "Uso de internet para investigación de negocios", pct: 54, index: 162 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y video", "Redes sociales, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Oficina / transporte", "Checkout rápido", "Apps de pago, sitios de ecommerce", "Promociones con proceso de pago simplificado.", [
+          { label: "Prefiere un checkout online rápido y sencillo", pct: 37, index: 133 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV set, Netflix", "Contenido patrocinado dentro de streaming premium.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming", "Netflix, apps de streaming", "CTA de beneficios/cashback para suscripciones o compras premium.", [
+          { label: "Heavy user de streaming tipo Netflix/Hulu", pct: 41, index: 231 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -4979,7 +5283,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_GWI_AUTO_20261007],
   },
   {
     id: "retail",
@@ -4992,7 +5296,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MELISSA_USA_GWI_AUTO_20261007],
   },
   {
     id: "fintech",
@@ -5005,7 +5309,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007],
   },
   {
     id: "alcohol",
@@ -5149,4 +5453,7 @@ const PERSONA_RELATED_TRAITS = {
   "lider-equipo-hibrida": ["usaHerramientasDiario", "decideSoftwareEquipo"],
   "hincha-visa-mundial-femenino-colombia": ["interesFutbol", "consumoDigitalDiario"],
   "hincha-visa-futbol-regional-colombia": ["interesFutbol", "consumoDigitalDiario"],
+  "fanatico-formula1-colombia": ["consumoDigitalDiario"],
+  "fashionista-melissa-usa": ["sigueMarcas", "compraOnline"],
+  "ejecutivo-pagos-digitales-colombia": ["usaAppsFin"],
 };

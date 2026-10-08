@@ -285,6 +285,10 @@ const GWI_AUDIENCE_CATALOG = [
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   { id: "f6b86121-2a79-4c58-bc01-687e56872caf", title: "Páramo LAB (co) VIsa_FIFACOPADEMUJERES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used Visa last month or Visa Click to Pay in the last month, and are interested in or follow news about or watch highlights of or watch live the FIFA Football World Cup (Women's) on a streaming service or TV channel." },
   { id: "125b6af2-254a-4b92-a9df-17f480d3c03b", title: "Páramo LAB (co) VIsa_FIFASOLOHOMBRES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used either Visa or Visa Click to Pay in the last month, and are not interested in or do not follow news about or watch the FIFA Football World Cup (Women's) in any format." },
+  // Añadidas por la automatización diaria de GWI el 2026-10-08.
+  { id: "cbf0743c-cec1-4195-ae74-d5f88d79eb44", title: "PuntoDePago>Partners Estrategicos", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, are in executive management, have used at least one of several payment methods in the last month, and are not company owners or founders." },
+  { id: "456a3c5c-853e-4d6b-8265-9c5c38987b7e", title: "PuntoDePago>Comercios y Negocios Locales", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have used at least one of several payment methods in the last month, prefer owning a product or service, and are company owners or founders." },
+  { id: "01ce0e12-02ed-4820-a271-b2468582c3a3", title: "AudienceSilvestre>ViajanMundial", client: "", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, are interested in travel, have taken at least 1 vacation in a foreign country in the last 12 months, are interested in the FIFA Football World Cup (Men's), and like listening to Latin music." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -342,4 +346,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   "f6b86121-2a79-4c58-bc01-687e56872caf": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-mundial-femenino-colombia", analyzedAt: "2026-10-01" },
   "125b6af2-254a-4b92-a9df-17f480d3c03b": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-futbol-regional-colombia", analyzedAt: "2026-10-01" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-08.
+  "cbf0743c-cec1-4195-ae74-d5f88d79eb44": { categoryId: "fintech", caseId: "ecosistema-pagos-digitales-comercios-ejecutivos-colombia", personaId: "socio-estrategico-pagos-colombia", analyzedAt: "2026-10-08" },
+  "456a3c5c-853e-4d6b-8265-9c5c38987b7e": { categoryId: "fintech", caseId: "ecosistema-pagos-digitales-comercios-ejecutivos-colombia", personaId: "comercio-negocio-local-pagos-colombia", analyzedAt: "2026-10-08" },
+  "01ce0e12-02ed-4820-a271-b2468582c3a3": { categoryId: "viajes", caseId: "viajeros-mundialistas-musica-latina-colombia", personaId: "viajero-mundialista-musica-latina-colombia", analyzedAt: "2026-10-08" },
 };

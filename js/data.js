@@ -4952,6 +4952,234 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO — ECOSISTEMA DE PAGOS DIGITALES (borrador automático GWI, 2026-10-08)
+// ---------------------------------------------------------------------------
+const CASE_ECOSISTEMA_PAGOS_GWI_AUTO_20261008 = {
+  id: "ecosistema-pagos-digitales-comercios-ejecutivos-colombia",
+  name: "Ecosistema de pagos en Colombia: ejecutivos no dueños vs. comercios y negocios locales",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-08)",
+  insightNote:
+    "Dos audiencias reales y complementarias de GWI, ambas con personas que usaron al menos un método de pago en el último mes en Colombia, separadas por si son dueños/fundadores de su negocio o no: 'PuntoDePago>Partners Estrategicos' (audience_id cbf0743c-cec1-4195-ae74-d5f88d79eb44, ejecutivos que NO son dueños) y 'PuntoDePago>Comercios y Negocios Locales' (audience_id 456a3c5c-853e-4d6b-8265-9c5c38987b7e, dueños/fundadores de negocio).",
+  funnelSteps: [
+    { label: "Universo combinado real de ambas audiencias en GWI (333,479 + 1,039,920 ≈ 1,373,399) sobre la población digital de Colombia (31.06M)", pct: 4 },
+  ],
+  footnotes: [
+    "4% ≈ universo combinado real de ambas audiencias en GWI (333,479 + 1,039,920 = 1,373,399, verificado vía explore_insight_gwi sobre la pregunta de género de cada audiencia) sobre la población digital total de Colombia (31.06M).",
+    "sharePct de cada persona = su universo real / el universo combinado (24% ejecutivos no dueños, 76% comercios/dueños de negocio).",
+    "Demografía, preferencia de pago (efectivo vs. sin efectivo), dispositivo de acceso a internet y uso de redes sociales verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de cada audiencia.",
+    "GWI no devolvió datos compatibles para motivaciones específicas de uso de apps financieras ni para barreras/preocupaciones de seguridad o confianza en pagos digitales para ninguna de las dos audiencias (se probó explícitamente y la herramienta respondió que no había datos compatibles) — se usó la preferencia efectivo/sin-efectivo como único dato de tipo 'barrera' real, en vez de inventar cifras de confianza o seguridad.",
+    "Edades: para 'Socio Estratégico de Pagos' GWI solo devolvió con muestra suficiente el rango 25-34 (32.1%); los demás rangos se dejan en 0 en vez de inventar un valor. Para 'Comercio y Negocio Local' se devolvieron 25-34, 35-44, 45-54 y 55-64 con muestra suficiente; 16-24 y 65+ no la tuvieron y se dejan en 0.",
+    "Top ciudades: GWI no devolvió desagregación por ciudad con muestra suficiente para ninguna de las dos audiencias.",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "No fue posible construir un customer journey con cifras verificadas de actividades por franja horaria para estas dos audiencias (GWI no devolvió datos compatibles) — los bloques quedan con lugar/medios genéricos y sin cifras de actividades, siguiendo la regla de nunca inventar datos de journey.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "socio-estrategico-pagos-colombia",
+      name: "Camilo Restrepo",
+      archetype: "El Socio Estratégico de Pagos",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Ejecutivo colombiano en cargos de gerencia o dirección, trabaja en relación de dependencia, de forma independiente o freelance, y usó al menos un método de pago en el último mes — pero no es dueño ni fundador de la empresa en la que trabaja. Es un perfil 'bisagra' dentro del ecosistema de pagos: influye o decide en procesos de la compañía sin ser el dueño del negocio.",
+      aiInsight: aiInsight(
+        "Cruza con una paradoja efectivo-digital: a pesar de tratarse de ejecutivos en cargos de gerencia, el 52.5% todavía prefiere pagar en efectivo (índice 135.4, es decir 35% más probable que el promedio) — mientras que su uso de PC/laptop para internet es 62% más alto que el promedio (índice 161.9). Esto sugiere un comportamiento dual: muy digital en el entorno laboral/desktop, pero resistente a soltar el efectivo en el día a día personal. La oportunidad de medios está en pauta desktop/LinkedIn-style más que en apps puramente mobile-first para este segmento.",
+        [
+          { label: "Canal desktop subutilizado", detail: "29.1% usa PC/laptop como dispositivo principal (índice 161.9, 62% más que el promedio) — un canal de pauta web/desktop rinde más aquí que en la mayoría de las audiencias ya procesadas, que suelen ser mobile-first." },
+          { label: "Redes como networking profesional, no solo ocio", detail: "37.8% usa redes sociales principalmente para networking o investigación laboral (índice 160.3, 60% más que el promedio) — el contenido de marca debe hablarle en tono profesional/B2B, no solo lifestyle." },
+          { label: "El efectivo sigue siendo el default", detail: "52.5% prefiere pagar en efectivo (índice 135.4) pese a ser un perfil de alto perfil laboral — cualquier producto de pagos digitales debe venderse por conveniencia puntual, no asumir que el cargo ejecutivo ya implica preferencia por lo digital." },
+        ]
+      ),
+      sharePct: 24,
+      demographics: {
+        genderSplit: { male: 56.6, female: 43.4 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 32.1 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Usa redes sociales para networking o investigación laboral", pct: 37.8 },
+        { label: "Usa redes sociales para encontrar productos para comprar", pct: 37.0 },
+        { label: "Usa redes sociales para mantenerse en contacto con amigos/familia", pct: 48.1 },
+        { label: "Usa redes sociales para leer noticias", pct: 40.9 },
+      ],
+      barriers: [
+        { label: "Prefiere pagar en efectivo en vez de medios sin efectivo", pct: 52.5 },
+      ],
+      digitalInterests: [
+        { label: "Sigue o ve deportes a través de redes sociales", index: 139.4 },
+        { label: "Usa PC/laptop para acceder a internet (sobre el promedio)", index: 161.9 },
+        { label: "Busca inspiración de viajes o compras en redes", index: 118.5 },
+      ],
+      media: [
+        { label: "Instagram (uso diario)", pct: 29.7 },
+        { label: "Instagram (más de una vez al día)", pct: 33.6 },
+        { label: "Facebook (más de una vez al día)", pct: 38.3 },
+        { label: "TikTok (más de una vez al día)", pct: 39.5 },
+        { label: "Mobile como dispositivo principal de acceso a internet", pct: 69.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y noticias", "Instagram, Facebook", "Contenido corporativo/profesional temprano.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "PC/laptop, redes de networking", "LinkedIn-style, Instagram", "Pauta desktop orientada a productividad/finanzas.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, Facebook", "Contenido de conveniencia de pago en almuerzo.", []),
+        daypart("La tarde", "3 a 6 pm", "Oficina", "PC/laptop", "Desktop, email", "Retargeting en canales de escritorio.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Transporte / casa", "Mobile, redes", "Instagram, TikTok", "Mensaje de conveniencia para pagos personales.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y entretenimiento", "Facebook, TikTok", "Contenido de cierre del día, tono personal.", []),
+      ],
+    },
+    {
+      id: "comercio-negocio-local-pagos-colombia",
+      name: "María Fernanda Ocampo",
+      archetype: "La Dueña de Negocio Local",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Dueña o fundadora de su propio negocio en Colombia, trabaja tiempo completo, parcial o de forma independiente, y usó al menos un método de pago en el último mes. Representa al comerciante/emprendedor que sostiene el ecosistema de pagos desde el lado de la oferta, no solo como consumidor.",
+      aiInsight: aiInsight(
+        "Cruza con un patrón mobile-first + descubrimiento visual/profesional poco típico del estereotipo de 'negocio local': el 76.9% usa el celular como dispositivo principal de acceso a internet (el más alto de las dos personas de este caso), pero además usa LinkedIn semanalmente 89% más que el promedio (índice 189.4) y Pinterest semanalmente 77% más (índice 177.2) — una combinación de networking B2B y búsqueda de inspiración visual que no encaja con un plan de medios genérico de 'comercio local' basado solo en Facebook/WhatsApp.",
+        [
+          { label: "Mobile como canal dominante", detail: "76.9% usa el celular como dispositivo principal de acceso a internet — cualquier herramienta o anuncio de pagos digitales debe estar optimizado mobile-first para este segmento." },
+          { label: "LinkedIn y Pinterest como canales de nicho con sobre-índice alto", detail: "LinkedIn semanal índice 189.4 y Pinterest semanal índice 177.2 — canales normalmente secundarios en Colombia que aquí superan ampliamente el promedio, útiles para contenido de inspiración de negocio y networking B2B." },
+          { label: "El efectivo sigue dominando pese a ser el lado 'oferta' del pago digital", detail: "51.9% prefiere pagar en efectivo (índice 133.9) — incluso quienes cobran pagos digitales de sus clientes siguen prefiriendo pagar en efectivo ellos mismos, una brecha entre aceptar y usar medios digitales que vale la pena explorar en comunicación." },
+        ]
+      ),
+      sharePct: 76,
+      demographics: {
+        genderSplit: { male: 60.8, female: 39.2 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 23.8 },
+          { label: "35-44", pct: 28.6 },
+          { label: "45-54", pct: 23.4 },
+          { label: "55-64", pct: 16.3 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Usa redes sociales para mantenerse en contacto con amigos/familia", pct: 61.1 },
+        { label: "Usa redes sociales para networking o investigación laboral", pct: 45.1 },
+        { label: "Usa redes sociales para leer noticias", pct: 49.2 },
+        { label: "Usa redes sociales para encontrar productos para comprar", pct: 42.9 },
+      ],
+      barriers: [
+        { label: "Prefiere pagar en efectivo en vez de medios sin efectivo", pct: 51.9 },
+      ],
+      digitalInterests: [
+        { label: "Usa LinkedIn semanalmente (sobre el promedio)", index: 189.4 },
+        { label: "Usa Pinterest semanalmente (sobre el promedio)", index: 177.2 },
+        { label: "Usa PC/laptop para acceder a internet (sobre el promedio)", index: 122.0 },
+      ],
+      media: [
+        { label: "Facebook (más de una vez al día)", pct: 46.4 },
+        { label: "Instagram (más de una vez al día)", pct: 42.0 },
+        { label: "TikTok (más de una vez al día)", pct: 28.4 },
+        { label: "Mobile como dispositivo principal de acceso a internet", pct: 76.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Negocio / local", "Mobile, mensajería", "Facebook, WhatsApp", "Recordatorio de herramientas de cobro digital para el día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Negocio / local", "Redes sociales", "Facebook, Instagram", "Contenido de inspiración de negocio.", []),
+        daypart("Medio día", "12 m a 3 pm", "Negocio / local", "Mobile", "Instagram, Pinterest", "Ideas visuales para el negocio.", []),
+        daypart("La tarde", "3 a 6 pm", "Negocio / local", "Redes y networking", "LinkedIn, Facebook", "Contenido de crecimiento/financiamiento para negocios.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / transporte", "Mobile", "Facebook, TikTok", "Mensaje de conveniencia de pago personal.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Facebook, Instagram", "Contenido de cierre, tono personal/familiar.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — VIAJEROS INTERESADOS EN EL MUNDIAL Y MÚSICA LATINA (borrador automático GWI, 2026-10-08)
+// ---------------------------------------------------------------------------
+const CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261008 = {
+  id: "viajeros-mundialistas-musica-latina-colombia",
+  name: "Viajeros colombianos interesados en el Mundial masculino y música latina",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-08)",
+  insightNote:
+    "Audiencia real de GWI 'AudienceSilvestre>ViajanMundial' (audience_id 01ce0e12-02ed-4820-a271-b2468582c3a3): personas en Colombia interesadas en turismo, que tomaron al menos una vacación internacional en los últimos 12 meses, interesadas en la Copa Mundial de la FIFA (masculina) y que disfrutan escuchar música latina.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (2,005,504 personas, verificado vía explore_insight_gwi) sobre la población digital de Colombia (31.06M)", pct: 6 },
+  ],
+  footnotes: [
+    "6% ≈ universo real de la audiencia en GWI (1,157,080 hombres + 848,424 mujeres = 2,005,504, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía, interés en otros torneos/eventos deportivos y uso de redes sociales verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de esta audiencia.",
+    "GWI no devolvió datos compatibles para barreras específicas de esta audiencia frente a viajar más o asistir a eventos en vivo (se probó explícitamente) — se deja la lista de barreras vacía en vez de inventar cifras.",
+    "Edades: 65+ no tuvo muestra suficiente y se deja en 0 en vez de inventar un valor (el resto de bandas suma 99.1%).",
+    "Top ciudades: GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "No fue posible construir un customer journey con cifras verificadas de actividades por franja horaria para esta audiencia (GWI no devolvió datos compatibles) — los bloques quedan con lugar/medios genéricos y sin cifras de actividades.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "viajero-mundialista-musica-latina-colombia",
+      name: "Andrés Felipe Gómez",
+      archetype: "El Viajero Mundialista",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano interesado en turismo que ya viajó internacionalmente en el último año, sigue de cerca la Copa Mundial de la FIFA (masculina) y disfruta la música latina. Es un perfil con alto interés cruzado en fútbol internacional —no solo el Mundial— y en eventos en vivo, lo que lo hace relevante para activaciones que combinen viaje, deporte y entretenimiento.",
+      aiInsight: aiInsight(
+        "Cruza con un perfil de 'fanático pan-deportivo', no de un solo torneo: el interés declarado en el Mundial masculino (criterio que define a esta audiencia) viene acompañado de índices mucho más altos que el promedio en otros torneos — Tour de Francia (índice 856.4, el más alto registrado hasta ahora en este dataset), LaLiga (índice 465.2), UEFA Champions League (índice 328.3) y la Premier League (índice 313.7). El plan de medios no debería limitarse a contenido del Mundial: esta audiencia responde a una cartera amplia de propiedades deportivas internacionales, y el streaming/calendario de varios torneos a la vez es más rentable que apostarle a un solo evento.",
+        [
+          { label: "Interés deportivo transversal, no mono-torneo", detail: "Índices de 233 a 856 en Fórmula 1, LaLiga, Champions League y Tour de Francia — contenido de marca debe cubrir varias propiedades deportivas en paralelo, no solo el Mundial que define a la audiencia." },
+          { label: "Redes como fuente principal de noticias deportivas", detail: "60.9% usa redes sociales principalmente para leer noticias (índice 181.5) y 47.3% las usa para seguir deportes (índice 201.1) — el canal de alcance diario más confiable es social, no TV lineal." },
+          { label: "Instagram como touchpoint diario dominante durante el viaje", detail: "50.1% usa Instagram más de una vez al día (índice 168.1) — el momento de mayor consumo de contenido de marca es mientras viaja o planea el viaje, no solo el día del partido." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 57.7, female: 42.3 },
+        ageBands: [
+          { label: "16-24", pct: 15.0 },
+          { label: "25-34", pct: 26.9 },
+          { label: "35-44", pct: 24.4 },
+          { label: "45-54", pct: 17.4 },
+          { label: "55-64", pct: 16.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en eventos en vivo como festivales de música", pct: 55.7 },
+        { label: "Muy interesado en la UEFA Champions League", pct: 45.8 },
+        { label: "Muy interesado en LaLiga", pct: 38.1 },
+        { label: "Muy interesado en la Premier League inglesa", pct: 37.7 },
+      ],
+      barriers: [],
+      digitalInterests: [
+        { label: "Interés en el Tour de Francia", index: 856.4 },
+        { label: "Interés en LaLiga", index: 465.2 },
+        { label: "Interés en la UEFA Champions League", index: 328.3 },
+        { label: "Interés en Fórmula 1", index: 233.2 },
+      ],
+      media: [
+        { label: "Instagram (más de una vez al día)", pct: 50.1 },
+        { label: "Facebook (más de una vez al día)", pct: 46.9 },
+        { label: "TikTok (más de una vez al día)", pct: 38.9 },
+        { label: "X (más de una vez al día)", pct: 17.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / aeropuerto / hotel", "Redes sociales", "Instagram, Facebook", "Contenido inspiracional de destino + deporte.", []),
+        daypart("Final de la mañana", "9 a 12 m", "En viaje / hotel", "Redes sociales", "Instagram, X", "Noticias deportivas de varios torneos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Restaurantes / turismo", "Redes sociales", "Instagram, Facebook", "Contenido de experiencias en destino.", []),
+        daypart("La tarde", "3 a 6 pm", "Turismo / hotel", "Redes sociales", "Facebook, TikTok", "Resumen de resultados deportivos del día.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Hotel / restaurante", "Redes y streaming", "Instagram, TikTok", "Activación pre-evento o pre-partido.", []),
+        daypart("Noche", "8 a 11 pm", "Hotel / bar / casa", "Streaming y redes", "TV, Instagram, X", "Contenido en vivo del partido/torneo seguido esa noche.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -5005,7 +5233,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_ECOSISTEMA_PAGOS_GWI_AUTO_20261008],
   },
   {
     id: "alcohol",
@@ -5096,7 +5324,7 @@ const CATEGORIES = [
       { id: "reservaDirecto", label: "Reserva directamente sin agencia" },
       { id: "viajaConFamilia", label: "Viaja priorizando comodidad familiar" },
     ],
-    cases: [CASE_VIAJES],
+    cases: [CASE_VIAJES, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261008],
   },
   {
     id: "trabajo",

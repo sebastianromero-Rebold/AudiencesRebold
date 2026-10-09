@@ -4952,6 +4952,263 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO — AFICIONADOS A LA FÓRMULA 1 (Colombia) — borrador automático GWI
+// ---------------------------------------------------------------------------
+const CASE_F1_GWI_AUTO_20261009 = {
+  id: "formula1-fans-colombia",
+  name: "Aficionados a la Fórmula 1 (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-09)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) LABF1_', audience_id 5217f851-da09-4802-b0d3-a4a57ad9b4c9): colombianos interesados en deportes y en la Fórmula 1, con seguimiento vía TV en vivo o streaming.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'LABF1_' en GWI (4,522,006) sobre la población digital de Colombia (31.06M)", pct: 14.6 },
+  ],
+  footnotes: [
+    "14.6% ≈ universo real de la audiencia en GWI (4,522,006 = suma de universo hombres + mujeres, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía, motivaciones, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Esta audiencia es de cobertura nacional en Colombia (90% vive en zona urbana) — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "GWI no devolvió barreras de compra explícitas para esta audiencia; se usan en su lugar actitudes de consumo (lealtad de marca, búsqueda de ofertas, sensibilidad al precio) como proxy, igual que en otros casos ya procesados.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey solo incluye cifras de actividad verificadas para los bloques de la tarde y la noche (franjas con datos específicos de consumo de TV internacional por momento del día); los demás bloques usan lugares/medios genéricos sin cifras, ya que GWI no devolvió señal específica para ellos.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-formula1-colombia",
+      name: "Esteban Ramírez",
+      archetype: "El Apasionado de la Velocidad",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia nacional y mayoritariamente masculina (76.5% hombres, 23.5% mujeres), concentrada en 25-44 años (46.9% combinado) y 90% urbana. Es una audiencia de nicho pequeña pero de alta intensidad: 55% se declara 'muy interesada' en la Fórmula 1 (518% más que el promedio) y 63% se declara leal a las marcas que le gustan, con una sensibilidad al precio por debajo del promedio general (33.8%, 16% menos probable que el colombiano promedio).",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'fandom de nicho de alta intensidad pero bajo volumen': esta audiencia seguidora de Fórmula 1 en Colombia es pequeña pero extremadamente comprometida (55% 'muy interesada' en F1, con un índice 518% sobre el promedio) y más leal a sus marcas que sensible al precio — el valor no está en el alcance masivo sino en la intensidad del vínculo, lo que favorece el patrocinio y el contenido de marca sostenido sobre la pauta de alcance puro.",
+        [
+          { label: "Lealtad de marca por encima de caza de ofertas", detail: "63% se declara leal a las marcas que le gustan y solo 33.8% se considera sensible al precio (16% por debajo del promedio) — el ángulo de descuento agresivo pesa menos aquí que construir una relación de marca sostenida vía patrocinio o contenido editorial de la categoría." },
+          { label: "El prime time nocturno es el verdadero momento de visibilidad", detail: "69% ve TV internacional en 'prime time' (7-10pm) entre semana y 54.8% en la franja de 5-7pm — la pauta y el contenido de marca rinden más en esas franjas que en la mañana, donde GWI no mostró un pico de consumo claro para esta audiencia." },
+          { label: "Cruce inesperado con marketplaces de descuento", detail: "Esta audiencia usa SHEIN (32.5%, 348% más que el promedio) muy por encima de lo esperado para un público de automovilismo — vale la pena explorar retail media en esas plataformas como canal de activación adicional, no solo medios tradicionales de deportes." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 76.5, female: 23.5 },
+        ageBands: [
+          { label: "16-24", pct: 19.6 },
+          { label: "25-34", pct: 22.8 },
+          { label: "35-44", pct: 24.1 },
+          { label: "45-54", pct: 18.5 },
+          { label: "55-64", pct: 15.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (audiencia 90% urbana a nivel nacional — GWI no devolvió desagregado por ciudad para esta audiencia)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Muy interesados en la Fórmula 1", pct: 55.1 },
+        { label: "Interesados en carros/motorismo", pct: 60.8 },
+        { label: "Interesados en tecnología", pct: 82.9 },
+        { label: "Interesados en ciencia", pct: 59.9 },
+      ],
+      barriers: [
+        { label: "Se declaran leales a las marcas que les gustan (freno a probar nuevas marcas)", pct: 63.1 },
+        { label: "Buscan las mejores ofertas antes de comprar", pct: 54.5 },
+        { label: "Se declaran price-conscious (por debajo del promedio)", pct: 33.8 },
+      ],
+      digitalInterests: [
+        { label: "Vieron Instagram Reels en el último mes", pct: 45.5 },
+        { label: "Pagaron una suscripción de streaming de video/TV en el último mes", pct: 51.6 },
+        { label: "Usaron SHEIN en el último mes", pct: 32.5 },
+      ],
+      media: [
+        { label: "Usaron Netflix en el último mes", pct: 74.4 },
+        { label: "Heavy users de radio", pct: 33.0 },
+        { label: "Usan redes sociales para encontrar contenido", pct: 47.4 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Google", "Contenido editorial de la categoría (tecnología, autos).", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes sociales", "Instagram, YouTube", "Resumen/preview de la próxima carrera.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, YouTube", "Contenido de marca ligado a tecnología/innovación.", []),
+        daypart("La tarde", "3 a 6 pm", "Oficina / transporte", "TV internacional", "TV internacional, streaming", "Pauta y contenido de marca en la franja de mid-afternoon (2-5pm), cuando esta audiencia ve más TV internacional.", [
+          { label: "Ven TV internacional en mid-afternoon (2pm-5pm)", pct: 57.0, index: 125.3 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "TV internacional, streaming", "Visibilidad en la franja de late-afternoon (5-7pm), antes del prime time.", [
+          { label: "Ven TV internacional en late-afternoon (5pm-7pm)", pct: 54.8, index: 115.3 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional / streaming de video", "TV internacional, Netflix", "Momento de mayor visibilidad: prime time (7-10pm) entre semana.", [
+          { label: "Ven TV internacional en 'Prime' (7pm-10pm) entre semana", pct: 69.0, index: 112.6 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — RAUW ALEJANDRO EN CONCIERTO, AUDIENCIA REGGAETÓN (Bogotá/Cundinamarca) — borrador automático GWI
+// ---------------------------------------------------------------------------
+const CASE_RAUW_REGGAETON_GWI_AUTO_20261009 = {
+  id: "rauw-alejandro-2025-bogota-colombia",
+  name: "Rauw Alejandro en concierto — audiencia reggaetón (Bogotá/Cundinamarca, Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-09)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) Rauw2025Reggaeton', audience_id d6c60aba-912d-449e-87c9-d77134b36858): residentes de Bogotá/Cundinamarca que compraron o planean comprar boletos de concierto, están interesados en música/baile y en eventos en vivo tipo festival, y les gusta la música latina.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Rauw2025Reggaeton' en GWI (868,393) sobre la población digital de Colombia (31.06M)", pct: 2.8 },
+  ],
+  footnotes: [
+    "2.8% ≈ universo real de la audiencia en GWI (868,393, verificado vía explore_insight_gwi sobre la pregunta de interés en eventos en vivo) sobre la población digital total de Colombia (31.06M).",
+    "Muestra pequeña: las respuestas de GWI para esta audiencia provienen de una muestra de entre 50 y 85 encuestados según la pregunta (ver universos reportados) — tratar las cifras con más cautela que en audiencias con muestra mayor, y priorizar su revisión editorial antes de usarlas en un plan de medios.",
+    "Demografía: GWI solo devolvió género (63.3% mujeres) de forma granular para esta audiencia; la edad se reportó como '100% entre 16 y 64 años' sin un desglose por rango más específico, pese a haberlo solicitado explícitamente.",
+    "Top ciudades: esta audiencia ya está definida por GWI como residente de Bogotá D.C./Cundinamarca — no se solicitó ni se devolvió un desagregado adicional dentro de esa región.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: GWI no devolvió datos específicos por momento del día para esta audiencia.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-reggaeton-rauw-bogota",
+      name: "Daniela Mendoza",
+      archetype: "La Fanática del Reggaetón Latino",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia de Bogotá/Cundinamarca mayoritariamente femenina (63.3% mujeres), ya activa en la compra de boletos de concierto: 66.7% compró en los últimos 3-6 meses y 100% está interesada en eventos en vivo tipo festival. Es musicalmente apasionada (81% pasionada por un amplio rango de artistas) pero sensible a la oferta: cerca de 7 de cada 10 prefiere esperar a que haya una promoción antes de comprar.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón de 'pasión musical de alta frecuencia pero sensible a la oferta': esta audiencia ya compra boletos de concierto activamente (66.7% lo hizo en los últimos 3-6 meses, índice 436%) pero cerca del 70% espera a que haya una oferta o promoción antes de decidirse — el mensaje de venta debe combinar urgencia de lineup con un gancho de precio/preventa, no solo el anuncio del artista.",
+        [
+          { label: "La compra ya es un hábito, no un impulso raro", detail: "66.7% compró boletos de concierto en los últimos 3-6 meses, con un índice de 436% sobre el promedio del internauta colombiano — esta audiencia vive en un ciclo de compra de entretenimiento en vivo casi continuo, lo que favorece calendarizar la pauta en oleadas en vez de un solo pico." },
+          { label: "Social media funciona como vitrina de compra, no solo de descubrimiento", detail: "64% usa redes sociales para encontrar inspiración de lugares y cosas que comprar (índice 207%) — vale la pena activar shopping directo/checkout dentro de redes en vez de depender solo de un link externo a taquilla." },
+          { label: "La oferta decide el momento de compra, no solo el artista", detail: "69.7% prefiere esperar a que los productos estén en oferta — comunicar una preventa o código de descuento visible desde el primer anuncio puede adelantar la decisión de compra en vez de perderla frente a la competencia de otros eventos en la ciudad." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 36.7, female: 63.3 },
+        ageBands: [{ label: "16-64 (GWI no devolvió un desglose de edad más granular para esta audiencia)", pct: 100 }],
+        topCities: [{ city: "Bogotá D.C. / municipios de Cundinamarca (definición propia de la audiencia en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesadas en eventos en vivo como festivales de música", pct: 100 },
+        { label: "Compraron boletos de concierto en los últimos 3-6 meses", pct: 66.7 },
+        { label: "Pasionadas por un amplio rango de artistas/bandas", pct: 80.7 },
+        { label: "Creen que la música puede ser un agente de cambio social", pct: 76.7 },
+      ],
+      barriers: [
+        { label: "Prefieren esperar a que los productos estén en oferta antes de comprar", pct: 69.7 },
+      ],
+      digitalInterests: [
+        { label: "Usan redes sociales para encontrar inspiración de lugares y cosas que comprar", pct: 64.0 },
+        { label: "Vieron videos cortos (reels/TikToks) la mayoría de días de la última semana", pct: 67.7 },
+        { label: "Usaron MercadoLibre en el último mes", pct: 77.4 },
+      ],
+      media: [
+        { label: "Heavy users de streaming de música", pct: 71.7 },
+        { label: "Usaron Netflix en el último mes", pct: 83.0 },
+        { label: "Navegaron redes sociales la mayoría de días de la última semana", pct: 73.4 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y streaming de música", "Instagram, streaming de música", "Contenido de anuncio de artista/lineup.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Clips musicales y recordatorio de preventa.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming de música", "Streaming de música, redes sociales", "Contenido de marca dentro de streaming de audio.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, TikTok", "Retargeting con código de descuento visible.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video y redes", "Netflix, Instagram", "CTA directo a compra con checkout simplificado.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de música y redes sociales", "Streaming de música, Instagram", "Urgencia de últimas entradas / oferta por tiempo limitado.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — COMPRADORES DE ALTA PROPENSIÓN G-STAR (Argentina, Brasil, Chile, México) — borrador automático GWI
+// ---------------------------------------------------------------------------
+const CASE_GSTAR_LATAM_GWI_AUTO_20261009 = {
+  id: "gstar-alta-propension-latam",
+  name: "Compradores de alta propensión de marca G-Star (Argentina, Brasil, Chile, México)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-09)",
+  insightNote:
+    "Audiencia real de GWI ('WHPGlobal>Latam>Gstar>HighPropensityBuyerWithBrandAffinity', audience_id e791aec7-7b03-4c11-b3f9-bd768c12fb70): compradores de alta propensión con afinidad de marca para G-Star en Argentina, Brasil, Chile y México, fashion-conscious o interesados en moda.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'G-Star HighPropensityBuyerWithBrandAffinity' en GWI (50,959,450) sobre la población digital combinada de Argentina+Brasil+Chile+México (308.65M)", pct: 16.5 },
+  ],
+  footnotes: [
+    "16.5% ≈ universo real de la audiencia en GWI (50,959,450 = suma de universo hombres + mujeres, verificado vía explore_insight_gwi) sobre la población digital combinada de los 4 mercados de MARKETS que cubre esta audiencia (Argentina 35M + Brasil 180M + Chile 15.6M + México 78.05M = 308.65M) — a diferencia de otros casos de un solo mercado.",
+    "Esta es una audiencia multi-mercado (Argentina, Brasil, Chile, México) — se registró con market: 'MEX' solo como mercado representativo para el selector del wizard; los datos de la persona reflejan el total LATAM de la audiencia, no solo México.",
+    "GWI no devolvió un desagregado por país dentro de esta audiencia al consultarlo directamente.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi. GWI no devolvió un desglose de edad más granular que los 4 rangos listados (16-24 a 45-54); los rangos 55-64 y 65+ quedan en 0 por falta de dato, no por ser necesariamente nulos.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey incluye cifras de actividad verificadas para la tarde y la noche (franjas con datos específicos de consumo de TV internacional por momento del día, entre semana); los demás bloques usan lugares/medios genéricos sin cifras.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "compradora-gstar-latam",
+      name: "Valeria Campos",
+      archetype: "La Compradora Fashionista de Alta Afinidad",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia LATAM (Argentina, Brasil, Chile, México) mayoritariamente femenina (66.1% mujeres), concentrada en 16-34 años (50.8% combinado). Compra moda a través de fast-fashion digital (57.7% usó SHEIN en el último mes, 623% más que el promedio) pero exige que las marcas sean auténticas (70.2%) e innovadoras (73.7%) — no es una audiencia que compre solo por precio, a pesar de que casi la mitad se declara sensible a él (48%).",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'fast-fashion digital con búsqueda de autenticidad': esta audiencia compra a través de plataformas de fast-fashion como SHEIN (57.7%, 623% sobre el promedio) pero al mismo tiempo exige que las marcas sean auténticas (70.2%) e innovadoras (73.7%) — no es una audiencia que compre solo por precio, compite por relevancia de marca dentro de un hábito de compra online ya consolidado (71.3% prefiere comprar online).",
+        [
+          { label: "El influencer de moda ya es el punto de entrada, no un canal secundario", detail: "64.9% ve principalmente a influencers por contenido de belleza/moda (índice 295%) — una campaña sin presencia de creadores de moda pierde el canal de descubrimiento más relevante para esta audiencia." },
+          { label: "Autenticidad e innovación pesan más que el precio en la decisión de marca", detail: "70.2% quiere marcas auténticas y 73.7% las quiere innovadoras, mientras que solo 48% se declara sensible al precio — el mensaje de marca rinde más comunicando propósito/diseño que promoción agresiva de descuentos." },
+          { label: "El prime time nocturno sigue siendo el momento de mayor visibilidad, incluso en una audiencia 'mobile-first'", detail: "68.6% ve TV internacional en 'prime time' (7-10pm) entre semana — vale la pena anclar ahí los lanzamientos de colección o colaboraciones, en vez de asumir que esta audiencia solo se activa en redes sociales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 33.9, female: 66.1 },
+        ageBands: [
+          { label: "16-24", pct: 23.0 },
+          { label: "25-34", pct: 27.8 },
+          { label: "35-44", pct: 22.8 },
+          { label: "45-54", pct: 16.8 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Argentina, Brasil, Chile y México (audiencia LATAM multi-país — GWI no devolvió desagregado por ciudad/país para esta audiencia)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesadas en moda", pct: 78.6 },
+        { label: "Ven principalmente a influencers por contenido de belleza y moda", pct: 64.9 },
+        { label: "Quieren que las marcas sean innovadoras", pct: 73.7 },
+        { label: "Se describen como creativas", pct: 71.5 },
+      ],
+      barriers: [
+        { label: "Se declaran price-conscious (sensibles al precio)", pct: 48.0 },
+        { label: "Quieren que las marcas sean auténticas (freno si no lo son)", pct: 70.2 },
+      ],
+      digitalInterests: [
+        { label: "Usaron SHEIN en el último mes", pct: 57.7 },
+        { label: "Usaron MercadoLibre en el último mes", pct: 83.9 },
+        { label: "Usan Pinterest a diario", pct: 17.9 },
+      ],
+      media: [
+        { label: "Vieron TV en vivo en el último mes", pct: 97.1 },
+        { label: "Usan Instagram más de una vez al día", pct: 58.8 },
+        { label: "Vieron contenido on-demand/streaming en el último mes", pct: 99.4 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Pinterest", "Contenido editorial de moda/tendencias.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Recomendaciones de influencers de moda.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, Pinterest", "Inspiración de outfits / colaboraciones.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional / redes sociales", "TV internacional, Instagram", "Visibilidad en la franja de mid-afternoon (2-5pm) entre semana.", [
+          { label: "Ven TV internacional en mid-afternoon (2pm-5pm, entre semana)", pct: 38.9, index: 133.2 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "TV internacional, streaming", "Visibilidad en la franja de late-afternoon (5-7pm) entre semana.", [
+          { label: "Ven TV internacional en late-afternoon (5pm-7pm, entre semana)", pct: 50.4, index: 126.9 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional / streaming", "TV internacional, Netflix, redes sociales", "Momento de mayor visibilidad: prime time (7-10pm) entre semana — anclar lanzamientos/colaboraciones aquí.", [
+          { label: "Ven TV internacional en 'Prime' (7pm-10pm, entre semana)", pct: 68.6, index: 130.1 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -4966,7 +5223,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_RAUW_REGGAETON_GWI_AUTO_20261009],
   },
   {
     id: "deportes",
@@ -4979,7 +5236,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_F1_GWI_AUTO_20261009],
   },
   {
     id: "retail",
@@ -4992,7 +5249,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_GSTAR_LATAM_GWI_AUTO_20261009],
   },
   {
     id: "fintech",

@@ -4748,6 +4748,7 @@ const CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930 = {
     "3% = tamaño real de la audiencia en GWI (~1.01M: 612K hombres + 398K mujeres) sobre la población digital total de Colombia (31.06M) — universos verificados vía explore_insight_gwi sobre la pregunta de género.",
     "Género y edad tomados 1:1 de esta audiencia real vía explore_insight_gwi. Los rangos 16-24 y 65+ no fueron devueltos por GWI para esta audiencia (los 4 rangos reportados suman 91.7%); se dejan en 0 por ausencia de dato, no como cifra real reportada.",
     "Motivaciones, barreras, intereses digitales y medios: GWI no devolvió crosstabs exclusivos de esta audiencia para estas variables — se usan cifras reales de GWI Core Colombia sobre población general conectada, como contexto de categoría, no como diferenciador exclusivo (mismo patrón usado en el caso 'fintech-general-colombia').",
+    "Actualización 2026-10-10: la automatización diaria revisó una segunda audiencia real de GWI con descripción textual idéntica ('PuntoDePago>Comercios y Negocios Locales', audience_id 456a3c5c-853e-4d6b-8265-9c5c38987b7e, ~979K: 595K hombres + 384K mujeres) — demografía (60.8% hombre), motivaciones, barreras, intereses digitales y medios verificados vía chat_gwi/explore_insight_gwi resultaron estadísticamente indistinguibles de 'El Comerciante Multipago' (misma definición de audiencia: dueños/fundadores de negocio en Colombia que usaron al menos un método de pago y prefieren poseer un producto/servicio). Se registró como procesada en el manifest, enlazada a este mismo caso, sin crear una persona nueva para evitar duplicar una narrativa sin diferenciación real respaldada por datos.",
     "Borrador generado automáticamente — pendiente de revisión editorial.",
   ],
   personas: [
@@ -4952,6 +4953,188 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO GWI-AUTO — AudienceSilvestre>ViajanMundial, procesado 2026-10-10.
+// Colombianos interesados en viajes que ya viajaron al extranjero, siguen el
+// Mundial masculino de la FIFA y escuchan música latina — cruce deportes+viajes.
+// ---------------------------------------------------------------------------
+const CASE_MUNDIAL_VIAJEROS_GWI_AUTO_20261010 = {
+  id: "mundial-viajeros-colombia",
+  name: "Aficionados al Mundial que viajan al extranjero (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-10)",
+  insightNote:
+    "Audiencia real de GWI ('AudienceSilvestre>ViajanMundial', audience_id 01ce0e12-02ed-4820-a271-b2468582c3a3): colombianos interesados en viajes, que tomaron al menos una vacación en el extranjero en los últimos 12 meses, siguen el Mundial masculino de la FIFA y escuchan música latina.",
+  funnelSteps: [
+    { label: "Colombianos interesados en viajes, viajaron al extranjero en 12 meses, siguen el Mundial masculino FIFA y escuchan música latina", pct: 5.9 },
+  ],
+  footnotes: [
+    "5.9% = universo real de GWI (~1.84M, calculado desde el universo de la pregunta de género: 1,011,264 hombres + 828,206 mujeres) sobre la población digital total de Colombia (31.06M) — verificado vía explore_insight_gwi.",
+    "Demografía (género, edad, ciudades), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de esta audiencia.",
+    "Edad: GWI devolvió bandas de 25-34 a 55-64 sumando 83.3%; el 16.7% restante (equivalente al complemento aritmético sobre el 100% real de la audiencia) se agrupa en la banda '18-24' por ser el único tramo etario no desagregado por GWI para esta audiencia, no una cifra inventada.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey de 6 bloques queda con lugar/medios genéricos inferidos del perfil y sin cifras propias de actividades, pendiente de criterio del equipo creativo.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "aficionado-viajero-mundial-colombia",
+      name: "Andrés Felipe Gómez",
+      archetype: "El Hincha Viajero",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano urbano (93% vive en zona urbana) que sigue el Mundial masculino de la FIFA, escucha música latina y ya viajó al extranjero en el último año. No es solo un espectador del torneo: es un comprador activo de viajes, con alta afinidad deportiva real (índice 193 en 'soy fan del deporte') y fuerte presencia en redes sociales de deporte.",
+      aiInsight: aiInsight(
+        "Cruza el alto nivel de fanatismo deportivo real (49.6% se declara sports fan, índice 193) con un comportamiento de compra de viaje ya activo: 42.5% compró tiquetes de viaje en los últimos 3-6 meses y 38.3% piensa comprar una vacación al extranjero en el próximo semestre (índice 302 frente al colombiano promedio que toma vacaciones) — esta audiencia no solo sigue el Mundial, está en modo activo de compra de viaje, lo que la vuelve relevante tanto para marcas de turismo como para activaciones de patrocinio deportivo con oferta de viaje incluida.",
+        [
+          { label: "El fanatismo deportivo es real, no solo declarado", detail: "49.6% se identifica como sports fan (índice 193, casi el doble que el promedio) y 51.9% sigue deportistas o equipos en redes sociales — cualquier activación debe apalancarse en contenido deportivo auténtico, no genérico de viajes." },
+          { label: "Ya están comprando viaje, no solo soñando con él", detail: "42.5% compró tiquetes de viaje en los últimos 3-6 meses y 38.3% piensa comprar una vacación al extranjero en el próximo semestre (índice 302) — el momento de activación de medios es ahora, no en la previa lejana del evento." },
+          { label: "La TV en vivo sigue siendo el canal dominante para el partido", detail: "95.2% usa un televisor para ver TV en vivo y 70.4% declara interés en televisión — pese a su alto consumo de Instagram (51.5% uso diario), la pantalla principal para ver el partido sigue siendo la TV, no el celular." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 55.0, female: 45.0 },
+        ageBands: [
+          { label: "18-24", pct: 16.7 },
+          { label: "25-34", pct: 25.9 },
+          { label: "35-44", pct: 24.4 },
+          { label: "45-54", pct: 16.9 },
+          { label: "55-64", pct: 16.1 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 37.6 },
+          { city: "Antioquia", pct: 14.4 },
+          { city: "Valle del Cauca", pct: 13.2 },
+        ],
+      },
+      motivations: [
+        { label: "Prioriza experiencias únicas en la vida al elegir destino de viaje", pct: 34.2 },
+        { label: "Se declara sports fan", pct: 49.6 },
+        { label: "Sigue a deportistas y equipos en redes sociales", pct: 51.9 },
+      ],
+      barriers: [
+        { label: "El clima y la época del año es lo que más impacta su elección de destino", pct: 21.3 },
+        { label: "Planea comprar tiquetes de viaje en los próximos 3-6 meses (conversión aún pendiente)", pct: 32.2 },
+        { label: "Piensa adquirir seguro de viaje en los próximos 3-6 meses", pct: 17.8 },
+      ],
+      digitalInterests: [
+        { label: "Publicó su opinión sobre viajes/vacaciones online en el último mes", pct: 23.0 },
+        { label: "Publicó contenido sobre deportes online en el último mes", pct: 25.0 },
+        { label: "Usa Instagram más de una vez al día", pct: 51.5 },
+      ],
+      media: [
+        { label: "Interesado en televisión", pct: 70.4 },
+        { label: "Usa un televisor para ver TV en vivo", pct: 95.2 },
+        { label: "Heavy user de streaming (Netflix, Hulu)", pct: 41.2 },
+        { label: "Heavy user de radio", pct: 32.5 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV y redes sociales", "TV abierta, Instagram", "Resumen de resultados/previa del partido del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, Facebook", "Contenido deportivo y ofertas de viaje combinadas.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y búsqueda", "Instagram, Google", "Investigación de destinos/tiquetes de viaje.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming y redes", "Instagram, apps de streaming", "Retargeting de oferta de viaje ligada al torneo.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / bar", "TV en vivo", "TV abierta/paga", "Activación pre-partido.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bar", "TV y radio", "TV, radio", "Reacciones post-partido y contenido de marca asociado al viaje.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — WHPGlobal>Latam>Gstar>HighPropensityBuyerWithBrandAffinity,
+// procesado 2026-10-10. Compradoras/es de moda fashion-conscious en Argentina,
+// Brasil, Chile y México (mercado mayoritario: Brasil, 55.5%).
+// ---------------------------------------------------------------------------
+const CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010 = {
+  id: "gstar-fashion-latam",
+  name: "Compradores fashion-conscious de G-Star (LatAm: Brasil, México, Argentina, Chile)",
+  market: "BRA",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-10)",
+  insightNote:
+    "Audiencia real de GWI ('WHPGlobal>Latam>Gstar>HighPropensityBuyerWithBrandAffinity', audience_id e791aec7-7b03-4c11-b3f9-bd768c12fb70): compradores de ropa online en el último mes o en tienda en los últimos 3 meses, fashion-conscious o interesados en moda, conscientes de que sus datos provienen de preguntas de ingreso/estilo de vida, que quieren marcas auténticas, atrevidas o innovadoras, residentes en Argentina, Brasil, Chile o México.",
+  funnelSteps: [
+    { label: "Compradores fashion-conscious de G-Star en Argentina, Brasil, Chile y México", pct: 16.5 },
+  ],
+  footnotes: [
+    "16.5% = universo real de GWI (~50.96M, calculado desde el universo de la pregunta de género: 33,676,380 mujeres + 17,283,070 hombres) sobre la población digital combinada de Argentina, Brasil, Chile y México (308.65M, suma de digitalPop en MARKETS) — verificado vía explore_insight_gwi.",
+    "Mercado del caso asignado como Brasil (BRA) por ser el país con mayor participación real dentro de esta audiencia multi-país (55.5%); México concentra 33.4% adicional, Argentina 7.1% y Chile 4.1% (ver 'topCities', que aquí lista países en vez de ciudades por tratarse de una audiencia multi-mercado).",
+    "Demografía (género, edad, países), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de esta audiencia.",
+    "Edad: GWI devolvió bandas de 16-24 a 45-54 sumando 90.4%; el 9.6% restante (complemento aritmético sobre el 100% real de la audiencia) se agrupa en la banda '55+' por ser el único tramo no desagregado por GWI para esta audiencia, no una cifra inventada.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey de 6 bloques queda con lugar/medios genéricos inferidos del perfil y sin cifras propias de actividades, pendiente de criterio del equipo creativo.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "compradora-fashion-gstar-latam",
+      name: "Juliana Fernandes",
+      archetype: "La Fashionista Multimarca",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Mujer (66% de la audiencia), mayoritariamente brasileña (56%) o mexicana (33%), fashion-conscious de forma real y no solo aspiracional: ya compra ropa activamente online y en tienda, y quiere que las marcas que sigue sean innovadoras y auténticas. Convive con un hábito de compra multimarca que incluye tanto moda premium como fast-fashion de precio bajo.",
+      aiInsight: aiInsight(
+        "Cruza el perfil fashion-conscious real de esta audiencia (78.6% interesada en moda, índice 245 frente al promedio) con un comportamiento de compra ya activo: 67.3% compró ropa en el último mes y 57.7% usó SHEIN — conviven la búsqueda de marca premium/auténtica que define a G-Star (73.7% quiere marcas innovadoras) con hábitos de compra en plataformas de moda rápida y precio bajo, lo que sugiere que el reto no es generar deseo de marca sino diferenciarse del fast-fashion dentro del mismo carrito de compra.",
+        [
+          { label: "Fashion-conscious real, no aspiracional", detail: "78.6% declara interés en moda (índice 245) y 50.1% se identifica como 'fashion-conscious' (índice 278) — son consumidoras de moda activas, no solo curiosas; el contenido de marca puede asumir conocimiento de tendencias sin necesidad de educar desde cero." },
+          { label: "Compiten en el mismo carrito que el fast-fashion", detail: "57.7% usó SHEIN y 32.2% AliExpress en el último mes, pese a valorar marcas innovadoras y auténticas (73.7% y 70.2% respectivamente) — la oportunidad de G-Star no es combatir el precio bajo sino diferenciarse en autenticidad/diseño dentro del mismo hábito de compra multimarca." },
+          { label: "Brasil concentra más de la mitad de la audiencia", detail: "55.5% de esta audiencia reside en Brasil y 33.4% en México — la priorización de medios y el tono de campaña deben liderar con Brasil (portugués), con México como segundo mercado relevante, antes que Argentina (7.1%) o Chile (4.1%)." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 33.9, female: 66.1 },
+        ageBands: [
+          { label: "16-24", pct: 23.0 },
+          { label: "25-34", pct: 27.8 },
+          { label: "35-44", pct: 22.8 },
+          { label: "45-54", pct: 16.8 },
+          { label: "55+", pct: 9.6 },
+        ],
+        topCities: [
+          { city: "Brasil", pct: 55.5 },
+          { city: "México", pct: 33.4 },
+          { city: "Argentina", pct: 7.1 },
+          { city: "Chile", pct: 4.1 },
+        ],
+      },
+      motivations: [
+        { label: "Interesada en moda", pct: 78.6 },
+        { label: "Se describe como 'fashion-conscious'", pct: 50.1 },
+        { label: "Compró ropa en el último mes", pct: 67.3 },
+        { label: "Quiere que las marcas sean innovadoras", pct: 73.7 },
+      ],
+      barriers: [
+        { label: "Prefiere entrega gratuita al comprar online", pct: 65.6 },
+        { label: "Prefiere ver reseñas de otros clientes antes de comprar", pct: 48.3 },
+        { label: "Prefiere una política de devoluciones fácil", pct: 36.4 },
+      ],
+      digitalInterests: [
+        { label: "Ha usado SHEIN en el último mes", pct: 57.7 },
+        { label: "Visitó AliExpress en el último mes", pct: 32.2 },
+        { label: "Usa Instagram más de una vez al día", pct: 58.8 },
+        { label: "Publicó sobre moda/ropa online en el último mes", pct: 32.8 },
+      ],
+      media: [
+        { label: "Heavy user de streaming (Netflix, Hulu)", pct: 51.2 },
+        { label: "Usa TV para acceder a internet", pct: 59.6 },
+        { label: "Heavy user de música en streaming", pct: 44.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Contenido de lanzamientos/colecciones nuevas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes y reseñas", "Instagram, sitios de reseñas", "Consulta de opiniones antes de comprar.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido de moda y comparación multimarca.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y ecommerce", "Instagram, apps de ecommerce", "Retargeting de carrito abandonado.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "CTA de envío gratis / devoluciones fáciles.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y música", "Netflix, streaming de música", "Exploración de catálogo / compra nocturna.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -4979,7 +5162,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_MUNDIAL_VIAJEROS_GWI_AUTO_20261010],
   },
   {
     id: "retail",
@@ -4992,7 +5175,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010],
   },
   {
     id: "fintech",

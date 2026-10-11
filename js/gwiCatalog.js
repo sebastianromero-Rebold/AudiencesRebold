@@ -285,6 +285,9 @@ const GWI_AUDIENCE_CATALOG = [
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   { id: "f6b86121-2a79-4c58-bc01-687e56872caf", title: "Páramo LAB (co) VIsa_FIFACOPADEMUJERES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used Visa last month or Visa Click to Pay in the last month, and are interested in or follow news about or watch highlights of or watch live the FIFA Football World Cup (Women's) on a streaming service or TV channel." },
   { id: "125b6af2-254a-4b92-a9df-17f480d3c03b", title: "Páramo LAB (co) VIsa_FIFASOLOHOMBRES", client: "Páramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, follow soccer, have used either Visa or Visa Click to Pay in the last month, and are not interested in or do not follow news about or watch the FIFA Football World Cup (Women's) in any format." },
+  // Añadidas por la automatización diaria de GWI el 2026-10-11.
+  { id: "d6c60aba-912d-449e-87c9-d77134b36858", title: "Paramo (co) Rauw2025Reggaeton", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who purchased concert tickets in the last 3-6 months or purchased concert tickets online in the last 3-6 months or are planning to purchase concert tickets in the next 3-6 months, live in the Capital District or Cundinamarca, are interested in music or dance, listen to music on their commute or long journeys or to exercise or to connect to their culture or to set a tone at events or to express their individuality or to support their favorite artists, are interested in live events like music festivals, and like listening to Latin music." },
+  { id: "5217f851-da09-4802-b0d3-a4a57ad9b4c9", title: "Paramo (co) LABF1_", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and have an interest in watching sports or are sports fans, as well as being interested in Formula 1 or watching Formula 1 live on a TV channel or streaming service or following highlights and news about Formula 1." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -342,4 +345,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // Añadidas por la automatización diaria de GWI el 2026-10-01.
   "f6b86121-2a79-4c58-bc01-687e56872caf": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-mundial-femenino-colombia", analyzedAt: "2026-10-01" },
   "125b6af2-254a-4b92-a9df-17f480d3c03b": { categoryId: "deportes", caseId: "futbol-visa-mundial-femenino-colombia", personaId: "hincha-visa-futbol-regional-colombia", analyzedAt: "2026-10-01" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-11.
+  "d6c60aba-912d-449e-87c9-d77134b36858": { categoryId: "entretenimiento", caseId: "rauw-reggaeton-bogota-cundinamarca", personaId: "fan-reggaeton-bogota-cundinamarca", analyzedAt: "2026-10-11" },
+  "5217f851-da09-4802-b0d3-a4a57ad9b4c9": { categoryId: "deportes", caseId: "aficionados-formula1-colombia", personaId: "aficionado-f1-colombia", analyzedAt: "2026-10-11" },
+  "456a3c5c-853e-4d6b-8265-9c5c38987b7e": { categoryId: "fintech", caseId: "comercios-locales-pagos-digitales-colombia", personaId: "comercio-local-pagos-digitales-colombia", analyzedAt: "2026-10-11" },
 };

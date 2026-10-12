@@ -4952,6 +4952,265 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO — ENTRETENIMIENTO EN VIVO / CULTURA (borrador automático GWI, audiencia
+// real "Paramo>Generos>Bogotá", audience_id d7d374a3-f4b5-4de3-96bc-39d1d6b7dc22)
+// ---------------------------------------------------------------------------
+const CASE_GENEROS_BOGOTA_GWI_AUTO_20261012 = {
+  id: "generos-bogota-colombia",
+  name: "Entusiastas de eventos en vivo y cultura en Bogotá (Páramo>Generos>Bogotá)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-12)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>Generos>Bogotá' (audience_id d7d374a3-f4b5-4de3-96bc-39d1d6b7dc22): personas de 18 a 50 años en Bogotá (Capital District) interesadas en eventos en vivo como festivales de música o streaming de eventos, y siempre atentas a nuevos eventos de música en vivo.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (4,383,259) sobre la población digital de Colombia (31.06M)", pct: 14 },
+  ],
+  footnotes: [
+    "14% ≈ universo real de la audiencia en GWI (2,210,278 mujeres + 2,172,981 hombres = 4,383,259, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género y bandas de edad), motivaciones, actitudes de marca, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas de edad 55-64 y 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se dejan en 0 en vez de inventar un valor); la banda etaria de la audiencia es 18-50 por definición.",
+    "Top ciudades: la audiencia está definida por residir en Bogotá (Capital District), por lo que no aplica desagregación adicional por ciudad.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-cultural-bogota-colombia",
+      name: "Daniela Forero",
+      archetype: "La Exploradora Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá, tiene entre 18 y 50 años y está siempre atenta a nuevos eventos de música en vivo. Su interés no se limita a conciertos: también es una consumidora activa de teatro, museos y danza, lo que la vuelve una audiencia transversal para marcas de entretenimiento y cultura, no solo de música.",
+      aiInsight: aiInsight(
+        "Cruza con una audiencia 'omnívora cultural' más que un nicho de música en vivo: el 194% de índice en eventos en vivo convive con índices igualmente altos en teatro (152), danza (135) y museos/galerías (134) — mucho más transversal que el fan de un solo género. En paralelo, su comportamiento de pago muestra un patrón claro: paga más por contenido digital personal (apps móviles, música, streaming) que el promedio, pero es 6.5% menos propensa a preferir gastar en 'un producto nuevo' frente a 'una experiencia' — la oportunidad de medios está en vender acceso y experiencias, no solo producto.",
+        [
+          { label: "Es una audiencia cultural transversal, no solo de conciertos", detail: "Interés en eventos en vivo (74%, índice 194), teatro (44%, índice 152), danza (38%, índice 135) y museos/galerías (51%, índice 134) — una pauta anclada solo en 'conciertos' deja dinero sobre la mesa de teatro y artes visuales." },
+          { label: "Prioriza experiencias sobre productos nuevos", detail: "Solo 34.2% prefiere gastar en un producto nuevo frente a una experiencia, 6.5% menos que el promedio — el mensaje de marca rinde más si vende acceso/experiencia que si vende un producto físico." },
+          { label: "Es una paga-ora activa de contenido digital, con TikTok e Instagram como canales diarios", detail: "40% usa TikTok y 40% usa Instagram más de una vez al día; además paga más que el promedio por streaming de música (37%, índice 149), descargas de música (20%, índice 134) y apps móviles (15%, índice 169) — el canal de patrocinio de eventos debería ir de la mano con una oferta de contenido exclusivo pago, no solo orgánico." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49.6, female: 50.4 },
+        ageBands: [
+          { label: "16-24", pct: 24.0 },
+          { label: "25-34", pct: 31.9 },
+          { label: "35-44", pct: 29.2 },
+          { label: "45-54", pct: 14.8 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá (Capital District) — 100% por definición de la audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 73.7 },
+        { label: "Interesada en museos/galerías", pct: 50.7 },
+        { label: "Interesada en teatro", pct: 43.7 },
+        { label: "Interesada en danza (ballet, street dance, salsa, etc.)", pct: 37.5 },
+      ],
+      barriers: [
+        { label: "Prioriza experiencias sobre productos nuevos (solo 34.2% prefiere gastar en un producto nuevo)", pct: 34.2 },
+        { label: "Descubre marcas nuevas menos a través de TV/películas que el promedio", pct: 19.2 },
+      ],
+      digitalInterests: [
+        { label: "Pagó una suscripción a streaming de música el último mes", index: 148.5 },
+        { label: "Pagó por apps móviles el último mes", index: 169.4 },
+        { label: "Pagó descargas de música el último mes", index: 133.8 },
+        { label: "Pagó una suscripción de streaming de video/TV el último mes", index: 119.6 },
+      ],
+      media: [
+        { label: "TikTok (uso diario)", pct: 40.2 },
+        { label: "Instagram (uso diario)", pct: 40.0 },
+        { label: "Heavy user de streaming de música", pct: 59.8 },
+        { label: "Heavy user de streaming de video/TV (Netflix, Hulu)", pct: 35.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Agenda cultural del día (conciertos, teatro, exposiciones).", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Streaming de música", "Spotify / apps de música", "Playlist patrocinada o adelanto de line-up de un evento.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Reseña o clip de un evento cultural reciente.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Mensajería y redes", "WhatsApp, Instagram", "Invitación o recordatorio de evento con amigos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / evento", "Streaming y redes", "Apps de streaming, redes", "Pre-show / contenido detrás de cámaras del evento.", []),
+        daypart("Noche", "8 a 11 pm", "Evento en vivo / casa", "Evento en vivo o streaming", "Venue físico o streaming en vivo", "Experiencia de marca en el venue o pauta durante el streaming del evento.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — DEPORTES (borrador automático GWI, audiencia real "Digilant>Phoenix
+// Rising>AZ Soccer Fans", audience_id fa1d1328-bae2-48e8-8782-6faad460a369)
+// ---------------------------------------------------------------------------
+const CASE_PHOENIX_RISING_GWI_AUTO_20261012 = {
+  id: "phoenix-rising-arizona-usa",
+  name: "Aficionados al fútbol/soccer en Arizona (Digilant>Phoenix Rising>AZ Soccer Fans)",
+  market: "USA",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-12)",
+  insightNote:
+    "Audiencia real de GWI 'Digilant>Phoenix Rising>AZ Soccer Fans' (audience_id fa1d1328-bae2-48e8-8782-6faad460a369): individuos que viven en Arizona y siguen el fútbol/soccer — relevante para activaciones del club USL Phoenix Rising FC y marcas patrocinadoras locales.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (2,555,528) sobre la población digital de Estados Unidos (250M)", pct: 1 },
+  ],
+  footnotes: [
+    "1% ≈ universo real de la audiencia en GWI (1,586,432 hombres + 969,096 mujeres = 2,555,528, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Estados Unidos (250M, cifra agregada del mercado completo, no solo Arizona).",
+    "Motivaciones, actitudes de marca, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas de edad: GWI solo devolvió un agregado (87% tiene entre 16 y 64 años, 100% tiene 16 años o más) sin desagregación por banda con muestra suficiente — se dejan en 0 en vez de inventar un valor.",
+    "Top ciudades: la audiencia está definida por residir en Arizona, por lo que no aplica desagregación adicional por ciudad dentro del estado.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "hincha-multipantalla-arizona-usa",
+      name: "Marcus Bennett",
+      archetype: "El Hincha Multi-Pantalla",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Arizona y sigue el fútbol/soccer de forma activa: tanto viéndolo (48%) como jugándolo (39%), con fuerte interés también en fantasy sports (16%) y apuestas deportivas (22%). Consume TV en vivo en múltiples dispositivos — TV, teléfono/tablet y laptop/desktop — por encima del promedio en los tres casos.",
+      aiInsight: aiInsight(
+        "Cruza con un patrón de consumo deportivo multi-pantalla: usa TV (78%), teléfono/tablet (39%, índice 135) y laptop/desktop (31%, índice 129) para ver TV en vivo, todos por encima del promedio — no es una audiencia 'solo streaming' ni 'solo TV tradicional', sino ambas a la vez. Además, usa redes sociales específicamente para seguir deportes (30%, índice 157) muy por encima del uso general de redes — una pauta deportiva en redes sociales rinde más que una pauta genérica de marca en el mismo canal.",
+        [
+          { label: "Consume deporte en vivo en múltiples pantallas, no solo streaming", detail: "78% usa TV, 39% usa teléfono/tablet (índice 135) y 31% usa laptop/desktop (índice 129) para ver TV en vivo — la estrategia de medios debe cubrir TV abierta/paga Y segunda pantalla, no elegir una sola." },
+          { label: "Usa redes sociales específicamente para seguir deportes", detail: "30% usa redes sociales para seguir deportes, 57% más que el promedio — un canal más preciso que la pauta social genérica para esta audiencia." },
+          { label: "Interés deportivo va más allá del fútbol: fantasy sports y apuestas", detail: "16% interesado en fantasy sports (índice 158) y 22% en apuestas deportivas (índice 147) — abre espacio a activaciones de marca en plataformas de fantasy/apuestas deportivas, no solo durante el partido." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 61.6, female: 37.6 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Arizona (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en ver deporte", pct: 48.2 },
+        { label: "Interesado en jugar deporte", pct: 38.8 },
+        { label: "Interesado en apuestas deportivas", pct: 22.1 },
+        { label: "Interesado en fantasy sports", pct: 15.6 },
+      ],
+      barriers: [
+        { label: "Interés en televisión ligeramente por debajo del promedio", pct: 55.8 },
+        { label: "Interés en libros/literatura por debajo del promedio", pct: 38.1 },
+        { label: "Interés en museos/galerías por debajo del promedio", pct: 34.5 },
+      ],
+      digitalInterests: [
+        { label: "Pagó una suscripción a streaming de música el último mes", index: 133.1 },
+        { label: "Pagó por apps móviles el último mes", index: 141.2 },
+        { label: "Pagó descargas de música el último mes", index: 157.7 },
+        { label: "Pagó un servicio de citas (dating) el último mes", index: 179.3 },
+      ],
+      media: [
+        { label: "Usa redes sociales para seguir deportes", pct: 30.0 },
+        { label: "Ha usado 5 o más servicios de redes sociales", pct: 44.6 },
+        { label: "Heavy user de podcasts", pct: 24.9 },
+        { label: "Usó Netflix el último mes", pct: 63.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Redes sociales deportivas", "Resumen de resultados y noticias del equipo.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / trabajo", "Podcasts y redes", "Podcasts deportivos", "Análisis pre-partido o fantasy sports.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina", "Redes sociales", "Redes sociales deportivas", "Contenido de marca ligado a fantasy sports o apuestas deportivas.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Segunda pantalla", "Teléfono / laptop", "Recordatorio de horario y dónde ver el partido.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV en vivo", "TV, teléfono/tablet", "Activación pre-partido multi-pantalla.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bar", "TV y redes", "TV, redes sociales", "Reacciones en vivo y contenido post-partido en redes.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — VIAJES Y TURISMO (borrador automático GWI, audiencia real
+// "AudienceSilvestre>ViajanMundial", audience_id 01ce0e12-02ed-4820-a271-b2468582c3a3)
+// ---------------------------------------------------------------------------
+const CASE_VIAJAN_MUNDIAL_GWI_AUTO_20261012 = {
+  id: "viajeros-mundial-latin-colombia",
+  name: "Viajeros internacionales fans del Mundial y música latina en Colombia (AudienceSilvestre>ViajanMundial)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-12)",
+  insightNote:
+    "Audiencia real de GWI 'AudienceSilvestre>ViajanMundial' (audience_id 01ce0e12-02ed-4820-a271-b2468582c3a3): colombianos interesados en viajar, que tomaron al menos una vacación al extranjero en los últimos 12 meses, interesados en la Copa Mundial de la FIFA (masculina), y que disfrutan escuchar música latina.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (2,005,504) sobre la población digital de Colombia (31.06M)", pct: 6 },
+  ],
+  footnotes: [
+    "6% ≈ universo real de la audiencia en GWI (1,157,080 hombres + 848,424 mujeres = 2,005,504, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género y bandas de edad), prioridades de viaje, actitudes de marca, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda de edad 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "Top ciudades: GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia (solo a nivel país).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "viajera-mundialista-latin-colombia",
+      name: "Camila Herrera",
+      archetype: "La Viajera Mundialista",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana que viaja al extranjero al menos una vez al año, sigue la Copa Mundial de la FIFA y disfruta de música latina. Es una audiencia altamente vocal en redes (publica sobre deportes, tecnología y viajes muy por encima del promedio) y una consumidora intensiva de contenido digital pago (streaming de música y video).",
+      aiInsight: aiInsight(
+        "Cruza con una audiencia que prioriza experiencias únicas sobre el precio al elegir destino: el 34.4% prioriza experiencias 'una vez en la vida' (índice 209) frente a solo 21.3% que se deja influenciar principalmente por ofertas y promociones — aunque esa cifra de ofertas también está muy por encima del promedio (índice 193), lo que sugiere que las promociones sí funcionan como gancho, pero no son el mensaje central. El clima/temporada del año, en cambio, no es un factor diferenciador (22.3%, prácticamente en el promedio) — la pauta no debería apostarle a mensajes estacionales genéricos para esta audiencia.",
+        [
+          { label: "Prioriza experiencias únicas sobre el destino en sí", detail: "34.4% prioriza experiencias 'una vez en la vida' al elegir destino (índice 209) y 38.6% prioriza relación costo-beneficio (índice 124) — el mensaje de marca rinde más si vende una experiencia memorable que si vende solo un lugar o un precio." },
+          { label: "Es una audiencia vocal en redes sobre deportes, tecnología y viajes", detail: "27% publicó sobre deportes (índice 223), 25% sobre tecnología (índice 216) y 22% sobre viajes/vacaciones (índice 203) en el último mes — un diferencial mucho más alto que el de audiencias de viaje genéricas, útil para estrategias de earned media y UGC." },
+          { label: "Es una consumidora intensiva de streaming de música y video", detail: "Heavy user de streaming de música (50%, índice 240) y de streaming de video como Netflix/Hulu (41%, índice 222) — canales de patrocinio de contenido muy por encima del promedio de viajeros." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 57.7, female: 42.3 },
+        ageBands: [
+          { label: "16-24", pct: 15.0 },
+          { label: "25-34", pct: 26.9 },
+          { label: "35-44", pct: 24.4 },
+          { label: "45-54", pct: 17.4 },
+          { label: "55-64", pct: 16.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prioriza experiencias únicas ('una vez en la vida') al elegir destino de viaje", pct: 34.4 },
+        { label: "Prioriza relación costo-beneficio al elegir destino de viaje", pct: 38.6 },
+        { label: "Interesada en ver deporte", pct: 62.4 },
+        { label: "Interesada en jugar deporte", pct: 76.8 },
+      ],
+      barriers: [
+        { label: "El clima/temporada del año no es un factor diferenciador al elegir destino", pct: 22.3 },
+        { label: "No publicó ninguna opinión online en el último mes", pct: 26.0 },
+      ],
+      digitalInterests: [
+        { label: "Publicó su opinión sobre deportes online el último mes", index: 223.3 },
+        { label: "Publicó su opinión sobre tecnología online el último mes", index: 216.3 },
+        { label: "Publicó su opinión sobre viajes/vacaciones online el último mes", index: 202.7 },
+        { label: "Prefiere un checkout rápido y sencillo al comprar online", index: 186.3 },
+      ],
+      media: [
+        { label: "Instagram (uso más de una vez al día)", pct: 50.1 },
+        { label: "Facebook (uso más de una vez al día)", pct: 46.9 },
+        { label: "Heavy user de streaming de música", pct: 49.7 },
+        { label: "Heavy user de streaming de video (Netflix, Hulu)", pct: 41.2 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Facebook", "Noticias del Mundial o destinos de viaje.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Streaming de música", "Spotify / apps de música", "Playlist de música latina patrocinada.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, Facebook", "Publica opinión sobre deporte o viajes.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Investigación online", "Apps de viajes / navegador", "Investiga destinos u ofertas de vuelos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, Hulu u otra app", "Contenido patrocinado de marca de viajes.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y streaming", "TV, apps de streaming", "Transmisión de partido del Mundial o contenido deportivo.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -4966,7 +5225,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012],
   },
   {
     id: "deportes",
@@ -4979,7 +5238,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_PHOENIX_RISING_GWI_AUTO_20261012],
   },
   {
     id: "retail",
@@ -5096,7 +5355,7 @@ const CATEGORIES = [
       { id: "reservaDirecto", label: "Reserva directamente sin agencia" },
       { id: "viajaConFamilia", label: "Viaja priorizando comodidad familiar" },
     ],
-    cases: [CASE_VIAJES],
+    cases: [CASE_VIAJES, CASE_VIAJAN_MUNDIAL_GWI_AUTO_20261012],
   },
   {
     id: "trabajo",
@@ -5149,4 +5408,7 @@ const PERSONA_RELATED_TRAITS = {
   "lider-equipo-hibrida": ["usaHerramientasDiario", "decideSoftwareEquipo"],
   "hincha-visa-mundial-femenino-colombia": ["interesFutbol", "consumoDigitalDiario"],
   "hincha-visa-futbol-regional-colombia": ["interesFutbol", "consumoDigitalDiario"],
+  "entusiasta-cultural-bogota-colombia": ["afinidadGenero"],
+  "hincha-multipantalla-arizona-usa": ["interesFutbol", "consumoDigitalDiario"],
+  "viajera-mundialista-latin-colombia": ["viajaAnual", "investigaDestinosOnline"],
 };

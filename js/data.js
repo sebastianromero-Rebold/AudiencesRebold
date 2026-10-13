@@ -4951,6 +4951,267 @@ const CASE_FUTBOL_VISA_GWI_AUTO_20261001 = {
   ],
 };
 
+const CASE_FORMULA1_GWI_AUTO_20261013 = {
+  id: "formula1-fanaticos-colombia",
+  name: "Fanáticos de la Fórmula 1 (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-13)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) LABF1_', audience_id 5217f851-da09-4802-b0d3-a4a57ad9b4c9): colombianos interesados en deportes y seguidores de la Fórmula 1.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'LABF1' en GWI (4,522,005 = suma hombres + mujeres) sobre la población digital de Colombia (31.06M)", pct: 14.6 },
+  ],
+  footnotes: [
+    "14.6% ≈ universo real de la audiencia en GWI (4,522,005 = 3,460,612 hombres + 1,061,393 mujeres, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "Demografía, motivaciones, intereses digitales, medios y customer journey tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Esta audiencia es de cobertura nacional en Colombia — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "Las 'barreras' reflejan comportamiento de compra real (baja tasa de compra online de equipo deportivo, boletos y experiencias) — GWI no devolvió una pregunta de frenos de compra declarados aplicable a un consumidor final para esta audiencia (la pregunta genérica de barreras devolvió únicamente datos de compradores B2B, descartados por no ser relevantes).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa datos reales de franjas horarias de consumo de TV internacional (GWI); el bloque 'Inicio de la mañana' no tuvo señal específica y usa lugar/medios genéricos sin cifras de actividad.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fanatico-f1-colombia",
+      name: "Camilo Restrepo",
+      archetype: "El Fanático de la Velocidad",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia colombiana mayoritariamente masculina (76.5% hombres, 23.5% mujeres) y transversal en edad, con un leve pico en 35-44 años (24.1%). Casi todos (96.2%) están interesados en ver deportes y una mayoría relevante (70.8%) también los practica. Cruza con un perfil tecnológico marcado (82.9% interés en tecnología) y con afinidad por autos/motor (60.8%), más allá de la F1 en sí.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'deporte-motor como señal de affluence tecnológica': esta audiencia no es solo fanática de las carreras (96.2% ve deportes) sino que construye alrededor una identidad tech-forward (82.9% interés en tecnología, 55.5% en computación/código) — el mensaje de marca funciona mejor posicionando innovación y precisión técnica que velocidad o adrenalina pura.",
+        [
+          { label: "El consumo de TV internacional es el verdadero canal 'always-on'", detail: "81.3% ve TV internacional en prime time (7pm-10pm) y 71.7% en late-afternoon (5pm-7pm) — la pauta en canales internacionales/streaming deportivo en esas franjas tiene más alcance real que la pauta exclusiva en redes sociales." },
+          { label: "Facebook, no Instagram, es la red social dominante", detail: "46.4% usa Facebook más de una vez al día vs. 42.5% Instagram — un patrón atípico frente a audiencias más jóvenes de otras categorías ya procesadas, que sugiere una base más adulta dentro del fanatismo por F1." },
+          { label: "Baja conversión online pese a alto interés", detail: "Solo 4.8% compró ropa o equipo deportivo online en el último mes (vs. 20% que lo compró por cualquier canal) — indica una oportunidad de e-commerce/retargeting poco explotada en esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 76.5, female: 23.5 },
+        ageBands: [
+          { label: "16-24", pct: 19.6 },
+          { label: "25-34", pct: 22.8 },
+          { label: "35-44", pct: 24.1 },
+          { label: "45-54", pct: 18.5 },
+          { label: "55-64", pct: 15.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Motivados a promover su marca favorita por productos de alta calidad", pct: 65.7 },
+        { label: "Motivados por recompensas", pct: 49.8 },
+        { label: "Motivados por haber recibido excelente servicio al cliente", pct: 45.2 },
+        { label: "Motivados por tener información privilegiada de la marca", pct: 34.1 },
+      ],
+      barriers: [
+        { label: "Compraron ropa o equipo deportivo online en el último mes (prefieren otros canales)", pct: 4.8 },
+        { label: "Compraron boletos de concierto online en los últimos 3-6 meses", pct: 7.2 },
+        { label: "Compraron una experiencia (spa, paseo) en los últimos 3-6 meses", pct: 12 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en ver deportes", pct: 96.2 },
+        { label: "Interesados en tecnología", pct: 82.9 },
+        { label: "Interesados en practicar deporte", pct: 70.8 },
+        { label: "Interesados en autos/motor", pct: 60.8 },
+      ],
+      media: [
+        { label: "Usaron Netflix en el último mes", pct: 74.4 },
+        { label: "Usaron YouTube en el último mes", pct: 66.0 },
+        { label: "Usaron Disney+ en el último mes", pct: 47.1 },
+        { label: "Uso de Facebook más de una vez al día", pct: 46.4 },
+        { label: "Uso de Instagram más de una vez al día", pct: 42.5 },
+        { label: "Uso de TikTok más de una vez al día", pct: 37.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Radio y redes sociales", "Facebook, Instagram", "Contenido motivacional ligado a la marca (sin cifra específica de GWI para este bloque).", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "TV internacional", "Canales de TV internacional / streaming deportivo", "Programación de anticipo o resumen de carreras.", [
+          { label: "Ven TV internacional en la media mañana (9am-12m)", pct: 35.3, index: 120.3 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "TV internacional y redes", "Canales de TV internacional, Facebook", "Contenido de marca ligado a la hora de almuerzo de audiencia deportiva.", [
+          { label: "Ven TV internacional al mediodía (12m-2pm)", pct: 57.8, index: 130.0 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "Canales de TV internacional", "Retargeting con contenido de marca ligado a autos/tecnología.", [
+          { label: "Ven TV internacional en la tarde (2pm-5pm)", pct: 69.9, index: 152.5 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "Canales de TV internacional", "Programación pre-carrera o resúmenes deportivos.", [
+          { label: "Ven TV internacional al final de la tarde (5pm-7pm)", pct: 71.7, index: 134.2 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional (prime time) y streaming", "Canales de TV internacional, Netflix, YouTube", "Pauta en prime time de TV internacional + contenido de marca integrado en streaming.", [
+          { label: "Ven TV internacional en prime time (7pm-10pm)", pct: 81.3, index: 130.0 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013 = {
+  id: "viajeros-mundial-musica-latina-colombia",
+  name: "Viajeros del Mundial y música latina (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-13)",
+  insightNote:
+    "Audiencia real de GWI ('AudienceSilvestre>ViajanMundial', audience_id 01ce0e12-02ed-4820-a271-b2468582c3a3): colombianos interesados en viajes que tomaron al menos una vacación internacional en los últimos 12 meses, siguen el Mundial de Fútbol (masculino) y escuchan música latina.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'ViajanMundial' en GWI (2,005,504 = suma hombres + mujeres) sobre la población digital de Colombia (31.06M)", pct: 6.5 },
+  ],
+  footnotes: [
+    "6.5% ≈ universo real de la audiencia en GWI (2,005,504 = 1,157,080 hombres + 848,424 mujeres, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "Demografía, motivaciones, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Esta audiencia es de cobertura nacional en Colombia — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "Las 'barreras' reflejan comportamiento de compra real (bajo attach rate de seguros de viaje y boletos de concierto online) más que frenos declarados — GWI no devolvió una pregunta de frenos de compra declarados distinta de comportamiento B2B para esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: GWI no devolvió datos específicos por momento del día para esta audiencia (la consulta de franjas horarias devolvió datos no desagregados por audiencia).",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "viajero-mundial-musica-latina-colombia",
+      name: "Daniel Rojas",
+      archetype: "El Viajero del Mundial",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia colombiana con sesgo masculino moderado (57.7% hombres, 42.3% mujeres), concentrada en adultos de 25 a 44 años (51.3% combinado). Viaja internacionalmente, sigue el Mundial de Fútbol masculino y escucha música latina — un perfil que cruza turismo, deporte y entretenimiento en vivo, en la misma línea que el caso semilla de Rebold (Silvestre Dangond & Carlos Vives, CDMX).",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'bundled fandom': esta audiencia no separa sus pasiones — el Mundial, la música latina y el viaje internacional conviven en el mismo momento de consumo (77.9% interesados en tecnología, 60.2% en actividades al aire libre) — las campañas que combinan los tres ejes en una sola narrativa superan a las que los tratan por separado.",
+        [
+          { label: "Netflix y Disney+ ya ganaron el entretenimiento de viaje", detail: "82.7% usó Netflix y 52.3% Disney+ en el último mes — el contenido de marca integrado en streaming capta mejor la atención que la pauta tradicional de TV en esta audiencia que viaja con frecuencia." },
+          { label: "Bajo attach rate de seguros de viaje pese a alta frecuencia de viaje", detail: "Solo 7% compró seguro de viaje online en los últimos 3-6 meses — un punto de fricción/oportunidad de cross-sell para marcas de turismo o financieras asociadas." },
+          { label: "Instagram por encima de Facebook, a diferencia de otras audiencias deportivas", detail: "50.1% usa Instagram más de una vez al día vs. 46.9% Facebook — más cercano al patrón de audiencias de entretenimiento en vivo que al de audiencias puramente deportivas ya procesadas (ej. fanáticos de F1, donde domina Facebook)." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 57.7, female: 42.3 },
+        ageBands: [
+          { label: "16-24", pct: 15.0 },
+          { label: "25-34", pct: 26.9 },
+          { label: "35-44", pct: 24.4 },
+          { label: "45-54", pct: 17.4 },
+          { label: "55-64", pct: 16.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Motivados por productos de alta calidad", pct: 69.0 },
+        { label: "Motivados por recompensas", pct: 54.9 },
+        { label: "Motivados por excelente servicio al cliente", pct: 50.2 },
+        { label: "Motivados por información privilegiada de la marca", pct: 39.1 },
+      ],
+      barriers: [
+        { label: "Compraron seguro de viaje online en los últimos 3-6 meses (bajo attach rate)", pct: 7 },
+        { label: "Compraron boletos de concierto online en los últimos 3-6 meses", pct: 12 },
+        { label: "Compraron boletos de concierto en general en los últimos 3-6 meses", pct: 31 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en tecnología", pct: 77.9 },
+        { label: "Interesados en actividades al aire libre (camping, senderismo)", pct: 60.2 },
+        { label: "Interesados en vida silvestre/naturaleza", pct: 59.5 },
+        { label: "Interesados en ciencia", pct: 56.2 },
+      ],
+      media: [
+        { label: "Usaron Netflix en el último mes", pct: 82.7 },
+        { label: "Usaron YouTube en el último mes", pct: 68.9 },
+        { label: "Usaron Disney+ en el último mes", pct: 52.3 },
+        { label: "Uso de Instagram más de una vez al día", pct: 50.1 },
+        { label: "Uso de Facebook más de una vez al día", pct: 46.9 },
+        { label: "Uso de TikTok más de una vez al día", pct: 38.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Facebook", "Contenido motivacional ligado a viajes y música latina.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes sociales y búsqueda", "Instagram, Google", "Contenido de inspiración de destinos/eventos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, Facebook", "Recomendaciones de planes combinados viaje + evento.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales y streaming", "Instagram, YouTube", "Retargeting de boletos de viaje o eventos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, Disney+", "Contenido de marca integrado en streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "CTA a compra de boletos de viaje o eventos.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_MODA_OUTDOOR_CHILE_GWI_AUTO_20261013 = {
+  id: "moda-outdoor-alta-propension-chile",
+  name: "Alta propensión de moda outdoor (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-13)",
+  insightNote:
+    "Audiencia real de GWI ('DOITE>DOITE>B2C>Chile>HighPropensity>Moda', audience_id 7f087d12-0163-410e-945b-3e5cdf820fb2): consumidoras chilenas de alta propensión de compra para la categoría moda de la marca outdoor DOITE.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'DOITE HighPropensity Moda' en GWI (≈275,168, estimado desde el universo de mujeres 233,568 / 84.9%) sobre la población digital de Chile (15.6M)", pct: 1.8 },
+  ],
+  footnotes: [
+    "1.8% ≈ universo real de la audiencia en GWI (≈275,168, derivado del universo de mujeres de la audiencia —233,568— dividido por su participación del 84.9% verificada vía explore_insight_gwi) sobre la población digital total de Chile (15.6M).",
+    "Demografía, motivaciones, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "La muestra de esta audiencia es pequeña (145 encuestados) — GWI no devolvió desagregado por rango de edad ni por ciudad, solo el total 16-64 a nivel nacional en Chile.",
+    "El género masculino (15.1%) es el complemento aritmético del femenino (84.9%) verificado por GWI — no se fabricó, es la única otra opción de la pregunta de género.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: GWI no devolvió datos específicos por momento del día para esta audiencia (la muestra pequeña hizo que la consulta de franjas horarias devolviera solo datos generales de 'internet users', no de esta audiencia).",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "compradora-moda-outdoor-chile",
+      name: "Antonia Fuentes",
+      archetype: "La Trendsetter Outdoor",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia chilena fuertemente femenina (84.9% mujeres) de adultas (100% entre 16 y 64 años, sin desagregado más fino por el tamaño de muestra). Es una audiencia de altísima afinidad con moda (96.4%) que también valora el cine (90.5%), la música (89.7%) y salir a comer (89.2%) — un perfil de estilo de vida activo y social, coherente con el posicionamiento outdoor/lifestyle de la marca DOITE.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'moda como lifestyle integral, no categoría aislada': esta audiencia no consume moda de forma aislada (96.4%) sino como parte de un paquete de ocio social — cine (90.5%), música (89.7%) y salir a comer (89.2%) — el mensaje de marca funciona mejor integrado a momentos sociales reales que como pauta de producto pura.",
+        [
+          { label: "Prefieren esperar y ahorrar antes que financiar la compra", detail: "85.7% prefiere ahorrar y esperar para comprar un producto — las campañas de pre-venta y 'wishlist' con alertas de disponibilidad funcionan mejor que el financiamiento o las cuotas." },
+          { label: "El envío gratis pesa más que el descuento directo", detail: "82.1% prioriza el envío gratis al comprar online, por encima del 75.5% que prioriza cupones/descuentos — vale más invertir en logística sin costo visible que en rebajas de precio directas." },
+          { label: "Instagram domina con un índice extremo", detail: "77.4% usa Instagram más de una vez al día (índice 270, es decir 170% más que el promedio) — la red social más sobre-indexada de todas las audiencias de Rebold procesadas hasta ahora, lo que la hace el canal prioritario para esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 15.1, female: 84.9 },
+        ageBands: [{ label: "16-64 (sin desagregado por rango de edad en GWI, muestra pequeña)", pct: 100 }],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Motivadas por recompensas", pct: 79.1 },
+        { label: "Motivadas por productos de alta calidad", pct: 69.6 },
+        { label: "Motivadas por excelente servicio al cliente", pct: 56.0 },
+        { label: "Motivadas por información privilegiada de la marca", pct: 55.7 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 85.7 },
+        { label: "Priorizan el envío gratis al comprar online", pct: 82.1 },
+        { label: "Priorizan cupones y descuentos al comprar online", pct: 75.5 },
+      ],
+      digitalInterests: [
+        { label: "Interesadas en moda", pct: 96.4 },
+        { label: "Interesadas en cine/películas", pct: 90.5 },
+        { label: "Interesadas en música", pct: 89.7 },
+        { label: "Interesadas en salir a comer", pct: 89.2 },
+      ],
+      media: [
+        { label: "Uso de Instagram más de una vez al día", pct: 77.4 },
+        { label: "Usaron Spotify en el último mes", pct: 79.0 },
+        { label: "Usaron Netflix en el último mes", pct: 76.2 },
+        { label: "Usaron YouTube en el último mes", pct: 73.6 },
+        { label: "Uso de TikTok más de una vez al día", pct: 49.2 },
+        { label: "Uso de Facebook más de una vez al día", pct: 40.8 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Contenido de marca en formato lifestyle matutino.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes sociales", "Instagram, TikTok", "Novedades de producto / lookbook.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram", "Contenido de marca ligado a salidas a comer.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, TikTok", "Retargeting de producto visto.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de música y video", "Spotify, Netflix", "Contenido de marca integrado en streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "CTA a compra con envío gratis.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -4966,7 +5227,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013],
   },
   {
     id: "deportes",
@@ -4979,7 +5240,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_GWI_AUTO_20261013],
   },
   {
     id: "retail",
@@ -4992,7 +5253,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_OUTDOOR_CHILE_GWI_AUTO_20261013],
   },
   {
     id: "fintech",

@@ -6305,6 +6305,267 @@ const CASE_GENEROS_BOGOTA_GWI_AUTO_20261012 = {
   ],
 };
 
+// CASOS "gwi-auto-draft" — procesados 2026-10-15 por la rutina diaria de GWI.
+const CASE_ASUS_LATAM_GWI_AUTO_20261015 = {
+  id: "asus-users-latam",
+  name: "Usuarios de productos ASUS (Colombia, Argentina y Chile)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-15)",
+  insightNote:
+    "Audiencia real de GWI ('ASUS>ASUS>LATAM>AsusUsers', audience_id b249b44f-5c8d-4855-9fe2-1f92296bc45c): personas en Chile, Argentina o Colombia que actualmente usan productos o servicios de ASUS.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'AsusUsers' en GWI (6,190,350) sobre la población digital combinada de Colombia, Argentina y Chile (81.66M)", pct: 7.6 },
+  ],
+  footnotes: [
+    "7.6% ≈ universo real de la audiencia en GWI (3,645,812 hombres + 2,544,538 mujeres = 6,190,350, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital combinada de Colombia (31.06M) + Argentina (35M) + Chile (15.6M) = 81.66M.",
+    "Esta audiencia es trinacional: 53% reside en Colombia, 32% en Argentina y 15% en Chile (cifras reales vía chat_gwi) — se usa Colombia como mercado principal del caso por ser el de mayor participación, pero el perfil real combina los tres países.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "El bloque de la tarde/noche del customer journey usa datos reales de GWI sobre horarios de consumo de TV internacional entre espectadores frecuentes de esta audiencia (41% en 2-5pm, 52% en 5-7pm, 50-54% en 10pm-medianoche); los bloques de la mañana usan lugares/medios genéricos porque GWI no devolvió una franja horaria específica para ese tramo de esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "usuario-asus-latam",
+      name: "Daniel Ortiz",
+      archetype: "El Entusiasta Tech Multipaís",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Colombia (53%), Argentina (32%) o Chile (15%), mayoritariamente hombre (58.9%) y concentrado en 25-44 años (53% combinado). Es un comprador racional de tecnología: casi la mitad interesada en computación/programación (48%) y más de un tercio en negocios (35%), pero también jugador activo (51% juega shooters, 29% MMO) y suscriptor de streaming de video (56%). A pesar de su interés tech, es paciente con el precio: 80% prefiere ahorrar y esperar antes de comprar, y 73% espera activamente una rebaja.",
+      aiInsight: aiInsight(
+        "Cruza con la tensión entre 'comprador informado' y 'cazador de ofertas' típica del consumidor tech latinoamericano: este usuario de ASUS es 30% más propenso que el promedio a interesarse en computación/programación y 25% más en negocios, pero al mismo tiempo 80% prefiere ahorrar y esperar antes de comprar y 73% espera activamente una rebaja — la decisión de compra de hardware no se gana solo con especificaciones técnicas, sino con una ventana de oferta visible en el momento en que ya decidió qué comprar.",
+        [
+          { label: "La rebaja no sustituye la validación técnica, la completa", detail: "41% busca opinión de expertos antes de compras costosas y 80% prefiere ahorrar y esperar — el funnel de conversión necesita tanto contenido de producto (reviews, specs) como un gatillo de precio/oferta, no uno sin el otro." },
+          { label: "Es gamer y es profesional de negocio al mismo tiempo, no uno u otro", detail: "35% interesado en negocios y 51% juega shooters / 29% MMO — el mismo usuario que programa o gestiona un negocio durante el día es un gamer activo de noche; el mensaje de marca puede cruzar ambos mundos sin perder foco." },
+          { label: "El consumo de TV internacional se concentra en la tarde-noche, no en la mañana", detail: "52% de los espectadores frecuentes ve TV internacional entre 5-7pm y 50-54% entre 10pm-medianoche — la pauta en TV/streaming internacional rinde más en esas dos ventanas que en la mañana, donde GWI no mostró un patrón diferenciado para esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 58.9, female: 41.1 },
+        ageBands: [
+          { label: "16-24", pct: 21 },
+          { label: "25-34", pct: 31 },
+          { label: "35-44", pct: 22 },
+          { label: "45-54", pct: 16 },
+          { label: "55-64", pct: 10 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Colombia", pct: 53 },
+          { city: "Argentina", pct: 32 },
+          { city: "Chile", pct: 15 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en computación/programación", pct: 48 },
+        { label: "Interesados en negocios", pct: 35 },
+        { label: "Interesados en Esports", pct: 20 },
+        { label: "Interesados en gadgets/tecnología", pct: 18 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 80 },
+        { label: "Prefieren esperar a que haya rebajas antes de comprar", pct: 73 },
+        { label: "Buscan opinión de expertos antes de compras costosas", pct: 41 },
+      ],
+      digitalInterests: [
+        { label: "Juegan videojuegos de disparos (shooters)", pct: 51 },
+        { label: "Pagaron suscripción de streaming de video/TV el último mes", pct: 56 },
+        { label: "Jugaron MMO en el último año", pct: 29 },
+        { label: "Pagaron por un paquete de software el último mes", pct: 11 },
+      ],
+      media: [
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 34 },
+        { label: "Heavy user de prensa/artículos online", pct: 27 },
+        { label: "Heavy user de videojuegos PC/consola", pct: 26 },
+        { label: "Heavy user de radio", pct: 23 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Smartphone", "Redes y navegación general", "Contenido de producto/reviews — sin franja horaria específica reportada por GWI.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "TV internacional y navegación", "TV, smartphone", "31% de espectadores frecuentes ve TV internacional en esta franja — contenido de marca ligero.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina", "Navegación general", "Smartphone, laptop", "Contenido técnico/comparativas de producto.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "TV, smartphone", "41% ve TV internacional entre 2-5pm — ventana para anuncio de oferta/rebaja.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional y gaming", "TV, PC/consola", "52% ve TV internacional entre 5-7pm — CTA con precio/rebaja visible.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y gaming", "Streaming de video, PC/consola", "50-54% de espectadores frecuentes prefiere TV internacional en 10pm-medianoche — último empujón de conversión con oferta por tiempo limitado.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FINTECH_LATAM_GWI_AUTO_20261015 = {
+  id: "fintech-latam-mexico-argentina-chile",
+  name: "Entusiastas de fintech e inversión (México, Argentina y Chile)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-15)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo(co)FintechLatam', audience_id e8a9e5a9-c44c-47f2-a347-a1c228eaf951): personas en México, Argentina o Chile interesadas en economía/finanzas y tecnología, que valoran la seguridad financiera y aprender nuevas habilidades, y asisten a festivales de música en vivo.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'FintechLatam' en GWI (8,303,108) sobre la población digital combinada de México, Argentina y Chile (128.65M)", pct: 6.5 },
+  ],
+  footnotes: [
+    "6.5% ≈ universo real de la audiencia en GWI (4,931,070 hombres + 3,372,038 mujeres = 8,303,108, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital combinada de México (78.05M) + Argentina (35M) + Chile (15.6M) = 128.65M.",
+    "Esta audiencia es trinacional: 67% reside en México, 22% en Argentina y 12% en Chile (cifras reales vía chat_gwi) — se usa México como mercado principal del caso por ser el de mayor participación, pero el perfil real combina los tres países.",
+    "Pese al sufijo '(co)' del nombre original en la plataforma GWI (convención interna de nomenclatura del equipo), la audiencia real no está geográficamente acotada a Colombia — la cobertura real verificada es México/Argentina/Chile.",
+    "Demografía, motivaciones financieras, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "El bloque de la tarde/noche del customer journey usa datos reales de GWI sobre horarios de consumo de TV internacional entre espectadores frecuentes de esta audiencia (35% en 2-5pm, 55% en 5-7pm, 53% en 10pm-medianoche); los bloques de la mañana usan una cifra real pero de baja especificidad (27% en 6-9am, menos probable que el promedio).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-fintech-latam",
+      name: "Valentina Rojas",
+      archetype: "La Inversionista Digital Multipaís",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en México (67%), Argentina (22%) o Chile (12%), mayoritariamente hombre (59.4%) y concentrada en 25-44 años (50% combinado). Por definición de la audiencia, el 100% está interesado en economía/finanzas y valora la seguridad financiera; 63% tiene interés activo en inversiones y 55% se considera buena manejando su dinero. Ya tiene acceso financiero (78% con tarjeta de crédito) pero no está libre de tensión de liquidez: 36% tiene hoy un préstamo de corto plazo, y 19% tiene criptomonedas — una audiencia financieramente activa, no solo bancarizada.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia 'inversionista activo con liquidez ajustada': esta audiencia declara 100% de interés en economía/finanzas y 63% interés en inversiones (incluido 19% con criptomonedas), pero 36% mantiene hoy un préstamo de corto plazo — no es una audiencia que solo ahorra o solo invierte, administra ambos lados del balance al mismo tiempo. El producto financiero que gana aquí no es el que solo vende inversión o solo crédito, sino el que ayuda a gestionar ambos frentes a la vez.",
+        [
+          { label: "El 'pagar por acceso' ya es un hábito, no una objeción", detail: "31% prefiere poder diferir pagos sin intereses al comprar online y 38% prefiere pagar por acceder a un producto o servicio — el modelo de suscripción/BNPL encuentra menos fricción cultural en esta audiencia que en el consumidor financiero promedio." },
+          { label: "El precio importa, pero no es la barrera principal", detail: "46% se declara price-conscious (apenas 14% por encima del promedio) — menor sensibilidad relativa al precio que otras audiencias de la categoría, lo que deja espacio para un mensaje de valor/beneficio en vez de descuento agresivo." },
+          { label: "X (Twitter) es su canal de noticias, no solo redes 'tradicionales'", detail: "67% usa X para mantenerse informado y 63% usa Facebook/Messenger para buscar información de marcas — una combinación de canales que muchas estrategias de fintech en la región todavía subestiman frente a Instagram/TikTok." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 59.4, female: 40.6 },
+        ageBands: [
+          { label: "16-24", pct: 22 },
+          { label: "25-34", pct: 26 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "México", pct: 67 },
+          { city: "Argentina", pct: 22 },
+          { city: "Chile", pct: 12 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en economía/finanzas (por definición de la audiencia)", pct: 100 },
+        { label: "Consideran importante la seguridad financiera (por definición de la audiencia)", pct: 100 },
+        { label: "Interesados en inversiones", pct: 63 },
+        { label: "Usan internet para gestionar sus finanzas/ahorros", pct: 66 },
+      ],
+      barriers: [
+        { label: "Se declaran price-conscious", pct: 46 },
+        { label: "Tienen hoy un préstamo de corto plazo", pct: 36 },
+        { label: "Business decision-makers que enfrentan falta de soporte al cliente durante la compra", pct: 19 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en tecnología (por definición de la audiencia)", pct: 100 },
+        { label: "Usaron sitios/apps de banca, inversión o seguros el último mes", pct: 55 },
+        { label: "Prefieren diferir pagos sin intereses al comprar online", pct: 31 },
+        { label: "Tienen criptomonedas", pct: 19 },
+      ],
+      media: [
+        { label: "Heavy user de streaming de música", pct: 64 },
+        { label: "Heavy user de redes sociales", pct: 60 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 50 },
+        { label: "Heavy user de videos cortos (Reels/TikTok)", pct: 49 },
+        { label: "Heavy user de podcasts", pct: 32 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV internacional (señal débil)", "TV, smartphone", "27% de espectadores frecuentes ve TV internacional en esta franja (ligeramente por debajo del promedio) — contenido educativo breve sobre finanzas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Apps bancarias/inversión", "Apps de banca e inversión", "31% ve TV internacional en esta franja en fin de semana — recordatorio de meta de ahorro/inversión.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales (X, Facebook)", "X, Facebook/Messenger", "Noticias de mercado o contenido educativo financiero.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "TV, smartphone", "35% ve TV internacional entre 2-5pm — contenido de marca sobre gestión de deuda/inversión.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional y streaming", "TV, streaming de video", "55% ve TV internacional entre 5-7pm — CTA a producto financiero (tarjeta, inversión, crédito).", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Streaming de música/video, redes", "53% de espectadores frecuentes prefiere TV internacional en 10pm-medianoche — cierre de campaña con oferta o simulador financiero.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_VIDA_ACTIVA_CHILE_GWI_AUTO_20261015 = {
+  id: "vida-activa-deportes-chile",
+  name: "Entusiastas de vida activa y deportes (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-15)",
+  insightNote:
+    "Audiencia real de GWI ('AMSA>Effie>TodoChile>HighPropensity>Chile', audience_id fbc1af2e-5bfe-4e77-9c6d-4f9b5484373c): chilenos interesados en fitness y ejercicio, eventos en vivo como festivales de música, deportes de aventura/extremos, salir a comer, Esports, actividades al aire libre como camping y senderismo, practicar deporte, o ver televisión o deporte.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'TodoChile>HighPropensity' en GWI (11,791,495) sobre la población digital de Chile (15.6M)", pct: 75.6 },
+  ],
+  footnotes: [
+    "75.6% ≈ universo real de la audiencia en GWI (5,908,994 hombres + 5,882,501 mujeres = 11,791,495, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M) — un porcentaje alto esperable dado que la audiencia se define por 'al menos uno' de un conjunto amplio de intereses (fitness, eventos en vivo, deportes extremos, Esports, aire libre, ver deporte, etc.), no por un interés único.",
+    "Esta audiencia es de cobertura nacional en Chile ('TodoChile') — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "El bloque de la tarde/noche del customer journey usa datos reales de GWI sobre horarios de consumo de TV internacional entre espectadores frecuentes de esta audiencia (32% en 2-5pm, 48% en 5-7pm, 51% en 10pm-medianoche); GWI no devolvió una franja de 'temprano en la mañana' (6-9am) con dato específico para esta audiencia, por lo que ese bloque queda genérico.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-vida-activa-chile",
+      name: "Martín Ibáñez",
+      archetype: "El Chileno de Vida Activa",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia nacional en Chile, con género parejo (50.1% hombres, 49.9% mujeres), concentrada en 25-44 años (49% combinado). Es una audiencia de intereses amplios más que de un solo deporte: fitness, eventos en vivo, deportes extremos, Esports y aire libre conviven con gustos poco 'deportivos' como manualidades (40%), juegos de mesa (33%) e idiomas extranjeros (35%). Quiere marcas confiables (71%) y de buena calidad (53%) más que marcas divertidas (35%).",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'vida activa como identidad amplia, no como un deporte': esta audiencia combina fitness/deportes/aire libre con intereses aparentemente ajenos como manualidades (40%, +86% índice), juegos de mesa (33%, +74%) e idiomas extranjeros (35%, +65%) — no busca un deporte específico sino un estilo de vida activo y curioso en general. El mensaje de marca rinde más hablando de 'estilo de vida' amplio que de un deporte o actividad puntual.",
+        [
+          { label: "La confiabilidad pesa más que el entretenimiento en la elección de marca", detail: "71% quiere marcas confiables frente a 35% que quiere marcas divertidas — el eje de comunicación debe priorizar consistencia y calidad sobre humor/entretenimiento como diferenciador." },
+          { label: "El cine es, sorprendentemente, su interés más transversal", detail: "71% está interesado en películas/cine (índice 154) — el interés más alto del set, por encima incluso de mascotas (48%) — una activación de marca en torno a cine/streaming conecta con más de esta audiencia que una exclusivamente deportiva." },
+          { label: "La TV internacional en la noche es la ventana de mayor alcance", detail: "51% de los espectadores frecuentes prefiere la franja de 10pm-medianoche para TV internacional, con 48% adicional en la tarde-noche (5-7pm) — dos ventanas claras para activación de marca en vez de dispersar la pauta a lo largo del día." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50.1, female: 49.9 },
+        ageBands: [
+          { label: "16-24", pct: 18 },
+          { label: "25-34", pct: 25 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Quieren que las marcas sean confiables", pct: 71 },
+        { label: "Se motivan por productos de alta calidad", pct: 53 },
+        { label: "Se motivan por recompensas al promocionar su marca favorita", pct: 49 },
+        { label: "Quieren que las marcas sean transparentes con el uso de sus datos", pct: 41 },
+      ],
+      barriers: [
+        { label: "Prefieren esperar a que haya rebajas antes de comprar", pct: 76 },
+        { label: "Prefieren un checkout rápido y sencillo al comprar online", pct: 39 },
+        { label: "Prefieren envío gratis al comprar online", pct: 61 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en películas/cine", pct: 71 },
+        { label: "Interesados en tecnología", pct: 60 },
+        { label: "Interesados en mascotas/cuidado de mascotas", pct: 48 },
+        { label: "Usan internet para jugar videojuegos", pct: 40 },
+      ],
+      media: [
+        { label: "Heavy user de streaming de música", pct: 53 },
+        { label: "Heavy user de redes sociales", pct: 50 },
+        { label: "Heavy user de videos cortos (Reels/TikTok)", pct: 43 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 37 },
+        { label: "Heavy user de TV en vivo/broadcast", pct: 26 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / aire libre (ejercicio)", "Apps de fitness y música", "Apps de tracking, streaming de música", "Sin franja horaria específica reportada por GWI para este bloque — contenido motivacional genérico.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Casa / oficina", "TV internacional (señal débil)", "TV, redes sociales", "25% de espectadores frecuentes ve TV internacional en esta franja (ligeramente por debajo del promedio).", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, redes", "Contenido de marca sobre vida activa/aire libre.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "TV, smartphone", "32% ve TV internacional entre 2-5pm — contenido de marca ligado a deporte/aire libre.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional y streaming", "TV, streaming de video", "48% ve TV internacional entre 5-7pm — CTA a evento o producto de marca.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Streaming de video/música, redes", "51% de espectadores frecuentes prefiere TV internacional en 10pm-medianoche — ventana de mayor alcance para cierre de campaña.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -6333,7 +6594,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_COLOMBIA_GWI_AUTO_20261005, CASE_PHOENIX_RISING_GWI_AUTO_20261012],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_COLOMBIA_GWI_AUTO_20261005, CASE_PHOENIX_RISING_GWI_AUTO_20261012, CASE_VIDA_ACTIVA_CHILE_GWI_AUTO_20261015],
   },
   {
     id: "retail",
@@ -6359,7 +6620,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015],
   },
   {
     id: "alcohol",
@@ -6398,7 +6659,7 @@ const CATEGORIES = [
       { id: "pagaPremiumMarca", label: "Dispuesto a pagar premium por marca" },
       { id: "compraPorNecesidad", label: "Compra por necesidad/durabilidad, no por hype" },
     ],
-    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924],
+    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924, CASE_ASUS_LATAM_GWI_AUTO_20261015],
   },
   {
     id: "gaming",

@@ -301,6 +301,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "fa1d1328-bae2-48e8-8782-6faad460a369", title: "Digilant>Phoenix Rising>AZ Soccer Fans", client: "Digilant", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who live in Arizona and follow soccer." },
   { id: "b4eb6f95-e67c-4f5a-90c1-550f57f84ed1", title: "GrendeneGlobalBrands>Melissa>1>Broad", client: "GrendeneGlobalBrands", type: "shared", datasets: ["ds-core"], description: "This audience consists of females who currently reside in the USA and have an interest in fashion or are fashion-conscious." },
   { id: "f07745dc-9226-44a1-b5eb-76834d861b02", title: "Paramo LAB (CO) EntretenimientoCOL", client: "Paramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
+  // Agregadas por la automatización diaria de GWI el 2026-10-15 (ver CATALOG_ANALYSIS_LINKS).
+  { id: "b249b44f-5c8d-4855-9fe2-1f92296bc45c", title: "ASUS>ASUS>LATAM>AsusUsers", client: "ASUS", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Chile, Argentina, or Colombia and currently uses products or services from Asus." },
+  { id: "e8a9e5a9-c44c-47f2-a347-a1c228eaf951", title: "Paramo(co)FintechLatam", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "fbc1af2e-5bfe-4e77-9c6d-4f9b5484373c", title: "AMSA>Effie>TodoChile>HighPropensity>Chile", client: "AMSA", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Chile and are interested in fitness and exercise, live events like music festivals, adventure/extreme sports, eating out, Esports, outdoor activities like camping and hiking, playing sport, television, or watching sport." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -378,4 +382,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // f07745dc: GWI devolvió los mismos criterios que "Paramo (co) EventosEnVivoGeneral" (5190162e, ya procesada el
   // 2026-09-24) -- se enlaza al mismo caso/persona existente en vez de crear un duplicado.
   "f07745dc-9226-44a1-b5eb-76834d861b02": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-10-06" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-15.
+  "b249b44f-5c8d-4855-9fe2-1f92296bc45c": { categoryId: "consumer-tech", caseId: "asus-users-latam", personaId: "usuario-asus-latam", analyzedAt: "2026-10-15" },
+  "e8a9e5a9-c44c-47f2-a347-a1c228eaf951": { categoryId: "fintech", caseId: "fintech-latam-mexico-argentina-chile", personaId: "entusiasta-fintech-latam", analyzedAt: "2026-10-15" },
+  "fbc1af2e-5bfe-4e77-9c6d-4f9b5484373c": { categoryId: "deportes", caseId: "vida-activa-deportes-chile", personaId: "entusiasta-vida-activa-chile", analyzedAt: "2026-10-15" },
 };

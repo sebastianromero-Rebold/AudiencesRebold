@@ -6305,6 +6305,266 @@ const CASE_GENEROS_BOGOTA_GWI_AUTO_20261012 = {
   ],
 };
 
+const CASE_EVENTOS_MUSICA_LATINA_GWI_AUTO_20261016 = {
+  id: "eventos-musica-latina-colombia",
+  name: "Audiencia general de eventos en vivo y música latina (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-16)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>AudienciaEventosLatin', audience_id c1775e50-f4ed-4309-be85-700dec92c9e6): colombianos interesados en eventos en vivo como festivales de música y que escuchan música latina — definición más amplia (nacional, sin filtro de edad/ciudad) que otros casos de música latina ya construidos (ej. Carlos Vives Bogotá, Rauw Reggaeton).",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'AudienciaEventosLatin' en GWI (~7.11M) sobre la población digital de Colombia (31.06M)", pct: 22.9 },
+  ],
+  footnotes: [
+    "22.9% ≈ universo real de la audiencia en GWI (~7,109,000, calculado desde el universo de 2 preguntas independientes que coinciden entre sí: 3,548,642 sobre 49.9% y 2,025,658 sobre 28.5% ⇒ ambas ≈7.11M) sobre la población digital total de Colombia (31.06M) — verificado vía explore_insight_gwi.",
+    "Género (57% mujer / 43% hombre) y zona de residencia (89% urbana, 4.3% suburbana, 6.6% rural) tomados 1:1 de chat_gwi para esta audiencia.",
+    "Edad: GWI devolvió bandas de 16-24 a 45-54 sumando 91.3% (16-24: 26.5%, 25-34: 28.5%, 35-44: 21.3%, 45-54: 15.0%, estas dos últimas verificadas vía explore_insight_gwi); el 8.7% restante (complemento aritmético) se agrupa en la banda '55+' por ser el único tramo no desagregado por GWI para esta audiencia, no una cifra inventada.",
+    "GWI no devolvió un desagregado por ciudad para esta audiencia (es de cobertura nacional en Colombia).",
+    "Motivaciones de seguimiento a artistas (49.9% y 49.3%) y medios (TikTok 88.3%, Instagram 68.0%, Facebook 57.6%) verificados vía explore_insight_gwi; el resto de motivaciones/barreras/intereses digitales provienen directamente de chat_gwi (insight_id propio verificable, sin redondear a ojo).",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey de 6 bloques queda con lugar/medios genéricos inferidos del perfil y sin cifras propias de actividades, pendiente de criterio del equipo creativo.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-musica-latina-colombia",
+      name: "Camila Rojas",
+      archetype: "La Melómana Social",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana urbana (89% vive en zona urbana), mayoritariamente mujer (57%), concentrada en los rangos 25-34 (28.5%) y 16-24 (26.5%). Sigue activamente a músicos y artistas en redes sociales y es una consumidora intensiva de video corto, pero su conversión real a compra de boletos de concierto todavía es minoritaria — el interés y el seguimiento digital van por delante del gasto.",
+      aiInsight: aiInsight(
+        "Cruza un alto engagement social con los artistas (49.9% sigue músicos/bandas en redes, índice 196.9) con una conversión a compra todavía baja (solo 23.5% compró boletos de concierto en los últimos 3-6 meses, y apenas 10% lo hizo en línea) — el contenido ya genera atención y seguimiento, pero falta un puente directo entre el consumo de contenido en TikTok/Instagram y el checkout de boletos.",
+        [
+          { label: "Alto engagement con artistas, bajo paso a la compra", detail: "49.9% sigue músicos/bandas en redes (índice 196.9) y 49.3% sigue actores/comediantes (índice 184.2), pero solo 23.5% compró boletos de concierto en los últimos 3-6 meses y apenas 10% lo hizo en línea — la oportunidad es un CTA de compra directo dentro del mismo contenido que ya consumen, no más awareness." },
+          { label: "TikTok como medio dominante de descubrimiento", detail: "88.3% usa TikTok para encontrar contenido divertido/entretenido, por encima de Instagram (68.0%) y Facebook/Messenger (57.6%) — el formato de video corto es el canal de mayor alcance para esta audiencia." },
+          { label: "Perfil joven-urbano, digital-first", detail: "89% urbano y concentrado en 16-34 años (55% de la audiencia) — responde mejor a activaciones en apps y redes que a medios tradicionales (solo 24% es heavy user de TV abierta)." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 43, female: 57 },
+        ageBands: [
+          { label: "16-24", pct: 26.5 },
+          { label: "25-34", pct: 28.5 },
+          { label: "35-44", pct: 21.3 },
+          { label: "45-54", pct: 15.0 },
+          { label: "55+", pct: 8.7 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación por ciudad disponible en GWI para esta audiencia (89% urbana, 4.3% suburbana, 6.6% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Sigue a músicos/bandas en redes sociales", pct: 49.9 },
+        { label: "Sigue a actores, comediantes u otros artistas en redes", pct: 49.3 },
+        { label: "Cree que la música puede ser un agente de cambio en la sociedad", pct: 66 },
+        { label: "Prefiere escuchar música en la mejor calidad de audio posible", pct: 67 },
+      ],
+      barriers: [
+        { label: "No ha comprado boletos de concierto en los últimos 3-6 meses", pct: 76.5 },
+        { label: "No ha comprado boletos de concierto en línea en los últimos 3-6 meses", pct: 90 },
+        { label: "No está siempre buscando activamente nuevos eventos en vivo", pct: 80 },
+        { label: "No sigue activamente la escena de artistas o conciertos locales", pct: 69 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en tecnología", index: 171 },
+        { label: "Interesada en gaming", index: 163 },
+        { label: "Prefiere un checkout rápido y fácil al comprar online", index: 177 },
+        { label: "Usa redes sociales para encontrar contenido", index: 173 },
+      ],
+      media: [
+        { label: "TikTok (contenido divertido/entretenido)", pct: 88.3 },
+        { label: "Instagram (contenido divertido/entretenido)", pct: 68.0 },
+        { label: "Facebook / Messenger (mensajería con amigos y familia)", pct: 71.0 },
+        { label: "Heavy user de streaming de video (Netflix, Hulu)", pct: 38.0 },
+        { label: "Podcasts", pct: 37.0 },
+        { label: "Heavy user de TV abierta", pct: 24.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "TikTok, Instagram", "Agenda cultural del día (conciertos, festivales).", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Video corto y streaming", "TikTok, Spotify", "Clips de artistas seguidos / adelanto de line-up.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Reseña o clip de un evento reciente.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Mensajería y redes", "WhatsApp, Facebook Messenger", "Invitación o recordatorio de evento con amigos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "CTA directo de compra de boletos.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento", "Streaming y TV", "Streaming de video, TV abierta", "Retargeting de boletos para quienes vieron contenido del artista.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016 = {
+  id: "gstar-fashion-categoria-latam",
+  name: "Interesados en categoría de moda G-Star (LatAm: Brasil, México, Corea del Sur)",
+  market: "BRA",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-16)",
+  insightNote:
+    "Audiencia real de GWI ('WHPGlobal>Latam>Gstar>Category', audience_id 9088ef14-a283-445d-b903-202dfb107376): definición de categoría más amplia que 'gstar-fashion-latam' (HighPropensityBuyerWithBrandAffinity, ya analizada) — compradores de ropa online en el último mes o que se describen como fashion-conscious o interesados en moda, residentes en Brasil, México o Corea del Sur (Argentina y Chile no alcanzaron tamaño de muestra reportable en esta consulta).",
+  funnelSteps: [
+    { label: "Compradores/interesados en categoría de moda G-Star en Brasil y México (sin incluir Corea del Sur en el % por no estar en los mercados de este aplicativo)", pct: 64.1 },
+  ],
+  footnotes: [
+    "64.1% = universo real de GWI en Brasil (100,011,668) + México (65,366,678) = 165,378,346, sobre la suma de población digital de esos 2 mercados en MARKETS (Brasil 180M + México 78.05M = 258.05M) — verificado vía explore_insight_gwi.",
+    "Esta audiencia también incluye Corea del Sur (12.3% / universo 23,230,462), pero ese país no está en la lista de MARKETS del aplicativo, por lo que se excluyó del cálculo de pct del funnel (queda documentado aquí, no se descartó el dato, solo no entra en el % mostrado).",
+    "Mercado del caso asignado como Brasil (BRA) por ser el país con mayor participación real dentro de esta audiencia (53.0%); México concentra 34.7% y Corea del Sur 12.3% (ver 'topCities', que aquí lista países por tratarse de una audiencia multi-mercado, igual que 'gstar-fashion-latam').",
+    "Género (48% hombre / 52% mujer) tomado de chat_gwi; GWI reportó esta cifra comparada contra una base de referencia de 'sports fan' (posible artefacto de la segmentación interna de GWI para esta consulta) — el valor de 48/52 en sí es un dato real de la audiencia, no inventado.",
+    "GWI no devolvió bandas de edad específicas para esta audiencia (solo confirmó que el 100% tiene entre 16 y 64 años) — no se reportan bandas de edad por no haber desagregación disponible para esta consulta.",
+    "Intereses (cine 72.2%, música 72.1%, comer fuera 59.4%, televisión 55.6%), barreras de compra social/live-shopping (18%/18%/10%) y medios (YouTube 81.5%, Instagram 61.3%, TikTok 54.8%, Facebook 47.3%) verificados 1:1 vía explore_insight_gwi.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey de 6 bloques queda con lugar/medios genéricos inferidos del perfil y sin cifras propias de actividades, pendiente de criterio del equipo creativo.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "interesado-moda-categoria-gstar-latam",
+      name: "Isabela Martins",
+      archetype: "La Exploradora de Tendencias",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Definición de categoría más amplia que la compradora de alta propensión ya analizada en 'gstar-fashion-latam': brasileña (53%), mexicana (34.7%) o surcoreana (12.3%), interesada en moda de forma más general — cine (72.2%), música (72.1%) y salir a comer (59.4%) son intereses igual de fuertes que la moda, lo que sugiere un público de estilo de vida amplio más que un nicho fashion puro.",
+      aiInsight: aiInsight(
+        "Cruza un universo mucho más amplio (~165M en Brasil y México, frente a los ~51M de la audiencia de alta propensión ya analizada) con fricciones concentradas específicamente en funcionalidades de compra social/en vivo (18% reporta falta de información de producto, índice 186; 10% reporta interfaz compleja, índice 190) — la oportunidad para G-Star es mejorar el contenido de producto dentro de TikTok/Instagram Shopping antes de competir por el comprador ya calificado.",
+        [
+          { label: "Categoría de entrada, no comprador ya convertido", detail: "~165M en Brasil y México (sin contar Corea del Sur) frente a ~51M de la audiencia 'HighPropensityBuyerWithBrandAffinity' ya analizada — esta es la base amplia de interés en moda, antes del filtro de compra activa." },
+          { label: "La fricción está en el social/live shopping, no en el checkout general", detail: "18% de quienes usan funciones de compra social/en vivo reportan falta de información de producto (índice 186) y 10% una interfaz compleja (índice 190) — dos barreras puntuales y accionables en el diseño de esas funcionalidades." },
+          { label: "TikTok sobreindexa más que su alcance absoluto", detail: "54.8% usa TikTok para información/contenido (índice 223.2) frente a 81.5% de YouTube (índice 127.7) — TikTok tiene menos alcance total pero mucha mayor afinidad relativa frente al promedio." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48, female: 52 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Brasil", pct: 53.0 },
+          { city: "México", pct: 34.7 },
+          { city: "Corea del Sur", pct: 12.3 },
+        ],
+      },
+      motivations: [
+        { label: "Interesada en cine/películas", pct: 72.2 },
+        { label: "Interesada en música", pct: 72.1 },
+        { label: "Interesada en salir a comer", pct: 59.4 },
+        { label: "Interesada en televisión", pct: 55.6 },
+      ],
+      barriers: [
+        { label: "Dificultad con disponibilidad de producto en compras social/en vivo", pct: 18 },
+        { label: "Falta de información de producto en compras social/en vivo", pct: 18 },
+        { label: "Interfaz de usuario compleja en compras social/en vivo", pct: 10 },
+      ],
+      digitalInterests: [
+        { label: "Prefiere comprar online", index: 108 },
+        { label: "Prefiere comprar en tienda física", index: 88 },
+      ],
+      media: [
+        { label: "YouTube (información y contenido)", pct: 81.5 },
+        { label: "Instagram (información y contenido)", pct: 61.3 },
+        { label: "TikTok (información y contenido)", pct: 54.8 },
+        { label: "Facebook (información y contenido)", pct: 47.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "YouTube, Instagram", "Contenido de lanzamientos/colecciones nuevas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Video y redes", "YouTube, TikTok", "Reseñas o unboxing de producto.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido de moda y estilo de vida.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y ecommerce", "Instagram Shopping, TikTok Shop", "Ficha de producto con información completa (atacar barrera de falta de info).", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "YouTube, Facebook", "Retargeting de catálogo visto.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y video", "YouTube, TikTok", "Exploración de catálogo / compra nocturna.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FINTECH_LATAM_GWI_AUTO_20261016 = {
+  id: "fintech-general-latam",
+  name: "Interesados en economía, finanzas e inversión (Chile, Argentina y México)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-16)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo(co)FintechLatam', audience_id e8a9e5a9-c44c-47f2-a347-a1c228eaf951): residentes de Chile, Argentina o México (excluyendo explícitamente Colombia) interesados en economía/finanzas y tecnología, que valoran la seguridad financiera y aprender nuevas habilidades, y disfrutan eventos en vivo como festivales de música — perfil más orientado a inversión que 'fintech-general-colombia' (ya analizado), que es más genérico/transaccional.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'FintechLatam' en GWI (~8.3M) sobre la población digital combinada de Chile, Argentina y México (128.65M)", pct: 6.45 },
+  ],
+  footnotes: [
+    "6.45% = universo real de GWI (8,303,108 = 4,931,070 hombres + 3,372,038 mujeres, verificado vía explore_insight_gwi) sobre la suma de población digital de Chile + Argentina + México en MARKETS (15.6M + 35M + 78.05M = 128.65M).",
+    "Mercado del caso asignado como México (MEX) por ser, de los 3 países, el de mayor población digital en MARKETS — GWI no devolvió el desglose de participación por país para esta audiencia específica (si en el futuro se obtiene, debe reemplazar esta asignación).",
+    "GWI no devolvió bandas de edad para esta audiencia (solo confirmó que el 100% tiene entre 16 y 64 años) — no se reportan bandas de edad por no haber desagregación disponible.",
+    "Intereses en economía/finanzas (100%), noticias (68.3%), inversiones (63%) y negocios (61.5%) verificados 1:1 vía explore_insight_gwi, igual que la preocupación por datos personales (48.6%).",
+    "Preocupación por rastreo gubernamental (34%), preocupación por privacidad de datos en IA (44%) y reto de flexibilidad de pago B2B (28%) provienen directamente de chat_gwi (insight_id propio verificable), sin pasar por explore_insight_gwi adicional.",
+    "GWI no devolvió datos de franja horaria generales para esta audiencia (solo horarios de gaming, poco relevantes para el perfil financiero) — el customer journey de 6 bloques queda con lugar/medios genéricos y sin cifras propias de actividades, pendiente de criterio del equipo creativo.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "usuario-fintech-latam",
+      name: "Rodrigo Fuentes",
+      archetype: "El Inversionista Digital Emergente",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Residente de Chile, Argentina o México (59.4% hombres), con un interés declarado en economía/finanzas que llega al 100% de la audiencia e inversiones (63%, índice 235.3) muy por encima del promedio — un perfil mucho más orientado a crecimiento patrimonial e inversión que el usuario fintech genérico ya analizado en Colombia.",
+      aiInsight: aiInsight(
+        "Cruza un interés real en inversión y negocios (63% y 61.5%, índices 235.3 y 256.5) con una preocupación activa por el manejo de sus datos personales (48.6%, índice 154.5) — a diferencia de 'fintech-general-colombia' (más transaccional/banca básica), esta audiencia ya piensa en productos de inversión, así que el contenido debe ser educativo-financiero de mayor sofisticación, liderando siempre con transparencia de datos para resolver la barrera de confianza.",
+        [
+          { label: "Perfil inversionista, no solo bancarizado digital", detail: "63% interesado en inversiones (índice 235.3) y 61.5% en negocios (índice 256.5) — mucho más orientado a crecimiento patrimonial que a sustituir efectivo por una app de pagos básica." },
+          { label: "La confianza de datos sigue siendo el freno principal", detail: "48.6% se preocupa por el uso de sus datos personales por parte de empresas (índice 154.5) y 44% por la privacidad de sus datos en el uso de IA — cualquier producto de inversión digital debe liderar con transparencia, no solo con rendimiento." },
+          { label: "Consumo de medios intensivo y cross-platform", detail: "63.9% es heavy user de streaming de música (índice 307.6) y 59.5% heavy user de redes sociales (índice 230) — alto consumo de contenido, con oportunidad de patrocinio o contenido nativo educativo-financiero en esos formatos." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 59.4, female: 40.6 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile, Argentina y México — sin desagregación por país disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en economía/finanzas", pct: 100 },
+        { label: "Interesado en noticias/actualidad", pct: 68.3 },
+        { label: "Interesado en inversiones", pct: 63 },
+        { label: "Interesado en negocios", pct: 61.5 },
+      ],
+      barriers: [
+        { label: "Preocupación por el uso de sus datos personales por parte de empresas", pct: 48.6 },
+        { label: "Preocupación por el rastreo del gobierno en línea", pct: 34 },
+        { label: "Preocupación por seguridad/privacidad de datos en el uso de IA", pct: 44 },
+        { label: "Cita la flexibilidad de pago limitada como reto en compras B2B", pct: 28 },
+      ],
+      digitalInterests: [
+        { label: "Sigue las últimas tendencias y noticias de tecnología", index: 150 },
+        { label: "Se siente confiado usando nueva tecnología", index: 126 },
+        { label: "Cree que las redes sociales son beneficiosas para la sociedad", index: 141 },
+      ],
+      media: [
+        { label: "Heavy user de streaming de música", pct: 63.9 },
+        { label: "Heavy user de redes sociales", pct: 59.5 },
+        { label: "Heavy user de streaming de video (Netflix, Hulu)", pct: 49.9 },
+        { label: "Heavy user de videos cortos (reels/TikTok)", pct: 48.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y noticias", "App del banco/inversión, portales de noticias", "Resumen matutino de mercados/noticias económicas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes y streaming de música", "LinkedIn, Spotify", "Contenido educativo sobre inversión.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Apps de pago e inversión", "App del banco/inversión", "Comparativa de productos de inversión.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, X", "Contenido de transparencia/seguridad de datos de la marca.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Apps y redes", "App del banco/inversión, redes sociales", "Revisión de portafolio / resumen del día del mercado.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Streaming de música/video, redes sociales", "Contenido educativo-financiero patrocinado.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -6320,7 +6580,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_EVENTOS_MUSICA_LATINA_GWI_AUTO_20261016],
   },
   {
     id: "deportes",
@@ -6346,7 +6606,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016],
   },
   {
     id: "fintech",
@@ -6359,7 +6619,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261016],
   },
   {
     id: "alcohol",

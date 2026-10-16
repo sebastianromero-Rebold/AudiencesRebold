@@ -301,6 +301,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "fa1d1328-bae2-48e8-8782-6faad460a369", title: "Digilant>Phoenix Rising>AZ Soccer Fans", client: "Digilant", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who live in Arizona and follow soccer." },
   { id: "b4eb6f95-e67c-4f5a-90c1-550f57f84ed1", title: "GrendeneGlobalBrands>Melissa>1>Broad", client: "GrendeneGlobalBrands", type: "shared", datasets: ["ds-core"], description: "This audience consists of females who currently reside in the USA and have an interest in fashion or are fashion-conscious." },
   { id: "f07745dc-9226-44a1-b5eb-76834d861b02", title: "Paramo LAB (CO) EntretenimientoCOL", client: "Paramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
+  // Añadidas por la automatización diaria de GWI el 2026-10-16.
+  // (c1775e50-f4ed-4309-be85-700dec92c9e6 "Paramo>AudienciaEventosLatin" ya estaba en el catálogo -- ver más arriba -- solo se agrega aquí su enlace en CATALOG_ANALYSIS_LINKS.)
+  { id: "9088ef14-a283-445d-b903-202dfb107376", title: "WHPGlobal>Latam>Gstar>Category", client: "WHPGlobal", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who purchased clothing online in the last month or feel that 'Fashion-conscious' describes them or are interested in fashion or have used lifestyle and fashion websites or apps in the last month or posted about fashion/clothing online in the last month or have shopped at various retailers in the last 3 months and currently reside in Argentina, Brazil, Chile, Mexico, or South Korea." },
+  { id: "e8a9e5a9-c44c-47f2-a347-a1c228eaf951", title: "Paramo(co)FintechLatam", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -378,4 +382,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // f07745dc: GWI devolvió los mismos criterios que "Paramo (co) EventosEnVivoGeneral" (5190162e, ya procesada el
   // 2026-09-24) -- se enlaza al mismo caso/persona existente en vez de crear un duplicado.
   "f07745dc-9226-44a1-b5eb-76834d861b02": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-10-06" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-16.
+  "c1775e50-f4ed-4309-be85-700dec92c9e6": { categoryId: "entretenimiento", caseId: "eventos-musica-latina-colombia", personaId: "entusiasta-musica-latina-colombia", analyzedAt: "2026-10-16" },
+  "9088ef14-a283-445d-b903-202dfb107376": { categoryId: "retail", caseId: "gstar-fashion-categoria-latam", personaId: "interesado-moda-categoria-gstar-latam", analyzedAt: "2026-10-16" },
+  "e8a9e5a9-c44c-47f2-a347-a1c228eaf951": { categoryId: "fintech", caseId: "fintech-general-latam", personaId: "usuario-fintech-latam", analyzedAt: "2026-10-16" },
 };

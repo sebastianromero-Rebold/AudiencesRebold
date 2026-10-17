@@ -301,6 +301,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "fa1d1328-bae2-48e8-8782-6faad460a369", title: "Digilant>Phoenix Rising>AZ Soccer Fans", client: "Digilant", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who live in Arizona and follow soccer." },
   { id: "b4eb6f95-e67c-4f5a-90c1-550f57f84ed1", title: "GrendeneGlobalBrands>Melissa>1>Broad", client: "GrendeneGlobalBrands", type: "shared", datasets: ["ds-core"], description: "This audience consists of females who currently reside in the USA and have an interest in fashion or are fashion-conscious." },
   { id: "f07745dc-9226-44a1-b5eb-76834d861b02", title: "Paramo LAB (CO) EntretenimientoCOL", client: "Paramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
+  // Añadidas por la rutina diaria de GWI el 2026-10-17.
+  { id: "afdfa72a-1a82-4d59-ace7-f006804dadf3", title: "Paramo (co) UsanFranquicias_Mastercard", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have a credit card or a bank account, have used American Express, Mastercard, or Visa in the last month, have used Mastercard last month, and have not used Visa last month." },
+  { id: "ef7a4fe7-40df-49c9-bb6c-c59ede23fd38", title: "Paramo (co) UsanFranquicias_VisaExcluyente", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have a credit card or a bank account, have used American Express or Visa in the last month, have not used Mastercard last month, and have used Visa last month." },
+  { id: "91ac359e-cdb3-4b4d-b793-77600f08aba5", title: "Paramo>Generos>Base", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia and is interested in live events like music festivals or streaming events, always on the lookout for new live music events, and is between 18 and 50 years old." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -378,4 +382,7 @@ const CATALOG_ANALYSIS_LINKS = {
   // f07745dc: GWI devolvió los mismos criterios que "Paramo (co) EventosEnVivoGeneral" (5190162e, ya procesada el
   // 2026-09-24) -- se enlaza al mismo caso/persona existente en vez de crear un duplicado.
   "f07745dc-9226-44a1-b5eb-76834d861b02": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-10-06" },
+  "afdfa72a-1a82-4d59-ace7-f006804dadf3": { categoryId: "fintech", caseId: "preferencia-franquicia-pago-colombia", personaId: "usuario-mastercard-colombia", analyzedAt: "2026-10-17" },
+  "ef7a4fe7-40df-49c9-bb6c-c59ede23fd38": { categoryId: "fintech", caseId: "preferencia-franquicia-pago-colombia", personaId: "usuario-visa-colombia", analyzedAt: "2026-10-17" },
+  "91ac359e-cdb3-4b4d-b793-77600f08aba5": { categoryId: "entretenimiento", caseId: "generos-colombia-nacional", personaId: "entusiasta-cultural-colombia-nacional", analyzedAt: "2026-10-17" },
 };

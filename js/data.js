@@ -6306,6 +6306,270 @@ const CASE_GENEROS_BOGOTA_GWI_AUTO_20261012 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — procesados 2026-10-18 por la rutina diaria de GWI.
+// 3 audiencias reales nuevas detectadas vía search_audiences ("conciertos",
+// "entretenimiento en vivo", "fútbol", "deportes", "moda", "retail",
+// "fintech", "pagos digitales"), cada una consultada vía chat_gwi +
+// explore_insight_gwi. Pendientes de revisión editorial.
+// ---------------------------------------------------------------------------
+
+const CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018 = {
+  id: "musica-latina-eventos-vivo-colombia",
+  name: "Fans de música latina y eventos en vivo (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-18)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>AudienciaEventosLatin' (audience_id c1775e50-f4ed-4309-be85-700dec92c9e6): personas en Colombia interesadas en eventos en vivo como festivales de música y que escuchan música latina.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo como festivales de música y que escuchan música latina (Colombia)", pct: 23 },
+  ],
+  footnotes: [
+    "23% = universo real de la audiencia en GWI (7,110,076 personas, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, bandas de edad y top departamentos), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día, así que los bloques usan lugar/medios genéricos sin cifras inventadas).",
+  ],
+  personas: [
+    {
+      id: "fan-musica-latina-eventos-colombia",
+      name: "Valentina Jiménez",
+      archetype: "La Melómana de Eventos Latinos",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Colombia, mayoritariamente mujer y concentrada entre los 16 y 34 años, y combina el gusto por la música latina con una agenda activa de festivales y conciertos en vivo. Es una consumidora pragmática: prefiere ahorrar antes que gastar de inmediato y busca productos de alta calidad antes que novedad.",
+      aiInsight: aiInsight(
+        "Cruza un comportamiento de consumo prudente (84.7% prefiere ahorrar y esperar antes de comprar, muy por encima del promedio) con una fuerte afinidad hacia plataformas de comercio internacional de bajo costo (SHEIN, índice 451) y movilidad (Waze, índice 405) — un perfil que ama la música en vivo pero que decide sus compras con cálculo, no con impulso. La oportunidad de medios está en financiamiento/cuotas para boletería y en encontrarla en apps de movilidad y marketplaces, no solo en redes sociales genéricas.",
+        [
+          { label: "Ahorra antes de gastar: la oportunidad es el plan de pago, no el descuento", detail: "84.7% prefiere ahorrar y esperar para comprar un producto frente a solo 15.3% que prioriza comprar antes — esquemas de reserva con pago diferido o cuotas para boletería deberían convertir mejor que una rebaja puntual." },
+          { label: "Es cliente de comercio transfronterizo de bajo costo, no solo de música", detail: "41% usó SHEIN en el último mes (índice 451) y 30% usó Waze (índice 405) — mucho más que el colombiano promedio; cualquier alianza de patrocinio de evento debería considerar estos canales, no solo Instagram/TikTok." },
+          { label: "Geografía concentrada en el eje Bogotá-Antioquia-Valle", detail: "31.9% vive en Bogotá D.C., 12.8% en Antioquia y 11.7% en Valle del Cauca (56.4% combinado) — la logística de gira/venta de boletos debería priorizar estas tres plazas." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 43, female: 57 },
+        ageBands: [
+          { label: "16-24", pct: 27 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 21 },
+          { label: "45-54", pct: 15 },
+          { label: "55-64", pct: 8.6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 31.9 },
+          { city: "Antioquia", pct: 12.8 },
+          { city: "Valle del Cauca", pct: 11.7 },
+          { city: "Cundinamarca", pct: 7.7 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en salir a comer (eating out)", pct: 83 },
+        { label: "Más motivados a promover su marca favorita por productos de alta calidad", pct: 65.3 },
+        { label: "Más motivados a promover su marca favorita por recompensas", pct: 56.1 },
+        { label: "Interesados en manualidades (handicrafts)", pct: 51 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 84.7 },
+        { label: "No tienen tarjeta de crédito", pct: 43 },
+        { label: "Tienen un crédito de corto plazo vigente", pct: 35 },
+        { label: "No tienen cuenta bancaria", pct: 9.9 },
+      ],
+      digitalInterests: [
+        { label: "Uso de SHEIN en el último mes", index: 451 },
+        { label: "Uso de Waze en el último mes", index: 405 },
+        { label: "Visitas a ChatGPT en el último mes", index: 190 },
+      ],
+      media: [
+        { label: "Usa TV para ver contenido on-demand/streaming", pct: 80 },
+        { label: "Usuario intensivo de streaming tipo Netflix/Hulu", pct: 38 },
+        { label: "Usa redes sociales para encontrar contenido", pct: 53 },
+        { label: "Usuario intensivo de radio", pct: 25 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y mensajería", "Instagram, WhatsApp", "Anuncio de lineup o preventa de un evento.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Búsqueda y mapas", "Google, Waze", "Recordatorio de venta de boletos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido para compartir con el grupo de amigos.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming y redes", "YouTube, Instagram", "Retargeting a quienes vieron el lineup.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV, apps de streaming", "CTA directo a compra de boletos.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV, streaming y radio", "TV, radio, apps de streaming", "Últimas entradas / urgencia de compra.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_ESTILO_VIDA_ACTIVO_CHILE_GWI_AUTO_20261018 = {
+  id: "estilo-vida-activo-chile",
+  name: "Audiencia de estilo de vida activo y tecnológico (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-18)",
+  insightNote:
+    "Audiencia real de GWI 'AMSA>Effie>TodoChile>HighPropensity>Chile' (audience_id fbc1af2e-5bfe-4e77-9c6d-4f9b5484373c): personas en Chile interesadas en fitness/ejercicio, eventos en vivo, deportes de aventura, comer afuera, Esports, actividades al aire libre, jugar deporte, televisión o ver deporte.",
+  funnelSteps: [
+    { label: "Interesados en fitness, eventos en vivo, deportes de aventura, Esports, actividades al aire libre o ver/jugar deporte (Chile)", pct: 76 },
+  ],
+  footnotes: [
+    "76% = universo real de la audiencia en GWI (11,832,331 personas, verificado vía explore_insight_gwi) sobre la población digital total de Chile (15.6M) — es una audiencia amplia por diseño (definida por múltiples intereses alternativos), así que conviene re-segmentarla con un interés específico (p. ej. actividades al aire libre) antes de activar medios.",
+    "Demografía (género y bandas de edad), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI reportó explícitamente que no hay datos de atributo disponibles para este grupo en esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "Top ciudades/regiones: GWI solo devolvió clasificación por región económica (APEC/OECD, 100% ambas por ser Chile) sin desagregación regional interna con muestra suficiente para esta audiencia — se deja sin desagregar en vez de inventar departamentos.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día, así que los bloques usan lugar/medios genéricos sin cifras inventadas).",
+  ],
+  personas: [
+    {
+      id: "explorador-activo-digital-chile",
+      name: "Matías Fuentes",
+      archetype: "El Explorador Activo y Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Reside en Chile, se reparte casi igual entre hombres y mujeres y combina interés en tecnología con una vida activa al aire libre (camping, senderismo, deporte, Esports). Es ahorrador por naturaleza y, pese a su gusto por la tecnología, es muy sensible al precio en su comercio digital diario.",
+      aiInsight: aiInsight(
+        "Cruza un interés fuerte en tecnología (59.6%, índice 144.5) con un comportamiento de compra transfronteriza de bajo costo muy por encima del promedio (AliExpress, índice 529) — perfil que ama lo nuevo pero que lo compra donde es más barato. Al ser una audiencia amplia (76% de la población digital conectada de Chile, por estar definida con múltiples intereses alternativos), conviene activarla segmentada por el interés más distintivo (actividades al aire libre, índice 157.3) en vez de tratarla como bloque único.",
+        [
+          { label: "Es una audiencia amplia por diseño: conviene re-segmentar antes de pautar", detail: "76% de la población digital de Chile cumple con al menos uno de varios intereses alternativos (fitness, eventos en vivo, Esports, etc.) — usar el cruce real de 'actividades al aire libre' (índice 157.3) da un targeting más accionable que el agregado completo." },
+          { label: "Interés en tecnología con compra consciente del precio", detail: "59.6% está interesado en tecnología (índice 144.5), pero su comercio digital se concentra en AliExpress (índice 529) y SHEIN (índice 348) — mensajes de innovación funcionan mejor si van acompañados de precio competitivo o cuotas." },
+          { label: "Ahorra antes de gastar, igual que la audiencia colombiana de eventos en vivo", detail: "81.8% prefiere ahorrar y esperar antes de comprar un producto, y 33% reporta ingreso familiar bajo — el mismo patrón de consumo prudente que la audiencia de música latina en Colombia, lo que sugiere que el mensaje de 'plan de pago' funciona en más de un mercado de Rebold." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50, female: 50 },
+        ageBands: [
+          { label: "16-24", pct: 18 },
+          { label: "25-34", pct: 25 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (GWI no devolvió desagregación por región con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en tecnología", pct: 59.6 },
+        { label: "Interesados en películas/cine", pct: 71 },
+        { label: "Interesados en actividades al aire libre (camping, senderismo)", pct: 50 },
+        { label: "Más motivados a promover su marca favorita por recompensas", pct: 49 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 81.8 },
+        { label: "Ingreso familiar bajo", pct: 33 },
+        { label: "Sin ahorros ni inversiones", pct: 21 },
+        { label: "Buscan opinión experta antes de comprar artículos costosos", pct: 32 },
+      ],
+      digitalInterests: [
+        { label: "Uso de AliExpress en el último mes", index: 529 },
+        { label: "Uso de SHEIN en el último mes", index: 348 },
+        { label: "Uso de Waze en el último mes", index: 320 },
+      ],
+      media: [
+        { label: "Navega redes sociales a diario", pct: 68 },
+        { label: "Usa TV para contenido on-demand/streaming", pct: 78 },
+        { label: "Interesado en televisión", pct: 56 },
+        { label: "Usuario intensivo de radio", pct: 25 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / exterior", "Redes sociales", "Instagram, apps de ejercicio", "Contenido de rutina/actividad al aire libre.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Búsqueda y mapas", "Google, Waze", "Comparación de precios en marketplaces (AliExpress, SHEIN).", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram", "Reseñas o recomendaciones de producto/tecnología.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming y redes", "YouTube, redes sociales", "Contenido de reviews/tecnología o deporte.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / exterior", "TV y actividad física", "TV, apps deportivas", "Activación ligada a deporte/Esports.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y streaming", "TV, apps de streaming", "Consumo de películas/series y compras online.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018 = {
+  id: "ahorradores-sin-banco-colombia",
+  name: "Ahorradores sin cuenta bancaria (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-18)",
+  insightNote:
+    "Audiencia real de GWI 'BcoFalabella>AhorradoresNoBancarizadosGeneral' (audience_id d8f995b2-3e85-4547-add4-6949e8425729): personas en Colombia que actualmente no tienen cuenta bancaria.",
+  funnelSteps: [
+    { label: "Personas sin cuenta bancaria (Colombia)", pct: 13 },
+  ],
+  footnotes: [
+    "13% = universo real de la audiencia en GWI (4,104,935 personas, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, bandas de edad y top departamentos), motivaciones, barreras de acceso financiero, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día, así que los bloques usan lugar/medios genéricos sin cifras inventadas).",
+  ],
+  personas: [
+    {
+      id: "ahorradora-sin-banco-colombia",
+      name: "Yuliana Martínez",
+      archetype: "La Ahorradora Sin Banco",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Colombia, mayoritariamente mujer y joven, y no tiene cuenta bancaria. No es una excluida digital: usa redes sociales, streaming y comercio online con normalidad, pero apenas roza los servicios financieros digitales — la brecha no está en el interés, sino en el acceso y la confianza hacia el sistema financiero formal.",
+      aiInsight: aiInsight(
+        "Cruza la condición de no bancarizada con un uso digital alto: 59% usa internet para ver videos/TV y 30% usó SHEIN en el último mes (índice 328), pero solo 6.9% usó un servicio de pago móvil y solo 8.7% usó apps de banca/inversión/seguros en el último mes. La brecha no es de interés o de comodidad con apps — es de acceso y confianza hacia el sistema financiero formal, y ya hace comercio digital transfronterizo por otras vías (probablemente contraentrega o terceros).",
+        [
+          { label: "El obstáculo es el acceso, no el interés", detail: "Solo 6.9% usó un servicio de pago móvil y 8.7% usó apps de banca/inversión/seguros en el último mes, pese a que 59% ya usa internet para ver videos/TV y 30% usó SHEIN (índice 328) — estas personas ya operan en el mundo digital, el pago formal es la pieza que falta." },
+          { label: "Es mayoritariamente joven y femenina", detail: "61% identifica como mujer (27% más que el promedio) y 29% tiene entre 16 y 24 años — un producto de educación financiera o de primera cuenta digital debería hablarle a mujeres jóvenes urbanas, no al hogar en general." },
+          { label: "Ya hace comercio digital transfronterizo sin cuenta bancaria formal", detail: "30% usó SHEIN (índice 328) y 13% visitó AliExpress.com (índice 175) en el último mes — un producto de pagos digitales debería integrarse con estos flujos de compra ya existentes (contraentrega, terceros) en vez de competir por un canal nuevo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 39, female: 61 },
+        ageBands: [
+          { label: "16-24", pct: 29 },
+          { label: "25-34", pct: 21 },
+          { label: "35-44", pct: 19 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 12 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 25.5 },
+          { city: "Valle del Cauca", pct: 10.4 },
+          { city: "Antioquia", pct: 10.2 },
+          { city: "Atlántico", pct: 8.5 },
+        ],
+      },
+      motivations: [
+        { label: "Interesadas en películas/cine", pct: 65 },
+        { label: "Más motivadas a promover su marca favorita por productos de alta calidad", pct: 56.6 },
+        { label: "Interesadas en salud personal", pct: 54 },
+        { label: "Interesadas en jugar deporte", pct: 48 },
+      ],
+      barriers: [
+        { label: "Solo usó un servicio de pago móvil en el último mes pese a no tener cuenta bancaria", pct: 6.9 },
+        { label: "Solo usó apps/sitios de banca, inversión o seguros en el último mes", pct: 8.7 },
+        { label: "Solo usa internet para gestionar sus finanzas o ahorros", pct: 20 },
+      ],
+      digitalInterests: [
+        { label: "Uso de SHEIN en el último mes", index: 328 },
+        { label: "Uso de Outlook en el último mes", index: 191 },
+        { label: "Visitas a Aliexpress.com en el último mes", index: 175 },
+      ],
+      media: [
+        { label: "Usa internet para escuchar música", pct: 57 },
+        { label: "Usuaria intensiva de streaming de música", pct: 42 },
+        { label: "Usa TV para contenido on-demand/streaming", pct: 63 },
+        { label: "Interesada en televisión", pct: 50 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y mensajería", "Facebook, WhatsApp", "Contenido informativo o de entretenimiento ligero.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / casa", "Streaming de música", "Apps de música", "Playlist patrocinada o contenido de marca.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / comercio", "Redes y compras online", "SHEIN, AliExpress", "Oferta o recordatorio de carrito en marketplaces.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video online", "YouTube, redes sociales", "Contenido educativo sobre finanzas digitales.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV, apps de streaming", "Oferta de primera cuenta/billetera digital sin letra chica.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y redes", "TV, Facebook", "Contenido de confianza/testimonios sobre productos financieros digitales.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -6320,7 +6584,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018],
   },
   {
     id: "deportes",
@@ -6333,7 +6597,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_COLOMBIA_GWI_AUTO_20261005, CASE_PHOENIX_RISING_GWI_AUTO_20261012],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_COLOMBIA_GWI_AUTO_20261005, CASE_PHOENIX_RISING_GWI_AUTO_20261012, CASE_ESTILO_VIDA_ACTIVO_CHILE_GWI_AUTO_20261018],
   },
   {
     id: "retail",
@@ -6359,7 +6623,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018],
   },
   {
     id: "alcohol",

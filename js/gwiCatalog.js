@@ -301,6 +301,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "fa1d1328-bae2-48e8-8782-6faad460a369", title: "Digilant>Phoenix Rising>AZ Soccer Fans", client: "Digilant", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who live in Arizona and follow soccer." },
   { id: "b4eb6f95-e67c-4f5a-90c1-550f57f84ed1", title: "GrendeneGlobalBrands>Melissa>1>Broad", client: "GrendeneGlobalBrands", type: "shared", datasets: ["ds-core"], description: "This audience consists of females who currently reside in the USA and have an interest in fashion or are fashion-conscious." },
   { id: "f07745dc-9226-44a1-b5eb-76834d861b02", title: "Paramo LAB (CO) EntretenimientoCOL", client: "Paramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
+  // Añadidas por la automatización diaria de GWI el 2026-10-19.
+  { id: "d8f995b2-3e85-4547-add4-6949e8425729", title: "BcoFalabella>AhorradoresNoBancarizadosGeneral", client: "BcoFalabella", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia and does not have a bank account." },
+  { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "fbc1af2e-5bfe-4e77-9c6d-4f9b5484373c", title: "AMSA>Effie>TodoChile>HighPropensity>Chile", client: "AMSA", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Chile and are interested in fitness and exercise, live events like music festivals, adventure/extreme sports, eating out, Esports, outdoor activities like camping and hiking, playing sport, television, or watching sport." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -378,4 +382,8 @@ const CATALOG_ANALYSIS_LINKS = {
   // f07745dc: GWI devolvió los mismos criterios que "Paramo (co) EventosEnVivoGeneral" (5190162e, ya procesada el
   // 2026-09-24) -- se enlaza al mismo caso/persona existente en vez de crear un duplicado.
   "f07745dc-9226-44a1-b5eb-76834d861b02": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-10-06" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-19.
+  "d8f995b2-3e85-4547-add4-6949e8425729": { categoryId: "fintech", caseId: "ahorradores-no-bancarizados-colombia", personaId: "ahorradora-sin-banco-colombia", analyzedAt: "2026-10-19" },
+  "4fa856ae-c03f-4f0d-960c-2f03b492424f": { categoryId: "automotriz", caseId: "omoda-alta-propension-chile", personaId: "comprador-familiar-omoda-chile", analyzedAt: "2026-10-19" },
+  "fbc1af2e-5bfe-4e77-9c6d-4f9b5484373c": { categoryId: "deportes", caseId: "estilo-vida-activo-chile", personaId: "entusiasta-estilo-vida-activo-chile", analyzedAt: "2026-10-19" },
 };

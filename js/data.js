@@ -6308,6 +6308,258 @@ const CASE_GENEROS_BOGOTA_GWI_AUTO_20261012 = {
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
+const CASE_AHORRADORES_NO_BANCARIZADOS_GWI_AUTO_20261019 = {
+  id: "ahorradores-no-bancarizados-colombia",
+  name: "Ahorradores sin cuenta bancaria (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-19)",
+  insightNote:
+    "Audiencia real de GWI ('BcoFalabella>AhorradoresNoBancarizadosGeneral', audience_id d8f995b2-3e85-4547-add4-6949e8425729): colombianos que actualmente no tienen cuenta bancaria.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'AhorradoresNoBancarizadosGeneral' en GWI (4,104,935) sobre la población digital de Colombia (31.06M)", pct: 13.2 },
+  ],
+  footnotes: [
+    "13.2% ≈ universo real de la audiencia en GWI (4,104,935 = suma de universo hombres (1,590,255) + mujeres (2,514,680), verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Este caso queda separado de 'inclusion-financiera-colombia' (mismo tema general, audiencias 'Desbancarizados' de PuntoDePago y 'Falabella TCGeneral_26' ya procesadas) porque usa un criterio distinto (no tener cuenta bancaria, cliente BcoFalabella, enfoque en ahorradores) y no es necesariamente mutuamente excluyente con esas personas -- se deja como caso propio para no romper el sharePct 100% ya balanceado de ese caso existente.",
+    "Demografía, actitudes financieras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Esta audiencia es de cobertura nacional en Colombia — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: GWI no devolvió datos específicos por momento del día para esta audiencia (solo duración de uso semanal, no franja horaria).",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "ahorradora-sin-banco-colombia",
+      name: "Marcela Gómez",
+      archetype: "La Ahorradora Extrabancaria",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia nacional con mayoría femenina (61.3% mujeres, 38.7% hombres) y alta concentración urbana (80%), con sesgo hacia adultos jóvenes (29% entre 16-24 años). Por definición no tiene cuenta bancaria ni tarjeta de crédito (82%, 118% más que el promedio), pero no es financieramente desorganizada: 83% prefiere ahorrar y esperar antes de comprar un producto (16% más que el promedio), aunque solo 42% cuenta hoy con ahorros en efectivo disponibles.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'ahorro informal resiliente': esta audiencia no tiene cuenta bancaria pero no es financieramente pasiva — 83% prefiere ahorrar y esperar antes de comprar (16% más que el promedio) — la oportunidad no es solo 'bancarizar' sino ofrecer productos de ahorro/pago sin fricción que respeten ese hábito ya instalado de esperar y planificar.",
+        [
+          { label: "El streaming premium ya entró a hogares sin cuenta bancaria", detail: "24% usó Disney+ y 17% usó HBO Max en el último mes (120% y 149% más que el promedio, respectivamente) — el acceso a contenido premium no depende de la bancarización, probablemente vía pago con terceros o prepago." },
+          { label: "Alto índice en plataformas locales de streaming", detail: "8.3% usó Claro Video en el último mes, un índice 731% más alto que el promedio — señal de dependencia en operadores de telecomunicaciones locales en vez de tarjetas internacionales para medios de pago digitales." },
+          { label: "Buscan información pero no usan IA para investigar productos", detail: "44% investiga productos/marcas en internet (apenas por encima del promedio) pero solo 17% usa IA tipo ChatGPT para esto (21% menos que el promedio) — la comunicación de producto debe apoyarse en buscadores y redes, no en herramientas conversacionales emergentes." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 38.7, female: 61.3 },
+        ageBands: [
+          { label: "16-24", pct: 29.0 },
+          { label: "25-34", pct: 21.0 },
+          { label: "35-44", pct: 19.0 },
+          { label: "45-54", pct: 19.0 },
+          { label: "55-64", pct: 12.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 83 },
+        { label: "Consideran importante ser financieramente estables", pct: 58 },
+      ],
+      barriers: [
+        { label: "No tienen cuenta bancaria (por definición de la audiencia)", pct: 100 },
+        { label: "No tienen tarjeta de crédito", pct: 82 },
+        { label: "Cuentan con ahorros en efectivo disponibles", pct: 42 },
+        { label: "Usan internet para gestionar sus finanzas/ahorros", pct: 20 },
+      ],
+      digitalInterests: [
+        { label: "Investigan productos/marcas en internet antes de comprar", pct: 44 },
+        { label: "Usan IA (ej. ChatGPT) para buscar información de marcas/productos", pct: 17 },
+      ],
+      media: [
+        { label: "Usaron Netflix en el último mes", pct: 52 },
+        { label: "Usaron YouTube en el último mes", pct: 54 },
+        { label: "Usaron Disney+ en el último mes", pct: 24 },
+        { label: "Usaron HBO Max en el último mes", pct: 17 },
+        { label: "Uso diario de Instagram", pct: 21 },
+        { label: "Uso de Facebook más de una vez al día", pct: 39 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y mensajería", "Facebook, Instagram, WhatsApp", "Contenido sobre educación financiera básica y ahorro informal.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / casa", "Redes sociales", "Facebook, Instagram", "Casos de uso de billeteras digitales o pagos sin cuenta bancaria.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / comercio local", "Búsqueda y redes", "Google, Facebook", "Comparación de opciones de ahorro o crédito accesible.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Retargeting de producto financiero accesible sin cuenta bancaria.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Contenido de marca integrado en streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Facebook", "CTA a producto de ahorro/pago digital accesible.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_OMODA_CHILE_GWI_AUTO_20261019 = {
+  id: "omoda-alta-propension-chile",
+  name: "Interesados en OMODA (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-19)",
+  insightNote:
+    "Audiencia real de GWI ('OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE', audience_id 4fa856ae-c03f-4f0d-960c-2f03b492424f): chilenos con alta propensión de compra hacia la marca de autos OMODA.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'HighPropensity' de OMODA en GWI (2,274,207) sobre la población digital de Chile (15.6M)", pct: 14.6 },
+  ],
+  footnotes: [
+    "14.6% ≈ universo real de la audiencia en GWI (2,274,207 = suma de universo hombres (1,282,668) + mujeres (991,539), verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M).",
+    "Demografía, preferencias de marca/vehículo, actitudes de precio, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Esta audiencia es de cobertura nacional en Chile — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: la única señal de franja horaria que devolvió GWI fue sobre 'espectadores frecuentes de canales de TV internacionales', un cruce distinto al de esta audiencia, por lo que se descartó para no mezclar datos de audiencias distintas.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "comprador-familiar-omoda-chile",
+      name: "Rodrigo Fuentes",
+      archetype: "El Comprador Familiar en Búsqueda de Marca de Valor",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia chilena con mayoría masculina (56.4% hombres, 43.6% mujeres), concentrada en 25-44 años (54% combinado) y mayoritariamente urbana (77%). Es 322% más propensa que el promedio a tener una furgoneta/van en el hogar, señal de un perfil familiar que prioriza espacio y practicidad. Busca activamente las mejores ofertas (55%, 28% más que el promedio) pero, paradójicamente, solo 34% se autodefine como price-conscious (16% menos que el promedio).",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'familia expansiva sobre marca establecida': esta audiencia de alta propensión a OMODA en Chile es 322% más propensa a tener una van en el hogar que el promedio — la decisión de compra prioriza espacio/practicidad familiar, y la marca debe competir primero en el canal de consideración de SUVs/vans familiares, no solo contra otras marcas chinas emergentes.",
+        [
+          { label: "La decisión de marca ya está repartida entre múltiples retadores, no solo líderes tradicionales", detail: "Chevrolet (26%, 229% más probable) y Suzuki (20%, 181% más probable) lideran como marca preferida para su próximo vehículo, por encima incluso de Toyota (29%, solo 18% más probable) — el share of consideration está fragmentado entre marcas de valor, lo que deja espacio real para que OMODA entre en el set de consideración." },
+          { label: "Buscan ofertas activamente pero no se identifican como 'price-conscious'", detail: "55% busca las mejores ofertas (28% más que el promedio) y 30% usa sitios de comparación de precios (36% más), pero solo 34% se declara price-conscious (16% menos que el promedio) — el mensaje de valor debe centrarse en comparación objetiva de especificaciones/precio, no en descuento agresivo." },
+          { label: "Alto consumo de streaming premium como canal de medios clave", detail: "40% es usuario intensivo de streaming (122% más que el promedio) y usan Netflix de forma desproporcionada (116% más) — el contenido de marca integrado en streaming puede ser más efectivo que la pauta tradicional en TV abierta para este segmento." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 56.4, female: 43.6 },
+        ageBands: [
+          { label: "16-24", pct: 17.0 },
+          { label: "25-34", pct: 28.0 },
+          { label: "35-44", pct: 26.0 },
+          { label: "45-54", pct: 18.0 },
+          { label: "55-64", pct: 11.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Tienen o planean tener una furgoneta/van en el hogar", pct: 18 },
+        { label: "Preferirían Chevrolet como marca para su próximo vehículo", pct: 26 },
+        { label: "Preferirían Suzuki como marca para su próximo vehículo", pct: 20 },
+        { label: "Piensan comprar su próximo vehículo a gasolina/petróleo", pct: 64 },
+      ],
+      barriers: [
+        { label: "Buscan las mejores ofertas antes de comprar", pct: 55 },
+        { label: "Usan sitios de comparación de precios como fuente principal de información", pct: 30 },
+        { label: "Se consideran price-conscious", pct: 34 },
+        { label: "Prefieren pagar menos aunque sacrifiquen comodidad", pct: 38 },
+      ],
+      digitalInterests: [
+        { label: "Publicaron sobre autos/automóviles en línea en el último mes", pct: 14 },
+        { label: "Encuentran marcas nuevas a través de buscadores", pct: 37 },
+        { label: "Publicaron su opinión sobre negocios en línea", pct: 12 },
+      ],
+      media: [
+        { label: "Son usuarios intensivos de streaming (Netflix, Hulu)", pct: 40 },
+        { label: "Vieron streaming todos o casi todos los días", pct: 39 },
+        { label: "Pagan suscripción de streaming de música", pct: 43 },
+        { label: "Usaron Netflix en el último mes", pct: 81 },
+        { label: "Uso diario de Facebook", pct: 24 },
+        { label: "Usan LinkedIn mensualmente", pct: 16 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte familiar", "Redes sociales y noticias", "Facebook, Google", "Contenido comparativo de marcas de autos accesibles.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Búsqueda y redes", "Google, LinkedIn", "Reseñas y comparativas de vehículos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / concesionario", "Búsqueda", "Google, sitios de comparación de precios", "Cotización y comparación de precios entre marcas.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Facebook, Instagram", "Retargeting de marca con enfoque en valor y espacio familiar.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Contenido de marca integrado en streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Facebook", "CTA a agendar test drive o cotización.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_ESTILO_VIDA_ACTIVO_CHILE_GWI_AUTO_20261019 = {
+  id: "estilo-vida-activo-chile",
+  name: "Chilenos de estilo de vida activo",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-19)",
+  insightNote:
+    "Audiencia real de GWI ('AMSA>Effie>TodoChile>HighPropensity>Chile', audience_id fbc1af2e-5bfe-4e77-9c6d-4f9b5484373c): chilenos interesados en fitness y ejercicio, eventos en vivo como festivales de música, deportes extremos/de aventura, comer afuera, Esports, actividades al aire libre como camping y senderismo, practicar deporte, televisión o ver deportes.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'TodoChile HighPropensity' en GWI (11,791,495) sobre la población digital de Chile (15.6M)", pct: 75.6 },
+  ],
+  footnotes: [
+    "75.6% ≈ universo real de la audiencia en GWI (11,791,495 = suma de universo hombres (5,908,994) + mujeres (5,882,501), verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M).",
+    "Esta es una audiencia muy amplia (más de 3 de cada 4 chilenos digitales) — el nombre original en GWI ('AMSA>Effie>TodoChile>HighPropensity>Chile') sugiere un alcance casi nacional por intereses de estilo de vida (fitness, eventos en vivo, deportes, gastronomía, outdoor, Esports, TV), no un nicho estrecho. Útil como base amplia, pero se recomienda revisión editorial sobre si conviene combinarla con un filtro adicional antes de usarla en un plan de medios de alta precisión.",
+    "Demografía, actitudes, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Esta audiencia es de cobertura nacional en Chile — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: GWI no devolvió datos específicos por momento del día para esta audiencia.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-estilo-vida-activo-chile",
+      name: "Camila Soto",
+      archetype: "La Chilena Activa Todo-Terreno",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia muy amplia en Chile (75.6% de la población digital del país), con género prácticamente parejo (50.1% hombres, 49.9% mujeres) y fuerte concentración urbana (79%). Valora retarse a sí misma (67%, 77% más que el promedio) pero rechaza la idea de destacar entre la multitud (51% dice que no le importa, 42% más que el promedio) — un perfil de superación personal discreta, no de estatus visible. Usa Visa de forma desproporcionada (54%, 133% más que el promedio).",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'autosuperación discreta': esta audiencia activa de Chile valora retarse a sí misma (67%, 77% más que el promedio) pero rechaza la idea de 'destacar entre la multitud' (51% dice que no es importante, 42% más que el promedio) — el mensaje de marca debe hablar de superación personal silenciosa, no de estatus o visibilidad social.",
+        [
+          { label: "El streaming (no la TV abierta) es el canal dominante de entretenimiento", detail: "44% usó Disney+ en el último mes (298% más que el promedio) y 71% usó Netflix (91% más) — para una marca de estilo de vida activo, el contenido de marca integrado en streaming supera en alcance potencial a la pauta en TV abierta." },
+          { label: "Usan Visa de forma desproporcionada frente al promedio", detail: "54% usó Visa el último mes (133% más que el promedio) — una alianza de marca con Visa/medios de pago puede activar promociones de experiencias (eventos deportivos, viajes) con alta resonancia en este segmento." },
+          { label: "El precio importa en el momento de decisión, no como identidad", detail: "20% dice que las ofertas especiales influyen fuertemente en su decisión de destino de viaje (78% más que el promedio) y 45% prefiere comprar online cuando hay cupones (14% más) — aunque no se definen como cazadores de ofertas, sí responden a promociones puntuales bien targeteadas." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50.1, female: 49.9 },
+        ageBands: [
+          { label: "16-24", pct: 18.0 },
+          { label: "25-34", pct: 25.0 },
+          { label: "35-44", pct: 24.0 },
+          { label: "45-54", pct: 19.0 },
+          { label: "55-64", pct: 15.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Les importa retarse a sí mismos (challenging themselves)", pct: 67 },
+        { label: "Usaron Visa el último mes", pct: 54 },
+        { label: "Interesados en tecnología", pct: 60 },
+      ],
+      barriers: [
+        { label: "No les importa destacar entre la multitud", pct: 51 },
+        { label: "Se dejan influenciar por ofertas especiales al elegir destino de viaje", pct: 20 },
+        { label: "Prefieren comprar online cuando hay cupones/descuentos", pct: 45 },
+      ],
+      digitalInterests: [
+        { label: "Están reduciendo su uso de redes sociales", pct: 29 },
+        { label: "Pagan suscripción a streaming de música", pct: 36 },
+        { label: "Pagan suscripción a streaming de películas/TV", pct: 46 },
+      ],
+      media: [
+        { label: "Usaron Disney+ en el último mes", pct: 44 },
+        { label: "Son usuarios intensivos de streaming", pct: 37 },
+        { label: "Usaron Netflix en el último mes", pct: 71 },
+        { label: "Uso diario de Facebook", pct: 22 },
+        { label: "Uso diario de Instagram", pct: 18 },
+        { label: "Usaron YouTube Premium", pct: 23 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / al aire libre (ejercicio)", "Apps de fitness y música", "Spotify, apps de tracking", "Contenido motivacional breve de superación personal.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / universidad", "Redes sociales", "Instagram, Facebook", "Contenido de retos personales, no de estatus.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo", "Búsqueda y redes", "Google, Instagram", "Ofertas puntuales de experiencias (viajes, eventos deportivos).", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Facebook, Instagram", "Retargeting con enfoque en reto personal, no en visibilidad social.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, Disney+", "Contenido de marca integrado en streaming premium.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Instagram", "CTA a experiencia o producto relacionado con desafío personal.", []),
+      ],
+    },
+  ],
+};
+
 const CATEGORIES = [
   {
     id: "entretenimiento",
@@ -6333,7 +6585,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_COLOMBIA_GWI_AUTO_20261005, CASE_PHOENIX_RISING_GWI_AUTO_20261012],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_COLOMBIA_GWI_AUTO_20261005, CASE_PHOENIX_RISING_GWI_AUTO_20261012, CASE_ESTILO_VIDA_ACTIVO_CHILE_GWI_AUTO_20261019],
   },
   {
     id: "retail",
@@ -6359,7 +6611,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_AHORRADORES_NO_BANCARIZADOS_GWI_AUTO_20261019],
   },
   {
     id: "alcohol",
@@ -6385,7 +6637,7 @@ const CATEGORIES = [
       { id: "investigaOnlineAntes", label: "Investiga activamente online antes de comprar" },
       { id: "prioridadFamiliar", label: "Prioriza espacio y seguridad familiar" },
     ],
-    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924],
+    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019],
   },
   {
     id: "consumer-tech",

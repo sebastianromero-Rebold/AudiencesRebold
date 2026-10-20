@@ -6305,6 +6305,266 @@ const CASE_GENEROS_BOGOTA_GWI_AUTO_20261012 = {
   ],
 };
 
+const CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020 = {
+  id: "subcultura-fashion-bogota-colombia",
+  name: "Subcultura fashion-conscious en Bogotá (Jagger>SubCulturas>MODA2)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-20)",
+  insightNote:
+    "Audiencia real de GWI 'Jagger>SubCulturas>MODA2' (audience_id f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a): el 100% se identifica como 'fashion-consciente' (índice 632 vs. promedio), reside en Bogotá (Capital District) y tiene entre 16 y 54 años.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (1,389,123) sobre la población digital de Colombia (31.06M)", pct: 4.5 },
+  ],
+  footnotes: [
+    "4.5% ≈ universo real de la audiencia en GWI (872,488 mujeres + 516,635 hombres = 1,389,123, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, edad, ciudad), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas de edad 55-64 y 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se dejan en 0 en vez de inventar un valor).",
+    "Top ciudad: 100% reside en Bogotá (Capital District), verificado vía explore_insight_gwi sobre la pregunta de distrito.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia (GWI no devolvió información compatible) — usa comportamiento general de medios/intereses verificado, sin cifras de actividades inventadas por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "fashionista-subcultura-bogota-colombia",
+      name: "Valentina Rojas",
+      archetype: "La Curadora de Tendencias",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá, tiene entre 16 y 54 años (mayoría 25-34) y se identifica 100% como 'fashion-consciente' — un índice 6.3 veces mayor que el promedio. Le importa estar al día con tendencias, consume moda y belleza activamente, y combina ese interés con una fuerte conciencia de precio a la hora de comprar.",
+      aiInsight: aiInsight(
+        "Cruza una identidad de moda extrema (100% se declara 'fashion-consciente', índice 632) con un comportamiento de compra racional: 41.8% es precio-consciente (índice 142.8) y 33% exige una política de devoluciones fácil antes de comprar online (índice 129.2). No es una compradora impulsiva de lujo — es una tastemaker que investiga y compara antes de convertir. En paralelo, es una usuaria intensiva de marketplaces (66.9% MercadoLibre, 45.6% Amazon) y de apps de movilidad (41.1% reservó taxi vía app en la última semana), lo que sugiere un estilo de vida urbano y conectado todo el día.",
+        [
+          { label: "Fashion-consciente, pero no de compra impulsiva", detail: "100% se identifica como 'fashion-consciente' (índice 632) y 72.3% está interesada en moda (índice 227.7), pero 41.8% es también precio-consciente (índice 142.8) — el mensaje de marca debe combinar aspiración con argumentos racionales de valor." },
+          { label: "La política de devoluciones es un gatillo de conversión, no un detalle operativo", detail: "33% prioriza una política de devoluciones fácil (índice 129.2) y 47.6% prefiere entrega al día siguiente (índice 131.0) al comprar online — fricción logística que puede frenar la conversión si no se comunica con claridad." },
+          { label: "Es nativa de marketplaces y apps de movilidad, no solo de redes sociales", detail: "66.9% usó MercadoLibre y 45.6% usó Amazon en el último mes, y 41.1% reservó un taxi vía app en la última semana — un perfil de consumo digital que va mucho más allá de TikTok/Instagram (45.5%/44.7% uso diario)." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 37.2, female: 62.8 },
+        ageBands: [
+          { label: "16-24", pct: 24.7 },
+          { label: "25-34", pct: 27.2 },
+          { label: "35-44", pct: 22.8 },
+          { label: "45-54", pct: 16.1 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá (Capital District) — 100% por definición de la audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Se identifica como 'fashion-consciente'", pct: 100 },
+        { label: "Interesada en moda", pct: 72.3 },
+        { label: "Quiere que las marcas sean trendy/cool", pct: 43.3 },
+        { label: "Le importa estar al día con tendencias", pct: 41.7 },
+      ],
+      barriers: [
+        { label: "Es precio-consciente pese a su interés en moda", pct: 41.8 },
+        { label: "Exige una política de devoluciones fácil antes de comprar online", pct: 33.0 },
+        { label: "Prefiere entrega al día siguiente para decidirse a comprar", pct: 47.6 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en skincare", index: 157.8 },
+        { label: "Interesada en belleza/cosmética", index: 175.9 },
+        { label: "Visitó Amazon el último mes", index: 147.7 },
+        { label: "Reservó un taxi vía app en la última semana", index: 164.6 },
+      ],
+      media: [
+        { label: "TikTok (uso diario)", pct: 45.5 },
+        { label: "Instagram (uso diario)", pct: 44.7 },
+        { label: "Heavy user de streaming de música", pct: 60.7 },
+        { label: "Heavy user de podcasts", pct: 32.8 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Revisa tendencias de moda y novedades de marcas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Redes sociales y mensajería", "Instagram, WhatsApp", "Comparte o reacciona a contenido de moda/belleza.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Compras online", "MercadoLibre, Amazon", "Explora productos de moda o belleza en marketplaces.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Apps de movilidad y redes", "TikTok, apps de taxi", "Pide un viaje vía app mientras navega contenido corto.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de música/podcasts", "Spotify, podcasts", "Escucha música o podcasts mientras se prepara para la noche.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Instagram, TikTok", "Publica contenido sobre su look del día o descubre nuevas tendencias.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_AHORRADORES_NO_BANCARIZADOS_GWI_AUTO_20261020 = {
+  id: "ahorradores-no-bancarizados-colombia",
+  name: "Ahorradores sin cuenta bancaria en Colombia (BcoFalabella>AhorradoresNoBancarizadosGeneral)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-20)",
+  insightNote:
+    "Audiencia real de GWI 'BcoFalabella>AhorradoresNoBancarizadosGeneral' (audience_id d8f995b2-3e85-4547-add4-6949e8425729): personas en Colombia que actualmente no tienen cuenta bancaria.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (4,104,935) sobre la población digital de Colombia (31.06M)", pct: 13.2 },
+  ],
+  footnotes: [
+    "13.2% ≈ universo real de la audiencia en GWI (2,514,680 mujeres + 1,590,255 hombres = 4,104,935, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, edad, región), motivaciones de ahorro, barreras financieras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas de edad 55-64 y 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se dejan en 0 en vez de inventar un valor).",
+    "Top ciudades/regiones verificadas vía explore_insight_gwi sobre la pregunta de distrito/departamento de residencia.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia (GWI no devolvió información compatible) — usa comportamiento general de medios/intereses verificado, sin cifras de actividades inventadas por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "ahorrador-no-bancarizado-colombia",
+      name: "Diana Patricia Gómez",
+      archetype: "La Ahorradora Informal",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive principalmente en Bogotá y otras grandes ciudades de Colombia, tiene mayoritariamente entre 16 y 34 años y no tiene cuenta bancaria. No es indiferente al ahorro: 82.6% prefiere ahorrar y esperar antes de comprar un producto, pero el 46.5% no tiene ningún tipo de ahorro o inversión formal — su reto no es la disciplina financiera, sino el acceso a productos adecuados.",
+      aiInsight: aiInsight(
+        "Esta audiencia desafía el estereotipo del 'no bancarizado despreocupado': 82.6% prefiere ahorrar y esperar a comprar un producto en vez de gastar de inmediato (índice 115.5), muy por encima del comprador impulsivo promedio. Sin embargo, el 46.5% no tiene ningún tipo de ahorro o inversión (índice 335.8) — la intención de ahorro existe, pero no hay un vehículo formal para canalizarla. Es, además, una audiencia hiperconectada: 96.7% usó redes sociales y 89.2% usó email en el último mes, con alto consumo de video (YouTube 54.3%, Netflix 51.6%) — el canal digital ya está presente en su vida diaria, lo que abre una oportunidad clara para productos de ahorro/banca digital simple, comunicados en el mismo canal donde ya consume contenido.",
+        [
+          { label: "Quiere ahorrar, pero no tiene dónde canalizarlo", detail: "82.6% prefiere ahorrar y esperar para comprar un producto (índice 115.5), pero 46.5% no tiene ningún tipo de ahorro/inversión (índice 335.8) — la barrera no es la actitud frente al dinero, es la falta de un producto financiero accesible." },
+          { label: "Es una audiencia joven y mayoritariamente femenina", detail: "61.3% se identifica como mujer (índice 126.7) y 29.1% tiene entre 16 y 24 años (índice 140.4) — perfil relevante para productos de inclusión financiera dirigidos a mujeres jóvenes." },
+          { label: "Ya vive conectada digitalmente, aunque compra menos online", detail: "96.7% usó redes sociales y 89.2% usó email en el último mes, pero solo 49.2% usó sitios/apps de compras o clasificados (39% menos probable que el promedio) — el acceso digital existe, la fricción está específicamente en el comercio/pago online, coherente con no tener cuenta bancaria." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 38.7, female: 61.3 },
+        ageBands: [
+          { label: "16-24", pct: 29.1 },
+          { label: "25-34", pct: 21.0 },
+          { label: "35-44", pct: 19.0 },
+          { label: "45-54", pct: 18.8 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá (Capital District)", pct: 25.5 },
+          { city: "Valle del Cauca", pct: 10.4 },
+          { city: "Antioquia", pct: 10.2 },
+          { city: "Atlántico", pct: 8.5 },
+        ],
+      },
+      motivations: [
+        { label: "Prefiere ahorrar y esperar para comprar un producto", pct: 82.6 },
+        { label: "Le importa pasar tiempo con su familia", pct: 68.8 },
+        { label: "Dice que ser financieramente seguro es importante", pct: 58.3 },
+      ],
+      barriers: [
+        { label: "No tiene ningún tipo de ahorro o inversión formal", pct: 46.5 },
+        { label: "Tiene efectivo/ahorros informales, no productos bancarios", pct: 42.2 },
+        { label: "Compró un producto/servicio online en la última semana (muy por debajo del promedio)", pct: 29.0 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en artesanías/manualidades", index: 197.8 },
+        { label: "Interesada en practicar deporte", index: 147.6 },
+        { label: "Buscó síntomas de salud en línea la última semana", index: 149.5 },
+        { label: "Compró un producto/servicio online la última semana", index: 48.7 },
+      ],
+      media: [
+        { label: "Redes sociales (uso en el último mes)", pct: 96.7 },
+        { label: "Facebook (uso diario +1x/día)", pct: 38.6 },
+        { label: "YouTube (vio TV/películas/videos el último mes)", pct: 54.3 },
+        { label: "Netflix (uso el último mes)", pct: 51.6 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Mensajería y redes", "WhatsApp, Facebook", "Revisa noticias y mensajes familiares del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo informal / casa", "Redes sociales", "Facebook, redes sociales", "Consume contenido general mientras gestiona el día a día.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / casa", "Email y búsqueda", "Correo, buscadores", "Resuelve trámites o gestiones personales online.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Facebook, TikTok", "Sigue contenido de entretenimiento y actualidad.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "YouTube, Netflix", "Ve contenido en familia o de forma individual.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y mensajería", "Netflix, WhatsApp", "Cierra el día con entretenimiento y contacto familiar.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020 = {
+  id: "reggaeton-musica-latina-colombia",
+  name: "Fans de música latina y eventos en vivo en Colombia (Paramo (co) ReggaetonGeneral)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-20)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo (co) ReggaetonGeneral' (audience_id ebda5c56-716e-496d-8607-821c96cb2367): personas en Colombia interesadas en eventos en vivo como festivales de música y que disfrutan escuchar música latina.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (7,110,075) sobre la población digital de Colombia (31.06M)", pct: 22.9 },
+  ],
+  footnotes: [
+    "22.9% ≈ universo real de la audiencia en GWI (4,038,788 mujeres + 3,071,287 hombres = 7,110,075, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, edad, ciudad), motivaciones musicales, barreras de compra de boletos, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "Top ciudades verificadas vía explore_insight_gwi sobre la pregunta de distrito de residencia.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia (GWI no devolvió información compatible) — usa comportamiento general de medios/intereses verificado, sin cifras de actividades inventadas por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "fan-musica-latina-eventos-vivo-colombia",
+      name: "Camila Herrera",
+      archetype: "La Melómana Social",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive mayoritariamente en Bogotá y otras grandes ciudades de Colombia (89.1% en zonas urbanas), tiene entre 16 y 54 años (concentrada en 25-34) y está 100% interesada en eventos en vivo como festivales de música, con fuerte afinidad por la música latina. Escucha música como parte constante de su día, pero solo una minoría ha convertido ese interés en compra reciente de boletos.",
+      aiInsight: aiInsight(
+        "Esta audiencia revela una brecha clásica entre interés declarado y conversión: 100% está interesada en eventos en vivo (índice 266.3) y 66.4% es apasionada por un rango amplio de artistas (índice 132.7), pero solo 10.8% compró boletos de concierto online en los últimos 3-6 meses (aunque con un índice alto de 219.7 frente al promedio) y 19.1% planea comprar en los próximos 3-6 meses. El cuello de botella no es el interés musical sino la conversión a compra de boletos — una oportunidad para activaciones de venta anticipada o acceso temprano. Es además una audiencia con alto consumo de IA generativa (59.8% visitó ChatGPT el último mes, índice 129.0), señal de un perfil digitalmente sofisticado más allá del consumo pasivo de redes sociales.",
+        [
+          { label: "Alto interés musical, baja conversión reciente a compra de boletos", detail: "100% interesada en eventos en vivo (índice 266.3) pero solo 10.8% compró boletos de concierto online en los últimos 3-6 meses (índice 219.7) y 19.1% planea comprar en los próximos 3-6 meses — la pauta debe enfocarse en mover la intención a la compra, no solo reforzar el interés." },
+          { label: "Es mayoritariamente urbana y femenina, concentrada en Bogotá", detail: "89.1% vive en zona urbana (índice 147.9) y 56.8% se identifica como mujer (índice 117.5), con 31.9% residiendo en Bogotá (Capital District) — relevante para activaciones de venue y medios locales." },
+          { label: "Usa herramientas de IA generativa más que el promedio", detail: "59.8% visitó ChatGPT en el último mes (índice 129.0) — un canal de descubrimiento/planeación de eventos poco explorado todavía por marcas de entretenimiento en vivo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 43.2, female: 56.8 },
+        ageBands: [
+          { label: "16-24", pct: 26.5 },
+          { label: "25-34", pct: 28.5 },
+          { label: "35-44", pct: 21.3 },
+          { label: "45-54", pct: 15.0 },
+          { label: "55-64", pct: 8.6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá (Capital District)", pct: 31.9 },
+          { city: "Antioquia", pct: 12.8 },
+          { city: "Valle del Cauca", pct: 11.7 },
+          { city: "Cundinamarca", pct: 7.7 },
+        ],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 100 },
+        { label: "Cree que la música puede ser un agente de cambio en la sociedad", pct: 66.5 },
+        { label: "Es apasionada por un amplio rango de artistas/bandas", pct: 66.4 },
+        { label: "Prefiere escuchar música en la mayor calidad de audio posible", pct: 66.3 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto online en los últimos 3-6 meses (baja conversión real)", pct: 10.8 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses (intención pendiente de convertir)", pct: 19.1 },
+      ],
+      digitalInterests: [
+        { label: "Visitó ChatGPT el último mes", index: 129.0 },
+        { label: "Interesada en museos/galerías", index: 139.4 },
+        { label: "Interesada en danza (ballet, street dance, salsa, etc.)", index: 171.8 },
+        { label: "Compró boletos de concierto online últimos 3-6 meses", index: 219.7 },
+      ],
+      media: [
+        { label: "Instagram (uso +1x/día)", pct: 45.3 },
+        { label: "TikTok (uso +1x/día)", pct: 40.9 },
+        { label: "Facebook (uso +1x/día)", pct: 39.4 },
+        { label: "Usa internet para mantenerse al día con noticias/eventos", pct: 69.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Facebook", "Escucha música mientras se alista o se transporta.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Streaming de música", "Spotify / apps de música", "Descubre nuevos artistas o playlists.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Revisa noticias de artistas y próximos eventos.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Mensajería y redes", "WhatsApp, Instagram", "Coordina planes para asistir a eventos con amigos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / evento", "Streaming y redes", "Apps de streaming, redes", "Contenido detrás de cámaras o pre-show de un evento.", []),
+        daypart("Noche", "8 a 11 pm", "Evento en vivo / casa", "Evento en vivo o streaming", "Venue físico o streaming en vivo", "Experiencia de marca en el venue o pauta durante streaming del evento.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -6320,7 +6580,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
   },
   {
     id: "deportes",
@@ -6346,7 +6606,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
   },
   {
     id: "fintech",
@@ -6359,7 +6619,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_AHORRADORES_NO_BANCARIZADOS_GWI_AUTO_20261020],
   },
   {
     id: "alcohol",

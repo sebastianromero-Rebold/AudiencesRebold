@@ -301,6 +301,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "fa1d1328-bae2-48e8-8782-6faad460a369", title: "Digilant>Phoenix Rising>AZ Soccer Fans", client: "Digilant", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who live in Arizona and follow soccer." },
   { id: "b4eb6f95-e67c-4f5a-90c1-550f57f84ed1", title: "GrendeneGlobalBrands>Melissa>1>Broad", client: "GrendeneGlobalBrands", type: "shared", datasets: ["ds-core"], description: "This audience consists of females who currently reside in the USA and have an interest in fashion or are fashion-conscious." },
   { id: "f07745dc-9226-44a1-b5eb-76834d861b02", title: "Paramo LAB (CO) EntretenimientoCOL", client: "Paramo LAB", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals." },
+  // Añadidas en la corrida diaria del 2026-10-20.
+  { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
+  { id: "d8f995b2-3e85-4547-add4-6949e8425729", title: "BcoFalabella>AhorradoresNoBancarizadosGeneral", client: "BcoFalabella", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia and does not have a bank account." },
+  { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -378,4 +382,7 @@ const CATALOG_ANALYSIS_LINKS = {
   // f07745dc: GWI devolvió los mismos criterios que "Paramo (co) EventosEnVivoGeneral" (5190162e, ya procesada el
   // 2026-09-24) -- se enlaza al mismo caso/persona existente en vez de crear un duplicado.
   "f07745dc-9226-44a1-b5eb-76834d861b02": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-10-06" },
+  "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
+  "d8f995b2-3e85-4547-add4-6949e8425729": { categoryId: "fintech", caseId: "ahorradores-no-bancarizados-colombia", personaId: "ahorrador-no-bancarizado-colombia", analyzedAt: "2026-10-20" },
+  "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
 };

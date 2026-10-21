@@ -6306,6 +6306,1099 @@ const CASE_GENEROS_BOGOTA_GWI_AUTO_20261012 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — unificados 2026-10-21 (borradores diarios 2026-10-15 a 2026-10-21).
+// Audiencias repetidas entre borradores: se conserva la versión con más datos reales.
+// ---------------------------------------------------------------------------
+
+const CASE_ASUS_LATAM_GWI_AUTO_20261015 = {
+  id: "asus-users-latam",
+  name: "Usuarios de productos ASUS (Colombia, Argentina y Chile)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-15)",
+  insightNote:
+    "Audiencia real de GWI ('ASUS>ASUS>LATAM>AsusUsers', audience_id b249b44f-5c8d-4855-9fe2-1f92296bc45c): personas en Chile, Argentina o Colombia que actualmente usan productos o servicios de ASUS.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'AsusUsers' en GWI (6,190,350) sobre la población digital combinada de Colombia, Argentina y Chile (81.66M)", pct: 7.6 },
+  ],
+  footnotes: [
+    "7.6% ≈ universo real de la audiencia en GWI (3,645,812 hombres + 2,544,538 mujeres = 6,190,350, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital combinada de Colombia (31.06M) + Argentina (35M) + Chile (15.6M) = 81.66M.",
+    "Esta audiencia es trinacional: 53% reside en Colombia, 32% en Argentina y 15% en Chile (cifras reales vía chat_gwi) — se usa Colombia como mercado principal del caso por ser el de mayor participación, pero el perfil real combina los tres países.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "El bloque de la tarde/noche del customer journey usa datos reales de GWI sobre horarios de consumo de TV internacional entre espectadores frecuentes de esta audiencia (41% en 2-5pm, 52% en 5-7pm, 50-54% en 10pm-medianoche); los bloques de la mañana usan lugares/medios genéricos porque GWI no devolvió una franja horaria específica para ese tramo de esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "usuario-asus-latam",
+      name: "Daniel Ortiz",
+      archetype: "El Entusiasta Tech Multipaís",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Colombia (53%), Argentina (32%) o Chile (15%), mayoritariamente hombre (58.9%) y concentrado en 25-44 años (53% combinado). Es un comprador racional de tecnología: casi la mitad interesada en computación/programación (48%) y más de un tercio en negocios (35%), pero también jugador activo (51% juega shooters, 29% MMO) y suscriptor de streaming de video (56%). A pesar de su interés tech, es paciente con el precio: 80% prefiere ahorrar y esperar antes de comprar, y 73% espera activamente una rebaja.",
+      aiInsight: aiInsight(
+        "Cruza con la tensión entre 'comprador informado' y 'cazador de ofertas' típica del consumidor tech latinoamericano: este usuario de ASUS es 30% más propenso que el promedio a interesarse en computación/programación y 25% más en negocios, pero al mismo tiempo 80% prefiere ahorrar y esperar antes de comprar y 73% espera activamente una rebaja — la decisión de compra de hardware no se gana solo con especificaciones técnicas, sino con una ventana de oferta visible en el momento en que ya decidió qué comprar.",
+        [
+          { label: "La rebaja no sustituye la validación técnica, la completa", detail: "41% busca opinión de expertos antes de compras costosas y 80% prefiere ahorrar y esperar — el funnel de conversión necesita tanto contenido de producto (reviews, specs) como un gatillo de precio/oferta, no uno sin el otro." },
+          { label: "Es gamer y es profesional de negocio al mismo tiempo, no uno u otro", detail: "35% interesado en negocios y 51% juega shooters / 29% MMO — el mismo usuario que programa o gestiona un negocio durante el día es un gamer activo de noche; el mensaje de marca puede cruzar ambos mundos sin perder foco." },
+          { label: "El consumo de TV internacional se concentra en la tarde-noche, no en la mañana", detail: "52% de los espectadores frecuentes ve TV internacional entre 5-7pm y 50-54% entre 10pm-medianoche — la pauta en TV/streaming internacional rinde más en esas dos ventanas que en la mañana, donde GWI no mostró un patrón diferenciado para esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 58.9, female: 41.1 },
+        ageBands: [
+          { label: "16-24", pct: 21 },
+          { label: "25-34", pct: 31 },
+          { label: "35-44", pct: 22 },
+          { label: "45-54", pct: 16 },
+          { label: "55-64", pct: 10 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Colombia", pct: 53 },
+          { city: "Argentina", pct: 32 },
+          { city: "Chile", pct: 15 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en computación/programación", pct: 48 },
+        { label: "Interesados en negocios", pct: 35 },
+        { label: "Interesados en Esports", pct: 20 },
+        { label: "Interesados en gadgets/tecnología", pct: 18 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 80 },
+        { label: "Prefieren esperar a que haya rebajas antes de comprar", pct: 73 },
+        { label: "Buscan opinión de expertos antes de compras costosas", pct: 41 },
+      ],
+      digitalInterests: [
+        { label: "Juegan videojuegos de disparos (shooters)", pct: 51 },
+        { label: "Pagaron suscripción de streaming de video/TV el último mes", pct: 56 },
+        { label: "Jugaron MMO en el último año", pct: 29 },
+        { label: "Pagaron por un paquete de software el último mes", pct: 11 },
+      ],
+      media: [
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 34 },
+        { label: "Heavy user de prensa/artículos online", pct: 27 },
+        { label: "Heavy user de videojuegos PC/consola", pct: 26 },
+        { label: "Heavy user de radio", pct: 23 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Smartphone", "Redes y navegación general", "Contenido de producto/reviews — sin franja horaria específica reportada por GWI.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "TV internacional y navegación", "TV, smartphone", "31% de espectadores frecuentes ve TV internacional en esta franja — contenido de marca ligero.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina", "Navegación general", "Smartphone, laptop", "Contenido técnico/comparativas de producto.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "TV, smartphone", "41% ve TV internacional entre 2-5pm — ventana para anuncio de oferta/rebaja.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional y gaming", "TV, PC/consola", "52% ve TV internacional entre 5-7pm — CTA con precio/rebaja visible.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y gaming", "Streaming de video, PC/consola", "50-54% de espectadores frecuentes prefiere TV internacional en 10pm-medianoche — último empujón de conversión con oferta por tiempo limitado.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FINTECH_LATAM_GWI_AUTO_20261015 = {
+  id: "fintech-latam-mexico-argentina-chile",
+  name: "Entusiastas de fintech e inversión (México, Argentina y Chile)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-15)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo(co)FintechLatam', audience_id e8a9e5a9-c44c-47f2-a347-a1c228eaf951): personas en México, Argentina o Chile interesadas en economía/finanzas y tecnología, que valoran la seguridad financiera y aprender nuevas habilidades, y asisten a festivales de música en vivo.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'FintechLatam' en GWI (8,303,108) sobre la población digital combinada de México, Argentina y Chile (128.65M)", pct: 6.5 },
+  ],
+  footnotes: [
+    "6.5% ≈ universo real de la audiencia en GWI (4,931,070 hombres + 3,372,038 mujeres = 8,303,108, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital combinada de México (78.05M) + Argentina (35M) + Chile (15.6M) = 128.65M.",
+    "Esta audiencia es trinacional: 67% reside en México, 22% en Argentina y 12% en Chile (cifras reales vía chat_gwi) — se usa México como mercado principal del caso por ser el de mayor participación, pero el perfil real combina los tres países.",
+    "Pese al sufijo '(co)' del nombre original en la plataforma GWI (convención interna de nomenclatura del equipo), la audiencia real no está geográficamente acotada a Colombia — la cobertura real verificada es México/Argentina/Chile.",
+    "Demografía, motivaciones financieras, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "El bloque de la tarde/noche del customer journey usa datos reales de GWI sobre horarios de consumo de TV internacional entre espectadores frecuentes de esta audiencia (35% en 2-5pm, 55% en 5-7pm, 53% en 10pm-medianoche); los bloques de la mañana usan una cifra real pero de baja especificidad (27% en 6-9am, menos probable que el promedio).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-fintech-latam",
+      name: "Valentina Rojas",
+      archetype: "La Inversionista Digital Multipaís",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en México (67%), Argentina (22%) o Chile (12%), mayoritariamente hombre (59.4%) y concentrada en 25-44 años (50% combinado). Por definición de la audiencia, el 100% está interesado en economía/finanzas y valora la seguridad financiera; 63% tiene interés activo en inversiones y 55% se considera buena manejando su dinero. Ya tiene acceso financiero (78% con tarjeta de crédito) pero no está libre de tensión de liquidez: 36% tiene hoy un préstamo de corto plazo, y 19% tiene criptomonedas — una audiencia financieramente activa, no solo bancarizada.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia 'inversionista activo con liquidez ajustada': esta audiencia declara 100% de interés en economía/finanzas y 63% interés en inversiones (incluido 19% con criptomonedas), pero 36% mantiene hoy un préstamo de corto plazo — no es una audiencia que solo ahorra o solo invierte, administra ambos lados del balance al mismo tiempo. El producto financiero que gana aquí no es el que solo vende inversión o solo crédito, sino el que ayuda a gestionar ambos frentes a la vez.",
+        [
+          { label: "El 'pagar por acceso' ya es un hábito, no una objeción", detail: "31% prefiere poder diferir pagos sin intereses al comprar online y 38% prefiere pagar por acceder a un producto o servicio — el modelo de suscripción/BNPL encuentra menos fricción cultural en esta audiencia que en el consumidor financiero promedio." },
+          { label: "El precio importa, pero no es la barrera principal", detail: "46% se declara price-conscious (apenas 14% por encima del promedio) — menor sensibilidad relativa al precio que otras audiencias de la categoría, lo que deja espacio para un mensaje de valor/beneficio en vez de descuento agresivo." },
+          { label: "X (Twitter) es su canal de noticias, no solo redes 'tradicionales'", detail: "67% usa X para mantenerse informado y 63% usa Facebook/Messenger para buscar información de marcas — una combinación de canales que muchas estrategias de fintech en la región todavía subestiman frente a Instagram/TikTok." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 59.4, female: 40.6 },
+        ageBands: [
+          { label: "16-24", pct: 22 },
+          { label: "25-34", pct: 26 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "México", pct: 67 },
+          { city: "Argentina", pct: 22 },
+          { city: "Chile", pct: 12 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en economía/finanzas (por definición de la audiencia)", pct: 100 },
+        { label: "Consideran importante la seguridad financiera (por definición de la audiencia)", pct: 100 },
+        { label: "Interesados en inversiones", pct: 63 },
+        { label: "Usan internet para gestionar sus finanzas/ahorros", pct: 66 },
+      ],
+      barriers: [
+        { label: "Se declaran price-conscious", pct: 46 },
+        { label: "Tienen hoy un préstamo de corto plazo", pct: 36 },
+        { label: "Business decision-makers que enfrentan falta de soporte al cliente durante la compra", pct: 19 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en tecnología (por definición de la audiencia)", pct: 100 },
+        { label: "Usaron sitios/apps de banca, inversión o seguros el último mes", pct: 55 },
+        { label: "Prefieren diferir pagos sin intereses al comprar online", pct: 31 },
+        { label: "Tienen criptomonedas", pct: 19 },
+      ],
+      media: [
+        { label: "Heavy user de streaming de música", pct: 64 },
+        { label: "Heavy user de redes sociales", pct: 60 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 50 },
+        { label: "Heavy user de videos cortos (Reels/TikTok)", pct: 49 },
+        { label: "Heavy user de podcasts", pct: 32 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV internacional (señal débil)", "TV, smartphone", "27% de espectadores frecuentes ve TV internacional en esta franja (ligeramente por debajo del promedio) — contenido educativo breve sobre finanzas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Apps bancarias/inversión", "Apps de banca e inversión", "31% ve TV internacional en esta franja en fin de semana — recordatorio de meta de ahorro/inversión.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales (X, Facebook)", "X, Facebook/Messenger", "Noticias de mercado o contenido educativo financiero.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "TV, smartphone", "35% ve TV internacional entre 2-5pm — contenido de marca sobre gestión de deuda/inversión.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional y streaming", "TV, streaming de video", "55% ve TV internacional entre 5-7pm — CTA a producto financiero (tarjeta, inversión, crédito).", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Streaming de música/video, redes", "53% de espectadores frecuentes prefiere TV internacional en 10pm-medianoche — cierre de campaña con oferta o simulador financiero.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016 = {
+  id: "gstar-fashion-categoria-latam",
+  name: "Interesados en categoría de moda G-Star (LatAm: Brasil, México, Corea del Sur)",
+  market: "BRA",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-16)",
+  insightNote:
+    "Audiencia real de GWI ('WHPGlobal>Latam>Gstar>Category', audience_id 9088ef14-a283-445d-b903-202dfb107376): definición de categoría más amplia que 'gstar-fashion-latam' (HighPropensityBuyerWithBrandAffinity, ya analizada) — compradores de ropa online en el último mes o que se describen como fashion-conscious o interesados en moda, residentes en Brasil, México o Corea del Sur (Argentina y Chile no alcanzaron tamaño de muestra reportable en esta consulta).",
+  funnelSteps: [
+    { label: "Compradores/interesados en categoría de moda G-Star en Brasil y México (sin incluir Corea del Sur en el % por no estar en los mercados de este aplicativo)", pct: 64.1 },
+  ],
+  footnotes: [
+    "64.1% = universo real de GWI en Brasil (100,011,668) + México (65,366,678) = 165,378,346, sobre la suma de población digital de esos 2 mercados en MARKETS (Brasil 180M + México 78.05M = 258.05M) — verificado vía explore_insight_gwi.",
+    "Esta audiencia también incluye Corea del Sur (12.3% / universo 23,230,462), pero ese país no está en la lista de MARKETS del aplicativo, por lo que se excluyó del cálculo de pct del funnel (queda documentado aquí, no se descartó el dato, solo no entra en el % mostrado).",
+    "Mercado del caso asignado como Brasil (BRA) por ser el país con mayor participación real dentro de esta audiencia (53.0%); México concentra 34.7% y Corea del Sur 12.3% (ver 'topCities', que aquí lista países por tratarse de una audiencia multi-mercado, igual que 'gstar-fashion-latam').",
+    "Género (48% hombre / 52% mujer) tomado de chat_gwi; GWI reportó esta cifra comparada contra una base de referencia de 'sports fan' (posible artefacto de la segmentación interna de GWI para esta consulta) — el valor de 48/52 en sí es un dato real de la audiencia, no inventado.",
+    "GWI no devolvió bandas de edad específicas para esta audiencia (solo confirmó que el 100% tiene entre 16 y 64 años) — no se reportan bandas de edad por no haber desagregación disponible para esta consulta.",
+    "Intereses (cine 72.2%, música 72.1%, comer fuera 59.4%, televisión 55.6%), barreras de compra social/live-shopping (18%/18%/10%) y medios (YouTube 81.5%, Instagram 61.3%, TikTok 54.8%, Facebook 47.3%) verificados 1:1 vía explore_insight_gwi.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey de 6 bloques queda con lugar/medios genéricos inferidos del perfil y sin cifras propias de actividades, pendiente de criterio del equipo creativo.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "interesado-moda-categoria-gstar-latam",
+      name: "Isabela Martins",
+      archetype: "La Exploradora de Tendencias",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Definición de categoría más amplia que la compradora de alta propensión ya analizada en 'gstar-fashion-latam': brasileña (53%), mexicana (34.7%) o surcoreana (12.3%), interesada en moda de forma más general — cine (72.2%), música (72.1%) y salir a comer (59.4%) son intereses igual de fuertes que la moda, lo que sugiere un público de estilo de vida amplio más que un nicho fashion puro.",
+      aiInsight: aiInsight(
+        "Cruza un universo mucho más amplio (~165M en Brasil y México, frente a los ~51M de la audiencia de alta propensión ya analizada) con fricciones concentradas específicamente en funcionalidades de compra social/en vivo (18% reporta falta de información de producto, índice 186; 10% reporta interfaz compleja, índice 190) — la oportunidad para G-Star es mejorar el contenido de producto dentro de TikTok/Instagram Shopping antes de competir por el comprador ya calificado.",
+        [
+          { label: "Categoría de entrada, no comprador ya convertido", detail: "~165M en Brasil y México (sin contar Corea del Sur) frente a ~51M de la audiencia 'HighPropensityBuyerWithBrandAffinity' ya analizada — esta es la base amplia de interés en moda, antes del filtro de compra activa." },
+          { label: "La fricción está en el social/live shopping, no en el checkout general", detail: "18% de quienes usan funciones de compra social/en vivo reportan falta de información de producto (índice 186) y 10% una interfaz compleja (índice 190) — dos barreras puntuales y accionables en el diseño de esas funcionalidades." },
+          { label: "TikTok sobreindexa más que su alcance absoluto", detail: "54.8% usa TikTok para información/contenido (índice 223.2) frente a 81.5% de YouTube (índice 127.7) — TikTok tiene menos alcance total pero mucha mayor afinidad relativa frente al promedio." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48, female: 52 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Brasil", pct: 53.0 },
+          { city: "México", pct: 34.7 },
+          { city: "Corea del Sur", pct: 12.3 },
+        ],
+      },
+      motivations: [
+        { label: "Interesada en cine/películas", pct: 72.2 },
+        { label: "Interesada en música", pct: 72.1 },
+        { label: "Interesada en salir a comer", pct: 59.4 },
+        { label: "Interesada en televisión", pct: 55.6 },
+      ],
+      barriers: [
+        { label: "Dificultad con disponibilidad de producto en compras social/en vivo", pct: 18 },
+        { label: "Falta de información de producto en compras social/en vivo", pct: 18 },
+        { label: "Interfaz de usuario compleja en compras social/en vivo", pct: 10 },
+      ],
+      digitalInterests: [
+        { label: "Prefiere comprar online", index: 108 },
+        { label: "Prefiere comprar en tienda física", index: 88 },
+      ],
+      media: [
+        { label: "YouTube (información y contenido)", pct: 81.5 },
+        { label: "Instagram (información y contenido)", pct: 61.3 },
+        { label: "TikTok (información y contenido)", pct: 54.8 },
+        { label: "Facebook (información y contenido)", pct: 47.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "YouTube, Instagram", "Contenido de lanzamientos/colecciones nuevas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Video y redes", "YouTube, TikTok", "Reseñas o unboxing de producto.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido de moda y estilo de vida.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y ecommerce", "Instagram Shopping, TikTok Shop", "Ficha de producto con información completa (atacar barrera de falta de info).", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "YouTube, Facebook", "Retargeting de catálogo visto.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y video", "YouTube, TikTok", "Exploración de catálogo / compra nocturna.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017 = {
+  id: "preferencia-franquicia-pago-colombia",
+  name: "Preferencia de franquicia de pago en Colombia (Mastercard vs. Visa)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-17)",
+  insightNote:
+    "Audiencias reales de GWI 'Paramo (co) UsanFranquicias_Mastercard' (audience_id afdfa72a-1a82-4d59-ace7-f006804dadf3) y 'Paramo (co) UsanFranquicias_VisaExcluyente' (audience_id ef7a4fe7-40df-49c9-bb6c-c59ede23fd38): colombianos con tarjeta de crédito o cuenta bancaria, segmentados por la franquicia de pago que usaron el último mes (Mastercard sin Visa vs. Visa sin Mastercard) — ambas son cortes de la misma campaña 'UsanFranquicias' ya analizada en el caso 'usuarios-franquicias-tarjetas-colombia', pero segmentadas por franquicia en vez de por tenencia de crédito. Relevante para estrategias de co-branding o fidelización de red específica de tarjetas.",
+  funnelSteps: [
+    { label: "Universo combinado real de ambas audiencias en GWI (7,285,022) sobre la población digital de Colombia (31.06M)", pct: 23.5 },
+  ],
+  footnotes: [
+    "23.5% = universo combinado real de ambas audiencias en GWI (4,234,204 de 'UsanFranquicias_Mastercard' + 3,050,818 de 'UsanFranquicias_VisaExcluyente' = 7,285,022, cada uno verificado vía explore_insight_gwi sobre la pregunta de género de su propia audiencia) sobre la población digital total de Colombia (31.06M).",
+    "El reparto entre las dos personas (58.1% / 41.9%) usa el tamaño real de cada audiencia en GWI.",
+    "Género y bandas de edad (16-24 a 55-64) verificados 1:1 por audiencia vía chat_gwi + explore_insight_gwi; la banda 65+ no tuvo desagregación verificada suficiente en ninguna de las dos audiencias y se deja en 0 en vez de inventar un valor.",
+    "GWI no devolvió desagregación de ciudad con muestra suficiente para ninguna de las dos audiencias.",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, especialmente la cita de cada persona y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "usuario-mastercard-colombia",
+      name: "Camila Torres",
+      archetype: "La Fiel a Mastercard",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Tiene cuenta bancaria o tarjeta de crédito y usó Mastercard el último mes, pero no Visa. Prefiere pagar sin efectivo y valora la seguridad financiera, a la vez que es una pagadora activa de contenido y servicios digitales — música, IA, servicios premium — muy por encima del promedio.",
+      aiInsight: aiInsight(
+        "Cruza con un patrón de gasto digital 'premium ligero': paga por un servicio de citas (5.9%, índice 205 — el doble de probable que el promedio) y por una suscripción a una herramienta de IA (7.5%, índice 171) muy por encima del promedio, al tiempo que el 74.2% considera la seguridad financiera importante (índice 112). No es una audiencia que evite el gasto digital por cautela financiera — al contrario, paga selectivamente por experiencias y herramientas que le dan una ventaja personal (citas, productividad con IA, música), una oportunidad para ofertas de valor agregado ligadas a la tarjeta, no solo descuentos genéricos.",
+        [
+          { label: "Paga por categorías de nicho muy por encima del promedio", detail: "5.9% pagó un servicio de citas el último mes (índice 205, el doble de probable que el promedio) y 7.5% pagó una suscripción a una herramienta de IA (índice 171) — categorías de gasto digital específico, no solo streaming genérico." },
+          { label: "La seguridad financiera no le impide gastar en digital", detail: "74.2% considera importante ser financieramente seguro (índice 112), pero a la vez el 37% paga streaming de música (índice 146) — el mensaje de marca puede combinar beneficios financieros con acceso a contenido, no solo ahorro." },
+          { label: "Es menos activa en redes sociales que el promedio", detail: "Solo 4.9% pasó entre 7 y 10 horas en redes sociales la última semana (16% menos probable que el promedio) — canales de bajo volumen de scroll (email, apps financieras) pueden rendir mejor que pauta social masiva para esta audiencia." },
+        ]
+      ),
+      sharePct: 58.1,
+      demographics: {
+        genderSplit: { male: 48.8, female: 51.2 },
+        ageBands: [
+          { label: "16-24", pct: 21.0 },
+          { label: "25-34", pct: 25.0 },
+          { label: "35-44", pct: 24.0 },
+          { label: "45-54", pct: 17.0 },
+          { label: "55-64", pct: 14.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante ser financieramente seguro", pct: 74.2 },
+        { label: "Prefiere pagar sin efectivo", pct: 64.0 },
+        { label: "Investiga productos online antes de comprar", pct: 58.0 },
+        { label: "Busca las mejores ofertas/precios", pct: 52.0 },
+      ],
+      barriers: [
+        { label: "Pasa menos tiempo en redes sociales (7 a 10 horas/semana) que el promedio", pct: 4.9 },
+      ],
+      digitalInterests: [
+        { label: "Pagó un servicio de citas (dating) el último mes", index: 205 },
+        { label: "Pagó una suscripción a una herramienta de IA el último mes", index: 171 },
+        { label: "Pagó un servicio premium web el último mes", index: 154 },
+        { label: "Pagó suscripción de streaming de música el último mes", index: 146 },
+      ],
+      media: [
+        { label: "Ha usado Netflix el último mes", pct: 68.0 },
+        { label: "Usa Instagram más de una vez al día", pct: 40.0 },
+        { label: "Ha usado HBO Max el último mes", pct: 32.0 },
+        { label: "Usa Pinterest semanalmente", pct: 18.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps financieras y email", "App del banco, Gmail/Outlook", "Revisa movimientos y ofertas de su tarjeta.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Streaming de música", "Spotify / apps de música", "Playlist o promoción de suscripción patrocinada.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Compras online", "E-commerce, apps de IA", "Comparación de precios o uso de un asistente de IA para decidir una compra.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Pinterest", "Descubre contenido de marcas o productos premium.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, HBO Max", "Pauta pre-roll o patrocinio de contenido.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y apps de nicho", "Apps de citas, streaming", "Oferta de beneficios exclusivos por usar la tarjeta.", []),
+      ],
+    },
+    {
+      id: "usuario-visa-colombia",
+      name: "Daniel Esteban Ramírez",
+      archetype: "El Visa Premium",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Tiene cuenta bancaria o tarjeta de crédito y usó Visa el último mes, pero no Mastercard. Prefiere comprar en grandes retailers, tiende a comprar la versión premium de los productos y es un consumidor audiovisual intensivo que sigue de cerca las tendencias tecnológicas.",
+      aiInsight: aiInsight(
+        "Cruza con un perfil de 'comprador premium de marca grande': 47.7% prefiere comprar en grandes retailers (índice 127) y 14% tiende a comprar la versión premium de los productos (índice 151) — un patrón de consumo que confía en marcas establecidas y paga por la mejor versión, no busca el precio más bajo. En paralelo, es un consumidor audiovisual intensivo (96.9% usó algún servicio de video el último mes, 73.8% Netflix) y sigue tendencias tecnológicas (35%, índice 135) — el canal de streaming premium (Disney+, HBO Max) es tan relevante como el retail físico para llegar a esta audiencia.",
+        [
+          { label: "Es un comprador premium de marca grande, no de descuento", detail: "47.7% prefiere comprar en grandes retailers (índice 127) y 14% tiende a comprar la versión premium de los productos (índice 151) — el mensaje de marca debe anclarse en calidad/prestigio, no en precio bajo." },
+          { label: "Es un consumidor audiovisual intensivo en múltiples plataformas", detail: "96.9% usó algún servicio de video el último mes, 73.8% Netflix (índice 118) y 38.5% Disney+ (índice 123) — vale la pena repartir la pauta entre varias plataformas de streaming, no concentrarla en una sola." },
+          { label: "Sigue tendencias tecnológicas por encima del promedio", detail: "35% sigue las últimas tendencias y noticias de tecnología (índice 135) — un canal de contenido tech/reviews puede ser tan efectivo como la pauta financiera tradicional." },
+        ]
+      ),
+      sharePct: 41.9,
+      demographics: {
+        genderSplit: { male: 56.7, female: 43.3 },
+        ageBands: [
+          { label: "16-24", pct: 19.0 },
+          { label: "25-34", pct: 25.0 },
+          { label: "35-44", pct: 24.0 },
+          { label: "45-54", pct: 20.0 },
+          { label: "55-64", pct: 13.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prefiere comprar en grandes retailers", pct: 47.7 },
+        { label: "Le importa contribuir a su comunidad", pct: 41.0 },
+        { label: "Sigue las últimas tendencias y noticias de tecnología", pct: 35.0 },
+        { label: "Tiende a comprar la versión premium de los productos", pct: 14.0 },
+      ],
+      barriers: [
+        { label: "Interés en artesanías/manualidades por debajo del promedio", pct: 33.7 },
+      ],
+      digitalInterests: [
+        { label: "Pagó un software el último mes", index: 171 },
+        { label: "Pagó un servicio premium web el último mes", index: 165 },
+        { label: "Pagó una suscripción a un periódico/revista online el último mes", index: 165 },
+        { label: "Pagó suscripción de streaming de música el último mes", index: 139 },
+      ],
+      media: [
+        { label: "Ha usado Netflix el último mes", pct: 73.8 },
+        { label: "Usa Instagram más de una vez al día", pct: 41.0 },
+        { label: "Ha usado Disney+ el último mes", pct: 38.5 },
+        { label: "Usa LinkedIn a diario", pct: 11.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Email y redes", "LinkedIn, Gmail", "Noticias de tecnología y tendencias del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes profesionales", "LinkedIn", "Contenido de marca premium o reviews de producto.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / grandes retailers", "Compras en tienda o app de retail", "App de retailer grande", "Promoción de producto premium o programa de puntos Visa.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram", "Descubre lanzamientos de producto de marcas establecidas.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, Disney+", "Pauta pre-roll en una de varias plataformas de streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y video", "Netflix, YouTube", "Contenido patrocinado o reseña de producto premium.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_GENEROS_NACIONAL_GWI_AUTO_20261017 = {
+  id: "generos-colombia-nacional",
+  name: "Entusiastas de eventos en vivo y cultura a nivel nacional en Colombia (Páramo>Generos>Base)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-17)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>Generos>Base' (audience_id 91ac359e-cdb3-4b4d-b793-77600f08aba5): colombianos de 18 a 50 años interesados en eventos en vivo como festivales de música o streaming de eventos, y siempre atentos a nuevos eventos de música en vivo — es la versión nacional (no restringida a una ciudad) de la audiencia 'Paramo>Generos>Bogotá' ya analizada en el caso 'generos-bogota-colombia'.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (14,338,171) sobre la población digital de Colombia (31.06M)", pct: 46.2 },
+  ],
+  footnotes: [
+    "46.2% ≈ universo real de la audiencia en GWI (7,166,792 mujeres + 7,171,379 hombres = 14,338,171, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M) — consistente con ser la versión a nivel país (no solo Bogotá) de la misma campaña 'Generos'.",
+    "Bandas de edad verificadas: 16-24: 28%, 25-34: 33%, 35-44: 27%, 45-54: 12% (suman 100%); 55-64 y 65+ no aplican por definición de la audiencia (18 a 50 años) y se dejan en 0.",
+    "Motivaciones, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "GWI no devolvió ningún tema con interés por debajo del promedio para esta audiencia — todos los temas explorados muestran interés igual o superior al promedio; se usa el de menor diferencial (televisión, 54.4%, índice 123.5) como referencia de interés relativamente menos distintivo, en vez de inventar una barrera.",
+    "Top ciudades: la audiencia es nacional por definición, sin desagregación geográfica adicional.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-cultural-colombia-nacional",
+      name: "Laura Valentina Ortiz",
+      archetype: "La Trotamundos Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Colombia, tiene entre 18 y 50 años y está siempre atenta a nuevos eventos de música en vivo en cualquier ciudad del país. Compra en SHEIN muy por encima del promedio y combina herramientas de productividad (Teams, Waze) con un consumo cultural amplio — eventos en vivo, cine, museos.",
+      aiInsight: aiInsight(
+        "Cruza un perfil 'cultural omnívoro' a escala nacional con un comportamiento de compra de moda rápida muy marcado: 37% usó SHEIN el último mes, 307% más probable que el promedio (el índice más alto de todos los temas explorados) — mucho más marcado que su interés por eventos en vivo (71%, índice 229). En paralelo, usa Waze (27%, índice 268) y Microsoft Teams (34%, índice 218) muy por encima del promedio, lo que sugiere una audiencia urbana con rutina de trabajo/estudio híbrida, no solo una consumidora de ocio nocturno.",
+        [
+          { label: "Es una compradora de moda rápida antes que una fan de nicho musical", detail: "37% usó SHEIN el último mes (índice 407, el más alto de todos los temas evaluados) — una marca de moda/retail probablemente conecta mejor con esta audiencia que un patrocinio musical genérico." },
+          { label: "Tiene una rutina híbrida de trabajo o estudio", detail: "34% visitó Microsoft Teams el último mes (índice 218) y 27% usó Waze (índice 268) — perfil urbano con desplazamientos y reuniones virtuales, no solo una audiencia de tiempo libre nocturno." },
+          { label: "El interés cultural es amplio, no solo musical", detail: "77% interesada en cine (índice 166), 51% en museos/galerías (índice 155) y 40% en juegos de mesa (índice 198) — una estrategia de patrocinio de 'experiencias culturales' en general rinde más que anclarse solo en conciertos." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50.0, female: 50.0 },
+        ageBands: [
+          { label: "16-24", pct: 28.0 },
+          { label: "25-34", pct: 33.0 },
+          { label: "35-44", pct: 27.0 },
+          { label: "45-54", pct: 12.0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (audiencia nacional, sin desagregación adicional por ciudad)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 71.1 },
+        { label: "Interesada en libros/literatura", pct: 50.7 },
+        { label: "Interesada en museos/galerías", pct: 46.6 },
+        { label: "Interesada en idiomas extranjeros", pct: 46.1 },
+      ],
+      barriers: [
+        { label: "Interés en televisión, el de menor diferencial frente al promedio", pct: 54.4 },
+      ],
+      digitalInterests: [
+        { label: "Ha usado SHEIN el último mes", index: 407 },
+        { label: "Ha usado Waze el último mes", index: 268 },
+        { label: "Ha usado Microsoft Teams el último mes", index: 218 },
+        { label: "Ha visitado Aliexpress.com el último mes", index: 188 },
+      ],
+      media: [
+        { label: "Ha usado Netflix el último mes", pct: 70.0 },
+        { label: "Usa YouTube Premium más de una vez al día", pct: 53.0 },
+        { label: "Usa Instagram más de una vez al día", pct: 40.0 },
+        { label: "Usa TikTok más de una vez al día", pct: 39.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Navegación y redes", "Waze, Instagram", "Recomendación de ruta patrocinada o agenda cultural del día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio híbrido", "Herramientas de trabajo", "Microsoft Teams", "Contenido de marca en pausas de reuniones virtuales.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / compras online", "E-commerce de moda", "SHEIN, Aliexpress", "Promoción de moda o descuento por tiempo limitado.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, TikTok", "Clip de un evento cultural o lanzamiento de moda.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube Premium", "Pauta pre-roll o patrocinio de contenido cultural.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "Streaming o evento en vivo", "Netflix, venue físico", "Experiencia de marca en el venue o pauta durante el streaming del evento.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018 = {
+  id: "musica-latina-eventos-vivo-colombia",
+  name: "Fans de música latina y eventos en vivo (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-18)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>AudienciaEventosLatin' (audience_id c1775e50-f4ed-4309-be85-700dec92c9e6): personas en Colombia interesadas en eventos en vivo como festivales de música y que escuchan música latina.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo como festivales de música y que escuchan música latina (Colombia)", pct: 23 },
+  ],
+  footnotes: [
+    "23% = universo real de la audiencia en GWI (7,110,076 personas, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, bandas de edad y top departamentos), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día, así que los bloques usan lugar/medios genéricos sin cifras inventadas).",
+  ],
+  personas: [
+    {
+      id: "fan-musica-latina-eventos-colombia",
+      name: "Valentina Jiménez",
+      archetype: "La Melómana de Eventos Latinos",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Colombia, mayoritariamente mujer y concentrada entre los 16 y 34 años, y combina el gusto por la música latina con una agenda activa de festivales y conciertos en vivo. Es una consumidora pragmática: prefiere ahorrar antes que gastar de inmediato y busca productos de alta calidad antes que novedad.",
+      aiInsight: aiInsight(
+        "Cruza un comportamiento de consumo prudente (84.7% prefiere ahorrar y esperar antes de comprar, muy por encima del promedio) con una fuerte afinidad hacia plataformas de comercio internacional de bajo costo (SHEIN, índice 451) y movilidad (Waze, índice 405) — un perfil que ama la música en vivo pero que decide sus compras con cálculo, no con impulso. La oportunidad de medios está en financiamiento/cuotas para boletería y en encontrarla en apps de movilidad y marketplaces, no solo en redes sociales genéricas.",
+        [
+          { label: "Ahorra antes de gastar: la oportunidad es el plan de pago, no el descuento", detail: "84.7% prefiere ahorrar y esperar para comprar un producto frente a solo 15.3% que prioriza comprar antes — esquemas de reserva con pago diferido o cuotas para boletería deberían convertir mejor que una rebaja puntual." },
+          { label: "Es cliente de comercio transfronterizo de bajo costo, no solo de música", detail: "41% usó SHEIN en el último mes (índice 451) y 30% usó Waze (índice 405) — mucho más que el colombiano promedio; cualquier alianza de patrocinio de evento debería considerar estos canales, no solo Instagram/TikTok." },
+          { label: "Geografía concentrada en el eje Bogotá-Antioquia-Valle", detail: "31.9% vive en Bogotá D.C., 12.8% en Antioquia y 11.7% en Valle del Cauca (56.4% combinado) — la logística de gira/venta de boletos debería priorizar estas tres plazas." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 43, female: 57 },
+        ageBands: [
+          { label: "16-24", pct: 27 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 21 },
+          { label: "45-54", pct: 15 },
+          { label: "55-64", pct: 8.6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 31.9 },
+          { city: "Antioquia", pct: 12.8 },
+          { city: "Valle del Cauca", pct: 11.7 },
+          { city: "Cundinamarca", pct: 7.7 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en salir a comer (eating out)", pct: 83 },
+        { label: "Más motivados a promover su marca favorita por productos de alta calidad", pct: 65.3 },
+        { label: "Más motivados a promover su marca favorita por recompensas", pct: 56.1 },
+        { label: "Interesados en manualidades (handicrafts)", pct: 51 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 84.7 },
+        { label: "No tienen tarjeta de crédito", pct: 43 },
+        { label: "Tienen un crédito de corto plazo vigente", pct: 35 },
+        { label: "No tienen cuenta bancaria", pct: 9.9 },
+      ],
+      digitalInterests: [
+        { label: "Uso de SHEIN en el último mes", index: 451 },
+        { label: "Uso de Waze en el último mes", index: 405 },
+        { label: "Visitas a ChatGPT en el último mes", index: 190 },
+      ],
+      media: [
+        { label: "Usa TV para ver contenido on-demand/streaming", pct: 80 },
+        { label: "Usuario intensivo de streaming tipo Netflix/Hulu", pct: 38 },
+        { label: "Usa redes sociales para encontrar contenido", pct: 53 },
+        { label: "Usuario intensivo de radio", pct: 25 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y mensajería", "Instagram, WhatsApp", "Anuncio de lineup o preventa de un evento.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Búsqueda y mapas", "Google, Waze", "Recordatorio de venta de boletos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido para compartir con el grupo de amigos.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming y redes", "YouTube, Instagram", "Retargeting a quienes vieron el lineup.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV, apps de streaming", "CTA directo a compra de boletos.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV, streaming y radio", "TV, radio, apps de streaming", "Últimas entradas / urgencia de compra.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_ESTILO_VIDA_ACTIVO_CHILE_GWI_AUTO_20261018 = {
+  id: "estilo-vida-activo-chile",
+  name: "Audiencia de estilo de vida activo y tecnológico (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-18)",
+  insightNote:
+    "Audiencia real de GWI 'AMSA>Effie>TodoChile>HighPropensity>Chile' (audience_id fbc1af2e-5bfe-4e77-9c6d-4f9b5484373c): personas en Chile interesadas en fitness/ejercicio, eventos en vivo, deportes de aventura, comer afuera, Esports, actividades al aire libre, jugar deporte, televisión o ver deporte.",
+  funnelSteps: [
+    { label: "Interesados en fitness, eventos en vivo, deportes de aventura, Esports, actividades al aire libre o ver/jugar deporte (Chile)", pct: 76 },
+  ],
+  footnotes: [
+    "76% = universo real de la audiencia en GWI (11,832,331 personas, verificado vía explore_insight_gwi) sobre la población digital total de Chile (15.6M) — es una audiencia amplia por diseño (definida por múltiples intereses alternativos), así que conviene re-segmentarla con un interés específico (p. ej. actividades al aire libre) antes de activar medios.",
+    "Demografía (género y bandas de edad), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI reportó explícitamente que no hay datos de atributo disponibles para este grupo en esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "Top ciudades/regiones: GWI solo devolvió clasificación por región económica (APEC/OECD, 100% ambas por ser Chile) sin desagregación regional interna con muestra suficiente para esta audiencia — se deja sin desagregar en vez de inventar departamentos.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día, así que los bloques usan lugar/medios genéricos sin cifras inventadas).",
+  ],
+  personas: [
+    {
+      id: "explorador-activo-digital-chile",
+      name: "Matías Fuentes",
+      archetype: "El Explorador Activo y Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Reside en Chile, se reparte casi igual entre hombres y mujeres y combina interés en tecnología con una vida activa al aire libre (camping, senderismo, deporte, Esports). Es ahorrador por naturaleza y, pese a su gusto por la tecnología, es muy sensible al precio en su comercio digital diario.",
+      aiInsight: aiInsight(
+        "Cruza un interés fuerte en tecnología (59.6%, índice 144.5) con un comportamiento de compra transfronteriza de bajo costo muy por encima del promedio (AliExpress, índice 529) — perfil que ama lo nuevo pero que lo compra donde es más barato. Al ser una audiencia amplia (76% de la población digital conectada de Chile, por estar definida con múltiples intereses alternativos), conviene activarla segmentada por el interés más distintivo (actividades al aire libre, índice 157.3) en vez de tratarla como bloque único.",
+        [
+          { label: "Es una audiencia amplia por diseño: conviene re-segmentar antes de pautar", detail: "76% de la población digital de Chile cumple con al menos uno de varios intereses alternativos (fitness, eventos en vivo, Esports, etc.) — usar el cruce real de 'actividades al aire libre' (índice 157.3) da un targeting más accionable que el agregado completo." },
+          { label: "Interés en tecnología con compra consciente del precio", detail: "59.6% está interesado en tecnología (índice 144.5), pero su comercio digital se concentra en AliExpress (índice 529) y SHEIN (índice 348) — mensajes de innovación funcionan mejor si van acompañados de precio competitivo o cuotas." },
+          { label: "Ahorra antes de gastar, igual que la audiencia colombiana de eventos en vivo", detail: "81.8% prefiere ahorrar y esperar antes de comprar un producto, y 33% reporta ingreso familiar bajo — el mismo patrón de consumo prudente que la audiencia de música latina en Colombia, lo que sugiere que el mensaje de 'plan de pago' funciona en más de un mercado de Rebold." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50, female: 50 },
+        ageBands: [
+          { label: "16-24", pct: 18 },
+          { label: "25-34", pct: 25 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (GWI no devolvió desagregación por región con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en tecnología", pct: 59.6 },
+        { label: "Interesados en películas/cine", pct: 71 },
+        { label: "Interesados en actividades al aire libre (camping, senderismo)", pct: 50 },
+        { label: "Más motivados a promover su marca favorita por recompensas", pct: 49 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 81.8 },
+        { label: "Ingreso familiar bajo", pct: 33 },
+        { label: "Sin ahorros ni inversiones", pct: 21 },
+        { label: "Buscan opinión experta antes de comprar artículos costosos", pct: 32 },
+      ],
+      digitalInterests: [
+        { label: "Uso de AliExpress en el último mes", index: 529 },
+        { label: "Uso de SHEIN en el último mes", index: 348 },
+        { label: "Uso de Waze en el último mes", index: 320 },
+      ],
+      media: [
+        { label: "Navega redes sociales a diario", pct: 68 },
+        { label: "Usa TV para contenido on-demand/streaming", pct: 78 },
+        { label: "Interesado en televisión", pct: 56 },
+        { label: "Usuario intensivo de radio", pct: 25 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / exterior", "Redes sociales", "Instagram, apps de ejercicio", "Contenido de rutina/actividad al aire libre.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Búsqueda y mapas", "Google, Waze", "Comparación de precios en marketplaces (AliExpress, SHEIN).", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram", "Reseñas o recomendaciones de producto/tecnología.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming y redes", "YouTube, redes sociales", "Contenido de reviews/tecnología o deporte.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / exterior", "TV y actividad física", "TV, apps deportivas", "Activación ligada a deporte/Esports.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y streaming", "TV, apps de streaming", "Consumo de películas/series y compras online.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018 = {
+  id: "ahorradores-sin-banco-colombia",
+  name: "Ahorradores sin cuenta bancaria (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-18)",
+  insightNote:
+    "Audiencia real de GWI 'BcoFalabella>AhorradoresNoBancarizadosGeneral' (audience_id d8f995b2-3e85-4547-add4-6949e8425729): personas en Colombia que actualmente no tienen cuenta bancaria.",
+  funnelSteps: [
+    { label: "Personas sin cuenta bancaria (Colombia)", pct: 13 },
+  ],
+  footnotes: [
+    "13% = universo real de la audiencia en GWI (4,104,935 personas, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, bandas de edad y top departamentos), motivaciones, barreras de acceso financiero, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día, así que los bloques usan lugar/medios genéricos sin cifras inventadas).",
+  ],
+  personas: [
+    {
+      id: "ahorradora-sin-banco-colombia",
+      name: "Yuliana Martínez",
+      archetype: "La Ahorradora Sin Banco",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Colombia, mayoritariamente mujer y joven, y no tiene cuenta bancaria. No es una excluida digital: usa redes sociales, streaming y comercio online con normalidad, pero apenas roza los servicios financieros digitales — la brecha no está en el interés, sino en el acceso y la confianza hacia el sistema financiero formal.",
+      aiInsight: aiInsight(
+        "Cruza la condición de no bancarizada con un uso digital alto: 59% usa internet para ver videos/TV y 30% usó SHEIN en el último mes (índice 328), pero solo 6.9% usó un servicio de pago móvil y solo 8.7% usó apps de banca/inversión/seguros en el último mes. La brecha no es de interés o de comodidad con apps — es de acceso y confianza hacia el sistema financiero formal, y ya hace comercio digital transfronterizo por otras vías (probablemente contraentrega o terceros).",
+        [
+          { label: "El obstáculo es el acceso, no el interés", detail: "Solo 6.9% usó un servicio de pago móvil y 8.7% usó apps de banca/inversión/seguros en el último mes, pese a que 59% ya usa internet para ver videos/TV y 30% usó SHEIN (índice 328) — estas personas ya operan en el mundo digital, el pago formal es la pieza que falta." },
+          { label: "Es mayoritariamente joven y femenina", detail: "61% identifica como mujer (27% más que el promedio) y 29% tiene entre 16 y 24 años — un producto de educación financiera o de primera cuenta digital debería hablarle a mujeres jóvenes urbanas, no al hogar en general." },
+          { label: "Ya hace comercio digital transfronterizo sin cuenta bancaria formal", detail: "30% usó SHEIN (índice 328) y 13% visitó AliExpress.com (índice 175) en el último mes — un producto de pagos digitales debería integrarse con estos flujos de compra ya existentes (contraentrega, terceros) en vez de competir por un canal nuevo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 39, female: 61 },
+        ageBands: [
+          { label: "16-24", pct: 29 },
+          { label: "25-34", pct: 21 },
+          { label: "35-44", pct: 19 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 12 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 25.5 },
+          { city: "Valle del Cauca", pct: 10.4 },
+          { city: "Antioquia", pct: 10.2 },
+          { city: "Atlántico", pct: 8.5 },
+        ],
+      },
+      motivations: [
+        { label: "Interesadas en películas/cine", pct: 65 },
+        { label: "Más motivadas a promover su marca favorita por productos de alta calidad", pct: 56.6 },
+        { label: "Interesadas en salud personal", pct: 54 },
+        { label: "Interesadas en jugar deporte", pct: 48 },
+      ],
+      barriers: [
+        { label: "Solo usó un servicio de pago móvil en el último mes pese a no tener cuenta bancaria", pct: 6.9 },
+        { label: "Solo usó apps/sitios de banca, inversión o seguros en el último mes", pct: 8.7 },
+        { label: "Solo usa internet para gestionar sus finanzas o ahorros", pct: 20 },
+      ],
+      digitalInterests: [
+        { label: "Uso de SHEIN en el último mes", index: 328 },
+        { label: "Uso de Outlook en el último mes", index: 191 },
+        { label: "Visitas a Aliexpress.com en el último mes", index: 175 },
+      ],
+      media: [
+        { label: "Usa internet para escuchar música", pct: 57 },
+        { label: "Usuaria intensiva de streaming de música", pct: 42 },
+        { label: "Usa TV para contenido on-demand/streaming", pct: 63 },
+        { label: "Interesada en televisión", pct: 50 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y mensajería", "Facebook, WhatsApp", "Contenido informativo o de entretenimiento ligero.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / casa", "Streaming de música", "Apps de música", "Playlist patrocinada o contenido de marca.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / comercio", "Redes y compras online", "SHEIN, AliExpress", "Oferta o recordatorio de carrito en marketplaces.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video online", "YouTube, redes sociales", "Contenido educativo sobre finanzas digitales.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV, apps de streaming", "Oferta de primera cuenta/billetera digital sin letra chica.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y redes", "TV, Facebook", "Contenido de confianza/testimonios sobre productos financieros digitales.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_OMODA_CHILE_GWI_AUTO_20261019 = {
+  id: "omoda-alta-propension-chile",
+  name: "Interesados en OMODA (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-19)",
+  insightNote:
+    "Audiencia real de GWI ('OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE', audience_id 4fa856ae-c03f-4f0d-960c-2f03b492424f): chilenos con alta propensión de compra hacia la marca de autos OMODA.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'HighPropensity' de OMODA en GWI (2,274,207) sobre la población digital de Chile (15.6M)", pct: 14.6 },
+  ],
+  footnotes: [
+    "14.6% ≈ universo real de la audiencia en GWI (2,274,207 = suma de universo hombres (1,282,668) + mujeres (991,539), verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M).",
+    "Demografía, preferencias de marca/vehículo, actitudes de precio, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Esta audiencia es de cobertura nacional en Chile — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: la única señal de franja horaria que devolvió GWI fue sobre 'espectadores frecuentes de canales de TV internacionales', un cruce distinto al de esta audiencia, por lo que se descartó para no mezclar datos de audiencias distintas.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "comprador-familiar-omoda-chile",
+      name: "Rodrigo Fuentes",
+      archetype: "El Comprador Familiar en Búsqueda de Marca de Valor",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia chilena con mayoría masculina (56.4% hombres, 43.6% mujeres), concentrada en 25-44 años (54% combinado) y mayoritariamente urbana (77%). Es 322% más propensa que el promedio a tener una furgoneta/van en el hogar, señal de un perfil familiar que prioriza espacio y practicidad. Busca activamente las mejores ofertas (55%, 28% más que el promedio) pero, paradójicamente, solo 34% se autodefine como price-conscious (16% menos que el promedio).",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'familia expansiva sobre marca establecida': esta audiencia de alta propensión a OMODA en Chile es 322% más propensa a tener una van en el hogar que el promedio — la decisión de compra prioriza espacio/practicidad familiar, y la marca debe competir primero en el canal de consideración de SUVs/vans familiares, no solo contra otras marcas chinas emergentes.",
+        [
+          { label: "La decisión de marca ya está repartida entre múltiples retadores, no solo líderes tradicionales", detail: "Chevrolet (26%, 229% más probable) y Suzuki (20%, 181% más probable) lideran como marca preferida para su próximo vehículo, por encima incluso de Toyota (29%, solo 18% más probable) — el share of consideration está fragmentado entre marcas de valor, lo que deja espacio real para que OMODA entre en el set de consideración." },
+          { label: "Buscan ofertas activamente pero no se identifican como 'price-conscious'", detail: "55% busca las mejores ofertas (28% más que el promedio) y 30% usa sitios de comparación de precios (36% más), pero solo 34% se declara price-conscious (16% menos que el promedio) — el mensaje de valor debe centrarse en comparación objetiva de especificaciones/precio, no en descuento agresivo." },
+          { label: "Alto consumo de streaming premium como canal de medios clave", detail: "40% es usuario intensivo de streaming (122% más que el promedio) y usan Netflix de forma desproporcionada (116% más) — el contenido de marca integrado en streaming puede ser más efectivo que la pauta tradicional en TV abierta para este segmento." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 56.4, female: 43.6 },
+        ageBands: [
+          { label: "16-24", pct: 17.0 },
+          { label: "25-34", pct: 28.0 },
+          { label: "35-44", pct: 26.0 },
+          { label: "45-54", pct: 18.0 },
+          { label: "55-64", pct: 11.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Tienen o planean tener una furgoneta/van en el hogar", pct: 18 },
+        { label: "Preferirían Chevrolet como marca para su próximo vehículo", pct: 26 },
+        { label: "Preferirían Suzuki como marca para su próximo vehículo", pct: 20 },
+        { label: "Piensan comprar su próximo vehículo a gasolina/petróleo", pct: 64 },
+      ],
+      barriers: [
+        { label: "Buscan las mejores ofertas antes de comprar", pct: 55 },
+        { label: "Usan sitios de comparación de precios como fuente principal de información", pct: 30 },
+        { label: "Se consideran price-conscious", pct: 34 },
+        { label: "Prefieren pagar menos aunque sacrifiquen comodidad", pct: 38 },
+      ],
+      digitalInterests: [
+        { label: "Publicaron sobre autos/automóviles en línea en el último mes", pct: 14 },
+        { label: "Encuentran marcas nuevas a través de buscadores", pct: 37 },
+        { label: "Publicaron su opinión sobre negocios en línea", pct: 12 },
+      ],
+      media: [
+        { label: "Son usuarios intensivos de streaming (Netflix, Hulu)", pct: 40 },
+        { label: "Vieron streaming todos o casi todos los días", pct: 39 },
+        { label: "Pagan suscripción de streaming de música", pct: 43 },
+        { label: "Usaron Netflix en el último mes", pct: 81 },
+        { label: "Uso diario de Facebook", pct: 24 },
+        { label: "Usan LinkedIn mensualmente", pct: 16 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte familiar", "Redes sociales y noticias", "Facebook, Google", "Contenido comparativo de marcas de autos accesibles.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Búsqueda y redes", "Google, LinkedIn", "Reseñas y comparativas de vehículos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / concesionario", "Búsqueda", "Google, sitios de comparación de precios", "Cotización y comparación de precios entre marcas.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Facebook, Instagram", "Retargeting de marca con enfoque en valor y espacio familiar.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Contenido de marca integrado en streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Facebook", "CTA a agendar test drive o cotización.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020 = {
+  id: "subcultura-fashion-bogota-colombia",
+  name: "Subcultura fashion-conscious en Bogotá (Jagger>SubCulturas>MODA2)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-20)",
+  insightNote:
+    "Audiencia real de GWI 'Jagger>SubCulturas>MODA2' (audience_id f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a): el 100% se identifica como 'fashion-consciente' (índice 632 vs. promedio), reside en Bogotá (Capital District) y tiene entre 16 y 54 años.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (1,389,123) sobre la población digital de Colombia (31.06M)", pct: 4.5 },
+  ],
+  footnotes: [
+    "4.5% ≈ universo real de la audiencia en GWI (872,488 mujeres + 516,635 hombres = 1,389,123, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, edad, ciudad), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas de edad 55-64 y 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se dejan en 0 en vez de inventar un valor).",
+    "Top ciudad: 100% reside en Bogotá (Capital District), verificado vía explore_insight_gwi sobre la pregunta de distrito.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia (GWI no devolvió información compatible) — usa comportamiento general de medios/intereses verificado, sin cifras de actividades inventadas por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "fashionista-subcultura-bogota-colombia",
+      name: "Valentina Rojas",
+      archetype: "La Curadora de Tendencias",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá, tiene entre 16 y 54 años (mayoría 25-34) y se identifica 100% como 'fashion-consciente' — un índice 6.3 veces mayor que el promedio. Le importa estar al día con tendencias, consume moda y belleza activamente, y combina ese interés con una fuerte conciencia de precio a la hora de comprar.",
+      aiInsight: aiInsight(
+        "Cruza una identidad de moda extrema (100% se declara 'fashion-consciente', índice 632) con un comportamiento de compra racional: 41.8% es precio-consciente (índice 142.8) y 33% exige una política de devoluciones fácil antes de comprar online (índice 129.2). No es una compradora impulsiva de lujo — es una tastemaker que investiga y compara antes de convertir. En paralelo, es una usuaria intensiva de marketplaces (66.9% MercadoLibre, 45.6% Amazon) y de apps de movilidad (41.1% reservó taxi vía app en la última semana), lo que sugiere un estilo de vida urbano y conectado todo el día.",
+        [
+          { label: "Fashion-consciente, pero no de compra impulsiva", detail: "100% se identifica como 'fashion-consciente' (índice 632) y 72.3% está interesada en moda (índice 227.7), pero 41.8% es también precio-consciente (índice 142.8) — el mensaje de marca debe combinar aspiración con argumentos racionales de valor." },
+          { label: "La política de devoluciones es un gatillo de conversión, no un detalle operativo", detail: "33% prioriza una política de devoluciones fácil (índice 129.2) y 47.6% prefiere entrega al día siguiente (índice 131.0) al comprar online — fricción logística que puede frenar la conversión si no se comunica con claridad." },
+          { label: "Es nativa de marketplaces y apps de movilidad, no solo de redes sociales", detail: "66.9% usó MercadoLibre y 45.6% usó Amazon en el último mes, y 41.1% reservó un taxi vía app en la última semana — un perfil de consumo digital que va mucho más allá de TikTok/Instagram (45.5%/44.7% uso diario)." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 37.2, female: 62.8 },
+        ageBands: [
+          { label: "16-24", pct: 24.7 },
+          { label: "25-34", pct: 27.2 },
+          { label: "35-44", pct: 22.8 },
+          { label: "45-54", pct: 16.1 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá (Capital District) — 100% por definición de la audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Se identifica como 'fashion-consciente'", pct: 100 },
+        { label: "Interesada en moda", pct: 72.3 },
+        { label: "Quiere que las marcas sean trendy/cool", pct: 43.3 },
+        { label: "Le importa estar al día con tendencias", pct: 41.7 },
+      ],
+      barriers: [
+        { label: "Es precio-consciente pese a su interés en moda", pct: 41.8 },
+        { label: "Exige una política de devoluciones fácil antes de comprar online", pct: 33.0 },
+        { label: "Prefiere entrega al día siguiente para decidirse a comprar", pct: 47.6 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en skincare", index: 157.8 },
+        { label: "Interesada en belleza/cosmética", index: 175.9 },
+        { label: "Visitó Amazon el último mes", index: 147.7 },
+        { label: "Reservó un taxi vía app en la última semana", index: 164.6 },
+      ],
+      media: [
+        { label: "TikTok (uso diario)", pct: 45.5 },
+        { label: "Instagram (uso diario)", pct: 44.7 },
+        { label: "Heavy user de streaming de música", pct: 60.7 },
+        { label: "Heavy user de podcasts", pct: 32.8 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Revisa tendencias de moda y novedades de marcas.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Redes sociales y mensajería", "Instagram, WhatsApp", "Comparte o reacciona a contenido de moda/belleza.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Compras online", "MercadoLibre, Amazon", "Explora productos de moda o belleza en marketplaces.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Apps de movilidad y redes", "TikTok, apps de taxi", "Pide un viaje vía app mientras navega contenido corto.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de música/podcasts", "Spotify, podcasts", "Escucha música o podcasts mientras se prepara para la noche.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Instagram, TikTok", "Publica contenido sobre su look del día o descubre nuevas tendencias.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020 = {
+  id: "reggaeton-musica-latina-colombia",
+  name: "Fans de música latina y eventos en vivo en Colombia (Paramo (co) ReggaetonGeneral)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-20)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo (co) ReggaetonGeneral' (audience_id ebda5c56-716e-496d-8607-821c96cb2367): personas en Colombia interesadas en eventos en vivo como festivales de música y que disfrutan escuchar música latina.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (7,110,075) sobre la población digital de Colombia (31.06M)", pct: 22.9 },
+  ],
+  footnotes: [
+    "22.9% ≈ universo real de la audiencia en GWI (4,038,788 mujeres + 3,071,287 hombres = 7,110,075, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, edad, ciudad), motivaciones musicales, barreras de compra de boletos, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "Top ciudades verificadas vía explore_insight_gwi sobre la pregunta de distrito de residencia.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia (GWI no devolvió información compatible) — usa comportamiento general de medios/intereses verificado, sin cifras de actividades inventadas por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "fan-musica-latina-eventos-vivo-colombia",
+      name: "Camila Herrera",
+      archetype: "La Melómana Social",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive mayoritariamente en Bogotá y otras grandes ciudades de Colombia (89.1% en zonas urbanas), tiene entre 16 y 54 años (concentrada en 25-34) y está 100% interesada en eventos en vivo como festivales de música, con fuerte afinidad por la música latina. Escucha música como parte constante de su día, pero solo una minoría ha convertido ese interés en compra reciente de boletos.",
+      aiInsight: aiInsight(
+        "Esta audiencia revela una brecha clásica entre interés declarado y conversión: 100% está interesada en eventos en vivo (índice 266.3) y 66.4% es apasionada por un rango amplio de artistas (índice 132.7), pero solo 10.8% compró boletos de concierto online en los últimos 3-6 meses (aunque con un índice alto de 219.7 frente al promedio) y 19.1% planea comprar en los próximos 3-6 meses. El cuello de botella no es el interés musical sino la conversión a compra de boletos — una oportunidad para activaciones de venta anticipada o acceso temprano. Es además una audiencia con alto consumo de IA generativa (59.8% visitó ChatGPT el último mes, índice 129.0), señal de un perfil digitalmente sofisticado más allá del consumo pasivo de redes sociales.",
+        [
+          { label: "Alto interés musical, baja conversión reciente a compra de boletos", detail: "100% interesada en eventos en vivo (índice 266.3) pero solo 10.8% compró boletos de concierto online en los últimos 3-6 meses (índice 219.7) y 19.1% planea comprar en los próximos 3-6 meses — la pauta debe enfocarse en mover la intención a la compra, no solo reforzar el interés." },
+          { label: "Es mayoritariamente urbana y femenina, concentrada en Bogotá", detail: "89.1% vive en zona urbana (índice 147.9) y 56.8% se identifica como mujer (índice 117.5), con 31.9% residiendo en Bogotá (Capital District) — relevante para activaciones de venue y medios locales." },
+          { label: "Usa herramientas de IA generativa más que el promedio", detail: "59.8% visitó ChatGPT en el último mes (índice 129.0) — un canal de descubrimiento/planeación de eventos poco explorado todavía por marcas de entretenimiento en vivo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 43.2, female: 56.8 },
+        ageBands: [
+          { label: "16-24", pct: 26.5 },
+          { label: "25-34", pct: 28.5 },
+          { label: "35-44", pct: 21.3 },
+          { label: "45-54", pct: 15.0 },
+          { label: "55-64", pct: 8.6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá (Capital District)", pct: 31.9 },
+          { city: "Antioquia", pct: 12.8 },
+          { city: "Valle del Cauca", pct: 11.7 },
+          { city: "Cundinamarca", pct: 7.7 },
+        ],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 100 },
+        { label: "Cree que la música puede ser un agente de cambio en la sociedad", pct: 66.5 },
+        { label: "Es apasionada por un amplio rango de artistas/bandas", pct: 66.4 },
+        { label: "Prefiere escuchar música en la mayor calidad de audio posible", pct: 66.3 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto online en los últimos 3-6 meses (baja conversión real)", pct: 10.8 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses (intención pendiente de convertir)", pct: 19.1 },
+      ],
+      digitalInterests: [
+        { label: "Visitó ChatGPT el último mes", index: 129.0 },
+        { label: "Interesada en museos/galerías", index: 139.4 },
+        { label: "Interesada en danza (ballet, street dance, salsa, etc.)", index: 171.8 },
+        { label: "Compró boletos de concierto online últimos 3-6 meses", index: 219.7 },
+      ],
+      media: [
+        { label: "Instagram (uso +1x/día)", pct: 45.3 },
+        { label: "TikTok (uso +1x/día)", pct: 40.9 },
+        { label: "Facebook (uso +1x/día)", pct: 39.4 },
+        { label: "Usa internet para mantenerse al día con noticias/eventos", pct: 69.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Facebook", "Escucha música mientras se alista o se transporta.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Streaming de música", "Spotify / apps de música", "Descubre nuevos artistas o playlists.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Revisa noticias de artistas y próximos eventos.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Mensajería y redes", "WhatsApp, Instagram", "Coordina planes para asistir a eventos con amigos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / evento", "Streaming y redes", "Apps de streaming, redes", "Contenido detrás de cámaras o pre-show de un evento.", []),
+        daypart("Noche", "8 a 11 pm", "Evento en vivo / casa", "Evento en vivo o streaming", "Venue físico o streaming en vivo", "Experiencia de marca en el venue o pauta durante streaming del evento.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
+  id: "interes-financiero-amplio-colombia",
+  name: "Interés amplio en finanzas y pagos digitales (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-21)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>AudienciasFintech>Col', audience_id 328aa2ab-d268-4a1f-a76b-5b9683559806): colombianos con interés o actitudes relacionadas con finanzas personales e inversión.",
+  funnelSteps: [
+    { label: "Interés en finanzas personales / fintech, definición amplia (Colombia)", pct: 53.6 },
+  ],
+  footnotes: [
+    "53.6% = universo real de GWI (~16.66M, suma de los universos de la pregunta de género: 8,692,788 hombres + 7,964,209 mujeres, consistente con la suma por zona urbana/suburbana/rural) sobre la población digital de Colombia (31.06M, MARKETS) — verificado vía explore_insight_gwi.",
+    "Esta audiencia ('Paramo>AudienciasFintech>Col') resultó mucho más amplia que la ya procesada 'Paramo(co)FintechColombia' (caso 'fintech-general-colombia', ~11%, procesada 2026-09-24) — probablemente usa un criterio de calificación más laxo (interés general en finanzas/inversión en vez de uso activo de apps fintech). Se deja como caso independiente para que el equipo editorial decida si fusionarlas o las mantiene como pasos distintos de un mismo embudo.",
+    "Demografía (género, edad, zona urbana/rural), intereses financieros, barreras de ahorro/deuda, apps de pago y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI no devolvió desglose por ciudad para esta audiencia, solo zona urbana/suburbana/rural.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "colombiano-interes-financiero-amplio",
+      name: "Camila Torres",
+      archetype: "La Pragmática Financiera Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana conectada con interés amplio en finanzas personales e inversión. Valora la seguridad financiera y ya usa activamente billeteras digitales como Nequi, aunque convive con ahorros bajos y, en muchos casos, deuda de corto plazo — un perfil que combina aspiración financiera con una realidad de liquidez ajustada.",
+      aiInsight: aiInsight(
+        "Cruza con la paradoja del colombiano 'bancarizado pero ilíquido': 92% ya tiene cuenta bancaria y 80% usa Nequi activamente, pero 45% reporta un nivel bajo de ahorros y 37% tiene actualmente un préstamo de corto plazo — la inclusión financiera digital ya ocurrió, el reto real es la salud financiera (ahorro, deuda), no el acceso a productos.",
+        [
+          { label: "El acceso ya no es la barrera, la salud financiera sí", detail: "Solo 8.3% no tiene cuenta bancaria, pero 45% tiene ahorros bajos y 17% no tiene ningún ahorro ni inversión — un mensaje centrado en 'abrir una cuenta' tiene mucho menos espacio de crecimiento que uno centrado en ahorro/control de gastos." },
+          { label: "Nequi domina la billetera digital, pero hay espacio multimarca", detail: "80% usó Nequi en el último mes, muy por encima de Billetera Móvil (36%), MercadoPago (16%) y PayU (15%) — cualquier fintech retadora necesita un argumento de diferenciación claro frente al hábito ya instalado de Nequi, no solo igualar la propuesta." },
+          { label: "WhatsApp es el canal de confianza, no solo de mensajería", detail: "73% usa WhatsApp más de una vez al día — el soporte al cliente y la validación social (testimonios) vía WhatsApp pueden pesar más que un anuncio tradicional para esta audiencia con ahorro limitado y aversión al riesgo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 52.2, female: 47.8 },
+        ageBands: [
+          { label: "16-24", pct: 19 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 13 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación por ciudad disponible en GWI (88.3% zona urbana, 6.4% rural, 5.3% suburbana)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante ser financieramente seguro", pct: 72 },
+        { label: "Interesado en economía y finanzas", pct: 48 },
+        { label: "Interesado en tecnología", pct: 67 },
+        { label: "Interesado en inversiones", pct: 35 },
+      ],
+      barriers: [
+        { label: "Tiene un nivel bajo de ahorros", pct: 45 },
+        { label: "Tiene actualmente un préstamo de corto plazo", pct: 37 },
+        { label: "No tiene tarjeta de crédito", pct: 41 },
+        { label: "No tiene ningún ahorro ni inversión", pct: 17 },
+        { label: "No tiene cuenta bancaria (no bancarizado)", pct: 8.3 },
+      ],
+      digitalInterests: [
+        { label: "Ha usado Nequi en el último mes", pct: 79.9 },
+        { label: "Ha usado PayPal en el último mes", pct: 43 },
+        { label: "Ha usado Billetera Móvil en el último mes", pct: 36.1 },
+        { label: "Ha usado MercadoPago en el último mes", pct: 16 },
+        { label: "Ha usado PayU en el último mes", pct: 15 },
+      ],
+      media: [
+        { label: "Usa WhatsApp más de una vez al día", pct: 73 },
+        { label: "Usa redes sociales para buscar información de marcas/productos", pct: 61 },
+        { label: "Usa Facebook a diario", pct: 24 },
+        { label: "Usa Instagram a diario", pct: 23 },
+        { label: "Usa TikTok a diario", pct: 17 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y notificaciones", "App de Nequi/billetera, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Apps de pago", "Nequi, Billetera Móvil", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Apps y mensajería", "App de banco/billetera, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Mensajería y redes", "WhatsApp, Instagram", "73% usa WhatsApp más de una vez al día — canal natural de soporte/validación social en este bloque.", [
+          { label: "Usa WhatsApp más de una vez al día", pct: 73, index: 218 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -6320,7 +7413,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
   },
   {
     id: "deportes",
@@ -6333,7 +7426,7 @@ const CATEGORIES = [
       { id: "compraBoletos", label: "Compra de boletos / merchandising" },
       { id: "planFamiliar", label: "Busca plan familiar / social" },
     ],
-    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_COLOMBIA_GWI_AUTO_20261005, CASE_PHOENIX_RISING_GWI_AUTO_20261012],
+    cases: [CASE_DEPORTES, CASE_CHAMPIONS_GWI_AUTO_20260924, CASE_FUTBOL_AMATEUR_GWI_AUTO_20260928, CASE_FUTBOL_USA_GWI_AUTO_20260925, CASE_CHAMPIONS_BOGOTA_GWI_AUTO_20260927, CASE_RUNNING_GWI_AUTO_20260929, CASE_FUTBOL_VISA_GWI_AUTO_20261001, CASE_FORMULA1_COLOMBIA_GWI_AUTO_20261005, CASE_PHOENIX_RISING_GWI_AUTO_20261012, CASE_ESTILO_VIDA_ACTIVO_CHILE_GWI_AUTO_20261018],
   },
   {
     id: "retail",
@@ -6346,7 +7439,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
   },
   {
     id: "fintech",
@@ -6359,7 +7452,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
   },
   {
     id: "alcohol",
@@ -6385,7 +7478,7 @@ const CATEGORIES = [
       { id: "investigaOnlineAntes", label: "Investiga activamente online antes de comprar" },
       { id: "prioridadFamiliar", label: "Prioriza espacio y seguridad familiar" },
     ],
-    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924],
+    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019],
   },
   {
     id: "consumer-tech",
@@ -6398,7 +7491,7 @@ const CATEGORIES = [
       { id: "pagaPremiumMarca", label: "Dispuesto a pagar premium por marca" },
       { id: "compraPorNecesidad", label: "Compra por necesidad/durabilidad, no por hype" },
     ],
-    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924],
+    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924, CASE_ASUS_LATAM_GWI_AUTO_20261015],
   },
   {
     id: "gaming",
@@ -6503,4 +7596,7 @@ const PERSONA_RELATED_TRAITS = {
   "lider-equipo-hibrida": ["usaHerramientasDiario", "decideSoftwareEquipo"],
   "hincha-visa-mundial-femenino-colombia": ["interesFutbol", "consumoDigitalDiario"],
   "hincha-visa-futbol-regional-colombia": ["interesFutbol", "consumoDigitalDiario"],
+  "usuario-mastercard-colombia": ["usaAppsFin", "migraEfectivo"],
+  "usuario-visa-colombia": ["abiertoCambiar", "pruebaMultiples"],
+  "entusiasta-cultural-colombia-nacional": ["afinidadGenero", "turismo"],
 };

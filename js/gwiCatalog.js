@@ -313,6 +313,9 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI el 2026-10-22.
+  { id: "a834cce1-3aca-433e-bd99-25968111c5d6", title: "TCL>TCL>Institucional", client: "TCL", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Mexico, are between 16 and 54 years old, have interests in technology or gadgets, and are confident using new technology, buy new tech products as soon as they are available, follow the latest technology trends and news, like to be the first to try new things, or research products online before buying them." },
+  { id: "16baf8dc-bc82-46fa-8674-bac9b83b8294", title: "Portales>DiaDeSanValentin>CompradorHabitual", client: "Portales", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Mexico and purchased various items online in the last month." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +407,11 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-22.
+  "a834cce1-3aca-433e-bd99-25968111c5d6": { categoryId: "consumer-tech", caseId: "tcl-tech-entusiastas-mexico", personaId: "entusiasta-tecnologia-mexico", analyzedAt: "2026-10-22" },
+  "16baf8dc-bc82-46fa-8674-bac9b83b8294": { categoryId: "retail", caseId: "compradores-online-habituales-mexico", personaId: "compradora-online-habitual-mexico", analyzedAt: "2026-10-22" },
+  // "Paramo>AudienciaEventos" (0ccfe94a) ya estaba en el catálogo desde la sincronización manual del 2026-09-11, pero sin
+  // enlace de análisis. GWI devolvió los mismos criterios que "Paramo (co) EventosEnVivoGeneral" (5190162e, ya procesada
+  // el 2026-09-24) -- se enlaza al mismo caso/persona existente en vez de crear un duplicado.
+  "0ccfe94a-5d61-4c74-847c-8deb65a4cc10": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-10-22" },
 };

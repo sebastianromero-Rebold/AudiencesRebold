@@ -7398,6 +7398,186 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_TCL_TECNOLOGIA_MEXICO_GWI_AUTO_20261022 = {
+  id: "tcl-tech-entusiastas-mexico",
+  name: "Entusiastas de tecnología en México (TCL>TCL>Institucional)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-22)",
+  insightNote:
+    "Audiencia real de GWI ('TCL>TCL>Institucional', audience_id a834cce1-3aca-433e-bd99-25968111c5d6): mexicanos de 16-54 años interesados en tecnología/gadgets que cumplen al menos uno de estos rasgos: confianza usando nueva tecnología, compra temprana de productos tech, seguimiento de tendencias tech, gusto por probar cosas nuevas primero, o investigación de productos online antes de comprar.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (37.19M) sobre la población digital de México (78.05M)", pct: 47.6 },
+  ],
+  footnotes: [
+    "47.6% = universo real de GWI (21,583,333 hombres + 15,608,926 mujeres = 37,192,259, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital de México (78.05M, MARKETS).",
+    "Esta audiencia usa un criterio de calificación amplio tipo 'o' (confianza tech, O compra temprana, O sigue tendencias, O le gusta probar primero, O investiga antes de comprar) — de ahí el universo relativamente grande; no implica que el 100% de esa base tenga las 5 actitudes a la vez.",
+    "Demografía (género, edad, estado), motivaciones/actitudes tech, barreras, apps/intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI no devolvió desagregación por ciudad específica, solo por estado — se usan los 4 estados con mayor participación (Distrito Federal, México, Nuevo León, Jalisco).",
+    "El customer journey usa datos reales de franja horaria donde GWI los devolvió (consumo de TV internacional en la tarde/noche e intensidad de gaming entre semana, ambos sobre el subsegmento de esta audiencia que consume ese tipo de contenido) — el resto de bloques usa comportamiento general de apps/medios sin inventar cifras de actividades.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-tecnologia-mexico",
+      name: "Daniel Ramírez",
+      archetype: "El Investigador Tech Pragmático",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Mexicano conectado, mayoritariamente entre 25 y 44 años, que se declara cómodo con la tecnología y sigue de cerca las tendencias del sector, pero que antes de comprar investiga a fondo: compara, lee reviews y busca opinión de expertos. Es menos un 'comprador compulsivo de lo nuevo' y más un adoptante informado que convierte cuando la decisión ya está validada.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón del 'adoptante informado, no impulsivo': solo 19.3% compra productos tech apenas salen al mercado, pero ese grupo tiene el índice más alto de todo el perfil (151.5, es decir 51% más probable que el promedio) — mientras que 65.9% investiga productos online antes de comprar (índice 128.2). La oportunidad de medios no es 'sé el primero', sino doblar la apuesta por contenido comparativo y de prueba — reviews, unboxings, comparativas — para capturar el tramo de decisión, no solo el lanzamiento.",
+        [
+          { label: "Es investigador, no impulsivo: la compra temprana es minoritaria pero de altísimo índice", detail: "19.3% compra tech apenas sale (índice 151.5) frente a 65.9% que investiga online antes de comprar (índice 128.2) — el contenido de comparación/review pesa más que el hype de lanzamiento para mover a la mayoría de esta audiencia." },
+          { label: "Convive la confianza tech con la preocupación por sus datos", detail: "47.8% se siente confiado usando nueva tecnología (índice 141.2), pero 40.3% le preocupa cómo las empresas usan sus datos personales online — cualquier campaña de producto conectado debe abordar explícitamente la transparencia de datos, no asumir que la confianza tech elimina esa barrera." },
+          { label: "MercadoLibre y Rappi conviven como canales de distribución/alcance", detail: "80.4% usó MercadoLibre en el último mes (índice 109.8) y 31.8% usó Rappi (índice 126.6) — dos canales complementarios (marketplace + última milla) relevantes tanto para pauta de performance como para disponibilidad de producto." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 58.0, female: 42.0 },
+        ageBands: [
+          { label: "16-24", pct: 26.6 },
+          { label: "25-34", pct: 28.7 },
+          { label: "35-44", pct: 25.3 },
+          { label: "45-54", pct: 19.4 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Distrito Federal", pct: 16.3 },
+          { city: "México", pct: 14.1 },
+          { city: "Nuevo León", pct: 7.0 },
+          { city: "Jalisco", pct: 6.9 },
+        ],
+      },
+      motivations: [
+        { label: "Confía usando nueva tecnología", pct: 47.8 },
+        { label: "Sigue las últimas tendencias y noticias de tecnología", pct: 43.6 },
+        { label: "Cree que las redes sociales son beneficiosas para la sociedad", pct: 42.1 },
+        { label: "Compra productos tech apenas salen al mercado", pct: 19.3 },
+      ],
+      barriers: [
+        { label: "Le preocupa cómo las empresas usan sus datos personales online", pct: 40.3 },
+        { label: "Busca opinión de expertos antes de comprar artículos costosos", pct: 40.1 },
+        { label: "Le preocupa cómo el gobierno le rastrea online", pct: 29.8 },
+      ],
+      digitalInterests: [
+        { label: "Investiga productos online antes de comprar", index: 128.2 },
+        { label: "Usó MercadoLibre en el último mes", index: 109.8 },
+        { label: "Usó Rappi en el último mes", index: 126.6 },
+        { label: "Visitó ChatGPT en el último mes", index: 125.9 },
+      ],
+      media: [
+        { label: "Facebook (uso +1x/día)", pct: 52.9 },
+        { label: "TikTok (uso +1x/día)", pct: 42.9 },
+        { label: "Instagram (uso +1x/día)", pct: 35.4 },
+        { label: "X (uso +1x/día)", pct: 12.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y redes", "Instagram, Facebook, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Búsqueda y research", "Google, reviews de producto", "Investiga productos online antes de tomar decisiones de compra.", [
+          { label: "Investiga productos online antes de comprar", pct: 65.9, index: 128.2 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa / transporte", "TV internacional", "Canales de TV internacional", "Entre quienes ven TV internacional con frecuencia, el consumo sube en la tarde temprana (2-5pm).", [
+          { label: "Ve TV internacional en la tarde (2-5pm), entre los que ven TV internacional con frecuencia", pct: 54, index: 106 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Gaming y delivery", "Consolas/mobile gaming, Rappi", "Entre los gamers de esta audiencia, el pico de juego entre semana es a esta hora.", [
+          { label: "Juega videojuegos entre semana de 5 a 7pm, entre los gamers de esta audiencia", pct: 30, index: 110 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y streaming", "Facebook, TikTok, ChatGPT", "Usa redes sociales de forma intensa y, entre los que ven TV internacional con frecuencia, prefieren verla tarde en la noche.", [
+          { label: "Usa Facebook más de una vez al día", pct: 52.9, index: 106.2 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_PORTALES_COMPRADOR_HABITUAL_GWI_AUTO_20261022 = {
+  id: "compradores-online-habituales-mexico",
+  name: "Compradores online habituales en México (Portales>DiaDeSanValentin>CompradorHabitual)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-22)",
+  insightNote:
+    "Audiencia real de GWI ('Portales>DiaDeSanValentin>CompradorHabitual', audience_id 16baf8dc-bc82-46fa-8674-bac9b83b8294): mexicanos que compraron distintos tipos de productos online en el último mes.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (75.57M) sobre la población digital de México (78.05M)", pct: 96.8 },
+  ],
+  footnotes: [
+    "96.8% = universo real de GWI (36,357,705 hombres + 39,215,868 mujeres = 75,573,573, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital de México (78.05M, MARKETS). Es una audiencia extremadamente amplia porque el criterio de calificación real es haber comprado cualquier tipo de producto online en el último mes — prácticamente toda la base de compradores digitales del país.",
+    "El nombre original de la audiencia en GWI hace referencia a una campaña de Día de San Valentín, pero GWI no devolvió ninguna señal específica de esa ocasión (regalos, pareja, fecha) para esta audiencia — la demografía y el comportamiento verificados corresponden al criterio real de calificación (compra online reciente de cualquier producto), no a una intención de regalo de San Valentín.",
+    "Demografía (género, edad), preferencias y barreras de compra online, apps de retail y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI solo devolvió desagregación etaria con muestra suficiente hasta la banda 45-54 (89.1% acumulado); no se inventa el resto en 55-64/65+.",
+    "GWI no devolvió desagregación por ciudad/estado para esta audiencia, solo zona urbana/suburbana/rural.",
+    "GWI confirmó explícitamente que no tiene datos de franja horaria para el comportamiento de compra de esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "compradora-online-habitual-mexico",
+      name: "Valeria Mendoza",
+      archetype: "La Compradora Omnicanal Práctica",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Mexicana que compra online con regularidad cualquier tipo de producto, pero sin haber abandonado la tienda física: la decisión entre canal online y presencial está prácticamente empatada. Prioriza el envío gratis y rápido por encima del descuento, y combina marketplaces locales con plataformas internacionales de bajo costo como SHEIN y AliExpress.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón de 'omnicanalidad real, no discurso': 50.5% de esta audiencia en realidad prefiere comprar en tienda física frente a 49.5% que prefiere online, a pesar de calificar como compradora online activa — el canal digital no sustituye la tienda, la complementa. Al mismo tiempo, el uso de SHEIN (37.6%, índice 405.5) y AliExpress (21.5%, índice 289.7) muy por encima del promedio muestra que buena parte del gasto online ya no compite solo contra el retail local, sino contra marketplaces internacionales de bajo costo.",
+        [
+          { label: "El envío gratis convierte más que el descuento", detail: "56.3% prioriza el envío gratis como el factor que más aumenta su probabilidad de compra, por encima de cupones/descuentos (39.9%) — el mensaje de performance debería liderar con 'envío gratis', no solo con porcentaje de descuento." },
+          { label: "Es omnicanal de verdad: la tienda física sigue ganando por un punto", detail: "50.5% prefiere comprar en tienda física frente a 49.5% que prefiere online — cualquier estrategia debe integrar momentos de conversión física (vitrina, punto de venta) y no asumir que esta audiencia ya migró 100% a digital." },
+          { label: "Compite con marketplaces internacionales de bajo costo", detail: "37.6% usó SHEIN en el último mes (índice 405.5) y 21.5% usó AliExpress (índice 289.7), muy por encima del promedio — el retail local no solo compite contra otro retail local, sino contra estas plataformas de precio bajo y envío internacional." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48.1, female: 51.9 },
+        ageBands: [
+          { label: "16-24", pct: 24.3 },
+          { label: "25-34", pct: 25.4 },
+          { label: "35-44", pct: 21.9 },
+          { label: "45-54", pct: 17.5 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "México — sin desagregación por ciudad disponible en GWI (73% zona urbana, 17% suburbana, 9.9% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prefiere el envío gratis al comprar online", pct: 56.3 },
+        { label: "Prefiere el envío al día siguiente", pct: 40.3 },
+        { label: "Prefiere comprar cuando hay cupones y descuentos disponibles", pct: 39.9 },
+        { label: "Prefiere un checkout rápido y sencillo", pct: 35.8 },
+      ],
+      barriers: [
+        { label: "Le preocupa cómo las empresas usan sus datos personales online", pct: 41.8 },
+        { label: "Le preocupa cómo el gobierno le rastrea online", pct: 28.7 },
+        { label: "En realidad prefiere comprar en tienda física antes que online (minoría prefiere online)", pct: 50.5 },
+      ],
+      digitalInterests: [
+        { label: "Usó SHEIN en el último mes", pct: 37.6, index: 405.5 },
+        { label: "Visitó AliExpress en el último mes", pct: 21.5, index: 289.7 },
+        { label: "Usó/visitó MercadoLibre en el último mes", pct: 73.9 },
+      ],
+      media: [
+        { label: "Facebook (uso +1x/día)", pct: 49.6 },
+        { label: "TikTok (uso +1x/día)", pct: 38.2 },
+        { label: "Instagram (uso +1x/día)", pct: 29.1 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Búsqueda y marketplaces", "Google, MercadoLibre", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / tienda física", "Compra en tienda o app", "Tienda física, apps de retail", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Facebook, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Compras online", "SHEIN, AliExpress, MercadoLibre", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y streaming", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7439,7 +7619,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020, CASE_PORTALES_COMPRADOR_HABITUAL_GWI_AUTO_20261022],
   },
   {
     id: "fintech",
@@ -7491,7 +7671,7 @@ const CATEGORIES = [
       { id: "pagaPremiumMarca", label: "Dispuesto a pagar premium por marca" },
       { id: "compraPorNecesidad", label: "Compra por necesidad/durabilidad, no por hype" },
     ],
-    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924, CASE_ASUS_LATAM_GWI_AUTO_20261015],
+    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924, CASE_ASUS_LATAM_GWI_AUTO_20261015, CASE_TCL_TECNOLOGIA_MEXICO_GWI_AUTO_20261022],
   },
   {
     id: "gaming",
@@ -7599,4 +7779,6 @@ const PERSONA_RELATED_TRAITS = {
   "usuario-mastercard-colombia": ["usaAppsFin", "migraEfectivo"],
   "usuario-visa-colombia": ["abiertoCambiar", "pruebaMultiples"],
   "entusiasta-cultural-colombia-nacional": ["afinidadGenero", "turismo"],
+  "entusiasta-tecnologia-mexico": ["sigueReviewsTech", "compraGadgetsAnual"],
+  "compradora-online-habitual-mexico": ["compraOnline", "sensibilidadPrecio"],
 };

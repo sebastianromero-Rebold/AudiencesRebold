@@ -7398,6 +7398,257 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261023 = {
+  id: "corferias-conquilla-atlantico-colombia",
+  name: "Asistentes al Festival Conquilla (Atlántico, Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-23)",
+  insightNote:
+    "Audiencias reales de GWI del festival Conquilla de Corferias en Atlántico: 'Corferias>Conquilla>Conocedores' (audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6, 28-64 años) y 'Corferias>Conquilla>Aventureros' (audience_id 79e794cd-0073-4de5-a21e-2efb38878029, 18-24 años).",
+  funnelSteps: [
+    { label: "Universo real combinado de 'Conquilla Conocedores' + 'Conquilla Aventureros' en GWI (758,848) sobre la población digital de Colombia (31.06M)", pct: 2.4 },
+  ],
+  footnotes: [
+    "2.4% ≈ universo real combinado de ambas audiencias en GWI (568,553 Conocedores + 190,295 Aventureros = 758,848, cada uno verificado vía explore_insight_gwi sobre la pregunta de edad/género) sobre la población digital total de Colombia (31.06M).",
+    "sharePct de cada persona calculado en proporción directa a su universo real en GWI (75% Conocedores, 25% Aventureros) — son dos recortes de edad de la misma audiencia de interés en el festival, no un embudo de filtros sucesivos.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de estas audiencias reales vía chat_gwi/explore_insight_gwi.",
+    "Top ciudades: ambas audiencias están acotadas por GWI al departamento de Atlántico; GWI no devolvió desagregado por municipio, solo zona urbana/suburbana/rural (usado aquí en el campo de ciudades).",
+    "Para Conocedores, GWI sí devolvió datos específicos de franja horaria (consumo de TV internacional en la mañana, media mañana y tarde) — usados en el customer journey; para Aventureros no hubo desagregado por franja horaria, así que su journey usa lugares/medios genéricos sin cifras de actividad.",
+    "Las citas de ambas personas son placeholders pendientes de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "conocedores-conquilla-atlantico",
+      name: "Patricia Mendoza",
+      archetype: "La Conocedora Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en el departamento de Atlántico (89% en zona urbana), con género levemente mayoritario femenino (51% mujeres, 49% hombres) y concentrada en 25-44 años (65.3% combinado). Es una audiencia que define su interés en eventos en vivo como rasgo identitario (100% interesada, 77% además interesada en música en general) y se declara mayoritariamente 'Arts & Culture Enthusiast' (63%). Es ahorradora: 78% prefiere esperar y ahorrar antes de comprar.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'cultura como identidad adulta, no solo entretenimiento': a diferencia de audiencias más jóvenes que buscan descubrimiento constante, esta audiencia ya tiene su identidad cultural consolidada (63% Arts & Culture Enthusiast, 60% pasional por un amplio rango de artistas) y consume el festival como una extensión de ese gusto ya formado, no como una novedad — el mensaje debe hablar de pertenencia a una escena, no de descubrimiento.",
+        [
+          { label: "Ahorran para el festival, no compran por impulso", detail: "78% prefiere ahorrar y esperar antes de comprar — una campaña de venta anticipada con planes de pago o apartado tiene más tracción que un CTA de urgencia pura." },
+          { label: "El consumo de TV internacional marca ventanas de pauta claras", detail: "GWI muestra picos reales de consumo de TV internacional en la mañana (36%), media mañana (41%) y tarde (43%) — son franjas concretas para activar pauta de marca sin necesidad de inferir comportamiento." },
+          { label: "Facebook sigue vivo en este segmento adulto", detail: "48% usa Facebook más de una vez al día (23% más que el promedio) frente a un uso de TikTok por debajo del promedio — la mezcla de medios debe pesar Facebook e Instagram sobre TikTok, al revés que en audiencias más jóvenes del mismo festival." },
+        ]
+      ),
+      sharePct: 75,
+      demographics: {
+        genderSplit: { male: 49, female: 51 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 33.2 },
+          { label: "35-44", pct: 32.1 },
+          { label: "45-54", pct: 20.7 },
+          { label: "55-64", pct: 14.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Atlántico (zona urbana)", pct: 89 },
+          { city: "Atlántico (zona rural)", pct: 6 },
+          { city: "Atlántico (zona suburbana)", pct: 4.9 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en música", pct: 77 },
+        { label: "Se identifican como Arts & Culture Enthusiasts", pct: 63.3 },
+        { label: "Pasionados por un amplio rango de artistas/bandas", pct: 60 },
+        { label: "Encuentran fácil descubrir música nueva", pct: 52 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar", pct: 78 },
+        { label: "Se declaran price-conscious", pct: 33 },
+        { label: "Priorizan comprar pronto sobre otros gastos (FOMO)", pct: 22 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en tecnología", index: 114 },
+        { label: "Usan redes sociales para ver qué es tendencia", index: 156 },
+        { label: "Uso diario de Facebook", index: 123 },
+        { label: "Uso diario de Instagram", index: 127 },
+      ],
+      media: [
+        { label: "Usaron un servicio de video/streaming el último mes", pct: 94 },
+        { label: "Usaron Netflix el último mes", pct: 71 },
+        { label: "Usaron Amazon Prime Video el último mes", pct: 34 },
+        { label: "Heavy users de radio", pct: 31 },
+        { label: "Descubren marcas por anuncios en tienda", pct: 30 },
+        { label: "Descubren marcas por anuncios en transporte público", pct: 18 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV internacional y redes", "TV por streaming internacional, Facebook", "Programación matutina con contenido cultural o de música en vivo.", [
+          { label: "Viendo canales de TV internacional", pct: 36, index: 151 },
+        ]),
+        daypart("Final de la mañana", "9 a 12 m", "Casa / oficina", "TV internacional y redes", "TV internacional, Instagram", "Clips de artistas y anuncios durante la franja de media mañana.", [
+          { label: "Viendo canales de TV internacional", pct: 41, index: 141 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales y navegación", "Facebook, Instagram", "Contenido de marca en redes sociales.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / casa", "TV internacional", "TV internacional, Netflix", "Programación de tarde con pauta de marca.", [
+          { label: "Viendo canales de TV internacional", pct: 43, index: 102 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, Amazon Prime Video", "Contenido patrocinado dentro de streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Radio y redes", "Radio, Facebook", "CTA de compra de boletos con oferta por tiempo limitado.", []),
+      ],
+    },
+    {
+      id: "aventureros-conquilla-atlantico",
+      name: "Valentina Castro",
+      archetype: "La Aventurera del Festival",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en el departamento de Atlántico (85% en zona urbana), con mayoría femenina marcada (63% mujeres, 37% hombres) y 100% concentrada en el rango 16-24 años. Es mobile-first y nativa de TikTok (66% lo usa más de una vez al día, 81% más que el promedio) e Instagram (47% uso diario). A diferencia de la Conocedora, todavía está en modo descubrimiento: 55% está interesada en streaming de eventos y más de la mitad cree que la música puede ser un agente de cambio social.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'festival como identidad social, no solo musical' propia de Gen Z: el 54% cree que la música puede ser agente de cambio social y el 85% se identifica como Popular Culture & Leisure Enthusiast — el festival no se vende aquí como lineup, sino como pertenencia a una comunidad con valores compartidos, algo que un mensaje centrado solo en artistas no capta.",
+        [
+          { label: "TikTok es el canal dominante, no uno más", detail: "66% usa TikTok más de una vez al día (81% más que el promedio de Colombia) — cualquier plan de medios que trate TikTok como canal secundario frente a Instagram o Facebook pierde a la mayoría de esta audiencia." },
+          { label: "Ahorran más que la Conocedora, pese a tener menos ingreso", detail: "81% prefiere ahorrar y esperar antes de comprar (más alto que el 78% de Conocedores) — formatos de pago en cuotas o apartado temprano son más relevantes aquí que descuentos agresivos de último minuto." },
+          { label: "El valor social de la música pesa tanto como el line-up", detail: "54% cree que la música puede ser un agente de cambio social — comunicar causas o impacto social del festival puede sumar tanto como anunciar artistas confirmados." },
+        ]
+      ),
+      sharePct: 25,
+      demographics: {
+        genderSplit: { male: 36.9, female: 63.1 },
+        ageBands: [
+          { label: "16-24", pct: 100 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Atlántico (zona urbana)", pct: 85 },
+          { city: "Atlántico (zona rural)", pct: 8.9 },
+          { city: "Atlántico (zona suburbana)", pct: 6.2 },
+        ],
+      },
+      motivations: [
+        { label: "Interesadas en música", pct: 78.6 },
+        { label: "Interesadas en streaming events", pct: 55 },
+        { label: "Creen que la música puede ser un agente de cambio social", pct: 54 },
+        { label: "Apoyan artistas locales / van a conciertos locales", pct: 29 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar", pct: 81 },
+        { label: "Se declaran price-conscious", pct: 31 },
+        { label: "Son money-driven", pct: 20 },
+      ],
+      digitalInterests: [
+        { label: "Usan TikTok más de una vez al día", index: 181 },
+        { label: "Usan Instagram más de una vez al día", index: 140 },
+        { label: "Usan redes sociales para ver qué es tendencia", index: 168 },
+        { label: "Interesadas en cine/películas", index: 124 },
+      ],
+      media: [
+        { label: "Usan TV set para ver streaming/on-demand", pct: 61 },
+        { label: "Ven on-demand en laptop/desktop", pct: 46 },
+        { label: "Ven on-demand en celular/tablet", pct: 46 },
+        { label: "Vieron video móvil en la última semana", pct: 64 },
+        { label: "Pagaron suscripción de streaming de música el último mes", pct: 35 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales (mobile)", "TikTok, Instagram", "Contenido corto tipo reel con el line-up del festival.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad / casa", "Redes sociales y video móvil", "TikTok, YouTube", "Clips de artistas y challenge de marca.", []),
+        daypart("Medio día", "12 m a 3 pm", "Universidad / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido generado por usuarios de ediciones pasadas del festival.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa / transporte", "Video móvil y redes", "TikTok, YouTube", "Retargeting con precio especial para jóvenes.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de música y TV on-demand", "Spotify, plataformas de streaming", "CTA de compra con precio early bird.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / con amigas", "Redes sociales", "Instagram, TikTok", "Urgencia de últimos boletos (FOMO social).", []),
+      ],
+    },
+  ],
+};
+
+const CASE_CORDILLERA_NUEVOS_ASISTENTES_GWI_AUTO_20261023 = {
+  id: "cordillera-nuevos-asistentes-colombia",
+  name: "Nuevos asistentes al Festival Cordillera (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-23)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>Cordillera24>NuevosAsistentes', audience_id f4af9e5a-e795-461b-8510-9c75d09d2f69): colombianos interesados en eventos en vivo tipo festivales de música, segmento de potenciales nuevos asistentes al Festival Cordillera.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Cordillera24 NuevosAsistentes' en GWI (10,697,479) sobre la población digital de Colombia (31.06M)", pct: 34.4 },
+  ],
+  footnotes: [
+    "34.4% ≈ universo real de la audiencia en GWI (10,697,479 = suma de universo hombres + mujeres, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Top ciudades/departamentos verificados vía explore_insight_gwi sobre la pregunta de distrito de residencia: 32.3% Bogotá D.C., 14.0% Antioquia, 10.0% Valle del Cauca, 8.2% Cundinamarca (resto disperso en otros departamentos, no devuelto por GWI).",
+    "Esta audiencia es distinta de otros casos de entretenimiento ya procesados ('EventosEnVivoGeneral', 'Generos>Base'): es el segmento específico que Páramo usa para captar nuevos asistentes del Festival Cordillera, no la audiencia general de eventos en vivo.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: GWI no devolvió datos específicos por momento del día para esta audiencia.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "nuevo-asistente-cordillera-colombia",
+      name: "Daniel Restrepo",
+      archetype: "El Nuevo Descubridor del Festival",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia nacional con leve mayoría femenina (54.5% mujeres, 45.5% hombres), concentrada en 16-34 años (51% combinado) pero con presencia real en todos los rangos hasta 55-64. Se concentra en Bogotá (32.3%) seguida de Antioquia, Valle del Cauca y Cundinamarca. Es una audiencia que valora las experiencias sobre los bienes materiales (68% prefiere gastar en experiencias) y se identifica mayoritariamente como 'Arts & Culture Enthusiast' (69.3%), pero es disciplinada con el gasto: 82% prefiere ahorrar y esperar antes de comprar.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'experiencialismo disciplinado': esta audiencia no gasta por impulso (82% ahorra y espera antes de comprar) pero sí prioriza las experiencias sobre los bienes materiales (68%) — la oportunidad no es generar urgencia de compra, sino dar una razón clara y anticipada para empezar a ahorrar específicamente para este festival, por ejemplo con planes de pago por cuotas desde el primer anuncio del line-up.",
+        [
+          { label: "Bogotá concentra la audiencia pero no la agota", detail: "Solo 32.3% está en Bogotá — el resto se reparte en Antioquia, Valle del Cauca, Cundinamarca y otros departamentos, lo que sugiere que una campaña centrada solo en Bogotá deja fuera a cerca de 7 de cada 10 potenciales nuevos asistentes." },
+          { label: "El descubrimiento musical ya es un hábito activo", detail: "49% dice que le resulta fácil descubrir música nueva y 38% disfruta buscar activamente nuevos artistas — el mensaje de 'festival como descubrimiento' tiene terreno fértil real, no hay que crear el hábito desde cero." },
+          { label: "Son mobile-first con TV on-demand como segunda pantalla fuerte", detail: "85% accede a internet principalmente desde el celular y 78% usa un TV set para ver streaming/on-demand — el plan de medios debe combinar pauta mobile-first con presencia en pantallas de streaming conectado, no solo redes sociales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45.5, female: 54.5 },
+        ageBands: [
+          { label: "16-24", pct: 24 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 22 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 10 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 32.3 },
+          { city: "Antioquia", pct: 14.0 },
+          { city: "Valle del Cauca", pct: 10.0 },
+          { city: "Cundinamarca", pct: 8.2 },
+        ],
+      },
+      motivations: [
+        { label: "Prefieren gastar en experiencias", pct: 68 },
+        { label: "Se identifican como Arts & Culture Enthusiasts", pct: 69.3 },
+        { label: "Encuentran fácil descubrir música nueva", pct: 49 },
+        { label: "Disfrutan buscar nuevos artistas, bandas o canciones", pct: 38 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar", pct: 82 },
+        { label: "Se declaran price-conscious", pct: 33 },
+        { label: "Son money-driven", pct: 18 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en tecnología", index: 111 },
+        { label: "Usan redes sociales para ver qué es tendencia", index: 138 },
+        { label: "Uso diario de Instagram", index: 123 },
+        { label: "Uso diario de TikTok", index: 108 },
+      ],
+      media: [
+        { label: "Usan TV set para ver streaming/on-demand", pct: 78 },
+        { label: "Descubren marcas por anuncios de TV", pct: 30 },
+        { label: "Descubren marcas por anuncios en tienda", pct: 27 },
+        { label: "Heavy users de radio", pct: 26 },
+        { label: "Heavy users de TV abierta", pct: 23 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales (mobile)", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / universidad", "Redes sociales y navegación", "Instagram, Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales y video móvil", "TikTok, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV on-demand / streaming", "TV conectado, plataformas de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Radio y TV abierta", "Radio, TV abierta", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7664,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261023, CASE_CORDILLERA_NUEVOS_ASISTENTES_GWI_AUTO_20261023],
   },
   {
     id: "deportes",

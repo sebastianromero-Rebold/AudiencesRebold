@@ -5899,6 +5899,7 @@ const CASE_MODA_CHILE_GWI_AUTO_20261004 = {
     "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
     "Borrador generado automáticamente — pendiente de revisión editorial.",
     "Unificación 2026-10-14: esta audiencia fue reprocesada de forma independiente, sin ver este manifest todavía, en el PR de 2026-10-13 — esa versión (con intereses digitales más genéricos/de categoría) se descartó al unificar en favor de esta (del 2026-10-04, con un desglose de edad más honesto y un set de intereses digitales más distintivo y relevante para una marca outdoor).",
+    "2026-10-25: la audiencia 'DOITE>DOITE>B2C>Chile>NEEDS>Moda' (audience_id d82606ea-8094-4bc6-82d6-a4eaa3dc8363) se procesó y resultó tener un universo real casi idéntico (277,312 vs. 275,223 de esta audiencia) — se enlaza al mismo caso/persona existente en vez de crear un duplicado. Ver manifest.",
   ],
   personas: [
     {
@@ -7398,6 +7399,186 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+// CASOS "gwi-auto-draft" — procesados 2026-10-25 por la rutina diaria de GWI.
+const CASE_CUNDINAMARCAFEST_CONCIERTOS_GWI_AUTO_20261025 = {
+  id: "conciertos-alta-intencion-cundinamarca-colombia",
+  name: "Audiencia de alta intención de compra de boletos para conciertos (Bogotá/Cundinamarca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-25)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) CundinamarcaFest_Conciertos', audience_id 92f450c6-17f8-4730-87c0-5aa3f57b1b66): residentes de Bogotá D.C. o Cundinamarca interesados en eventos en vivo tipo festivales de música y, además, interesados en transmisión de eventos, apoyo a artistas locales o asistencia a conciertos locales.",
+  funnelSteps: [
+    { label: "Interés en eventos en vivo + intención de apoyo/asistencia a conciertos locales (Bogotá/Cundinamarca)", pct: 6.4 },
+  ],
+  footnotes: [
+    "6.4% = universo real de GWI (1,995,900 personas, muestra 308, verificado vía explore_insight_gwi sobre la pregunta de tamaño de audiencia) sobre la población digital total de Colombia (31.06M).",
+    "Esta audiencia es un subconjunto con un filtro de intención más estricto (streaming de eventos, apoyo a artistas locales o asistencia a conciertos) dentro del universo más amplio de 'Paramo (co) CundinamarcaFest' (3,002,939 personas, caso 'cundinamarcafest-conciertos-colombia', ya procesado el 2026-09-29) — se deja como caso independiente en vez de fusionar, para que el equipo editorial decida si conviene tratarla como una sub-segmentación por intención dentro del mismo caso o fusionarlas.",
+    "Demografía, motivaciones, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi.",
+    "Top ciudades: 81% Bogotá D.C., 19% otros municipios de Cundinamarca.",
+    "Las bandas etarias no suman exactamente 100% por redondeo independiente de cada pregunta en GWI — se dejan los valores reales reportados sin ajustar a ojo.",
+    "GWI no mide barreras de precio/logística de forma directa para esta audiencia — se usan como proxy sus actitudes de sensibilidad al precio (búsqueda de ofertas, cupones, espera de descuentos).",
+    "GWI no devolvió datos específicos por franja horaria para esta audiencia — el customer journey usa lugares/medios genéricos sin cifras de actividad inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "alta-intencion-conciertos-cundinamarca",
+      name: "Daniela Gómez",
+      archetype: "La Coleccionista de Conciertos",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive mayoritariamente en Bogotá (81%), con un 19% en municipios de Cundinamarca. Género parejo (50/50) y concentrada en 25-44 años (53% combinado). Es una audiencia de alta intención real de compra: 68% ya apoya artistas locales o asiste a conciertos, 30% compró boletos en los últimos 3-6 meses y 59% está interesada en eventos por streaming — pero también es sensible a precio, con 69% esperando ofertas antes de comprar.",
+      aiInsight: aiInsight(
+        "Cruza con la convivencia entre intención de compra real (no solo declarada) y comportamiento oportunista de precio: 68% ya apoya artistas locales o asiste a conciertos y 30% compró boletos en los últimos 3-6 meses, pero 69% prefiere esperar a que los productos estén en oferta y 46% solo compra online si hay cupones o descuentos — a diferencia de la audiencia general de 'CundinamarcaFest', este segmento de alta intención necesita un empujón de oferta/urgencia para convertir, no solo awareness del lineup.",
+        [
+          { label: "Intención ya validada, falta el gatillo de oferta", detail: "30% ya compró boletos recientemente y 27% planea hacerlo, pero 69% espera activamente promociones — una preventa con descuento por tiempo limitado convierte mejor que un anuncio de lineup sin oferta." },
+          { label: "El streaming de eventos es una puerta de entrada real", detail: "59% está interesada en eventos por streaming, 182% más que el promedio — vale la pena ofrecer una transmisión en vivo gratuita como gancho de retargeting hacia la compra de boletos presenciales." },
+          { label: "El descubrimiento con IA ya es parte del hábito digital", detail: "54% visitó ChatGPT en el último mes, 24% más que el promedio — un asistente de IA para recomendar línea de eventos/artistas puede ser un canal de descubrimiento más nuevo que las redes sociales tradicionales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50, female: 50 },
+        ageBands: [
+          { label: "16-24", pct: 20 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 20 },
+          { label: "55-64", pct: 7.9 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 81 },
+          { city: "Municipios de Cundinamarca", pct: 19 },
+        ],
+      },
+      motivations: [
+        { label: "Apoya artistas locales o asiste a conciertos locales", pct: 68 },
+        { label: "Compró boletos para conciertos en los últimos 3-6 meses", pct: 30 },
+        { label: "Interesada en eventos por streaming", pct: 59 },
+        { label: "Siempre atenta a nuevos eventos de música en vivo", pct: 33 },
+        { label: "Disfruta buscar artistas, bandas o canciones nuevas", pct: 54 },
+      ],
+      barriers: [
+        { label: "Prefiere esperar a que los productos estén en oferta", pct: 69 },
+        { label: "Prefiere comprar online cuando hay cupones y descuentos", pct: 46 },
+        { label: "Se considera sensible a los precios", pct: 33 },
+      ],
+      digitalInterests: [
+        { label: "Compró un producto nuevo o de segunda mano por internet en la última semana", pct: 63 },
+        { label: "Visitó ChatGPT en el último mes", pct: 54 },
+        { label: "Pidió comida a domicilio en la última semana", pct: 49 },
+        { label: "Usó Airbnb en el último mes", pct: 27 },
+      ],
+      media: [
+        { label: "Vio TV bajo demanda / streaming en el último mes", pct: 98 },
+        { label: "Usa Instagram más de una vez al día", pct: 43 },
+        { label: "Usa TikTok más de una vez al día", pct: 40 },
+        { label: "Es usuaria intensiva de streaming de video (Netflix/Hulu)", pct: 40 },
+        { label: "Es usuaria intensiva de radio", pct: 33 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y streaming de música", "Instagram, apps de streaming", "Recordatorio de preventa con oferta por tiempo limitado.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Clips de la línea de artistas y testimonios de ediciones anteriores.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming y búsqueda", "YouTube, ChatGPT/buscadores", "Contenido de descubrimiento de artistas/eventos similares.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, TikTok", "Retargeting con código de descuento visible.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV, streaming de video", "CTA directo con checkout simplificado.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de eventos y redes", "Streaming en vivo, Instagram", "Transmisión en vivo gratuita como gancho hacia la compra de boletos presenciales.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FINTECH_LIVE_EVENT_GWI_AUTO_20261025 = {
+  id: "fintech-entretenimiento-vivo-colombia",
+  name: "Interés financiero cruzado con entretenimiento en vivo (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-25)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>AudienciasFintechLiveEvent>Col', audience_id 3993e2b6-ae7f-4239-baeb-d9e63ea89bb7): colombianos con interés en finanzas/economía e inversión, cruzados con interés en entretenimiento y eventos en vivo.",
+  funnelSteps: [
+    { label: "Interés en finanzas personales/inversión + entretenimiento y eventos en vivo (Colombia)", pct: 21.9 },
+  ],
+  footnotes: [
+    "21.9% = universo real de GWI (6,788,333 personas, muestra 2,055, verificado vía explore_insight_gwi sobre la pregunta de tamaño de audiencia) sobre la población digital total de Colombia (31.06M).",
+    "GWI no permite verificar la lógica exacta del filtro combinado fintech + live event del nombre original de la audiencia, pero los datos de interés financiero (57% economía/finanzas, 83% prefiere ahorrar antes de comprar) y de entretenimiento (83% cine, 30% UEFA Champions League, 24% LaLiga, 52% videojuegos) son consistentes con ese perfil cruzado.",
+    "Demografía, actitudes financieras, productos financieros, intereses de entretenimiento/deporte y medios tomados 1:1 de esta audiencia real vía chat_gwi.",
+    "GWI no devolvió ciudades específicas para esta audiencia, solo zona urbana/suburbana/rural (90% urbana, 4.3% suburbana, 6.1% rural).",
+    "GWI no devolvió datos específicos por franja horaria — el customer journey usa lugares/medios genéricos sin cifras de actividad inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-fintech-eventos-vivo-colombia",
+      name: "Felipe Martínez",
+      archetype: "El Planificador Financiero Fanático del Espectáculo",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano con interés real en finanzas personales (57% interesado en economía/finanzas, 83% prefiere ahorrar antes de comprar) que convive con pasión por el entretenimiento: 83% interesado en cine, 52% en videojuegos y fuerte afinidad por fútbol internacional (30% UEFA Champions League, 24% LaLiga). Género casi parejo (48% hombres, 52% mujeres), concentrado en 25-44 años.",
+      aiInsight: aiInsight(
+        "Cruza con la oportunidad de patrocinio deportivo/entretenimiento para marcas fintech: esta audiencia declara interés financiero real (57% economía/finanzas) pero su conducta de inversión es conservadora (43% interesado en inversión vs. solo 12% con fondos de inversión reales) — el entretenimiento (cine, fútbol internacional, videojuegos) es un terreno de marca más cómodo que el discurso puramente financiero para generar la primera conexión.",
+        [
+          { label: "Interés financiero declarado, pero conducta de inversión conservadora", detail: "43% está interesado en inversiones pero solo 12% tiene fondos mutuos/gestionados y 9.1% tiene acciones — el mensaje de producto debe educar sobre el primer paso de inversión, no asumir sofisticación financiera." },
+          { label: "El fútbol internacional es una puerta de entrada de marca", detail: "30% está muy interesado en la UEFA Champions League y 24% en LaLiga, ambos muy por encima del promedio — un patrocinio o integración de contenido deportivo puede generar más afinidad de marca que un mensaje financiero directo." },
+          { label: "PayPal y Mastercard ya tienen tracción, hay espacio de diferenciación", detail: "46% usó PayPal y 34% usó Mastercard en el último mes — una fintech retadora necesita un argumento claro de valor frente a estos hábitos ya instalados, no solo igualar la oferta." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48, female: 52 },
+        ageBands: [
+          { label: "16-24", pct: 21 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación por ciudad disponible en GWI (90% zona urbana, 4.3% suburbana, 6.1% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante la seguridad financiera", pct: 78 },
+        { label: "Prefiere ahorrar y esperar antes de comprar", pct: 83 },
+        { label: "Interesado en economía y finanzas", pct: 57 },
+        { label: "Interesado en inversiones", pct: 43 },
+        { label: "Interesado en negocios", pct: 45 },
+      ],
+      barriers: [
+        { label: "Tiene actualmente un préstamo de corto plazo", pct: 36 },
+        { label: "No tiene tarjeta de crédito", pct: 40 },
+        { label: "No tiene cuenta bancaria", pct: 7.7 },
+        { label: "Declara interés en inversión pero solo tiene fondos mutuos/gestionados", pct: 12 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en películas y cine", pct: 83 },
+        { label: "Muy interesado en la UEFA Champions League", pct: 30 },
+        { label: "Interesado en videojuegos", pct: 52 },
+        { label: "Usó PayPal en el último mes", pct: 46 },
+        { label: "Usó Mastercard en el último mes", pct: 34 },
+      ],
+      media: [
+        { label: "Usa un televisor para ver contenido bajo demanda/streaming", pct: 81 },
+        { label: "Es usuario intensivo de streaming (Netflix/Hulu)", pct: 38 },
+        { label: "Usó YouTube en el último mes", pct: 65 },
+        { label: "Usa Instagram a diario", pct: 23 },
+        { label: "Usa Facebook a diario", pct: 23 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y noticias", "Apps de banco/billetera, sitios de noticias", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes sociales e investigación", "Instagram, Facebook, buscadores", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming de video", "YouTube, servicios de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV, streaming de video", "Contenido deportivo (fútbol internacional) con integración de marca fintech.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y streaming", "TV, plataformas de streaming", "Cine/series o partido en vivo como contexto de patrocinio.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7594,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CUNDINAMARCAFEST_CONCIERTOS_GWI_AUTO_20261025],
   },
   {
     id: "deportes",
@@ -7452,7 +7633,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_FINTECH_LIVE_EVENT_GWI_AUTO_20261025],
   },
   {
     id: "alcohol",

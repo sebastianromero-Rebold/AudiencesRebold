@@ -7398,6 +7398,250 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_MODA_NECESIDAD_ASPIRACION_CHILE_GWI_AUTO_20261027 = {
+  id: "moda-necesidad-aspiracion-chile",
+  name: "Moda por necesidad vs. aspiración en Chile (DOITE)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-27)",
+  insightNote:
+    "Dos audiencias reales de GWI del mismo framework de segmentación DOITE ('DOITE>DOITE>B2C>Chile>NEEDS>Moda', audience_id d82606ea-8094-4bc6-82d6-a4eaa3dc8363; y 'DOITE>DOITE>B2C>Chile>WANTS>Moda', audience_id 9848b554-e267-433c-be66-bdf08e2348ed) — completan el mapa de segmentos de este cliente junto al ya existente 'HighPropensity' (caso 'alta-propension-moda-chile').",
+  funnelSteps: [
+    { label: "Audiencias de moda NEEDS + WANTS del framework DOITE (Chile)", pct: 35.6 },
+  ],
+  footnotes: [
+    "35.6% = universo combinado real de GWI (277,312 de NEEDS + 5,281,899 de WANTS = 5,559,211, verificado 1:1 vía explore_insight_gwi sobre la pregunta de audience size de cada audiencia) sobre la población digital de Chile (15.6M).",
+    "sharePct de cada persona calculado proporcional al universo real de cada audiencia dentro del total combinado (277,312 / 5,559,211 = 5.0% NEEDS; 5,281,899 / 5,559,211 = 95.0% WANTS) — NO son splits de una misma audiencia base, sino dos construcciones de audiencia distintas del mismo framework de segmentación de DOITE (necesidad funcional vs. aspiración de marca), combinadas aquí en un mismo caso por completar el mapa de segmentos de ese cliente.",
+    "El universo real de NEEDS (277,312) es casi idéntico al de HighPropensity ya analizado (275,223, caso 'alta-propension-moda-chile') — posible solapamiento entre ambos segmentos del framework DOITE; queda para que el equipo editorial decida si deben fusionarse o mantenerse como segmentos separados.",
+    "Género verificado 1:1 vía explore_insight_gwi para ambas personas (NEEDS 80.8% femenino / WANTS 75.3% femenino).",
+    "Edades: GWI solo confirmó que el 100% de cada audiencia está en el rango 16-64, sin desagregación adicional con muestra suficiente — se deja cada banda en 0 en vez de inventar un valor.",
+    "GWI no devolvió desagregación por ciudad con muestra suficiente para ninguna de las dos audiencias.",
+    "GWI no devolvió un desglose de franja horaria (time-of-day) aplicable a la audiencia general para ninguna de las dos personas (solo datos de horario de TV internacional en un subgrupo de 'frequent viewers', no representativo del total) — el customer journey de 6 bloques queda con lugar/medios genéricos inferidos del perfil y sin cifras propias de actividades, pendiente de criterio del equipo creativo.",
+    "Motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de cada audiencia.",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "compradora-necesidad-funcional-moda-chile",
+      name: "Camila Reyes",
+      archetype: "La Compradora Funcional",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Segmento 'NEEDS' del framework DOITE: fuertemente femenina (80.8%), con el interés en moda más alto de los dos segmentos (91.2%), pero con un perfil de intereses culturales amplio (cine, música, salir a comer) y un comportamiento de compra sensible a precio y promociones.",
+      aiInsight: aiInsight(
+        "Cruza el interés real en moda (91.2%, el más alto de los dos segmentos DOITE) con una fuerte sensibilidad a precio (73% busca las mejores ofertas, 74% prefiere comprar online cuando hay cupones) y un comportamiento de validación social muy marcado (100% usa redes para ver qué es tendencia) — es una audiencia que SÍ quiere moda pero necesita el empujón de la oferta/promoción para convertir, y valida su decisión socialmente antes de comprar.",
+        [
+          { label: "Fashion-conscious real, no aspiracional", detail: "91.2% interesada en moda (índice 311 verificado vía explore_insight_gwi) — el nivel más alto de interés real de moda registrado en el catálogo de audiencias Chile, por encima incluso del segmento HighPropensity ya analizado." },
+          { label: "Deal-seeker explícito", detail: "74% prefiere comprar online cuando hay cupones/descuentos y 73% busca activamente las mejores ofertas — el mensaje de marca debe convivir con una oferta de valor clara, no solo con storytelling." },
+          { label: "Validación social antes de comprar", detail: "100% usa redes sociales para ver qué está en tendencia y 65% para ver contenido de sus marcas favoritas — el contenido de descubrimiento y prueba social en Instagram/TikTok es más relevante que la pauta tradicional." },
+        ]
+      ),
+      sharePct: 5.0,
+      demographics: {
+        genderSplit: { male: 19.2, female: 80.8 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en moda", pct: 91.2 },
+        { label: "Quiere que las marcas sean innovadoras", pct: 83.0 },
+        { label: "Quiere que las marcas sean auténticas", pct: 74.0 },
+        { label: "Le importa mantenerse al día con tendencias", pct: 62.0 },
+        { label: "Quiere que las marcas sean socialmente responsables", pct: 62.0 },
+      ],
+      barriers: [
+        { label: "Prefiere comprar online cuando hay cupones/descuentos", pct: 74.0 },
+        { label: "Busca las mejores ofertas al comprar", pct: 73.0 },
+        { label: "Usa códigos de descuento/cupones", pct: 59.0 },
+        { label: "Se describe como sensible al precio", pct: 53.0 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en tecnología", pct: 79.0 },
+        { label: "Usa internet para gestionar finanzas/ahorros", pct: 55.0 },
+        { label: "Pagó una suscripción de streaming de video en el último mes", pct: 59.0 },
+        { label: "Usa redes sociales para hacer nuevos contactos", pct: 53.0 },
+      ],
+      media: [
+        { label: "Usa redes sociales para ver qué es tendencia", pct: 100.0 },
+        { label: "TV en vivo", pct: 93.0 },
+        { label: "Video móvil (última semana)", pct: 86.0 },
+        { label: "TV on-demand / streaming", pct: 86.0 },
+        { label: "Redes sociales (noticias)", pct: 69.0 },
+        { label: "Heavy user de streaming (Netflix, Hulu)", pct: 60.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Contenido de tendencias y nuevos lanzamientos.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes y ofertas", "Instagram, apps de cupones", "Comunicación de ofertas/descuentos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido de tendencias y validación social.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y ecommerce", "Instagram, apps de ecommerce", "Retargeting con oferta/promoción explícita.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV en vivo, streaming", "Decisión de compra con cupón/descuento.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Streaming, Instagram", "Consumo de contenido y exploración de catálogo.", []),
+      ],
+    },
+    {
+      id: "compradora-aspiracional-moda-chile",
+      name: "Valentina Muñoz",
+      archetype: "La Compradora Aspiracional",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Segmento 'WANTS' del framework DOITE: el más grande de los dos (33.9% de la población digital de Chile), con interés en moda real pero más moderado (70.1%) que el segmento NEEDS, y un perfil con más peso de entretenimiento (música, cine) que de moda pura.",
+      aiInsight: aiInsight(
+        "A diferencia del segmento NEEDS (más deal-seeker y validador social), este segmento WANTS es casi 19 veces más grande (33.9% vs. 1.8% de la población digital) y su interés dominante no es la moda en sí (70.1%) sino el entretenimiento: música (80.8%) y cine (74.8%) superan el interés en moda — sugiere que el gancho de marca más eficiente para este segmento masivo es el entretenimiento/cultura pop, con la moda integrada como beneficio secundario.",
+        [
+          { label: "El entretenimiento es el gancho, no la moda", detail: "80.8% interesada en música y 74.8% en cine, ambos por encima del 70.1% interesado en moda — el contenido de marca debería vivir primero en cultura pop/entretenimiento, con la moda integrada como parte de ese contenido." },
+          { label: "Segmento masivo, no de nicho", detail: "Con 5.28M de personas (33.9% de la población digital de Chile), es ~19 veces más grande que el segmento NEEDS — una estrategia de medios para este segmento necesita escala (TV, streaming, social masivo), no micro-targeting." },
+          { label: "Consumo de TV/streaming muy alto", detail: "86% usa TV para ver TV en vivo y 81% para on-demand/streaming — la TV y el streaming siguen siendo el canal de mayor alcance para este segmento, más que las redes sociales puras." },
+        ]
+      ),
+      sharePct: 95.0,
+      demographics: {
+        genderSplit: { male: 24.7, female: 75.3 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (GWI no devolvió desagregación por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en música", pct: 80.8 },
+        { label: "Interesada en cine", pct: 74.8 },
+        { label: "Interesada en moda", pct: 70.1 },
+        { label: "Interesada en salir a comer", pct: 66.8 },
+        { label: "Quiere que las marcas sean innovadoras", pct: 57.0 },
+      ],
+      barriers: [
+        { label: "Prefiere comprar online cuando hay cupones/descuentos", pct: 51.0 },
+        { label: "Se describe como sensible al precio", pct: 38.0 },
+        { label: "Compró ropa en el último mes", pct: 60.0 },
+        { label: "Compró ropa online en el último mes", pct: 25.0 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en tecnología", pct: 59.0 },
+        { label: "Interesada en gaming", pct: 46.0 },
+        { label: "Usa redes sociales para encontrar contenido", pct: 43.0 },
+        { label: "Pagó una suscripción de streaming de música en el último mes", pct: 38.0 },
+      ],
+      media: [
+        { label: "TV en vivo", pct: 86.0 },
+        { label: "TV on-demand / streaming", pct: 81.0 },
+        { label: "Video móvil (última semana)", pct: 65.0 },
+        { label: "Interesada en televisión", pct: 59.0 },
+        { label: "Heavy user de streaming (Netflix, Hulu)", pct: 41.0 },
+        { label: "Escucha podcasts", pct: 29.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Streaming y redes", "YouTube, Instagram", "Contenido de música/entretenimiento.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "TV y redes", "TV internacional, redes", "Programación de entretenimiento.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido de cine/música con guiño de moda.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV y streaming", "TV, streaming", "Programación de entretenimiento de alto alcance.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV en vivo", "TV en vivo", "Contenido de entretenimiento masivo.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming", "Streaming, podcasts", "Consumo de series/películas y música.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261027 = {
+  id: "conquilla-festival-atlantico-colombia",
+  name: "Festival Conquilla — audiencia de eventos en vivo en Atlántico (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-27)",
+  insightNote:
+    "Audiencia real de GWI ('Corferias>Conquilla>Conocedores', audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6): residentes de Atlántico, Colombia, de 28 a 64 años, interesados en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo, residentes en Atlántico, 28-64 años", pct: 2.3 },
+  ],
+  footnotes: [
+    "2.3% = universo real de GWI (713,030 personas, verificado vía explore_insight_gwi sobre la pregunta de audience size) sobre la población digital total de Colombia (31.06M).",
+    "Género verificado 1:1 vía explore_insight_gwi (52.1% femenino / 47.9% masculino).",
+    "Edad: la audiencia está definida por GWI con el filtro 28-64 años; GWI no devolvió desagregación adicional por banda de edad con muestra suficiente dentro de ese rango — se deja cada banda en 0 en vez de inventar un valor.",
+    "GWI no devolvió desagregación por ciudad dentro de Atlántico con muestra suficiente.",
+    "GWI no devolvió un desglose de franja horaria (time-of-day) aplicable a la audiencia general (solo datos de horario de TV internacional en un subgrupo de 'frequent viewers', no representativo del total) — el customer journey de 6 bloques queda con lugar/medios genéricos inferidos del perfil y sin cifras propias de actividades, pendiente de criterio del equipo creativo.",
+    "Motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "conocedor-festival-conquilla-atlantico",
+      name: "Daniel Pacheco",
+      archetype: "El Conocedor Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Adulto de Atlántico (28-64 años), con género casi parejo (52.1% femenino), que se describe como 'Arts & Culture Enthusiast' (61%) y prefiere gastar en experiencias (70.8%) antes que en productos nuevos. Es un asistente habitual de eventos en vivo: ya compró boletos de concierto en los últimos meses y está siempre buscando el próximo show.",
+      aiInsight: aiInsight(
+        "Cruza el perfil de 'consumidor de experiencias' (70.8% prefiere gastar en experiencias vs. productos) con un comportamiento ya activo de compra de boletos (20% compró en los últimos 3-6 meses, 16% planea comprar en los próximos 3-6 meses) — a diferencia de audiencias de entretenimiento más aspiracionales, esta ya es compradora recurrente de boletos, por lo que el reto de medios no es generar intención sino capturar la decisión en la ventana de compra activa (always-on más que campaña puntual).",
+        [
+          { label: "Comprador recurrente, no ocasional", detail: "20% compró boletos de concierto en los últimos 3-6 meses y 16% planea comprar en los próximos 3-6 meses — es base de clientes recurrentes del Festival Conquilla y eventos similares, no una audiencia fría." },
+          { label: "Prioriza experiencias sobre bienes materiales", detail: "70.8% prefiere gastar dinero en experiencias en vez de en un producto nuevo — el mensaje de marca rinde mejor si vende la experiencia completa del evento (ambiente, comunidad, descubrimiento musical) y no solo el line-up." },
+          { label: "Mobile-first con alta preocupación por privacidad de datos", detail: "88% accede a internet principalmente desde mobile, pero 48% se preocupa por cómo las empresas usan sus datos personales — la comunicación digital (compra de boletos, CRM) debe ser mobile-first pero transparente en el manejo de datos para no generar fricción." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 47.9, female: 52.1 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico, Colombia (audiencia definida por GWI con este filtro; sin desagregación adicional por ciudad con muestra suficiente)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prefiere gastar en experiencias antes que en productos", pct: 70.8 },
+        { label: "Se describe como 'Arts & Culture Enthusiast'", pct: 61.0 },
+        { label: "Interesado en actividades al aire libre (camping/hiking)", pct: 54.0 },
+        { label: "Le resulta fácil descubrir música nueva que le gusta", pct: 51.0 },
+        { label: "Le importa contribuir a su comunidad", pct: 45.0 },
+      ],
+      barriers: [
+        { label: "Se preocupa por cómo las empresas usan sus datos personales", pct: 48.0 },
+        { label: "Se describe como sensible al precio", pct: 35.0 },
+        { label: "Compró boletos de concierto en los últimos 3-6 meses", pct: 20.0 },
+        { label: "Planea comprar boletos en los próximos 3-6 meses", pct: 16.0 },
+      ],
+      digitalInterests: [
+        { label: "Accede a internet principalmente desde mobile", pct: 88.0 },
+        { label: "Interesado en tecnología", pct: 72.0 },
+        { label: "Usa apps móviles para buscar información de marcas", pct: 36.0 },
+        { label: "Publicó sobre una salida nocturna/social en el último mes", pct: 11.0 },
+      ],
+      media: [
+        { label: "Reconoce Disney Channel", pct: 87.0 },
+        { label: "Reconoce CNN", pct: 85.0 },
+        { label: "Reconoce National Geographic Channel", pct: 82.0 },
+        { label: "Reconoce Telemundo", pct: 82.0 },
+        { label: "Reconoce ESPN", pct: 81.0 },
+        { label: "Usa Instagram para buscar información de productos/marcas", pct: 71.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Mobile / redes sociales", "Instagram, WhatsApp", "Contenido de descubrimiento de nueva música.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "TV internacional / redes", "TV por cable, Instagram", "Programación cultural/entretenimiento.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram", "Contenido de marcas y recomendaciones.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Mobile / apps", "Apps móviles, buscadores", "Búsqueda de información de eventos/boletos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV / streaming", "TV, streaming", "Consumo de contenido cultural.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / salidas sociales", "Redes sociales", "Instagram, WhatsApp", "Posteo sobre salidas y vida social.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7657,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261027],
   },
   {
     id: "deportes",
@@ -7439,7 +7683,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020, CASE_MODA_NECESIDAD_ASPIRACION_CHILE_GWI_AUTO_20261027],
   },
   {
     id: "fintech",

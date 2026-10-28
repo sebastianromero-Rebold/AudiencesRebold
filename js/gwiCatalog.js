@@ -313,6 +313,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Agregadas 2026-10-28 por la automatización diaria de GWI.
+  { id: "a3bf5df4-86c4-4091-a917-1c0a3e3b658c", title: "Paramo (co) PresentaGeneralEventos", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals and music." },
+  { id: "8ed8b71e-84b7-4718-ba25-f7c95635939f", title: "Paramo (co) ReggaetonValle", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, enjoy listening to Latin music, and live in Valle del Cauca." },
+  { id: "4558eb03-cac0-4aed-9f57-a1633f96f7eb", title: "Paramo>Generos>Atlantico", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia and is interested in live events like music festivals or streaming events, always on the lookout for new live music events, and is between 18 and 50 years old, living in Atlantico." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +408,7 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  "a3bf5df4-86c4-4091-a917-1c0a3e3b658c": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-10-28" },
+  "8ed8b71e-84b7-4718-ba25-f7c95635939f": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-valle-del-cauca", personaId: "fan-musica-latina-valle-del-cauca", analyzedAt: "2026-10-28" },
+  "4558eb03-cac0-4aed-9f57-a1633f96f7eb": { categoryId: "entretenimiento", caseId: "generos-atlantico-colombia", personaId: "entusiasta-cultural-atlantico-colombia", analyzedAt: "2026-10-28" },
 };

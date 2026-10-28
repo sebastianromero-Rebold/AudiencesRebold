@@ -7308,6 +7308,194 @@ const CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020 = {
   ],
 };
 
+const CASE_GENEROS_ATLANTICO_GWI_AUTO_20261028 = {
+  id: "generos-atlantico-colombia",
+  name: "Entusiastas de eventos en vivo y cultura en Atlántico (Páramo>Generos>Atlántico)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-28)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>Generos>Atlantico' (audience_id 4558eb03-cac0-4aed-9f57-a1633f96f7eb): personas de 18 a 50 años en Atlántico (Colombia) interesadas en eventos en vivo como festivales de música o eventos por streaming, y siempre atentas a nuevos eventos de música en vivo.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (1,136,528) sobre la población digital de Colombia (31.06M)", pct: 3.7 },
+  ],
+  footnotes: [
+    "3.7% ≈ universo real de la audiencia en GWI (598,998 mujeres + 537,530 hombres = 1,136,528, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género y bandas de edad), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas de edad 55-64 y 65+: la audiencia está definida por tener entre 18 y 50 años, por lo que no aplican (se dejan en 0).",
+    "Top ciudades: la audiencia está definida por residir en Atlántico, por lo que no aplica desagregación adicional por ciudad.",
+    "El customer journey usa datos reales de GWI sobre horario de consumo de canales de TV internacionales, pero medidos solo entre quienes ya ven esos canales con frecuencia (subsegmento, no el 100% de la audiencia) — se marca así en cada bloque; donde no hubo esa señal (medio día), se deja con lugar/medios genéricos sin cifras inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Esta audiencia es una variante regional (Atlántico) de la misma campaña 'Generos' ya analizada en 'generos-bogota-colombia' (d7d374a3-f4b5-4de3-96bc-39d1d6b7dc22, Bogotá) y 'generos-colombia-nacional' (91ac359e-cdb3-4b4d-b793-77600f08aba5, nacional), pero es un audience_id distinto.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-cultural-atlantico-colombia",
+      name: "Valentina Pacheco",
+      archetype: "La Costeña Conectada a la Cultura",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en el departamento del Atlántico, tiene entre 18 y 50 años y está siempre pendiente de nuevos eventos de música en vivo. Se distingue por un interés inusualmente alto en eventos transmitidos por streaming, además de apoyar activamente a artistas locales y a la escena de conciertos de su región.",
+      aiInsight: aiInsight(
+        "Esta audiencia revela una preferencia atípica por el formato digital del entretenimiento en vivo: 51.7% está interesada en eventos por streaming (índice 248, el más alto de toda la categoría), muy por encima del interés 'físico' en eventos en vivo (66.8%, índice 176.3) — y aun así solo 20.4% compró boletos de concierto en los últimos 3-6 meses (índice 133.7). Es además una audiencia que documenta y comparte: publica sobre bellas artes/cultura (índice 218) y sobre computadoras (índice 205) muy por encima del promedio, señal de un perfil que amplifica contenido más que uno que solo lo consume.",
+        [
+          { label: "Brecha entre interés y compra real de boletos", detail: "66.8% interesada en eventos en vivo (índice 176.3) pero solo 20.4% compró boletos de concierto en los últimos 3-6 meses (índice 133.7) — la pauta debe empujar la conversión, no solo el awareness." },
+          { label: "Interés inusualmente alto en eventos por streaming", detail: "51.7% interesada en eventos por streaming, con un índice de 248 (el más alto registrado en esta categoría) — una estrategia híbrida (evento presencial + transmisión en vivo) puede capturar demanda que el formato 100% presencial no alcanza." },
+          { label: "Es una audiencia que publica y amplifica, no solo consume", detail: "Publica sobre bellas artes/cultura (índice 218) y sobre computadoras (índice 205) muy por encima del promedio — activaciones con incentivo a compartir (UGC, hashtags de evento) tienen terreno fértil aquí." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 47.3, female: 52.7 },
+        ageBands: [
+          { label: "16-24", pct: 25 },
+          { label: "25-34", pct: 33 },
+          { label: "35-44", pct: 29 },
+          { label: "45-54", pct: 12 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (departamento) — 100% por definición de la audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 66.8 },
+        { label: "Interesada en eventos por streaming", pct: 51.7 },
+        { label: "Siempre busca nuevos eventos de música en vivo", pct: 33 },
+        { label: "Ama apoyar artistas locales o ir a conciertos locales", pct: 42 },
+      ],
+      barriers: [
+        { label: "Brecha entre interés en eventos en vivo (66.8%) y compra real de boletos de concierto en los últimos 3-6 meses (20.4%)", pct: 20.4 },
+        { label: "Solo 35.9% prioriza un checkout rápido y sencillo al comprar online (menos que el promedio) — la fricción no está en la facilidad de pago", pct: 35.9 },
+        { label: "Baja compra de boletos específicamente en línea pese al alto interés en eventos digitales", pct: 5.5 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en eventos por streaming", index: 248 },
+        { label: "Pagó una suscripción a un servicio de redes sociales el último mes", index: 234 },
+        { label: "Publicó sobre bellas artes/cultura en internet el último mes", index: 218 },
+        { label: "Publicó sobre computadoras en internet el último mes", index: 205 },
+      ],
+      media: [
+        { label: "Vio TV bajo demanda o streaming el último mes", pct: 95 },
+        { label: "Usa un televisor para ver streaming bajo demanda", pct: 76 },
+        { label: "Usó Spotify para música/radio/audiolibros el último mes", pct: 63 },
+        { label: "Usa redes sociales para ver qué es tendencia", pct: 26 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV internacional y redes", "Canales internacionales, Instagram", "Entre espectadoras frecuentes de TV internacional, 35% las ve en este bloque (47% más que el promedio).", [
+          { label: "Ve canales de TV internacionales entre 6 y 9 am (subsegmento de espectadoras frecuentes)", pct: 35, index: 147 },
+        ]),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "TV internacional entre semana", "Canales internacionales", "Entre espectadoras frecuentes de TV internacional, 37% las ve en este bloque entre semana (27% más que el promedio).", [
+          { label: "Ve canales de TV internacionales de 9am a 12m, entre semana (subsegmento)", pct: 37, index: 127 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional y redes", "Canales internacionales, redes", "Entre espectadoras frecuentes de TV internacional, 45% las ve de 2 a 5 pm entre semana (8.2% más que el promedio).", [
+          { label: "Ve canales de TV internacionales de 2 a 5 pm, entre semana (subsegmento)", pct: 45, index: 108 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "Canales internacionales, streaming", "Entre espectadoras frecuentes de TV internacional, 57% prefiere verlos entre 5 y 7 pm (19% más que el promedio).", [
+          { label: "Prefiere ver canales de TV internacionales entre 5 y 7 pm (subsegmento)", pct: 57, index: 119 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional y streaming", "Canales internacionales, apps de streaming", "Entre espectadoras frecuentes de TV internacional, 49% las ve entre 10pm y medianoche entre semana (28% más que el promedio).", [
+          { label: "Ve canales de TV internacionales entre 10pm y medianoche, entre semana (subsegmento)", pct: 49, index: 128 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_REGGAETON_VALLE_GWI_AUTO_20261028 = {
+  id: "reggaeton-musica-latina-valle-del-cauca",
+  name: "Fans de música latina y eventos en vivo en el Valle del Cauca (Paramo (co) ReggaetonValle)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-28)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo (co) ReggaetonValle' (audience_id 8ed8b71e-84b7-4718-ba25-f7c95635939f): personas en Colombia que residen en Valle del Cauca, están interesadas en eventos en vivo como festivales de música y disfrutan escuchar música latina.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (806,850) sobre la población digital de Colombia (31.06M)", pct: 2.6 },
+  ],
+  footnotes: [
+    "2.6% ≈ universo real de la audiencia en GWI (461,041 mujeres + 345,809 hombres = 806,850, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género y bandas de edad), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "Top ciudades: la audiencia está definida por residir en Valle del Cauca, por lo que no aplica desagregación adicional por ciudad.",
+    "El customer journey usa datos reales de GWI sobre horario de consumo de canales de TV internacionales, medidos solo entre quienes ya ven esos canales con frecuencia (subsegmento, no el 100% de la audiencia), para los bloques de mediodía en adelante; los bloques de la mañana no tuvieron señal específica y quedan con lugar/medios genéricos sin cifras inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Esta audiencia es un corte regional (Valle del Cauca) de la misma campaña 'ReggaetonGeneral' ya analizada en 'reggaeton-musica-latina-colombia' (ebda5c56-716e-496d-8607-821c96cb2367), pero es un audience_id distinto.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "fan-musica-latina-valle-del-cauca",
+      name: "Isabella Zapata",
+      archetype: "La Melómana Vallecaucana",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en el Valle del Cauca, está 100% interesada en eventos en vivo como festivales de música y tiene una fuerte afinidad por la música latina. Es apasionada por un amplio rango de artistas y muestra un interés por el baile (salsa, danza urbana) muy por encima del promedio nacional — coherente con la cultura de una región reconocida por su escena de baile.",
+      aiInsight: aiInsight(
+        "Esta audiencia convierte interés en compra mejor que el promedio de la categoría: 25.1% compró boletos de concierto en los últimos 3-6 meses (índice 165) frente al 10.8% visto en la audiencia nacional de reggaetón ya analizada — Valle del Cauca parece ser una plaza con mejor tasa de conversión real. Se suma un interés por el baile muy marcado (50%, índice 182) y un perfil digitalmente activo que usa redes para detectar tendencias (38%, índice 189) y muestra interés en emprendimiento (40%, índice 172).",
+        [
+          { label: "Mejor conversión de boletos que el promedio nacional de la categoría", detail: "25.1% compró boletos de concierto en los últimos 3-6 meses (índice 165), frente al 10.8% de la audiencia nacional de reggaetón ya analizada ('reggaeton-musica-latina-colombia') — plaza prioritaria para activaciones de venta directa." },
+          { label: "Fuerte identidad de baile, no solo de escucha pasiva", detail: "50% interesada en baile (ballet, danza urbana, salsa, índice 182) — una activación que integre baile en vivo (no solo el concierto en sí) puede resonar más que en otras regiones." },
+          { label: "Perfil digital-social activo y emprendedor", detail: "38% usa redes sociales para ver qué es tendencia (índice 189) y 40% está interesada en emprendimiento (índice 172) — canal natural para marketing boca a boca/contenido generado por usuarios." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 42.9, female: 57.1 },
+        ageBands: [
+          { label: "16-24", pct: 21 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 18 },
+          { label: "55-64", pct: 8.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca (departamento) — 100% por definición de la audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 100 },
+        { label: "Disfruta escuchar música latina", pct: 100 },
+        { label: "Es apasionada por un amplio rango de artistas/bandas", pct: 67 },
+        { label: "Interesada en el baile (ballet, danza urbana, salsa, etc.)", pct: 50 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto en los últimos 3-6 meses (conversión real, más alta que el promedio nacional de la categoría)", pct: 25.1 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses", pct: 21 },
+        { label: "Baja compra de boletos específicamente en línea — el canal digital aún no es el principal", pct: 11 },
+      ],
+      digitalInterests: [
+        { label: "Compró boletos de concierto en los últimos 3-6 meses", index: 165 },
+        { label: "Interesada en el baile (salsa, danza urbana, etc.)", index: 182 },
+        { label: "Interesada en emprendimiento", index: 172 },
+        { label: "Usa redes sociales para ver qué es tendencia", index: 189 },
+      ],
+      media: [
+        { label: "Vio videos en el móvil la última semana", pct: 77 },
+        { label: "Vio TV o streaming bajo demanda el último mes", pct: 96 },
+        { label: "Usó Netflix el último mes", pct: 76 },
+        { label: "Es usuaria intensiva de streaming de música", pct: 55 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "TV internacional (almuerzo)", "Canales internacionales", "Entre espectadoras frecuentes de TV internacional, 37.1% la ve en horario de almuerzo (mediodía a 2pm), 22.5% más que el promedio.", [
+          { label: "Ve canales de TV internacionales en horario de almuerzo (mediodía-2pm, subsegmento)", pct: 37.1, index: 122.5 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional (media tarde)", "Canales internacionales", "Entre espectadoras frecuentes de TV internacional, 43.6% la ve entre 2 y 5 pm, 3.8% más que el promedio.", [
+          { label: "Ve canales de TV internacionales de 2 a 5 pm (subsegmento)", pct: 43.6, index: 103.8 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional (tarde-noche)", "Canales internacionales", "Entre espectadoras frecuentes de TV internacional, 58.3% prefiere verlos entre 5 y 7 pm, 21% más que el promedio.", [
+          { label: "Prefiere ver canales de TV internacionales entre 5 y 7 pm (subsegmento)", pct: 58.3, index: 121.4 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional (prime time)", "Canales internacionales", "Entre espectadoras frecuentes de TV internacional, 70.6% ve el horario prime (7-10pm) entre semana, 12.3% más que el promedio.", [
+          { label: "Ve canales de TV internacionales en horario prime (7-10pm, entre semana, subsegmento)", pct: 70.6, index: 112.3 },
+        ]),
+      ],
+    },
+  ],
+};
+
 const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   id: "interes-financiero-amplio-colombia",
   name: "Interés amplio en finanzas y pagos digitales (Colombia)",
@@ -7413,7 +7601,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_GENEROS_ATLANTICO_GWI_AUTO_20261028, CASE_REGGAETON_VALLE_GWI_AUTO_20261028],
   },
   {
     id: "deportes",

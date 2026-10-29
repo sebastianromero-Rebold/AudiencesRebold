@@ -7398,6 +7398,284 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_OMODA_WANTS_GWI_AUTO_20261029 = {
+  id: "omoda-wants-chile",
+  name: "OMODA — segmento amplio de deseo/aspiración 'Wants' (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-29)",
+  insightNote:
+    "Audiencia real de GWI ('OMODA>OMODASA>B2C>WANTS>CHILE', audience_id a5dcb331-8113-412c-beb2-e63e5b98ebc6): chilenos del nivel 'Wants' (deseo/aspiración) del embudo de segmentación de la marca de autos OMODA, más amplio que el ya procesado 'HighPropensity'.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Wants' de OMODA en GWI (7,164,006) sobre la población digital de Chile (15.6M)", pct: 45.9 },
+  ],
+  footnotes: [
+    "45.9% ≈ universo real de la audiencia en GWI (7,164,006 = suma de universo hombres 3,703,703 + mujeres 3,460,303, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M).",
+    "Esta audiencia es mucho más amplia que la ya procesada 'OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE' (audience_id 4fa856ae, caso 'omoda-alta-propension-chile', 14.6%) — es un nivel distinto del mismo embudo de segmentación de OMODA (Wants vs. HighPropensity), probablemente no mutuamente excluyente con él, por lo que se deja como caso independiente para que el equipo editorial decida si lo usa como paso previo del mismo funnel o lo fusiona.",
+    "GWI devolvió '100% de la audiencia reside en Chile' al verificarlo explícitamente vía chat_gwi, pese a que una respuesta anterior la describió como '100% de América Latina' (probablemente porque la pregunta de región agrupa Chile dentro de 'Américas') — se confirmó el país vía una pregunta de seguimiento explícita.",
+    "Demografía, motivaciones/actitudes, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Esta audiencia es de cobertura nacional en Chile — GWI no devolvió un desagregado por ciudad para esta consulta, solo zona urbana/suburbana/rural.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos, sin cifras de actividades inventadas.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "aspiracional-omoda-wants-chile",
+      name: "Valentina Rojas",
+      archetype: "La Aspiracional Multi-Interés",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Chilena del segmento amplio 'Wants' de OMODA: género casi parejo (51.7% hombres, 48.3% mujeres), bien distribuida entre 16 y 64 años, 80% urbana. Es una audiencia de intereses múltiples y aspiracionales — viajar (79%), cultura pop/ocio (82%) y música (79%) encabezan su perfil — más que una audiencia definida estrictamente por interés automotor, lo que sugiere que este nivel del embudo usa estilo de vida aspiracional como proxy antes de calificar por intención de compra real.",
+      aiInsight: aiInsight(
+        "Cruza con la lógica de embudo 'estilo de vida antes que categoría': a diferencia del segmento 'HighPropensity' ya procesado (enfocado en atributos de compra de auto como vans familiares o sensibilidad a precio), este segmento 'Wants' se define por intereses aspiracionales amplios (viajar 79%, cultura pop 82%, creatividad 61%) — es una audiencia de awareness/consideración temprana, no de intención de compra inminente, y debe comunicarse distinto (estilo de vida/marca) en vez de specs/precio.",
+        [
+          { label: "El interés en autos existe pero no es el diferenciador del segmento", detail: "50% tiene interés en coches/automovilismo, pero eso queda por debajo de viajar (79%), cultura pop (82%) y música (79%) — para este nivel del embudo, un mensaje de marca/estilo de vida probablemente rinde más que un mensaje de especificaciones del vehículo." },
+          { label: "Es una audiencia creativa y abierta a lo nuevo, no tradicionalista", detail: "61% se describe como creativo y solo 22% dice que no le importan las tradiciones (96% más que el promedio) — un ángulo de marca que se posicione como alternativa moderna/no convencional frente a marcas automotrices establecidas puede resonar mejor que un mensaje de herencia de marca." },
+          { label: "Alto consumo de streaming y redes como canal, bajo interés en gadgets", detail: "55% es heavy user de streaming de música y 52% de redes sociales, pero solo 11% está interesado en gadgets (57% menos que el promedio) — vale priorizar contenido de marca en streaming/redes sobre canales o mensajes centrados en innovación tecnológica del vehículo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 51.7, female: 48.3 },
+        ageBands: [
+          { label: "16-24", pct: 17 },
+          { label: "25-34", pct: 25 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI; 80% zona urbana, 11% suburbana, 9.7% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante pasar tiempo con su familia", pct: 77 },
+        { label: "Considera importante aprender nuevas habilidades", pct: 76 },
+        { label: "Considera importante tener seguridad financiera", pct: 74 },
+        { label: "Considera importante desafiarse a sí mismo", pct: 70 },
+        { label: "Se describe como creativo", pct: 61 },
+        { label: "Motivado a promover su marca favorita por recompensas", pct: 51 },
+      ],
+      barriers: [
+        { label: "Suele sentir ansiedad", pct: 32 },
+        { label: "No considera importante mantenerse al día con tendencias", pct: 33 },
+        { label: "Las redes sociales le generan ansiedad", pct: 17 },
+        { label: "Bajo interés en gadgets/tecnología de consumo", pct: 11 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en viajar", pct: 79 },
+        { label: "Entusiasta de la cultura popular y el ocio", pct: 82 },
+        { label: "Interesado en música", pct: 79 },
+        { label: "Interesado en cine", pct: 77 },
+        { label: "Interesado en coches y automovilismo", pct: 50 },
+        { label: "Pagó suscripción de streaming de video en el último mes", pct: 51 },
+      ],
+      media: [
+        { label: "Heavy user de streaming de música", pct: 55 },
+        { label: "Heavy user de redes sociales", pct: 52 },
+        { label: "Heavy user de videos cortos (Reels/TikTok)", pct: 44 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 40 },
+        { label: "Heavy user de prensa/artículos en línea", pct: 34 },
+        { label: "Heavy user de radio", pct: 27 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Streaming de música y redes sociales", "Streaming de música, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Redes sociales y prensa online", "Instagram, prensa online", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Videos cortos", "TikTok, Reels", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de música y video", "Streaming de música, Netflix", "55% es heavy user de streaming de música — canal natural para contenido de marca en este bloque.", [
+          { label: "Heavy user de streaming de música", pct: 55, index: 266 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261029 = {
+  id: "conquilla-conocedores-atlantico-colombia",
+  name: "Conocedores de eventos culturales — Atlántico (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-29)",
+  insightNote:
+    "Audiencia real de GWI ('Corferias>Conquilla>Conocedores', audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6): residentes del Atlántico (Colombia) de 28 a 64 años interesados en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Conquilla_Conocedores' en GWI (568,553) sobre la población digital de Colombia (31.06M)", pct: 1.8 },
+  ],
+  footnotes: [
+    "1.8% ≈ universo real de la audiencia en GWI (568,553 = suma de universo mujeres 287,686 + hombres 280,867, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "La descripción autogenerada por GWI para esta audiencia dice erróneamente 'currently reside in Chile' junto con 'live in Atlantico' — una inconsistencia de la propia plataforma (Atlántico es un departamento de Colombia). Se confirmó el mercado como Colombia por el tamaño de universo (568K, consistente con la escala de Colombia/31M y no con Chile/15.6M) y porque todas las preguntas demográficas devueltas comparan contra 'usuarios de internet de Colombia'.",
+    "Demografía, motivaciones/actitudes, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi.",
+    "GWI no devolvió desglose por ciudad específica dentro del departamento del Atlántico (ej. Barranquilla) para esta audiencia, solo zona urbana/suburbana/rural.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos, sin cifras de actividades inventadas.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "conocedor-cultural-atlantico-colombia",
+      name: "Jorge Palacio",
+      archetype: "El Conocedor Cultural Sociable",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Residente del Atlántico (Colombia), de 28 a 64 años (33% entre 25-34, 32% entre 35-44), género casi parejo (50.6% mujeres, 49.4% hombres) y mayoritariamente urbano (89%). Se describe como sociable y extrovertido (52%), disfruta ser el primero en probar cosas nuevas (34%) y comparte activamente recomendaciones de productos con su círculo cercano (46%) — un conector social más que un asistente pasivo a eventos.",
+      aiInsight: aiInsight(
+        "Cruza con el rol de 'conector social' en la decisión de asistir a eventos culturales: 52% se describe como sociable/extrovertido y 46% cuenta a amigos y familia sobre productos nuevos — para esta audiencia, el boca a boca y la validación social dentro de su círculo probablemente pesan más en la decisión de compra de boletos que la publicidad directa del evento.",
+        [
+          { label: "Es un difusor activo, no solo un consumidor del evento", detail: "46% cuenta a su círculo sobre productos/novedades y 34% disfruta ser el primero en probarlas — activar a este segmento como embajador temprano (preventas, contenido para compartir) puede generar alcance orgánico más allá del alcance pagado." },
+          { label: "Valora identificación cultural, no solo entretenimiento", detail: "31% considera importante preservar su herencia y tradiciones, más que el promedio — una comunicación que conecte el evento con identidad cultural regional (Caribe/Atlántico) puede resonar más que un mensaje genérico de entretenimiento." },
+          { label: "Sigue actualidad y tecnología de cerca pese a estar fuera de las grandes ciudades", detail: "73% está interesado en tecnología y 53% en noticias y actualidad — contenido digital bien producido (no solo medios tradicionales) tiene espacio real en este mercado regional." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49.4, female: 50.6 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 33 },
+          { label: "35-44", pct: 32 },
+          { label: "45-54", pct: 21 },
+          { label: "55-64", pct: 14 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (sin desagregado por ciudad; 89% zona urbana, 4.9% suburbana, 6% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Se describe como sociable y extrovertido", pct: 52 },
+        { label: "Cuenta a amigos/familia sobre productos nuevos", pct: 46 },
+        { label: "Cree que las redes sociales benefician a la sociedad", pct: 43 },
+        { label: "Disfruta ser el primero en probar cosas nuevas", pct: 34 },
+        { label: "Considera importante mantenerse al día con tendencias", pct: 31 },
+        { label: "Considera importante preservar herencia y tradiciones", pct: 31 },
+      ],
+      barriers: [
+        { label: "Interesado en temas ambientales", pct: 46 },
+        { label: "Interesado en noticias y actualidad (compite por atención)", pct: 53 },
+        { label: "Propenso a la ansiedad", pct: 19 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en tecnología", pct: 73 },
+        { label: "Interesado en salir a comer", pct: 78 },
+        { label: "Entusiasta de las artes y la cultura", pct: 63 },
+        { label: "Interesado en actividades al aire libre", pct: 58 },
+        { label: "Interesado en reality shows", pct: 39 },
+        { label: "Interesado en baile", pct: 36 },
+      ],
+      media: [
+        { label: "Heavy user de redes sociales", pct: 52 },
+        { label: "Heavy user de videos cortos (Reels/TikTok)", pct: 45 },
+        { label: "Heavy user de prensa/artículos en línea", pct: 40 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 40 },
+        { label: "Heavy user de radio", pct: 31 },
+        { label: "Heavy user de canales de TV abierta", pct: 29 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Radio y redes sociales", "Radio, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Prensa y artículos online", "Portales de noticias", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Videos cortos", "TikTok, Reels", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV abierta y streaming", "TV, Netflix", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales y streaming de video", "Instagram, Netflix", "52% es heavy user de redes sociales — canal natural de recomendación social en este bloque.", [
+          { label: "Heavy user de redes sociales", pct: 52, index: 205 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_GENEROS_ATLANTICO_GWI_AUTO_20261029 = {
+  id: "generos-atlantico-colombia",
+  name: "Entusiastas de géneros musicales y eventos en vivo — Atlántico (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-29)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>Generos>Atlantico', audience_id 4558eb03-cac0-4aed-9f57-a1633f96f7eb): residentes del Atlántico (Colombia) de 18 a 50 años interesados en eventos en vivo o streaming de eventos, siempre atentos a nuevos eventos de música en vivo.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Generos>Atlantico' en GWI (680,405) sobre la población digital de Colombia (31.06M)", pct: 2.2 },
+  ],
+  footnotes: [
+    "2.2% ≈ universo real de la audiencia en GWI (680,405 = suma de universo hombres 401,418 + mujeres 278,987, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Misma familia de campaña 'Generos' (Páramo) ya procesada para Bogotá ('generos-bogota-colombia', audience_id d7d374a3) y a nivel nacional ('generos-colombia-nacional', audience_id 91ac359e) — este es el recorte específico para el departamento del Atlántico, un audience_id distinto. Se deja como caso independiente (igual que el recorte de Bogotá) en vez de fusionarlo, siguiendo el mismo criterio editorial usado para esos dos casos.",
+    "Demografía, motivaciones/actitudes, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi.",
+    "GWI no devolvió desglose por ciudad específica dentro del Atlántico (ej. Barranquilla) para esta audiencia, solo zona urbana/suburbana/rural.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos, sin cifras de actividades inventadas.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-cultural-atlantico-colombia",
+      name: "Daniela Marún",
+      archetype: "La Entusiasta Cultural Conectada",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Residente del Atlántico (Colombia), con mayoría masculina (59% hombres, 41% mujeres) y concentrada en 25-44 años (62% combinado). Se siente segura usando nuevas tecnologías (45%) y motivada a promover sus marcas favoritas tanto por amor a la marca (39%) como por participación/involucramiento (26%) — una audiencia que ya consume activamente eventos en vivo (67% de interés) y tecnología (70% de interés) al mismo tiempo.",
+      aiInsight: aiInsight(
+        "Cruza con la convergencia entre entretenimiento en vivo y confianza tecnológica en mercados regionales de Colombia: 70% está interesado en tecnología y 45% se siente seguro usando nuevas tecnologías, mientras 67% está interesado en eventos en vivo — a diferencia del estereotipo de audiencias regionales como 'menos digitales', este segmento del Atlántico combina consumo cultural presencial con comodidad tecnológica alta, lo que habilita canales de compra/promoción 100% digitales sin fricción.",
+        [
+          { label: "La confianza tecnológica es alta, no una barrera", detail: "45% se siente seguro usando nuevas tecnologías y 21% compra productos tecnológicos apenas están disponibles (83% más que el promedio) — un flujo de compra de boletos 100% digital (sin taquilla física) no debería ser una barrera para este segmento." },
+          { label: "La promoción de marca responde a amor genuino y pertenencia, no solo incentivos", detail: "39% promueve su marca favorita porque la ama y 26% por sentirse parte/involucrado, por encima de motivaciones más transaccionales como recompensas — vale más invertir en construir afinidad de marca/artista que en mecánicas de descuento agresivas." },
+          { label: "El entusiasmo cultural ya es alto y constante, no estacional", detail: "57% se identifica como entusiasta de las artes y la cultura y 74% está interesado en cine — el target ya tiene un hábito cultural amplio, por lo que un evento en vivo compite por presupuesto/tiempo con otras formas de entretenimiento cultural, no con la indiferencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 59, female: 41 },
+        ageBands: [
+          { label: "16-24", pct: 25 },
+          { label: "25-34", pct: 33 },
+          { label: "35-44", pct: 29 },
+          { label: "45-54", pct: 12 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (sin desagregado por ciudad; 86% zona urbana, 6.2% suburbana, 7.5% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Se siente seguro usando nuevas tecnologías", pct: 45 },
+        { label: "Cree que las redes sociales benefician a la sociedad", pct: 43 },
+        { label: "Motivado a promover su marca favorita porque la ama", pct: 39 },
+        { label: "Motivado a promover su marca por participación/involucramiento", pct: 26 },
+        { label: "Compra productos tecnológicos apenas están disponibles", pct: 21 },
+        { label: "Motivado a promover su marca por reputación/estatus", pct: 23 },
+      ],
+      barriers: [
+        { label: "Propenso a la ansiedad", pct: 23 },
+        { label: "Interesado en noticias y actualidad (compite por atención)", pct: 45 },
+        { label: "Bajo interés relativo en temas ambientales", pct: 36 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en tecnología", pct: 70 },
+        { label: "Interesado en cine", pct: 74 },
+        { label: "Interesado en eventos en vivo como festivales de música", pct: 67 },
+        { label: "Entusiasta de las artes y la cultura", pct: 57 },
+        { label: "Pagó suscripción de streaming de música en el último mes", pct: 35 },
+        { label: "Interesado en reality shows", pct: 35 },
+      ],
+      media: [
+        { label: "Heavy user de redes sociales", pct: 49 },
+        { label: "Heavy user de videos cortos (Reels/TikTok)", pct: 45 },
+        { label: "Heavy user de streaming de música", pct: 44 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 36 },
+        { label: "Heavy user de videos tipo tutoriales/vlogs", pct: 31 },
+        { label: "Heavy user de prensa/artículos en línea", pct: 30 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Streaming de música y redes sociales", "Streaming de música, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Videos cortos", "TikTok, Reels", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming de música", "Streaming de música", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales y streaming de video", "Instagram, Netflix", "49% es heavy user de redes sociales — canal natural de recomendación/promoción en este bloque.", [
+          { label: "Heavy user de redes sociales", pct: 49, index: 107 },
+        ]),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7691,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261029, CASE_GENEROS_ATLANTICO_GWI_AUTO_20261029],
   },
   {
     id: "deportes",
@@ -7478,7 +7756,7 @@ const CATEGORIES = [
       { id: "investigaOnlineAntes", label: "Investiga activamente online antes de comprar" },
       { id: "prioridadFamiliar", label: "Prioriza espacio y seguridad familiar" },
     ],
-    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019],
+    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019, CASE_OMODA_WANTS_GWI_AUTO_20261029],
   },
   {
     id: "consumer-tech",

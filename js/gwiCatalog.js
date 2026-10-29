@@ -313,6 +313,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI (borrador 2026-10-29).
+  { id: "a5dcb331-8113-412c-beb2-e63e5b98ebc6", title: "OMODA>OMODASA>B2C>WANTS>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6", title: "Corferias>Conquilla>Conocedores", client: "Corferias", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Chile, lives in Atlantico, is between 28 and 64 years old, and is interested in live events like music festivals." },
+  { id: "4558eb03-cac0-4aed-9f57-a1633f96f7eb", title: "Paramo>Generos>Atlantico", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia and is interested in live events like music festivals or streaming events, always on the lookout for new live music events, and is between 18 and 50 years old, living in Atlantico." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +408,8 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-10-29.
+  "a5dcb331-8113-412c-beb2-e63e5b98ebc6": { categoryId: "automotriz", caseId: "omoda-wants-chile", personaId: "aspiracional-omoda-wants-chile", analyzedAt: "2026-10-29" },
+  "dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6": { categoryId: "entretenimiento", caseId: "conquilla-conocedores-atlantico-colombia", personaId: "conocedor-cultural-atlantico-colombia", analyzedAt: "2026-10-29" },
+  "4558eb03-cac0-4aed-9f57-a1633f96f7eb": { categoryId: "entretenimiento", caseId: "generos-atlantico-colombia", personaId: "entusiasta-cultural-atlantico-colombia", analyzedAt: "2026-10-29" },
 };

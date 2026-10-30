@@ -7399,6 +7399,275 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO — REGGAETÓN Y MÚSICA LATINA EN VIVO, VALLE DEL CAUCA (borrador GWI auto, 2026-10-30)
+// ---------------------------------------------------------------------------
+const CASE_REGGAETON_VALLE_GWI_AUTO_20261030 = {
+  id: "reggaeton-valle-del-cauca-colombia",
+  name: "Fans de reggaetón y música latina en vivo (Valle del Cauca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-30)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) ReggaetonValle', audience_id 8ed8b71e-84b7-4718-ba25-f7c95635939f): colombianos en Valle del Cauca interesados en eventos en vivo y música latina.",
+  funnelSteps: [
+    { label: "Interés en eventos en vivo y música latina, Valle del Cauca", pct: 2.6 },
+  ],
+  footnotes: [
+    "2.6% = universo real de GWI (~806,540, calculado dividiendo el universo verificado vía explore_insight_gwi de la respuesta 'vive en zona urbana' —717,014— entre el 88.9% que esa respuesta representa del total de la audiencia) sobre la población digital estimada de Colombia (31.06M, MARKETS).",
+    "Demografía, actitudes financieras, comportamiento de compra de boletos y uso de redes sociales verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia, usando preguntas comparativas explícitas ('compared to the average Colombian internet user...') para forzar el filtrado correcto por los 3 criterios de la audiencia (Valle del Cauca + interés en eventos en vivo + música latina) — las primeras preguntas de motivaciones/redes sin ese formato devolvieron cifras genéricas de población mundial de internet, descartadas por no ser específicas de la audiencia.",
+    "GWI no devolvió desglose por ciudad dentro de Valle del Cauca, solo zona urbana/suburbana/rural.",
+    "45% no tiene tarjeta de crédito = complemento aritmético del 55% real que sí tiene tarjeta de crédito, verificado vía explore_insight_gwi.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil; solo el bloque de noche usa una cifra de actividad real (uso de TikTok), el resto queda sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "reggaetonera-valle-cauca",
+      name: "Valentina Rengifo",
+      archetype: "La Reggaetonera Ahorradora de Cali",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Caleña conectada, fanática de la música latina y los eventos en vivo. Financieramente conservadora y ahorradora, pero muy activa en redes sociales — sobre todo TikTok — donde descubre tendencias antes que el resto del país.",
+      aiInsight: aiInsight(
+        "Cruza el arquetipo del 'comprador paciente pero conectado' de Valle del Cauca: son más financieramente seguros y ahorradores que el promedio nacional (83% valora la seguridad financiera, 90% prefiere esperar y ahorrar antes de comprar), pero muestran un consumo de TikTok y redes muy por encima del promedio — la oportunidad no es el descuento agresivo sino construir deseo y urgencia genuina antes de abrir la venta de boletos.",
+        [
+          { label: "Financieramente seguros, pero compradores pacientes", detail: "83% valora la seguridad financiera (22% más que el promedio) y 90% prefiere ahorrar y esperar antes de comprar un producto — un llamado a la acción inmediato choca con un hábito de espera ya instalado; mejor anunciar fechas de venta con semanas de anticipación y ofrecer planes de pago." },
+          { label: "Brecha entre interés y conversión en boletería", detail: "24% siempre está pendiente de nuevos eventos de música en vivo y 21% planea comprar boletos en los próximos 3-6 meses, pero solo 11% ya compró boletos online en ese lapso — gran oportunidad de remarketing a quienes muestran interés activo sin haber convertido." },
+          { label: "TikTok como motor de descubrimiento, no solo entretenimiento", detail: "45% usa TikTok más de una vez al día (30% más que el promedio nacional) y 38% usa redes sociales para ver qué es tendencia (89% más que el promedio) — canal prioritario para generar expectativa antes de abrir la venta de boletos." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 43, female: 57 },
+        ageBands: [
+          { label: "16-24", pct: 21 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 18 },
+          { label: "55-64", pct: 8.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca — sin desagregación por ciudad disponible en GWI (88.9% zona urbana, 5.2% suburbana, 5.9% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante ser financieramente seguro", pct: 83 },
+        { label: "Prefiere ahorrar y esperar antes de comprar un producto", pct: 90 },
+        { label: "Usa redes sociales para ver qué es tendencia y de qué se habla", pct: 38 },
+        { label: "Le gusta ser de los primeros en probar cosas nuevas", pct: 37 },
+      ],
+      barriers: [
+        { label: "Prefiere esperar a que el producto esté en oferta antes de comprar", pct: 72 },
+        { label: "Tiene actualmente un préstamo de corto plazo", pct: 33 },
+        { label: "No tiene tarjeta de crédito", pct: 45 },
+      ],
+      digitalInterests: [
+        { label: "Siempre está pendiente de nuevos eventos de música en vivo", pct: 24 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses", pct: 21 },
+        { label: "Ha comprado boletos de concierto online en los últimos 3-6 meses", pct: 11 },
+        { label: "Usa internet para gestionar finanzas o ahorros", pct: 49 },
+        { label: "Pasó 10-13 horas en redes sociales la última semana", pct: 24 },
+      ],
+      media: [
+        { label: "Usa redes sociales todos los días o casi todos los días", pct: 76 },
+        { label: "Usa WhatsApp más de una vez al día", pct: 76 },
+        { label: "Usa TikTok más de una vez al día", pct: 45 },
+        { label: "Usa Facebook más de una vez al día", pct: 44 },
+        { label: "Usa Instagram a diario", pct: 24 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y mensajería", "WhatsApp, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / almuerzo", "Redes y mensajería", "WhatsApp, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Entretenimiento y redes", "TikTok, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales y streaming", "TikTok, WhatsApp", "45% usa TikTok más de una vez al día (30% más que el promedio) y 38% usa redes para ver qué es tendencia (89% más que el promedio) — ventana ideal para contenido de pre-venta de boletos.", [
+          { label: "Usa TikTok más de una vez al día", pct: 45, index: 130 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — REGGAETÓN Y MÚSICA LATINA EN VIVO, ANTIOQUIA (borrador GWI auto, 2026-10-30)
+// ---------------------------------------------------------------------------
+const CASE_REGGAETON_ANTIOQUIA_GWI_AUTO_20261030 = {
+  id: "reggaeton-antioquia-colombia",
+  name: "Fans de reggaetón y música latina en vivo (Antioquia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-30)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) ReggaetonMed', audience_id 702ee400-7c41-4fca-9bbc-681cc4970c96): colombianos en Antioquia interesados en eventos en vivo y música latina.",
+  funnelSteps: [
+    { label: "Interés en eventos en vivo y música latina, Antioquia", pct: 3.1 },
+  ],
+  footnotes: [
+    "3.1% = universo real de GWI (~958,049, verificado vía explore_insight_gwi sobre la pregunta 'being financially secure is important' — 83% de la audiencia equivale a un universo de 795,182) sobre la población digital estimada de Colombia (31.06M, MARKETS); consistente con el universo calculado de forma independiente a partir de la pregunta de compra de boletos de concierto (16.7% = 160,526 personas → ~961,233 total) y de edad (25-34: 35.6% = 341,216 → ~958,472 total).",
+    "Las primeras preguntas de este batch (motivaciones, redes sociales, compra de boletos) devolvieron cifras a nivel de departamento (Antioquia en general) en vez de la intersección completa de los 3 criterios de la audiencia (Antioquia + interés en eventos en vivo + música latina) — se repitieron esas preguntas con un formato más explícito citando los 3 criterios juntos, lo que sí forzó el filtrado correcto; los números usados en este caso son todos de la segunda ronda, ya correctamente filtrados y verificados vía explore_insight_gwi.",
+    "16.7% de compra real de boletos de concierto online en los últimos 3-6 meses (índice 330.7, es decir 231% más probable que el promedio nacional) es el hallazgo más fuerte de todo este lote de audiencias — a diferencia de la audiencia homóloga de Valle del Cauca, aquí el interés sí se traduce en compra efectiva muy por encima del promedio.",
+    "Uso diario de WhatsApp (11.8%) resultó por debajo del promedio nacional para esta audiencia específica (índice 88.7) — dato real verificado, no es un error; convive con un uso de TikTok diario superior al promedio (18.5%, índice 114.1).",
+    "GWI no devolvió datos de barreras de ahorro/crédito para 'tener tarjeta de crédito' como pregunta aislada más allá de lo ya reportado (42% no tiene tarjeta de crédito, verificado).",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil; solo el bloque de noche usa una cifra de actividad real, el resto queda sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "reggaetonero-antioquia",
+      name: "Juan Esteban Cadavid",
+      archetype: "El Paisa Orgulloso de su Música",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Antioqueño interesado en eventos en vivo y música latina, con fuerte identidad cultural regional. A diferencia del patrón colombiano típico centrado en WhatsApp, aquí TikTok pesa relativamente más, y la intención de asistir a eventos se traduce en compra real de boletos muy por encima del promedio nacional.",
+      aiInsight: aiInsight(
+        "El reggaetonero paisa no calza en el perfil digital clásico colombiano: por debajo del promedio en WhatsApp diario pero muy por encima en compra real de boletos de concierto (231% más probable que el promedio nacional) y en valores de identidad cultural ('destacar entre la multitud' 58% más probable, 'abrazar su herencia y tradiciones' 48% más probable) — la música latina en vivo en Antioquia conecta con orgullo cultural e identidad regional, no solo con entretenimiento pasivo.",
+        [
+          { label: "De la intención a la compra real: la conversión más alta del batch", detail: "16.7% ya compró boletos de concierto online en los últimos 3-6 meses — 231% más probable que el promedio nacional colombiano, la brecha más grande de este lote de audiencias. No solo dicen estar interesados: efectivamente compran boletos con mucha mayor frecuencia que el resto del país." },
+          { label: "Identidad y orgullo cultural como palanca de marca", detail: "22.7% dice que destacar entre la multitud es importante para ellos (58% más probable que el promedio) y 28.4% valora abrazar su herencia y tradiciones (48% más probable) — mensajes que conecten el evento con identidad paisa/regional pueden resonar más que ofertas genéricas de descuento." },
+          { label: "Menos dependientes de WhatsApp, más de TikTok para descubrir", detail: "Solo 11.8% usa WhatsApp a diario (11% menos que el promedio nacional) mientras que 18.5% usa TikTok a diario (14% más que el promedio) — a diferencia del patrón típico colombiano centrado en WhatsApp, aquí TikTok es relativamente más relevante como canal de descubrimiento." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 44, female: 56 },
+        ageBands: [
+          { label: "16-24", pct: 20 },
+          { label: "25-34", pct: 36 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 13 },
+          { label: "55-64", pct: 8.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Antioquia (Medellín y área metropolitana) — sin desagregación por ciudad disponible en GWI (87% zona urbana, 4.6% suburbana, 8.1% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante ser financieramente seguro", pct: 83 },
+        { label: "Le importa destacar entre la multitud", pct: 22.7 },
+        { label: "Valora abrazar su herencia y tradiciones", pct: 28.4 },
+        { label: "Se considera bueno manejando el dinero", pct: 50.9 },
+      ],
+      barriers: [
+        { label: "No tiene tarjeta de crédito", pct: 42 },
+        { label: "Tiene actualmente un préstamo de corto plazo", pct: 34 },
+        { label: "No tiene ningún ahorro ni inversión", pct: 12 },
+      ],
+      digitalInterests: [
+        { label: "Ha comprado boletos de concierto online en los últimos 3-6 meses", pct: 16.7 },
+        { label: "Usa internet para gestionar finanzas o ahorros", pct: 49 },
+        { label: "Le gusta ser de los primeros en probar cosas nuevas", pct: 31.1 },
+        { label: "Se siente cómodo hablando de su salud mental", pct: 47.2 },
+      ],
+      media: [
+        { label: "Usa Instagram a diario", pct: 23 },
+        { label: "Usa TikTok a diario", pct: 18.5 },
+        { label: "Usa Facebook a diario", pct: 20.1 },
+        { label: "Usa WhatsApp a diario", pct: 11.8 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / almuerzo", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "TikTok, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Entretenimiento y redes", "TikTok, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales y streaming", "TikTok, Instagram", "18.5% usa TikTok a diario (14% más que el promedio nacional) — ventana relevante para contenido de descubrimiento de eventos en este bloque.", [
+          { label: "Usa TikTok a diario", pct: 18.5, index: 114.1 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — CONOCEDORES DE EVENTOS EN VIVO, ATLÁNTICO / CORFERIAS CONQUILLA (borrador GWI auto, 2026-10-30)
+// ---------------------------------------------------------------------------
+const CASE_CORFERIAS_CONQUILLA_CONOCEDORES_GWI_AUTO_20261030 = {
+  id: "corferias-conquilla-conocedores-atlantico",
+  name: "Conocedores de eventos en vivo (Atlántico — Corferias Conquilla)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-30)",
+  insightNote:
+    "Audiencia real de GWI ('Corferias>Conquilla>Conocedores', audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6): colombianos de 28 a 64 años en Atlántico interesados en eventos en vivo tipo festivales de música — segmento 'conocedor' de la campaña Conquilla de Corferias.",
+  funnelSteps: [
+    { label: "28-64 años, Atlántico, interés en eventos en vivo (segmento Conocedores)", pct: 1.8 },
+  ],
+  footnotes: [
+    "1.8% = universo real de GWI (~568,600, verificado vía explore_insight_gwi sobre la pregunta de género — 287,686 + 280,867 — y confirmado de forma independiente vía la pregunta de WhatsApp diario, 82,640 / 14.5% ≈ 570,000) sobre la población digital estimada de Colombia (31.06M, MARKETS).",
+    "Esta audiencia está definida por GWI con piso de edad en 28 años (no 16 ni 25) — por eso el tramo '16-24' queda en 0 y el tramo '25-34' en realidad representa solo 28-34 años. GWI no devolvió ese porcentaje de forma directa (un intento explícito de preguntarlo hizo que el asistente se desviara de tema); el 33% usado es el remanente aritmético de los tramos sí verificados por GWI (35-44: 32%, 45-54: 21%, 55-64: 14% → 100-32-21-14=33), no una cifra reportada directamente por GWI.",
+    "GWI no devolvió un desglose de zona urbana/suburbana/rural ni de ciudad específica dentro de Atlántico para esta audiencia.",
+    "GWI no devolvió datos de barreras financieras (ahorro bajo, tarjeta de crédito, préstamos) para esta audiencia pese a intentarlo explícitamente — se dejan fuera del perfil en vez de inventarlas; las 'barreras' listadas abajo usan en cambio las únicas señales de cautela de gasto que sí devolvió GWI.",
+    "Un intento posterior de verificar el % exacto de compra de boletos de concierto online para esta audiencia devolvió un error de la herramienta ('no compatible locations or waves found') — se usa en su lugar el dato sí verificado de 'siempre pendiente de nuevos eventos de música en vivo' (26%) como proxy del interés digital en eventos.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "conocedor-eventos-atlantico",
+      name: "Jorge Maestre",
+      archetype: "El Conocedor Costeño de Eventos en Vivo",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Barranquillero adulto (28-64 años), mayoritariamente Millennial y Gen X, que valora la seguridad financiera y prioriza gastar en experiencias por encima de productos. Conocedor de la escena de eventos en vivo de la región Caribe colombiana.",
+      aiInsight: aiInsight(
+        "Cruza el perfil del 'conocedor costeño': prioriza experiencias sobre productos (70%, 9.7% más que el promedio) y es sensible a descuentos en la compra online (43% prefiere comprar con cupones, 12% más), pero una porción relevante también paga precio completo (35%, 21% más) — sugiere un segmento maduro dispuesto a pagar por la experiencia correcta, no solo cazador de ofertas.",
+        [
+          { label: "Las experiencias pesan más que los productos", detail: "70% prioriza gastar en experiencias por encima de productos (9.7% más que el promedio nacional) — coherente con un público maduro (Millennial/Gen X) que busca momentos memorables como eje de su gasto discrecional, no acumulación de cosas." },
+          { label: "Sensible a descuentos, pero no solo cazador de ofertas", detail: "43% prefiere comprar online cuando hay cupones o descuentos disponibles (12% más que el promedio) y 32% usa activamente códigos de descuento, pero 35% también prefiere pagar precio completo (21% más que el promedio) — conviven dos lógicas de compra: ofertas anticipadas para unos, acceso prioritario para otros." },
+          { label: "TikTok gana terreno frente a WhatsApp en un público adulto", detail: "21% usa TikTok a diario (28% más que el promedio) frente a solo 14.5% que usa WhatsApp a diario — señal de que el descubrimiento de eventos se está moviendo a plataformas de video corto incluso en un segmento de edad mayor (28-64)." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49.4, female: 50.6 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 33 },
+          { label: "35-44", pct: 32 },
+          { label: "45-54", pct: 21 },
+          { label: "55-64", pct: 14 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (Barranquilla y área metropolitana) — sin desagregación de ciudad ni zona urbana/rural disponible en GWI; audiencia definida por GWI entre 28 y 64 años", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante ser financieramente seguro", pct: 71 },
+        { label: "Prioriza gastar en experiencias por encima de productos", pct: 70 },
+        { label: "Prefiere comprar un producto a precio completo", pct: 35 },
+      ],
+      barriers: [
+        { label: "Prefiere esperar a que los productos estén en oferta antes de comprar", pct: 65 },
+        { label: "Prefiere gastar en un producto nuevo en vez de otras prioridades (bajo apetito de compra impulsiva)", pct: 30 },
+      ],
+      digitalInterests: [
+        { label: "Siempre está pendiente de nuevos eventos de música en vivo", pct: 26 },
+        { label: "Usa códigos de descuento o cupones", pct: 32 },
+        { label: "Prefiere comprar online cuando hay cupones o descuentos disponibles", pct: 43 },
+        { label: "Busca activamente las mejores ofertas", pct: 49 },
+      ],
+      media: [
+        { label: "Usa Facebook a diario", pct: 25.2 },
+        { label: "Usa Instagram a diario", pct: 22.1 },
+        { label: "Usa TikTok a diario", pct: 21 },
+        { label: "Usa Facebook Messenger a diario", pct: 17.8 },
+        { label: "Usa WhatsApp a diario", pct: 14.5 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / almuerzo", "Redes sociales y mensajería", "WhatsApp, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Entretenimiento y redes", "Facebook, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Facebook, Instagram, TikTok", "25.2% usa Facebook a diario y 21% usa TikTok a diario — los dos canales con mayor penetración diaria en esta audiencia, relevantes para este bloque.", [
+          { label: "Usa Facebook a diario", pct: 25.2, index: 106.7 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7682,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_REGGAETON_VALLE_GWI_AUTO_20261030, CASE_REGGAETON_ANTIOQUIA_GWI_AUTO_20261030, CASE_CORFERIAS_CONQUILLA_CONOCEDORES_GWI_AUTO_20261030],
   },
   {
     id: "deportes",
@@ -7599,4 +7868,7 @@ const PERSONA_RELATED_TRAITS = {
   "usuario-mastercard-colombia": ["usaAppsFin", "migraEfectivo"],
   "usuario-visa-colombia": ["abiertoCambiar", "pruebaMultiples"],
   "entusiasta-cultural-colombia-nacional": ["afinidadGenero", "turismo"],
+  "reggaetonera-valle-cauca": ["afinidadGenero"],
+  "reggaetonero-antioquia": ["afinidadGenero"],
+  "conocedor-eventos-atlantico": ["afinidadGenero", "turismo"],
 };

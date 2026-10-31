@@ -313,6 +313,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI (borrador 2026-10-31).
+  { id: "36357bc7-005f-4884-b24a-fcdc2eb285ff", title: "Paramo>FEP2026>Menores", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, are part of Gen Z, and are interested in live events like music festivals." },
+  { id: "cb877d8b-806c-4e1d-bb7c-8d7ffdcb7814", title: "Paramo>Generos>ValleDelCauca", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are interested in live events like music festivals or streaming events or always on the lookout for new live music events, and are aged between 18 and 50 years old, residing in Valle del Cauca." },
+  { id: "59a0dcc5-1a9d-4433-999a-7a4330031edc", title: "OMODA>OMODASA>B2C>NEEDS>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +408,8 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI (borrador 2026-10-31).
+  "36357bc7-005f-4884-b24a-fcdc2eb285ff": { categoryId: "entretenimiento", caseId: "fep2026-genz-colombia", personaId: "entusiasta-cultural-genz-fep-colombia", analyzedAt: "2026-10-31" },
+  "cb877d8b-806c-4e1d-bb7c-8d7ffdcb7814": { categoryId: "entretenimiento", caseId: "generos-valle-del-cauca-colombia", personaId: "entusiasta-cultural-valle-cauca-colombia", analyzedAt: "2026-10-31" },
+  "59a0dcc5-1a9d-4433-999a-7a4330031edc": { categoryId: "automotriz", caseId: "omoda-interes-funcional-chile", personaId: "comprador-funcional-omoda-chile", analyzedAt: "2026-10-31" },
 };

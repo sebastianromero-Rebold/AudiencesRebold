@@ -7399,6 +7399,263 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — borrador diario 2026-10-31.
+// ---------------------------------------------------------------------------
+
+const CASE_FEP2026_GENZ_GWI_AUTO_20261031 = {
+  id: "fep2026-genz-colombia",
+  name: "Generación Z interesada en festivales de música (Páramo>FEP2026>Menores)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-31)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>FEP2026>Menores' (audience_id 36357bc7-005f-4884-b24a-fcdc2eb285ff): jóvenes de la Generación Z residentes en Colombia interesados en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (3,724,238) sobre la población digital de Colombia (31.06M)", pct: 12 },
+  ],
+  footnotes: [
+    "12% ≈ universo real de la audiencia en GWI (2,089,144 mujeres + 1,635,093 hombres = 3,724,238, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (edad y género), motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas de edad 35-44, 45-54, 55-64 y 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se dejan en 0 en vez de inventar un valor).",
+    "Top ciudades: GWI no devolvió desagregación por ciudad con muestra suficiente para esta audiencia (cobertura nacional en Colombia).",
+    "Se intentó obtener el customer journey por franja horaria (uso de redes/medios por momento del día); GWI solo devolvió datos de horario de visionado de canales internacionales de TV entre un subgrupo que no corresponde a esta audiencia, por lo que se descartó esa señal y el journey usa lugares/medios genéricos sin cifras de actividad por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-cultural-genz-fep-colombia",
+      name: "Mariana Castañeda",
+      archetype: "La Gen Z Omnívora Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Joven de la Generación Z colombiana (68% entre 16 y 24 años, 56% mujeres) interesada en eventos en vivo como festivales de música. Su consumo cultural va más allá de la música: también tiene alto interés en cine, teatro y actividades al aire libre, y es una usuaria temprana de IA generativa para su vida digital diaria.",
+      aiInsight: aiInsight(
+        "Cruza con una adopción temprana de IA generativa por encima de su ya alto consumo de redes sociales: el 67.2% visitó ChatGPT en el último mes (índice 243), un índice más alto que su uso diario de TikTok (índice 162) — el descubrimiento de eventos y line-ups para esta audiencia probablemente ya pasa por búsqueda conversacional/IA, no solo por paid social. En paralelo, es una audiencia culturalmente omnívora (71% Arts & Culture Enthusiast, interés en teatro de 38.8%) que convive con una preocupación real por su tiempo en pantalla (37.3% le preocupa pasar demasiado tiempo en redes sociales) — un plan de medios agresivo en frecuencia puede generar rechazo en vez de enganche.",
+        [
+          { label: "Es early adopter de IA generativa, no solo de redes sociales", detail: "67.2% visitó ChatGPT en el último mes (índice 243.0), más alto que su índice de uso diario de TikTok (161.8) — vale la pena explorar canales de descubrimiento basados en búsqueda/IA conversacional, no solo pauta en redes." },
+          { label: "Es omnívora cultural, no una fan de un solo género", detail: "73.4% se considera Arts & Culture Enthusiast (índice 234.3) y 38.8% está interesada en teatro (índice 180.8), además de su 82.7% de interés en música — el contenido puede cruzar categorías culturales en vez de limitarse al line-up musical." },
+          { label: "Es nativa digital pero consciente de su tiempo en pantalla", detail: "37.3% le preocupa pasar demasiado tiempo en redes sociales (índice 134.2) y 36.1% le preocupa el uso de sus datos personales — la frecuencia de impactos debe equilibrarse con contenido que aporte valor real (acceso, utilidad), no solo volumen." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 43.9, female: 56.1 },
+        ageBands: [
+          { label: "16-24", pct: 68.1 },
+          { label: "25-34", pct: 31.9 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia (audiencia nacional, GWI no devolvió desagregación por ciudad)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en música", pct: 82.7 },
+        { label: "Apasionada por una amplia variedad de artistas/bandas", pct: 59.3 },
+        { label: "Cree que la música puede ser un agente de cambio social", pct: 58.7 },
+        { label: "Interesada en teatro", pct: 38.8 },
+      ],
+      barriers: [
+        { label: "Le preocupa pasar demasiado tiempo en redes sociales", pct: 37.3 },
+        { label: "Le preocupa pasar demasiado tiempo en su smartphone", pct: 36.1 },
+        { label: "Le preocupa cómo las empresas usan sus datos personales en línea", pct: 36.1 },
+        { label: "Las redes sociales le generan ansiedad", pct: 17.1 },
+      ],
+      digitalInterests: [
+        { label: "Visitó ChatGPT en el último mes", index: 243.0 },
+        { label: "Se considera Arts & Culture Enthusiast", index: 234.3 },
+        { label: "Interesada en actividades al aire libre (camping, senderismo)", index: 201.1 },
+        { label: "Interesada en tecnología", index: 169.1 },
+      ],
+      media: [
+        { label: "TikTok (más de una vez al día)", pct: 52.2 },
+        { label: "Instagram (más de una vez al día)", pct: 45.8 },
+        { label: "Heavy user de streaming de música", pct: 65.7 },
+        { label: "Heavy user de streaming de video (Netflix, Hulu)", pct: 34.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales e IA", "TikTok, ChatGPT", "Descubrimiento de line-ups o recomendaciones de eventos vía IA/redes.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad / trabajo", "Streaming de música", "Spotify / apps de música", "Playlist patrocinada o adelanto de artistas del festival.", []),
+        daypart("Medio día", "12 m a 3 pm", "Universidad / restaurantes", "Redes sociales", "TikTok, Instagram", "Clips o reseñas de ediciones anteriores del festival.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Mensajería y redes", "WhatsApp, Instagram", "Invitación o plan con amigos para asistir al evento.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / evento", "Streaming y redes", "Apps de streaming, redes", "Contenido detrás de cámaras o pre-show.", []),
+        daypart("Noche", "8 a 11 pm", "Evento en vivo / casa", "Evento en vivo o streaming", "Venue físico o streaming en vivo", "Experiencia de marca en el venue o pauta durante el streaming del evento.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_GENEROS_VALLE_GWI_AUTO_20261031 = {
+  id: "generos-valle-del-cauca-colombia",
+  name: "Entusiastas de eventos en vivo y cultura en Valle del Cauca (Páramo>Generos>ValleDelCauca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-31)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>Generos>ValleDelCauca' (audience_id cb877d8b-806c-4e1d-bb7c-8d7ffdcb7814): personas de 18 a 50 años en Valle del Cauca interesadas en eventos en vivo como festivales de música o streaming de eventos, y siempre atentas a nuevos eventos de música en vivo. Es el recorte regional de la misma campaña 'Generos' de Páramo ya analizada para Bogotá ('generos-bogota-colombia'), nacional ('generos-colombia-nacional') y Atlántico ('generos-atlantico-colombia').",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (1,565,734) sobre la población digital de Colombia (31.06M)", pct: 5 },
+  ],
+  footnotes: [
+    "5% ≈ universo real de la audiencia en GWI (394,244 + 533,491 + 454,924 + 183,075 = 1,565,734, verificado vía explore_insight_gwi sobre la pregunta de edad, base más representativa) sobre la población digital total de Colombia (31.06M).",
+    "La pregunta de género tuvo una base de muestra mucho menor (n=83 vs. n=454 de la pregunta de edad) y un universo distinto (924,618) — se reporta el género como porcentaje (43.8% hombres / 56.2% mujeres) sin forzarlo a coincidir con el universo de la pregunta de edad, siguiendo la metodología real de GWI de bases de respuesta distintas por pregunta.",
+    "Motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas de edad 55-64 y 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se dejan en 0 en vez de inventar un valor); la banda etaria de la audiencia es 18-50 por definición.",
+    "Top ciudades: la audiencia está definida por residir en el departamento de Valle del Cauca, por lo que no aplica desagregación adicional por ciudad.",
+    "Se intentó obtener el customer journey por franja horaria; GWI no devolvió una señal de horario específica para esta audiencia (la pregunta sobre 'barreras' tampoco devolvió datos en un primer intento), por lo que el journey usa lugares/medios genéricos sin cifras de actividad por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-cultural-valle-cauca-colombia",
+      name: "Juliana Vélez",
+      archetype: "La Exploradora Cultural del Pacífico",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Valle del Cauca, tiene entre 18 y 50 años y está siempre atenta a nuevos eventos de música en vivo. Igual que sus pares de Bogotá, Atlántico y el corte nacional de la misma campaña, es una consumidora cultural transversal (cine, museos, apoyo a artistas locales), pero se distingue por un índice especialmente alto de apoyo a la escena local y por estar menos preocupada por el precio que el promedio.",
+      aiInsight: aiInsight(
+        "Cruza con un fuerte sesgo hacia la escena local: 38.9% dice amar apoyar artistas locales o ir a conciertos locales (índice 156.6), la cifra más alta de este tipo entre las audiencias de la campaña 'Generos' analizadas hasta ahora. A la vez, es menos sensible al precio (28.3%, índice 93.2, por debajo del promedio) y le preocupa menos que el promedio el uso de sus datos personales (37.1%, índice 88.7) — el mensaje puede apostar por line-ups o patrocinios de artistas regionales en vez de headliners internacionales, y permitirse personalización basada en datos sin generar tanta fricción.",
+        [
+          { label: "Apoya fuertemente la escena local de conciertos", detail: "38.9% ama apoyar artistas locales o ir a conciertos locales (índice 156.6) — más alto que el promedio, señal de que el patrocinio de line-ups regionales puede rendir mejor que apostar solo por artistas internacionales." },
+          { label: "Es omnívora cultural, no solo de música en vivo", detail: "Interés en cine (80.7%), música (75.3%), museos/galerías (46.1%) y teatro (36.8%) — el contenido de marca puede cruzar categorías culturales en vez de anclarse solo en el line-up musical." },
+          { label: "Es menos sensible al precio y al uso de sus datos que el promedio", detail: "Solo 28.3% se considera price-conscious (índice 93.2) y 37.1% le preocupa el uso de sus datos (índice 88.7, ambos por debajo del promedio) — permite mensajes de personalización o de valor/experiencia en vez de descuentos agresivos." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 43.8, female: 56.2 },
+        ageBands: [
+          { label: "16-24", pct: 25.2 },
+          { label: "25-34", pct: 34.1 },
+          { label: "35-44", pct: 29.1 },
+          { label: "45-54", pct: 11.7 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca (audiencia regional, GWI no devolvió desagregación por ciudad)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 69.5 },
+        { label: "Se considera Arts & Culture Enthusiast", pct: 59.7 },
+        { label: "Interesada en museos/galerías", pct: 46.1 },
+        { label: "Ama apoyar artistas locales o ir a conciertos locales", pct: 38.9 },
+      ],
+      barriers: [
+        { label: "Le preocupa cómo las empresas usan sus datos personales (por debajo del promedio)", pct: 37.1 },
+        { label: "Le preocupa pasar demasiado tiempo en redes sociales", pct: 28.8 },
+        { label: "Se considera price-conscious (por debajo del promedio)", pct: 28.3 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en cine/películas", index: 114.0 },
+        { label: "Interesada en actividades al aire libre (camping, senderismo)", index: 125.6 },
+        { label: "Visitó ChatGPT en el último mes", index: 118.0 },
+        { label: "Interesada en tecnología", index: 112.8 },
+      ],
+      media: [
+        { label: "Instagram (más de una vez al día)", pct: 44.0 },
+        { label: "TikTok (más de una vez al día)", pct: 39.3 },
+        { label: "Heavy user de redes sociales (posts, historias, ads)", pct: 53.6 },
+        { label: "Heavy user de streaming de música", pct: 48.6 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Agenda cultural del día (conciertos, cine, exposiciones).", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Streaming de música", "Spotify / apps de música", "Playlist patrocinada o adelanto de artistas locales.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Reseña o clip de un evento cultural local reciente.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Mensajería y redes", "WhatsApp, Instagram", "Invitación o recordatorio de evento con amigos.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / evento", "Streaming y redes", "Apps de streaming, redes", "Contenido detrás de cámaras del evento o del artista local.", []),
+        daypart("Noche", "8 a 11 pm", "Evento en vivo / casa", "Evento en vivo o streaming", "Venue físico o streaming en vivo", "Experiencia de marca en el venue o pauta durante el streaming del evento.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_OMODA_NEEDS_GWI_AUTO_20261031 = {
+  id: "omoda-interes-funcional-chile",
+  name: "Interesados en su próximo vehículo, sin marca definida (OMODA, Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-10-31)",
+  insightNote:
+    "Audiencia real de GWI ('OMODA>OMODASA>B2C>NEEDS>CHILE', audience_id 59a0dcc5-1a9d-4433-999a-7a4330031edc): chilenos en etapa de considerar la compra de su próximo vehículo por necesidad/circunstancia, un segmento intermedio del mismo embudo de segmentación OMODA cuya variante 'HighPropensity' (audience_id 4fa856ae) ya está analizada en este dataset como 'omoda-alta-propension-chile'. Nota: a la fecha de este borrador también existe en GWI una audiencia 'OMODA>OMODASA>B2C>WANTS>CHILE' (audience_id a5dcb331) más amplia que esta; el equipo editorial debe revisar si ya fue incorporada por otro borrador antes de fusionar este, para no duplicar el mismo caso.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'NEEDS' de OMODA en GWI (3,323,667) sobre la población digital de Chile (15.6M)", pct: 21 },
+  ],
+  footnotes: [
+    "21% ≈ universo real de la audiencia en GWI (1,791,205 hombres + 1,532,462 mujeres = 3,323,667, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M) — por encima del 14.6% de la audiencia 'HighPropensity' ya analizada, consistente con ser un segmento más amplio del mismo embudo OMODA.",
+    "Demografía, preferencia de marca/combustible, actitudes de precio, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "La pregunta de 'marca preferida para el próximo vehículo' es de opción múltiple (los porcentajes de distintas marcas no suman 100% y pueden solaparse entre encuestados).",
+    "Esta audiencia es de cobertura nacional en Chile — GWI no devolvió un desagregado por ciudad para esta consulta.",
+    "El customer journey usa lugares/medios genéricos sin cifras de actividad por bloque: no se encontró una pregunta de GWI con desagregación específica por franja horaria para esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "comprador-funcional-omoda-chile",
+      name: "Matías Bravo",
+      archetype: "El Comprador Funcional Multimarca",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Chileno de 25 a 54 años (70.5% combinado), con ligera mayoría masculina (53.9%), en etapa de considerar la compra de su próximo vehículo por necesidad, sin una marca ya decidida: Toyota, Chevrolet, Hyundai, KIA y Suzuki compiten de cerca como primera opción. Es un usuario intensivo de plataformas de utilidad y comparación (MercadoLibre, Waze, AliExpress, SHEIN), más que de redes sociales tradicionales.",
+      aiInsight: aiInsight(
+        "Cruza con un set de consideración de marca totalmente abierto: Toyota (27.1%), Chevrolet (25.0%), Hyundai (21.4%) y KIA (19.6%) compiten de cerca como 'primera opción' para el próximo vehículo (pregunta de opción múltiple) — no hay un líder consolidado, lo que deja espacio real para que OMODA entre en el set de consideración. Al mismo tiempo, esta audiencia es una 'nativa de marketplace': usa MercadoLibre con un índice de 1091.8 (72.6%) y Waze con índice 415.4 (31.5%), muy por encima de su consumo de redes sociales tradicionales — la estrategia de medios debería priorizar presencia en plataformas de comparación/utilidad sobre pauta de marca pura en redes sociales.",
+        [
+          { label: "El set de consideración de marca está totalmente abierto", detail: "Toyota (27.1%, índice 112.7), Chevrolet (25.0%, índice 311.9), Hyundai (21.4%, índice 160.7) y KIA (19.6%, índice 205.5) compiten de cerca como primera opción (pregunta de opción múltiple) — OMODA compite en un terreno fragmentado de marcas asiáticas y coreanas de valor, no contra un líder consolidado." },
+          { label: "Es una audiencia 'nativa de marketplace', no solo de redes sociales", detail: "72.6% usó MercadoLibre en el último mes (índice 1091.8), 42.7% AliExpress (índice 564.3) y 31.5% Waze (índice 415.4) — índices mucho más altos que su uso de Instagram (166.2) o TikTok (122.0); la pauta en plataformas de comparación/utilidad puede rendir más que la pauta social pura." },
+          { label: "No es tan sensible al precio como sugiere un segmento de 'necesidad'", detail: "Solo 31.4% se considera price-conscious (índice 78.4, por debajo del promedio) y 60.1% prefiere pagar más por comodidad — el mensaje de valor puede enfocarse en equipamiento y comodidad, no solo en precio de entrada." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 53.9, female: 46.1 },
+        ageBands: [
+          { label: "16-24", pct: 17.1 },
+          { label: "25-34", pct: 26.8 },
+          { label: "35-44", pct: 26.0 },
+          { label: "45-54", pct: 18.5 },
+          { label: "55-64", pct: 11.6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Piensan comprar su próximo vehículo a gasolina/petróleo", pct: 61.6 },
+        { label: "Toyota sería su primera opción de marca", pct: 27.1 },
+        { label: "Chevrolet sería su primera opción de marca", pct: 25.0 },
+        { label: "Suzuki sería su primera opción de marca", pct: 18.1 },
+      ],
+      barriers: [
+        { label: "Se considera price-conscious (por debajo del promedio)", pct: 31.4 },
+        { label: "Prefiere pagar menos aunque sacrifique comodidad", pct: 39.9 },
+      ],
+      digitalInterests: [
+        { label: "Usó MercadoLibre en el último mes", index: 1091.8 },
+        { label: "Usó AliExpress en el último mes", index: 564.3 },
+        { label: "Usó Waze en el último mes", index: 415.4 },
+        { label: "Usó SHEIN en el último mes", index: 360.6 },
+      ],
+      media: [
+        { label: "Instagram (más de una vez al día)", pct: 47.2 },
+        { label: "TikTok (más de una vez al día)", pct: 38.2 },
+        { label: "Usó Netflix en el último mes", pct: 77.0 },
+        { label: "Usó Disney+ en el último mes", pct: 50.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps de utilidad", "Waze, Google", "Contenido comparativo de marcas accesibles para el trayecto diario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Marketplace y búsqueda", "MercadoLibre, Google", "Reseñas y comparativas de vehículos/accesorios.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / concesionario", "Marketplace", "MercadoLibre, AliExpress", "Cotización y comparación de precios entre marcas.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Instagram, TikTok", "Retargeting de marca con enfoque en equipamiento y comodidad.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, Disney+", "Contenido de marca integrado en streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Instagram", "CTA a agendar test drive o cotización.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7670,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_FEP2026_GENZ_GWI_AUTO_20261031, CASE_GENEROS_VALLE_GWI_AUTO_20261031],
   },
   {
     id: "deportes",
@@ -7478,7 +7735,7 @@ const CATEGORIES = [
       { id: "investigaOnlineAntes", label: "Investiga activamente online antes de comprar" },
       { id: "prioridadFamiliar", label: "Prioriza espacio y seguridad familiar" },
     ],
-    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019],
+    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019, CASE_OMODA_NEEDS_GWI_AUTO_20261031],
   },
   {
     id: "consumer-tech",

@@ -7399,6 +7399,260 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO — CORFERIAS CONQUILLA, AUDIENCIAS DE EVENTOS EN VIVO EN ATLÁNTICO
+// (borrador automático GWI, 2026-11-02)
+// ---------------------------------------------------------------------------
+const CASE_CORFERIAS_CONQUILLA_GWI_AUTO_20261102 = {
+  id: "corferias-conquilla-eventos-atlantico",
+  name: "Corferias Conquilla — audiencias de eventos en vivo en Atlántico",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-02)",
+  insightNote:
+    "Dos audiencias reales de GWI del cliente Corferias, campaña 'Conquilla': 'Conocedores' (28-64 años, audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6) y 'Aventureros' (18-24 años, audience_id 79e794cd-0073-4de5-a21e-2efb38878029), ambas residentes en el departamento de Atlántico e interesadas en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Residentes en Atlántico interesados en eventos en vivo como festivales de música (ambos grupos de edad)", pct: 2.8 },
+  ],
+  footnotes: [
+    "2.8% = universo combinado real de GWI (872,022 = 680,900 de 'Conocedores', sample 215, + 191,122 de 'Aventureros', sample 45) sobre la población digital de Colombia (31.06M, MARKETS) — verificado vía explore_insight_gwi.",
+    "Las audiencias finales son excluyentes entre sí por rango de edad (28-64 vs. 18-24) y suman 100% entre las dos personas de este caso.",
+    "Demografía, motivaciones culturales, actitudes financieras (como proxy de barreras a la compra de boletos), intereses digitales y medios verificados 1:1 vía chat_gwi sobre ambas audiencias dockeadas juntas.",
+    "GWI no devolvió desglose por ciudad para esta audiencia, solo por departamento (Atlántico, que incluye Barranquilla y su área metropolitana).",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas (salvo el hábito de navegación diaria en redes, que sí es un dato real de GWI).",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "conocedor-eventos-atlantico",
+      name: "Marcela Pacheco",
+      archetype: "La Conocedora Cultural de Atlántico",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Adulta de 28 a 64 años en Atlántico con alto interés declarado en eventos en vivo y cultura (festivales, museos, teatro). Combina un consumo diario importante de Facebook e Instagram con hábitos financieros conservadores (ahorra antes de comprar, busca ofertas), lo que sugiere decisiones de compra de boletos más planificadas que impulsivas.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'cultura como hábito de vida adulto': a diferencia del público joven que vive el evento como una explosión de redes sociales, esta audiencia (28-64) consume cultura de forma más estable y recurrente (interés sostenido en museos, teatro, conciertos locales) y financia esas salidas con ahorro previo — la comunicación que funciona no apela al FOMO sino a la planificación anticipada.",
+        [
+          { label: "Facebook sigue siendo el canal dominante", detail: "48% usa Facebook más de una vez al día frente a solo 33% que usa TikTok con esa frecuencia — una campaña centrada solo en TikTok dejaría fuera a la mayoría de esta audiencia adulta." },
+          { label: "Decide con anticipación, no por impulso", detail: "78% prefiere ahorrar antes de comprar y 70% valora la seguridad financiera — mensajes de 'últimos cupos' funcionan peor que una oferta de pago anticipado o planes de cuotas claros." },
+          { label: "El interés cultural es amplio, no solo musical", detail: "38% se interesa en museos/galerías y 29% en teatro además del interés en festivales — vale la pena ofrecer programación cultural cruzada (ej. zona de arte local) dentro del evento, no solo el line-up musical." },
+        ]
+      ),
+      sharePct: 78,
+      demographics: {
+        genderSplit: { male: 48, female: 52 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 31 },
+          { label: "35-44", pct: 32 },
+          { label: "45-54", pct: 18 },
+          { label: "55-64", pct: 19 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (incluye Barranquilla) — GWI no desglosó por ciudad, solo por departamento", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en eventos en vivo como festivales de música", pct: 61 },
+        { label: "Interesado en otras culturas o países", pct: 59 },
+        { label: "Interesado en museos y galerías", pct: 38 },
+        { label: "Apoya artistas locales / asiste a conciertos locales", pct: 36 },
+      ],
+      barriers: [
+        { label: "Prefiere ahorrar antes de comprar", pct: 78 },
+        { label: "Considera importante la seguridad financiera", pct: 70 },
+        { label: "Busca las mejores ofertas", pct: 49 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en arte urbano o moderno", pct: 28 },
+        { label: "Interesado en teatro", pct: 29 },
+        { label: "Visitó ChatGPT en el último mes", pct: 46 },
+        { label: "Usó SHEIN en el último mes", pct: 41 },
+        { label: "Pagó suscripción de streaming de música en el último mes", pct: 27 },
+      ],
+      media: [
+        { label: "Usa Facebook más de una vez al día", pct: 48 },
+        { label: "Usa Instagram más de una vez al día", pct: 43 },
+        { label: "Usa TikTok más de una vez al día", pct: 33 },
+        { label: "Usó YouTube para ver/descargar contenido en el último mes", pct: 59 },
+        { label: "Navega en redes sociales a diario o casi a diario", pct: 64 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Búsqueda y redes", "Google, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video y redes", "YouTube, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Facebook, Instagram, TikTok", "64% navega en redes sociales a diario o casi a diario — bloque natural para activaciones nocturnas.", [
+          { label: "Navega en redes sociales a diario o casi a diario", pct: 64 },
+        ]),
+      ],
+    },
+    {
+      id: "aventurero-eventos-atlantico",
+      name: "Juan David Osorio",
+      archetype: "El Aventurero Cultural Joven",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Joven de 18 a 24 años en Atlántico, Generación Z, con un interés cultural más amplio y disperso que el de los adultos: arte urbano, teatro, moda rápida (SHEIN) y herramientas de IA (ChatGPT) conviven con un consumo intensivo de TikTok e Instagram. Es quien más apoya activamente a artistas locales.",
+      aiInsight: aiInsight(
+        "Cruza con la fragmentación del descubrimiento cultural en Gen Z: este segmento no llega al evento por un solo canal dominante, sino por una mezcla de TikTok (66% a diario), apoyo a la escena local y curiosidad por el arte urbano/emergente — una campaña de un solo formato (solo video corto, o solo influencer) pierde parte real de su atención dispersa en varios micro-intereses.",
+        [
+          { label: "TikTok domina, pero no reemplaza a Instagram", detail: "66% usa TikTok más de una vez al día frente a 47% en Instagram — el contenido de descubrimiento (TikTok) y el de validación social post-evento (Instagram) cumplen roles distintos y ambos deben estar cubiertos." },
+          { label: "Es el segmento más 'activista cultural' de los dos", detail: "38% apoya activamente artistas locales o asiste a conciertos locales (62% más que el promedio) — responde bien a narrativas de apoyo a la escena local, más que a un cartel con solo artistas grandes/internacionales." },
+          { label: "Convive con IA y fast-fashion como parte de su rutina digital", detail: "79% visitó ChatGPT en el último mes y 56% usó SHEIN — son nativos de herramientas digitales nuevas, lo que abre espacio a activaciones no convencionales (ej. un 'planeador de outfit con IA' para el evento) que conectarían mejor que un banner tradicional." },
+        ]
+      ),
+      sharePct: 22,
+      demographics: {
+        genderSplit: { male: 36, female: 64 },
+        ageBands: [
+          { label: "16-24", pct: 100 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (incluye Barranquilla) — GWI no desglosó por ciudad, solo por departamento", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en eventos en vivo como festivales de música", pct: 68 },
+        { label: "Interesado en otras culturas o países", pct: 57 },
+        { label: "Interesado en museos y galerías", pct: 48 },
+        { label: "Apoya artistas locales / asiste a conciertos locales", pct: 38 },
+      ],
+      barriers: [
+        { label: "Prefiere ahorrar antes de comprar", pct: 75 },
+        { label: "Considera importante la seguridad financiera", pct: 68 },
+        { label: "Busca las mejores ofertas", pct: 45 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en arte urbano o moderno", pct: 38 },
+        { label: "Interesado en teatro", pct: 38 },
+        { label: "Visitó ChatGPT en el último mes", pct: 79 },
+        { label: "Usó SHEIN en el último mes", pct: 56 },
+        { label: "Pagó suscripción de streaming de música en el último mes", pct: 35 },
+      ],
+      media: [
+        { label: "Usa TikTok más de una vez al día", pct: 66 },
+        { label: "Usa Instagram más de una vez al día", pct: 47 },
+        { label: "Usa Facebook más de una vez al día", pct: 25 },
+        { label: "Usó YouTube para ver/descargar contenido en el último mes", pct: 68 },
+        { label: "Navega en redes sociales a diario o casi a diario", pct: 72 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad / trabajo", "Redes sociales", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Universidad / trabajo", "Video y redes", "YouTube, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes sociales", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "TikTok, Instagram, Facebook", "72% navega en redes sociales a diario o casi a diario — bloque natural para activaciones nocturnas.", [
+          { label: "Navega en redes sociales a diario o casi a diario", pct: 72 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — FABLETICS URBANMOVERS, PROFESIONALES ACTIVOS CONSCIENTES DE LA MODA
+// (borrador automático GWI, 2026-11-02)
+// ---------------------------------------------------------------------------
+const CASE_FABLETICS_URBANMOVERS_GWI_AUTO_20261102 = {
+  id: "fabletics-urbanmovers-colombia",
+  name: "Fabletics — Profesionales activos y conscientes de la moda (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-02)",
+  insightNote:
+    "Audiencia real de GWI del cliente Fabletics ('UrbanMovers', audience_id 817f5b21-a0fd-46ed-b2f0-1bb362c5c13c): colombianos trabajadores de tiempo completo/parcial, autónomos o freelancers, conscientes de la moda, que no se identifican como creadores de contenido.",
+  funnelSteps: [
+    { label: "Trabajadores colombianos conscientes de la moda, perfil 'UrbanMovers' (no creadores de contenido)", pct: 24.5 },
+  ],
+  footnotes: [
+    "24.5% = universo real de GWI (7,612,611 personas, sample 2284) sobre la población digital de Colombia (31.06M, MARKETS) — verificado vía explore_insight_gwi.",
+    "Demografía, motivaciones de moda/compra, barreras de compra online, intereses digitales/deportivos y medios verificados 1:1 vía chat_gwi sobre la audiencia dockeada.",
+    "GWI solo devolvió desglose geográfico para el Distrito Capital (Bogotá, 30%); el resto de la audiencia queda agrupado sin desglose adicional por ciudad.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas (salvo el uso diario de Instagram, que sí es un dato real de GWI).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "urbanmover-fabletics-colombia",
+      name: "Daniela Castro",
+      archetype: "La UrbanMover Fashionista",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Profesional colombiana (empleada de tiempo completo/parcial, independiente o freelancer) consciente de la moda y activa físicamente: sigue de cerca el fútbol, el ciclismo y el baloncesto, compra ropa con frecuencia y prioriza el envío rápido y gratuito al comprar online. Combina identidad fashion con un estilo de vida activo, el perfil típico al que apunta una marca de ropa deportiva/athleisure como Fabletics.",
+      aiInsight: aiInsight(
+        "Cruza con el auge del 'athleisure' como identidad, no solo como categoría de producto: esta audiencia no separa 'ropa deportiva' de 'moda', sigue deporte de alto perfil (fútbol, ciclismo) casi tanto como se declara fashion-conscious — la comunicación que funciona no vende 'ropa para hacer ejercicio', vende una prenda que se usa indistintamente en el gimnasio y en la calle.",
+        [
+          { label: "El envío es el verdadero diferenciador, no el precio", detail: "57% prefiere envío gratuito y 43% prefiere entrega al día siguiente (56% más que el promedio) — una garantía de entrega rápida puede pesar más en la decisión de compra que un descuento del mismo valor." },
+          { label: "Sigue deporte de alto rendimiento, no solo hace ejercicio casual", detail: "89% sigue fútbol y 64% sigue ciclismo (187% más que el promedio) — asociar la marca a momentos deportivos reales (Mundial, Champions League, de interés también en esta audiencia) puede generar más conexión que solo mostrar gente entrenando en un gimnasio genérico." },
+          { label: "Compra en marketplaces grandes, no solo en tiendas especializadas", detail: "79% usó plataformas tipo Amazon/AliExpress/eBay en el último mes — vale la pena evaluar presencia en marketplace además del e-commerce propio, en vez de asumir que esta audiencia solo compra directo a la marca." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 40, female: 60 },
+        ageBands: [
+          { label: "16-24", pct: 22 },
+          { label: "25-34", pct: 31 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 15 },
+          { label: "55-64", pct: 7 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá (Distrito Capital)", pct: 30 },
+          { city: "Resto de Colombia — GWI no desglosó otras ciudades específicas", pct: 70 },
+        ],
+      },
+      motivations: [
+        { label: "Compró ropa en el último mes", pct: 66 },
+        { label: "Interesada en moda", pct: 58 },
+        { label: "Dice que 'moda consciente' (fashion-conscious) la describe", pct: 49 },
+        { label: "Usa redes sociales para inspirarse en lugares para visitar y cosas para comprar", pct: 42 },
+        { label: "Publicó sobre moda/ropa en línea en el último mes", pct: 33 },
+      ],
+      barriers: [
+        { label: "Prefiere envío gratuito al comprar online", pct: 57 },
+        { label: "Prefiere entrega al día siguiente", pct: 43 },
+        { label: "Prefiere una política de devoluciones fácil", pct: 30 },
+        { label: "Señala falta de atención al cliente durante la compra", pct: 20 },
+      ],
+      digitalInterests: [
+        { label: "Sigue el fútbol", pct: 89 },
+        { label: "Usó sitios/apps de compras tipo Amazon, AliExpress o eBay en el último mes", pct: 79 },
+        { label: "Sigue el ciclismo", pct: 64 },
+        { label: "Interés en la UEFA Champions League", pct: 55 },
+        { label: "Interés en la Copa Mundial de la FIFA (masculina)", pct: 55 },
+        { label: "Sigue el baloncesto", pct: 53 },
+        { label: "Usó apps de salud y fitness en el último mes", pct: 40 },
+      ],
+      media: [
+        { label: "Usa Instagram a diario", pct: 23 },
+        { label: "Usa Facebook a diario", pct: 23 },
+        { label: "Usa YouTube a diario (entre suscriptores)", pct: 26 },
+        { label: "Usa TikTok a diario", pct: 18 },
+        { label: "Usa Pinterest a diario", pct: 15 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / gimnasio", "Apps de fitness y redes", "Apps de salud/fitness, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina", "Compras y búsqueda online", "Marketplaces (Amazon, AliExpress), Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales y video", "YouTube, Pinterest", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / gimnasio", "Apps de fitness", "Apps de salud/fitness", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Instagram, Facebook", "23% usa Instagram a diario — bloque natural para contenido de marca e inspiración de compra nocturna.", [
+          { label: "Usa Instagram a diario", pct: 23 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7667,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CORFERIAS_CONQUILLA_GWI_AUTO_20261102],
   },
   {
     id: "deportes",
@@ -7439,7 +7693,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020, CASE_FABLETICS_URBANMOVERS_GWI_AUTO_20261102],
   },
   {
     id: "fintech",
@@ -7599,4 +7853,7 @@ const PERSONA_RELATED_TRAITS = {
   "usuario-mastercard-colombia": ["usaAppsFin", "migraEfectivo"],
   "usuario-visa-colombia": ["abiertoCambiar", "pruebaMultiples"],
   "entusiasta-cultural-colombia-nacional": ["afinidadGenero", "turismo"],
+  "conocedor-eventos-atlantico": ["afinidadGenero"],
+  "aventurero-eventos-atlantico": ["afinidadGenero"],
+  "urbanmover-fabletics-colombia": ["modaUrbana", "sigueMarcas"],
 };

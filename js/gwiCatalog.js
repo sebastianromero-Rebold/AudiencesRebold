@@ -313,6 +313,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI el 2026-11-02.
+  { id: "dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6", title: "Corferias>Conquilla>Conocedores", client: "Corferias", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia, lives in Atlantico, is between 28 and 64 years old, and is interested in live events like music festivals." },
+  { id: "79e794cd-0073-4de5-a21e-2efb38878029", title: "Corferias>Conquilla>Aventureros", client: "Corferias", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and live in Atlantico, are between 18 and 24 years old, and are interested in live events like music festivals." },
+  { id: "817f5b21-a0fd-46ed-b2f0-1bb362c5c13c", title: "Fabletics>UrbanMovers", client: "Fabletics", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia and are fashion-conscious or identify as a Social Fashionista or have posted about fashion/clothing online in the last month or have used lifestyle and fashion websites or apps in the last month, and do not consider themselves influencers/content creators or content marketers/writers or do not feel that 'Creative' describes them." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +408,8 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-02.
+  "dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6": { categoryId: "entretenimiento", caseId: "corferias-conquilla-eventos-atlantico", personaId: "conocedor-eventos-atlantico", analyzedAt: "2026-11-02" },
+  "79e794cd-0073-4de5-a21e-2efb38878029": { categoryId: "entretenimiento", caseId: "corferias-conquilla-eventos-atlantico", personaId: "aventurero-eventos-atlantico", analyzedAt: "2026-11-02" },
+  "817f5b21-a0fd-46ed-b2f0-1bb362c5c13c": { categoryId: "retail", caseId: "fabletics-urbanmovers-colombia", personaId: "urbanmover-fabletics-colombia", analyzedAt: "2026-11-02" },
 };

@@ -7398,6 +7398,257 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_CONOCEDORES_EVENTOS_ATLANTICO_GWI_AUTO_20261103 = {
+  id: "conocedores-eventos-vivo-atlantico-colombia",
+  name: "Conocedores de eventos en vivo en Atlántico, Colombia (Corferias>Conquilla>Conocedores)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-03)",
+  insightNote:
+    "Audiencia real de GWI 'Corferias>Conquilla>Conocedores' (audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6): personas de 28 a 64 años residentes en Atlántico, Colombia, interesadas en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (568,553) sobre la población digital de Colombia (31.06M)", pct: 1.8 },
+  ],
+  footnotes: [
+    "1.8% ≈ universo real de la audiencia en GWI (280,867 hombres + 287,686 mujeres = 568,553, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M, MARKETS) — la audiencia está geográficamente acotada a Atlántico, no es nacional.",
+    "Demografía (género, bandas de edad 25-64), motivaciones musicales, barreras de conversión a compra de boletos, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "La audiencia está pre-filtrada a 28-64 años en su definición original de GWI, por eso las bandas 16-24 y 65+ quedan en 0 (no es que GWI no tenga dato, es una restricción propia de la audiencia).",
+    "GWI no devolvió desagregación por ciudad dentro de Atlántico para esta audiencia — se deja el departamento completo en topCities.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia (GWI no devolvió información compatible) — usa comportamiento general de medios/intereses verificado, sin cifras de actividades inventadas por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-eventos-vivo-atlantico-colombia",
+      name: "Daniela Pacheco",
+      archetype: "La Conocedora Cultural Costeña",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Reside en el departamento de Atlántico, tiene entre 25 y 64 años (concentrada en 25-44) y está 100% interesada en eventos en vivo como festivales de música. Es una audiencia balanceada por género, con fuerte identidad cultural local: disfruta tener el control de la música en reuniones sociales, apoya a artistas locales y se considera entusiasta de las artes y la cultura, aunque su conversión real a compra de boletos online todavía es baja.",
+      aiInsight: aiInsight(
+        "Esta audiencia costeña revela una brecha entre interés cultural amplio y conversión digital a la compra: 100% está interesada en eventos en vivo y 63% se considera entusiasta de las artes y la cultura (índice 154), pero solo 22.5% compró boletos de concierto en los últimos 3-6 meses, y de ese grupo apenas 7.2% lo hizo online — la mayoría de la conversión real sigue pasando por canales no digitales (punto de venta físico, boletería del evento). Es además una audiencia con un nicho pequeño pero extremadamente sobre-indexado en Clubhouse (2.5%, índice 964.5), frente a una base mayoritaria concentrada en Facebook e Instagram.",
+        [
+          { label: "Alto interés cultural, pero conversión a compra mayoritariamente offline", detail: "100% interesada en eventos en vivo y 63% entusiasta de las artes y la cultura (índice 154), pero de los 22.5% que compraron boletos de concierto en los últimos 3-6 meses, solo 7.2% lo hizo online — sugiere que la boletería física o puntos de venta tradicionales siguen dominando la conversión en esta región, a diferencia de audiencias más digitalizadas de otras ciudades." },
+          { label: "Balance generacional 25-44 con fuerte anclaje local", detail: "65.3% tiene entre 25 y 44 años, con alto interés en asuntos locales (44%, índice 166) y en apoyar artistas o conciertos locales (37%, índice 147) — relevante para activaciones que prioricen talento y venues de la región Caribe sobre actos internacionales." },
+          { label: "Nicho de early adopters de audio social dentro de una base mayoritariamente Facebook/Instagram", detail: "Solo 2.5% usa Clubhouse mensualmente, pero son más de 9 veces más propensos a hacerlo que el promedio colombiano (índice 964.5) — mientras el grueso de la audiencia se concentra en Facebook (48%) e Instagram (42.9%), hay un sub-segmento de alta disposición a formatos de audio en vivo/conversación, relevante para activaciones de nicho." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49.4, female: 50.6 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 33.2 },
+          { label: "35-44", pct: 32.1 },
+          { label: "45-54", pct: 20.7 },
+          { label: "55-64", pct: 14.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (incluye Barranquilla y área metropolitana) — sin desagregación más fina disponible en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prioriza obtener la música que le interesa apenas se publica", pct: 42 },
+        { label: "Disfruta tener el control de la música en eventos sociales", pct: 39.6 },
+        { label: "Apoya a artistas locales o asiste a conciertos locales", pct: 37 },
+        { label: "Siempre está atenta a nuevos eventos de música en vivo", pct: 26 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto en los últimos 3-6 meses (baja conversión real)", pct: 22.5 },
+        { label: "De ese grupo, compró los boletos específicamente online", pct: 7.2 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses (intención pendiente de convertir)", pct: 19 },
+      ],
+      digitalInterests: [
+        { label: "Se considera entusiasta de las artes y la cultura", index: 154 },
+        { label: "Se interesa por asuntos locales", index: 166 },
+        { label: "Se interesa por actividades al aire libre (acampar, senderismo)", index: 134 },
+        { label: "Usa Clubhouse mensualmente (nicho pequeño, muy sobre-indexado)", index: 964.5 },
+      ],
+      media: [
+        { label: "Facebook (uso +1x/día)", pct: 48.0 },
+        { label: "Instagram (uso +1x/día)", pct: 42.9 },
+        { label: "TikTok (uso +1x/día)", pct: 33.2 },
+        { label: "Usa redes sociales principalmente para leer noticias", pct: 54 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Noticias y redes sociales", "Facebook, Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming", "Servicios de streaming de video", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "Streaming y redes sociales", "Facebook, servicios de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_OMODA_NEEDS_CHILE_GWI_AUTO_20261103 = {
+  id: "omoda-necesidad-compra-chile",
+  name: "Intención de compra de corto plazo — OMODA Chile (OMODA>OMODASA>B2C>NEEDS>CHILE)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-03)",
+  insightNote:
+    "Audiencia real de GWI 'OMODA>OMODASA>B2C>NEEDS>CHILE' (audience_id 59a0dcc5-1a9d-4433-999a-7a4330031edc): etapa de 'necesidad/intención de compra' del mismo cliente OMODA cuya etapa 'HighPropensity' ya está mapeada en el caso 'omoda-alta-propension-chile'.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (3,323,667) sobre la población digital de Chile (15.6M)", pct: 21.3 },
+  ],
+  footnotes: [
+    "21.3% ≈ universo real de la audiencia en GWI (1,791,205 hombres + 1,532,462 mujeres = 3,323,667, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M, MARKETS).",
+    "Esta audiencia es una etapa distinta del mismo embudo de cliente OMODA ya mapeado en 'omoda-alta-propension-chile' (audience_id 4fa856ae, HighPropensity) — se deja como caso independiente porque corresponde a una etapa de funnel diferente (intención/necesidad de compra de corto plazo), no un duplicado.",
+    "Demografía (género, bandas de edad), intención de compra de vehículo, alternativas de movilidad consideradas (bicicleta, moto), intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI no devolvió desagregación por ciudad/región para esta audiencia dentro de Chile.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "comprador-necesidad-omoda-chile",
+      name: "Matías Contreras",
+      archetype: "El Comprador de Necesidad Inmediata",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Chileno de 25 a 54 años (mayoritariamente 25-44), con una intención de compra de vehículo muy alta y de corto plazo: 67.7% planea comprar un automóvil en los próximos 3-6 meses, muy por encima del promedio del país. Prefiere SUVs, pero su presupuesto de movilidad convive con alternativas más económicas como bicicleta o motocicleta, señal de un comprador presionado por el presupuesto más que un comprador aspiracional de marca.",
+      aiInsight: aiInsight(
+        "Esta audiencia 'NEEDS' de OMODA confirma el patrón de alta intención de compra de corto plazo que define su etapa en el embudo: 67.7% planea comprar un automóvil en los próximos 3-6 meses (índice 387.2, casi 4 veces más que el chileno promedio), con un sesgo claro hacia SUVs (32% de quienes van a comprar). A diferencia de la audiencia ya mapeada 'omoda-alta-propension-chile' (HighPropensity), este segmento muestra más señales de cross-shopping con alternativas más económicas — 17.2% también considera comprar una bicicleta y 11.2% una motocicleta en el mismo horizonte de tiempo — sugiriendo mayor sensibilidad de presupuesto dentro de la intención de compra.",
+        [
+          { label: "Intención de compra de auto extremadamente alta y de corto plazo", detail: "67.7% planea comprar un automóvil en los próximos 3-6 meses (índice 387.2) — la comunicación debe priorizar urgencia y financiamiento disponible ahora, no construcción de marca a largo plazo." },
+          { label: "Preferencia por SUV, pero con cross-shopping de alternativas económicas", detail: "32% de quienes van a comprar prefiere un SUV, pero 17.2% también considera una bicicleta y 11.2% una motocicleta en el mismo horizonte — señal de que el presupuesto total de movilidad del hogar se reparte entre varias opciones, no solo el auto." },
+          { label: "Alto interés en economía/finanzas y uso intensivo de WhatsApp", detail: "50% se interesa en economía y finanzas (índice 150) y 62% usa WhatsApp más de una vez al día (índice 190) — un mensaje sobre planes de financiamiento claros, reforzado por canales conversacionales, puede tener más tracción que un anuncio genérico de producto." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 53.9, female: 46.1 },
+        ageBands: [
+          { label: "16-24", pct: 17.1 },
+          { label: "25-34", pct: 26.8 },
+          { label: "35-44", pct: 26.0 },
+          { label: "45-54", pct: 18.5 },
+          { label: "55-64", pct: 11.6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile — sin desagregación por ciudad/región disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Planea comprar un automóvil en los próximos 3-6 meses", pct: 67.7 },
+        { label: "Interés en economía y finanzas", pct: 50 },
+        { label: "Prefiere un SUV (entre quienes van a comprar)", pct: 32 },
+        { label: "Interés en practicar deporte", pct: 56 },
+      ],
+      barriers: [
+        { label: "También considera comprar una bicicleta en los próximos 3-6 meses (alternativa más económica)", pct: 17.2 },
+        { label: "También considera comprar una motocicleta en los próximos 3-6 meses", pct: 11.2 },
+      ],
+      digitalInterests: [
+        { label: "Interés en practicar deporte", index: 173 },
+        { label: "Interés en cine", index: 154 },
+        { label: "Interés en actividades al aire libre (camping, senderismo)", index: 153 },
+        { label: "Interés en mascotas y su cuidado", index: 163 },
+      ],
+      media: [
+        { label: "WhatsApp (uso +1x/día)", pct: 62 },
+        { label: "Instagram (uso +1x/día)", pct: 47 },
+        { label: "TikTok (uso +1x/día)", pct: 38 },
+        { label: "Facebook (uso +1x/día)", pct: 36 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Mensajería y redes", "WhatsApp, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Mensajería", "WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Investigación online", "Sitios/apps de concesionarios, comparadores", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Mensajería y redes", "WhatsApp, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FINTECH_EVENTOS_VIVO_GWI_AUTO_20261103 = {
+  id: "fintech-eventos-vivo-colombia",
+  name: "Interés fintech con afinidad a eventos deportivos y en vivo (Paramo>AudienciasFintechLiveEvent>Col)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-03)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>AudienciasFintechLiveEvent>Col' (audience_id 3993e2b6-ae7f-4239-baeb-d9e63ea89bb7): colombianos con interés en fintech/finanzas personales cruzado con interés en eventos en vivo y deportivos.",
+  funnelSteps: [
+    { label: "Interés en fintech cruzado con eventos en vivo/deportivos (Colombia)", pct: 19.3 },
+  ],
+  footnotes: [
+    "19.3% ≈ universo real de GWI (2,892,949 hombres + 3,093,763 mujeres = 5,986,712, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital de Colombia (31.06M, MARKETS).",
+    "Demografía (género, bandas de edad), tenencia financiera (cuenta bancaria, tarjeta de crédito, préstamos), intereses deportivos/culturales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "Las bandas de edad suman 101% por redondeo propio de GWI (21% + 29% + 23% + 17% + 11%) — se dejan tal como las devolvió la plataforma, sin forzar que sumen exactamente 100.",
+    "GWI devolvió índices extremadamente altos (varios cientos a miles de puntos) para el consumo de streaming de ligas de fútbol específicas (Copa América, Liga Dimayor, Vuelta a España) — son cifras reales de chat_gwi, pero con una base de comparación tan pequeña que su magnitud no es directamente comparable a los demás índices del perfil; se resumen de forma cualitativa en el aiInsight en vez de listarlos como bullets numéricos para evitar que parezcan un error de datos.",
+    "GWI no devolvió desagregación por ciudad para esta audiencia, ni datos de franja horaria (time-of-day) — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "profesional-fintech-eventos-vivo-colombia",
+      name: "Juliana Restrepo",
+      archetype: "La Entusiasta Financiera y Deportiva",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana de 25 a 44 años en su mayoría, bancarizada (90.2% tiene cuenta bancaria, 57.9% tarjeta de crédito) y con interés declarado en inversiones (43%), pero que convive con presión de deuda de corto plazo (36.4% tiene actualmente un préstamo de corto plazo). Se distingue de otras audiencias fintech ya mapeadas por su fuerte consumo cultural y deportivo: es entusiasta de la cultura popular y el ocio, le interesa la música y sigue de cerca eventos como la Copa América.",
+      aiInsight: aiInsight(
+        "Esta audiencia cruza un perfil fintech ya bancarizado con un fuerte interés en eventos deportivos y en vivo: 90.2% ya tiene cuenta bancaria y 57.9% tarjeta de crédito (inclusión financiera alta), pero 36.4% tiene actualmente un préstamo de corto plazo (índice 154.3) — el mismo patrón de 'bancarizado pero con presión de liquidez' visto en otras audiencias fintech colombianas de este catálogo. Lo distintivo de esta audiencia es su consumo cultural y deportivo: 89% se considera entusiasta de la cultura popular y el ocio (índice 167) y declaró interés específico en seguir la Copa América y ligas de fútbol locales por streaming — un ángulo de patrocinio deportivo que ninguna otra audiencia fintech ya mapeada en este catálogo tiene tan marcado.",
+        [
+          { label: "Alta inclusión financiera, pero con presión de deuda de corto plazo", detail: "90.2% tiene cuenta bancaria y 57.9% tarjeta de crédito, pero 36.4% tiene actualmente un préstamo de corto plazo (índice 154.3) — el mensaje no debería centrarse en 'abrir una cuenta' sino en herramientas de manejo de deuda y liquidez." },
+          { label: "Fuerte afinidad con fútbol y eventos deportivos en vivo, poco explotada por fintech", detail: "Declaró interés marcado en la Copa América y consumo de streaming de ligas de fútbol locales e internacionales — un ángulo de patrocinio o activación deportiva, más que de banca tradicional, puede diferenciar a una fintech frente a la competencia en esta audiencia." },
+          { label: "Perfil cultural amplio: música, cultura pop y apoyo a artistas locales", detail: "83% se interesa en música (índice 154) y 33% apoya artistas o asiste a conciertos locales — co-branding con entretenimiento en vivo (no solo deporte) es otra vía de activación relevante para esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48.3, female: 51.7 },
+        ageBands: [
+          { label: "16-24", pct: 21 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación por ciudad disponible en GWI para esta audiencia", pct: 100 }],
+      },
+      motivations: [
+        { label: "Tiene cuenta bancaria", pct: 90.2 },
+        { label: "Tiene tarjeta de crédito", pct: 57.9 },
+        { label: "Interés en inversiones", pct: 43 },
+        { label: "Tiene criptomonedas", pct: 11 },
+      ],
+      barriers: [
+        { label: "Tiene actualmente un préstamo de corto plazo", pct: 36.4 },
+        { label: "No tiene ningún ahorro ni inversión", pct: 15 },
+        { label: "No tiene acciones/inversión bursátil", pct: 9.1 },
+      ],
+      digitalInterests: [
+        { label: "Entusiasta de la cultura popular y el ocio", index: 167 },
+        { label: "Interesada en música", index: 154 },
+        { label: "Entusiasta de las artes y la cultura", index: 127 },
+        { label: "Apoya artistas locales o asiste a conciertos locales", index: 108 },
+      ],
+      media: [
+        { label: "WhatsApp (uso +1x/día)", pct: 75 },
+        { label: "Instagram (uso +1x/día)", pct: 45 },
+        { label: "Facebook (uso +1x/día)", pct: 43 },
+        { label: "TikTok (uso +1x/día)", pct: 40 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y mensajería", "App de banco/billetera, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Mensajería", "WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming deportivo/música", "Servicios de streaming, apps de música", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "Streaming en vivo y redes", "Streaming de eventos deportivos, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7664,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CONOCEDORES_EVENTOS_ATLANTICO_GWI_AUTO_20261103],
   },
   {
     id: "deportes",
@@ -7452,7 +7703,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_FINTECH_EVENTOS_VIVO_GWI_AUTO_20261103],
   },
   {
     id: "alcohol",
@@ -7478,7 +7729,7 @@ const CATEGORIES = [
       { id: "investigaOnlineAntes", label: "Investiga activamente online antes de comprar" },
       { id: "prioridadFamiliar", label: "Prioriza espacio y seguridad familiar" },
     ],
-    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019],
+    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019, CASE_OMODA_NEEDS_CHILE_GWI_AUTO_20261103],
   },
   {
     id: "consumer-tech",

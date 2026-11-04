@@ -7398,6 +7398,264 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_CORFERIAS_CONQUILLA_GWI_AUTO_20261104 = {
+  id: "corferias-conquilla-conocedores-atlantico",
+  name: "Conocedores de eventos en vivo en Atlántico (Corferias Conquilla)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-04)",
+  insightNote:
+    "Audiencia real de GWI ('Corferias>Conquilla>Conocedores', audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6): colombianos de 28 a 64 años residentes en Atlántico, interesados en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Conquilla Conocedores' en GWI (568,553) sobre la población digital de Colombia (31.06M)", pct: 1.83 },
+  ],
+  footnotes: [
+    "1.83% ≈ universo real de la audiencia en GWI (287,686 mujeres + 280,867 hombres = 568,553, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "La audiencia está definida por GWI con un piso de edad de 28 años — por eso no hay datos para las bandas 16-24 y 65+ (se dejan en 0%); el desglose real cubre 25-34 (incluye 28-34), 35-44, 45-54 y 55-64.",
+    "Demografía, motivaciones, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Las 'motivaciones' y 'barreras' de GWI para esta audiencia están formuladas como motivadores/frenos de compra y de promoción de marca en general (no son específicas de la categoría de eventos en vivo) — se usan igual por ser el dato real más cercano disponible.",
+    "El customer journey usa datos reales de GWI sobre horarios de consumo de canales internacionales de TV entre espectadores frecuentes de esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "conocedor-eventos-atlantico",
+      name: "Mariana Pacheco",
+      archetype: "La Conocedora Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia adulta (28-64 años) de Atlántico, Colombia, con género casi parejo (51% mujeres, 49% hombres), concentrada en 25-44 años (65% combinado). Se identifica fuertemente como entusiasta de las artes y la cultura (63%) y muestra alto interés en tecnología (73%) y en asuntos locales (44%) — una audiencia de 'conocedores' que valora la autenticidad cultural de la región más que el evento masivo genérico.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'curaduría local sobre masividad': esta audiencia no busca cualquier evento en vivo, sino los que validan su identidad regional y su estatus de 'conocedores' (63% se identifica como entusiasta de artes y cultura) — el mensaje de marca funciona mejor posicionando el evento como una selección curada y auténtica de la escena de Atlántico, no como un festival masivo más.",
+        [
+          { label: "El interés en tecnología (73%) es la puerta de entrada digital", detail: "Es el interés más alto de todo el perfil — más que el entretenimiento en sí — lo que sugiere que la activación digital (apps, contenido interactivo, compra sin fricción) pesa más en la decisión que el contenido cultural per se." },
+          { label: "Consumo de TV internacional en bloques muy definidos", detail: "56% prefiere verla entre 5 y 7pm y 44% entre 10pm y medianoche — dos ventanas claras de alta atención para pauta de TV/streaming antes y después de la cena." },
+          { label: "Baja intención de compartir opinión pública sobre vida social", detail: "Solo 8.9% publicó en línea sobre salir de noche/socializar en el último mes — el boca a boca digital no es el canal natural de esta audiencia; conviene priorizar pauta paga sobre earned media." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49, female: 51 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 33 },
+          { label: "35-44", pct: 32 },
+          { label: "45-54", pct: 21 },
+          { label: "55-64", pct: 14 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (Barranquilla y alrededores, audiencia definida por departamento, sin desagregado adicional por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Promueve marcas online por la calidad de sus productos", pct: 58 },
+        { label: "Se motiva por recompensas al promocionar una marca", pct: 47 },
+        { label: "Se motiva tras recibir excelente servicio al cliente", pct: 47 },
+        { label: "Promueve una marca porque la ama", pct: 39 },
+      ],
+      barriers: [
+        { label: "Prefiere el envío gratuito al comprar online", pct: 54 },
+        { label: "Se motiva solo cuando tiene conocimiento interno sobre la marca/producto", pct: 34 },
+      ],
+      digitalInterests: [
+        { label: "Se considera entusiasta de las artes y la cultura", pct: 63 },
+        { label: "Interesado en tecnología", pct: 73 },
+        { label: "Interesado en reality shows", pct: 39 },
+        { label: "Interesado en asuntos locales", pct: 44 },
+        { label: "Interesado en el baile", pct: 36 },
+      ],
+      media: [
+        { label: "Tiene interés en la televisión", pct: 68 },
+        { label: "Usuario intensivo de streaming como Netflix/Hulu", pct: 40 },
+        { label: "Usa internet para ver videos, TV o películas", pct: 63 },
+        { label: "Vio videos online desde el móvil en la última semana", pct: 68 },
+        { label: "Usuario intensivo de streaming de música", pct: 45 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Canales internacionales de TV", "TV por cable/streaming", "36% ve canales internacionales de TV en este bloque entre semana.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Canales internacionales de TV", "TV por cable/streaming", "41% ve canales internacionales de TV en este bloque entre semana.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Canales internacionales de TV y redes", "TV, Instagram", "38-54% ve canales internacionales de TV durante el almuerzo.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Canales internacionales de TV", "TV por cable/streaming", "50% prefiere ver canales internacionales entre 2 y 5pm.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Canales internacionales de TV", "TV por cable/streaming", "56% prefiere verlos entre 5 y 7pm — ventana de mayor atención del día.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y TV", "Netflix/Hulu, TV", "44% ve canales internacionales entre 10pm y medianoche.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_DIG_FREELANCERS_FINTECH_GWI_AUTO_20261104 = {
+  id: "freelancers-autonomos-fintech-global-usa",
+  name: "Freelancers y autónomos con negocio paralelo (audiencia global, foco EE.UU.)",
+  market: "USA",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-04)",
+  insightNote:
+    "Audiencia real de GWI ('Dig>Financial Products>FinTech Client>Freelancers', audience_id e03ead1f-7425-4402-bb3c-e7f45d0fcc50): personas que trabajan como freelancers/autónomos, o combinan un empleo de tiempo completo o parcial con un negocio paralelo de freelancing/emprendimiento — perfil de cliente fintech recurrente para productos de ingresos no tradicionales.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'FinTech Client Freelancers' en GWI (31,976,928 a nivel global; ~80% reside en EE.UU.) sobre la población digital de EE.UU. (250M)", pct: 10.2 },
+  ],
+  footnotes: [
+    "10.2% ≈ universo estimado en EE.UU. de la audiencia (31,976,928 personas a nivel global, verificado vía explore_insight_gwi sobre la pregunta 'Audience Size', de las cuales 80% declara residir en Estados Unidos según chat_gwi = ~25,581,542) sobre la población digital de Estados Unidos (250M).",
+    "Esta es una audiencia global, sin recorte geográfico en su definición original en GWI — Estados Unidos concentra la mayor proporción individual (80%), con participaciones menores en India, Reino Unido, Alemania e Italia. Se usa EE.UU. como mercado de referencia del caso por ser el de mayor peso, pero el perfil real no está acotado a un único país.",
+    "Demografía (género y edad), motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Las 'motivaciones' que devolvió GWI para esta audiencia corresponden a razones de consumo de gaming y actividades al aire libre (no son específicas del sector fintech) — se usan igual por ser el dato real más cercano disponible para esta audiencia.",
+    "Las 'barreras' que devolvió GWI corresponden a frenos para pedir comida por apps de delivery — se usan igual por ser el dato real de barreras de consumo más cercano disponible.",
+    "El customer journey usa datos reales de GWI sobre horarios de consumo de canales internacionales de TV entre espectadores frecuentes de esta audiencia.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "freelancer-fintech-global-usa",
+      name: "Jordan Mitchell",
+      archetype: "El Freelancer Multitarea",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia global con foco en Estados Unidos (~80% del universo), género ligeramente masculino (53% hombres, 46.4% mujeres), concentrada en 25-44 años (47% combinado). Combina trabajo independiente con un segundo proyecto o emprendimiento, con alto interés en tecnología (55%), economía/finanzas (42%) y emprendimiento (38%) — un perfil de ingresos variables y múltiples fuentes, relevante para productos fintech pensados fuera de la nómina tradicional.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'ingreso en portafolio' (varias fuentes de ingreso en paralelo, no un solo empleador): esta audiencia combina freelance, negocio paralelo y en algunos casos empleo formal, lo que la hace un cliente natural de productos fintech de ingresos variables (cuentas sin nómina fija, ahorro automatizado, crédito basado en flujo de caja) más que de banca tradicional basada en salario fijo.",
+        [
+          { label: "El gaming y las actividades al aire libre son más una válvula de escape que un interés de nicho", detail: "56% juega por diversión y 51% hace actividades al aire libre por salud — en una audiencia con alta carga de trabajo (freelance + proyecto paralelo), el mensaje de marca conecta mejor hablando de equilibrio/desconexión que de productividad." },
+          { label: "Barreras de consumo muy prácticas, no de confianza", detail: "63% señala los cargos de entrega como el freno principal para pedir por apps — sugiere una audiencia sensible al costo marginal más que a la desconfianza de marca, relevante para el diseño de tarifas de productos fintech." },
+          { label: "Consumo de TV internacional concentrado en bloques de trabajo y cierre del día", detail: "47% la ve durante el almuerzo y 37% prefiere verla entre 10pm y medianoche — dos ventanas de pauta más rentables que el prime time tradicional para esta audiencia con horarios no convencionales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 53, female: 46.4 },
+        ageBands: [
+          { label: "16-24", pct: 20 },
+          { label: "25-34", pct: 26 },
+          { label: "35-44", pct: 21 },
+          { label: "45-54", pct: 15 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 3 },
+        ],
+        topCities: [{ city: "Audiencia global (~80% en Estados Unidos; participación menor en India, Reino Unido, Alemania e Italia — sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Juega videojuegos por diversión", pct: 56 },
+        { label: "Juega videojuegos para relajarse y desconectar", pct: 54 },
+        { label: "Hace actividades al aire libre por salud y forma física", pct: 51 },
+        { label: "Hace actividades al aire libre para relajarse", pct: 49 },
+      ],
+      barriers: [
+        { label: "Los cargos de entrega/servicio frenan el pedido por apps de delivery", pct: 63 },
+        { label: "Prefiere cocinar, comer fuera o recoger la comida en persona", pct: 35 },
+        { label: "Pedidos incorrectos o poco fiables en el pasado", pct: 32 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en tecnología", pct: 55 },
+        { label: "Interesado en economía y finanzas", pct: 42 },
+        { label: "Interesado en emprendimiento", pct: 38 },
+        { label: "Interesado en inversiones", pct: 38 },
+        { label: "Usa redes sociales para encontrar contenido", pct: 36 },
+      ],
+      media: [
+        { label: "Usa redes sociales para ver qué es tendencia", pct: 34 },
+        { label: "Consume intensivamente prensa y artículos online", pct: 30 },
+        { label: "Usuario intensivo de streaming de música", pct: 27 },
+        { label: "Le gusta escuchar podcasts", pct: 26 },
+        { label: "Usuario intensivo de podcasts", pct: 19 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / espacio de trabajo", "Canales internacionales de TV", "TV por cable/streaming", "35% ve canales internacionales de TV en este bloque entre semana.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Espacio de trabajo", "Prensa y redes online", "Sitios de noticias, redes sociales", "30% consume intensivamente prensa y artículos online.", []),
+        daypart("Medio día", "12 m a 3 pm", "Espacio de trabajo", "Canales internacionales de TV", "TV por cable/streaming", "47% ve canales internacionales de TV durante el almuerzo.", []),
+        daypart("La tarde", "3 a 6 pm", "Espacio de trabajo", "Canales internacionales de TV", "TV por cable/streaming", "35% prefiere verlos a media tarde (2-5pm).", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Canales internacionales de TV", "TV por cable/streaming", "40% indica mayor probabilidad de verlos entre 5 y 7pm.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV, streaming de música, podcasts", "TV, Spotify, podcasts", "37% prefiere ver TV entre 10pm y medianoche.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_DOITE_NECESIDADES_MODA_GWI_AUTO_20261104 = {
+  id: "necesidades-outdoor-moda-chile",
+  name: "Compradoras por necesidad de ropa/equipo outdoor (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-04)",
+  insightNote:
+    "Audiencia real de GWI ('DOITE>DOITE>B2C>Chile>NEEDS>Moda', audience_id d82606ea-8094-4bc6-82d6-a4eaa3dc8363): segmento chileno de la marca de equipo outdoor DOITE definido por necesidad funcional de producto (distinto del segmento de alta propensión ya analizado en el caso 'Alta propensión Moda Chile').",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'DOITE NEEDS Moda' en GWI (285,998) sobre la población digital de Chile (15.6M)", pct: 1.83 },
+  ],
+  footnotes: [
+    "1.83% ≈ universo real de la audiencia en GWI (239,975 mujeres + 46,023 hombres = 285,998, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M).",
+    "Esta audiencia es un segmento distinto (necesidad funcional de producto) de la misma marca DOITE ya presente en el caso 'Alta propensión Moda Chile' (audience_id 7f087d12, procesada el 2026-10-04) — se deja como caso independiente porque corresponde a un audience_id y criterio de segmentación distintos, con una composición de género mucho más concentrada en mujeres (83.9% vs. la otra audiencia).",
+    "Demografía, motivaciones, barreras e intereses digitales tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Las 'motivaciones' y 'barreras' que devolvió GWI están formuladas como motivadores/preferencias de compra y promoción de marca en general (no son específicas de ropa/equipo outdoor) — se usan igual por ser el dato real más cercano disponible.",
+    "GWI no devolvió datos compatibles para el customer journey por momento del día en esta audiencia — el journey usa lugares/medios genéricos sin cifras de actividad por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "compradora-necesidad-outdoor-chile",
+      name: "Javiera Contreras",
+      archetype: "La Compradora Funcional",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia chilena abrumadoramente femenina (83.9% mujeres) y con edad muy repartida entre 16 y 64 años (sin un grupo dominante claro). Compra por necesidad funcional más que por estatus de marca: valora el envío gratis (83%) y prefiere ahorrar y esperar antes de comprar (86%), pero también responde fuerte a recompensas (82%) y productos de alta calidad (73%) al momento de promocionar una marca.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'compra deliberada' (vs. compra impulsiva): el 86% de esta audiencia prefiere ahorrar y esperar antes de comprar, y solo el 14% prioriza comprar cuanto antes frente a otros gastos — es una audiencia que necesita el producto (equipo/ropa outdoor funcional) pero que planea la compra, lo que hace que la comunicación de urgencia/escasez sea menos efectiva que la de confianza y calidad sostenida en el tiempo.",
+        [
+          { label: "El envío gratis pesa más que el descuento directo", detail: "83% prefiere el envío gratuito — una palanca de conversión más barata y más efectiva para la marca que bajar precio directamente." },
+          { label: "El 'boca a boca social' es un driver de compra real", detail: "47% es más propensa a comprar un producto con muchos 'me gusta' o buenos comentarios en redes — el prueba social (reviews, UGC) debería tener tanto peso como la pauta paga en el funnel de conversión." },
+          { label: "100% usa redes sociales para ver tendencias — pero no hay señal de actividad nocturna específica", detail: "A diferencia de otras audiencias ya analizadas, GWI no devolvió un patrón claro de consumo por momento del día para este segmento, lo que sugiere activación 'always-on' en redes antes que pauta concentrada en una franja horaria." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 16.1, female: 83.9 },
+        ageBands: [
+          { label: "16-24", pct: 17 },
+          { label: "25-34", pct: 21 },
+          { label: "35-44", pct: 21 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 21 },
+          { label: "65+", pct: 1 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Se motiva a promover marcas por recompensas", pct: 82 },
+        { label: "Se motiva por productos de alta calidad", pct: 73 },
+        { label: "Se motiva tras recibir excelente atención al cliente", pct: 65 },
+        { label: "Se motiva cuando tiene conocimiento exclusivo de la marca", pct: 63 },
+      ],
+      barriers: [
+        { label: "Prefiere ahorrar y esperar antes de comprar un producto", pct: 86 },
+        { label: "Prioriza el envío gratuito como condición de compra", pct: 83 },
+        { label: "Solo compra cuanto antes frente a otros gastos", pct: 14 },
+      ],
+      digitalInterests: [
+        { label: "Usa redes sociales para ver qué es tendencia", pct: 100 },
+        { label: "Interesada en viajar", pct: 84 },
+        { label: "Interesada en proyectos de bricolaje/mejoras del hogar", pct: 73 },
+        { label: "Interesada en temas locales", pct: 60 },
+        { label: "Interesada en causas benéficas y voluntariado", pct: 49 },
+      ],
+      media: [
+        { label: "Usuaria intensiva de streaming como Netflix/Hulu", pct: 60 },
+        { label: "Usó YouTube en el último mes", pct: 68 },
+        { label: "Vio videos en dispositivos móviles en la última semana", pct: 85 },
+        { label: "Usuaria intensiva de streaming de música", pct: 72 },
+        { label: "Usuaria intensiva de podcasts", pct: 31 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Casa / trabajo", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / casa", "Búsqueda y redes", "Google, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa / trabajo", "Video online", "YouTube, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y música", "Netflix, Spotify", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7671,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CORFERIAS_CONQUILLA_GWI_AUTO_20261104],
   },
   {
     id: "deportes",
@@ -7439,7 +7697,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020, CASE_DOITE_NECESIDADES_MODA_GWI_AUTO_20261104],
   },
   {
     id: "fintech",
@@ -7452,7 +7710,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_DIG_FREELANCERS_FINTECH_GWI_AUTO_20261104],
   },
   {
     id: "alcohol",

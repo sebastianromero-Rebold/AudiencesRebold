@@ -7308,6 +7308,234 @@ const CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020 = {
   ],
 };
 
+const CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261105 = {
+  id: "corferias-conquilla-atlantico-colombia",
+  name: "Asistentes a eventos Conquilla en Atlántico (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-05)",
+  insightNote:
+    "Audiencias reales de GWI 'Corferias>Conquilla>Conocedores' (audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6) y 'Corferias>Conquilla>Aventureros' (audience_id 79e794cd-0073-4de5-a21e-2efb38878029): personas en Atlántico, Colombia, interesadas en eventos en vivo como festivales de música, segmentadas por edad (28-64 'Conocedores' vs. 18-24 'Aventureros') — probablemente asistentes a Conquilla, feria/evento de Corferias en la región Caribe.",
+  funnelSteps: [
+    { label: "Universo combinado real de ambas audiencias en GWI (758,848) sobre la población digital de Colombia (31.06M)", pct: 2.44 },
+  ],
+  footnotes: [
+    "2.44% = universo combinado real de ambas audiencias en GWI (568,553 de 'Conquilla>Conocedores' + 190,295 de 'Conquilla>Aventureros' = 758,848, cada uno verificado vía explore_insight_gwi sobre la pregunta de género de su propia audiencia) sobre la población digital total de Colombia (31.06M).",
+    "El reparto entre las dos personas (74.9% / 25.1%) usa el tamaño real de cada audiencia en GWI.",
+    "Ambas audiencias están restringidas a residentes de Atlántico; GWI no devolvió desagregación de ciudad adicional (ej. Barranquilla) con muestra suficiente, así que 'Atlántico' se deja como única ubicación en topCities.",
+    "GWI no devolvió barreras explícitas para esta categoría (eventos en vivo). Las barreras de 'Conocedores' se infieren de datos reales de comportamiento de compra (brecha entre compra general de boletos y compra 100% online, e intención de recompra futura); para 'Aventureros', GWI no devolvió datos de compra de boletos propios, así que sus barreras usan solo comportamiento real de búsqueda/afinidad, nunca una cifra inventada.",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, especialmente la cita de cada persona y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "conocedor-eventos-conquilla-atlantico",
+      name: "Marta Lucía Fontalvo",
+      archetype: "La Conocedora Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Atlántico, tiene entre 28 y 64 años (con pico en 25-44) y es una asistente experimentada a eventos como Conquilla: ama apoyar artistas locales, valora escuchar música en alta calidad y prioriza experiencias culturales incluso al planear sus vacaciones.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'cultura como identidad local': esta audiencia de 28-64 años en Atlántico no solo asiste a eventos, los vive como parte de su identidad regional — su consumo de TV en vivo (86%) es inusualmente alto para un público de eventos en vivo, lo que sugiere que el medio más efectivo no es solo digital, sino también TV/radio tradicional, canales que compiten menos por su atención en este segmento.",
+        [
+          { label: "La compra de boletos aún no es un hábito 100% digital", detail: "Solo 7.2% de quienes compran boletos lo hace exclusivamente online, frente al 23% que compra boletos por cualquier canal en los últimos 3-6 meses — vale la pena invertir en puntos de venta físicos o aliados locales, no solo en e-commerce." },
+          { label: "TV y radio siguen siendo canales relevantes, no solo redes", detail: "86% usa TV para ver canales en vivo y 37% disfruta programas de radio — una pauta mixta con medios tradicionales puede tener mejor alcance que una estrategia 100% digital para este segmento." },
+          { label: "El interés por asuntos locales supera el promedio en 66%", detail: "44% de la audiencia se interesa por asuntos locales (índice 166) — mensajes anclados en la identidad de Atlántico/Barranquilla conectan mejor que una campaña genérica nacional." },
+        ]
+      ),
+      sharePct: 74.9,
+      demographics: {
+        genderSplit: { male: 49.4, female: 50.6 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 33.0 },
+          { label: "35-44", pct: 32.0 },
+          { label: "45-54", pct: 21.0 },
+          { label: "55-64", pct: 14.0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (departamento, sin desagregación por ciudad)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interés en música", pct: 77.0 },
+        { label: "Siempre está pendiente de nuevos eventos de música en vivo", pct: 26.0 },
+        { label: "Sigue en redes sociales las cuentas de los eventos a los que asistirá", pct: 20.0 },
+        { label: "Compró boletos para conciertos en los últimos 3-6 meses", pct: 23.0 },
+      ],
+      barriers: [
+        { label: "Solo una fracción compra boletos 100% online (vs. 23% que compra en general, por cualquier canal)", pct: 7.2 },
+        { label: "La intención de recompra futura (próximos 3-6 meses) es menor a la compra ya realizada", pct: 19.0 },
+        { label: "No todas están en modo de búsqueda activa de nuevos eventos en vivo", pct: 29.0 },
+      ],
+      digitalInterests: [
+        { label: "Interés en asuntos locales", index: 166 },
+        { label: "Interés en reality TV", index: 184 },
+        { label: "Se identifica como entusiasta de las artes y la cultura", index: 154 },
+        { label: "Interés en actividades al aire libre (camping, senderismo)", index: 134 },
+      ],
+      media: [
+        { label: "Usa TV para ver TV en vivo o canales", pct: 86.0 },
+        { label: "Usa TV para acceder a internet", pct: 53.0 },
+        { label: "Disfruta escuchar playlists de una plataforma de música", pct: 45.0 },
+        { label: "Usuario intensivo de streaming como Netflix/Hulu", pct: 40.0 },
+        { label: "Disfruta escuchar programas de radio", pct: 37.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV y radio", "Canales de TV abierta, radio local", "Agenda cultural del día o recordatorio de un evento próximo.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Casa / trabajo", "Redes sociales", "Facebook, Instagram", "Contenido sobre artistas locales o próximos eventos en Atlántico.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Streaming de música", "Apps de música", "Playlist patrocinada o anuncio de un evento.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV e internet", "TV conectada, YouTube", "Promoción de boletos para un evento local.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, Hulu", "Pauta pre-roll o patrocinio de contenido cultural.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "Radio y streaming", "Radio local, apps de streaming", "Transmisión en vivo del evento o cobertura post-evento.", []),
+      ],
+    },
+    {
+      id: "aventurero-eventos-conquilla-atlantico",
+      name: "Valeria Campo",
+      archetype: "La Aventurera Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Atlántico, tiene entre 18 y 24 años, y usa la música para descubrir y construir identidad: encuentra fácil descubrir música nueva, disfruta buscar artistas antes de que se vuelvan conocidos, y publica sobre arte y cultura muy por encima del promedio.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'descubrimiento musical como identidad de marca personal': a diferencia del segmento de mayor edad, esta audiencia de 18-24 años no solo consume música, la usa para construir su identidad en redes — descubren artistas antes que el resto (40%, +64% más propensas) y publican sobre arte/cultura muy por encima del promedio (índice 301), lo que las convierte en early adopters naturales de line-ups emergentes.",
+        [
+          { label: "Son descubridoras, no solo asistentes", detail: "40% suele descubrir artistas o bandas antes de que se vuelvan conocidos (+64%) y 48% disfruta buscar nuevos artistas, bandas o canciones — un line-up con artistas emergentes puede conectar mejor que uno enfocado solo en headliners establecidos." },
+          { label: "Publican sobre cultura mucho más que el promedio", detail: "Publicar sobre arte o cultura en línea tiene el índice más alto de todos los temas medidos para esta audiencia (301) — convertirlas en creadoras de contenido oficial del evento puede generar más alcance orgánico que la pauta paga." },
+          { label: "Apoyar lo local no es automático en este segmento", detail: "Solo 29% dice disfrutar apoyar artistas locales o asistir a conciertos locales — el mensaje para este grupo debe vender la experiencia y el descubrimiento, no solo el orgullo local." },
+        ]
+      ),
+      sharePct: 25.1,
+      demographics: {
+        genderSplit: { male: 36.9, female: 63.1 },
+        ageBands: [
+          { label: "16-24", pct: 100.0 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (departamento, sin desagregación por ciudad)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interés en música", pct: 79.0 },
+        { label: "Le resulta fácil descubrir música nueva o de su gusto", pct: 62.0 },
+        { label: "Disfruta buscar nuevos artistas, bandas o canciones", pct: 48.0 },
+        { label: "Suele descubrir artistas o bandas antes de que se vuelvan conocidos", pct: 40.0 },
+      ],
+      barriers: [
+        { label: "Menor proactividad en la búsqueda de nuevos eventos en vivo que el segmento de mayor edad (26% en 'Conocedores')", pct: 19.0 },
+        { label: "Apoyar artistas locales o asistir a conciertos locales no es su principal motivador", pct: 29.0 },
+      ],
+      digitalInterests: [
+        { label: "Publicó sobre arte o cultura en línea el último mes", index: 301 },
+        { label: "Publicó sobre moda o ropa en línea el último mes", index: 238 },
+        { label: "Publicó su opinión sobre comida o restaurantes en línea el último mes", index: 204 },
+        { label: "Interés en el baile", index: 185 },
+      ],
+      media: [
+        { label: "Interés en televisión", pct: 67.0 },
+        { label: "Usa internet para ver videos, programas de TV o películas", pct: 67.0 },
+        { label: "Vio videos en línea desde el móvil la última semana", pct: 64.0 },
+        { label: "Usa redes sociales para encontrar contenido", pct: 47.0 },
+        { label: "Usuario intensivo de streaming como Netflix/Hulu", pct: 35.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y música", "Instagram, apps de música", "Playlist del día o recordatorio de un evento próximo.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Casa / estudio", "Redes sociales", "Instagram, TikTok", "Descubrimiento de artistas emergentes o contenido detrás de cámaras.", []),
+        daypart("Medio día", "12 m a 3 pm", "Estudio / restaurantes", "Video móvil", "TikTok, YouTube", "Clip corto de un artista o evento próximo.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Instagram, TikTok", "Contenido generado por asistentes de eventos anteriores.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Pauta pre-roll o patrocinio de contenido cultural.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "Redes sociales y streaming", "Instagram, apps de streaming", "Transmisión en vivo o resumen del evento para compartir.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_CUNDINAMARCAFEST_CONCIERTOS_GWI_AUTO_20261105 = {
+  id: "cundinamarcafest-conciertos-fans-colombia",
+  name: "Fans de conciertos y apoyo a artistas locales — CundinamarcaFest (Bogotá/Cundinamarca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-05)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo (co) CundinamarcaFest_Conciertos' (audience_id 92f450c6-17f8-4730-87c0-5aa3f57b1b66): personas en el Distrito Capital o Cundinamarca interesadas en eventos en vivo como festivales de música y, además, interesadas en transmitir eventos, apoyar artistas locales o asistir a conciertos locales — un corte más específico (con mayor énfasis en streaming y apoyo a talento local) de la misma campaña ya analizada el 2026-09-29 en el caso 'cundinamarcafest-conciertos-colombia' (audience_id 0d2ef4a3, persona 'asistente-festivales-cundinamarca').",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (2,104,576) sobre la población digital de Colombia (31.06M)", pct: 6.78 },
+  ],
+  footnotes: [
+    "6.78% = universo real de la audiencia en GWI (1,057,850 hombres + 1,046,726 mujeres = 2,104,576, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Esta audiencia es un corte más específico (con criterios adicionales de streaming de eventos y apoyo a artistas locales) de la misma campaña 'CundinamarcaFest' ya analizada en el caso 'cundinamarcafest-conciertos-colombia' — se deja como caso independiente para que el equipo editorial decida si fusionarlas.",
+    "Edad verificada vía explore_insight_gwi: 25-34: 27.9%, 35-44: 24.5%, 16-24: 20.0%, 45-54: 19.7%; el restante 7.9% corresponde a 55-64 según chat_gwi (no se verificó adicionalmente vía explore_insight_gwi).",
+    "GWI no devolvió barreras explícitas para esta categoría; se usan como barreras la brecha entre compra general de boletos (30%) y compra 100% online (12.4%, verificada vía explore_insight_gwi), la menor intención de recompra futura (27%) y la pequeña fracción que no disfruta apoyar artistas locales (7.9%).",
+    "La cita es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, especialmente la cita y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "fan-conciertos-apoyo-local-cundinamarca",
+      name: "Sebastián Moreno",
+      archetype: "El Fan que Apoya lo Local",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá o Cundinamarca y combina el gusto por festivales grandes con un fuerte compromiso por el talento local: ama apoyar artistas emergentes y asistir a conciertos de ciudad o barrio, a la vez que consume activamente contenido en streaming de los eventos a los que no puede ir en persona.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'hibridación presencial-streaming' en eventos en vivo: a diferencia de audiencias que solo asisten, este segmento valora casi igual ir al evento (68.3% ama apoyar artistas locales, el índice más alto de todos los temas medidos: 274.7) que verlo en streaming (59%, +182%) — la estrategia de contenido no debería tratar ambos canales como sustitutos sino como un combo: transmitir el evento amplifica el alcance sin reducir la intención de asistir en persona.",
+        [
+          { label: "El apoyo a lo local es su rasgo más distintivo, no solo un extra", detail: "68.3% ama apoyar artistas locales o asistir a conciertos locales — el índice más alto medido para esta audiencia (274.7, casi 3 veces más probable que el promedio) — un line-up con talento emergente de la región puede rendir mejor que uno anclado solo en un headliner internacional genérico." },
+          { label: "El streaming no compite con la asistencia, la complementa", detail: "59% está interesado en transmitir eventos (+182%) sin que eso reduzca su interés en asistir (30% ya compró boletos, +100% más probable que el promedio) — transmitir en vivo el evento puede generar alcance e ingresos adicionales sin canibalizar la venta de boletos." },
+          { label: "La compra de boletos todavía depende de canales offline", detail: "Solo 12.4% compra boletos 100% online frente al 30% que compra por cualquier canal — vale la pena mantener puntos de venta físicos o alianzas con taquillas locales, no solo e-commerce." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50.3, female: 49.7 },
+        ageBands: [
+          { label: "16-24", pct: 20.0 },
+          { label: "25-34", pct: 27.9 },
+          { label: "35-44", pct: 24.5 },
+          { label: "45-54", pct: 19.7 },
+          { label: "55-64", pct: 7.9 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá / Cundinamarca (sin desagregación adicional por ciudad)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interés en música", pct: 84.0 },
+        { label: "Ama apoyar artistas locales o asistir a conciertos locales", pct: 68.3 },
+        { label: "Interés en transmitir eventos (streaming)", pct: 59.0 },
+        { label: "Compró boletos para conciertos en los últimos 3-6 meses", pct: 30.0 },
+      ],
+      barriers: [
+        { label: "Baja conversión a compra 100% online de boletos (vs. 30% que compra boletos en general)", pct: 12.4 },
+        { label: "La intención de recompra futura de boletos es algo menor a la compra reciente", pct: 27.0 },
+        { label: "Una pequeña fracción no disfruta apoyar artistas locales ni asistir a conciertos locales", pct: 7.9 },
+      ],
+      digitalInterests: [
+        { label: "Interés en teatro", index: 167 },
+        { label: "Interés en arte urbano o moderno", index: 157 },
+        { label: "Interés en danza", index: 148 },
+        { label: "Interés en tecnología", index: 117 },
+      ],
+      media: [
+        { label: "Usa TV para ver TV en vivo o canales", pct: 90.0 },
+        { label: "Usa TV para contenido bajo demanda o streaming", pct: 84.0 },
+        { label: "Usa internet para acceder a música o escucharla", pct: 74.0 },
+        { label: "Usuario intensivo de streaming de música", pct: 63.0 },
+        { label: "Usuario intensivo de streaming como Netflix/Hulu", pct: 40.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Música y radio", "Apps de música, radio", "Playlist patrocinada o recordatorio de un evento cercano.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Redes sociales", "Instagram, Facebook", "Contenido sobre artistas locales o el line-up del festival.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming de música", "Apps de streaming de música", "Anuncio de boletos disponibles o preventa.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV e internet", "TV conectada, YouTube", "Clip de un artista local o cobertura de un evento pasado.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, plataformas de streaming", "Pauta pre-roll o patrocinio del evento.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "TV y streaming de eventos", "TV en vivo, transmisión del evento", "Transmisión en vivo del festival o resumen del evento.", []),
+      ],
+    },
+  ],
+};
+
 const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   id: "interes-financiero-amplio-colombia",
   name: "Interés amplio en finanzas y pagos digitales (Colombia)",
@@ -7413,7 +7641,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261105, CASE_CUNDINAMARCAFEST_CONCIERTOS_GWI_AUTO_20261105],
   },
   {
     id: "deportes",
@@ -7599,4 +7827,7 @@ const PERSONA_RELATED_TRAITS = {
   "usuario-mastercard-colombia": ["usaAppsFin", "migraEfectivo"],
   "usuario-visa-colombia": ["abiertoCambiar", "pruebaMultiples"],
   "entusiasta-cultural-colombia-nacional": ["afinidadGenero", "turismo"],
+  "conocedor-eventos-conquilla-atlantico": ["afinidadGenero", "turismo"],
+  "aventurero-eventos-conquilla-atlantico": ["afinidadGenero"],
+  "fan-conciertos-apoyo-local-cundinamarca": ["afinidadGenero", "comunidadMigrante"],
 };

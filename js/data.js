@@ -7398,6 +7398,290 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_TCL_INSTITUCIONAL_MEXICO_GWI_AUTO_20261108 = {
+  id: "tcl-institucional-mexico",
+  name: "Audiencia institucional TCL (México)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-08)",
+  insightNote:
+    "Audiencia real de GWI 'TCL>TCL>Institucional' (audience_id a834cce1-3aca-433e-bd99-25968111c5d6): personas de 16 a 54 años residentes en México con interés en tecnología/gadgets, confianza para usar nuevas tecnologías, tendencia a comprar tecnología apenas sale, seguimiento de tendencias/noticias tech, gusto por probar cosas primero o hábito de investigar productos online antes de comprar.",
+  funnelSteps: [
+    { label: "Interesados en tecnología dentro de la audiencia institucional TCL (México)", pct: 46.3 },
+  ],
+  footnotes: [
+    "46,3% = universo real interesado en tecnología dentro de esta audiencia (36.169.827 personas, verificado vía explore_insight_gwi, índice 232.8) sobre la población digital total de México (78.05M, cifra ya usada en otros casos de este dataset) — GWI no devolvió una respuesta directa de 'Audience Size' para esta audiencia específica, así que se usa como proxy el universo de la pregunta de interés en tecnología, el criterio más definitorio de la propia audiencia (95,8% de ella misma).",
+    "Demografía (género, bandas de edad y top estados), motivaciones, barreras, intereses digitales y medios verificados vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Bandas etarias 55-64 y 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se dejan en 0 en vez de inventar un valor).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día para esta audiencia, así que los bloques usan lugar/medios genéricos y solo adjuntan una cifra real cuando encaja con el bloque, sin inventar actividades).",
+  ],
+  personas: [
+    {
+      id: "usuario-institucional-tcl-mexico",
+      name: "Arturo Mendoza",
+      archetype: "El Early Adopter Institucional",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Reside en México, mayoritariamente hombre (58%) y joven-adulto (25-34 años el grupo más grande), con fuerte interés en tecnología tanto a nivel personal como en decisiones de compra para su empresa. Confía en su capacidad de usar nuevas tecnologías y suele investigar antes de comprar, pero valora igual de fuerte la seguridad y el soporte técnico cuando la compra es para su organización.",
+      aiInsight: aiInsight(
+        "Cruza un interés en tecnología casi universal dentro de la audiencia (95,8%, índice 232,8) con un sobreíndice muy marcado en streaming premium (Disney+ 50,2%, índice 462,6) y un canal de información poco explotado por otras marcas (Twitch, 27,6%, índice 217,8) — un perfil de early adopter que no solo compra tecnología rápido, también paga por contenido premium y se informa en plataformas de nicho antes que en redes masivas.",
+        [
+          { label: "Es un adoptante temprano también en su rol institucional/empresarial", detail: "67% considera muy importante la seguridad y 65% el soporte técnico disponible al comprar tecnología o software para su empresa — TCL como marca institucional puede hablarle tanto al lado personal (gadgets) como al profesional (compras B2B)." },
+          { label: "Sobreindexa fuerte en streaming premium, no solo en el masivo", detail: "50,2% usó Disney+ en el último mes (índice 462,6) frente a 76,7% de Netflix (índice 206,8) — un bundle o alianza con streaming premium puede diferenciar más que un mensaje genérico de 'entretenimiento'." },
+          { label: "Confía en contenido de nicho (Twitch) para informarse de tecnología", detail: "27,6% usa Twitch para informarse de contenido (índice 217,8), por encima del índice de Facebook (157,5) — co-marketing con creadores de tecnología/gaming puede rendir más que medios masivos para este segmento." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 58, female: 42 },
+        ageBands: [
+          { label: "16-24", pct: 27 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 20 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Ciudad de México (Distrito Federal)", pct: 17 },
+          { city: "Estado de México", pct: 14 },
+          { city: "Jalisco", pct: 7.2 },
+          { city: "Nuevo León", pct: 7 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en tecnología", pct: 95.8 },
+        { label: "Quieren que las marcas sean confiables", pct: 72 },
+        { label: "Quieren que las marcas sean innovadoras", pct: 59 },
+        { label: "Se motivan a promover su marca favorita por productos de alta calidad", pct: 59 },
+      ],
+      barriers: [
+        { label: "Prefieren pagar para acceder a un producto o servicio", pct: 41 },
+        { label: "Al comprar tecnología/software para su empresa, consideran muy importante la seguridad", pct: 67 },
+        { label: "Consideran muy importante que haya soporte técnico disponible", pct: 65 },
+        { label: "Consideran muy importante la confiabilidad del proveedor", pct: 68 },
+      ],
+      digitalInterests: [
+        { label: "Uso de Twitch para informarse de contenido", index: 218 },
+        { label: "Uso de TikTok para informarse de contenido", index: 251 },
+        { label: "Uso de Facebook para informarse de contenido", index: 158 },
+      ],
+      media: [
+        { label: "Usa un televisor para ver TV en vivo o canales", pct: 86 },
+        { label: "Usó Netflix en el último mes", pct: 76.7 },
+        { label: "Usó Disney+ en el último mes", pct: 50.2 },
+        { label: "Usa principalmente redes sociales para buscar información de marcas/productos", pct: 64 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Redes y noticias tech", "Instagram, Facebook", "Revisión de noticias de tecnología y redes antes de empezar el día.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Búsqueda y research", "Google, YouTube", "Investigación de productos y reviews de tecnología antes de comprar.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina", "Redes sociales", "Facebook, Instagram", "Consulta de marcas y productos en redes.", [
+          { label: "Usa principalmente redes sociales para buscar información de marcas/productos", pct: 64, index: 160 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming de video y gaming", "YouTube, Twitch", "Contenido de tecnología y gaming en plataformas de nicho.", [
+          { label: "Uso de Twitch para informarse de contenido", pct: 27.6, index: 218 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV, Netflix", "Consumo de entretenimiento en TV/streaming.", [
+          { label: "Usó Netflix en el último mes", pct: 76.7, index: 207 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming premium", "Disney+", "Consumo de contenido premium y series/películas.", [
+          { label: "Usó Disney+ en el último mes", pct: 50.2, index: 463 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261108 = {
+  id: "conquilla-conocedores-atlantico-colombia",
+  name: "Conocedores de eventos en vivo (Atlántico, Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-08)",
+  insightNote:
+    "Audiencia real de GWI 'Corferias>Conquilla>Conocedores' (audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6): personas de 28 a 64 años que viven en Atlántico, Colombia, y están interesadas en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo, 28-64 años, residentes en Atlántico (Colombia)", pct: 2.3 },
+  ],
+  footnotes: [
+    "2,3% = universo real de la audiencia en GWI (713.030 personas, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M) — es una audiencia angosta por diseño (edad + departamento + interés), consistente con el perfil de 'conocedor' que busca Corferias/Conquilla.",
+    "Demografía (género, bandas de edad y zona urbana/rural), motivaciones, barreras, intereses digitales y medios verificados vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Top ciudades: la audiencia ya está restringida a Atlántico (100%) por definición; se reporta la desagregación urbana/rural real que sí devolvió GWI en vez de inventar ciudades específicas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día para esta audiencia, así que los bloques usan lugar/medios genéricos y solo adjuntan una cifra real cuando encaja con el bloque, sin inventar actividades).",
+  ],
+  personas: [
+    {
+      id: "conocedor-eventos-atlantico-colombia",
+      name: "Camila Barraza",
+      archetype: "La Conocedora Cultural del Caribe",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Atlántico (89% en zona urbana), entre 28 y 64 años, repartida casi igual entre hombres y mujeres. Es entusiasta de las artes y la cultura, con un interés en eventos en vivo que la distingue de la persona promedio colombiana, y compra no solo el boleto sino también para sentirse parte de la comunidad que rodea al evento.",
+      aiInsight: aiInsight(
+        "Cruza un interés en eventos en vivo prácticamente universal dentro de la audiencia (100%, índice 295,4) con un comportamiento digital 'de nicho' poco frecuente en otras audiencias de Rebold: visitas a MSN (18,5%, índice 203,6) y al sitio/app '033' (5,1%, índice 279,1), muy por encima del promedio — sugiere que este segmento de Atlántico consume medios digitales distintos a los habituales (Instagram/TikTok) y que vale la pena probar placements alternativos ahí.",
+        [
+          { label: "Prefiere contenido cultural curado, no solo masivo", detail: "63,3% se identifica como entusiasta de las artes y la cultura (índice 153,9) — contenido narrado o 'detrás de cámaras' del evento puede rendir más que un anuncio genérico de boletería." },
+          { label: "Consume medios digitales poco usuales en otras audiencias Rebold", detail: "Índice 203,6 en MSN e índice 279,1 en el sitio/app '033' — vale la pena probar placements fuera de las redes sociales habituales para este segmento específico de Atlántico." },
+          { label: "Busca comunidad, no solo el evento en sí", detail: "13% compra productos/servicios para acceder a la comunidad que se forma alrededor del evento (índice 153) — mensajes de pertenencia (grupos de fans, encuentros pre-evento) pueden tener mejor retorno que solo vender el boleto." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49, female: 51 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 33 },
+          { label: "35-44", pct: 32 },
+          { label: "45-54", pct: 21 },
+          { label: "55-64", pct: 14 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Atlántico — zona urbana (incl. Barranquilla y área metropolitana)", pct: 89 },
+          { city: "Atlántico — zona rural/suburbana", pct: 11 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en eventos en vivo como festivales de música", pct: 100 },
+        { label: "Entusiastas de las artes y la cultura", pct: 63.3 },
+        { label: "Interesados en temas locales", pct: 44 },
+        { label: "Más motivados a recomendar su marca favorita por productos de alta calidad", pct: 58 },
+      ],
+      barriers: [
+        { label: "Compra productos/servicios para acceder a la comunidad que se forma alrededor del evento", pct: 13 },
+        { label: "Prefieren pagar para acceder a un producto o servicio", pct: 42 },
+        { label: "Consideran muy importante que haya soporte técnico (decisiones de compra hardware/software)", pct: 87 },
+        { label: "Consideran muy importante la confiabilidad del proveedor (decisiones de compra hardware/software)", pct: 79 },
+      ],
+      digitalInterests: [
+        { label: "Visitó el sitio/app '033' en el último mes", index: 279 },
+        { label: "Visitó MSN en el último mes", index: 204 },
+        { label: "Interés en actividades al aire libre (camping, senderismo)", index: 134 },
+      ],
+      media: [
+        { label: "Usa un televisor para ver TV en vivo o canales", pct: 86 },
+        { label: "Es usuario intensivo de streaming (Netflix, Hulu)", pct: 40 },
+        { label: "Interesado en eventos por streaming", pct: 33 },
+        { label: "Disfruta escuchar programas de radio", pct: 37 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Radio y redes", "Radio, Instagram", "Escucha radio en el trayecto matutino.", [
+          { label: "Disfruta escuchar programas de radio", pct: 37, index: 167 },
+        ]),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Redes sociales", "Instagram", "Consulta tendencias y noticias.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "Portales de noticias/entretenimiento", "MSN, Instagram", "Consulta portales de noticias y entretenimiento.", [
+          { label: "Visitó MSN en el último mes", pct: 18.5, index: 204 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Casa / aire libre", "Actividades al aire libre y streaming", "Apps de eventos", "Interés en actividades al aire libre y en eventos transmitidos por streaming.", [
+          { label: "Interesado en eventos por streaming", pct: 33, index: 158 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV en vivo", "TV", "Consumo de TV en vivo/canales.", [
+          { label: "Usa un televisor para ver TV en vivo o canales", pct: 86, index: 103 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming", "Netflix, Hulu", "Consumo de series/películas en streaming.", [
+          { label: "Es usuario intensivo de streaming (Netflix, Hulu)", pct: 40, index: 132 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_FINTECH_EVENTOS_BOGOTA_GWI_AUTO_20261108 = {
+  id: "fintech-eventos-vivo-bogota-alrededores-colombia",
+  name: "Audiencia fintech afín a eventos en vivo (Bogotá y alrededores)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-08)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>AudienciasFintechLiveEventBogAlrede>Col' (audience_id a441e66c-dd98-405f-b935-5aed4648d6e2): personas residentes en el Distrito Capital o Cundinamarca (Colombia) con perfil de interés fintech/pagos combinado con interés en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo con perfil fintech, Bogotá y Cundinamarca (Colombia)", pct: 9.5 },
+  ],
+  footnotes: [
+    "9,5% = universo real de la audiencia en GWI (2.947.128 personas, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, bandas de edad y Distrito Capital/Cundinamarca), motivaciones, barreras, intereses digitales y medios verificados vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Banda etaria 65+: GWI no devolvió desagregación con muestra suficiente para esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "Esta audiencia combina un perfil de pagos/fintech con un interés en eventos en vivo casi universal (100%, verificado) — consistente con un patrón de patrocinio de marcas de pagos en eventos culturales, similar a otros casos de este dataset (p. ej. Visa y el Mundial Femenino).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey (GWI no entrega comportamiento desagregado por momento del día para esta audiencia, así que los bloques usan lugar/medios genéricos y solo adjuntan una cifra real cuando encaja con el bloque, sin inventar actividades).",
+  ],
+  personas: [
+    {
+      id: "usuario-fintech-eventos-bogota-colombia",
+      name: "Daniel Rojas",
+      archetype: "El Pagador Conectado a la Cultura en Vivo",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Reside en el Distrito Capital (82%) o Cundinamarca (18%), ligeramente más mujer que hombre, y combina un interés casi universal en eventos en vivo con un comportamiento digital de pagos y productividad por encima del promedio. Ya paga por streaming de música y usa herramientas de oficina (Microsoft Teams) además de apps de movilidad (Waze), un perfil híbrido entre lo laboral y lo cultural.",
+      aiInsight: aiInsight(
+        "Cruza un interés en eventos en vivo prácticamente universal (100%, índice 295,4) con una motivación moderada por recompensas (55%, índice 124) y un uso por encima del promedio de herramientas de productividad (Microsoft Teams, índice 162,1) y movilidad (Waze, índice 175) — un perfil de 'pagos con cultura': el evento es el gancho, el producto financiero es el facilitador.",
+        [
+          { label: "El evento en vivo es el gancho, no el producto financiero", detail: "100% de interés en eventos en vivo (índice 295,4) frente a solo 55% motivado por recompensas — la comunicación debe empezar por el evento/la cultura y conectar el producto financiero como facilitador (ej. 'paga tu entrada sin filas'), no al revés." },
+          { label: "Es un perfil híbrido oficina-cultura, no solo de redes sociales", detail: "44% usó Microsoft Teams en el último mes (índice 162,1), coherente con una demografía urbana de 25-54 años en Bogotá/Cundinamarca que vive entre el trabajo de oficina y el ocio cultural." },
+          { label: "Ya paga por streaming, un hábito de suscripción transferible a fintech", detail: "36,5% pagó una suscripción de streaming de música en el último mes (índice 167,6) — co-branding con plataformas de streaming/música puede reforzar el hábito de pago digital recurrente." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 46, female: 54 },
+        ageBands: [
+          { label: "16-24", pct: 18 },
+          { label: "25-34", pct: 30 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 9.8 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Distrito Capital (Bogotá)", pct: 82 },
+          { city: "Cundinamarca", pct: 18 },
+        ],
+      },
+      motivations: [
+        { label: "Interesados en eventos en vivo como festivales de música", pct: 100 },
+        { label: "Entusiastas de las artes y la cultura", pct: 72.8 },
+        { label: "Se motivan a promover su marca favorita por productos de alta calidad", pct: 63.2 },
+        { label: "Se motivan a promover su marca favorita por recompensas", pct: 55 },
+      ],
+      barriers: [
+        { label: "Compra productos/servicios para acceder a la comunidad que se forma alrededor del evento", pct: 10 },
+        { label: "Prefieren pagar para acceder a un producto o servicio", pct: 39 },
+        { label: "Consideran muy importante que haya soporte técnico (decisiones de compra hardware/software)", pct: 74 },
+        { label: "Consideran muy importante la confiabilidad del proveedor (decisiones de compra hardware/software)", pct: 73 },
+      ],
+      digitalInterests: [
+        { label: "Uso de Waze en el último mes", index: 175 },
+        { label: "Uso de Microsoft Teams en el último mes", index: 162 },
+        { label: "Uso de MercadoLibre en el último mes", index: 122 },
+      ],
+      media: [
+        { label: "Usa Instagram más de una vez al día", pct: 43 },
+        { label: "Usa Instagram para buscar información sobre productos y marcas", pct: 68 },
+        { label: "Pagó una suscripción a un servicio de streaming de música en el último mes", pct: 36.5 },
+        { label: "Interesados en televisión", pct: 60 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps de movilidad", "Waze", "Planifica el desplazamiento hacia el trabajo o un evento.", [
+          { label: "Uso de Waze en el último mes", pct: 42, index: 175 },
+        ]),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Herramientas de productividad", "Microsoft Teams", "Trabajo colaborativo de oficina.", [
+          { label: "Uso de Microsoft Teams en el último mes", pct: 44, index: 162 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram", "Busca información de productos y marcas en Instagram.", [
+          { label: "Usa Instagram para buscar información sobre productos y marcas", pct: 68, index: 108 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming de música", "Spotify y similares", "Consumo de música en streaming de pago.", [
+          { label: "Pagó una suscripción a un servicio de streaming de música en el último mes", pct: 36.5, index: 168 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV", "Consumo de contenido de TV/streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / eventos en vivo", "Entretenimiento en vivo", "Boletería digital", "Alta propensión a asistir o conectarse a eventos en vivo tipo festival.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7697,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261108],
   },
   {
     id: "deportes",
@@ -7452,7 +7736,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_FINTECH_EVENTOS_BOGOTA_GWI_AUTO_20261108],
   },
   {
     id: "alcohol",
@@ -7491,7 +7775,7 @@ const CATEGORIES = [
       { id: "pagaPremiumMarca", label: "Dispuesto a pagar premium por marca" },
       { id: "compraPorNecesidad", label: "Compra por necesidad/durabilidad, no por hype" },
     ],
-    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924, CASE_ASUS_LATAM_GWI_AUTO_20261015],
+    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924, CASE_ASUS_LATAM_GWI_AUTO_20261015, CASE_TCL_INSTITUCIONAL_MEXICO_GWI_AUTO_20261108],
   },
   {
     id: "gaming",

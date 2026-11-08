@@ -313,6 +313,9 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI el 2026-11-08.
+  { id: "a834cce1-3aca-433e-bd99-25968111c5d6", title: "TCL>TCL>Institucional", client: "TCL", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Mexico, are between 16 and 54 years old, have interests in technology or gadgets, and are confident using new technology, buy new tech products as soon as they are available, follow the latest technology trends and news, like to be the first to try new things, or research products online before buying them." },
+  { id: "dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6", title: "Corferias>Conquilla>Conocedores", client: "Corferias", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia, lives in Atlantico, is between 28 and 64 years old, and is interested in live events like music festivals." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +407,8 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-08.
+  "a834cce1-3aca-433e-bd99-25968111c5d6": { categoryId: "consumer-tech", caseId: "tcl-institucional-mexico", personaId: "usuario-institucional-tcl-mexico", analyzedAt: "2026-11-08" },
+  "dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6": { categoryId: "entretenimiento", caseId: "conquilla-conocedores-atlantico-colombia", personaId: "conocedor-eventos-atlantico-colombia", analyzedAt: "2026-11-08" },
+  "a441e66c-dd98-405f-b935-5aed4648d6e2": { categoryId: "fintech", caseId: "fintech-eventos-vivo-bogota-alrededores-colombia", personaId: "usuario-fintech-eventos-bogota-colombia", analyzedAt: "2026-11-08" },
 };

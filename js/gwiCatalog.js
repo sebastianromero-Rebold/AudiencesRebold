@@ -313,6 +313,9 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  { id: "a5dcb331-8113-412c-beb2-e63e5b98ebc6", title: "OMODA>OMODASA>B2C>WANTS>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "59a0dcc5-1a9d-4433-999a-7a4330031edc", title: "OMODA>OMODASA>B2C>NEEDS>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "b31e2f74-87c3-47d1-9294-721743e18f62", title: "OMODA>OMODASA>B2C>CIRCUMSTANCES>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +407,8 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-09.
+  "a5dcb331-8113-412c-beb2-e63e5b98ebc6": { categoryId: "automotriz", caseId: "omoda-wants-chile", personaId: "omoda-aspiracional-wants-chile", analyzedAt: "2026-11-09" },
+  "59a0dcc5-1a9d-4433-999a-7a4330031edc": { categoryId: "automotriz", caseId: "omoda-needs-chile", personaId: "omoda-comprador-urgente-needs-chile", analyzedAt: "2026-11-09" },
+  "b31e2f74-87c3-47d1-9294-721743e18f62": { categoryId: "automotriz", caseId: "omoda-circumstances-chile", personaId: "omoda-perfil-general-circumstances-chile", analyzedAt: "2026-11-09" },
 };

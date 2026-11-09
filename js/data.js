@@ -7136,6 +7136,261 @@ const CASE_OMODA_CHILE_GWI_AUTO_20261019 = {
   ],
 };
 
+const CASE_OMODA_WANTS_CHILE_GWI_AUTO_20261109 = {
+  id: "omoda-wants-chile",
+  name: "Interesados aspiracionales en OMODA — segmento \"Wants\" (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-09)",
+  insightNote:
+    "Audiencia real de GWI ('OMODA>OMODASA>B2C>WANTS>CHILE', audience_id a5dcb331-8113-412c-beb2-e63e5b98ebc6): chilenos definidos por GWI bajo el criterio de 'deseo' (Wants) hacia la marca de autos OMODA, distinto del criterio de 'necesidad' (ver caso relacionado 'omoda-needs-chile') y del de 'alta propensión' ya procesado en 'omoda-alta-propension-chile'.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Wants' de OMODA en GWI (7,095,058) sobre la población digital de Chile (15.6M)", pct: 45.5 },
+  ],
+  footnotes: [
+    "45.5% ≈ universo real de la audiencia en GWI (7,095,058 = 3,689,852 hombres + 3,405,206 mujeres, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M).",
+    "Esta audiencia, la 'omoda-needs-chile' (procesada el mismo día) y la ya existente 'omoda-alta-propension-chile' (audience_id 4fa856ae, procesada 2026-10-19) son 3 recortes distintos de GWI sobre la misma marca OMODA en Chile, con universos que se solapan parcialmente (no son mutuamente excluyentes) — se dejan como 3 casos independientes en vez de forzarlos a un solo embudo con sharePct sumando 100%, ya que GWI no confirma que sean segmentos excluyentes entre sí. El equipo editorial debería evaluar si conviene unificarlos en un solo caso de marca OMODA Chile con una metodología de deduplicación explícita.",
+    "Demografía, intereses, barreras financieras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI no devolvió desagregación por ciudad (solo cobertura nacional) ni ningún patrón específico por franja horaria para esta audiencia — el customer journey queda con lugar/medios genéricos, sin cifras de actividad inventadas para los bloques sin dato.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "omoda-aspiracional-wants-chile",
+      name: "Camila Vergara",
+      archetype: "La Aspiracional del Próximo Auto",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Chilena conectada con un interés en autos muy por encima del promedio (50.8%, índice 179 frente al internauta promedio), pero sin la urgencia de compra de un comprador activo: solo 22.5% planea comprar en los próximos 3-6 meses. Está en fase de consideración y deseo de marca, explorando también alternativas de movilidad como bicicleta o moto.",
+      aiInsight: aiInsight(
+        "Cruza con una brecha entre interés de marca y urgencia de compra: 50.8% está interesado en autos/motoring (índice 179, la desviación más alta de interés general de las 3 audiencias OMODA analizadas), pero solo 22.5% planea comprar en 3-6 meses (índice 126.7) — muy por debajo de la urgencia real del segmento 'Needs' (66.3%, ver caso relacionado). Es una audiencia de construcción de marca y deseo, no de cierre inmediato.",
+        [
+          { label: "Interés en autos muy por encima del promedio, pero sin urgencia de compra", detail: "50.8% interesados en motoring (índice 179.1) vs. solo 22.5% planea comprar en los próximos 3-6 meses (índice 126.7) — la comunicación debe construir marca y deseo en esta fase, no empujar un cierre de venta inmediato." },
+          { label: "Compite con movilidad alternativa, no solo con otras marcas de auto", detail: "13% considera comprar bicicleta, 7.4% motocicleta y 5.5% un scooter eléctrico en los próximos 3-6 meses — parte de esta audiencia podría resolver su necesidad de movilidad sin un auto propio si el mensaje no refuerza los beneficios de poseerlo." },
+          { label: "Instagram y sitios automotrices especializados, el mejor cruce de alcance y afinidad", detail: "52.2% usa Instagram más de una vez al día (índice 111.2) y son 44% más propensos que el promedio a usar sitios/apps de motoring (índice 144.2) — construir deseo de marca en redes masivas y reforzar con contenido especializado donde la afinidad real es más alta." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 52, female: 48 },
+        ageBands: [
+          { label: "16-24", pct: 17 },
+          { label: "25-34", pct: 25 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 20 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en autos/motoring", pct: 50.8 },
+        { label: "Interesados en tecnología", pct: 64.4 },
+        { label: "Interesados en actividades al aire libre (camping/senderismo)", pct: 54.5 },
+        { label: "Interesados en naturaleza/vida silvestre", pct: 53.7 },
+      ],
+      barriers: [
+        { label: "Tienen actualmente un préstamo de corto plazo", pct: 26.3 },
+        { label: "Planean comprar un auto en los próximos 3-6 meses (baja urgencia relativa)", pct: 22.5 },
+        { label: "Consideran comprar una bicicleta en vez de un auto", pct: 13.0 },
+        { label: "Consideran comprar una motocicleta en vez de un auto", pct: 7.4 },
+      ],
+      digitalInterests: [
+        { label: "Usan redes sociales", pct: 99.1 },
+        { label: "Usan apps de chat/mensajería", pct: 98.2 },
+        { label: "Usan email", pct: 95.9 },
+        { label: "Usan sitios/apps de motoring/automotrices", pct: 12.8 },
+      ],
+      media: [
+        { label: "Usan Instagram más de una vez al día", pct: 52.2 },
+        { label: "Usan TikTok más de una vez al día", pct: 38.9 },
+        { label: "Usan Facebook más de una vez al día", pct: 34.9 },
+        { label: "Usan X más de una vez al día", pct: 11.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y redes sociales", "Instagram, apps de mensajería", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Búsqueda y redes", "Google, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes sociales y apps", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Instagram, Facebook", "52.2% usa Instagram más de una vez al día (índice 111.2) — canal natural de construcción de deseo de marca en este bloque.", [
+          { label: "Usan Instagram más de una vez al día", pct: 52.2, index: 111.2 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_OMODA_NEEDS_CHILE_GWI_AUTO_20261109 = {
+  id: "omoda-needs-chile",
+  name: "Compradores en modo urgente de OMODA — segmento \"Needs\" (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-09)",
+  insightNote:
+    "Audiencia real de GWI ('OMODA>OMODASA>B2C>NEEDS>CHILE', audience_id 59a0dcc5-1a9d-4433-999a-7a4330031edc): chilenos definidos por GWI bajo el criterio de 'necesidad' (Needs) hacia la marca de autos OMODA, distinto del criterio de 'deseo' (ver caso relacionado 'omoda-wants-chile') y del de 'alta propensión' ya procesado en 'omoda-alta-propension-chile'.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Needs' de OMODA en GWI (3,395,112) sobre la población digital de Chile (15.6M)", pct: 21.8 },
+  ],
+  footnotes: [
+    "21.8% ≈ universo real de la audiencia en GWI (3,395,112 = 1,806,111 hombres + 1,589,001 mujeres, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M).",
+    "Esta audiencia, la 'omoda-wants-chile' (procesada el mismo día) y la ya existente 'omoda-alta-propension-chile' (audience_id 4fa856ae, procesada 2026-10-19) son 3 recortes distintos de GWI sobre la misma marca OMODA en Chile, con universos que se solapan parcialmente (no son mutuamente excluyentes) — se dejan como 3 casos independientes en vez de forzarlos a un solo embudo con sharePct sumando 100%, ya que GWI no confirma que sean segmentos excluyentes entre sí. El equipo editorial debería evaluar si conviene unificarlos en un solo caso de marca OMODA Chile con una metodología de deduplicación explícita.",
+    "Demografía, intereses, barreras financieras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI no devolvió desagregación por ciudad (solo cobertura nacional) ni ningún patrón específico por franja horaria para esta audiencia — el customer journey queda con lugar/medios genéricos, sin cifras de actividad inventadas para los bloques sin dato.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "omoda-comprador-urgente-needs-chile",
+      name: "Matías Contreras",
+      archetype: "El Comprador en Modo Urgente",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Chileno con la intención de compra de auto más alta de las 3 audiencias OMODA analizadas: 66.3% planea comprar un auto en los próximos 3-6 meses (índice 374 frente al internauta promedio). Ya recurre activamente a crédito de corto plazo (31.4%) y tarjeta de crédito (75.1%), señal de que está financiando o apalancando la decisión de compra en curso.",
+      aiInsight: aiInsight(
+        "Cruza con una urgencia de compra excepcional respaldada por apalancamiento financiero activo: 66.3% planea comprar un auto en 3-6 meses (índice 374.2, muy por encima del 22.5% / índice 126.7 del segmento 'Wants'), mientras 31.4% ya tiene un préstamo de corto plazo (índice 134.8) y 75.1% tiene tarjeta de crédito (índice 116.2) — es una audiencia en la última etapa del embudo, lista para mensajes de cierre y financiamiento, no de construcción de marca.",
+        [
+          { label: "La intención de compra más alta y urgente del portafolio OMODA Chile", detail: "66.3% planea comprar un auto en los próximos 3-6 meses (índice 374.2) — la comunicación debe priorizar mensajes de cierre (financiamiento, inventario disponible, test drive) en vez de construcción de marca de largo plazo." },
+          { label: "Ya recurre a crédito de corto plazo para financiar la decisión", detail: "31.4% tiene actualmente un préstamo de corto plazo (índice 134.8) y 75.1% tiene tarjeta de crédito (índice 116.2) — una oferta de financiamiento flexible puede ser el gancho decisivo más que el descuento directo sobre el precio de lista." },
+          { label: "MercadoLibre y Google Play como puntos de contacto digitales de alto tráfico", detail: "74.4% usó MercadoLibre en el último mes (índice 109.5) y 70.3% visitó Google Play (índice 106.2) — vale la pena explorar presencia de marca/remarketing en estos canales de alto tráfico transaccional, no solo en redes sociales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 53.2, female: 46.8 },
+        ageBands: [
+          { label: "16-24", pct: 19 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 26 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Planean comprar un auto en los próximos 3-6 meses", pct: 66.3 },
+        { label: "Interesados en autos/motoring", pct: 43.7 },
+        { label: "Interesados en tecnología", pct: 61.7 },
+        { label: "Interesados en actividades al aire libre (camping/senderismo)", pct: 52.8 },
+      ],
+      barriers: [
+        { label: "Tienen actualmente un préstamo de corto plazo", pct: 31.4 },
+        { label: "Considerarían una motocicleta en vez de un auto", pct: 11.7 },
+        { label: "Considerarían un scooter eléctrico en vez de un auto", pct: 7.5 },
+      ],
+      digitalInterests: [
+        { label: "Usaron Google Mail en el último mes", pct: 90.4 },
+        { label: "Visitaron Google en el último mes", pct: 86.5 },
+        { label: "Usaron MercadoLibre en el último mes", pct: 74.4 },
+        { label: "Visitaron Google Play en el último mes", pct: 70.3 },
+      ],
+      media: [
+        { label: "Usaron algún servicio de video en el último mes", pct: 98.6 },
+        { label: "Usaron Netflix en el último mes", pct: 77.6 },
+        { label: "Usaron YouTube en el último mes", pct: 65.0 },
+        { label: "Usaron Disney+ en el último mes", pct: 50.7 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Email y búsqueda", "Google Mail, Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Búsqueda y marketplace", "Google, MercadoLibre", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / concesionario", "Marketplace y apps", "MercadoLibre, Google Play", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Búsqueda", "Google, MercadoLibre", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video", "Netflix, Disney+", "77.6% usó Netflix en el último mes (índice 111.4) — canal de alto alcance para reforzar mensajes de cierre/financiamiento en este bloque.", [
+          { label: "Usaron Netflix en el último mes", pct: 77.6, index: 111.4 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_OMODA_CIRCUMSTANCES_CHILE_GWI_AUTO_20261109 = {
+  id: "omoda-circumstances-chile",
+  name: "Perfil general de circunstancias de vida — segmento \"Circumstances\" de OMODA (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-09)",
+  insightNote:
+    "Audiencia real de GWI ('OMODA>OMODASA>B2C>CIRCUMSTANCES>CHILE', audience_id b31e2f74-87c3-47d1-9294-721743e18f62): chilenos definidos por GWI bajo el criterio de 'circunstancias' (Circumstances) hacia la marca de autos OMODA — el recorte más amplio de los 4 segmentos OMODA Chile analizados hasta ahora (ver 'omoda-wants-chile', 'omoda-needs-chile' y 'omoda-alta-propension-chile').",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Circumstances' de OMODA en GWI (12,701,657) sobre la población digital de Chile (15.6M)", pct: 81.4 },
+  ],
+  footnotes: [
+    "81.4% ≈ universo real de la audiencia en GWI (12,701,657 = 6,349,852 hombres + 6,351,805 mujeres, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Chile (15.6M) — es, con amplio margen, el recorte OMODA Chile más amplio analizado hasta ahora.",
+    "A diferencia de 'omoda-wants-chile' y 'omoda-needs-chile', todas las cifras verificadas vía explore_insight_gwi para esta audiencia devolvieron índice ≈100 frente al promedio nacional (interés en autos 28.4%/índice 100, intención de compra 17.7%/índice 100, tenencia de tarjeta de crédito 64.6%/índice 100, consumo de Netflix 69.6%/índice 100) — en la práctica, este segmento no muestra ninguna desviación estadística frente al internauta chileno promedio. Se deja como caso independiente, pero el equipo editorial debería evaluar si aporta valor como segmento de targeting de precisión o si conviene tratarlo solo como línea base/alcance masivo frente a 'omoda-wants-chile' y 'omoda-needs-chile'.",
+    "Esta audiencia, 'omoda-wants-chile', 'omoda-needs-chile' (las 3 procesadas el mismo día) y la ya existente 'omoda-alta-propension-chile' (audience_id 4fa856ae, procesada 2026-10-19) son 4 recortes distintos de GWI sobre la misma marca OMODA en Chile, con universos que se solapan parcialmente (no son mutuamente excluyentes) — se dejan como casos independientes en vez de forzarlos a un solo embudo con sharePct sumando 100%.",
+    "GWI no devolvió desagregación por ciudad (solo cobertura nacional) ni ningún patrón específico por franja horaria para esta audiencia — el customer journey queda con lugar/medios genéricos, sin cifras de actividad inventadas para los bloques sin dato.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "omoda-perfil-general-circumstances-chile",
+      name: "Francisca Soto",
+      archetype: "La Chilena Digital Promedio",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Representa al 81% de la población digital de Chile bajo el criterio de 'circunstancias' de GWI para OMODA: en todas las métricas verificadas (interés en autos, intención de compra, tenencia de tarjeta de crédito, consumo de streaming) su comportamiento iguala exactamente el promedio nacional (índice ≈100). No es una audiencia diferenciada, sino el perfil base del internauta chileno.",
+      aiInsight: aiInsight(
+        "A diferencia de los segmentos 'Wants' (índice 179 en interés por autos) y 'Needs' (índice 374 en intención de compra), este segmento no muestra ninguna desviación estadística frente al promedio nacional en ninguna de las métricas verificadas — su valor es de alcance masivo (81% de la población digital de Chile), no de precisión de targeting.",
+        [
+          { label: "Sin desviación estadística — funciona como línea base, no como segmento de precisión", detail: "Interés en autos 28.4% (índice 100), intención de compra en 3-6 meses 17.7% (índice 100) y tenencia de tarjeta de crédito 64.6% (índice 100) — el equipo editorial debería evaluar si esta audiencia aporta valor como segmento independiente o si es mejor usarla solo como comparación/control frente a 'Wants' y 'Needs'." },
+          { label: "Alcance masivo, no profundidad: 81% de la población digital de Chile", detail: "Con un universo de 12.7M sobre 15.6M, es casi la totalidad del mercado digital chileno — útil solo para medios de awareness de alto alcance, no para segmentación de precisión." },
+          { label: "El consumo de streaming replica exactamente el promedio del país", detail: "69.6% usó Netflix (índice 100) y 61.4% usó YouTube (índice 100) en el último mes — cualquier plan de medios para este segmento debe apoyarse en el consumo general de medios de Chile, no en un insight diferenciado de esta audiencia en particular." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50, female: 50 },
+        ageBands: [
+          { label: "16-24", pct: 18 },
+          { label: "25-34", pct: 25 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en tecnología", pct: 56.7 },
+        { label: "Interesados en naturaleza/vida silvestre", pct: 46.8 },
+        { label: "Interesados en actividades al aire libre (camping/senderismo)", pct: 45.6 },
+        { label: "Interesados en autos/motoring", pct: 28.4 },
+      ],
+      barriers: [
+        { label: "Tienen actualmente un préstamo de corto plazo", pct: 23.3 },
+        { label: "Planean comprar un auto en los próximos 3-6 meses (igual al promedio nacional)", pct: 17.7 },
+        { label: "Considerarían una bicicleta en vez de un auto", pct: 11.7 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en ciencia", pct: 43.2 },
+        { label: "Tienen cuenta bancaria", pct: 93.3 },
+        { label: "Tienen tarjeta de crédito", pct: 64.6 },
+      ],
+      media: [
+        { label: "Usaron algún servicio de video en el último mes", pct: 94.6 },
+        { label: "Usaron Netflix en el último mes", pct: 69.6 },
+        { label: "Usaron YouTube en el último mes", pct: 61.4 },
+        { label: "Usaron Disney+ en el último mes", pct: 41.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y redes sociales", "Redes sociales en general", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Búsqueda", "Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo", "Redes sociales", "Redes sociales en general", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / casa", "Redes sociales", "Redes sociales en general", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video", "Netflix, YouTube", "69.6% usó Netflix en el último mes, en línea con el promedio nacional (índice 100) — sin señal diferenciada para este segmento en este bloque.", [
+          { label: "Usaron Netflix en el último mes", pct: 69.6, index: 100 },
+        ]),
+      ],
+    },
+  ],
+};
+
 const CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020 = {
   id: "subcultura-fashion-bogota-colombia",
   name: "Subcultura fashion-conscious en Bogotá (Jagger>SubCulturas>MODA2)",
@@ -7478,7 +7733,7 @@ const CATEGORIES = [
       { id: "investigaOnlineAntes", label: "Investiga activamente online antes de comprar" },
       { id: "prioridadFamiliar", label: "Prioriza espacio y seguridad familiar" },
     ],
-    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019],
+    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019, CASE_OMODA_WANTS_CHILE_GWI_AUTO_20261109, CASE_OMODA_NEEDS_CHILE_GWI_AUTO_20261109, CASE_OMODA_CIRCUMSTANCES_CHILE_GWI_AUTO_20261109],
   },
   {
     id: "consumer-tech",

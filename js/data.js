@@ -7398,6 +7398,267 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_CARLOSVIVES_PADRES_GWI_AUTO_20261110 = {
+  id: "carlos-vives-padres-bogota-colombia",
+  name: "Carlos Vives — padres de familia en Bogotá y Cundinamarca",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-10)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) CarlosVives_BogHijos', audience_id 29736513-9ca7-4adc-92ff-262c11415ea8): seguidores de Carlos Vives en Bogotá/Cundinamarca que tienen hijos de 6 a 18 años — variante familiar del caso ya analizado 'Fans de Carlos Vives en Bogotá' (f3d79096, caseId carlos-vives-fans-bogota-colombia), pero es un audience_id distinto, así que se deja como caso independiente.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'CarlosVives_BogHijos' en GWI (1,372,159 = 739,238 mujeres + 632,921 hombres) sobre la población digital de Colombia (31.06M)", pct: 4.42 },
+  ],
+  footnotes: [
+    "4.42% = universo real de GWI (1,372,159, suma de los universos de la pregunta de género) sobre la población digital de Colombia (31.06M, MARKETS) — verificado vía explore_insight_gwi.",
+    "Demografía, intereses de estilo de vida, barrera de precio, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI no desglosó ciudades específicas para esta audiencia, solo Distrito Capital / Cundinamarca en conjunto.",
+    "Los tramos de edad reportados por GWI (25-34, 35-44, 45-54, 55-64) suman 98.4% — GWI no devolvió una cifra individual para 16-24 ni 65+ en esta audiencia (muestra reducida en esas celdas); se dejan en 0 en vez de inventar un valor.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "padre-madre-carlosvives-bogota",
+      name: "Catalina Mendoza",
+      archetype: "La Madre/Padre Fan que Comparte su Pasión Musical",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Padres y madres de familia en Bogotá/Cundinamarca (hijos de 6 a 18 años) que siguen a Carlos Vives y compran o planean comprar entradas de concierto. Perfil ligeramente mayoritario femenino (53.9%), concentrado en 25-54 años, con fuerte interés en tecnología (78%) y un perfil viajero por encima del promedio (73% voló con LATAM, 80% disfruta vacaciones de playa/resort, 9% se autodefine como 'jet-setter' — 3x más probable que el promedio).",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'ocio en familia como estatus': esta audiencia no solo asiste a conciertos, sino que lo hace como parte de un estilo de vida viajero y tecnológico (73% voló con LATAM, 78% interés en tecnología) — el mensaje de marca funciona mejor posicionando el concierto como una experiencia familiar aspiracional, no solo como entretenimiento puntual.",
+        [
+          { label: "Son padres 'jet-setters', no solo fans ocasionales", detail: "9% se autodefine como jet-setter (3x más probable que el promedio) y 73% voló con LATAM en los últimos 3 años — activaciones con aerolíneas o paquetes de viaje + concierto tienen más potencial que un descuento genérico de boletería." },
+          { label: "Spotify y Netflix comparten el prime time familiar", detail: "69% usó Spotify y 81% usó Netflix en el último mes — contenido de marca integrado en ambas plataformas (playlists oficiales, product placement) capta mejor que pauta tradicional en esta audiencia con hijos." },
+          { label: "Sensibilidad al precio moderada, no determinante", detail: "Solo 34% se declara price-conscious — más bajo que en audiencias fintech ya procesadas — lo que sugiere que el mensaje de valor/experiencia pesa más que el descuento agresivo para esta familia con poder adquisitivo medio-alto." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 46.1, female: 53.9 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 39 },
+          { label: "45-54", pct: 27 },
+          { label: "55-64", pct: 5.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Distrito Capital / Cundinamarca (sin desagregado por ciudad específica en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en tecnología", pct: 78 },
+        { label: "Disfrutan vacaciones de playa o resort", pct: 80 },
+        { label: "Volaron con LATAM en los últimos 3 años", pct: 73 },
+        { label: "Se autodefinen como 'jet-setters' (viajeros frecuentes)", pct: 9 },
+      ],
+      barriers: [
+        { label: "Se declaran sensibles al precio (price-conscious)", pct: 34 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en videojuegos", pct: 55 },
+        { label: "Usan redes sociales para encontrar contenido", pct: 47 },
+        { label: "Usan internet para jugar", pct: 39 },
+        { label: "Jugaron videojuegos de ritmo/música en los últimos 12 meses", pct: 20 },
+      ],
+      media: [
+        { label: "Usaron Netflix en el último mes", pct: 81 },
+        { label: "Usaron Spotify en el último mes", pct: 69 },
+        { label: "Usaron YouTube en el último mes", pct: 60 },
+        { label: "Uso diario de Facebook", pct: 43 },
+        { label: "Uso diario de Instagram", pct: 40 },
+        { label: "Uso diario de TikTok", pct: 40 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte escolar", "Apps de streaming de música", "Spotify", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales y búsqueda", "Instagram, Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / actividades de los hijos", "Redes sociales", "TikTok, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video en familia", "Netflix, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y música", "Netflix, Spotify", "81% usó Netflix en el último mes — momento natural para contenido de marca integrado en streaming familiar.", [
+          { label: "Usaron Netflix en el último mes", pct: 81, index: 119 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_BUNBURY_CALI_GWI_AUTO_20261110 = {
+  id: "bunbury-2026-cali-colombia",
+  name: "Bunbury 2026 — fans de rock en Cali y Valle del Cauca",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-10)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) Bunbury26_Cali', audience_id e611abbb-570a-4d84-8b5b-4a012130888c): seguidores de rock en Valle del Cauca interesados en la gira Bunbury 2026 — variante regional del caso ya analizado 'Fans de rock Bunbury en Bogotá' (3638088a, caseId bunbury-2026-bogota-colombia), pero es un audience_id distinto, así que se deja como caso independiente.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'Bunbury26_Cali' en GWI (~609,861, derivado de 331,154 mujeres al 54.3% de la audiencia) sobre la población digital de Colombia (31.06M)", pct: 1.96 },
+  ],
+  footnotes: [
+    "1.96% = universo estimado derivado vía explore_insight_gwi (331,154 mujeres ÷ 54.3% = ~609,861 universo total) sobre la población digital de Colombia (31.06M, MARKETS).",
+    "Advertencia de confiabilidad: la muestra base de esta audiencia es pequeña (33 encuestadas para el dato de género) — las cifras deben tratarse como direccionales, no como estimación precisa, hasta que el equipo editorial las valide con una muestra mayor.",
+    "Demografía, intereses de estilo de vida, barrera de precio/ofertas, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI no desglosó ciudades específicas para esta audiencia, solo el departamento de Valle del Cauca en conjunto (no solo Cali).",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-rock-bunbury-cali",
+      name: "Daniela Ocampo",
+      archetype: "La Rockera Early Adopter del Pacífico",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Fans de rock en Valle del Cauca (mayoritariamente Cali) que compraron o planean comprar entradas de concierto. Perfil joven-adulto (61% entre 25-44 años), con fuerte perfil tecnológico: 50% se identifica como gamer (casi el doble que el promedio) y aunque solo 8.9% se autodefine como early adopter, lo hace con un índice muy alto (+622% vs. el promedio) — señal de un núcleo pequeño pero muy influyente dentro de la audiencia.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia 'rock + gaming' como identidad compartida: la mitad de esta audiencia se identifica como gamer, no solo como fan de rock — una activación que combine ambos mundos (streaming/Twitch, soundtracks de videojuegos con bandas de rock) conecta mejor que un enfoque puramente musical.",
+        [
+          { label: "Buscan ofertas de forma activa, no son indiferentes al precio", detail: "59% busca las mejores ofertas y 49% usa cupones/códigos de descuento — más que fans pasivos, son compradores que comparan antes de decidir, aunque el motivador principal sigue siendo la experiencia del concierto." },
+          { label: "Núcleo early-adopter pequeño pero de altísimo valor", detail: "Solo 8.9% se autodefine early adopter, pero con un índice de +622% frente al promedio — son candidatos naturales para preventas exclusivas o contenido anticipado que luego amplifican hacia el resto de la audiencia." },
+          { label: "Streaming de video ya es hábito, no novedad", detail: "80% usó Netflix, 48% Disney+ y 39% Amazon Prime Video en el último mes — múltiples suscripciones activas simultáneas sugieren audiencia con buen poder adquisitivo digital, apta para paquetes patrocinados cruzados con streaming." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45.7, female: 54.3 },
+        ageBands: [
+          { label: "16-24", pct: 24 },
+          { label: "25-34", pct: 30 },
+          { label: "35-44", pct: 31 },
+          { label: "45-54", pct: 12 },
+          { label: "55-64", pct: 3.7 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca (sin desagregado por ciudad específica en GWI, incluye Cali)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en tecnología", pct: 81 },
+        { label: "Interesados en videojuegos", pct: 64 },
+        { label: "Se identifican como 'gamer'", pct: 50 },
+        { label: "Interesados en eventos en vivo como festivales", pct: 92 },
+        { label: "Se identifican como entusiastas de artes y cultura", pct: 85 },
+      ],
+      barriers: [
+        { label: "Buscan las mejores ofertas antes de comprar", pct: 59 },
+        { label: "Usan cupones o códigos de descuento", pct: 49 },
+      ],
+      digitalInterests: [
+        { label: "Se consideran dependientes del móvil", pct: 55 },
+        { label: "Usan smartphone para acceder a internet", pct: 98 },
+        { label: "Usan computador o laptop para acceder a internet", pct: 86 },
+        { label: "Se autodefinen como early adopters", pct: 8.9 },
+      ],
+      media: [
+        { label: "Usaron Netflix en el último mes", pct: 80 },
+        { label: "Son usuarios intensivos de streaming de música", pct: 59 },
+        { label: "Usaron Disney+ en el último mes", pct: 48 },
+        { label: "Uso diario de Instagram", pct: 47 },
+        { label: "Usaron Amazon Prime Video en el último mes", pct: 39 },
+        { label: "Uso diario de X (Twitter)", pct: 20 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Smartphone, apps de streaming de música", "Spotify / streaming de música", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Laptop/PC, redes sociales", "Instagram, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales y gaming móvil", "Instagram, apps de gaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / estudio", "Redes sociales", "Instagram, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Gaming / streaming de video", "Consola o PC gaming, Netflix", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video", "Netflix, Disney+", "80% usó Netflix en el último mes — momento natural para activaciones de marca integradas en streaming.", [
+          { label: "Usaron Netflix en el último mes", pct: 80, index: 116 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_DOITE_MODA_WANTS_CHILE_GWI_AUTO_20261110 = {
+  id: "doite-outdoor-fashion-chile",
+  name: "DOITE — mujeres interesadas en moda y outdoor premium (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-10)",
+  insightNote:
+    "Audiencia real de GWI ('DOITE>DOITE>B2C>Chile>WANTS>Moda', audience_id 9848b554-e267-433c-be66-bdf08e2348ed): segmento de 'deseo/aspiración' de moda en Chile para DOITE — complementario al caso ya analizado de alta propensión de compra de la misma marca (7f087d12, caseId alta-propension-moda-chile), pero es un audience_id distinto, así que se deja como caso independiente.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'DOITE Moda WANTS' en GWI (5,361,771 = 4,037,219 mujeres + 1,324,552 hombres) sobre la población digital de Chile (15.6M)", pct: 34.37 },
+  ],
+  footnotes: [
+    "34.37% = universo real de GWI (5,361,771, suma de los universos de la pregunta de género) sobre la población digital de Chile (15.6M, MARKETS) — verificado vía explore_insight_gwi.",
+    "Demografía, intereses/afinidad de marca, barreras de compra, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI no desglosó ciudades específicas para esta audiencia (dato a nivel nacional Chile).",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "aspiracional-moda-doite-chile",
+      name: "Javiera Soto",
+      archetype: "La Aspiracional de Marca Premium",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Audiencia chilena mayoritariamente femenina (75.3%) con fuerte interés en moda (70%) y belleza/cosmética (77%), e inclinación por marcas premium de moda (compras recientes en Tommy Hilfiger, Calvin Klein, Lacoste y Pandora muy por encima del promedio). Es un segmento de 'deseo' más amplio que el de alta propensión de compra ya procesado — aspiracional de marca, no necesariamente compradora inmediata.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'aspiración de marca vs. poder de compra inmediato': esta audiencia declara interés fuerte en moda premium (Tommy Hilfiger 14%, Calvin Klein 17%) pero no es más sensible al precio que el promedio (38%, ligeramente por debajo) — sugiere un segmento que compra selectivamente en marca/estatus antes que en descuento, ideal para campañas de deseo de marca más que de rebajas.",
+        [
+          { label: "El checkout simple pesa más que el precio", detail: "41% prioriza un checkout online rápido y sencillo (50% más que el promedio), mientras que solo 38% se declara price-conscious (por debajo del promedio) — la fricción del proceso de compra es una barrera más relevante que el precio mismo para esta audiencia." },
+          { label: "Instagram y Pinterest son el verdadero 'shelf' de descubrimiento", detail: "55% usa Instagram más de una vez al día y 17% usa Pinterest semanalmente (147% más que el promedio) — Pinterest en particular es una señal de intención de moda/decoración poco explotada frente al resto del catálogo de audiencias de Rebold en retail." },
+          { label: "Interés en belleza supera al de moda pura", detail: "77% interés en belleza/cosmética frente a 70% en moda — una estrategia de cross-sell moda+belleza (o colaboraciones con marcas de belleza) puede ampliar el ticket promedio más que enfocarse solo en vestuario." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 24.7, female: 75.3 },
+        ageBands: [
+          { label: "16-24", pct: 22 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile (audiencia nacional, sin desagregado por ciudad en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesadas en belleza y cosmética", pct: 77 },
+        { label: "Interesadas en moda", pct: 70 },
+        { label: "Interesadas en artesanías", pct: 53 },
+        { label: "Compraron en Calvin Klein en el último año", pct: 17 },
+        { label: "Compraron en Tommy Hilfiger en el último año", pct: 14 },
+      ],
+      barriers: [
+        { label: "Priorizan un checkout online rápido y sencillo", pct: 41 },
+        { label: "Se declaran sensibles al precio (price-conscious)", pct: 38 },
+      ],
+      digitalInterests: [
+        { label: "Interesadas en tecnología", pct: 59 },
+        { label: "Se identifican como 'aprendiz social'", pct: 25 },
+        { label: "Se identifican como 'memera'", pct: 20 },
+        { label: "Se identifican como 'compradora social'", pct: 8.3 },
+      ],
+      media: [
+        { label: "Usaron Netflix en el último mes", pct: 76 },
+        { label: "Usaron YouTube en el último mes", pct: 67 },
+        { label: "Uso diario de Instagram", pct: 55 },
+        { label: "Usaron Disney+ en el último mes", pct: 48 },
+        { label: "Uso diario de TikTok", pct: 42 },
+        { label: "Uso diario de Facebook", pct: 33 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes sociales y búsqueda visual", "Instagram, Pinterest", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / compras online", "Ecommerce y redes sociales", "Instagram, tiendas online", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Instagram", "76% usó Netflix en el último mes — momento natural para pauta de marca integrada en streaming.", [
+          { label: "Usaron Netflix en el último mes", pct: 76, index: 204 },
+        ]),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7674,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CARLOSVIVES_PADRES_GWI_AUTO_20261110, CASE_BUNBURY_CALI_GWI_AUTO_20261110],
   },
   {
     id: "deportes",
@@ -7439,7 +7700,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020, CASE_DOITE_MODA_WANTS_CHILE_GWI_AUTO_20261110],
   },
   {
     id: "fintech",

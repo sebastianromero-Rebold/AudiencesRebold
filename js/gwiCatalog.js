@@ -313,6 +313,9 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI el 2026-11-11.
+  { id: "702ee400-7c41-4fca-9bbc-681cc4970c96", title: "Paramo (co) ReggaetonMed", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, live in Antioquia, are interested in live events like music festivals, and like listening to Latin music." },
+  { id: "8ed8b71e-84b7-4718-ba25-f7c95635939f", title: "Paramo (co) ReggaetonValle", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, enjoy listening to Latin music, and live in Valle del Cauca." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +407,11 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-11.
+  // "Paramo>AudienciaEventos" devolvió exactamente los mismos criterios/cifras que "Paramo (co)
+  // EventosEnVivoGeneral" (5190162e, ya procesada el 2026-09-24) -- se enlaza al mismo caso/persona
+  // existente en vez de crear un duplicado (mismo patrón que f07745dc el 2026-10-06).
+  "0ccfe94a-5d61-4c74-847c-8deb65a4cc10": { categoryId: "entretenimiento", caseId: "eventos-en-vivo-general-colombia", personaId: "entusiasta-eventos-vivo-co", analyzedAt: "2026-11-11" },
+  "702ee400-7c41-4fca-9bbc-681cc4970c96": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-regional-colombia", personaId: "fan-reggaeton-medellin-colombia", analyzedAt: "2026-11-11" },
+  "8ed8b71e-84b7-4718-ba25-f7c95635939f": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-regional-colombia", personaId: "fan-reggaeton-cali-colombia", analyzedAt: "2026-11-11" },
 };

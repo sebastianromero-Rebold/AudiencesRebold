@@ -7398,6 +7398,161 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_REGGAETON_REGIONAL_GWI_AUTO_20261111 = {
+  id: "reggaeton-musica-latina-regional-colombia",
+  name: "Fans de música latina / reggaetón en vivo, por región (Antioquia y Valle del Cauca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-11)",
+  insightNote:
+    "Dos audiencias reales de GWI que comparten la misma base ('interesados en eventos en vivo como festivales de música' + 'les gusta la música latina'), separadas por región: 'Paramo (co) ReggaetonMed' (audience_id 702ee400-7c41-4fca-9bbc-681cc4970c96, Antioquia) y 'Paramo (co) ReggaetonValle' (audience_id 8ed8b71e-84b7-4718-ba25-f7c95635939f, Valle del Cauca).",
+  funnelSteps: [
+    { label: "Interés en eventos en vivo + afinidad con música latina, Antioquia y Valle del Cauca (universo combinado 1,765,459)", pct: 5.7 },
+  ],
+  footnotes: [
+    "5.7% = universo combinado real de ambas audiencias en GWI (958,609 Antioquia + 806,850 Valle del Cauca = 1,765,459, verificado vía explore_insight_gwi sobre la pregunta de género de cada una) sobre la población digital de Colombia (31.06M, MARKETS).",
+    "sharePct de cada persona = su universo real / el universo combinado (54.3% Antioquia y 45.7% Valle del Cauca).",
+    "Estas 2 audiencias son regionales 'hermanas' de la campaña ya analizada 'Paramo (co) ReggaetonGeneral' (caso reggaeton-musica-latina-colombia, procesada 2026-10-20) y de 'Paramo>Generos' (casos generos-bogota-colombia / generos-colombia-nacional) — mismo criterio base de GWI, recortado por región en vez de a nivel nacional.",
+    "Demografía (género, edad), motivaciones, actitudes de precio/compra, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de cada audiencia.",
+    "GWI no devolvió muestra suficiente para las bandas de edad 55-64 y 65+ en ninguna de las dos audiencias — se dejan en 0 en vez de inventar un valor.",
+    "GWI solo devolvió datos de franja horaria (time-of-day) para el bloque de 'fin de la tarde' (consumo de canales internacionales de TV, 5-7pm) en ambas audiencias — el resto del customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de cada persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-reggaeton-medellin-colombia",
+      name: "Manuela Restrepo",
+      archetype: "La Conectora Social Paisa",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Paisa conectada que vive la música latina y los eventos en vivo como eje de su vida social: le gusta salir a comer, es leal a las marcas que ya conoce y busca activamente las mejores ofertas antes de comprar. Ya compró boletos de concierto online en los últimos 3-6 meses a una tasa mucho más alta que el promedio nacional.",
+      aiInsight: aiInsight(
+        "Cruza con una afinidad de marca aspiracional desproporcionada: solo 2% compró algo de Celine en el último año, pero son 335% más propensas a hacerlo que el promedio de Colombia, y 19.2% compró Hugo Boss (índice 214) — un perfil que no es el típico comprador de lujo por volumen, pero sí muestra una sensibilidad de marca premium muy por encima de su categoría, relevante para activaciones de moda/estilo asociadas a conciertos.",
+        [
+          { label: "Compra boletos de concierto online muy por encima del promedio", detail: "16.7% compró boletos de concierto online en los últimos 3-6 meses, un índice de 331 frente al promedio de Colombia — el canal de venta online de boletería ya es un hábito instalado, no hay que 'educar' a esta audiencia en comprar online." },
+          { label: "Afinidad de marca premium fuera de su categoría evidente", detail: "19.2% compró Hugo Boss (índice 214) y 2% compró Celine (índice 435) en el último año — espacio para co-branding de moda/lifestyle alrededor del evento en vivo, más allá del patrocinador de bebidas o telco habitual." },
+          { label: "Instagram domina el canal diario, con alta lealtad de marca", detail: "55.9% usa Instagram más de una vez al día (índice 161) y 62.1% se declara leal a las marcas que ya le gustan — el contenido debe reforzar relación/pertenencia más que presionar por precio, pese a que también busca ofertas (57.8%)." },
+        ]
+      ),
+      sharePct: 54.3,
+      demographics: {
+        genderSplit: { male: 44.4, female: 55.6 },
+        ageBands: [
+          { label: "16-24", pct: 20.3 },
+          { label: "25-34", pct: 35.6 },
+          { label: "35-44", pct: 22.8 },
+          { label: "45-54", pct: 13.0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Antioquia (incl. Medellín) — 100% (criterio de la audiencia)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música (criterio de la audiencia)", pct: 100 },
+        { label: "Le gusta escuchar música latina (criterio de la audiencia)", pct: 100 },
+        { label: "Interés general en música", pct: 90 },
+        { label: "Interés en salir a comer / vida social", pct: 87 },
+      ],
+      barriers: [
+        { label: "Es leal a las marcas que ya le gustan (barrera de cambio de marca)", pct: 62.1 },
+        { label: "Investiga el producto online antes de comprar (alarga el ciclo de decisión)", pct: 65 },
+        { label: "Busca activamente las mejores ofertas antes de comprar", pct: 57.8 },
+        { label: "Prefiere dividir pagos en cuotas sin intereses adicionales", pct: 20 },
+      ],
+      digitalInterests: [
+        { label: "Compró boletos de concierto online en los últimos 3-6 meses", pct: 16.7, index: 331 },
+        { label: "Prefiere un proceso de pago online rápido y sencillo", pct: 52 },
+        { label: "Más propensa a comprar si el producto tiene muchos likes/comentarios en redes", pct: 34 },
+        { label: "Interés en tecnología", pct: 71 },
+      ],
+      media: [
+        { label: "Usa Instagram más de una vez al día", pct: 55.9, index: 161 },
+        { label: "Usa Facebook más de una vez al día", pct: 45.8 },
+        { label: "Usa TikTok más de una vez al día", pct: 36.0 },
+        { label: "Usa X más de una vez al día", pct: 11.2 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales y mensajería", "Instagram, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional y redes", "TV por streaming, Instagram", "43% ve canales internacionales de TV en este horario (2-5pm).", [
+          { label: "Ve canales internacionales de TV entre 2pm y 5pm", pct: 43, index: 101 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "TV por streaming/cable", "55% ve canales internacionales de TV en este horario (5-7pm) — el momento de mayor consumo verificado.", [
+          { label: "Ve canales internacionales de TV entre 5pm y 7pm", pct: 55, index: 114 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+    {
+      id: "fan-reggaeton-cali-colombia",
+      name: "Isabella Victoria",
+      archetype: "La Vallecaucana Explorer-Social",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Caleña con interés marcado en eventos en vivo y música latina, que combina vida social urbana (cine, redes sociales) con un perfil inesperadamente outdoor (campismo/senderismo, naturaleza). Investiga activamente antes de comprar y es leal a las marcas que ya conoce, aunque también busca ofertas.",
+      aiInsight: aiInsight(
+        "Cruza con una doble identidad poco obvia para una campaña de eventos en vivo: además del consumo esperado de música y redes, esta audiencia tiene un interés marcadamente alto en actividades al aire libre (66.1% interesada en camping/senderismo, índice 138) y en naturaleza (61%, índice 121) — una activación de marca en el territorio de 'festival + experiencia outdoor' (por ejemplo zonas de descanso/glamping en el evento) podría resonar más que un enfoque puramente urbano/nocturno.",
+        [
+          { label: "Interés outdoor inusualmente alto para esta categoría", detail: "66.1% interesada en actividades como camping/senderismo (índice 138) y 61% en naturaleza/vida silvestre (índice 121) — abre espacio a patrocinios o activaciones ligadas a experiencias al aire libre, no solo vida nocturna." },
+          { label: "Afinidad de marca de moda/fragancias por encima del promedio", detail: "21.7% compró Calvin Klein (índice 161) y 5% compró Jean-Paul Gaultier (índice 380) en el último año — señal de apertura a marcas de moda/fragancia de nicho en patrocinios del evento." },
+          { label: "Investiga antes de comprar y pide validación de expertos en compras costosas", detail: "67% investiga productos online antes de comprar y 47.7% busca opiniones de expertos antes de compras costosas — el contenido de preventa (reseñas, recomendaciones) importa tanto como el anuncio de la boletería." },
+        ]
+      ),
+      sharePct: 45.7,
+      demographics: {
+        genderSplit: { male: 42.9, female: 57.1 },
+        ageBands: [
+          { label: "16-24", pct: 21.1 },
+          { label: "25-34", pct: 28.0 },
+          { label: "35-44", pct: 24.7 },
+          { label: "45-54", pct: 17.9 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca (incl. Cali) — 100% (criterio de la audiencia)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música (criterio de la audiencia)", pct: 100 },
+        { label: "Le gusta escuchar música latina (criterio de la audiencia)", pct: 100 },
+        { label: "Interés en películas y cine", pct: 91 },
+        { label: "Interés general en música", pct: 87 },
+      ],
+      barriers: [
+        { label: "Investiga el producto online antes de comprar (alarga el ciclo de decisión)", pct: 67 },
+        { label: "Es leal a las marcas que ya le gustan (barrera de cambio de marca)", pct: 63.3 },
+        { label: "Busca activamente las mejores ofertas antes de comprar", pct: 55 },
+        { label: "Busca opiniones de expertos antes de comprar artículos costosos", pct: 47.7 },
+      ],
+      digitalInterests: [
+        { label: "Interés en tecnología", pct: 76.3 },
+        { label: "Interés en actividades al aire libre (camping/senderismo)", pct: 66.1, index: 138 },
+        { label: "Interés en naturaleza / vida silvestre", pct: 61.0, index: 121 },
+        { label: "Interés en gadgets", pct: 17.2, index: 146 },
+      ],
+      media: [
+        { label: "Usa Instagram más de una vez al día", pct: 45.5, index: 131 },
+        { label: "Usa TikTok más de una vez al día", pct: 45.0 },
+        { label: "Usa Facebook más de una vez al día", pct: 44.2 },
+        { label: "Usa X más de una vez al día", pct: 11.3 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales y mensajería", "Instagram, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional y redes", "TV por streaming, Instagram", "44% ve canales internacionales de TV en este horario (2-5pm).", [
+          { label: "Ve canales internacionales de TV entre 2pm y 5pm", pct: 44, index: 104 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "TV por streaming/cable", "58% ve canales internacionales de TV en este horario (5-7pm) — el momento de mayor consumo verificado.", [
+          { label: "Ve canales internacionales de TV entre 5pm y 7pm", pct: 58, index: 121 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7568,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_REGGAETON_REGIONAL_GWI_AUTO_20261111],
   },
   {
     id: "deportes",

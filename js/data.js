@@ -7401,6 +7401,291 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fans del metal en vivo en Bogotá, procesado 2026-11-14.
+// Audiencia real de GWI: "Paramo (co) AvengedSevenfold_Bogotanos"
+// (471818ac-585e-4e09-b5e1-a69e80d0c248).
+// ---------------------------------------------------------------------------
+const CASE_AVENGED_SEVENFOLD_BOGOTA_GWI_AUTO_20261114 = {
+  id: "avenged-sevenfold-metal-bogota-colombia",
+  name: "Fans del metal en vivo en Bogotá (Avenged Sevenfold)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-14)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) AvengedSevenfold_Bogotanos', audience_id 471818ac-585e-4e09-b5e1-a69e80d0c248): personas en Bogotá D.C. que escuchan música para recordar buenos momentos o expresar su individualidad, están interesadas en eventos en vivo tipo festivales, han comprado o planean comprar boletos de concierto en los próximos 3-6 meses, y les gusta el metal.",
+  funnelSteps: [
+    {
+      label:
+        "Viven en Bogotá D.C., interesados en eventos en vivo, compradores o futuros compradores de boletos de concierto, y les gusta el metal (universo real GWI: ~337,552 sobre 31.06M de Colombia)",
+      pct: 1.1,
+    },
+  ],
+  footnotes: [
+    "Universo real GWI: 337,552 personas (100% de 16 a 64 años, Bogotá D.C.), verificado vía explore_insight_gwi — equivale a ~1.1% de la población digital de Colombia (31.06M).",
+    "La muestra exclusiva de esta audiencia es pequeña (n=32 en la pregunta de edad), insuficiente para la mayoría de los crosstabs de comportamiento que pidió GWI — género, bandas de edad finas, motivaciones, barreras y medios se tomaron de la audiencia proxy más cercana que devolvió GWI para preguntas de comportamiento ('fans de eventos en vivo en Colombia', ~10.6M personas, verificada vía explore_insight_gwi como 'Paramo (co) F.Cordillera2025General'). Deben leerse como contexto de categoría (fans de eventos en vivo en general), no como diferenciador exclusivo de fans de metal.",
+    "Los índices de intereses digitales (sección 'digitalInterests') no tuvieron crosstab exclusivo ni de Colombia disponible — se usan los del segmento actitudinal global de GWI 'Attitudes: Socialites', verificados vía explore_insight_gwi, como mejor aproximación direccional disponible.",
+    "GWI no devolvió datos específicos por franja horaria para esta audiencia ni para su proxy — el customer journey usa lugares y medios genéricos, sin cifras de actividades.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-metal-bogota-colombia",
+      name: "Daniel Osorio",
+      archetype: "El Metalero Urbano",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá D.C., escucha metal y sigue de cerca los eventos en vivo de la ciudad. Es un comprador activo de boletos de concierto: casi la mitad más propenso que el promedio a haber comprado boletos online en los últimos 3-6 meses. Su vida digital gira en torno a redes sociales (Instagram, TikTok, Facebook) y streaming de música y video en múltiples plataformas.",
+      aiInsight: aiInsight(
+        "Cruza con la lógica de nicho + alta intención: esta audiencia es pequeña (337 mil personas) pero un 48% más propensa que el promedio a comprar boletos de concierto online — no hace falta alcance masivo, sino activación directa en los canales de nicho donde ya está (redes sociales y streaming de música), con un mensaje que resuelva su principal fricción: el precio y la disponibilidad de boletos.",
+        [
+          { label: "Audiencia pequeña pero de alta intención de compra", detail: "7% ya compró boletos de concierto online en los últimos 3-6 meses (48% más propenso que el promedio) y 21% compró boletos de concierto en general (37% más propenso) — vale más como segmento de conversión directa que como awareness masivo." },
+          { label: "El streaming multiplataforma es el hábito, no la excepción", detail: "42% usa 4 o más servicios de streaming de TV/video/música (23% más propenso que el promedio) y 57% usó Spotify en el último mes — cualquier plan de medios debe asumir fragmentación de plataformas, no apostar a una sola." },
+          { label: "El precio y la disponibilidad de boletos son la principal fricción", detail: "27% percibe los boletos como costosos y 21% dice que la disponibilidad de boletos/buenos puestos es el factor más influyente para decidir asistir — un mensaje que resuelva esa fricción (preventas, cuotas, mapas de asientos claros) pesa más que el contenido emocional del artista." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45.6, female: 54.4 },
+        ageBands: [
+          { label: "16-24", pct: 20 },
+          { label: "25-34", pct: 25 },
+          { label: "35-44", pct: 22 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 14 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá D.C.", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interés activo en música (proxy fans de eventos en vivo, Colombia)", pct: 71 },
+        { label: "Interés en gastronomía / salir a comer (proxy)", pct: 69 },
+        { label: "Interés en viajes (proxy)", pct: 62 },
+        { label: "Interés en moda / estilo (proxy)", pct: 45 },
+      ],
+      barriers: [
+        { label: "Percibe los boletos de eventos como costosos (proxy fans de eventos en vivo, Colombia)", pct: 27 },
+        { label: "Disponibilidad de boletos / buenos puestos como factor decisivo (proxy)", pct: 21 },
+      ],
+      digitalInterests: [
+        { label: "Usa redes sociales para ver qué es tendencia (proxy global 'Attitudes: Socialites')", index: 150 },
+        { label: "Usa redes sociales para buscar contenido (proxy global)", index: 146 },
+        { label: "Interés en moda (proxy global)", index: 148 },
+      ],
+      media: [
+        { label: "Spotify (último mes)", pct: 57 },
+        { label: "YouTube Music (último mes)", pct: 43 },
+        { label: "Instagram (más de una vez al día)", pct: 40 },
+        { label: "TikTok (más de una vez al día)", pct: 39 },
+        { label: "Facebook (más de una vez al día)", pct: 37 },
+        { label: "Usa 4 o más servicios de streaming de TV/video", pct: 42 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / universidad", "Redes y streaming de música", "Spotify, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "TikTok, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y video", "YouTube Music, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video/música", "Spotify, servicios de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bares", "Redes sociales y streaming", "Instagram, TikTok, Spotify", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fintech + eventos en vivo, Colombia nacional, procesado
+// 2026-11-14. Audiencia real de GWI: "Paramo>AudienciasFintechLiveEvent>Col"
+// (3993e2b6-ae7f-4239-baeb-d9e63ea89bb7).
+// ---------------------------------------------------------------------------
+const CASE_FINTECH_EVENTOS_VIVO_NACIONAL_GWI_AUTO_20261114 = {
+  id: "fintech-eventos-vivo-colombia-nacional",
+  name: "Interesados en fintech y eventos en vivo (Colombia, nacional)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-14)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>AudienciasFintechLiveEvent>Col', audience_id 3993e2b6-ae7f-4239-baeb-d9e63ea89bb7): personas en Colombia en la intersección de interés financiero/fintech e interés en eventos en vivo.",
+  funnelSteps: [
+    {
+      label:
+        "Audiencia nacional en la intersección de fintech/finanzas y eventos en vivo (universo real GWI: ~5,959,522 sobre 31.06M de Colombia)",
+      pct: 19.2,
+    },
+  ],
+  footnotes: [
+    "Universo real GWI: 5,959,522 personas (100% de 16 a 64 años), verificado vía explore_insight_gwi — equivale a ~19.2% de la población digital de Colombia (31.06M). Género real (48% hombres / 52% mujeres) también verificado vía explore_insight_gwi.",
+    "Bandas de edad: GWI no devolvió una banda de edad exclusiva para esta audiencia — se usa la distribución de 'All Internet Users' en Colombia (23% 16-24, 27% 25-34, 23% 35-44, 17% 45-54, 12% 55-64; GWI no entregó cifra de 65+) como mejor proxy disponible; las bandas no suman exactamente 100% por el redondeo propio de GWI.",
+    "Top ciudades: GWI no devolvió un desglose geográfico exclusivo para esta audiencia (solo confirmó que no hay concentración por ciudad en los datos disponibles) — se extrapola a la distribución poblacional de Colombia según DANE, el mismo proxy usado en el caso semilla 'Artista colombiano en concierto en México' (Bogotá 45%, Medellín 14%, Barranquilla 13%, Cali 13%, Cartagena 9%, Bucaramanga 4%).",
+    "Motivaciones y barreras financieras: la mayoría de las cifras que devolvió GWI para esta audiencia (hábitos de ahorro, tenencia de cuenta/tarjeta, percepción de bancos tradicionales vs. digitales, adopción de pagos digitales) no vinieron atadas a un crosstab exclusivo de esta audiencia — GWI las devolvió como datos de población general de Colombia (o, en el caso de la confianza en bancos tradicionales vs. digitales, de un pulso multi-mercado), verificadas vía explore_insight_gwi. Se incluyen como mejor proxy disponible y deben leerse como contexto, no como diferenciador exclusivo de esta audiencia.",
+    "GWI no devolvió un índice comparativo (vs. promedio) para intereses digitales de esta audiencia — por eso digitalInterests queda vacío en vez de inventar un índice.",
+    "GWI no devolvió datos específicos por franja horaria para esta audiencia — el customer journey usa lugares y medios genéricos, sin cifras de actividades.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "usuario-fintech-eventos-colombia",
+      name: "Camila Reyes",
+      archetype: "La Bancarizada Social",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Colombia, tiene relación activa con el sistema financiero (83% tiene cuenta bancaria) y también está interesada en eventos en vivo. Prefiere ahorrar y esperar antes de comprar (81%) y valora la seguridad financiera (65%) por encima de la innovación.",
+      aiInsight: aiInsight(
+        "Cruza con la lógica de 'banca como medio, no como fin': esta audiencia de ~5.96M de colombianos tiene acceso bancario casi universal (83% cuenta, 48% tarjeta de crédito), pero su hábito dominante es ahorrar y esperar antes de gastar (81%) — para un producto financiero o de pagos ligado a entretenimiento, la fricción a resolver no es el acceso bancario sino el momento de decisión de compra del boleto o la experiencia.",
+        [
+          { label: "El acceso bancario ya está resuelto, la fricción es el momento de pago", detail: "83% tiene cuenta bancaria y 97% de quienes tienen cuenta/tarjeta conoce BanColombia (awareness casi total) — el reto de un mensaje financiero no es generar conciencia de marca bancaria, sino simplificar el checkout en el momento de la compra." },
+          { label: "Ahorrar y esperar es el comportamiento por defecto", detail: "81% prefiere ahorrar y esperar antes de comprar un producto — una oferta de fintech ligada a eventos en vivo compite con ese hábito, así que financiamiento flexible o cuotas sin interés puede pesar más que el descuento directo." },
+          { label: "La confianza pesa más que la innovación en banca", detail: "53% confía más en bancos tradicionales y 49% cree que dan mejor servicio al cliente, frente a 42% que ve a los bancos digitales como más innovadores — un fintech nuevo debe primero ganar confianza, no solo ofrecer una mejor experiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48, female: 52 },
+        ageBands: [
+          { label: "16-24", pct: 23 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 12 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá", pct: 45 },
+          { city: "Medellín", pct: 14 },
+          { city: "Barranquilla", pct: 13 },
+          { city: "Cali", pct: 13 },
+          { city: "Cartagena", pct: 9 },
+          { city: "Bucaramanga", pct: 4 },
+        ],
+      },
+      motivations: [
+        { label: "Tiene cuenta bancaria (proxy GWI Core Colombia)", pct: 83 },
+        { label: "Considera importante la seguridad financiera (proxy)", pct: 65 },
+        { label: "Prefiere ahorrar y esperar antes de comprar (proxy)", pct: 81 },
+        { label: "Tiene tarjeta de crédito (proxy)", pct: 48 },
+      ],
+      barriers: [
+        { label: "Es 'late adopter' de nueva tecnología/software (perfil profesional, proxy GWI Work Colombia)", pct: 41 },
+        { label: "Le preocupa el uso de sus datos personales online (proxy GWI Core)", pct: 38 },
+        { label: "Flexibilidad de pago limitada como reto en compras B2B (decisores, proxy)", pct: 22 },
+        { label: "Le preocupa el rastreo del gobierno online (proxy)", pct: 20 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Vio TV on-demand o streaming en el último mes (proxy GWI Core Colombia)", pct: 93 },
+        { label: "Usa un TV set para ver streaming (proxy)", pct: 74 },
+        { label: "Usó Google Mail en el último mes (proxy)", pct: 88 },
+        { label: "Interés declarado en tecnología (proxy)", pct: 63 },
+        { label: "Usó ChatGPT en el último mes (proxy)", pct: 47 },
+        { label: "Es usuario heavy de radio (proxy)", pct: 23 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y mensajería", "WhatsApp, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Correo y navegación", "Gmail, Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y banca móvil", "App del banco, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo", "Streaming y redes", "TikTok, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV / streaming", "TV set, servicios de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV / streaming y radio", "TV set, radio", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fintech + eventos en vivo, Bogotá y alrededores, procesado
+// 2026-11-14. Audiencia real de GWI:
+// "Paramo>AudienciasFintechLiveEventBogAlrede>Col"
+// (a441e66c-dd98-405f-b935-5aed4648d6e2).
+// ---------------------------------------------------------------------------
+const CASE_FINTECH_EVENTOS_VIVO_BOGOTA_GWI_AUTO_20261114 = {
+  id: "fintech-eventos-vivo-bogota-alrededores-colombia",
+  name: "Interesados en fintech y eventos en vivo (Bogotá y alrededores)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-14)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>AudienciasFintechLiveEventBogAlrede>Col', audience_id a441e66c-dd98-405f-b935-5aed4648d6e2): recorte de Bogotá D.C. y alrededores de la misma campaña fintech + eventos en vivo analizada a nivel nacional en 'fintech-eventos-vivo-colombia-nacional'.",
+  funnelSteps: [
+    {
+      label:
+        "Recorte Bogotá D.C. y alrededores de la audiencia fintech + eventos en vivo (universo real GWI: ~2,508,385 sobre 31.06M de Colombia)",
+      pct: 8.1,
+    },
+  ],
+  footnotes: [
+    "Universo real GWI: 2,508,385 personas, verificado vía explore_insight_gwi — equivale a ~8.1% de la población digital de Colombia (31.06M) y a ~42% del universo de la versión nacional de esta misma campaña (5,959,522). Género real (45.9% hombres / 54.1% mujeres) también verificado vía explore_insight_gwi.",
+    "Bandas de edad: GWI solo devolvió para esta audiencia una cifra en escala global (cientos de millones de personas), claramente incompatible con el tamaño real de esta audiencia — se descartó por no ser un dato válido para Colombia. Se reutiliza la misma distribución de edad que la versión nacional de esta campaña (proxy de 'All Internet Users' Colombia) como mejor aproximación disponible.",
+    "Top ciudades: por definición esta audiencia es el recorte Bogotá D.C. + alrededores (Cundinamarca) de la campaña nacional. GWI no devolvió el split exacto entre las dos — se reutiliza la proporción 77.1% Bogotá D.C. / 22.9% Cundinamarca observada en otra audiencia real de GWI con el mismo filtro geográfico (caso 'futbol-amateur-bogota-cundinamarca', ya publicado), como mejor proxy disponible.",
+    "Motivaciones, barreras y medios: comparado con la versión nacional, esta audiencia reporta mayor bancarización (92% cuenta vs. 83% nacional) y mayor tenencia de tarjeta de crédito (60% vs. 48% nacional) en datos verificados vía explore_insight_gwi, aunque sin crosstab exclusivo confirmado para esta audiencia puntual — se presentan como la mejor cifra disponible para el recorte Bogotá+alrededores de esta campaña. El resto de variables de comportamiento (adopción de pagos digitales, intereses digitales, medios) no tuvieron crosstab exclusivo ni de Colombia, y se completan con el mismo tipo de proxy de población general usado en la versión nacional.",
+    "GWI no devolvió un índice comparativo (vs. promedio) para intereses digitales de esta audiencia — por eso digitalInterests queda vacío en vez de inventar un índice.",
+    "GWI no devolvió datos específicos por franja horaria para esta audiencia — el customer journey usa lugares y medios genéricos, sin cifras de actividades.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "usuario-fintech-eventos-bogota-alrededores",
+      name: "Felipe Rincón",
+      archetype: "El Capitalino Bancarizado",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá D.C. o Cundinamarca, está interesado en eventos en vivo y tiene un perfil financiero más bancarizado que el promedio nacional de esta misma campaña: 92% tiene cuenta bancaria y 60% tiene tarjeta de crédito. Aun así, migrar de tarjeta a pagos móviles no es automático para él.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha urbana de acceso financiero: en Bogotá y alrededores el acceso bancario (92%) y la tenencia de tarjeta de crédito (60%) superan claramente el promedio nacional de esta misma campaña (83% / 48%), lo que sugiere que la capital concentra el segmento más bancarizado del público interesado en eventos en vivo — un producto financiero premium ligado a entretenimiento debería priorizar Bogotá antes que una campaña pareja a nivel nacional.",
+        [
+          { label: "Bogotá concentra el segmento más bancarizado de esta campaña", detail: "92% tiene cuenta bancaria frente a 83% en la versión nacional de la misma audiencia — la capital es el lugar natural para pilotear un producto financiero antes de escalarlo al resto del país." },
+          { label: "La tarjeta de crédito es la norma, no la excepción, en este grupo", detail: "60% tiene tarjeta de crédito, 12 puntos por encima del 48% nacional — un fintech dirigido a este segmento compite más con la tarjeta tradicional que con el efectivo." },
+          { label: "Migrar a pagos móviles todavía no es automático", detail: "Solo 17% usó un servicio de pago móvil en el último mes y 14% se siente incómodo pagando con el celular en vez de la tarjeta (proxy GWI Core) — la familiaridad financiera no se traduce todavía en adopción de pagos digitales por defecto." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45.9, female: 54.1 },
+        ageBands: [
+          { label: "16-24", pct: 23 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 12 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 77.1 },
+          { city: "Cundinamarca", pct: 22.9 },
+        ],
+      },
+      motivations: [
+        { label: "Tiene cuenta bancaria", pct: 92 },
+        { label: "Tiene tarjeta de crédito", pct: 60 },
+        { label: "Tiene un crédito de corto plazo", pct: 24 },
+        { label: "Prefiere ahorrar y mantener dinero en formas accesibles (proxy GWI Core)", pct: 70 },
+      ],
+      barriers: [
+        { label: "Es 'late adopter' de nueva tecnología/software (perfil profesional, proxy GWI Work)", pct: 37 },
+        { label: "Flexibilidad de pago limitada como reto en compras B2B (decisores, proxy)", pct: 23 },
+        { label: "Incomodidad pagando con el celular en vez de tarjeta (proxy GWI Core)", pct: 14 },
+        { label: "Usó un servicio de pago móvil en el último mes (base baja, proxy)", pct: 17 },
+      ],
+      digitalInterests: [],
+      media: [
+        { label: "Usa YouTube para buscar información y contenido (proxy GWI Gaming)", pct: 64 },
+        { label: "Redes sociales/mensajería ocupan la mayoría del tiempo de pantalla (proxy)", pct: 54 },
+        { label: "Usa apps móviles para buscar marcas/productos (proxy)", pct: 30 },
+        { label: "Vio YouTube Shorts en el último mes (proxy)", pct: 27 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y mensajería", "WhatsApp, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Video y búsqueda", "YouTube, Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Banca móvil y redes", "App del banco, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video corto", "YouTube Shorts, apps móviles", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes y mensajería", "WhatsApp, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Video y redes", "YouTube, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 const CATEGORIES = [
   {
     id: "entretenimiento",
@@ -7413,7 +7698,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_AVENGED_SEVENFOLD_BOGOTA_GWI_AUTO_20261114],
   },
   {
     id: "deportes",
@@ -7452,7 +7737,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_FINTECH_EVENTOS_VIVO_NACIONAL_GWI_AUTO_20261114, CASE_FINTECH_EVENTOS_VIVO_BOGOTA_GWI_AUTO_20261114],
   },
   {
     id: "alcohol",

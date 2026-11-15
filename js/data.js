@@ -7398,6 +7398,238 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_FINTECH_EVENTOS_BOGOTA_GWI_AUTO_20261115 = {
+  id: "fintech-eventos-vivo-bogota-colombia",
+  name: "Interesados en fintech que asisten a eventos en vivo en Bogotá y alrededores (Paramo>AudienciasFintechLiveEventBogAlrede>Col)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-15)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>AudienciasFintechLiveEventBogAlrede>Col' (audience_id a441e66c-dd98-405f-b935-5aed4648d6e2): personas en Bogotá y alrededores con interés en fintech que también asisten a eventos en vivo.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (2,508,385) sobre la población digital de Colombia (31.06M)", pct: 8.1 },
+  ],
+  footnotes: [
+    "8.1% ≈ universo real de la audiencia en GWI (1,356,188 mujeres + 1,152,197 hombres = 2,508,385, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M).",
+    "Demografía (género, edad, zona urbana/rural) verificada 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales, específicos de esta audiencia.",
+    "GWI no devolvió desagregación por ciudad para esta audiencia — su propio nombre/criterio ya la define como 'Bogotá y alrededores', por lo que no se fabricó un desglose de ciudades.",
+    "Banda etaria 65+: GWI no devolvió una cifra para este grupo en esta audiencia (se deja en 0 en vez de inventar un valor).",
+    "IMPORTANTE — motivaciones, intereses digitales y medios: para esta audiencia en particular, chat_gwi devolvió el mismo conjunto de cifras (ahorro, compra online, TV, redes sociales, etc.) que para otras audiencias no relacionadas consultadas en la misma sesión — es decir, son patrones generales de la población de internet en Colombia, no datos diferenciados de esta audiencia específica más allá de la demografía. Se incluyen igual (son respuestas reales de GWI, nunca inventadas) pero marcadas aquí como proxy de población general — el equipo editorial debería volver a consultarlas con prompts más específicos antes de usarlas como insight exclusivo de esta audiencia.",
+    "Barreras: GWI devolvió datos no relacionados con esta audiencia (barreras de pedidos de comida a domicilio y de adopción de IA empresarial) — se descartaron por completo en vez de forzarlas como 'barreras' de esta audiencia.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia (GWI no devolvió información compatible) — usa lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-fintech-eventos-bogota",
+      name: "Daniel Rojas",
+      archetype: "El Financiero Social",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá y alrededores (93% en zona urbana), tiene entre 16 y 64 años (concentrado en 25-54, 73% del total) y combina interés en fintech/finanzas personales con el gusto por asistir a eventos en vivo — un perfil que las marcas financieras pueden activar patrocinando experiencias en vivo en vez de solo pauta digital tradicional.",
+      aiInsight: aiInsight(
+        "El hallazgo más sólido de esta audiencia es puramente demográfico: es adulta y urbana, no joven — 73% tiene entre 25 y 54 años y apenas 18% tiene entre 16 y 24 (22% menos probable que el promedio de Colombia), y 93% vive en zona urbana (8.8% más probable que el promedio). Eso la hace más cercana a un perfil de 'profesional establecido con interés fintech' que al estereotipo de early-adopter joven. GWI no devolvió motivaciones, barreras o medios diferenciados específicamente para esta audiencia (ver footnotes) — los datos de seguridad financiera, pago sin efectivo y compra online que acompañan a esta ficha son patrones generales de la población colombiana, útiles como contexto pero no como hallazgo exclusivo. La oportunidad real y verificada es el cruce categórico: fintech + eventos en vivo es un ángulo de patrocinio/activación poco explotado en el mercado colombiano.",
+        [
+          { label: "Es una audiencia adulta, no joven — el foco debe ser 25-54", detail: "73% tiene entre 25 y 54 años (30% 25-34, 24% 35-44, 19% 45-54) mientras que 16-24 es solo 18% (22% menos probable que el promedio de Colombia) — una pauta orientada a 'finanzas para jóvenes' desaprovecharía a la mayoría real de esta audiencia." },
+          { label: "Es mayoritariamente urbana y ligeramente más femenina que el promedio", detail: "93% vive en zona urbana (8.8% más probable que el promedio de Colombia) y 54.1% se identifica como mujer (índice 106) — relevante para la selección de venues y el tono creativo de cualquier activación en Bogotá y alrededores." },
+          { label: "El cruce fintech + eventos en vivo es la oportunidad real, más allá de las cifras genéricas de consumo", detail: "Esta audiencia combina interés fintech con asistencia a eventos en vivo — un ángulo de patrocinio (ej. medios de pago oficiales de un festival o concierto) que no está cubierto hoy por los casos de fintech generalistas ya procesados en el dataset." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45.9, female: 54.1 },
+        ageBands: [
+          { label: "16-24", pct: 18 },
+          { label: "25-34", pct: 30 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 9.8 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá y alrededores — así definida por el propio criterio de la audiencia en GWI (93% zona urbana)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante la seguridad financiera (patrón general de Colombia, no exclusivo de esta audiencia)", pct: 61 },
+        { label: "Prefiere pagar sin efectivo (patrón general de Colombia, no exclusivo de esta audiencia)", pct: 59 },
+        { label: "Prefiere comprar por internet (patrón general de Colombia, no exclusivo de esta audiencia)", pct: 58 },
+      ],
+      barriers: [],
+      digitalInterests: [
+        { label: "Compró un producto o servicio por internet en la última semana (patrón general, no exclusivo de esta audiencia)", pct: 56 },
+        { label: "Se saltó un anuncio de video online en los últimos 7 días (patrón general, no exclusivo de esta audiencia)", pct: 48 },
+      ],
+      media: [
+        { label: "Usa un televisor para ver TV en vivo o canales de TV (patrón general, no exclusivo de esta audiencia)", pct: 66 },
+        { label: "Suele ver películas mediante servicios de streaming (patrón general, no exclusivo de esta audiencia)", pct: 35 },
+        { label: "Escucha radio AM/FM, entre quienes escuchan radio (patrón general, no exclusivo de esta audiencia)", pct: 41 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y redes sociales", "App del banco/billetera, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes sociales y noticias", "Instagram, medios de noticias", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Apps de pago", "App del banco/billetera", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / evento", "TV y streaming", "TV en vivo o servicios de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "TV, streaming o evento en vivo", "TV, streaming o venue físico", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_REGGAETON_VALLE_GWI_AUTO_20261115 = {
+  id: "reggaeton-musica-latina-valle-del-cauca",
+  name: "Fans de música latina y eventos en vivo en Valle del Cauca (Paramo (co) ReggaetonValle)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-15)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo (co) ReggaetonValle' (audience_id 8ed8b71e-84b7-4718-ba25-f7c95635939f): personas en Valle del Cauca interesadas en eventos en vivo como festivales de música y que disfrutan de la música latina — variante regional (Cali y alrededores) de la misma campaña ya analizada a nivel nacional en el caso 'reggaeton-musica-latina-colombia' (ebda5c56-716e-496d-8607-821c96cb2367, procesada 2026-10-20).",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (806,850) sobre la población digital de Colombia (31.06M)", pct: 2.6 },
+  ],
+  footnotes: [
+    "2.6% ≈ universo real de la audiencia en GWI (461,041 mujeres + 345,809 hombres = 806,850, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M) — el universo real ya está acotado a Valle del Cauca por el propio criterio de la audiencia.",
+    "Demografía (género, edad) verificada 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales, específicos de esta audiencia (los valores difieren de los de la audiencia nacional 'reggaeton-musica-latina-colombia', confirmando que sí está filtrada a Valle del Cauca).",
+    "GWI también devolvió edades puntuales con muestra pequeña (31, 43 y 47 años) con índices altos pero poco robustos por su bajo tamaño de muestra — se omiten de las bandas etarias agregadas para no sobre-representarlas.",
+    "IMPORTANTE — motivaciones, intereses digitales y medios: GWI devolvió el mismo conjunto de cifras genéricas (interés en cultura popular/música/salud, compra online, etc.) que para otras audiencias no relacionadas consultadas en la misma sesión — no están diferenciadas para esta audiencia específica más allá de la demografía. Se incluyen igual (son respuestas reales de GWI) pero marcadas como proxy de población general.",
+    "Barreras: GWI no devolvió datos de barreras compatibles con esta audiencia — se deja vacío en vez de forzar una cifra no relacionada.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia — usa lugar/medios genéricos del perfil regional, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-musica-latina-valle-del-cauca",
+      name: "Daniela Ospina",
+      archetype: "La Rumbera Vallecaucana",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Valle del Cauca, tiene entre 16 y 64 años (concentrada en 25-44, 53% del total) y está interesada en eventos en vivo como festivales de música con fuerte afinidad por la música latina — la misma campaña ya analizada a nivel nacional, pero acotada a la región de Cali y alrededores.",
+      aiInsight: aiInsight(
+        "Esta variante regional (Valle del Cauca) de la campaña 'Reggaeton' muestra un sesgo de género más marcado que la versión nacional ya procesada: 57.1% mujeres (índice 112) frente a 56.8% en la audiencia nacional equivalente — una diferencia pequeña pero consistente en la misma dirección. El universo regional (806,850) es apenas 11% del universo nacional de la campaña (7.1M), lo que la convierte en un recorte útil para activaciones hiperlocales en Cali en vez de una campaña nacional. GWI no devolvió motivaciones ni barreras diferenciadas para esta variante regional (ver footnotes) — el valor real de esta ficha está en la demografía verificada, no en las cifras de consumo general que la acompañan.",
+        [
+          { label: "Sesgo femenino ligeramente más marcado que la versión nacional de la misma campaña", detail: "57.1% mujeres (índice 112) en Valle del Cauca frente a 56.8% (índice 117.5) en la audiencia nacional equivalente — ambas con mayoría femenina, consistente entre el recorte regional y el nacional." },
+          { label: "Es un recorte pequeño pero concentrado en adultos jóvenes-medios (25-44)", detail: "53% tiene entre 25 y 44 años (28% 25-34 + 25% 35-44) frente a 21% en 16-24 (7.1% menos probable que el promedio de Colombia) — el foco de edad no es tan joven como el estereotipo típico de fan de reggaeton." },
+          { label: "Universo once veces más pequeño que la campaña nacional — útil para activación hiperlocal en Cali", detail: "806,850 personas frente a los 7,110,075 de la audiencia nacional 'Paramo (co) ReggaetonGeneral' ya procesada — un tamaño más manejable para un patrocinio o activación específica de venue en Cali en vez de una campaña de alcance nacional." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 42.9, female: 57.1 },
+        ageBands: [
+          { label: "16-24", pct: 21 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 18 },
+          { label: "55-64", pct: 8.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca (Cali y alrededores) — así definida por el propio criterio de la audiencia en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Es entusiasta de la cultura popular y el ocio (patrón general de Colombia, no exclusivo de esta audiencia)", pct: 54 },
+        { label: "Interesada en música (patrón general de Colombia, no exclusivo de esta audiencia)", pct: 54 },
+        { label: "Interesada en salud, fitness y belleza (patrón general de Colombia, no exclusivo de esta audiencia)", pct: 49 },
+      ],
+      barriers: [],
+      digitalInterests: [
+        { label: "Compró un producto o servicio por internet en la última semana (patrón general, no exclusivo de esta audiencia)", pct: 56 },
+        { label: "Interesada en cine y películas (patrón general, no exclusivo de esta audiencia)", pct: 46 },
+      ],
+      media: [
+        { label: "Usa apps de redes sociales y mensajería la mayor parte de su tiempo de pantalla (patrón general, no exclusivo de esta audiencia)", pct: 54 },
+        { label: "Usa un televisor para ver TV en vivo o canales de TV (patrón general, no exclusivo de esta audiencia)", pct: 66 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Streaming de música", "Spotify / apps de música", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Mensajería y redes", "WhatsApp, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / evento", "Streaming y redes", "Apps de streaming, redes", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Evento en vivo / casa", "Evento en vivo o streaming", "Venue físico en Cali o streaming", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_BODEGA_AURRERA_MEXICO_GWI_AUTO_20261115 = {
+  id: "compradores-bodega-aurrera-mexico",
+  name: "Compradores habituales con intención de compra en Bodega Aurrera (México)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-15)",
+  insightNote:
+    "Audiencia real de GWI 'GrupoWalmart>BA>Comprador habitual con Intención de compra V3 (1)' (audience_id ac1db435-c31f-4400-9b2f-a1acd66f7d37): personas en México que planean comprar o compraron dispositivos electrónicos, electrodomésticos o muebles en los últimos 3-6 meses y compran en Bodega Aurrera semanalmente, mensualmente o con menor frecuencia.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (66,575,824) sobre la población digital de México (78.05M)", pct: 85.3 },
+  ],
+  footnotes: [
+    "85.3% ≈ universo real de la audiencia en GWI (33,962,902 mujeres + 32,612,922 hombres = 66,575,824, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de México (78.05M).",
+    "ADVERTENCIA para el equipo editorial: este universo es inusualmente amplio (más de 4 de cada 5 personas conectadas en México) para lo que se esperaría de una 'audiencia' de medios segmentada. Esto es consistente con el propio criterio de la audiencia en GWI, que usa lógica 'o' muy inclusiva ('compra en Bodega Aurrera semanalmente, mensualmente, o con menor frecuencia' + intención de compra en cualquiera de varias categorías de producto) — en la práctica se acerca más a 'comprador mexicano promedio' que a un segmento accionable y diferenciado. Se deja registrada igual porque es una audiencia real y nueva en GWI, pero el equipo debería considerar si vale la pena re-segmentarla con criterios más estrictos antes de usarla en un plan de medios.",
+    "Demografía (género, edad, zona urbana/rural) verificada 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia. GWI solo destacó 3 bandas etarias (16-24, 25-34, 55-64) como hallazgos relevantes; no devolvió cifras para 35-44 ni 45-54, así que se dejan en 0 en vez de inventarlas — dado el tamaño del universo, es probable que esas bandas simplemente estén cerca del promedio general y no hayan calificado como 'insight' destacado por GWI.",
+    "GWI no devolvió desglose por ciudad ni por estado para esta audiencia (su propio sistema de insights lo señaló explícitamente: 'Los datos no especifican ciudades o departamentos de residencia').",
+    "IMPORTANTE — motivaciones, intereses digitales y medios: GWI devolvió el mismo conjunto de cifras genéricas (ahorro, redes sociales, TV, streaming, etc.) que para otras audiencias no relacionadas consultadas en la misma sesión — no están diferenciadas para esta audiencia específica más allá de la demografía. Esto es coherente con lo amplio del universo (ver advertencia arriba): al ser casi toda la población, es esperable que sus patrones de consumo se parezcan al promedio general. Se incluyen igual (son respuestas reales de GWI) pero marcadas como proxy de población general.",
+    "Barreras: GWI devolvió datos no relacionados con esta audiencia (barreras de pedidos de comida a domicilio y de adopción de IA empresarial) — se descartaron por completo en vez de forzarlas como 'barreras' de esta audiencia.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia — usa lugar/medios genéricos, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "comprador-bodega-aurrera-mexico",
+      name: "Alejandra Mendoza",
+      archetype: "La Compradora Mexicana Mainstream",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en México (73% en zona urbana), tiene entre 16 y 64 años, compra en Bodega Aurrera con cierta regularidad y ha comprado o planea comprar electrodomésticos, muebles o electrónicos en los últimos 3-6 meses. Es un universo inusualmente amplio (85% de la población digital mexicana) — más cercano a un comprador mainstream que a un nicho diferenciado.",
+      aiInsight: aiInsight(
+        "El hallazgo más importante de esta audiencia no es un dato de consumo sino su propio tamaño: 66.6M de personas (85.3% de la población digital de México) la convierten en una de las audiencias menos diferenciadas de este catálogo — por el diseño de su criterio ('o' muy inclusiva entre categorías de producto y frecuencia de compra en Bodega Aurrera). Esto no invalida la audiencia (es real y viene de una consulta real de GWI), pero sí cambia su uso recomendado: sirve mejor como audiencia de referencia/benchmark de 'comprador mainstream mexicano' que como segmento accionable para una campaña dirigida. Dentro de ese universo gigante, el único matiz demográfico real que GWI destacó fue una leve sobrerrepresentación joven (16-34 suma 51% del total, con índices de +22% y +13% respectivamente) y un ligero sesgo femenino (51%, índice 105.5).",
+        [
+          { label: "El universo es casi toda la población digital de México — tratarla como un benchmark, no como un nicho", detail: "85.3% de la población digital mexicana (66.6M personas) cae dentro de esta audiencia — antes de usarla en un plan de medios, vale la pena que el equipo evalúe si conviene re-segmentarla con un criterio más estricto (por ejemplo, solo 'compra semanalmente' sin incluir 'con menor frecuencia')." },
+          { label: "Dentro de ese universo amplio, hay una leve sobrerrepresentación joven", detail: "25% tiene entre 16 y 24 años (22% más probable que el promedio de México) y 26% tiene entre 25 y 34 (13% más probable) — juntas suman 51% del total, sugiriendo que, pese a lo amplio del criterio, el perfil sigue sesgado hacia adultos jóvenes más que hacia personas mayores." },
+          { label: "Ligero sesgo femenino, consistente con el rol de compra en el hogar", detail: "51% se identifica como mujer (índice 105.5) frente a 49% hombre (índice 95) — una diferencia pequeña pero consistente con el patrón típico de decisión de compra de electrodomésticos/muebles en el hogar mexicano." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49, female: 51 },
+        ageBands: [
+          { label: "16-24", pct: 25 },
+          { label: "25-34", pct: 26 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 9.5 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "México — sin desagregación por ciudad/estado disponible en GWI (73% zona urbana, 17% suburbana, 9.7% rural)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prefiere esperar y ahorrar antes de comprar un producto (patrón general de México, no exclusivo de esta audiencia)", pct: 71 },
+        { label: "Prefiere esperar a que los productos estén en oferta (patrón general de México, no exclusivo de esta audiencia)", pct: 66 },
+        { label: "Prefiere gastar dinero en experiencias antes que en productos (patrón general de México, no exclusivo de esta audiencia)", pct: 52 },
+      ],
+      barriers: [],
+      digitalInterests: [
+        { label: "Compró un producto o servicio por internet en la última semana (patrón general, no exclusivo de esta audiencia)", pct: 56 },
+        { label: "Buscó o exploró productos online en la última semana (patrón general, no exclusivo de esta audiencia)", pct: 49 },
+      ],
+      media: [
+        { label: "Vio TV bajo demanda o un servicio de streaming en el último mes (patrón general, no exclusivo de esta audiencia)", pct: 92 },
+        { label: "Vio TV en vivo o un canal de TV en el último mes (patrón general, no exclusivo de esta audiencia)", pct: 87 },
+        { label: "Escucha radio AM/FM, entre quienes escuchan radio (patrón general, no exclusivo de esta audiencia)", pct: 41 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Redes sociales y TV", "Instagram, Facebook, TV", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Casa / trabajo", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / tienda", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / tienda", "Redes sociales y TV", "Facebook, TV", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa / tienda", "TV y streaming", "TV en vivo, servicios de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y streaming", "TV en vivo, servicios de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7645,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_REGGAETON_VALLE_GWI_AUTO_20261115],
   },
   {
     id: "deportes",
@@ -7439,7 +7671,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020, CASE_BODEGA_AURRERA_MEXICO_GWI_AUTO_20261115],
   },
   {
     id: "fintech",
@@ -7452,7 +7684,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_FINTECH_EVENTOS_BOGOTA_GWI_AUTO_20261115],
   },
   {
     id: "alcohol",

@@ -159,6 +159,7 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "328aa2ab-d268-4a1f-a76b-5b9683559806", title: "Paramo>AudienciasFintech>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "3993e2b6-ae7f-4239-baeb-d9e63ea89bb7", title: "Paramo>AudienciasFintechLiveEvent>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "a441e66c-dd98-405f-b935-5aed4648d6e2", title: "Paramo>AudienciasFintechLiveEventBogAlrede>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "8ed8b71e-84b7-4718-ba25-f7c95635939f", title: "Paramo (co) ReggaetonValle", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, enjoy listening to Latin music, and live in Valle del Cauca." },
   { id: "9d0a5f9f-c83d-44d9-be71-6bb4364fafae", title: "Paramo>AudienciasHealthCare-NSE3-LiveEvents-Bog+Cercanias>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "3a9eff0c-3c83-498c-882f-cc6051bd966a", title: "Paramo>AudienciasHealthCare-NSE3-LiveEvents>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f41415f5-fce3-4301-abf9-4c7f40913e4d", title: "Paramo>AudienciasHealthCare-NSE3>Col", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "" },
@@ -404,4 +405,8 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-15.
+  "a441e66c-dd98-405f-b935-5aed4648d6e2": { categoryId: "fintech", caseId: "fintech-eventos-vivo-bogota-colombia", personaId: "entusiasta-fintech-eventos-bogota", analyzedAt: "2026-11-15" },
+  "8ed8b71e-84b7-4718-ba25-f7c95635939f": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-valle-del-cauca", personaId: "fan-musica-latina-valle-del-cauca", analyzedAt: "2026-11-15" },
+  "ac1db435-c31f-4400-9b2f-a1acd66f7d37": { categoryId: "retail", caseId: "compradores-bodega-aurrera-mexico", personaId: "comprador-bodega-aurrera-mexico", analyzedAt: "2026-11-15" },
 };

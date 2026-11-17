@@ -6795,6 +6795,94 @@ const CASE_GENEROS_NACIONAL_GWI_AUTO_20261017 = {
   ],
 };
 
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Generos (Atlántico), procesado 2026-11-17. Versión regional
+// (departamento de Atlántico) de la misma campaña "Generos" ya analizada a
+// nivel Bogotá ('generos-bogota-colombia') y nacional ('generos-colombia-nacional').
+// ---------------------------------------------------------------------------
+const CASE_GENEROS_ATLANTICO_GWI_AUTO_20261117 = {
+  id: "generos-atlantico-colombia",
+  name: "Entusiastas de eventos en vivo y cultura en Atlántico (Páramo>Generos>Atlántico)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-17)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>Generos>Atlantico' (audience_id 4558eb03-cac0-4aed-9f57-a1633f96f7eb): colombianos de 18 a 50 años que viven en Atlántico, interesados en eventos en vivo como festivales de música o streaming de eventos, y siempre atentos a nuevos eventos de música en vivo — versión regional (Atlántico) de la misma campaña 'Generos' ya analizada a nivel Bogotá y nacional.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (1,162,756) sobre la población digital de Colombia (31.06M)", pct: 3.7 },
+  ],
+  footnotes: [
+    "3.7% = universo real de la audiencia en GWI (612,685 mujeres + 550,071 hombres = 1,162,756) sobre la población digital total de Colombia (31.06M) — verificado vía explore_insight_gwi sobre la pregunta de género (muestra 395, la de mayor tamaño muestral entre las preguntas de género disponibles para esta audiencia).",
+    "Bandas de edad verificadas vía explore_insight_gwi: 16-24: 26.1%, 25-34: 33.2%, 35-44: 28.3%, 45-54: 12.4% (suman 100%); 55-64 y 65+ no aplican por definición de la audiencia (18 a 50 años).",
+    "Motivaciones, barreras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de esta audiencia.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia (solo horas semanales agregadas, sin desglose por momento del día) — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "Top ciudades: la audiencia está definida por residencia en el departamento de Atlántico, sin desagregación municipal adicional en GWI.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-cultural-atlantico-colombia",
+      name: "Karen Julieth Pérez",
+      archetype: "La Melómana del Caribe",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en el departamento de Atlántico, tiene entre 18 y 50 años y está siempre atenta a nuevos eventos de música en vivo. Apoya artistas locales y descubre música nueva antes de que sea popular, pero combina ese perfil de 'descubridora temprana' con un consumo todavía fuerte de TV abierta y radio — no es una audiencia exclusivamente digital.",
+      aiInsight: aiInsight(
+        "Cruza un perfil de 'descubridora cultural temprana' con un consumo de medios tradicionales que sigue vivo en la región Caribe: 39% descubre artistas antes de que sean populares y 41% apoya artistas locales o va a conciertos pequeños, pero en paralelo 76% usa el televisor para ver contenido on-demand/streaming y 26% es heavy user de radio — una estrategia de medios 'solo digital' dejaría fuera a buena parte de esta audiencia.",
+        [
+          { label: "Descubridores tempranos, no solo espectadores", detail: "39% descubre artistas o bandas antes de que sean populares y 41% apoya artistas locales o va a conciertos pequeños — activaciones con talento emergente o local conectan mejor que apostar solo por headliners ya consagrados." },
+          { label: "La TV y la radio abierta siguen vivas en el Caribe digital", detail: "76% usa el televisor para ver TV on-demand o streaming y 26% es heavy user de radio — el mix de medios no debería abandonar estos canales tradicionales por uno 100% digital." },
+          { label: "Gaming y streaming de eventos compiten por su atención", detail: "51% está interesada en gaming y 48% en streaming events — la oferta de contenido en vivo debe competir con, o integrarse a, plataformas de streaming y gaming, no solo con el evento presencial." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 47.3, female: 52.7 },
+        ageBands: [
+          { label: "16-24", pct: 26.1 },
+          { label: "25-34", pct: 33.2 },
+          { label: "35-44", pct: 28.3 },
+          { label: "45-54", pct: 12.4 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico, Colombia (audiencia regional, sin desagregación municipal adicional en GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en streaming events", pct: 48 },
+        { label: "Siempre busca nuevos eventos de música en vivo", pct: 33 },
+        { label: "Apoya artistas locales o va a conciertos pequeños", pct: 41 },
+        { label: "Descubre nuevos artistas o bandas antes de que sean populares", pct: 39 },
+      ],
+      barriers: [
+        { label: "Prefiere ahorrar y esperar antes de comprar un producto", pct: 78 },
+        { label: "Es consciente del precio (price-conscious)", pct: 31 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en gaming", pct: 51 },
+        { label: "Vio una transmisión en vivo (live stream) en la última semana", pct: 33 },
+        { label: "Vio una transmisión en vivo en mobile en la última semana", pct: 19 },
+      ],
+      media: [
+        { label: "Usa el televisor para ver TV on-demand o streaming", pct: 76 },
+        { label: "Interesada en televisión", pct: 62 },
+        { label: "Heavy user de radio", pct: 26 },
+        { label: "Usó YouTube para ver/descargar TV, películas o videos en el último mes", pct: 59 },
+        { label: "Usa redes sociales para encontrar contenido", pct: 40 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y radio", "Redes sociales, radio", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Radio y TV abierta", "Radio, TV", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / casa", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video y gaming", "YouTube, apps de gaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV on-demand / streaming", "TV set, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "TV y streaming en vivo", "TV set, live stream mobile", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 const CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018 = {
   id: "musica-latina-eventos-vivo-colombia",
   name: "Fans de música latina y eventos en vivo (Colombia)",
@@ -7399,6 +7487,190 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fintech + eventos en vivo (Colombia nacional), procesado
+// 2026-11-17.
+// ---------------------------------------------------------------------------
+const CASE_FINTECH_EVENTOS_VIVO_GWI_AUTO_20261117 = {
+  id: "fintech-eventos-vivo-colombia",
+  name: "Colombianos interesados en eventos en vivo con comportamiento fintech activo (Paramo>AudienciasFintechLiveEvent>Col)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-17)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>AudienciasFintechLiveEvent>Col' (audience_id 3993e2b6-ae7f-4239-baeb-d9e63ea89bb7): colombianos de 16 a 64 años interesados en eventos en vivo como festivales de música, con un perfil de comportamiento financiero digital ya consolidado (alto uso de billeteras digitales y medios de pago).",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (5,974,821) sobre la población digital de Colombia (31.06M)", pct: 19.2 },
+  ],
+  footnotes: [
+    "19.2% = universo real de la audiencia en GWI (5,974,821) sobre la población digital total de Colombia (31.06M) — verificado vía explore_insight_gwi sobre la pregunta de edad de esta audiencia.",
+    "Demografía (género, edad, departamento), motivaciones, barreras, intereses digitales, medios y uso de apps de pago son datos reales de GWI Core Colombia exclusivos de esta audiencia, verificados 1:1 vía chat_gwi + explore_insight_gwi.",
+    "El uso de Nequi (82.8%) tiene un índice extremadamente alto (>9,000) en la respuesta cruda de GWI porque la base de comparación 'promedio global' incluye países donde Nequi no existe — se reporta solo el porcentaje, no el índice, para evitar una lectura engañosa.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-eventos-fintech-colombia",
+      name: "Camila Andrea Gómez",
+      archetype: "La Pagadora Digital Social",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana de 16 a 64 años, ligeramente más mujer que hombre, concentrada en Bogotá D.C. (Capital District) aunque presente en todo el país. Combina un fuerte interés por eventos en vivo (257% más probable que el promedio) con un comportamiento financiero digital ya consolidado: 8 de cada 10 usó Nequi en el último mes. Prefiere ahorrar antes de comprar, pero le preocupa cómo las marcas usan sus datos personales.",
+      aiInsight: aiInsight(
+        "Cruza consumo cultural (eventos en vivo) con comportamiento financiero digital maduro: esta audiencia ya superó la adopción de pagos digitales (83% usa Nequi, 45% PayPal) pero sigue siendo conservadora con el gasto (83% prefiere ahorrar y esperar) y le preocupan sus datos personales (45%) — el reto de marca no es enseñarles a pagar digital, es generar la confianza suficiente para que gasten sin fricción en experiencias como boletos de eventos.",
+        [
+          { label: "La billetera digital ya es el canal por defecto", detail: "82.8% usó Nequi, 45.3% PayPal y 34.3% Mastercard en el último mes — cualquier compra de boletos o merchandising debe habilitar estos medios de pago sin fricción adicional." },
+          { label: "Ahorran para gastar en experiencias, no para evitarlas", detail: "83% prefiere ahorrar y esperar antes de comprar, pero son 257% más propensos a interesarse en eventos en vivo que el promedio — ofrecer apartados o cuotas sin interés para boletos puede convertir mejor que un descuento puntual." },
+          { label: "La confianza en el dato personal es la fricción real", detail: "45% dice preocuparse por cómo las empresas usan sus datos personales en línea — comunicar de forma transparente el uso de datos en el checkout de boletería puede reducir el abandono de compra." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48.5, female: 51.5 },
+        ageBands: [
+          { label: "16-24", pct: 21.3 },
+          { label: "25-34", pct: 28.8 },
+          { label: "35-44", pct: 23.4 },
+          { label: "45-54", pct: 16.4 },
+          { label: "55-64", pct: 10.0 },
+          { label: "65+", pct: 0.1 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C. (Capital District)", pct: 34.3 },
+          { city: "Antioquia", pct: 14.3 },
+          { city: "Valle del Cauca", pct: 10.5 },
+          { city: "Cundinamarca", pct: 7.8 },
+          { city: "Otros departamentos", pct: 33.1 },
+        ],
+      },
+      motivations: [
+        { label: "La alta calidad de producto la motiva a promover su marca favorita", pct: 63.1 },
+        { label: "Las recompensas la motivan a promover su marca favorita", pct: 54.2 },
+        { label: "Un buen servicio al cliente la motiva a promover su marca favorita", pct: 47.1 },
+        { label: "Tener conocimiento privilegiado de la marca/producto la motiva a promoverla", pct: 33.3 },
+      ],
+      barriers: [
+        { label: "Prefiere ahorrar y esperar antes de comprar un producto", pct: 83.0 },
+        { label: "Le preocupa cómo las empresas usan sus datos personales en línea", pct: 45.0 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en tecnología", pct: 72.5 },
+        { label: "Heavy user de redes sociales (posts, historias, publicidad)", pct: 57.2 },
+        { label: "Heavy user de videos cortos (reels/TikTok)", pct: 50.0 },
+      ],
+      media: [
+        { label: "Usó Nequi en el último mes", pct: 82.8 },
+        { label: "Usó PayPal en el último mes", pct: 45.3 },
+        { label: "Usó Mastercard en el último mes", pct: 34.3 },
+        { label: "Heavy user de streaming de música", pct: 57.5 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 38.4 },
+        { label: "Heavy user de radio", pct: 26.9 },
+        { label: "Vio video móvil en la última semana", pct: 75.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y notificaciones", "App de Nequi/billetera, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Apps de pago", "Nequi, Mastercard", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video móvil", "YouTube, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de música/video", "Spotify, Netflix", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "Radio y streaming", "Radio, servicios de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fintech + eventos en vivo (Bogotá y alrededores), procesado
+// 2026-11-17. Versión regional de la misma campaña ya analizada a nivel
+// nacional en 'fintech-eventos-vivo-colombia'.
+// ---------------------------------------------------------------------------
+const CASE_FINTECH_EVENTOS_VIVO_BOGOTA_GWI_AUTO_20261117 = {
+  id: "fintech-eventos-vivo-bogota-colombia",
+  name: "Bogotanos interesados en eventos en vivo con comportamiento fintech activo (Paramo>AudienciasFintechLiveEventBogAlrede>Col)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-17)",
+  insightNote:
+    "Audiencia real de GWI 'Paramo>AudienciasFintechLiveEventBogAlrede>Col' (audience_id a441e66c-dd98-405f-b935-5aed4648d6e2): colombianos interesados en eventos en vivo que viven en Bogotá y alrededores, con comportamiento financiero digital activo — versión regional de la misma campaña ya analizada a nivel nacional en el caso 'fintech-eventos-vivo-colombia'.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia en GWI (2,514,338) sobre la población digital de Colombia (31.06M)", pct: 8.1 },
+  ],
+  footnotes: [
+    "8.1% = universo real de la audiencia en GWI (1,358,064 mujeres + 1,156,274 hombres = 2,514,338) sobre la población digital total de Colombia (31.06M) — verificado vía explore_insight_gwi sobre la pregunta de género.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios son datos reales de GWI Core Colombia exclusivos de esta audiencia, verificados 1:1 vía chat_gwi + explore_insight_gwi.",
+    "El uso de Nequi (83.5%) tiene un índice muy alto en la respuesta cruda de GWI porque la base de comparación 'promedio global' incluye países donde Nequi no existe — se reporta solo el porcentaje, no el índice, para evitar una lectura engañosa.",
+    "GWI no devolvió desglose municipal dentro de Bogotá/alrededores para esta audiencia, solo el dato de zona urbana/suburbana/rural (92.6% urbana).",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-eventos-fintech-bogota",
+      name: "Juan David Rincón",
+      archetype: "El Explorador Urbano de Experiencias",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá y alrededores, casi en su totalidad en zona urbana (92.6%), y se identifica ligeramente más mujer (54%) que hombre (46%). Interesado en eventos en vivo (197% más probable que el promedio), cine, salir a comer y viajar. Ya usa billeteras digitales de forma masiva (Nequi 83.5%) y valora más la calidad e innovación de marca que el precio.",
+      aiInsight: aiInsight(
+        "Cruza un perfil urbano 'experiencial' (cine, restaurantes, viajes) con un comportamiento financiero digital maduro: 83.5% ya usa Nequi y 44.7% Billetera Móvil, mientras busca marcas innovadoras (65%) y confiables (76%) por encima del precio (solo 34% es price-conscious) — la oportunidad para fintech/eventos está en integrarse al momento de pago de estas experiencias urbanas, no en venderse como categoría aparte.",
+        [
+          { label: "El gasto en experiencias ya está digitalizado", detail: "83.5% usó Nequi, 44.7% Billetera Móvil y 44.1% PayPal en el último mes — cualquier integración de pago para cine, restaurantes o eventos en Bogotá debe apoyarse en estos medios ya instalados." },
+          { label: "Buscan innovación y confiabilidad, no solo precio", detail: "65% quiere marcas innovadoras y 76% marcas confiables, mientras que solo 34% es price-conscious — el mensaje de marca puede priorizar innovación y confianza por encima de descuentos." },
+          { label: "Es un público casi 100% urbano con alto interés en salir", detail: "92.6% vive en zona urbana y 79.2% está interesado en salir a comer — activaciones físicas (alianzas con restaurantes o cines) en Bogotá tienen alto potencial de encuentro con esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 46.0, female: 54.0 },
+        ageBands: [
+          { label: "16-24", pct: 18.5 },
+          { label: "25-34", pct: 29.4 },
+          { label: "35-44", pct: 24.5 },
+          { label: "45-54", pct: 17.8 },
+          { label: "55-64", pct: 9.8 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá D.C. y alrededores — audiencia regional, 92.6% en zona urbana según GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "La alta calidad de producto lo motiva a promover su marca favorita", pct: 62.7 },
+        { label: "Las recompensas lo motivan a promover su marca favorita", pct: 55.4 },
+        { label: "Un buen servicio al cliente lo motiva a promover su marca favorita", pct: 46.4 },
+        { label: "Tener conocimiento privilegiado de la marca/producto lo motiva a promoverla", pct: 33.9 },
+      ],
+      barriers: [
+        { label: "Es consciente del precio (price-conscious)", pct: 34.2 },
+        { label: "Solo 2.9% no ha usado ningún servicio de pago en línea en el último mes — adopción de pagos digitales casi total", pct: 2.9 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en tecnología", pct: 70.0 },
+        { label: "Heavy user de streaming de música", pct: 63.3 },
+        { label: "Heavy user de redes sociales (posts, historias, publicidad)", pct: 56.4 },
+        { label: "Heavy user de videos cortos (reels/TikTok)", pct: 49.9 },
+      ],
+      media: [
+        { label: "Usó Nequi en el último mes", pct: 83.5 },
+        { label: "Usó Billetera Móvil en el último mes", pct: 44.7 },
+        { label: "Usó PayPal en el último mes", pct: 44.1 },
+        { label: "Usó Mastercard en el último mes", pct: 35.9 },
+        { label: "Pagó por una suscripción de streaming de video/TV en el último mes", pct: 52.0 },
+        { label: "Heavy user de streaming de video (Netflix/Hulu)", pct: 39.9 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y redes", "App de Nequi/billetera, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes y streaming de música", "Spotify, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Restaurantes / oficina", "Apps de pago", "Nequi, Billetera Móvil", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y video corto", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Cine / casa", "Streaming de video", "Netflix, plataformas de cine", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / restaurantes", "Streaming y redes", "Netflix, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7685,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_GENEROS_ATLANTICO_GWI_AUTO_20261117, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
   },
   {
     id: "deportes",
@@ -7452,7 +7724,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_FINTECH_EVENTOS_VIVO_GWI_AUTO_20261117, CASE_FINTECH_EVENTOS_VIVO_BOGOTA_GWI_AUTO_20261117],
   },
   {
     id: "alcohol",

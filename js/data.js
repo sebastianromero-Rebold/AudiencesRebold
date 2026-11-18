@@ -7399,6 +7399,276 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO — AVENGED SEVENFOLD, FANS DE METAL EN CONCIERTO (Bogotá) — borrador GWI
+// ---------------------------------------------------------------------------
+const CASE_AVENGED_SEVENFOLD_BOGOTA_GWI_AUTO_20261118 = {
+  id: "avenged-sevenfold-metal-bogota-colombia",
+  name: "Avenged Sevenfold en concierto — fans de metal (Bogotá)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-18)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) AvengedSevenfold_Bogotanos', audience_id 471818ac-585e-4e09-b5e1-a69e80d0c248): colombianos en Bogotá D.C. que escuchan metal, están interesados en eventos en vivo y ya compraron o planean comprar boletos de concierto.",
+  funnelSteps: [
+    { label: "Interés en metal + eventos en vivo + compra de boletos, Bogotá D.C. (audiencia real de GWI)", pct: 1.1 },
+  ],
+  footnotes: [
+    "1.1% = universo estimado de GWI (≈337,517 personas) sobre la población digital de Colombia (31.06M, MARKETS). Calculado a partir de que el 93% de la audiencia tiene 21+ años = 313,891 personas (universo real verificado vía explore_insight_gwi sobre ese insight).",
+    "Muestra pequeña en GWI para el filtro completo de la audiencia (n=30) — por eso la mayoría de los atributos de este caso usan el nivel más amplio que GWI sí pudo indexar ('personas interesadas en eventos en vivo como festivales de música', 'asistentes a conciertos' o 'concertistas', todos en Colombia) en vez de la combinación exacta de filtros (Bogotá + metal + compra de boletos). Se indica expresamente en cada dato relevante.",
+    "Demografía, barreras, intereses digitales y medios verificados vía chat_gwi + explore_insight_gwi sobre insight_id reales.",
+    "Journey sin datos de franja horaria específicos de GWI para esta audiencia — se dejan bloques genéricos sin cifras de actividades inventadas, salvo en los 2 bloques donde aplica un dato real ya verificado.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-metal-avenged-sevenfold-bogota",
+      name: "Daniel Forero",
+      archetype: "El Metalhead Digital",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Bogotano que escucha metal, vive pendiente de la cartelera de conciertos y ya compró o planea comprar boletos en los próximos meses. No es solo oyente: comenta, comparte y sigue a las bandas en redes, y su radar de entretenimiento cruza también hacia los videojuegos.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia del 'fan-creador': esta audiencia no solo escucha metal, publica opiniones sobre música (20%, +37% más que el promedio) y sigue bandas activamente en redes — además tiene una afinidad inesperada con videojuegos (43%, +31%), lo que sugiere que su atención se reparte entre verticales de entretenimiento que rara vez comparten plan de medios.",
+        [
+          { label: "Son creadores de opinión, no solo oyentes", detail: "20% publicó opiniones sobre música online el último mes (+37% índice) y 39% usa redes para ver qué es tendencia (+40% índice) — una estrategia de UGC/reseñas puede rendir más que pauta puramente informativa." },
+          { label: "El gaming es una puerta de entrada inesperada", detail: "43% está interesado en videojuegos (+31% índice) — vale la pena probar activación en plataformas gaming/esports, no solo en canales puramente musicales." },
+          { label: "La decisión de compra reacciona a la disponibilidad, no se planea con mucha anticipación", detail: "24% señala la disponibilidad de boletos y buenos asientos como factor que pesa en su decisión (+33% índice) — campañas de 'últimas entradas' probablemente conviertan mejor que awareness temprano." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 46, female: 54 },
+        ageBands: [
+          { label: "Gen Z (~16-29 años)", pct: 36 },
+          { label: "Millennials (~30-45 años)", pct: 35 },
+          { label: "Gen X (~46-61 años)", pct: 27 },
+        ],
+        topCities: [{ city: "Bogotá D.C. (Distrito Capital)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prefiere gastar en experiencias antes que en cosas materiales", pct: 68 },
+        { label: "Interesado en la música", pct: 81 },
+        { label: "Sigue a bandas, cantantes u otros músicos en redes sociales", pct: 48 },
+        { label: "Cree que la música puede ser un agente poderoso de cambio social", pct: 60 },
+        { label: "Disfruta buscar nuevos artistas, bandas o canciones", pct: 38 },
+      ],
+      barriers: [
+        { label: "Disponibilidad de boletos / conseguir buenos asientos u horarios de entrada", pct: 24 },
+      ],
+      digitalInterests: [
+        { label: "Pagó una suscripción de streaming musical el último mes", index: 148 },
+        { label: "Publicó opiniones sobre música online", index: 137 },
+        { label: "Usa redes sociales para ver qué es tendencia", index: 140 },
+        { label: "Interesado en videojuegos", index: 131 },
+      ],
+      media: [
+        { label: "Usa redes sociales para encontrar contenido", pct: 42 },
+        { label: "Interesado en televisión", pct: 57 },
+        { label: "Usuario intensivo de streaming musical", pct: 31 },
+        { label: "Usó Spotify el último mes", pct: 48 },
+        { label: "Usuario intensivo de radio", pct: 19 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y música en streaming", "Instagram, Spotify", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / universidad", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Streaming de música", "Spotify", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming de video", "Netflix, YouTube", "57% de los concertistas está interesado en la televisión (+33% índice) — ventana natural para pauta en TV/streaming.", [
+          { label: "Interesado en televisión", pct: 57, index: 133 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de música y redes", "Spotify, Instagram", "31% es usuario intensivo de streaming musical (+47% índice) y 39% usa redes para ver tendencias (+40% índice) — bloque de mayor afinidad digital.", [
+          { label: "Usuario intensivo de streaming musical", pct: 31, index: 147 },
+          { label: "Usa redes sociales para ver qué es tendencia", pct: 39, index: 140 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — CARLOS VIVES, PADRES QUE ASISTEN CON SUS HIJOS (Bogotá/Cundinamarca) — borrador GWI
+// ---------------------------------------------------------------------------
+const CASE_CARLOSVIVES_BOGHIJOS_GWI_AUTO_20261118 = {
+  id: "carlos-vives-familias-bogota-colombia",
+  name: "Conciertos en familia — padres con hijos (Bogotá/Cundinamarca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-18)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) CarlosVives_BogHijos', audience_id 29736513-9ca7-4adc-92ff-262c11415ea8): colombianos en Bogotá D.C. o Cundinamarca con hijos de 6 a 18 años, con gusto musical amplio (incluye Vallenato/Latina y rock) e interés en eventos en vivo. Segmento familiar distinto de la audiencia ya procesada 'fan-carlos-vives-bogota' (sin hijos en el hogar).",
+  funnelSteps: [
+    { label: "Interés musical amplio + eventos en vivo + compra de boletos + hijos de 6 a 18 años, Bogotá D.C./Cundinamarca (audiencia real de GWI)", pct: 4.3 },
+  ],
+  footnotes: [
+    "4.3% = universo real de GWI (≈1,333,438 personas, suma de la pregunta de generación: 754,286 millennials + 473,770 Gen X + 100,216 Gen Z + 5,166 baby boomers, verificado vía explore_insight_gwi) sobre la población digital de Colombia (31.06M, MARKETS).",
+    "Motivaciones, barreras, intereses digitales y medios: GWI no devolvió datos indexados para la combinación exacta de filtros de esta audiencia (bajo tamaño de muestra al cruzar música + eventos + ubicación + hijos 6-18) — se usa como proxy el nivel 'padres' de Colombia en general (indexado contra el promedio de usuarios de internet), indicado en cada dato. La demografía (género y generación) sí es de la audiencia exacta.",
+    "Journey sin datos de franja horaria específicos de GWI para esta audiencia — se dejan bloques genéricos sin cifras de actividades inventadas, salvo en los 2 bloques donde aplica un dato real ya verificado (nivel 'padres').",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "padre-musical-familiar-bogota",
+      name: "Paola Niño",
+      archetype: "La Planificadora Cultural en Familia",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá o Cundinamarca y tiene hijos entre 6 y 18 años. Le gusta la música —vallenato, latina y rock— y ve los conciertos como una posibilidad más dentro de los planes familiares, aunque no es su primera opción por defecto: compite con la playa, los parques temáticos y el streaming en casa.",
+      aiInsight: aiInsight(
+        "Cruza con la lógica del 'padre pragmático del entretenimiento familiar': valoran mucho el tiempo en familia (79%, +8.7% índice) pero tienen una propensión más baja que el padre promedio a comprar boletos de concierto (15%, -5.1% índice) — el concierto no es su plan por defecto, compite con la playa/resort (67%) y los parques temáticos (29%); cuando sí asisten, sobre-indexan en apoyar artistas locales (26%, +8% índice), lo que sugiere que el ángulo ganador es 'experiencia familiar local', no 'evento musical' a secas.",
+        [
+          { label: "El concierto compite con el plan familiar ya instalado", detail: "67% prefiere vacaciones de playa/resort (+7.4% índice) y 29% parques temáticos (+1.6% índice) — para ganarles terreno, el concierto debe venderse como alternativa a esos planes, no como categoría aparte." },
+          { label: "El streaming infantil ya es el hábito por defecto", detail: "Entre suscriptores de Disney+, 34% lo ve a diario (+9.4% índice) y 29%/23% prefieren películas/series familiares — una colaboración o cross-promoción con contenido infantil en streaming puede ser más eficiente que pauta genérica de conciertos." },
+          { label: "Facebook sigue siendo el canal ancla de este segmento", detail: "43% usa Facebook más de una vez al día (+12% índice), por encima de la proporción que usa TikTok a diario (19%) — un plan de medios centrado solo en plataformas más jóvenes dejaría fuera a buena parte de este segmento." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45, female: 55 },
+        ageBands: [
+          { label: "Millennials (~30-45 años)", pct: 56.6 },
+          { label: "Gen X (~46-61 años)", pct: 35.5 },
+          { label: "Gen Z (~16-29 años)", pct: 7.5 },
+          { label: "Baby Boomers (62+ años)", pct: 0.4 },
+        ],
+        topCities: [{ city: "Bogotá D.C. / Cundinamarca — sin desagregación por ciudad disponible en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Pasar tiempo con la familia es importante", pct: 79 },
+        { label: "Interesado en la música", pct: 65 },
+        { label: "Disfruta apoyar artistas locales o ir a conciertos locales", pct: 26 },
+        { label: "Siempre atento a nuevos eventos de música en vivo", pct: 17 },
+        { label: "Interesado en otras culturas o países", pct: 50 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto en los últimos 3-6 meses (menos que el padre promedio)", pct: 15 },
+        { label: "Compró boletos de concierto por internet en los últimos 3-6 meses", pct: 4.1 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses", pct: 12 },
+      ],
+      digitalInterests: [
+        { label: "Prioriza instalaciones para niños/familias al elegir destino de vacaciones", index: 142 },
+        { label: "Prefiere podcasts de crianza y familia", index: 131 },
+        { label: "Prefiere series familiares/infantiles", index: 114 },
+        { label: "Prefiere películas familiares/infantiles", index: 112 },
+      ],
+      media: [
+        { label: "Usa Facebook más de una vez al día", pct: 43 },
+        { label: "Usó Netflix el último mes", pct: 65 },
+        { label: "Usó Spotify el último mes", pct: 48 },
+        { label: "Usa TikTok a diario", pct: 19 },
+        { label: "Usó Amazon Prime Video el último mes", pct: 24 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / llevando hijos al colegio", "WhatsApp y redes", "Facebook, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes sociales", "Facebook, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Transporte / recogiendo hijos", "Redes sociales", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming en familia", "Netflix, Disney+", "65% usó Netflix el último mes (+3.1% índice) y, entre suscriptores de Disney+, 34% lo ve a diario (+9.4% índice) — bloque de consumo en pantalla compartida con los hijos.", [
+          { label: "Usó Netflix el último mes", pct: 65, index: 103 },
+          { label: "Ve Disney+ a diario (entre suscriptores)", pct: 34, index: 109 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes sociales", "Facebook, Spotify", "43% usa Facebook más de una vez al día (+12% índice) — canal ancla de este segmento en la noche.", [
+          { label: "Usa Facebook más de una vez al día", pct: 43, index: 112 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO — PÚBLICO DE ROCK EN VIVO EN BOGOTÁ Y CUNDINAMARCA — borrador GWI
+// ---------------------------------------------------------------------------
+const CASE_LFC_ROCK_BOGOTA_GWI_AUTO_20261118 = {
+  id: "rock-en-vivo-bogota-cundinamarca-colombia",
+  name: "Público de rock en vivo (Bogotá y Cundinamarca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-18)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) LFC_ROCK', audience_id 43ad27ae-81c9-41bc-8702-e7ac500d8461): colombianos en Bogotá D.C. o Cundinamarca interesados en eventos en vivo, con hábito de compra de boletos de concierto, que escuchan rock (y no Reggae/Ska).",
+  funnelSteps: [
+    { label: "Interés en rock + eventos en vivo + compra de boletos, Bogotá D.C./Cundinamarca (audiencia real de GWI)", pct: 5.4 },
+  ],
+  footnotes: [
+    "5.4% = universo real de GWI (1,692,616 personas, suma de la pregunta de género: 850,926 mujeres + 841,690 hombres, verificado vía explore_insight_gwi) sobre la población digital de Colombia (31.06M, MARKETS).",
+    "Motivaciones e intereses digitales: para varios atributos, GWI devolvió el dato indexado al nivel más amplio 'personas siempre atentas a nuevos eventos de música en vivo' en Colombia (la combinación exacta de filtros de esta audiencia no tuvo suficiente muestra para ese cruce) — se indica en cada dato donde aplica.",
+    "Demografía (género y edad) y medios sí corresponden a la audiencia exacta, verificados vía chat_gwi + explore_insight_gwi.",
+    "Journey sin datos de franja horaria específicos de GWI para esta audiencia — se dejan bloques genéricos sin cifras de actividades inventadas, salvo en los 2 bloques donde aplica un dato real ya verificado.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "publico-rock-bogota-cundinamarca",
+      name: "Camilo Rojas",
+      archetype: "El Melómano Prosumidor",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá o Cundinamarca, escucha rock y está siempre pendiente de la próxima tanda de boletos. No es un fan pasivo: una parte importante de esta audiencia hace música o contenido de audio por su cuenta, y valora la calidad del sonido en vivo tanto como el lineup.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia del 'prosumidor musical': 35% de quienes siempre están atentos a nuevos eventos de música en vivo son músicos o creadores de audio ellos mismos (+202% índice) y 69% prioriza la mejor calidad de audio posible — esta audiencia no solo consume rock en vivo, lo produce o lo evalúa con criterio técnico, así que el mensaje de 'experiencia en vivo superior' (sonido, producción) puede pesar más que el lineup en sí.",
+        [
+          { label: "Una base sorprendente de músicos y creadores", detail: "35% de quienes siempre buscan nuevos eventos de música en vivo son músicos o creadores de contenido de audio (+202% índice) — colaboraciones con músicos/creadores locales o espacios de UGC (covers, clips) pueden rendir más que pauta genérica." },
+          { label: "La segunda pantalla es el hábito, no la excepción", detail: "60% usa redes sociales mientras ve televisión — contenido sincronizado (hashtags en vivo, clips cortos) durante transmisiones puede capturar esa atención dividida mejor que un spot aislado." },
+          { label: "Buscan calidad de audio antes que viralidad", detail: "69% prefiere escuchar música con la mejor calidad de audio posible frente a 44% que prioriza artistas menos conocidos — el ángulo de 'sonido/producción en vivo' puede convertir mejor que apostarle solo al descubrimiento de nuevos artistas." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49.7, female: 50.3 },
+        ageBands: [
+          { label: "16-24", pct: 23 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 15 },
+          { label: "55-64", pct: 8.9 },
+          { label: "65+", pct: 0.1 },
+        ],
+        topCities: [{ city: "Bogotá D.C. / Cundinamarca — sin desagregación por ciudad disponible en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Prefiere escuchar música con la mayor calidad de audio posible", pct: 69 },
+        { label: "Disfruta buscar nuevos artistas, bandas o canciones", pct: 61 },
+        { label: "Disfruta apoyar artistas locales o ir a conciertos locales", pct: 58 },
+        { label: "Prioriza escuchar cuanto antes la música que le interesa", pct: 56 },
+        { label: "Escucha principalmente artistas o bandas menos conocidos", pct: 44 },
+      ],
+      barriers: [
+        { label: "Disponibilidad de boletos / conseguir buenos asientos u horarios de entrada", pct: 22 },
+      ],
+      digitalInterests: [
+        { label: "Es músico o creador de contenido de audio", index: 302 },
+        { label: "Prefiere escuchar música recién lanzada", index: 250 },
+        { label: "Descubre artistas o bandas antes de que se vuelvan populares", index: 223 },
+        { label: "Prioriza escuchar cuanto antes la música de su interés", index: 217 },
+      ],
+      media: [
+        { label: "Vio TV en directo o un canal de TV el último mes", pct: 91 },
+        { label: "Usa redes sociales mientras ve TV (segunda pantalla)", pct: 60 },
+        { label: "Ve películas siempre por streaming", pct: 42 },
+        { label: "Escucha podcasts en Spotify", pct: 39 },
+        { label: "Usa laptop o computador de escritorio para ver TV en directo", pct: 36 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Radio y podcasts", "Spotify", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / universidad", "Redes sociales", "Instagram, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Podcasts", "Spotify", "39% escucha podcasts en Spotify (+62% índice) — momento habitual de escucha.", [
+          { label: "Escucha podcasts en Spotify", pct: 39, index: 162 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV en vivo", "TV abierta, streaming", "91% vio TV en directo o un canal de TV el último mes (+5% índice) — bloque de mayor consumo de TV.", [
+          { label: "Vio TV en directo o un canal de TV el último mes", pct: 91, index: 105 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "Segunda pantalla y redes", "TV + Instagram/X", "60% usa redes sociales mientras ve TV (segunda pantalla) — bloque de atención dividida entre pantallas.", [
+          { label: "Usa redes sociales mientras ve TV (segunda pantalla)", pct: 60, index: 103 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7683,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_AVENGED_SEVENFOLD_BOGOTA_GWI_AUTO_20261118, CASE_CARLOSVIVES_BOGHIJOS_GWI_AUTO_20261118, CASE_LFC_ROCK_BOGOTA_GWI_AUTO_20261118],
   },
   {
     id: "deportes",

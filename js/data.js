@@ -7399,6 +7399,260 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — procesados 2026-11-19 por la rutina diaria de GWI.
+// ---------------------------------------------------------------------------
+const CASE_CUNDINAMARCAFEST_CONCIERTOS_GWI_AUTO_20261119 = {
+  id: "cundinamarcafest-fans-conciertos-colombia",
+  name: "CundinamarcaFest — Fans con intención de asistir a conciertos (Bogotá D.C./Cundinamarca)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-19)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) CundinamarcaFest_Conciertos', audience_id 92f450c6-17f8-4730-87c0-5aa3f57b1b66): viven en Bogotá D.C. o Cundinamarca, interesados en eventos en vivo como festivales de música, y además interesados en streaming de eventos o en apoyar artistas/conciertos locales -- un recorte más específico que el caso ya existente 'cundinamarcafest-conciertos-colombia' (misma campaña Páramo, pero audience_id distinto, sin el criterio adicional de streaming/apoyo a artistas locales).",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo + streaming de eventos/apoyo a artistas locales, residentes en Bogotá D.C. o Cundinamarca", pct: 6.8 },
+  ],
+  footnotes: [
+    "6.8% real de GWI Core Colombia (Q4 2025–Q3 2026): universo de esta audiencia ≈2,122,806 personas (suma de 80.4% en Bogotá D.C. + 19.6% en Cundinamarca, ambas cifras reales de GWI vía explore_insight_gwi) sobre los 31.06M de población digital de Colombia usados en este aplicativo.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Las 'motivaciones' que mide GWI para esta pregunta son motivadores de recomendación de marca (no específicos de compra de boletos) y las 'barreras' son preferencias de pago/checkout -- se usan como proxy de las palancas de conversión disponibles para esta audiencia, ya que GWI no tiene una pregunta propia de 'fricciones de compra de boletos de concierto' para este corte.",
+    "Borrador generado automáticamente -- pendiente de revisión editorial, especialmente la cita y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "fan-conciertos-cundinamarcafest-co",
+      name: "Valentina Cárdenas",
+      archetype: "La Fan que Convierte Interés en Boleto",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá D.C. o en municipios de Cundinamarca, está pendiente de la agenda de festivales y conciertos, y además sigue streams de eventos en vivo y apoya activamente a artistas y escenarios locales. Es un público ligeramente más femenino que el promedio colombiano, urbano en 91% de los casos, y distribuido de forma pareja entre los 16 y los 54 años.",
+      aiInsight: aiInsight(
+        "Esta audiencia ya paga por contenido premium (streaming de música y video) y prioriza la fricción de compra (checkout rápido, pago sin efectivo) por encima de casi cualquier otro factor -- la oportunidad de medios no es generar más interés en el festival, sino eliminar pasos entre el anuncio y el checkout.",
+        [
+          { label: "El checkout rápido y el pago sin efectivo son el verdadero gatillo de conversión", detail: "45.1% prioriza un checkout rápido y fácil (17% más que el promedio de Colombia) y 54% prefiere pagar sin efectivo (13% más) -- más que casi cualquier otro segmento, esta audiencia necesita que comprar el boleto tome el menor número de pasos posible." },
+          { label: "Ya pagan por streaming -- la fricción de 'pagar por una experiencia' ya está vencida", detail: "38% paga una suscripción de streaming de música (51% más probable que el promedio) y 58% paga streaming de video (24% más) -- ya tienen el hábito de pagar por contenido/experiencias premium, lo que baja la barrera psicológica de pagar por un boleto." },
+          { label: "Instagram y TikTok dominan, pero la calidad del producto pesa más que la viralidad", detail: "74% usa Instagram para compartir fotos/videos y 87% usa TikTok para contenido de entretenimiento -- pero el motivador #1 para recomendar una marca sigue siendo la calidad del producto (63%), no el alcance; el contenido de la campaña debe ser bueno, no solo masivo." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 49.2, female: 50.8 },
+        ageBands: [
+          { label: "16-24", pct: 22.0 },
+          { label: "25-34", pct: 25.0 },
+          { label: "35-44", pct: 24.7 },
+          { label: "45-54", pct: 18.7 },
+          { label: "55-64", pct: 9.6 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Bogotá D.C.", pct: 80.4 },
+          { city: "Cundinamarca", pct: 19.6 },
+        ],
+      },
+      motivations: [
+        { label: "Motivados a recomendar una marca por productos de alta calidad (proxy de motivación, GWI Core Colombia)", pct: 62.8 },
+        { label: "Motivados por recompensas/beneficios (rewards)", pct: 50.3 },
+        { label: "Motivados por haber recibido buen servicio al cliente", pct: 42.7 },
+        { label: "Motivados por tener información exclusiva/insider sobre la marca", pct: 36.0 },
+      ],
+      barriers: [
+        { label: "Prioriza un checkout rápido y fácil al comprar online (proxy de fricción de compra, GWI Core Colombia)", pct: 45.1 },
+        { label: "Es sensible al precio / price-conscious", pct: 32.0 },
+        { label: "Prefiere pagar sin efectivo", pct: 54.0 },
+        { label: "Usó un servicio de pago móvil en el último mes (entre dueños de smartphone)", pct: 24.0 },
+      ],
+      digitalInterests: [
+        { label: "Pagó suscripción de streaming de video/TV en el último mes", pct: 57.7 },
+        { label: "Pagó suscripción de streaming de música en el último mes", pct: 37.8 },
+        { label: "Interesado en tecnología", pct: 75.0 },
+        { label: "Pagó por una app móvil en el último mes", pct: 16.5 },
+      ],
+      media: [
+        { label: "TikTok para contenido divertido/de entretenimiento", pct: 87.0 },
+        { label: "Instagram para compartir fotos/videos", pct: 73.7 },
+        { label: "Facebook/Messenger para compartir fotos/videos", pct: 60.7 },
+        { label: "X (Twitter) para mantenerse al día con noticias", pct: 63.0 },
+        { label: "Heavy users de servicios de streaming tipo Netflix/Hulu", pct: 41.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Streaming y búsqueda", "Streaming de música, Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y mensajería", "Instagram, Facebook Messenger", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TikTok y video online", "TikTok, streaming de video", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes y streaming", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Streaming de video, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_CORFERIAS_CONQUILLA_AVENTUREROS_GWI_AUTO_20261119 = {
+  id: "corferias-conquilla-aventureros-atlantico-colombia",
+  name: "Corferias Conquilla — Jóvenes aventureros de eventos en vivo (Atlántico, Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-19)",
+  insightNote:
+    "Audiencia real de GWI ('Corferias>Conquilla>Aventureros', audience_id 79e794cd-0073-4de5-a21e-2efb38878029): jóvenes de 18 a 24 años residentes en Atlántico, interesados en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Jóvenes de 18-24 años residentes en Atlántico, interesados en eventos en vivo/festivales", pct: 0.6 },
+  ],
+  footnotes: [
+    "0.6% real de GWI Core Colombia (Q4 2025–Q3 2026): universo de esta audiencia ≈193,899 personas sobre los 31.06M de población digital de Colombia usados en este aplicativo (dato real vía explore_insight_gwi, pregunta de distrito, índice 1,223.9 vs. el promedio nacional).",
+    "Muestra relativamente pequeña dentro de GWI (50-82 encuestados según la pregunta) por ser un corte geográfico y etario muy específico -- las cifras son reales pero deben leerse con la cautela propia de un n bajo.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Borrador generado automáticamente -- pendiente de revisión editorial, especialmente la cita y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "aventurero-festivales-atlantico-co",
+      name: "Camila Charris",
+      archetype: "La Aventurera Digital del Caribe",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Tiene entre 18 y 24 años, vive en el departamento del Atlántico y está siempre pendiente de festivales y eventos en vivo. Es un público marcadamente más femenino que el promedio colombiano (61.4% mujeres), con un consumo digital muy orientado a gaming, streaming y TikTok como canal de descubrimiento de producto.",
+      aiInsight: aiInsight(
+        "El cruce más llamativo de esta audiencia no es la música en vivo en sí, sino que su interés en gaming y su uso de TikTok como buscador de producto son más altos que el promedio nacional -- sugiere que una campaña de festival en Atlántico puede converger mejor con códigos de gaming/TikTok Shop que con el lenguaje tradicional de cartelera.",
+        [
+          { label: "El gaming no es un dato suelto: define buena parte del consumo digital", detail: "66% declara interés en gaming (58% más probable que el promedio) y 53% usa internet para jugar (56% más) -- una activación con elementos gamificados o streamers locales puede rendir más que un anuncio tradicional de festival." },
+          { label: "TikTok ya es un canal de descubrimiento de producto, no solo de entretenimiento", detail: "Entre quienes usan TikTok, 79% lo usa para buscar información de productos/marcas (38% más que el promedio) -- el funnel de descubrimiento a compra de boletos puede vivir casi completo dentro de TikTok." },
+          { label: "La palanca de conversión es el descuento inmediato, no el financiamiento", detail: "52% prefiere comprar online cuando hay cupones/descuentos disponibles (36% más que el promedio) -- antes de ofrecer planes de pago diferido, vale más probar un código de descuento por tiempo limitado." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 38.6, female: 61.4 },
+        ageBands: [
+          { label: "16-24", pct: 100 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico", pct: 100 }],
+      },
+      motivations: [
+        { label: "Motivados a recomendar una marca por productos de alta calidad", pct: 53.4 },
+        { label: "Motivados porque aman la marca", pct: 42.2 },
+        { label: "Motivados por haber recibido buen servicio al cliente", pct: 43.5 },
+        { label: "Motivados por recompensas/beneficios (rewards)", pct: 44.2 },
+      ],
+      barriers: [
+        { label: "Prefiere pagar sin efectivo", pct: 55.0 },
+        { label: "Prefiere pagar en efectivo", pct: 45.0 },
+      ],
+      digitalInterests: [
+        { label: "Interesados en gaming", pct: 66.0 },
+        { label: "Usa internet para jugar videojuegos", pct: 53.0 },
+        { label: "Prefiere comprar online cuando hay cupones/descuentos disponibles", pct: 52.0 },
+        { label: "Pagó suscripción de streaming de música en el último mes", pct: 35.0 },
+        { label: "Publicó sobre moda/ropa online en el último mes", pct: 26.0 },
+      ],
+      media: [
+        { label: "TikTok para contenido divertido/de entretenimiento (entre usuarios de TikTok)", pct: 92.0 },
+        { label: "TikTok para buscar información de productos/marcas (entre usuarios de TikTok)", pct: 79.0 },
+        { label: "Instagram para compartir fotos/videos (entre usuarios de Instagram)", pct: 77.0 },
+        { label: "Instagram para mensajear amigos/familia (entre usuarios de Instagram)", pct: 71.0 },
+        { label: "X para mantenerse al día con noticias (entre usuarios de X)", pct: 64.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Redes y gaming", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad / trabajo", "TikTok", "TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Universidad / restaurantes", "Redes y mensajería", "Instagram, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa / transporte", "Gaming y streaming", "Videojuegos online, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Gaming y redes", "Videojuegos online, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_REGGAETON_VALLE_DEL_CAUCA_GWI_AUTO_20261119 = {
+  id: "reggaeton-valle-del-cauca-colombia",
+  name: "Reggaetón/Música latina — Fans de eventos en vivo en Valle del Cauca (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-19)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) ReggaetonValle', audience_id 8ed8b71e-84b7-4718-ba25-f7c95635939f): residentes de Valle del Cauca interesados en eventos en vivo como festivales de música y que disfrutan de música latina -- recorte regional del mismo tipo de criterio que el caso ya existente 'reggaeton-musica-latina-colombia' (ReggaetonGeneral, sin restricción geográfica).",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo + música latina, residentes en Valle del Cauca", pct: 2.3 },
+  ],
+  footnotes: [
+    "2.3% real de GWI Core Colombia (Q4 2025–Q3 2026): universo de esta audiencia ≈721,934 personas sobre los 31.06M de población digital de Colombia usados en este aplicativo (dato real vía explore_insight_gwi, pregunta de distrito, índice 979 vs. el promedio nacional).",
+    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
+    "Las 'motivaciones' y 'barreras' que mide GWI para esta pregunta son motivadores de recomendación de marca y preferencias de pago/checkout -- se usan como proxy de las palancas de conversión, ya que GWI no tiene una pregunta propia de 'fricciones de compra de boletos' para este corte.",
+    "Borrador generado automáticamente -- pendiente de revisión editorial, especialmente la cita y el customer journey.",
+  ],
+  personas: [
+    {
+      id: "fan-reggaeton-valle-del-cauca-co",
+      name: "Mariana Collazos",
+      archetype: "La Rumbera Digital del Pacífico",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en el Valle del Cauca (eje Cali), disfruta de la música latina y está pendiente de la agenda de conciertos y festivales. Es un público mayoritariamente femenino (59.6%), concentrado en edades de 25 a 44 años, con alto consumo de streaming de video y una motivación por recompensas/fidelidad más alta que el promedio nacional.",
+      aiInsight: aiInsight(
+        "A diferencia del público de conciertos en Bogotá/Cundinamarca ya analizado, esta audiencia del Valle del Cauca responde más a recompensas y fidelidad que a la calidad del producto en sí -- el programa de preventa con beneficios tangibles debería rendir mejor aquí que el mensaje genérico de 'alta calidad'.",
+        [
+          { label: "Las recompensas pesan más aquí que en el público de Cundinamarca ya analizado", detail: "59.3% cita 'recompensas' como motivador para recomendar una marca (38% más que el promedio nacional, frente a 50.3%/17% más en el caso de Bogotá/Cundinamarca) -- un programa de fidelidad o preventa con beneficios tangibles debería convertir mejor que el descuento genérico." },
+          { label: "Consumo pesado de streaming de video: el patrocinio de contenido tiene alcance real", detail: "58% pagó una suscripción de streaming de video en el último mes (25% más) y 40% es heavy user de servicios tipo Netflix/Hulu (35% más) -- el patrocinio de contenido original puede llegar a esta audiencia mejor que la TV abierta." },
+          { label: "El gaming también está presente, aunque menos marcado que en la audiencia de Atlántico", detail: "50% se declara interesado en gaming (18% más que el promedio) -- una señal secundaria de que el cruce 'música en vivo + gaming' no es exclusivo de una sola región del país." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 40.4, female: 59.6 },
+        ageBands: [
+          { label: "16-24", pct: 19.0 },
+          { label: "25-34", pct: 30.0 },
+          { label: "35-44", pct: 24.0 },
+          { label: "45-54", pct: 18.0 },
+          { label: "55-64", pct: 9.2 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca", pct: 100 }],
+      },
+      motivations: [
+        { label: "Motivados a recomendar una marca por productos de alta calidad", pct: 62.0 },
+        { label: "Motivados por recompensas/beneficios (rewards)", pct: 59.3 },
+        { label: "Motivados por haber recibido buen servicio al cliente", pct: 52.8 },
+        { label: "Motivados por una relación personal/uno a uno con la marca", pct: 38.9 },
+      ],
+      barriers: [
+        { label: "Prioriza un checkout rápido y fácil al comprar online", pct: 48.0 },
+        { label: "Es sensible al precio / price-conscious", pct: 36.0 },
+        { label: "Prefiere pagar sin efectivo", pct: 49.0 },
+        { label: "Prioriza diferir pagos sin interés", pct: 15.0 },
+      ],
+      digitalInterests: [
+        { label: "Pagó suscripción de streaming de video/TV en el último mes", pct: 58.0 },
+        { label: "Interesados en gaming", pct: 50.0 },
+        { label: "Publicó sobre comida/restaurantes online en el último mes", pct: 20.0 },
+        { label: "Publicó sobre viajes/vacaciones online en el último mes", pct: 16.0 },
+      ],
+      media: [
+        { label: "TikTok para contenido divertido (entre usuarios de TikTok)", pct: 90.0 },
+        { label: "Heavy users de servicios de streaming tipo Netflix/Hulu", pct: 40.0 },
+        { label: "Facebook/Messenger para mensajear amigos/familia (entre usuarios)", pct: 71.0 },
+        { label: "Instagram para mantenerse al día con noticias (entre usuarios de Instagram)", pct: 56.0 },
+        { label: "Uso de redes sociales para ver tendencias/lo que se comenta", pct: 39.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Streaming de video y búsqueda", "Streaming de video, Google", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes y mensajería", "Facebook Messenger, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TikTok y gaming", "TikTok, videojuegos online", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "Streaming de video, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming", "Streaming tipo Netflix/Hulu", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7667,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CUNDINAMARCAFEST_CONCIERTOS_GWI_AUTO_20261119, CASE_CORFERIAS_CONQUILLA_AVENTUREROS_GWI_AUTO_20261119, CASE_REGGAETON_VALLE_DEL_CAUCA_GWI_AUTO_20261119],
   },
   {
     id: "deportes",

@@ -7398,6 +7398,236 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_TCL_INSTITUCIONAL_GWI_AUTO_20261120 = {
+  id: "tcl-institucional-mexico",
+  name: "Entusiastas de tecnología — TCL Institucional (México)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-20)",
+  insightNote:
+    "Audiencia real de GWI ('TCL>TCL>Institucional', audience_id a834cce1-3aca-433e-bd99-25968111c5d6): mexicanos de 16 a 54 años interesados en tecnología/gadgets, confiados usando nueva tecnología, que compran lo último apenas sale, siguen tendencias tech o investigan en línea antes de comprar.",
+  funnelSteps: [
+    { label: "Interés en tecnología/gadgets + comportamiento de adopción temprana (México)", pct: 48.0 },
+  ],
+  footnotes: [
+    "48.0% = universo real de GWI (~37.49M, suma de 21,797,782 hombres + 15,693,296 mujeres) sobre la población digital de México (78.05M, MARKETS) — verificado vía explore_insight_gwi.",
+    "Demografía (género, edad, top estados) y medios (redes sociales) verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "Motivaciones, barreras e intereses digitales: GWI devolvió datos reales de comportamiento tecnológico para esta audiencia (confianza en empresas tech, disposición a pagar por lo último, importancia del precio/confiabilidad del proveedor en decisiones de hardware/software) — algunas cifras provienen de subgrupos específicos dentro de la audiencia (p. ej. quienes participan en decisiones de compra de hardware/software), indicado en cada etiqueta.",
+    "GWI no devolvió desglose de franja horaria (time-of-day) específico para esta audiencia, salvo un dato puntual de consumo de TV internacional en la tarde — el customer journey queda con lugar/medios genéricos inferidos del perfil para los demás bloques, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "usuario-tcl-mexico",
+      name: "Mateo Alvarado",
+      archetype: "El Early Adopter Confiado",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Mexicano de 16 a 54 años con interés activo en tecnología y gadgets. Confía en su capacidad de usar nuevas herramientas, compra lo último apenas sale al mercado y sigue de cerca tendencias y noticias tech — un perfil early adopter que prioriza marca y estar a la vanguardia por encima del precio, aunque sin dejar de investigar antes de comprar.",
+      aiInsight: aiInsight(
+        "Cruza con la paradoja del 'early adopter cauteloso': 26% paga de más por lo último en tecnología y hasta 19% confía completamente en que las empresas tech protegen sus datos, pero el precio (59%) y la confiabilidad del proveedor (68%) siguen pesando fuerte en la decisión — no es un comprador impulsivo, es alguien que investiga y compara antes de comprometerse con una marca.",
+        [
+          { label: "TikTok y YouTube, no Instagram, dominan el descubrimiento tech", detail: "TikTok (61% de uso, 251% más probable que el promedio) y YouTube (80%, 125% más) superan ampliamente a Instagram (49%, apenas 102%) como canal de contenido tecnológico — una estrategia de medios centrada solo en Instagram desperdicia alcance en este segmento." },
+          { label: "La confianza en el proveedor pesa más que el precio", detail: "68% de quienes deciden compras de hardware/software da gran importancia a la confiabilidad del proveedor, por encima del 59% que prioriza el precio — comunicar garantías, soporte y reputación de marca puede rendir más que una promoción agresiva." },
+          { label: "No cambian de equipo por fallas, cambian por FOMO tecnológico", detail: "Solo 22% de quienes planean reemplazar su smartphone lo hace por fallas técnicas u obsolescencia de software (30% menos que el promedio de quienes van a reemplazar) — el gancho de venta no es 'tu equipo ya no sirve', es 'esto es lo último que no puedes dejar pasar'." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 58.1, female: 41.9 },
+        ageBands: [
+          { label: "16-24", pct: 27 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 20 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Ciudad de México (Distrito Federal)", pct: 17 },
+          { city: "Estado de México", pct: 14 },
+          { city: "Nuevo León", pct: 6.8 },
+        ],
+      },
+      motivations: [
+        { label: "Dispuesto a pagar más por un dispositivo con los últimos avances tecnológicos", pct: 26 },
+        { label: "Confía mucho en que las empresas tecnológicas protegerán su información personal", pct: 41 },
+        { label: "Da mucha importancia a la confiabilidad del proveedor al comprar tecnología/software (entre quienes deciden esas compras)", pct: 68 },
+      ],
+      barriers: [
+        { label: "Considera muy importante el precio al comprar tecnología/software para su empresa (entre quienes deciden esas compras)", pct: 59 },
+        { label: "Solo confía completamente (no solo 'mucho') en que las empresas tech protegerán sus datos", pct: 19 },
+        { label: "De quienes van a reemplazar su smartphone, lo hace por fallas técnicas u obsolescencia de software", pct: 22 },
+      ],
+      digitalInterests: [
+        { label: "Usa TikTok para informarse o consumir contenido tecnológico", index: 251 },
+        { label: "Usa Twitch para informarse o consumir contenido", index: 218 },
+        { label: "Usa YouTube para informarse o consumir contenido", index: 125 },
+      ],
+      media: [
+        { label: "YouTube", pct: 79.7 },
+        { label: "Facebook", pct: 64.8 },
+        { label: "TikTok", pct: 61.4 },
+        { label: "Instagram", pct: 48.8 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "Redes y noticias", "Celular, YouTube", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo/escuela", "YouTube, Facebook", "Laptop/celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo/escuela", "Redes sociales", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa/trabajo", "TV internacional, TikTok", "TV, celular", "35% de quienes ven canales internacionales de TV con frecuencia lo hace en este bloque — 22% más probable que el promedio de ese grupo.", [
+          { label: "Ve canales internacionales de TV de 2 a 5 pm", pct: 35, index: 122 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "YouTube, TikTok", "TV, celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "TV, celular", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_CORFERIAS_CONQUILLA_GWI_AUTO_20261120 = {
+  id: "conquilla-eventos-atlantico-colombia",
+  name: "Entusiastas de eventos en vivo — Conquilla, Atlántico (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-20)",
+  insightNote:
+    "Audiencias reales de GWI de la campaña Corferias>Conquilla (Atlántico, Colombia), segmentadas por edad: 'Conocedores' (audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6, 28-64 años) y 'Aventureros' (audience_id 79e794cd-0073-4de5-a21e-2efb38878029, 18-24 años), ambas definidas como residentes del Atlántico interesados en eventos en vivo como festivales de música.",
+  funnelSteps: [
+    { label: "Interés en eventos en vivo (festivales de música), residentes del Atlántico (Colombia)", pct: 2.49 },
+  ],
+  footnotes: [
+    "2.49% = universo combinado real de GWI de las 2 audiencias (288,824 + 287,558 de 'Conocedores' + 74,906 + 121,970 de 'Aventureros' = 773,258) sobre la población digital de Colombia (31.06M, MARKETS) — verificado vía explore_insight_gwi. Al ser audiencias acotadas a un solo departamento (Atlántico), el % resultante es naturalmente bajo frente al total nacional.",
+    "Demografía (género, edad) verificada 1:1 por audience_id vía chat_gwi + explore_insight_gwi — género y edad sí difieren entre las 2 personas (verificado), pero GWI no devolvió desglose de ciudad más allá del departamento de Atlántico.",
+    "Motivaciones, barreras, géneros musicales y medios: GWI devolvió los mismos datos para ambas audiencias (no diferenciados por el corte de edad 18-24 vs 28-64) — corresponden al segmento más amplio 'Music Festival Enthusiasts' de GWI, que comparte el rasgo definitorio de interés en eventos en vivo (verificado vía chat_gwi + explore_insight_gwi). Se usan como proxy válido del interés genuino en eventos en vivo, no como corte exacto por edad/departamento — de ahí que ambas personas compartan estas cifras.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "Las citas de las personas son placeholders pendientes de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "conocedor-eventos-atlantico-colombia",
+      name: "Jorge Pacheco",
+      archetype: "El Conocedor Nostálgico",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Adulto de 28 a 64 años residente del Atlántico (Colombia), con interés genuino y sostenido en eventos en vivo como festivales de música. Más que un asistente ocasional, sigue de cerca la escena musical y combina el gusto por géneros clásicos (90s, 80s, rock) con la planeación anticipada de sus salidas.",
+      aiInsight: aiInsight(
+        "Cruza con el 'fan planificador': 40% viajó el último año para un concierto o festival (66% más probable que el promedio) y 32% siempre está pendiente de nuevos eventos, pero el costo total del viaje (51%) es el freno más citado al decidir asistir — el mensaje ganador no es solo el lineup, es facilitar la logística y el presupuesto del viaje completo.",
+        [
+          { label: "Los 90 y el rock, no el reggaetón, anclan su identidad musical", detail: "41% prefiere música de los 90 y 30% rock, por encima de géneros urbanos — una programación o patrocinio anclado solo en música latina actual puede dejar fuera a este segmento nostálgico." },
+          { label: "El costo total del viaje pesa más que el precio del boleto en sí", detail: "51% dice que el costo total (transporte, alojamiento, entradas) es el factor más influyente al decidir asistir, por encima de la disponibilidad de boletos (24%) — paquetes o alianzas con transporte/hospedaje pueden mover más la aguja que un descuento en la boletería." },
+          { label: "WhatsApp es el canal de coordinación, no solo de mensajería", detail: "44% usa WhatsApp más de una vez al día (18% más que el promedio) — coordinar grupos de asistencia y enviar recordatorios/confirmaciones por WhatsApp puede tener más impacto que un anuncio pago." },
+        ]
+      ),
+      sharePct: 74.5,
+      demographics: {
+        genderSplit: { male: 50.1, female: 49.9 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 34 },
+          { label: "35-44", pct: 32 },
+          { label: "45-54", pct: 21 },
+          { label: "55-64", pct: 13 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (Colombia) — sin desagregación por ciudad disponible en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Asistir a eventos en vivo le brinda alegría", pct: 38 },
+        { label: "Siempre está pendiente de nuevos eventos de música en vivo", pct: 32 },
+        { label: "Suele asistir a festivales de música durante el verano", pct: 36 },
+      ],
+      barriers: [
+        { label: "El costo total del viaje (transporte, alojamiento, entradas) es el factor más influyente al decidir asistir", pct: 51 },
+        { label: "La disponibilidad de entradas y buenos asientos/horarios pesa en la decisión", pct: 24 },
+        { label: "La seguridad y gestión de multitudes es un factor determinante", pct: 21 },
+      ],
+      digitalInterests: [
+        { label: "Prefiere escuchar música de los 90", index: 141 },
+        { label: "Compró boletos para conciertos en línea en los últimos 3-6 meses", index: 202 },
+        { label: "Viajó para asistir a un concierto o festival en el último año", index: 166 },
+      ],
+      media: [
+        { label: "WhatsApp (más de una vez al día)", pct: 44 },
+        { label: "Instagram (más de una vez al día)", pct: 39 },
+        { label: "TikTok (más de una vez al día)", pct: 37 },
+        { label: "Facebook (más de una vez al día)", pct: 34 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "WhatsApp", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo", "Facebook, noticias", "Celular/laptop", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo/restaurantes", "Instagram", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo/transporte", "Streaming de música", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "WhatsApp, Instagram", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "WhatsApp, TikTok", "Celular", "44% usa WhatsApp más de una vez al día — canal natural de coordinación social en este bloque.", [
+          { label: "Usa WhatsApp más de una vez al día", pct: 44, index: 118 },
+        ]),
+      ],
+    },
+    {
+      id: "aventurera-eventos-atlantico-colombia",
+      name: "Valentina Ríos",
+      archetype: "La Aventurera Social",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Joven de 18 a 24 años residente del Atlántico (Colombia), mayoritariamente mujer, que vive los eventos en vivo como una experiencia social y de descubrimiento. Está muy pendiente de nuevos lanzamientos y festivales, y los vive tanto en redes como en persona.",
+      aiInsight: aiInsight(
+        "Cruza con la 'descubridora social': a diferencia del Conocedor, su propensión a identificarse como mujer (62%, 21% más que el promedio) sugiere una oportunidad de activaciones pensadas para grupos de amigas, no solo para la pareja o el hincha individual — el mismo gusto musical nostálgico (90s, rock) convive aquí con una edad mucho más joven (100% entre 16-24).",
+        [
+          { label: "Perfil predominantemente femenino y joven, sin desagregación de interés musical propia", detail: "62% se identifica como mujer (21% más probable que el promedio de Colombia) y el 100% cae en el rango 16-24 — GWI no devolvió un corte de género musical específico para este subsegmento, por lo que se usa el mismo perfil de 'Music Festival Enthusiasts' que el Conocedor (ver footnotes)." },
+          { label: "Participación social más que individual", detail: "Al compartir el dato de que 44% usa WhatsApp más de una vez al día (18% más que el promedio), la coordinación de planes en grupo (vs. asistencia solitaria) es previsiblemente más relevante para activar en este segmento más joven." },
+          { label: "El costo del viaje también es la barrera principal, pero con menos capacidad de gasto propio", detail: "Comparte con el Conocedor que el costo total del viaje (51%) es el freno más citado — en un segmento de 18-24 años con ingresos típicamente menores, esto sugiere que planes de pago fraccionado o paquetes grupales pueden tener aún más peso relativo." },
+        ]
+      ),
+      sharePct: 25.5,
+      demographics: {
+        genderSplit: { male: 38.0, female: 62.0 },
+        ageBands: [
+          { label: "16-24", pct: 100 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico (Colombia) — sin desagregación por ciudad disponible en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Asistir a eventos en vivo le brinda alegría", pct: 38 },
+        { label: "Siempre está pendiente de nuevos eventos de música en vivo", pct: 32 },
+        { label: "Suele asistir a festivales de música durante el verano", pct: 36 },
+      ],
+      barriers: [
+        { label: "El costo total del viaje (transporte, alojamiento, entradas) es el factor más influyente al decidir asistir", pct: 51 },
+        { label: "La disponibilidad de entradas y buenos asientos/horarios pesa en la decisión", pct: 24 },
+        { label: "La seguridad y gestión de multitudes es un factor determinante", pct: 21 },
+      ],
+      digitalInterests: [
+        { label: "Prefiere escuchar música de los 90", index: 141 },
+        { label: "Compró boletos para conciertos en línea en los últimos 3-6 meses", index: 202 },
+        { label: "Viajó para asistir a un concierto o festival en el último año", index: 166 },
+      ],
+      media: [
+        { label: "WhatsApp (más de una vez al día)", pct: 44 },
+        { label: "Instagram (más de una vez al día)", pct: 39 },
+        { label: "TikTok (más de una vez al día)", pct: 37 },
+        { label: "Facebook (más de una vez al día)", pct: 34 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "WhatsApp, Instagram", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad/trabajo", "TikTok, Instagram", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Universidad/trabajo", "TikTok", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa/transporte", "Streaming de música", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "WhatsApp, Instagram", "Celular", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "WhatsApp, TikTok", "Celular", "44% usa WhatsApp más de una vez al día — canal natural de coordinación social en este bloque.", [
+          { label: "Usa WhatsApp más de una vez al día", pct: 44, index: 118 },
+        ]),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7643,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CORFERIAS_CONQUILLA_GWI_AUTO_20261120],
   },
   {
     id: "deportes",
@@ -7491,7 +7721,7 @@ const CATEGORIES = [
       { id: "pagaPremiumMarca", label: "Dispuesto a pagar premium por marca" },
       { id: "compraPorNecesidad", label: "Compra por necesidad/durabilidad, no por hype" },
     ],
-    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924, CASE_ASUS_LATAM_GWI_AUTO_20261015],
+    cases: [CASE_CONSUMER_TECH, CASE_TECNOMOBILE_GWI_AUTO_20260924, CASE_ASUS_LATAM_GWI_AUTO_20261015, CASE_TCL_INSTITUCIONAL_GWI_AUTO_20261120],
   },
   {
     id: "gaming",
@@ -7599,4 +7829,7 @@ const PERSONA_RELATED_TRAITS = {
   "usuario-mastercard-colombia": ["usaAppsFin", "migraEfectivo"],
   "usuario-visa-colombia": ["abiertoCambiar", "pruebaMultiples"],
   "entusiasta-cultural-colombia-nacional": ["afinidadGenero", "turismo"],
+  "usuario-tcl-mexico": ["compraGadgetsAnual", "pagaPremiumMarca"],
+  "conocedor-eventos-atlantico-colombia": ["afinidadGenero"],
+  "aventurera-eventos-atlantico-colombia": ["afinidadGenero"],
 };

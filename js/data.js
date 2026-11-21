@@ -7399,6 +7399,250 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Compradores online habituales en México, procesado 2026-11-21.
+// ---------------------------------------------------------------------------
+const CASE_COMPRADOR_HABITUAL_MEXICO_GWI_AUTO_20261121 = {
+  id: "compradores-online-habituales-mexico",
+  name: "Compradores online habituales (México)",
+  market: "MEX",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-21)",
+  insightNote:
+    "Audiencia real de GWI ('Portales>DiaDeSanValentin>CompradorHabitual', audience_id 16baf8dc-bc82-46fa-8674-bac9b83b8294): personas que residen en México y compraron varios artículos en línea durante el último mes.",
+  funnelSteps: [
+    { label: "Residentes en México que compraron varios artículos en línea durante el último mes (universo real GWI: ~75.68M sobre 78.05M de México)", pct: 97 },
+  ],
+  footnotes: [
+    "97% ≈ universo real de la audiencia en GWI (36,490,514 hombres + 39,185,224 mujeres = 75,675,738, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de México (78.05M, MARKETS) — refleja que la compra online de algún artículo en el último mes es ya un comportamiento mayoritario en México, no un nicho.",
+    "Demografía (género, edad), categorías de compra online, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre los insight_id reales de la audiencia.",
+    "Top ciudades: GWI solo devolvió desagregación individual para 2 entidades (Distrito Federal 16%, Veracruz 5%); el resto del país no se desagregó por estado/ciudad de forma compatible, así que no se inventa una distribución completa.",
+    "Barreras: GWI no devolvió 'frenos de compra' temáticos para esta audiencia más allá de condiciones de checkout — se usan como barreras las expectativas de envío gratis y devoluciones sencillas (fricciones reales de conversión si no se cumplen), verificadas vía chat_gwi.",
+    "El customer journey no tiene datos específicos por momento del día para esta audiencia (GWI no devolvió información compatible) — usa comportamiento general de medios/intereses verificado, sin cifras de actividades inventadas por bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "comprador-habitual-online-mexico",
+      name: "Daniela Hernández",
+      archetype: "La Compradora Online Recurrente",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Reside en México y compró varios artículos en línea durante el último mes — un comportamiento que ya comparte el 97% de los mexicanos conectados. Combina compras recurrentes de consumo básico (cuidado personal, snacks, abarrotes) con un consumo digital casi universal: redes sociales, TikTok y streaming forman parte de su rutina diaria.",
+      aiInsight: aiInsight(
+        "Cruza con la madurez del e-commerce de consumo básico en México: comprar online ya no es un evento ocasional sino un hábito recurrente de abastecimiento (champú 83%, snacks 75%, desodorante 72%), mientras que el envío gratis (56%) funciona casi como una condición de entrada más que como un diferencial — la oportunidad de marca está en la fidelización y la frecuencia, no en convencer de comprar online por primera vez.",
+        [
+          { label: "El envío gratis ya es una expectativa, no un incentivo", detail: "56% prefiere que el envío sea gratis al comprar online — por debajo de ese umbral, el riesgo de abandono de carrito es alto; comunicarlo debe ser explícito desde el primer clic, no un descuento sorpresa." },
+          { label: "La recompra de consumo básico es el verdadero volumen", detail: "83% compró champú, 75% snacks y 72% desodorante en línea el último mes — las categorías de mayor frecuencia no son de moda o tecnología sino de abasto del hogar, lo que favorece modelos de suscripción/recompra sobre campañas de lanzamiento puntual." },
+          { label: "El consumo de IA generativa ya despega, aunque todavía es nicho", detail: "6.2% pagó una suscripción a una herramienta de IA el último mes, un 4.5% más que el promedio — pequeño en volumen pero con sobreíndice, señal temprana de un segmento dispuesto a pagar por herramientas digitales nuevas." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48.2, female: 51.8 },
+        ageBands: [
+          { label: "16-24", pct: 24 },
+          { label: "25-34", pct: 26 },
+          { label: "35-44", pct: 22 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Ciudad de México (Distrito Federal)", pct: 16 },
+          { city: "Veracruz", pct: 5 },
+        ],
+      },
+      motivations: [
+        { label: "Compró champú en línea el último mes", pct: 83 },
+        { label: "Compró snacks en línea el último mes", pct: 75 },
+        { label: "Compró desodorante en línea el último mes", pct: 72 },
+        { label: "Compró pasta dental en línea el último mes", pct: 69 },
+      ],
+      barriers: [
+        { label: "Prefiere que el envío sea gratis al comprar online — casi una condición de conversión", pct: 56 },
+        { label: "Prefiere una política de devoluciones sencilla al comprar online", pct: 25 },
+      ],
+      digitalInterests: [
+        { label: "Pagó una suscripción a una herramienta de inteligencia artificial el último mes", index: 104.5 },
+        { label: "Pagó una suscripción a un servicio de streaming de música el último mes", index: 103.3 },
+        { label: "Pagó por descargar música el último mes", index: 103.7 },
+        { label: "Publicó sobre teléfonos móviles en internet el último mes", index: 103.5 },
+      ],
+      media: [
+        { label: "Usó redes sociales en el último mes", pct: 99 },
+        { label: "Usa TikTok para encontrar contenido divertido/entretenido (entre usuarios de TikTok)", pct: 85 },
+        { label: "Usa Facebook/Messenger para enviar mensajes a amigos y familiares (entre usuarios de Facebook)", pct: 75 },
+        { label: "Es usuaria intensiva de streaming como Netflix/Hulu", pct: 39 },
+        { label: "Vio Instagram Reels el último mes", pct: 34 },
+        { label: "Vio YouTube Shorts el último mes", pct: 31 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / casa", "Redes y mensajería", "Facebook, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / casa", "Compras online", "Apps de e-commerce", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video corto", "TikTok, YouTube Shorts", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming", "Netflix, plataformas de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y streaming", "Instagram, TikTok, streaming", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Conquilla: eventos en vivo en Atlántico (Colombia), procesado 2026-11-21.
+// 2 audiencias reales de GWI del mismo cliente (Corferias, feria "Conquilla"),
+// segmentadas por edad: Conocedores (28-64) y Aventureros (18-24).
+// ---------------------------------------------------------------------------
+const CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261121 = {
+  id: "conquilla-eventos-atlantico-colombia",
+  name: "Asistentes a eventos en vivo en Atlántico (Corferias Conquilla, Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-21)",
+  insightNote:
+    "2 audiencias reales de GWI del mismo cliente (Corferias, feria 'Conquilla' en el departamento de Atlántico), ambas definidas por interés en eventos en vivo como festivales de música: 'Corferias>Conquilla>Conocedores' (audience_id dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6, 28-64 años) y 'Corferias>Conquilla>Aventureros' (audience_id 79e794cd-0073-4de5-a21e-2efb38878029, 18-24 años).",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo/festivales de música, residentes en Atlántico (Colombia), 18-24 o 28-64 años (universo real GWI combinado: 196,876 + 576,382 ≈ 773,258 sobre 31.06M de Colombia)", pct: 2.5 },
+  ],
+  footnotes: [
+    "2.5% = universo combinado real de las 2 audiencias (196,876 de 'Aventureros' 18-24 + 576,382 de 'Conocedores' 28-64, cada uno verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital de Colombia (31.06M, MARKETS). Son 2 audiencias definidas de forma independiente en GWI por rango de edad excluyente, así que no deberían solaparse entre sí.",
+    "sharePct de cada persona = participación real de cada audiencia dentro del universo combinado (74.6% Conocedores / 25.4% Aventureros), calculada directamente de los universos verificados.",
+    "Demografía, intereses musicales/digitales y medios de cada persona son datos reales de GWI Core Colombia, verificados 1:1 vía chat_gwi + explore_insight_gwi.",
+    "Bandas de edad de 'Conocedores' (restringida a 28-64): GWI devolvió 25-34 (en realidad 28-34), 35-44, 45-54 y 55-64 como únicas bandas con datos; se reportan en las bandas estándar más cercanas. 'Aventureros' está restringida a 18-24 y se reporta en la banda estándar 16-24.",
+    "Top ciudades: GWI no desagregó por ciudad dentro del departamento de Atlántico para ninguna de las 2 audiencias — se deja señalado como tal en vez de inventar una distribución.",
+    "Barreras: GWI no devolvió frenos/barreras de compra de boletos exclusivos de estas audiencias — se usa como proxy la brecha real entre interés declarado en eventos en vivo (33%) y compra real de boletos (15%) de la audiencia general de Colombia (ver caso 'eventos-en-vivo-general-colombia'), verificada vía GWI Core Colombia.",
+    "El customer journey no tiene datos específicos por momento del día para ninguna de las 2 audiencias (GWI no devolvió información compatible) — usa comportamiento general de medios/intereses verificado, sin cifras de actividades inventadas por bloque.",
+    "Las citas de ambas personas son placeholders pendientes de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial, sobre todo el customer journey.",
+  ],
+  personas: [
+    {
+      id: "conocedora-eventos-atlantico-colombia",
+      name: "Marcela Pacheco",
+      archetype: "La Conocedora Cultural",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en el departamento de Atlántico (Colombia), tiene entre 28 y 64 años y está 100% interesada en eventos en vivo como festivales de música — género prácticamente parejo (50/50). Combina ese interés musical con gustos por la televisión, los reality shows y las actividades al aire libre, y todavía consume medios tradicionales como radio y prensa impresa por encima del promedio nacional.",
+      aiInsight: aiInsight(
+        "Cruza con la brecha estructural entre interés y compra que muestra GWI en Colombia (33% de interés declarado en eventos en vivo vs. ~15% de compra real de boletos a nivel nacional), pero esta audiencia adulta de Atlántico muestra señales de conversión más fuertes hacia lo local: 35% disfruta apoyar artistas locales o asistir a conciertos locales, y sobre-indexa en medios tradicionales (radio, prensa impresa) que una campaña 100% digital dejaría fuera.",
+        [
+          { label: "El apoyo al artista local es el gancho más fuerte", detail: "35% disfruta apoyar artistas locales o asistir a conciertos locales (39% más que el promedio de Colombia) — priorizar line-ups y escenarios de Barranquilla/Atlántico puede convertir mejor que apostar solo por headliners internacionales." },
+          { label: "Los medios tradicionales siguen siendo relevantes en este segmento adulto", detail: "32% es usuario intensivo de radio y 29% de prensa impresa (ambos muy por encima del promedio de Colombia) — una campaña exclusivamente digital dejaría fuera un tramo real de esta audiencia." },
+          { label: "El entretenimiento ligero es un atajo de atención", detail: "38% está interesada en reality shows (86% más que el promedio) y 10% publicó sobre celebridades — contenido de entretenimiento ligero puede funcionar como gancho inicial antes del mensaje de marca." },
+        ]
+      ),
+      sharePct: 74.6,
+      demographics: {
+        genderSplit: { male: 50.1, female: 49.9 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 34 },
+          { label: "35-44", pct: 32 },
+          { label: "45-54", pct: 21 },
+          { label: "55-64", pct: 13 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico, Colombia — sin desagregación por ciudad disponible en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interés declarado en eventos en vivo/festivales de música (define la audiencia)", pct: 100 },
+        { label: "También está interesada en música en general", pct: 77 },
+        { label: "Disfruta apoyar artistas locales o asistir a conciertos locales", pct: 35 },
+        { label: "Siempre está buscando nuevos eventos de música en vivo", pct: 24 },
+      ],
+      barriers: [
+        { label: "Brecha entre interés declarado en eventos en vivo (33%) y compra real de boletos (15%) — Colombia general, GWI Core, proxy", pct: 18 },
+        { label: "Solo una minoría tiene plan concreto de compra en los próximos 3-6 meses — Colombia general, GWI Core, proxy", pct: 13 },
+      ],
+      digitalInterests: [
+        { label: "Pagó una suscripción a una revista online el último mes", index: 215 },
+        { label: "Publicó online su opinión sobre salir o socializar el último mes", index: 191 },
+        { label: "Publicó online sobre noticias o chismes de celebridades el último mes", index: 187 },
+        { label: "Interesada en reality shows", index: 186 },
+      ],
+      media: [
+        { label: "Usó redes sociales en el último mes", pct: 99 },
+        { label: "Usa TikTok para encontrar contenido divertido/entretenido (entre usuarios de TikTok)", pct: 82 },
+        { label: "Usa Facebook/Messenger para enviar mensajes a amigos y familiares (entre usuarios de Facebook)", pct: 80 },
+        { label: "Usa Instagram para publicar o compartir fotos y videos (entre usuarios de Instagram)", pct: 72 },
+        { label: "Es usuaria intensiva de streaming como Netflix/Hulu", pct: 40 },
+        { label: "Es usuaria intensiva de radio", pct: 32 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Radio y redes", "Radio, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / casa", "Redes y mensajería", "Facebook, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Trabajo / restaurantes", "TV y redes", "TV abierta, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes y prensa", "Instagram, prensa online", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV y streaming", "TV abierta, Netflix", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV y redes", "Reality shows en TV, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+    {
+      id: "aventurera-eventos-atlantico-colombia",
+      name: "Valentina Ríos",
+      archetype: "La Aventurera Musical",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en el departamento de Atlántico (Colombia), tiene entre 18 y 24 años y es mayoritariamente mujer (62%). Está 100% interesada en eventos en vivo como festivales de música, descubre música nueva constantemente —incluyendo K-pop y hip-hop/rap— y vive casi exclusivamente en TikTok e Instagram.",
+      aiInsight: aiInsight(
+        "Cruza con un perfil de descubrimiento musical TikTok-first con afinidades de nicho accionables: 33% disfruta K-pop (131% más que el promedio) y 40% hip-hop/rap (77% más), mientras que 66% se siente molesta por los anuncios de audio y los evita cuando puede — la pauta debería priorizar formatos nativos de video corto segmentados por género musical en vez de anuncios de audio interruptivos.",
+        [
+          { label: "TikTok es el canal principal, no un complemento", detail: "92% usa TikTok para contenido divertido/entretenido y 79% lo usa para buscar información de productos/marcas (ambos entre usuarios de TikTok) — la mayor parte de la inversión de medios debería priorizar formatos nativos de TikTok sobre banners o display genérico." },
+          { label: "La afinidad por K-pop y hip-hop es una señal de nicho accionable", detail: "33% disfruta escuchar K-pop (índice 231) y 40% hip-hop/rap (índice 177) — segmentar la pauta por género musical puede superar ampliamente a un mensaje genérico de 'música en vivo'." },
+          { label: "Evitar anuncios de audio interruptivos", detail: "66% se siente molesta por los anuncios de audio y los evita cuando puede (25% más que el promedio) — el formato clásico de audio-ad (pre-roll en streaming de música) corre alto riesgo de rechazo en este segmento." },
+        ]
+      ),
+      sharePct: 25.4,
+      demographics: {
+        genderSplit: { male: 38.0, female: 62.0 },
+        ageBands: [
+          { label: "16-24", pct: 100 },
+          { label: "25-34", pct: 0 },
+          { label: "35-44", pct: 0 },
+          { label: "45-54", pct: 0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Atlántico, Colombia — sin desagregación por ciudad disponible en GWI", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interés declarado en eventos en vivo/festivales de música, 18-24 años (define la audiencia)", pct: 100 },
+        { label: "Le resulta fácil descubrir música nueva que le gusta", pct: 62 },
+        { label: "Suele enterarse de música nueva a través de diversas fuentes", pct: 57 },
+        { label: "Disfruta buscar nuevos artistas, bandas o canciones", pct: 48 },
+      ],
+      barriers: [
+        { label: "Brecha entre interés declarado en eventos en vivo (33%) y compra real de boletos (15%) — Colombia general, GWI Core, proxy", pct: 18 },
+        { label: "Se siente molesta por los anuncios de audio y los evita cuando puede", pct: 66 },
+      ],
+      digitalInterests: [
+        { label: "Disfruta escuchar K-pop", index: 231 },
+        { label: "Publicó sobre moda/ropa en internet el último mes", index: 244 },
+        { label: "Disfruta escuchar hip-hop/rap", index: 177 },
+        { label: "Suele descubrir artistas o bandas antes de que se vuelvan populares", index: 174 },
+      ],
+      media: [
+        { label: "Usa TikTok para encontrar contenido divertido/entretenido (entre usuarios de TikTok)", pct: 92 },
+        { label: "Usa TikTok para buscar información sobre productos y marcas (entre usuarios de TikTok)", pct: 79 },
+        { label: "Usa Instagram para publicar o compartir fotos/videos (entre usuarios de Instagram)", pct: 77 },
+        { label: "Usa Instagram para comunicarse con amigos y familiares (entre usuarios de Instagram)", pct: 71 },
+        { label: "Vio Instagram Reels el último mes", pct: 39 },
+        { label: "Vio YouTube Shorts el último mes", pct: 34 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "TikTok, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Universidad / casa", "Video corto", "TikTok, Instagram Reels", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Universidad / casa", "Redes y descubrimiento musical", "TikTok, apps de música", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa / transporte", "Video corto", "TikTok, YouTube Shorts", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Redes y streaming", "TikTok, Instagram, apps de música", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7657,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CONQUILLA_ATLANTICO_GWI_AUTO_20261121],
   },
   {
     id: "deportes",
@@ -7439,7 +7683,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020, CASE_COMPRADOR_HABITUAL_MEXICO_GWI_AUTO_20261121],
   },
   {
     id: "fintech",

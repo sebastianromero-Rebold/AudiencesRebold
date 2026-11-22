@@ -313,6 +313,11 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI el 2026-11-22.
+  { id: "b5ac3735-cc6c-4733-a4d0-78b75726ea8e", title: "REBOLDCL>Fintechile>Eligefintech>Stakeholders", client: "", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6", title: "Corferias>Conquilla>Conocedores", client: "", type: "shared", datasets: ["ds-core"], description: "This audience currently resides in Colombia, lives in Atlantico, is between 28 and 64 years old, and is interested in live events like music festivals." },
+  { id: "9848b554-e267-433c-be66-bdf08e2348ed", title: "DOITE>DOITE>B2C>Chile>WANTS>Moda", client: "DOITE", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "9baf6419-8bba-4e6f-a04a-7c9a200bdfd1", title: "Jagger>SubCulturas>MODA", client: "Jagger", type: "shared", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +409,10 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-22.
+  "b5ac3735-cc6c-4733-a4d0-78b75726ea8e": { categoryId: "fintech", caseId: "fintechile-stakeholders-chile", personaId: "ejecutivo-financiero-fintechile-chile", analyzedAt: "2026-11-22" },
+  "dbbf2adb-e91c-4720-a8f3-e8bb30fe02d6": { categoryId: "entretenimiento", caseId: "corferias-conquilla-conocedores-atlantico-colombia", personaId: "conocedor-eventos-vivo-atlantico-colombia", analyzedAt: "2026-11-22" },
+  "9848b554-e267-433c-be66-bdf08e2348ed": { categoryId: "retail", caseId: "doite-moda-wants-chile", personaId: "interesada-moda-wants-chile", analyzedAt: "2026-11-22" },
+  // "9baf6419-8bba-4e6f-a04a-7c9a200bdfd1" (Jagger>SubCulturas>MODA) intentada el 2026-11-22: GWI no devolvió
+  // ningún dato compatible (ver nota en el manifest) -- queda sin enlace, aparece como "Pendiente de análisis".
 };

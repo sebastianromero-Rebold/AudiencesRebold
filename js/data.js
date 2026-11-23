@@ -7398,6 +7398,261 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
   ],
 };
 
+const CASE_PRESENTAGENERALEVENTOS_GWI_AUTO_20261123 = {
+  id: "presenta-general-eventos-colombia",
+  name: "Interés general en eventos en vivo (Colombia) — PresentaGeneralEventos",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-23)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) PresentaGeneralEventos', audience_id a3bf5df4-86c4-4091-a917-1c0a3e3b658c): colombianos interesados en eventos en vivo como festivales de música y en música en general.",
+  funnelSteps: [
+    { label: "Interés en eventos en vivo como festivales de música, definición amplia (Colombia)", pct: 28.0 },
+  ],
+  footnotes: [
+    "28.0% = universo real de GWI (~8.70M, suma de zona urbana 7,637,086 + rural 658,912 + suburbana 408,732, verificado vía explore_insight_gwi) sobre la población digital de Colombia (31.06M, MARKETS).",
+    "Demografía, intereses, comportamiento digital y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI no devolvió desglose por ciudad para esta audiencia, solo zona urbana/suburbana/rural.",
+    "Las 'barreras' usan la brecha real entre interés declarado (100% dice interesarse en eventos en vivo) y conversión real (24% compró boletos en los últimos 3-6 meses, 21% planea comprarlos) — no hay barreras de tipo socioeconómico reportadas por GWI para esta audiencia.",
+    "GWI no devolvió datos de franja horaria (time-of-day) suficientemente específicos para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-general-eventos-co",
+      name: "Valentina Rojas",
+      archetype: "La Exploradora de Experiencias",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiana urbana (88% vive en zona urbana) con interés declarado casi universal en eventos en vivo, pero con una conversión real de compra todavía baja — quiere desafiarse y vivir experiencias nuevas más que encajar socialmente, y es una early adopter digital (alto uso de ChatGPT e Instagram).",
+      aiInsight: aiInsight(
+        "Cruza con la brecha 'interés declarado vs. conversión real': 100% dice interesarse en eventos en vivo (índice 257 sobre el promedio) pero solo 24% compró boletos de concierto en los últimos 3-6 meses y 21% planea hacerlo — la demanda latente es enorme, pero el embudo de conversión real todavía tiene mucho espacio para crecer con el mensaje correcto.",
+        [
+          { label: "Alto interés, baja conversión real", detail: "100% se declara interesada en eventos en vivo como festivales de música, pero solo 24% compró boletos en los últimos 3-6 meses y 21% planea comprarlos — una campaña centrada en remover fricción de compra (recordatorios, pagos fáciles) puede capturar más de esa demanda latente que una campaña de solo awareness." },
+          { label: "Rechaza la validación social, busca el desafío personal", detail: "54% dice que no le importa sentirse aceptada por los demás (índice 142) mientras que 74% valora desafiarse a sí misma — mensajes de autenticidad y superación personal probablemente resuenan más que mensajes de pertenencia o FOMO social." },
+          { label: "Instagram y TikTok nativos, con fuerte adopción de IA", detail: "44% usa Instagram más de una vez al día (índice 152) y 55% visitó ChatGPT el último mes (índice 193) — un perfil digital avanzado, abierto a descubrir eventos vía herramientas asistidas por IA además de redes sociales tradicionales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45, female: 55 },
+        ageBands: [
+          { label: "16-24", pct: 24 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 16 },
+          { label: "55-64", pct: 9.2 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación por ciudad disponible en GWI (88% zona urbana, 7.6% rural, 4.7% suburbana)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en el baile", pct: 44 },
+        { label: "No le importa sentirse aceptada por los demás", pct: 54 },
+        { label: "Interesada en idiomas extranjeros", pct: 51 },
+        { label: "Considera importante desafiarse a sí misma", pct: 74 },
+        { label: "Prefiere gastar dinero en experiencias", pct: 70 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto online en los últimos 3-6 meses (baja conversión real)", pct: 24 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses (intención pendiente de convertir)", pct: 21 },
+        { label: "Siempre está pendiente de nuevos eventos de música en vivo", pct: 20 },
+      ],
+      digitalInterests: [
+        { label: "Visitó ChatGPT el último mes", pct: 55, index: 193 },
+        { label: "Usó Google Mail el último mes", pct: 93, index: 162 },
+        { label: "Usa Instagram para buscar información de productos/marcas", pct: 71, index: 115 },
+        { label: "Usa TikTok para encontrar contenido divertido/entretenido", pct: 88, index: 103 },
+      ],
+      media: [
+        { label: "Instagram (uso +1x/día)", pct: 44 },
+        { label: "Facebook (uso +1x/día)", pct: 42 },
+        { label: "Instagram a diario", pct: 23 },
+        { label: "TikTok a diario", pct: 18 },
+        { label: "Usuaria intensiva de streaming (Netflix, Hulu, etc.)", pct: 37 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales y mensajería", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Navegación general / IA", "ChatGPT, Google Mail", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales y streaming", "Instagram, plataformas de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "Netflix/Hulu, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "Evento en vivo o streaming", "Venue físico o streaming en vivo", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_FINTECH_LIVE_EVENT_GWI_AUTO_20261123 = {
+  id: "fintech-live-event-colombia",
+  name: "Interesados en eventos en vivo con perfil fintech (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-23)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>AudienciasFintechLiveEvent>Col', audience_id 3993e2b6-ae7f-4239-baeb-d9e63ea89bb7): colombianos con interés en eventos en vivo asociados a una campaña fintech.",
+  funnelSteps: [
+    { label: "Interés en eventos en vivo con afinidad fintech (Colombia)", pct: 19.2 },
+  ],
+  footnotes: [
+    "19.2% = universo real de GWI (~5.97M, suma de género femenino 3,075,691 + masculino 2,899,130, verificado vía explore_insight_gwi) sobre la población digital de Colombia (31.06M, MARKETS).",
+    "Demografía, motivaciones, barreras financieras, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI no devolvió desglose por ciudad para esta audiencia, solo edad/género/generación.",
+    "GWI no devolvió datos de franja horaria (time-of-day) para esta audiencia (la pregunta no generó insights) — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "profesional-fintech-live-event-co",
+      name: "Daniel Herrera",
+      archetype: "El Profesional Financieramente Ambicioso",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Colombiano bancarizado (90% tiene cuenta bancaria) que valora la seguridad financiera (78%) y ya envía dinero por el móvil con frecuencia, pero convive con deuda de corto plazo (37%) — un perfil profesional, activo en LinkedIn y X muy por encima del promedio, que combina aspiración financiera con manejo activo de liquidez.",
+      aiInsight: aiInsight(
+        "Cruza con la paradoja del 'bancarizado con deuda activa': 90% ya tiene cuenta bancaria y 68% envió dinero a amigos/familia por el móvil el último mes, pero 37% tiene actualmente un préstamo de corto plazo — el reto de esta audiencia no es el acceso a productos financieros sino el manejo de la deuda y la liquidez.",
+        [
+          { label: "Bancarizados, pero con deuda de corto plazo activa", detail: "90% tiene cuenta bancaria pero 37% tiene actualmente un préstamo a corto plazo (índice 157 sobre el promedio) — el mensaje de una fintech retadora debería enfocarse en salud financiera y manejo de deuda, no en abrir una cuenta." },
+          { label: "Perfil más profesional que el fintech genérico", detail: "Uso diario de LinkedIn (9.6%, índice 212) y de X (15%, índice 245) muy por encima del promedio de otras audiencias fintech ya analizadas — abre espacio a contenido educativo financiero más sofisticado (B2B, thought leadership) en vez de solo promociones." },
+          { label: "Los pagos móviles P2P ya son un hábito instalado", detail: "68% envió dinero a amigos o familia desde el móvil el último mes (índice 135) — una fintech retadora puede anclar su propuesta en mejorar ese flujo ya instalado en vez de tener que educar desde cero sobre pagos digitales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 48.5, female: 51.5 },
+        ageBands: [
+          { label: "16-24", pct: 21 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 16 },
+          { label: "55-64", pct: 10 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Colombia — sin desagregación por ciudad disponible en GWI (37% Millennials, 33% Gen Z, 29% Gen X)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Considera importante tener seguridad financiera", pct: 78 },
+        { label: "Considera importante aprender nuevas habilidades", pct: 81 },
+        { label: "Considera importante pasar tiempo con su familia", pct: 81 },
+        { label: "Se describe como creativo", pct: 68 },
+      ],
+      barriers: [
+        { label: "Tiene actualmente un préstamo de corto plazo", pct: 37 },
+        { label: "No tiene tarjeta de crédito", pct: 39 },
+        { label: "No tiene cuenta bancaria (no bancarizado)", pct: 7.5 },
+      ],
+      digitalInterests: [
+        { label: "Envió dinero a amigos/familia por el móvil el último mes", pct: 68, index: 135 },
+        { label: "Pagó una suscripción de streaming de video el último mes", pct: 50, index: 156 },
+        { label: "Interesado en tecnología", pct: 73, index: 176 },
+        { label: "Interesado en viajar", pct: 71, index: 165 },
+      ],
+      media: [
+        { label: "Instagram (uso +1x/día)", pct: 45 },
+        { label: "Facebook (uso +1x/día)", pct: 43 },
+        { label: "Instagram a diario", pct: 24 },
+        { label: "Facebook a diario", pct: 23 },
+        { label: "LinkedIn a diario", pct: 9.6, index: 212 },
+        { label: "X (Twitter) a diario", pct: 15, index: 245 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Apps y notificaciones", "App de banco/billetera, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "Redes profesionales y noticias", "LinkedIn, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Apps de pago", "Transferencias móviles P2P", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y mensajería", "Suscripción de streaming, WhatsApp", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / evento en vivo", "Evento en vivo o redes", "Instagram, Facebook", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_DOITE_WANTS_MODA_GWI_AUTO_20261123 = {
+  id: "doite-wants-moda-chile",
+  name: "Interesados en moda premium — DOITE Chile (WANTS)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-23)",
+  insightNote:
+    "Audiencia real de GWI ('DOITE>DOITE>B2C>Chile>WANTS>Moda', audience_id 9848b554-e267-433c-be66-bdf08e2348ed): chilenos con interés/deseo declarado en moda, complementaria a la audiencia 'HighPropensity>Moda' de DOITE ya procesada (caso 'alta-propension-moda-chile').",
+  funnelSteps: [
+    { label: "Interés en moda, definición WANTS de la campaña DOITE (Chile)", pct: 34.2 },
+  ],
+  footnotes: [
+    "34.2% = universo real de GWI (~5.34M, suma de género femenino 4,008,926 + masculino 1,326,627, verificado vía explore_insight_gwi) sobre la población digital de Chile (15.6M, MARKETS).",
+    "Demografía, afinidad de marca, barreras de pago/precio, intereses digitales y medios verificados 1:1 vía chat_gwi + explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "GWI no devolvió desglose por ciudad para esta audiencia, solo edad/género/generación.",
+    "GWI devolvió datos de franja horaria solo para un subgrupo condicionado (espectadores frecuentes de TV internacional), no representativo del total de la audiencia — se descartó para no mezclar poblaciones distintas; el customer journey queda con lugar/medios genéricos inferidos del perfil general, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fashionista-premium-doite-chile",
+      name: "Javiera Muñoz",
+      archetype: "La Fashionista Premium",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Chilena (75% mujeres) con fuerte sobre-índice en compra de marcas de moda premium (Paco Rabanne, Moschino, Dolce & Gabbana, Calvin Klein) y baja sensibilidad a precio frente al promedio — valora el pago sin fricción y un checkout rápido más que las ofertas o descuentos.",
+      aiInsight: aiInsight(
+        "Cruza con el patrón 'premium, no gangas': esta audiencia sobre-indexa fuertemente en marcas de moda premium (Moschino, índice 402; Paco Rabanne, índice 509) mientras que su sensibilidad a precio (38%) y uso de cupones (40%) están por debajo del promedio de internet — el discurso de oferta/descuento pesa menos que el de marca y estatus para este público.",
+        [
+          { label: "Perfil premium, no cazador de gangas", detail: "Sobre-índice fuerte en marcas premium (Paco Rabanne 6.1% compró el último año, índice 509; Moschino 3.8%, índice 402; Dolce & Gabbana 4.9%, índice 243) mientras que la sensibilidad a precio (38%) y el uso de cupones (40%) están por debajo del promedio — el mensaje de marca/estatus pesa más que el de descuento." },
+          { label: "Pinterest e Instagram como vitrina de inspiración", detail: "Uso semanal de Pinterest con índice 244, y 58% de quienes usan Pinterest lo hacen para buscar inspiración de decoración/diseño — oportunidad de contenido tipo moodboard/lookbook, más allá del feed social tradicional." },
+          { label: "El pago sin fricción importa más que el descuento", detail: "67% prefiere pagar sin efectivo (índice 111) y 41% quiere un checkout rápido y sencillo (índice 150) — remover fricción en el pago puede convertir más que agregar promociones para esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 24.9, female: 75.1 },
+        ageBands: [
+          { label: "16-24", pct: 22 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 23 },
+          { label: "45-54", pct: 17 },
+          { label: "55-64", pct: 11 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Chile — sin desagregación por ciudad disponible en GWI (35% Millennials, 33% Gen Z, 30% Gen X)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Compró Calvin Klein en el último año", pct: 18, index: 229 },
+        { label: "Compró Tommy Hilfiger en el último año", pct: 14, index: 233 },
+        { label: "Compró Lacoste en el último año", pct: 9.5, index: 230 },
+        { label: "Compró Paco Rabanne en los últimos 5 años", pct: 10, index: 340 },
+      ],
+      barriers: [
+        { label: "Se considera sensible al precio", pct: 38 },
+        { label: "Usa códigos de descuento o cupones", pct: 40 },
+        { label: "Prefiere dividir pagos sin intereses adicionales", pct: 17 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en belleza y cosmética", pct: 76, index: 283 },
+        { label: "Interesada en moda", pct: 70, index: 238 },
+        { label: "Interesada en manualidades", pct: 52, index: 243 },
+        { label: "Vio videos de comedia/memes/virales la última semana", pct: 54, index: 160 },
+      ],
+      media: [
+        { label: "Instagram (uso +1x/día)", pct: 55, index: 190 },
+        { label: "TikTok (uso +1x/día)", pct: 43, index: 131 },
+        { label: "Facebook a diario", pct: 22, index: 198 },
+        { label: "Pinterest semanal", pct: 17, index: 244 },
+        { label: "Navegó redes sociales casi todos los días la última semana", pct: 72, index: 161 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Trabajo / estudio", "Correo y mensajería", "Gmail, chat/mensajería", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales y búsqueda de inspiración", "Pinterest, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, TikTok", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Compras online y redes", "E-commerce de moda, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Mensajería y redes", "Facebook Messenger, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
@@ -7413,7 +7668,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_PRESENTAGENERALEVENTOS_GWI_AUTO_20261123],
   },
   {
     id: "deportes",
@@ -7439,7 +7694,7 @@ const CATEGORIES = [
       { id: "sigueMarcas", label: "Sigue marcas o creadores de moda" },
       { id: "sensibilidadPrecio", label: "Alta sensibilidad a precio / reseñas" },
     ],
-    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020],
+    cases: [CASE_RETAIL, CASE_MODA_SUBCULTURA_MEXICO_GWI_AUTO_20260930, CASE_MODA_CHILE_GWI_AUTO_20261004, CASE_MELISSA_USA_GWI_AUTO_20261007, CASE_GSTAR_FASHION_LATAM_GWI_AUTO_20261010, CASE_GSTAR_CATEGORIA_LATAM_GWI_AUTO_20261016, CASE_JAGGER_MODA_BOGOTA_GWI_AUTO_20261020, CASE_DOITE_WANTS_MODA_GWI_AUTO_20261123],
   },
   {
     id: "fintech",
@@ -7452,7 +7707,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_FINTECH_LIVE_EVENT_GWI_AUTO_20261123],
   },
   {
     id: "alcohol",
@@ -7599,4 +7854,7 @@ const PERSONA_RELATED_TRAITS = {
   "usuario-mastercard-colombia": ["usaAppsFin", "migraEfectivo"],
   "usuario-visa-colombia": ["abiertoCambiar", "pruebaMultiples"],
   "entusiasta-cultural-colombia-nacional": ["afinidadGenero", "turismo"],
+  "entusiasta-general-eventos-co": ["afinidadGenero", "turismo"],
+  "profesional-fintech-live-event-co": ["usaAppsFin", "abiertoCambiar"],
+  "fashionista-premium-doite-chile": ["sigueMarcas", "compraOnline"],
 };

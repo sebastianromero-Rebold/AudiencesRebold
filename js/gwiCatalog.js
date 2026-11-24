@@ -313,6 +313,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI el 2026-11-24.
+  { id: "471818ac-585e-4e09-b5e1-a69e80d0c248", title: "Paramo (co) AvengedSevenfold_Bogotanos", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, listen to music to remind them of good memories and lift their mood or to express their individuality, are interested in live events like music festivals, have purchased concert tickets in the last 3-6 months or are planning to purchase concert tickets in the next 3-6 months, like listening to metal, and live in the Capital District." },
+  { id: "1e501827-f460-4e38-a2b5-6faabd2a2bf5", title: "Paramo (co) AvengedSevenfold_Alrededores", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, enjoy listening to music to remind them of good memories and lift their mood or to express their individuality, are interested in live events like music festivals, have purchased concert tickets in the last 3-6 months or are planning to purchase concert tickets in the next 3-6 months, like listening to metal, do not live in the Capital District, and live in Cundinamarca, Boyaca, or Tolima." },
+  { id: "b31e2f74-87c3-47d1-9294-721743e18f62", title: "OMODA>OMODASA>B2C>CIRCUMSTANCES>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +408,10 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-24.
+  "471818ac-585e-4e09-b5e1-a69e80d0c248": { categoryId: "entretenimiento", caseId: "metal-conciertos-bogota-colombia", personaId: "fan-metal-bogota-colombia", analyzedAt: "2026-11-24" },
+  // AvengedSevenfold_Alrededores: procesada y registrada en el mismo caso, pero sin persona propia
+  // (GWI no devolvió ningún dato compatible para ella) -- ver footnotes de metal-conciertos-bogota-colombia en data.js.
+  "1e501827-f460-4e38-a2b5-6faabd2a2bf5": { categoryId: "entretenimiento", caseId: "metal-conciertos-bogota-colombia", personaId: null, analyzedAt: "2026-11-24" },
+  "b31e2f74-87c3-47d1-9294-721743e18f62": { categoryId: "automotriz", caseId: "omoda-circunstancias-chile", personaId: "comprador-ventana-larga-omoda-chile", analyzedAt: "2026-11-24" },
 };

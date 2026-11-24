@@ -7399,6 +7399,195 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — procesados 2026-11-24 por la rutina diaria de GWI.
+// ---------------------------------------------------------------------------
+
+const CASE_METAL_BOGOTA_GWI_AUTO_20261124 = {
+  id: "metal-conciertos-bogota-colombia",
+  name: "Fans de metal en conciertos — Bogotá (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-24)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) AvengedSevenfold_Bogotanos', audience_id 471818ac-585e-4e09-b5e1-a69e80d0c248): colombianos en el Distrito Capital que escuchan música para revivir recuerdos/expresar su individualidad, les interesan los eventos en vivo, ya compraron o planean comprar boletos de concierto, y les gusta el metal.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'AvengedSevenfold_Bogotanos' en GWI (337,552) sobre la población digital de Colombia (31.06M)", pct: 1.1 },
+  ],
+  footnotes: [
+    "1.1% = universo real de GWI (337,552 personas, 100% de la audiencia por definición de sus criterios) sobre la población digital de Colombia (31.06M, MARKETS) — verificado vía explore_insight_gwi.",
+    "Muestra pequeña en GWI para esta audiencia (sample=32) — las cifras de intereses/comportamiento tienen un margen de error más amplio que en audiencias grandes; usar con cautela en decisiones de presupuesto.",
+    "GWI no devolvió desglose de género ni de banda de edad específico de esta audiencia (muestra insuficiente para esa pregunta). El género y la edad del perfil usan como proxy datos reales de GWI Core Colombia para 'personas a quienes les gusta escuchar metal' (población general, no exclusivos de esta audiencia), verificados vía chat_gwi — marcados como '(proxy Colombia)' en el perfil.",
+    "También se buscó procesar la audiencia hermana 'Paramo (co) AvengedSevenfold_Alrededores' (audience_id 1e501827-f460-4e38-a2b5-6faabd2a2bf5, mismo criterio pero fuera de Bogotá D.C. — vive en Cundinamarca, Boyacá o Tolima), pero GWI no devolvió NINGÚN dato compatible para ella (ni demografía, ni intereses) en varios intentos — queda registrada en el manifest como procesada pero sin persona propia en este caso.",
+    "GWI no devolvió franja horaria (time-of-day) específica para esta audiencia — el customer journey queda con lugar/medios genéricos inferidos del perfil, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-metal-bogota-colombia",
+      name: "Camilo Rangel",
+      archetype: "El Metalhead Cultural de Bogotá",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá D.C., escucha música para revivir recuerdos y expresar su individualidad, y ya compró o planea comprar boletos de concierto en los próximos meses. Su fandom metalero convive con un consumo cultural amplio (bellas artes, teatro, arte urbano) y deportes de aventura, además de una actividad digital notablemente alta en temas de política y tecnología online.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia de 'fandom nicho hiperactivo': esta audiencia de metal es pequeña pero mucho más comprometida que el promedio del internauta colombiano, y combina ese fandom musical con consumo cultural amplio (bellas artes, teatro) y una actividad digital desproporcionada en política y tecnología — no es un nicho aislado, sino un público culturalmente activo en varios frentes a la vez.",
+        [
+          { label: "La música no es su único canal cultural", detail: "54% se interesa en bellas artes (índice 119), 60% en teatro (índice 105) y 50% en deportes de aventura/extremos (índice 124) — vale la pena pautar en circuitos culturales alternos (teatros, galerías) además de canales puramente musicales." },
+          { label: "Decisión de compra validada, no impulsiva", detail: "67% investiga productos en línea antes de comprar (índice 125) y 45% busca opinión de expertos antes de compras costosas (índice 143) — el contenido debe dar razones para justificar el gasto (reseñas, line-up, comparativas) antes de un CTA de urgencia." },
+          { label: "X (Twitter) es un canal desproporcionadamente fuerte", detail: "32% usa X más de una vez al día (índice 213), muy por encima de su uso de Instagram (48%, índice 133) o TikTok (46%, índice 138) — un canal que suele descartarse en planes de medios es aquí más del doble de relevante que el promedio." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 65, female: 35 },
+        ageBands: [
+          { label: "16-24", pct: 22 },
+          { label: "25-34", pct: 29 },
+          { label: "35-44", pct: 29 },
+          { label: "45-54", pct: 14 },
+          { label: "55-64", pct: 5.7 },
+          { label: "65+", pct: 0.3 },
+        ],
+        topCities: [{ city: "Bogotá D.C. (Distrito Capital)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en bellas artes (proxy Colombia: audiencia muestra insuficiente)", pct: 54 },
+        { label: "Interesado en deportes de aventura/extremos", pct: 50 },
+        { label: "Interesado en arte urbano/moderno", pct: 52 },
+        { label: "Interesado en teatro", pct: 60 },
+      ],
+      barriers: [
+        { label: "Investiga productos en línea antes de comprar — ciclo de decisión más largo", pct: 67 },
+        { label: "Busca las mejores ofertas / es sensible al precio", pct: 62 },
+        { label: "Busca opinión de expertos antes de compras costosas", pct: 45 },
+        { label: "Usa cupones o códigos de descuento", pct: 34 },
+      ],
+      digitalInterests: [
+        { label: "Publicó sobre política online el último mes", index: 275 },
+        { label: "Pagó suscripción de streaming de música el último mes", index: 220 },
+        { label: "Publicó su opinión sobre música online el último mes", index: 180 },
+        { label: "Usa internet para gaming", index: 140 },
+      ],
+      media: [
+        { label: "Streaming/on-demand el último mes", pct: 100 },
+        { label: "TV en vivo el último mes", pct: 91 },
+        { label: "Pagó suscripción de streaming de video/TV el último mes", pct: 74 },
+        { label: "Instagram más de una vez al día", pct: 48 },
+        { label: "TikTok más de una vez al día", pct: 46 },
+        { label: "X (Twitter) más de una vez al día", pct: 32 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes sociales", "Instagram, X", "Sin franja horaria específica reportada por GWI para esta audiencia.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Streaming de música", "Spotify / Apple Music", "Sin franja horaria específica reportada por GWI para esta audiencia.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, X", "Sin franja horaria específica reportada por GWI para esta audiencia.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "X y foros de opinión", "X, Reddit", "Alta actividad en conversación sobre música/política — contenido de opinión o detrás de cámaras.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TikTok e Instagram", "TikTok, Instagram", "Sin franja horaria específica reportada por GWI para esta audiencia.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bares", "TV y streaming", "TV en vivo, streaming de video", "91% vio TV en vivo y el 100% consumió streaming/on-demand en el último mes — ventana de alta cobertura en video.", []),
+      ],
+    },
+  ],
+};
+
+const CASE_OMODA_CIRCUNSTANCIAS_GWI_AUTO_20261124 = {
+  id: "omoda-circunstancias-chile",
+  name: "Compradores de auto en ventana larga de decisión (OMODA, Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-24)",
+  insightNote:
+    "Audiencia real de GWI ('OMODA>OMODASA>B2C>CIRCUMSTANCES>CHILE', audience_id b31e2f74-87c3-47d1-9294-721743e18f62): segmento mucho más amplio que el ya procesado 'OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE' (caso omoda-alta-propension-chile), construido por circunstancias de vida en vez de alta propensión inmediata de compra.",
+  funnelSteps: [
+    { label: "Universo real de la audiencia 'CIRCUMSTANCES' en GWI (12.62M) sobre la población digital de Chile (15.6M)", pct: 80.9 },
+  ],
+  footnotes: [
+    "80.9% = universo real de GWI (6,317,039 mujeres + 6,306,845 hombres = 12,623,884) sobre la población digital de Chile (15.6M, MARKETS) — verificado vía explore_insight_gwi sobre la pregunta de género.",
+    "Esta audiencia es mucho más amplia que 'OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE' (ya procesada, caso omoda-alta-propension-chile) — se deja como caso independiente porque responde a una lógica de segmentación distinta (circunstancias de vida, no propensión de compra); el equipo editorial puede decidir si se usan en etapas distintas del funnel de medios (alcance amplio vs. conversión).",
+    "GWI no devolvió desglose de ciudades para esta audiencia, solo tipo de zona (urbana/suburbana/rural); tampoco devolvió banda de edad 65+.",
+    "El bloque horario del customer journey usa datos reales de GWI sobre franjas de consumo de TV internacional entre espectadores frecuentes de esta audiencia (21.4% en 6-9am, 52.9% en 2-5pm, 61.8% en 5-7pm, 72% en 7-10pm, 62.9% en 10pm-medianoche, verificados vía explore_insight_gwi); 'Final de la mañana' y 'Medio día' quedan con lugar/medios genéricos porque GWI no reportó franja horaria para ese tramo.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "comprador-ventana-larga-omoda-chile",
+      name: "Francisca Muñoz",
+      archetype: "La Evaluadora en Ventana Larga",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive mayoritariamente en zona urbana de Chile (79%), dividida casi en partes iguales entre hombres y mujeres, y concentrada en el rango 25-54 años. A diferencia del segmento de alta propensión inmediata, su intención de compra de auto se extiende a 7-12 meses y hasta 2 años — no busca comprar ya, pero sí está evaluando activamente, investiga marcas online y sigue siendo leal a Chevrolet como primera opción.",
+      aiInsight: aiInsight(
+        "Cruza con la tensión entre 'intención de compra a mediano plazo' y 'resistencia a la electrificación': esta audiencia circunstancial (no de alta propensión inmediata) tiene más intención de comprar auto en 7-12 meses y en los próximos 2 años que el promedio, pero sigue firmemente anclada a la gasolina y es fuertemente leal a Chevrolet como marca top — la oportunidad de OMODA no es solo vender el auto, sino desplazar una lealtad de marca ya establecida dentro de una ventana de decisión que todavía no se ha cerrado.",
+        [
+          { label: "La ventana de decisión es de mediano plazo, no inmediata", detail: "24% planea comprar auto/van en 7-12 meses (índice 161) y 23% en los próximos 2 años (índice 139) — la pauta debe sostenerse en el tiempo (nurture) y no depender solo de CTAs de urgencia de corto plazo." },
+          { label: "Chevrolet es el principal competidor a vencer", detail: "24% nombra a Chevrolet como su marca top de compra (índice 300) — cualquier estrategia de conquista debe compararse directamente contra Chevrolet, no solo posicionar OMODA en abstracto." },
+          { label: "Resistencia real a la electrificación", detail: "Solo 8.9% considera un eléctrico (índice 40) y 15% un híbrido (índice 56), mientras 61% prefiere gasolina (índice 115) — el mensaje de producto debe liderar con gasolina/diésel hoy, dejando la narrativa EV para una etapa posterior del funnel." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 50, female: 50 },
+        ageBands: [
+          { label: "16-24", pct: 18 },
+          { label: "25-34", pct: 25 },
+          { label: "35-44", pct: 24 },
+          { label: "45-54", pct: 19 },
+          { label: "55-64", pct: 15 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [
+          { city: "Zona urbana", pct: 79 },
+          { city: "Zona suburbana", pct: 12 },
+          { city: "Zona rural", pct: 9.9 },
+        ],
+      },
+      motivations: [
+        { label: "Planea comprar auto/van en los próximos 7-12 meses", pct: 24 },
+        { label: "Planea comprar auto/van en los próximos 2 años", pct: 23 },
+        { label: "Interesado en tecnología", pct: 58 },
+        { label: "Investiga productos en internet antes de comprar", pct: 51 },
+      ],
+      barriers: [
+        { label: "No planea comprar auto/van (parte del segmento aún sin intención activa)", pct: 23 },
+        { label: "Nombra a Chevrolet como su marca top de compra (lealtad a la competencia)", pct: 24 },
+        { label: "Baja consideración de vehículos eléctricos", pct: 8.9 },
+        { label: "Confía poco en las reseñas online", pct: 30 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en tecnología", index: 140 },
+        { label: "Usa redes sociales para investigar marcas/productos", index: 133 },
+        { label: "Descubre marcas por recomendaciones en redes sociales", index: 130 },
+        { label: "Compra productos tech apenas salen al mercado", index: 65 },
+      ],
+      media: [
+        { label: "TV en vivo el último mes", pct: 93 },
+        { label: "Netflix el último mes", pct: 70 },
+        { label: "Instagram más de una vez al día", pct: 48 },
+        { label: "Heavy user de streaming (Netflix/Hulu)", pct: 37 },
+        { label: "Facebook a diario", pct: 22 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV internacional", "TV", "21.4% ve TV internacional en este bloque (28% menos probable que el promedio) — baja prioridad de pauta en este tramo.", [
+          { label: "Ve TV internacional (6-9am)", pct: 21.4, index: 72 },
+        ]),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Navegación general", "Smartphone, laptop", "Sin franja horaria específica reportada por GWI para este bloque.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina", "Redes sociales", "Instagram, Facebook", "Sin franja horaria específica reportada por GWI para este bloque.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "TV", "52.9% ve TV internacional entre 2-5pm (índice 116) — ventana de contenido de producto/comparativas.", [
+          { label: "Ve TV internacional (2-5pm)", pct: 52.9, index: 115.7 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "TV", "61.8% ve TV internacional entre 5-7pm (índice 116) — CTA con comparativa frente a Chevrolet.", [
+          { label: "Ve TV internacional (5-7pm)", pct: 61.8, index: 115.8 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional y streaming", "TV, Netflix", "72% ve TV internacional en prime time 7-10pm (índice 115) y 62.9% entre 10pm-medianoche (índice 144) — doble ventana de mayor alcance.", [
+          { label: "Ve TV internacional (7-10pm, prime time)", pct: 72, index: 115.4 },
+          { label: "Ve TV internacional (10pm-medianoche)", pct: 62.9, index: 144.3 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7602,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_METAL_BOGOTA_GWI_AUTO_20261124],
   },
   {
     id: "deportes",
@@ -7478,7 +7667,7 @@ const CATEGORIES = [
       { id: "investigaOnlineAntes", label: "Investiga activamente online antes de comprar" },
       { id: "prioridadFamiliar", label: "Prioriza espacio y seguridad familiar" },
     ],
-    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019],
+    cases: [CASE_AUTOMOTRIZ, CASE_COLOMBIA_VEHICULO_GWI_AUTO_20260924, CASE_OMODA_CHILE_GWI_AUTO_20261019, CASE_OMODA_CIRCUNSTANCIAS_GWI_AUTO_20261124],
   },
   {
     id: "consumer-tech",

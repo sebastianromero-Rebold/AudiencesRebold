@@ -313,6 +313,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI el 2026-11-25.
+  { id: "b5ac3735-cc6c-4733-a4d0-78b75726ea8e", title: "REBOLDCL>Fintechile>Eligefintech>Stakeholders", client: "REBOLDCL", type: "shared", datasets: ["ds-core"], description: "" },
+  { id: "471818ac-585e-4e09-b5e1-a69e80d0c248", title: "Paramo (co) AvengedSevenfold_Bogotanos", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, listen to music to remind them of good memories and lift their mood or to express their individuality, are interested in live events like music festivals, have purchased concert tickets in the last 3-6 months or are planning to purchase concert tickets in the next 3-6 months, like listening to metal, and live in the Capital District." },
+  { id: "e611abbb-570a-4d84-8b5b-4a012130888c", title: "Páramo (co) Bunbury26_Cali", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, listen to music to remind them of good memories and lift their mood or support their favorite artists, have purchased or are planning to purchase concert tickets in the next 3-6 months or are interested in live events like music festivals, like listening to rock music, and live in Valle del Cauca." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +408,8 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-25.
+  "b5ac3735-cc6c-4733-a4d0-78b75726ea8e": { categoryId: "fintech", caseId: "fintechile-stakeholders-chile", personaId: "ejecutivo-fintechile-chile", analyzedAt: "2026-11-25" },
+  "471818ac-585e-4e09-b5e1-a69e80d0c248": { categoryId: "entretenimiento", caseId: "avenged-sevenfold-bogota-colombia", personaId: "fan-metal-avengedsevenfold-bogota", analyzedAt: "2026-11-25" },
+  "e611abbb-570a-4d84-8b5b-4a012130888c": { categoryId: "entretenimiento", caseId: "bunbury-2026-cali-colombia", personaId: "fan-rock-bunbury-cali", analyzedAt: "2026-11-25" },
 };

@@ -7399,6 +7399,259 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Stakeholders fintech ejecutivos, Chile, procesado 2026-11-25.
+// ---------------------------------------------------------------------------
+const CASE_FINTECHILE_STAKEHOLDERS_GWI_AUTO_20261125 = {
+  id: "fintechile-stakeholders-chile",
+  name: "Ejecutivos y tomadores de decisión del sector financiero (Chile)",
+  market: "CHL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-25)",
+  insightNote:
+    "Audiencia real de GWI ('REBOLDCL>Fintechile>Eligefintech>Stakeholders', audience_id b5ac3735-cc6c-4733-a4d0-78b75726ea8e): profesionales full/part-time, independientes o freelance que residen en Chile, trabajan en gobierno, banca, servicios financieros/inversión o medios/periodismo/publicaciones, y ocupan cargos de management, dirección senior o ejecutiva.",
+  funnelSteps: [
+    {
+      label:
+        "Ejecutivos, directores senior o mandos medios en gobierno, banca, servicios financieros/inversión o medios, Chile (universo real GWI: 55,771 sobre 15.6M de Chile)",
+      pct: 0.36,
+    },
+  ],
+  footnotes: [
+    "0.36% = universo real de GWI para esta audiencia (55,771, verificado vía explore_insight_gwi) sobre la población digital de Chile (15.6M, ya usada en MARKETS).",
+    "GWI no devolvió desglose exclusivo de género, edad detallada por bandas ni ciudades para esta audiencia específica (solo confirmó que el 100% está en el rango 16-64, índice 101.6) — el género (52% hombres / 49% mujeres, redondeado a 52/48) usa como proxy la población general de ejecutivos/mandos senior/dirección en Chile (sin restricción de sector), verificada vía chat_gwi, y debe leerse como referencia, no como dato exclusivo de esta audiencia.",
+    "Motivaciones, intereses digitales, canales de descubrimiento de marca y medios sí son datos exclusivos y reales de esta audiencia, verificados vía chat_gwi.",
+    "GWI no devolvió barreras o hesitaciones de compra exclusivas para esta audiencia pese a varios intentos con preguntas distintas — se deja el bloque de barreras vacío en vez de inventar una cifra.",
+    "GWI no devolvió comportamiento por momento del día para esta audiencia (respuesta explícita: no reporta franjas horarias) — el customer journey queda con lugar/medios genéricos inferidos del perfil ejecutivo, sin cifras de actividades inventadas.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "ejecutivo-fintechile-chile",
+      name: "Francisco Aránguiz",
+      archetype: "El Ejecutivo Financiero Conectado",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Ejecutivo, director senior o mando medio en Chile, trabaja en gobierno, banca, servicios financieros/inversión o medios. Tiene alto interés declarado en economía y finanzas, descubre marcas tanto por canales editoriales tradicionales (prensa, revistas) como digitales, y está activamente tomando decisiones financieras grandes (hipotecas, seguros).",
+      aiInsight: aiInsight(
+        "Cruza el alto interés en economía y finanzas (73%, 108% más probable que el promedio) con una sorprendente fortaleza de medios editoriales tradicionales (39% descubre marcas en prensa escrita o revistas, 279% más probable) — esta audiencia ejecutiva no vive solo en redes sociales, sigue leyendo prensa especializada como fuente de credibilidad de marca, algo poco común en audiencias más jóvenes de este mismo dataset.",
+        [
+          { label: "La prensa escrita y las revistas siguen siendo un canal de descubrimiento clave", detail: "39% descubre marcas a través de notas en periódicos o revistas — 279% más probable que el promedio de trabajadores full/part-time. Para una marca fintech que busca credibilidad entre decisores, el contenido editorial (notas de prensa, columnas de opinión) pesa más que en la población general." },
+          { label: "Los patrocinios deportivos conectan mejor que la pauta digital genérica", detail: "28% descubre marcas por patrocinios deportivos (164% más probable) — vale la pena evaluar activaciones ligadas a eventos deportivos premium en vez de depender solo de pauta programática." },
+          { label: "Alta propensión a productos financieros complejos en curso", detail: "18% compró una hipoteca en los últimos 3-6 meses (367% más probable) y 12% compró seguro de vivienda (708% más probable) — esta audiencia está activamente tomando decisiones financieras grandes, un momento de alta relevancia para productos de gestión patrimonial o banca privada." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 52, female: 48 },
+        ageBands: [{ label: "16-64 (sin desglose más granular de GWI para esta audiencia)", pct: 100 }],
+        topCities: [],
+      },
+      motivations: [
+        { label: "Motivado a recomendar su marca favorita online por conocimiento exclusivo de la marca/producto", pct: 35 },
+        { label: "Motivado a recomendar su marca favorita cuando es relevante para sus intereses personales", pct: 44 },
+        { label: "Motivado por acceso a contenido o servicios exclusivos", pct: 24 },
+        { label: "Interesado en economía y finanzas", pct: 73 },
+      ],
+      barriers: [],
+      digitalInterests: [
+        { label: "Interés en economía/finanzas", index: 208 },
+        { label: "Interés en idiomas extranjeros", index: 214 },
+        { label: "Interés en viajes", index: 179 },
+        { label: "Interés en bellas artes", index: 197 },
+      ],
+      media: [
+        { label: "Usa TV set para ver TV en vivo", pct: 88 },
+        { label: "Usa TV set para TV on-demand/streaming", pct: 74 },
+        { label: "Heavy user de streaming", pct: 34 },
+        { label: "Heavy user de radio", pct: 29 },
+        { label: "Heavy user de podcasts", pct: 26 },
+        { label: "Descubre marcas a través de sitios web de marca", pct: 45 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Prensa y radio", "Radio, apps de noticias", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina", "TV y sitios web de marca", "TV abierta, websites", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Podcasts y prensa", "Podcasts, prensa digital", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Oficina / transporte", "Radio y redes", "Radio, LinkedIn/redes profesionales", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV en vivo", "TV abierta", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y TV on-demand", "Streaming, TV on-demand", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fans de Avenged Sevenfold en Bogotá, procesado 2026-11-25.
+// ---------------------------------------------------------------------------
+const CASE_AVENGED_SEVENFOLD_BOGOTA_GWI_AUTO_20261125 = {
+  id: "avenged-sevenfold-bogota-colombia",
+  name: "Fans del metal en concierto de Avenged Sevenfold (Bogotá)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-25)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) AvengedSevenfold_Bogotanos', audience_id 471818ac-585e-4e09-b5e1-a69e80d0c248): bogotanos que escuchan música para evocar buenos recuerdos, levantar el ánimo o expresar su individualidad, están interesados en eventos en vivo, ya compraron o planean comprar boletos de concierto, y les gusta el metal.",
+  funnelSteps: [
+    {
+      label:
+        "Bogotanos fans del metal con intención real de compra de boletos de concierto (universo GWI: 337,552)",
+      pct: 1.09,
+    },
+  ],
+  footnotes: [
+    "1.09% = universo real de esta audiencia en GWI (337,552, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "GWI solo confirmó edad en rangos amplios (100% entre 16-64, 93% de 21+) sin desglose por bandas de 10 años, y no devolvió género exclusivo de esta audiencia — el género (63% hombres/37% mujeres) usa como proxy una definición más amplia (bogotanos que gustan del metal e interés en eventos en vivo, sin el filtro de intención de compra de boletos), verificada vía chat_gwi, y debe leerse como referencia, no como dato exclusivo.",
+    "GWI no devolvió barreras de compra exclusivas para esta audiencia pese a varios intentos con preguntas distintas — se deja el bloque de barreras vacío en vez de inventar una cifra.",
+    "GWI no devolvió comportamiento por momento del día para esta audiencia (respuesta explícita: no reporta franjas horarias) — el customer journey queda con lugar/medios genéricos, sin cifras de actividades inventadas.",
+    "La audiencia hermana 'Paramo (co) AvengedSevenfold_Alrededores' (audience_id 1e501827-f460-4e38-a2b5-6faabd2a2bf5, mismo concierto pero residentes de Cundinamarca/Boyacá/Tolima) no devolvió NINGÚN dato compatible en chat_gwi (demografía, motivaciones) pese a varios intentos — queda fuera de este caso y NO se agregó al manifest como procesada, para que una corrida futura pueda reintentarla.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-metal-avengedsevenfold-bogota",
+      name: "Juan David Ortiz",
+      archetype: "El Metalero Urbano Comprometido",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Bogotano que escucha música para evocar buenos recuerdos, levantar el ánimo o expresar su individualidad. Ya compró boletos para el concierto de Avenged Sevenfold o planea hacerlo en los próximos 3-6 meses. Es una audiencia vocal en redes (opina de política, vida nocturna, tecnología) y con un consumo social activo más allá de la música.",
+      aiInsight: aiInsight(
+        "Cruza la búsqueda constante de nuevos eventos en vivo (37%, 131% más probable que el promedio) con un patrón de publicación social muy por encima del promedio en temas de vida nocturna, bebidas alcohólicas y política — el metalero bogotano no es una audiencia pasiva de nicho, es un publicador activo y vocal que puede amplificar una campaña orgánicamente si el contenido conecta con su identidad real.",
+        [
+          { label: "La vida nocturna y el consumo social son parte de su identidad digital", detail: "20% publicó sobre bebidas alcohólicas en el último mes (369% más probable) y 14% sobre vida nocturna/socialización (199% más probable) — activaciones ligadas a bares o after-party post-concierto pueden generar más eco digital que el evento solo." },
+          { label: "Son una audiencia con opinión pública fuerte", detail: "29% publicó sobre política en el último mes (275% más probable) — el tono de marca debe sentirse auténtico y sin miedo a cierto filo editorial, evitando mensajes corporativos genéricos." },
+          { label: "Tablet y streaming premium sugieren poder adquisitivo medio-alto", detail: "54% tiene tablet (113% más probable) y 49% es heavy user de streaming tipo Netflix/Hulu (58% más probable) — vale la pena pautar en plataformas de streaming premium, no solo en redes sociales tradicionales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 63, female: 37 },
+        ageBands: [{ label: "16-64 (GWI solo confirmó 93% de 21+, sin desglose por bandas de 10 años)", pct: 100 }],
+        topCities: [{ city: "Bogotá (criterio de definición de la audiencia, sin desagregación adicional de GWI)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en eventos en vivo como festivales de música", pct: 100 },
+        { label: "Creen que la música puede ser un agente poderoso de cambio social", pct: 86 },
+        { label: "Siempre buscan nuevos eventos de música en vivo", pct: 37 },
+        { label: "Apoyan a artistas locales / van a shows locales", pct: 51 },
+      ],
+      barriers: [],
+      digitalInterests: [
+        { label: "Publicó sobre bebidas alcohólicas en el último mes", index: 469 },
+        { label: "Publicó sobre política en el último mes", index: 375 },
+        { label: "Pagó por una suscripción de revista online", index: 391 },
+        { label: "Publicó opiniones sobre vida nocturna/socialización", index: 299 },
+      ],
+      media: [
+        { label: "Posee tablet", pct: 54 },
+        { label: "Heavy user de streaming (Netflix/Hulu)", pct: 49 },
+        { label: "Heavy user de TV abierta", pct: 40 },
+        { label: "Heavy user de radio", pct: 33 },
+        { label: "Posee smartphone", pct: 100 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Radio y redes", "Radio, Instagram", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / universidad", "TV abierta", "TV abierta", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Tablet y streaming", "Tablet, apps de streaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV abierta y radio", "TV abierta, radio", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa / bares", "Streaming y redes", "Netflix/streaming, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Fans de Bunbury en Cali (Valle del Cauca), procesado 2026-11-25.
+// Contraparte geográfica del caso ya analizado para Bogotá
+// (bunbury-2026-bogota-colombia, procesado 2026-10-14) — mismo artista/gira.
+// ---------------------------------------------------------------------------
+const CASE_BUNBURY_CALI_GWI_AUTO_20261125 = {
+  id: "bunbury-2026-cali-colombia",
+  name: "Concierto de Bunbury en Cali (rock en español)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-25)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) Bunbury26_Cali', audience_id e611abbb-570a-4d84-8b5b-4a012130888c): residentes de Valle del Cauca que escuchan música para evocar buenos recuerdos o levantar el ánimo, les gusta el rock, y ya compraron o planean comprar boletos de concierto.",
+  funnelSteps: [
+    {
+      label:
+        "Residentes de Valle del Cauca, fans del rock con intención real de compra de boletos (universo GWI: 279,012)",
+      pct: 0.9,
+    },
+  ],
+  footnotes: [
+    "0.90% = universo real de esta audiencia en GWI (279,012, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "Género y edad verificados 1:1 vía explore_insight_gwi/chat_gwi — las bandas de edad reportadas suman ~100.7% por redondeo independiente de cada pregunta de GWI, no por un error de carga.",
+    "GWI no devolvió comportamiento por momento del día para esta audiencia (respuesta explícita: no reporta franjas horarias) — el customer journey usa lugares/medios genéricos, sin cifras de actividades inventadas.",
+    "Este caso es la contraparte geográfica (Valle del Cauca/Cali) del concierto de Bunbury ya analizado para Bogotá ('bunbury-2026-bogota-colombia', procesado 2026-10-14) — mismo artista y gira, audiencia real de GWI distinta.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-rock-bunbury-cali",
+      name: "Juliana Cárdenas",
+      archetype: "La Rockera Nostálgica del Valle",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Valle del Cauca, escucha rock para evocar buenos recuerdos y levantar el ánimo, y es apasionada por un amplio rango de artistas y bandas. Ya compró boletos de concierto o planea hacerlo en los próximos 3-6 meses. Combina un perfil musical nostálgico con un comportamiento digital tech-forward (gaming, gadgets).",
+      aiInsight: aiInsight(
+        "Cruza el alto interés en eventos en vivo (92%, 138% más probable) y la búsqueda activa de nuevos shows (28%, 277% más probable) con un interés en gadgets e interés en gaming muy por encima del promedio — el fan de rock en español del Valle no es una audiencia 'retro', es tan digital/tech-forward como cualquier audiencia urbana joven, solo que canaliza ese comportamiento hacia descubrir shows en vivo en vez de solo consumir contenido pasivo.",
+        [
+          { label: "Early adopters dentro del género", detail: "28% siempre está buscando nuevos eventos de música en vivo (277% más probable) — contenido de 'sé el primero en enterarte' (preventas exclusivas, anuncios tempranos) puede convertir mejor que un anuncio genérico de venta general." },
+          { label: "Gamers y early adopters de tecnología", detail: "48% usa internet para gaming (36% más probable) y 28% está interesado en gadgets (137% más probable) — vale la pena explorar colaboraciones con plataformas de gaming/streaming en vez de asumir que el rock en español solo vive en canales tradicionales." },
+          { label: "Decisión de compra reflexiva pese al alto interés", detail: "91% prefiere ahorrar y esperar antes de comprar un producto — aunque el interés en el show es altísimo (92%), la comunicación debe dar tiempo y razones (planes de pago, anticipación) en vez de depender solo de urgencia de último minuto." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 45.7, female: 54.3 },
+        ageBands: [
+          { label: "16-24", pct: 24 },
+          { label: "25-34", pct: 30 },
+          { label: "35-44", pct: 31 },
+          { label: "45-54", pct: 12 },
+          { label: "55-64", pct: 3.7 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesados en eventos en vivo como festivales de música", pct: 92 },
+        { label: "Prefieren escuchar un amplio rango de canciones de los artistas que les apasionan", pct: 80 },
+        { label: "Pasionados por un amplio rango de artistas/bandas musicales", pct: 71 },
+        { label: "Siempre están buscando nuevos eventos de música en vivo", pct: 28 },
+      ],
+      barriers: [
+        { label: "Prefieren ahorrar y esperar antes de comprar un producto", pct: 91 },
+      ],
+      digitalInterests: [
+        { label: "Interés en gadgets tecnológicos", index: 237 },
+        { label: "Usa redes sociales para ver qué es tendencia", index: 200 },
+        { label: "Publicó opinión sobre tecnología online", index: 160 },
+        { label: "Usa internet para gaming", index: 136 },
+      ],
+      media: [
+        { label: "Usa smartphone para acceder a internet", pct: 98 },
+        { label: "Heavy user de streaming (Netflix/Hulu)", pct: 45 },
+        { label: "Heavy user de TV abierta", pct: 31 },
+        { label: "Usa Android en su smartphone", pct: 93 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y smartphone", "Instagram, smartphone", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / universidad", "Gaming y redes", "Apps de gaming, redes sociales", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, X", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Streaming y gaming", "Apps de streaming, gaming", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV abierta", "TV abierta", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming", "Netflix/streaming", "Sin dato específico de GWI para este bloque horario.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7666,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_AVENGED_SEVENFOLD_BOGOTA_GWI_AUTO_20261125, CASE_BUNBURY_CALI_GWI_AUTO_20261125],
   },
   {
     id: "deportes",
@@ -7452,7 +7705,7 @@ const CATEGORIES = [
       { id: "abiertoCambiar", label: "Abierto a cambiar de proveedor" },
       { id: "migraEfectivo", label: "Viene de efectivo / banca tradicional" },
     ],
-    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021],
+    cases: [CASE_FINTECH, CASE_FINTECH_GWI_AUTO_20260924, CASE_INCLUSION_FINANCIERA_GWI_AUTO_20260928, CASE_MICROEMPRESARIOS_GWI_AUTO_20260929, CASE_COMERCIANTES_PAGOS_COLOMBIA_GWI_AUTO_20260930, CASE_CREDIMINUTO_GWI_AUTO_20261006, CASE_EJECUTIVOS_PAGOS_COLOMBIA_GWI_AUTO_20261007, CASE_USANFRANQUICIAS_GWI_AUTO_20261005, CASE_FINTECH_LATAM_GWI_AUTO_20261015, CASE_USANFRANQUICIAS_MASTERCARD_VISA_GWI_AUTO_20261017, CASE_AHORRADORES_SIN_BANCO_GWI_AUTO_20261018, CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021, CASE_FINTECHILE_STAKEHOLDERS_GWI_AUTO_20261125],
   },
   {
     id: "alcohol",

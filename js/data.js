@@ -4206,21 +4206,22 @@ const CASE_EVENTOS_URBANOS_GWI_AUTO_20260925 = {
 
 const CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927 = {
   id: "carlos-vives-fans-bogota-colombia",
-  name: "Fans de Carlos Vives en Bogotá (Colombia)",
+  name: "Fans de Carlos Vives en Bogotá (Colombia) — con y sin hijos en el hogar",
   market: "COL",
   source: "gwi-auto-draft",
   sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-09-27)",
   insightNote:
-    "Audiencia real de GWI ('Páramo (co) CarlosVives_Bogotanos', audience_id f3d79096-700e-4a23-8950-2d70da628c41): bogotanos sin hijos de 6 a 18 años, apasionados por un rango amplio de artistas de música latina/rock, interesados en eventos en vivo y que compraron o planean comprar boletos de concierto.",
+    "Combina 2 audiencias reales de GWI, mutuamente excluyentes por diseño: 'Páramo (co) CarlosVives_Bogotanos' (f3d79096-700e-4a23-8950-2d70da628c41, sin hijos de 6 a 18 años) y 'Páramo (co) CarlosVives_BogHijos' (29736513-9ca7-4adc-92ff-262c11415ea8, con hijos de 6 a 18 años) — ambas bogotanas/cundinamarquesas apasionadas por un rango amplio de artistas de música latina/rock, interesadas en eventos en vivo y que compraron o planean comprar boletos de concierto.",
   funnelSteps: [
-    { label: "Universo real de la audiencia 'CarlosVives_Bogotanos' en GWI (615,796) sobre la población digital de Colombia (31.06M)", pct: 2 },
+    { label: "Universo combinado de las audiencias reales 'CarlosVives_Bogotanos' (615,796) + 'CarlosVives_BogHijos' (1,132,764) = 1,748,560, sobre la población digital de Colombia (31.06M)", pct: 5.6 },
   ],
   footnotes: [
-    "2% ≈ universo real de la audiencia en GWI (615,796, verificado vía explore_insight_gwi sobre la pregunta de género) sobre la población digital total de Colombia (31.06M, ya usada en MARKETS).",
-    "Demografía, motivaciones, barreras, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi/explore_insight_gwi.",
-    "GWI solo devolvió con muestra suficiente 3 bandas de edad (25-34: 23.2%, 45-54: 27.5%, 55-64: 25.5%, que suman 76.2%); las bandas 16-24, 35-44 y 65+ no tuvieron muestra suficiente para desagregarse y se dejan en 0 en vez de inventar un valor.",
-    "Top ciudades: la audiencia está definida por GWI como residente del Distrito Capital (Bogotá), así que la ciudad es 100% Bogotá D.C. por definición de la propia audiencia, no un dato adicional descubierto.",
-    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "615,796 (sin hijos) + 1,132,764 (con hijos) = 1,748,560 → 5.6% de la población digital de Colombia (31.06M, MARKETS) — ambos universos verificados vía explore_insight_gwi.",
+    "Demografía, motivaciones, barreras, intereses digitales y medios de ambas personas tomados 1:1 de su propia audiencia real vía chat_gwi/explore_insight_gwi.",
+    "GWI solo devolvió con muestra suficiente 3 bandas de edad para 'Manuela Cárdenas' (sin hijos) (25-34: 23.2%, 45-54: 27.5%, 55-64: 25.5%, que suman 76.2%); las bandas 16-24, 35-44 y 65+ no tuvieron muestra suficiente para desagregarse y se dejan en 0 en vez de inventar un valor.",
+    "Top ciudades: ambas audiencias están definidas por GWI como residentes del Distrito Capital o Cundinamarca, así que la ciudad es 100%/93% por definición/composición de la propia audiencia, no un dato adicional descubierto.",
+    "Actualización 2026-11-27: se añadió la persona 'Catalina Delgado' (con hijos de 6 a 18 años) a partir de la segunda audiencia real de GWI, complementaria y mutuamente excluyente de la ya procesada — por eso se combinan en un mismo caso con 2 personas en vez de 2 casos separados. El sharePct de cada persona refleja el peso real de su universo GWI dentro del universo combinado (no es un supuesto editorial).",
+    "La cita de ambas personas es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
     "Borrador generado automáticamente — pendiente de revisión editorial.",
   ],
   personas: [
@@ -4239,7 +4240,7 @@ const CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927 = {
           { label: "Es una consumidora heavy de streaming, no solo de redes", detail: "Índice 138 en heavy user de streaming de música e índice 137 en streaming de video tipo Netflix — vale la pena activar pauta también dentro de esos entornos (audio ads, video pre-roll), no únicamente en redes sociales." },
         ]
       ),
-      sharePct: 100,
+      sharePct: 35.2,
       demographics: {
         genderSplit: { male: 40.1, female: 59.9 },
         ageBands: [
@@ -4284,6 +4285,77 @@ const CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927 = {
         daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook, TikTok", "Recordatorio de preventa / checkout simplificado.", []),
         daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "CTA directo a compra con checkout de un clic.", []),
         daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Disney+, Instagram", "Últimas entradas / urgencia de compra.", []),
+      ],
+    },
+    {
+      id: "fan-carlosvives-boghijos-bogota",
+      name: "Catalina Delgado",
+      archetype: "La Melómana con Familia",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá o Cundinamarca y tiene hijos entre 6 y 18 años en el hogar. Comparte con 'la Melómana Bogotana' el gusto por una amplia variedad de música latina y rock y el interés casi unánime en ir a eventos en vivo (85%), pero su decisión de compra está condicionada por el presupuesto familiar: 57% no viajó al extranjero en el último año, y para el 87% pasar tiempo en familia es una prioridad explícita — el concierto compite con otras prioridades de gasto familiar, no solo con otros planes de ocio individual.",
+      aiInsight: aiInsight(
+        "Cruza con la tensión entre aspiración cultural y presupuesto familiar ajustado: 85% de este segmento está interesado en eventos en vivo y tiene un interés por encima del promedio en teatro, pero 57% no tomó vacaciones en el extranjero el último año — el concierto debe venderse como el 'plan familiar accesible', no como un lujo individual, y el mensaje de 'tiempo en familia' (87% lo valora) pesa más que el artista en sí.",
+        [
+          { label: "El verdadero producto es el tiempo en familia, no solo el concierto", detail: "87% de este segmento considera importante pasar tiempo con la familia — muy por encima del resto de la categoría — un combo familiar (boletos niño+adulto, zona familiar) puede convertir mejor que un mensaje centrado solo en el artista." },
+          { label: "El presupuesto de ocio ya está comprometido en viajes nacionales", detail: "57% no viajó al extranjero en los últimos 12 meses, pero 31% hizo entre 3 y 4 viajes dentro de Colombia — el gasto discrecional en ocio existe, pero se dirige a planes domésticos; posicionar el concierto junto a un paquete de 'plan nacional' puede competir mejor que posicionarlo contra un viaje internacional." },
+          { label: "Teatro y Airbnb como señales de un consumo cultural y de experiencias más amplio", detail: "Índice 160 en interés por teatro y 173 en uso de Airbnb el último mes — sugiere un segmento que ya gasta en experiencias curadas, no solo en entretenimiento masivo; vale la pena explorar alianzas con experiencias culturales complementarias al concierto." },
+        ]
+      ),
+      sharePct: 64.8,
+      demographics: {
+        genderSplit: { male: 45, female: 55 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 27 },
+          { label: "35-44", pct: 40 },
+          { label: "45-54", pct: 26 },
+          { label: "55-64", pct: 5.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Distrito Capital (Bogotá) y Cundinamarca — 93% zona urbana (composición de la propia audiencia)", pct: 93 }],
+      },
+      motivations: [
+        { label: "Considera importante pasar tiempo en familia", pct: 87 },
+        { label: "Recomienda marcas por productos de alta calidad", pct: 67 },
+        { label: "Recomienda marcas por las recompensas", pct: 52 },
+        { label: "Recomienda marcas tras recibir excelente atención al cliente", pct: 49 },
+      ],
+      barriers: [
+        { label: "No tomó vacaciones en el extranjero en los últimos 12 meses — presupuesto de ocio ya comprometido", pct: 57 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en teatro", index: 160 },
+        { label: "Interesada en museos/galerías", index: 133 },
+        { label: "Usó Airbnb en el último mes", index: 173 },
+      ],
+      media: [
+        { label: "Heavy user de servicios de streaming (Netflix, Hulu)", pct: 40 },
+        { label: "Heavy user de radio", pct: 36 },
+        { label: "Escucha playlists creadas por una plataforma musical", pct: 42 },
+        { label: "Heavy user de podcasts", pct: 32 },
+        { label: "Redes sociales para ver contenido de marcas favoritas", pct: 33 },
+        { label: "Prensa/revistas impresas, uso medio", pct: 23 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV internacional", "Canales de TV internacional", "Pauta temprana entre semana en TV internacional.", [
+          { label: "Ve TV internacional (entre semana)", pct: 25, index: 102 },
+        ]),
+        daypart("Final de la mañana", "9 a 12 m", "Casa (fin de semana)", "TV internacional", "Canales de TV internacional", "Consumo de TV internacional en fin de semana, con familia.", [
+          { label: "Ve TV internacional (fin de semana)", pct: 46, index: 111 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Casa / restaurantes", "TV internacional", "Canales de TV internacional", "Pauta de almuerzo, cercana al promedio.", [
+          { label: "Ve TV internacional al mediodía", pct: 49, index: 101 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "Canales de TV internacional", "Pauta de media tarde entre semana.", [
+          { label: "Ve TV internacional a media tarde (entre semana)", pct: 42, index: 101 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "Canales de TV internacional", "Bloque de mayor preferencia para TV internacional.", [
+          { label: "Prefiere ver TV internacional al final de la tarde", pct: 54, index: 110 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional", "Canales de TV internacional", "Pauta nocturna entre semana en TV internacional.", [
+          { label: "Ve TV internacional entre las 10pm y medianoche (entre semana)", pct: 45, index: 112 },
+        ]),
       ],
     },
   ],
@@ -7399,6 +7471,202 @@ const CASE_INTERES_FINANCIERO_AMPLIO_GWI_AUTO_20261021 = {
 };
 
 // ---------------------------------------------------------------------------
+// CASOS "gwi-auto-draft" — procesados 2026-11-27 por la rutina diaria de GWI.
+// Misma convención: una sola persona (sharePct 100) por audiencia real, `quote`
+// como placeholder, y sin cifras inventadas para bloques del customer journey
+// sin señal específica de GWI.
+// ---------------------------------------------------------------------------
+
+const CASE_FERXXXO_BOGOTA_GWI_AUTO_20261127 = {
+  id: "ferxxxo-bogota-colombia",
+  name: "Fans de Feid (Ferxxxo) en Bogotá y Cundinamarca",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-27)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>Ferxxxo>Bogotá', audience_id e28e2be5-d905-4c72-932d-32094761f4a1): colombianos del Distrito Capital o Cundinamarca que disfrutan la música latina, se interesan por eventos en vivo como festivales y compraron o planean comprar boletos de concierto.",
+  funnelSteps: [
+    { label: "Interés en música latina + eventos en vivo + compra/intención de boletos (Distrito Capital o Cundinamarca)", pct: 3.3 },
+  ],
+  footnotes: [
+    "3.3% = universo real de GWI (1,035,525) sobre la población digital de Colombia (31.06M, MARKETS) — verificado vía explore_insight_gwi sobre el insight de interés en eventos en vivo (100% de esta audiencia, por definición de la propia audiencia).",
+    "Motivaciones tomadas de la batería estándar de GWI Core sobre por qué se recomienda una marca favorita en línea (GWI no tiene una pregunta específica de 'motivaciones para ir a un concierto' para esta audiencia) — son datos reales, no un proxy inventado.",
+    "Barreras: GWI no devolvió una pregunta directa de frenos/barreras para esta audiencia; el único dato real de sensibilidad a precio fue 'busca las mejores ofertas' (60%). También se verificó —sin usarlo como barrera, por ser más bien una señal de disposición de pago— que un 70% de la misma audiencia afirma pagar más por comodidad y conveniencia, dato real usado en el panel de insights de IA.",
+    "Ciudades: la audiencia está definida por GWI como residente del Distrito Capital o Cundinamarca, así que esa ubicación es 100% por criterio propio de la audiencia, no un dato adicional descubierto; GWI no devolvió desagregación por ciudad.",
+    "Customer journey: 5 de los 6 bloques usan datos reales de franja horaria de consumo de canales de TV internacional (verificados vía chat_gwi); el bloque 'Inicio de la mañana' (6-9am) se deja con lugar/medios genéricos y sin cifras porque GWI no devolvió una señal específica para ese bloque.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-ferxxxo-bogota-colombia",
+      name: "Valentina Ríos",
+      archetype: "La Fan Cultural Multifacética de Feid",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Bogotana o de Cundinamarca con alta afinidad por la música latina y los eventos en vivo: ya compró boletos de concierto o planea hacerlo. Combina su pasión por la música urbana con un interés muy por encima del promedio en teatro, museos y literatura — un perfil de consumo cultural más amplio que el estereotipo del fan de un solo género.",
+      aiInsight: aiInsight(
+        "Cruza con la tendencia del 'omnívoro cultural digital': esta audiencia no solo sigue artistas urbanos, también tiene un índice de interés en teatro (185), museos (146) y literatura (130) muy por encima del promedio — una marca de entretenimiento que solo la aborde como 'fan de reggaetón' se queda corta frente a alguien que también consume alta cultura.",
+        [
+          { label: "No es solo fan de un género, es consumidora cultural amplia", detail: "Índice 185 en interés por teatro, 146 en museos/galerías y 130 en libros/literatura — muy por encima del fan de concierto promedio. Una estrategia de contenido que solo hable de música urbana pierde la oportunidad de cross-sell hacia experiencias culturales más amplias (teatro, exposiciones)." },
+          { label: "La ventana de TV internacional se concentra en bloques muy específicos", detail: "El consumo de canales de TV internacional sube en fin de semana por la mañana (9am-12m, índice 134) y se mantiene alto al final de la tarde en semana (6-8pm, índice 122) — la pauta en ese formato rinde más si se programa en esos bloques exactos, no de forma pareja todo el día." },
+          { label: "Busca ofertas pero paga por conveniencia: dos lógicas de compra conviviendo", detail: "60% busca activamente las mejores ofertas, pero un 70% de la misma audiencia afirma que pagaría más por comodidad y conveniencia — la oportunidad está en ofrecer una opción 'premium cómoda' junto a un descuento visible, no en elegir entre descuento o conveniencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 42, female: 58 },
+        ageBands: [
+          { label: "16-24", pct: 27 },
+          { label: "25-34", pct: 33 },
+          { label: "35-44", pct: 19 },
+          { label: "45-54", pct: 15 },
+          { label: "55-64", pct: 6.1 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Distrito Capital (Bogotá) y Cundinamarca — 100% por definición de la propia audiencia; GWI no devolvió desagregación adicional por ciudad", pct: 100 }],
+      },
+      motivations: [
+        { label: "Recomienda marcas por la calidad de sus productos", pct: 69 },
+        { label: "Recomienda marcas por las recompensas", pct: 60 },
+        { label: "Recomienda marcas tras recibir excelente atención al cliente", pct: 50 },
+        { label: "Recomienda marcas cuando tiene conocimiento exclusivo sobre ellas", pct: 42 },
+      ],
+      barriers: [
+        { label: "Busca activamente las mejores ofertas / es sensible al precio", pct: 60 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en teatro", index: 185 },
+        { label: "Interesada en museos/galerías", index: 146 },
+        { label: "Interesada en libros/literatura", index: 130 },
+      ],
+      media: [
+        { label: "TikTok — uso para encontrar contenido divertido (entre usuarios de TikTok)", pct: 89 },
+        { label: "Instagram — mensajes a amigos/familia (entre usuarios de Instagram)", pct: 66 },
+        { label: "Escucha playlists creadas por una plataforma musical", pct: 46 },
+        { label: "Streaming de video (Netflix/Hulu), uso intensivo", pct: 43 },
+        { label: "Redes sociales para ver novedades de marcas favoritas", pct: 41 },
+        { label: "Podcasts, uso intensivo", pct: 34 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Sin dato específico de GWI para este bloque horario", "—", "Sin dato específico de GWI para este bloque horario.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Casa (fin de semana)", "TV internacional", "Canales de TV internacional", "Programática en canales de TV internacional durante el fin de semana.", [
+          { label: "Ve canales de TV internacional (fin de semana)", pct: 54, index: 134 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Casa / restaurantes", "TV internacional", "Canales de TV internacional", "Pauta al mediodía en canales de TV internacional.", [
+          { label: "Ve canales de TV internacional al mediodía", pct: 55, index: 114 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "Canales de TV internacional", "Pauta de media tarde entre semana en TV internacional.", [
+          { label: "Ve canales de TV internacional a media tarde (entre semana)", pct: 45, index: 110 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "Canales de TV internacional", "Bloque preferido de consumo de TV internacional al final de la tarde.", [
+          { label: "Prefiere ver TV internacional al final de la tarde", pct: 58, index: 122 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional", "Canales de TV internacional", "Pauta nocturna entre semana en TV internacional.", [
+          { label: "Ve TV internacional al final de la noche (entre semana)", pct: 41, index: 108 },
+        ]),
+      ],
+    },
+  ],
+};
+
+const CASE_REGGAETON_VALLE_GWI_AUTO_20261127 = {
+  id: "reggaeton-valle-del-cauca-colombia",
+  name: "Fans de música latina y reggaetón en Valle del Cauca (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-27)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo (co) ReggaetonValle', audience_id 8ed8b71e-84b7-4718-ba25-f7c95635939f): colombianos de Valle del Cauca interesados en eventos en vivo como festivales y que disfrutan la música latina.",
+  funnelSteps: [
+    { label: "Interés en eventos en vivo + música latina (residentes de Valle del Cauca)", pct: 2.5 },
+  ],
+  footnotes: [
+    "2.5% ≈ universo real de GWI (≈761,739, calculado dividiendo el universo de la respuesta 'vive en zona urbana' —680,034— entre su 89.3%, verificado vía explore_insight_gwi; la respuesta 'zona rural' da una cifra muy cercana, ≈756,086) sobre la población digital de Colombia (31.06M, MARKETS).",
+    "Demografía, intereses digitales, medios y franja horaria verificados 1:1 vía chat_gwi/explore_insight_gwi sobre insight_id reales de esta audiencia.",
+    "Barreras: GWI no devolvió una pregunta directa de frenos/barreras; el único dato real de sensibilidad a precio fue 'busca las mejores ofertas' (55%). Un 76% de la misma audiencia también afirma que pagaría más por comodidad y conveniencia — dato real, incorporado como motivación y en el panel de insights de IA, no como barrera.",
+    "Ciudades: GWI no desagrega por ciudad específica dentro de Valle del Cauca, solo zona urbana/suburbana/rural (89.3% / 5% / 5.8%).",
+    "Customer journey: los 6 bloques usan datos reales de franja horaria de consumo de canales de TV internacional (verificados vía chat_gwi/explore_insight_gwi).",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-reggaeton-valle-del-cauca",
+      name: "Daniela Marín",
+      archetype: "La Bailadora Digital del Valle",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en zona urbana de Valle del Cauca, le apasiona la música latina y busca activamente nuevos eventos en vivo. Tiene un interés en bailar muy por encima del promedio nacional y combina ese gusto por la fiesta con un lado práctico: paga más por comodidad y conveniencia, pero también busca activamente las mejores ofertas — no es una audiencia de un solo extremo del espectro de precio.",
+      aiInsight: aiInsight(
+        "Cruza con la identidad del Valle del Cauca como epicentro de baile y música en vivo en Colombia: el índice de interés en bailar (186) es el más alto encontrado hasta ahora entre las audiencias de entretenimiento en vivo procesadas por esta rutina, y convive con un alto interés en tecnología (118) y actividades al aire libre (137) — un perfil más activo y expresivo que el fan de concierto promedio, con oportunidad de activaciones experienciales más allá del evento mismo.",
+        [
+          { label: "El índice de interés en bailar es el más alto registrado en esta categoría", detail: "Índice 186 (51% vs. ~27% del promedio nacional) — una campaña que active 'el baile' como verbo central (retos de baile, clases previas al evento) puede rendir mejor que un mensaje centrado solo en la asistencia al concierto." },
+          { label: "Paga por conveniencia y busca ofertas: dos lógicas conviviendo", detail: "76% pagaría más por comodidad/conveniencia, pero 55% también busca activamente las mejores ofertas — la oportunidad es un 'VIP accesible' (experiencia premium con un precio de entrada visible y competitivo), no elegir entre descuento y comodidad." },
+          { label: "Tecnología y aire libre: un perfil más activo que el fan de concierto típico", detail: "Índice 118 en interés por tecnología y 137 en actividades al aire libre como camping/senderismo — vale la pena sumar activaciones físicas o patrocinios de marcas tech/outdoor al evento, no solo medios digitales tradicionales." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 42, female: 58 },
+        ageBands: [
+          { label: "16-24", pct: 22 },
+          { label: "25-34", pct: 28 },
+          { label: "35-44", pct: 25 },
+          { label: "45-54", pct: 18 },
+          { label: "55-64", pct: 8.2 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Valle del Cauca — 89% zona urbana; GWI no desagrega por ciudad específica dentro del departamento", pct: 89 }],
+      },
+      motivations: [
+        { label: "Usa redes sociales principalmente para mantenerse en contacto con amigos y familiares", pct: 69 },
+        { label: "Recomienda marcas por la calidad de sus productos", pct: 64 },
+        { label: "Recomienda marcas por las recompensas", pct: 58 },
+        { label: "Recomienda marcas tras recibir excelente atención al cliente", pct: 53 },
+        { label: "Afirma que pagaría más por comodidad y conveniencia", pct: 76 },
+      ],
+      barriers: [
+        { label: "Busca activamente las mejores ofertas / es sensible al precio", pct: 55 },
+      ],
+      digitalInterests: [
+        { label: "Interesada en bailar", index: 186 },
+        { label: "Interesada en actividades al aire libre (camping, senderismo)", index: 137 },
+        { label: "Interesada en tecnología", index: 118 },
+      ],
+      media: [
+        { label: "TikTok — uso para encontrar contenido divertido (entre usuarios de TikTok)", pct: 90 },
+        { label: "Instagram — publicar fotos/videos (entre usuarios de Instagram)", pct: 72 },
+        { label: "Facebook/Messenger — mensajes a amigos/familia (entre usuarios)", pct: 71 },
+        { label: "Escucha playlists creadas por una plataforma musical", pct: 42 },
+        { label: "Streaming de video (Netflix/Hulu), uso intensivo", pct: 40 },
+        { label: "Podcasts, uso intensivo", pct: 27 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "TV internacional", "Canales de TV internacional", "Pauta temprana entre semana en TV internacional.", [
+          { label: "Ve TV internacional (entre semana)", pct: 24.7, index: 105 },
+        ]),
+        daypart("Final de la mañana", "9 a 12 m", "Casa (fin de semana)", "TV internacional", "Canales de TV internacional", "Consumo de TV internacional en fin de semana, cercano al promedio.", [
+          { label: "Ve TV internacional (fin de semana)", pct: 39.6, index: 99 },
+        ]),
+        daypart("Medio día", "12 m a 3 pm", "Casa / restaurantes", "TV internacional", "Canales de TV internacional", "Pauta de almuerzo entre semana en TV internacional.", [
+          { label: "Ve TV internacional al mediodía (entre semana)", pct: 36.6, index: 122 },
+        ]),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "TV internacional", "Canales de TV internacional", "Pauta de media tarde entre semana en TV internacional.", [
+          { label: "Ve TV internacional a media tarde (entre semana)", pct: 45.9, index: 111 },
+        ]),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "TV internacional", "Canales de TV internacional", "Bloque de mayor preferencia para TV internacional.", [
+          { label: "Ve TV internacional al final de la tarde (entre semana)", pct: 56.8, index: 119 },
+        ]),
+        daypart("Noche", "8 a 11 pm", "Casa", "TV internacional", "Canales de TV internacional", "Prime time entre semana en TV internacional.", [
+          { label: "Ve TV internacional en prime time (entre semana)", pct: 69, index: 111 },
+        ]),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // CATEGORÍAS (verticales) — cada una agrupa uno o más "casos"
 // ---------------------------------------------------------------------------
 const CATEGORIES = [
@@ -7413,7 +7681,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_FERXXXO_BOGOTA_GWI_AUTO_20261127, CASE_REGGAETON_VALLE_GWI_AUTO_20261127],
   },
   {
     id: "deportes",
@@ -7599,4 +7867,7 @@ const PERSONA_RELATED_TRAITS = {
   "usuario-mastercard-colombia": ["usaAppsFin", "migraEfectivo"],
   "usuario-visa-colombia": ["abiertoCambiar", "pruebaMultiples"],
   "entusiasta-cultural-colombia-nacional": ["afinidadGenero", "turismo"],
+  "fan-ferxxxo-bogota-colombia": ["afinidadGenero"],
+  "fan-carlosvives-boghijos-bogota": ["afinidadGenero"],
+  "fan-reggaeton-valle-del-cauca": ["afinidadGenero"],
 };

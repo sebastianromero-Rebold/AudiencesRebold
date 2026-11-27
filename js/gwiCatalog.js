@@ -313,6 +313,10 @@ const GWI_AUDIENCE_CATALOG = [
   { id: "4fa856ae-c03f-4f0d-960c-2f03b492424f", title: "OMODA>OMODASA>B2C>HIGHPROPENSITY>CHILE", client: "OMODA", type: "shared", datasets: ["ds-core"], description: "" },
   { id: "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a", title: "Jagger>SubCulturas>MODA2", client: "Jagger", type: "authored", datasets: ["ds-core"], description: "" },
   { id: "ebda5c56-716e-496d-8607-821c96cb2367", title: "Paramo (co) ReggaetonGeneral", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, and like listening to Latin music." },
+  // Añadidas por la automatización diaria de GWI el 2026-11-27.
+  { id: "e28e2be5-d905-4c72-932d-32094761f4a1", title: "Paramo>Ferxxxo>Bogotá", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, like listening to Latin music, are interested in live events like music festivals, have purchased concert tickets in the last 3-6 months or purchased concert tickets online in the last 3-6 months, or are planning to purchase concert tickets in the next 3-6 months, and live in either the Capital District or Cundinamarca." },
+  { id: "29736513-9ca7-4adc-92ff-262c11415ea8", title: "Páramo (co) CarlosVives_BogHijos", client: "Páramo", type: "authored", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, prefer listening to a wide range of songs from the music artists/bands they are passionate about or are always on the lookout for new live music events or love to support local artists or go to local gigs, have purchased concert tickets online in the last 3-6 months or are planning to purchase concert tickets in the next 3-6 months or are interested in live events like music festivals, like listening to Latin music or like listening to rock music, live in the Capital District or live in Cundinamarca, and have children aged between 6 and 18 years old." },
+  { id: "8ed8b71e-84b7-4718-ba25-f7c95635939f", title: "Paramo (co) ReggaetonValle", client: "Paramo", type: "shared", datasets: ["ds-core"], description: "This audience consists of individuals who currently reside in Colombia, have an interest in live events like music festivals, enjoy listening to Latin music, and live in Valle del Cauca." },
 ];
 
 // Enlaza un audience_id real del catálogo con un caso/persona ya construido
@@ -404,4 +408,10 @@ const CATALOG_ANALYSIS_LINKS = {
   "f4b3edf5-5e2c-4755-ad8f-1644dc73ce8a": { categoryId: "retail", caseId: "subcultura-fashion-bogota-colombia", personaId: "fashionista-subcultura-bogota-colombia", analyzedAt: "2026-10-20" },
   "ebda5c56-716e-496d-8607-821c96cb2367": { categoryId: "entretenimiento", caseId: "reggaeton-musica-latina-colombia", personaId: "fan-musica-latina-eventos-vivo-colombia", analyzedAt: "2026-10-20" },
   "328aa2ab-d268-4a1f-a76b-5b9683559806": { categoryId: "fintech", caseId: "interes-financiero-amplio-colombia", personaId: "colombiano-interes-financiero-amplio", analyzedAt: "2026-10-21" },
+  // Añadidas por la automatización diaria de GWI el 2026-11-27.
+  "e28e2be5-d905-4c72-932d-32094761f4a1": { categoryId: "entretenimiento", caseId: "ferxxxo-bogota-colombia", personaId: "fan-ferxxxo-bogota-colombia", analyzedAt: "2026-11-27" },
+  // CarlosVives_BogHijos se combinó con la audiencia ya procesada CarlosVives_Bogotanos (f3d79096, 2026-09-27) en el
+  // mismo caso 'carlos-vives-fans-bogota-colombia' -- son mutuamente excluyentes (con/sin hijos de 6-18 años).
+  "29736513-9ca7-4adc-92ff-262c11415ea8": { categoryId: "entretenimiento", caseId: "carlos-vives-fans-bogota-colombia", personaId: "fan-carlosvives-boghijos-bogota", analyzedAt: "2026-11-27" },
+  "8ed8b71e-84b7-4718-ba25-f7c95635939f": { categoryId: "entretenimiento", caseId: "reggaeton-valle-del-cauca-colombia", personaId: "fan-reggaeton-valle-del-cauca", analyzedAt: "2026-11-27" },
 };

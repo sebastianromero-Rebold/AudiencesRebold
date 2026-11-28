@@ -4221,6 +4221,7 @@ const CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927 = {
     "GWI solo devolvió con muestra suficiente 3 bandas de edad (25-34: 23.2%, 45-54: 27.5%, 55-64: 25.5%, que suman 76.2%); las bandas 16-24, 35-44 y 65+ no tuvieron muestra suficiente para desagregarse y se dejan en 0 en vez de inventar un valor.",
     "Top ciudades: la audiencia está definida por GWI como residente del Distrito Capital (Bogotá), así que la ciudad es 100% Bogotá D.C. por definición de la propia audiencia, no un dato adicional descubierto.",
     "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Actualización 2026-11-28: se añadió una segunda audiencia real de GWI de la misma campaña ('Páramo (co) CarlosVives_BogHijos', audience_id 29736513-9ca7-4adc-92ff-262c11415ea8 — mismo perfil musical/eventos pero con hijos de 6 a 18 años en el hogar) como persona 'familia-carlos-vives-boghijos'. El funnelStep y el 2% original no se recalcularon porque siguen representando el universo de la audiencia base ('CarlosVives_Bogotanos'); el sharePct de 60/40 entre las dos personas es una asignación editorial indicativa (ambas audiencias se solapan parcialmente, GWI no entregó el cruce exacto), pendiente de ajuste por el equipo si se confirma el dato real de superposición.",
     "Borrador generado automáticamente — pendiente de revisión editorial.",
   ],
   personas: [
@@ -4239,7 +4240,7 @@ const CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927 = {
           { label: "Es una consumidora heavy de streaming, no solo de redes", detail: "Índice 138 en heavy user de streaming de música e índice 137 en streaming de video tipo Netflix — vale la pena activar pauta también dentro de esos entornos (audio ads, video pre-roll), no únicamente en redes sociales." },
         ]
       ),
-      sharePct: 100,
+      sharePct: 60,
       demographics: {
         genderSplit: { male: 40.1, female: 59.9 },
         ageBands: [
@@ -4284,6 +4285,252 @@ const CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927 = {
         daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "Instagram, Facebook, TikTok", "Recordatorio de preventa / checkout simplificado.", []),
         daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "CTA directo a compra con checkout de un clic.", []),
         daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y redes", "Netflix, Disney+, Instagram", "Últimas entradas / urgencia de compra.", []),
+      ],
+    },
+    {
+      id: "familia-carlos-vives-boghijos",
+      name: "Diana Peñaloza",
+      archetype: "La Melómana con Familia",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Bogotá o Cundinamarca y tiene hijos entre 6 y 18 años en casa. Igual que la melómana sin hijos, su interés por la música en vivo es altísimo (85%), pero concilia los planes de concierto con la logística familiar — compra boletos con más anticipación y su consumo de streaming de video en casa es incluso más alto que el de la persona sin hijos.",
+      aiInsight: aiInsight(
+        "Añadida el 2026-11-28 vía audiencia real de GWI 'Páramo (co) CarlosVives_BogHijos' (subconjunto con hijos de 6-18 años de la misma campaña ya analizada en 'fan-carlos-vives-bogota'): confirma que la brecha interés-compra de boletos de concierto en Colombia no es exclusiva de audiencias sin hijos — el 85% interesado en festivales vs. 33.7% que compró boletos en los últimos 3-6 meses es casi idéntico al patrón de la persona sin hijos, lo que sugiere que la fricción de compra es estructural a la categoría, no a la etapa de vida.",
+        [
+          { label: "La brecha interés-compra persiste con o sin hijos en casa", detail: "85% de interés declarado en festivales frente a apenas 33.7% de compra reciente de boletos (verificado vía explore_insight_gwi, universo de 449,522 personas) — el dato casi calca el de la persona sin hijos, así que la solución de checkout/retargeting debe diseñarse para la categoría completa, no solo para un segmento." },
+          { label: "Planea su compra con la misma anticipación que compra", detail: "34.4% planea comprar boletos en los próximos 3-6 meses (universo de 458,593 personas) — un volumen de intención casi igual al de compra reciente, señal de que esta audiencia no es impulsiva sino que agenda el plan familiar con tiempo." },
+          { label: "Consume más streaming de video en el hogar que la persona sin hijos", detail: "81% usó Netflix en el último mes y 98% usó algún servicio de video — más alto que el 75.6%/no reportado de la persona sin hijos — coherente con planes familiares centrados en casa; vale la pena activar pauta de video on-demand además de redes sociales." },
+        ]
+      ),
+      sharePct: 40,
+      demographics: {
+        genderSplit: { male: 45.0, female: 55.0 },
+        ageBands: [
+          { label: "16-24", pct: 0 },
+          { label: "25-34", pct: 27.0 },
+          { label: "35-44", pct: 40.0 },
+          { label: "45-54", pct: 26.0 },
+          { label: "55-64", pct: 5.4 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Bogotá D.C. / Cundinamarca (criterio de definición de la audiencia, con hijos de 6 a 18 años)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesada en eventos en vivo como festivales de música", pct: 85.0 },
+        { label: "Prefiere escuchar una amplia variedad de canciones de sus artistas favoritos", pct: 83.0 },
+        { label: "Cree que la música puede impulsar cambios sociales", pct: 71.0 },
+        { label: "Disfruta buscar nuevos artistas, bandas o canciones", pct: 49.0 },
+        { label: "Apoya artistas locales o va a conciertos locales", pct: 46.0 },
+      ],
+      barriers: [
+        { label: "Solo compró boletos de concierto en los últimos 3-6 meses pese al 85% de interés declarado (verificado, universo 449,522)", pct: 33.7 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses (verificado, universo 458,593)", pct: 34.4 },
+        { label: "Interesada en eventos en streaming como alternativa", pct: 34.0 },
+      ],
+      digitalInterests: [
+        { label: "Heavy user de streaming de música", index: 152 },
+        { label: "Interesada en tecnología", index: 120 },
+        { label: "Interesada en gadgets", index: 176 },
+        { label: "Usa consola de videojuegos para acceder a internet", index: 182 },
+      ],
+      media: [
+        { label: "WhatsApp (uso más de una vez al día)", pct: 76.0 },
+        { label: "Spotify (uso en el último mes)", pct: 70.0 },
+        { label: "Servicios de video — cualquiera (uso en el último mes)", pct: 98.0 },
+        { label: "Netflix (uso en el último mes)", pct: 81.0 },
+        { label: "Instagram (uso más de una vez al día)", pct: 40.0 },
+        { label: "Facebook (uso más de una vez al día)", pct: 43.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa", "WhatsApp y streaming de música", "WhatsApp, Spotify", "Contenido de anuncio de line-up o preventa.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / casa", "Redes sociales", "Instagram, Facebook", "Clips de artistas y anuncios de conciertos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Casa / restaurantes", "Streaming de música y video", "Spotify, Netflix", "Contenido de marca dentro de streaming de audio/video.", []),
+        daypart("La tarde", "3 a 6 pm", "Casa (tiempo con hijos)", "WhatsApp y redes", "WhatsApp, Instagram, Facebook", "Recordatorio de preventa / plan familiar.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video en familia", "Netflix", "CTA directo a compra con checkout simplificado.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming de video y WhatsApp", "Netflix, WhatsApp", "Últimas entradas / urgencia de compra.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Páramo (co) CarlosVives_Santander, procesado 2026-11-28.
+// Misma campaña ya analizada para Bogotá y hogares con hijos, pero esta
+// audiencia es un audience_id distinto (residentes de Santander), así que
+// queda como su propio caso en vez de una tercera persona en el caso de Bogotá.
+// ---------------------------------------------------------------------------
+const CASE_CARLOSVIVES_SANTANDER_GWI_AUTO_20261128 = {
+  id: "carlos-vives-fans-santander-colombia",
+  name: "Fans de Carlos Vives en Santander (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-28)",
+  insightNote:
+    "Audiencia real de GWI ('Páramo (co) CarlosVives_Santander', audience_id 649a7813-bd3f-4e43-b9a1-aaa4b73e5045): residentes de Santander apasionados por un rango amplio de artistas de música latina/rock, interesados en eventos en vivo y que compraron o planean comprar boletos de concierto — misma campaña ya analizada para Bogotá ('carlos-vives-fans-bogota-colombia'), pero audience_id distinto.",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo como festivales de música, residentes de Santander (universo real de GWI de 303,004 sobre la pregunta de interés)", pct: 1 },
+  ],
+  footnotes: [
+    "1% ≈ redondeo conservador del universo real (303,004, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "91.3% interés en eventos en vivo, 28.0% compra reciente de boletos y 31.7% intención de compra: cifras verificadas vía explore_insight_gwi (universos reales de 303,004 / 93,023 / 105,227 respectivamente).",
+    "Demografía, motivaciones, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi.",
+    "Top ciudad: la audiencia está definida por GWI como residente de Santander, así que la ciudad es 100% Santander por definición de la propia audiencia, no un dato adicional descubierto.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "fan-carlos-vives-santander",
+      name: "Jorge Delgado",
+      archetype: "El Melómano Santandereano",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Santander y es de los más entusiastas con la música en vivo de toda la campaña Carlos Vives analizada hasta ahora: 91% se declara interesado en festivales, un interés incluso más alto que el de Bogotá (85-89%). Es también quien más convierte ese interés en compra real de boletos en el corto plazo.",
+      aiInsight: aiInsight(
+        "Santander muestra el interés más alto en eventos en vivo de las 3 audiencias de esta campaña analizadas hasta ahora (91.3% vs. 85-89% en Bogotá), y también la conversión a compra reciente más fuerte en términos relativos (28%, 183% más probable que el promedio nacional) — sugiere que una activación regional dedicada a Santander, no solo un mensaje nacional, puede rendir mejor que en otras plazas.",
+        [
+          { label: "El interés más alto de la campaña, no solo en Bogotá", detail: "91.3% de interés en eventos en vivo (verificado, universo 303,004) supera al 85-89% visto en las audiencias de Bogotá — Santander merece su propia línea de comunicación, no un mensaje genérico nacional." },
+          { label: "Convierte mejor que el promedio nacional", detail: "28.0% compró boletos de concierto en los últimos 3-6 meses (183% más probable que el promedio de Colombia) y 31.7% planea hacerlo — la brecha interés-compra sigue existiendo pero es menos pronunciada que en otras plazas." },
+          { label: "Nicho de nicho en redes menos saturadas", detail: "Aunque minoritario en volumen absoluto, esta audiencia es 359% más propensa a visitar Reddit a diario y 236% más propensa a visitar Quora semanalmente que el promedio colombiano — canales casi sin pauta de conciertos hoy, con audiencia calificada y barata de alcanzar." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 42.0, female: 58.0 },
+        ageBands: [
+          { label: "16-24", pct: 33.0 },
+          { label: "25-34", pct: 23.0 },
+          { label: "35-44", pct: 23.0 },
+          { label: "45-54", pct: 13.0 },
+          { label: "55-64", pct: 8.5 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Santander (criterio de definición de la audiencia)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en eventos en vivo como festivales de música", pct: 91.3 },
+        { label: "Prefiere escuchar una amplia variedad de canciones de sus artistas favoritos", pct: 87.0 },
+        { label: "Cree que la música puede ser un agente de cambio social", pct: 78.0 },
+        { label: "Apoya artistas locales o va a conciertos locales", pct: 46.0 },
+        { label: "Descubre artistas o bandas nuevos antes de que sean populares", pct: 38.0 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto en los últimos 3-6 meses (verificado, universo 93,023)", pct: 28.0 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses (verificado, universo 105,227)", pct: 31.7 },
+        { label: "Compró boletos de concierto específicamente online en los últimos 3-6 meses", pct: 19.0 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en baile", index: 177 },
+        { label: "Interesado en aventura/deportes extremos", index: 183 },
+        { label: "Interesado en actividades al aire libre (camping, senderismo)", index: 144 },
+        { label: "Interesado en ciencia", index: 143 },
+      ],
+      media: [
+        { label: "Smartphone (propietario)", pct: 99.0 },
+        { label: "YouTube (uso en el último mes)", pct: 74.0 },
+        { label: "WhatsApp (uso más de una vez al día)", pct: 74.0 },
+        { label: "Instagram (uso más de una vez al día)", pct: 49.0 },
+        { label: "TikTok (uso más de una vez al día)", pct: 43.0 },
+        { label: "Facebook (uso más de una vez al día)", pct: 41.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "WhatsApp y redes", "WhatsApp, Instagram", "Contenido de anuncio de line-up o preventa.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Redes sociales", "Instagram, TikTok", "Clips de artistas y anuncios de conciertos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Video online", "YouTube", "Contenido de marca dentro de video.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Redes sociales", "TikTok, Instagram, Facebook", "Retargeting a quienes vieron el lineup.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Redes y video", "Instagram, YouTube", "CTA directo a compra de boletos.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "WhatsApp y redes", "WhatsApp, Instagram", "Últimas entradas / urgencia de compra.", []),
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// CASO GWI-AUTO — Paramo>Generos>Antioquia, procesado 2026-11-28. Variante
+// regional (Antioquia) de la misma campaña "Generos" ya analizada para
+// Bogotá (generos-bogota-colombia) y a nivel nacional (generos-colombia-nacional).
+// ---------------------------------------------------------------------------
+const CASE_GENEROS_ANTIOQUIA_GWI_AUTO_20261128 = {
+  id: "generos-antioquia-colombia",
+  name: "Entusiastas culturales de Antioquia (Colombia)",
+  market: "COL",
+  source: "gwi-auto-draft",
+  sourceLabel: "Borrador automático GWI — pendiente de revisión (2026-11-28)",
+  insightNote:
+    "Audiencia real de GWI ('Paramo>Generos>Antioquia', audience_id e79f1a03-a6d4-4e39-9459-fbefc5d0a3a2): residentes de Antioquia de 18 a 50 años interesados en eventos en vivo como festivales de música o streaming de eventos — misma campaña 'Generos' ya analizada para Bogotá y a nivel nacional, pero audience_id distinto (variante regional Antioquia).",
+  funnelSteps: [
+    { label: "Interesados en eventos en vivo, residentes de Antioquia de 18-50 años (universo real de GWI de 1,380,142 sobre la pregunta de interés)", pct: 4.4 },
+  ],
+  footnotes: [
+    "4.4% ≈ universo real (1,380,142, verificado vía explore_insight_gwi) sobre la población digital total de Colombia (31.06M).",
+    "68.6% interés en eventos en vivo, 26.1% compra reciente de boletos y 21.9% intención de compra: cifras verificadas vía explore_insight_gwi (universos reales de 1,380,142 / 525,559 / 441,224 respectivamente).",
+    "Demografía, motivaciones, intereses digitales y medios tomados 1:1 de esta audiencia real vía chat_gwi.",
+    "Top ciudad: la audiencia está definida por GWI como residente de Antioquia entre 18 y 50 años, así que la ubicación es 100% Antioquia por definición de la propia audiencia, no un dato adicional descubierto.",
+    "La cita de la persona es un placeholder pendiente de reemplazo por el equipo creativo — nunca se fabricó una cita real.",
+    "Borrador generado automáticamente — pendiente de revisión editorial.",
+  ],
+  personas: [
+    {
+      id: "entusiasta-cultural-antioquia-colombia",
+      name: "Santiago Uribe",
+      archetype: "El Entusiasta Cultural Paisa",
+      quote: "[Pendiente: cita del equipo creativo]",
+      description:
+        "Vive en Antioquia, tiene entre 18 y 50 años, y su interés por los eventos en vivo (69%) viene acompañado de un gusto amplio por cultura en general: libros, idiomas extranjeros e historia también aparecen por encima del promedio nacional. Es, además, quien más valora los eventos transmitidos en streaming de las 3 variantes regionales de esta campaña analizadas hasta ahora.",
+      aiInsight: aiInsight(
+        "Cruza con el mismo patrón de brecha interés-compra visto en las otras variantes regionales de 'Generos' (Bogotá, nacional): 69% de interés en eventos en vivo frente a solo 26% de compra reciente de boletos — pero esta audiencia se distingue por un interés notablemente más alto en eventos de streaming (43%, el doble que el promedio nacional), lo que sugiere que Antioquia es la plaza más receptiva a formatos híbridos presencial + streaming.",
+        [
+          { label: "El cuello de botella es la conversión, no el interés", detail: "69% de interés declarado en eventos en vivo frente a 26.1% de compra reciente de boletos (verificado, universo 525,559) — un patrón casi idéntico al de Bogotá y al nacional, confirmando que es estructural a la categoría en Colombia, no específico de una región." },
+          { label: "La audiencia con más interés en streaming de eventos", detail: "43% está interesado en eventos de streaming (104% más probable que el promedio colombiano) — la más alta de las 3 variantes regionales de 'Generos' analizadas; vale la pena probar un formato híbrido presencial + transmisión en vivo específicamente en esta plaza." },
+          { label: "Consumo cultural amplio más allá de la música", detail: "52% interesado en libros/literatura y 49% en idiomas extranjeros e historia, por encima del promedio nacional — el contenido de marca puede anclarse en cultura general (no solo lineup de artistas) y seguir siendo relevante para esta audiencia." },
+        ]
+      ),
+      sharePct: 100,
+      demographics: {
+        genderSplit: { male: 52.0, female: 48.0 },
+        ageBands: [
+          { label: "16-24", pct: 26.0 },
+          { label: "25-34", pct: 36.0 },
+          { label: "35-44", pct: 28.0 },
+          { label: "45-54", pct: 11.0 },
+          { label: "55-64", pct: 0 },
+          { label: "65+", pct: 0 },
+        ],
+        topCities: [{ city: "Antioquia (criterio de definición de la audiencia, 18 a 50 años)", pct: 100 }],
+      },
+      motivations: [
+        { label: "Interesado en eventos en vivo como festivales de música", pct: 68.6 },
+        { label: "Interesado en eventos de streaming", pct: 43.0 },
+        { label: "Suele conocer música nueva a través de diversas fuentes", pct: 50.0 },
+        { label: "Disfruta buscar nuevos artistas, bandas o canciones", pct: 45.0 },
+        { label: "Descubre artistas o bandas nuevos antes de que sean populares", pct: 40.0 },
+      ],
+      barriers: [
+        { label: "Compró boletos de concierto en los últimos 3-6 meses (verificado, universo 525,559)", pct: 26.1 },
+        { label: "Planea comprar boletos de concierto en los próximos 3-6 meses (verificado, universo 441,224)", pct: 21.9 },
+        { label: "Compró boletos de concierto específicamente online en los últimos 3-6 meses", pct: 11.0 },
+      ],
+      digitalInterests: [
+        { label: "Interesado en música", index: 118 },
+        { label: "Interesado en películas/cine", index: 108 },
+        { label: "Usuario intensivo de redes sociales", index: 110 },
+        { label: "Usuario intensivo de streaming de música", index: 123 },
+      ],
+      media: [
+        { label: "Netflix (uso en el último mes)", pct: 72.0 },
+        { label: "YouTube (uso en el último mes)", pct: 63.0 },
+        { label: "YouTube Premium (uso en el último mes)", pct: 18.0 },
+        { label: "Instagram (red social favorita)", pct: 27.0 },
+        { label: "TikTok (red social favorita)", pct: 24.0 },
+        { label: "Usa 3-4 servicios de mensajería distintos", pct: 44.0 },
+      ],
+      journey: [
+        daypart("Inicio de la mañana", "6 a 9 am", "Casa / transporte", "Redes y mensajería", "Instagram, WhatsApp", "Contenido de anuncio de line-up o preventa.", []),
+        daypart("Final de la mañana", "9 a 12 m", "Oficina / estudio", "Laptop para trabajo", "YouTube, redes", "Clips de artistas y anuncios de conciertos.", []),
+        daypart("Medio día", "12 m a 3 pm", "Oficina / restaurantes", "Redes sociales", "Instagram, TikTok", "Contenido para compartir con grupo de amigos.", []),
+        daypart("La tarde", "3 a 6 pm", "Trabajo / transporte", "Video online", "YouTube, Netflix", "Retargeting a quienes vieron el lineup.", []),
+        daypart("Fin de la tarde", "6 a 8 pm", "Casa", "Streaming de video", "Netflix, YouTube", "CTA directo a compra de boletos o del evento en streaming.", []),
+        daypart("Noche", "8 a 11 pm", "Casa", "Streaming y redes", "Netflix, Instagram", "Últimas entradas / urgencia de compra.", []),
       ],
     },
   ],
@@ -7413,7 +7660,7 @@ const CATEGORIES = [
       { id: "afinidadGenero", label: "Afinidad con el género musical del artista" },
       { id: "comunidadMigrante", label: "Comunidad de migrantes/compatriotas en el destino" },
     ],
-    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020],
+    cases: [CASE_DANGOND, CASE_EVENTOS_VIVO_GWI_AUTO_20260924, CASE_BAUM27_GWI_AUTO_20260924, CASE_LAURA_PAUSINI_2027_GWI_AUTO_20260924, CASE_PLACEBO_GWI_AUTO_20260924, CASE_EVENTOS_URBANOS_GWI_AUTO_20260925, CASE_CARLOSVIVES_BOGOTANOS_GWI_AUTO_20260927, CASE_CUNDINAMARCAFEST_GWI_AUTO_20260929, CASE_BUNBURY_BOGOTA_GWI_AUTO_20261014, CASE_ROSALIA_TOPPOP_GWI_AUTO_20261004, CASE_RAUW_REGGAETON_GWI_AUTO_20261005, CASE_GENEROS_BOGOTA_GWI_AUTO_20261012, CASE_VIAJEROS_MUNDIAL_GWI_AUTO_20261013, CASE_GENEROS_NACIONAL_GWI_AUTO_20261017, CASE_MUSICA_LATINA_EVENTOS_GWI_AUTO_20261018, CASE_REGGAETON_GENERAL_COLOMBIA_GWI_AUTO_20261020, CASE_CARLOSVIVES_SANTANDER_GWI_AUTO_20261128, CASE_GENEROS_ANTIOQUIA_GWI_AUTO_20261128],
   },
   {
     id: "deportes",
